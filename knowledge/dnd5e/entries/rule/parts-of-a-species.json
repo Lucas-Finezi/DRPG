@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/parts-of-a-species",
+  "kind": "rule",
+  "name": "Parts of a Species",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      83,
+      84
+    ],
+    "section": "Character Origins/Character Species/Parts of a Species",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 1,
+  "text": "A species includes the following parts.\n\n#### Creature Type\n\nA character’s species determines the character’s creature type, which is described in “Rules Glossary.” Every species in “Character Origins” is Humanoid; playable non-Humanoid species appear in other books.\n\n#### Size\n\nYour character’s species determines the character’s size. Individuals within a species cover a wide range of heights, and some species include such diversity of size that you can choose whether your character is Small or Medium.\n\n#### Speed\n\nYour character’s species determines the character’s Speed.\n\n#### Special Traits\n\nEach species gives a character special traits—unique characteristics based on the species’ physiology or magical nature. When you choose a species, your character gets all the special traits listed for it. Some traits involve making a choice from a handful of options.",
+  "data": {
+    "rules": [
+      {
+        "id": "species_creature_type",
+        "all_srd_species": "humanoid"
+      },
+      {
+        "id": "species_size",
+        "some_species_choose": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "id": "species_speed",
+        "set_by_species": true
+      },
+      {
+        "id": "special_traits",
+        "all_listed_traits": true,
+        "some_offer_choices": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A species includes the following parts.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Creature Type\n\nA character’s species determines the character’s creature type, which is described in “Rules Glossary.” Every species in “Character Origins” is Humanoid; playable non-Humanoid species appear in other books.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/creature-type",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Size\n\nYour character’s species determines the character’s size. Individuals within a species cover a wide range of heights, and some species include such diversity of size that you can choose whether your character is Small or Medium.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Speed\n\nYour character’s species determines the character’s Speed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Special Traits\n\nEach species gives a character special traits—unique characteristics based on the species’ physiology or magical nature. When you choose a species, your character gets all the special traits listed for it. Some traits involve making a choice from a handful of options.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/creature-type"
+  ]
+}

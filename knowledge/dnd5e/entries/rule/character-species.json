@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/character-species",
+  "kind": "rule",
+  "name": "Character Species",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      83
+    ],
+    "section": "Character Origins/Character Species",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 1,
+  "text": "When you choose your character’s species, you determine whether your character is a human or a member of a fantastical species, such as dragonborn or gnome.\n\nThe peoples of the multiverse hail from different worlds and include many kinds of sapient life forms. A player character’s species is the set of game traits that an adventurer gains from being one of those life forms.\n\nSome species can trace their origin to a single world, plane of existence, or god, while other species first appeared in multiple realms at once. Whatever a species’ genesis, its members have spread across the multiverse and contribute to many different cultures.\n\nMembers of most species live for about 80 years, with exceptions noted in the text about the species in “Character Origins.” Regardless of life span, members of all species reach physical maturity at about the same age. Your character can be any age that isn’t beyond their species’ normal life span.",
+  "data": {
+    "rules": [
+      {
+        "id": "life_span",
+        "typical_years": 80,
+        "exceptions_in_species_text": true,
+        "maturity_age": "about_the_same_for_all",
+        "character_age": "within_species_life_span"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "When you choose your character’s species, you determine whether your character is a human or a member of a fantastical species, such as dragonborn or gnome.\n\nThe peoples of the multiverse hail from different worlds and include many kinds of sapient life forms. A player character’s species is the set of game traits that an adventurer gains from being one of those life forms.\n\nSome species can trace their origin to a single world, plane of existence, or god, while other species first appeared in multiple realms at once. Whatever a species’ genesis, its members have spread across the multiverse and contribute to many different cultures.",
+      "status": "descriptive"
+    },
+    {
+      "text": "Members of most species live for about 80 years, with exceptions noted in the text about the species in “Character Origins.” Regardless of life span, members of all species reach physical maturity at about the same age. Your character can be any age that isn’t beyond their species’ normal life span.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

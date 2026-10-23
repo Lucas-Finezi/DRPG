@@ -1,0 +1,132 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/species/human",
+  "kind": "species",
+  "name": "Human",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Human",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 2,
+  "text": "**Creature Type:** Humanoid\n\n**Size:** Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species\n\n**Speed:** 30 feet\n\nAs a Human, you have these special traits.\n\n***Resourceful.*** You gain Heroic Inspiration whenever you finish a Long Rest.\n\n***Skillful.*** You gain proficiency in one skill of your choice.\n\n***Versatile.*** You gain an Origin feat of your choice (see “Feats”). Skilled is recommended.",
+  "facets": {
+    "creature_type": "humanoid",
+    "size": [
+      "medium",
+      "small"
+    ],
+    "speed": 30
+  },
+  "data": {
+    "creature_type": "humanoid",
+    "sizes": [
+      "medium",
+      "small"
+    ],
+    "height": {
+      "medium": "about 4–7 feet tall",
+      "small": "about 2–4 feet tall"
+    },
+    "speed": 30,
+    "traits": [
+      "dnd5e/feature/human-resourceful",
+      "dnd5e/feature/human-skillful",
+      "dnd5e/feature/human-versatile"
+    ],
+    "size_choice": "chosen when you select this species",
+    "rules": [
+      {
+        "id": "creature_type",
+        "creature_type": "humanoid"
+      },
+      {
+        "id": "size",
+        "sizes": [
+          "medium",
+          "small"
+        ]
+      },
+      {
+        "id": "speed",
+        "walk": 30
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/human-resourceful",
+        "dnd5e/feature/human-skillful",
+        "dnd5e/feature/human-versatile"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "**Creature Type:** Humanoid",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Size:** Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Speed:** 30 feet",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Human, you have these special traits.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Resourceful.*** You gain Heroic Inspiration whenever you finish a Long Rest.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/human-resourceful"
+      ]
+    },
+    {
+      "text": "***Skillful.*** You gain proficiency in one skill of your choice.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/human-skillful"
+      ]
+    },
+    {
+      "text": "***Versatile.*** You gain an Origin feat of your choice (see “Feats”). Skilled is recommended.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/human-versatile"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/human-resourceful",
+    "dnd5e/feature/human-skillful",
+    "dnd5e/feature/human-versatile"
+  ]
+}

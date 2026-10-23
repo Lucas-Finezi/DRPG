@@ -66,6 +66,9 @@ def main(lots):
             t = norm(n.text if n.type != "h" else re.sub(r" \[[^\]]+\]$", "", n.text))
             if not t or (n.type == "h" and n.level <= 2):
                 continue
+            nxt = nodes[n.index + 1] if n.index + 1 < len(nodes) else None
+            if n.type == "h" and nxt is not None and nxt.type == "h" and nxt.level > n.level:
+                continue  # a grouping heading with no text of its own
             if t not in all_text:
                 missing.append({"page": n.page, "type": n.type, "text": t[:120]})
         report[lot] = {"nodes": len(own), "uncovered": len(missing), "examples": missing[:15]}

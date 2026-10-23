@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/species/halfling",
+  "kind": "species",
+  "name": "Halfling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Halfling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 2,
+  "text": "**Creature Type:** Humanoid\n\n**Size:** Small (about 2–3 feet tall)\n\n**Speed:** 30 feet\n\nAs a Halfling, you have these special traits.\n\n***Brave.*** You have Advantage on saving throws you make to avoid or end the Frightened condition.\n\n***Halfling Nimbleness.*** You can move through the space of any creature that is a size larger than you, but you can’t stop in the same space.\n\n***Luck.*** When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.\n\n***Naturally Stealthy.*** You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+  "facets": {
+    "creature_type": "humanoid",
+    "size": [
+      "small"
+    ],
+    "speed": 30
+  },
+  "data": {
+    "creature_type": "humanoid",
+    "sizes": [
+      "small"
+    ],
+    "height": {
+      "small": "about 2–3 feet tall"
+    },
+    "speed": 30,
+    "traits": [
+      "dnd5e/feature/halfling-brave",
+      "dnd5e/feature/halfling-halfling-nimbleness",
+      "dnd5e/feature/halfling-luck",
+      "dnd5e/feature/halfling-naturally-stealthy"
+    ],
+    "rules": [
+      {
+        "id": "creature_type",
+        "creature_type": "humanoid"
+      },
+      {
+        "id": "size",
+        "sizes": [
+          "small"
+        ]
+      },
+      {
+        "id": "speed",
+        "walk": 30
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/halfling-brave",
+        "dnd5e/feature/halfling-halfling-nimbleness",
+        "dnd5e/feature/halfling-luck",
+        "dnd5e/feature/halfling-naturally-stealthy"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "**Creature Type:** Humanoid",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Size:** Small (about 2–3 feet tall)",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Speed:** 30 feet",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Halfling, you have these special traits.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Brave.*** You have Advantage on saving throws you make to avoid or end the Frightened condition.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/halfling-brave"
+      ]
+    },
+    {
+      "text": "***Halfling Nimbleness.*** You can move through the space of any creature that is a size larger than you, but you can’t stop in the same space.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/halfling-halfling-nimbleness"
+      ]
+    },
+    {
+      "text": "***Luck.*** When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/halfling-luck"
+      ]
+    },
+    {
+      "text": "***Naturally Stealthy.*** You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/halfling-naturally-stealthy"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/halfling-brave",
+    "dnd5e/feature/halfling-halfling-nimbleness",
+    "dnd5e/feature/halfling-luck",
+    "dnd5e/feature/halfling-naturally-stealthy"
+  ]
+}
