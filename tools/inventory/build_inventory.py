@@ -196,6 +196,7 @@ SIDEBAR_LOTS = {
 RELOCATED_TABLES = {
     "Skills": "L05",                                 # printed inside "Actions" (p. 9)
     "Starting Equipment at Higher Levels": "L02",    # printed inside "Multiclassing" (p. 24)
+    "Travel Terrain": "L41",                         # printed inside "Creating a Background" (p. 192)
 }
 STAT_BLOCK_SECTIONS = {"Traits", "Actions", "Bonus Actions", "Reactions", "Legendary Actions"}
 

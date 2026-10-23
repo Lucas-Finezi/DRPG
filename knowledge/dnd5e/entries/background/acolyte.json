@@ -1,0 +1,194 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/background/acolyte",
+  "kind": "background",
+  "name": "Acolyte",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      83
+    ],
+    "section": "Character Origins/Character Backgrounds/Background Descriptions/Acolyte",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L11"
+  },
+  "tier": 2,
+  "text": "**Ability Scores:** Intelligence, Wisdom, Charisma\n\n**Feat:** Magic Initiate (Cleric) (see “Feats”)\n\n**Skill Proficiencies:** Insight and Religion\n\n**Tool Proficiency:** Calligrapher’s Supplies\n\n**Equipment:** *Choose A or B:* (A) Calligrapher’s Supplies,\n\nBook (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+  "facets": {
+    "ability_scores": [
+      "int",
+      "wis",
+      "cha"
+    ],
+    "skills": [
+      "insight",
+      "religion"
+    ],
+    "feat": "magic-initiate"
+  },
+  "data": {
+    "ability_scores": [
+      "int",
+      "wis",
+      "cha"
+    ],
+    "feat": "dnd5e/feat/magic-initiate",
+    "skills": [
+      "insight",
+      "religion"
+    ],
+    "tool": "dnd5e/tool/calligraphers-supplies",
+    "equipment": {
+      "a": {
+        "items": [
+          {
+            "ref": "dnd5e/tool/calligraphers-supplies",
+            "quantity": 1
+          },
+          {
+            "ref": "dnd5e/gear/book",
+            "quantity": 1,
+            "note": "prayers"
+          },
+          {
+            "ref": "dnd5e/gear/holy-symbol",
+            "quantity": 1
+          },
+          {
+            "ref": "dnd5e/gear/parchment",
+            "quantity": 10,
+            "note": "sheets"
+          },
+          {
+            "ref": "dnd5e/gear/robe",
+            "quantity": 1
+          }
+        ],
+        "gp": 8
+      },
+      "b": {
+        "gp": 50
+      }
+    },
+    "feat_options": {
+      "spell_list": "cleric"
+    },
+    "rules": [
+      {
+        "id": "ability_scores",
+        "abilities": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "increase": "plus_2_and_plus_1_or_plus_1_to_all_three",
+        "max_score": 20
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feat/magic-initiate"
+      ],
+      "note": "Spell list: Cleric."
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "items": [
+        "insight",
+        "religion"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "tool",
+      "items": [
+        "dnd5e/tool/calligraphers-supplies"
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Package (A)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/rule/character-backgrounds",
+              "note": "Gain the package in data.equipment.a."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "50 GP",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/rule/coins",
+              "note": "Gain 50 GP."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "**Ability Scores:** Intelligence, Wisdom, Charisma",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Feat:** Magic Initiate (Cleric) (see “Feats”)",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Skill Proficiencies:** Insight and Religion",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Tool Proficiency:** Calligrapher’s Supplies",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "**Equipment:** *Choose A or B:* (A) Calligrapher’s Supplies,\n\nBook (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/magic-initiate",
+    "dnd5e/gear/book",
+    "dnd5e/gear/holy-symbol",
+    "dnd5e/gear/parchment",
+    "dnd5e/gear/robe",
+    "dnd5e/rule/character-backgrounds",
+    "dnd5e/rule/coins",
+    "dnd5e/tool/calligraphers-supplies"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/creating-a-background",
+  "kind": "rule",
+  "name": "Creating a Background",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      192,
+      193
+    ],
+    "section": "Gameplay Toolbox/Creating a Background",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L11"
+  },
+  "tier": 3,
+  "text": "A character’s background represents what the character did prior to becoming an adventurer. Creating a unique background or customizing an existing one can reflect the particular theme of your campaign or elements of your world. You can also create a background to help a player craft the story they have in mind for their character. \n\nThis section describes, step by step, how you can create backgrounds tailored for your world and the heroes in it.\n\n### 1: Choose Abilities\n\nChoose three abilities that seem appropriate for the background:\n\n**Strength or Dexterity.** These abilities are ideal for a background involving physical exertion.\n\n**Constitution.** This ability is ideal for a background that involves endurance or long hours of activity.\n\n\\*Appropriate equipment (such as skis) is necessary to keep up a Fast pace in Arctic terrain. †Characters’ rate of travel while waterborne depends on the vehicle carrying them; see “Vehicles.”\n\n**Intelligence or Wisdom.** One or both abilities are ideal for a background that focuses on cerebral or spiritual matters.\n\n**Charisma.** This ability is ideal for a background that involves performance or social interaction.\n\n### 2: Choose a Feat\n\nChoose one feat from the Origin category. See “Origin Feats” for examples of Origin feats.\n\n### 3: Choose Skill Proficiencies\n\nChoose two skills appropriate for the background. There needn’t be a relationship between the skill proficiencies a background grants and the ability scores it increases.\n\n### 4: Choose a Tool Proficiency\n\nChoose one tool used in the practice of the background or often associated with it.\n\n### 5: Choose Equipment\n\nAssemble a package of equipment worth 50 GP (including unspent gold). Don’t include Martial weapons or armor, as characters get them from their class choices.",
+  "data": {
+    "rules": [
+      {
+        "id": "choose_abilities",
+        "count": 3
+      },
+      {
+        "id": "choose_feat",
+        "category": "origin",
+        "count": 1
+      },
+      {
+        "id": "choose_skills",
+        "count": 2,
+        "related_to_abilities": false
+      },
+      {
+        "id": "choose_tool",
+        "count": 1
+      },
+      {
+        "id": "choose_equipment",
+        "value_gp": 50,
+        "includes_unspent_gold": true,
+        "excluded": [
+          "martial_weapons",
+          "armor"
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "custom_background",
+      "reason": "gm_judgment",
+      "prompt": "Create or customize a background for this campaign?",
+      "source_text": "Creating a unique background or customizing an existing one can reflect the particular theme of your campaign or elements of your world.",
+      "when": "campaign_setup",
+      "pages": [
+        192
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A character’s background represents what the character did prior to becoming an adventurer. Creating a unique background or customizing an existing one can reflect the particular theme of your campaign or elements of your world. You can also create a background to help a player craft the story they have in mind for their character.",
+      "status": "master_decision",
+      "by": [
+        "md:custom_background"
+      ]
+    },
+    {
+      "text": "This section describes, step by step, how you can create backgrounds tailored for your world and the heroes in it.",
+      "status": "descriptive"
+    },
+    {
+      "text": "### 1: Choose Abilities\n\nChoose three abilities that seem appropriate for the background:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Strength or Dexterity.** These abilities are ideal for a background involving physical exertion.\n\n**Constitution.** This ability is ideal for a background that involves endurance or long hours of activity.\n\n\\*Appropriate equipment (such as skis) is necessary to keep up a Fast pace in Arctic terrain. †Characters’ rate of travel while waterborne depends on the vehicle carrying them; see “Vehicles.”\n\n**Intelligence or Wisdom.** One or both abilities are ideal for a background that focuses on cerebral or spiritual matters.\n\n**Charisma.** This ability is ideal for a background that involves performance or social interaction.",
+      "status": "descriptive"
+    },
+    {
+      "text": "### 2: Choose a Feat\n\nChoose one feat from the Origin category. See “Origin Feats” for examples of Origin feats.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1",
+        "dnd5e/rule/origin-feats"
+      ]
+    },
+    {
+      "text": "### 3: Choose Skill Proficiencies\n\nChoose two skills appropriate for the background. There needn’t be a relationship between the skill proficiencies a background grants and the ability scores it increases.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "### 4: Choose a Tool Proficiency\n\nChoose one tool used in the practice of the background or often associated with it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "### 5: Choose Equipment\n\nAssemble a package of equipment worth 50 GP (including unspent gold). Don’t include Martial weapons or armor, as characters get them from their class choices.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/origin-feats"
+  ]
+}

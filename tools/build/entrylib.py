@@ -193,7 +193,7 @@ def source(pages, section_path, lot):
 def collect_refs(obj, acc):
     if isinstance(obj, dict):
         for k, v in obj.items():
-            if k in ("text", "note", "prompt", "source_text", "source", "refs"):
+            if k in ("text", "note", "prompt", "source_text", "source"):
                 continue
             if isinstance(v, str) and REF_RE.match(v) and k in (
                     "ref", "condition", "rule", "spell", "creature", "into", "table", "extends"):
