@@ -159,28 +159,6 @@
           "bonus": 4,
           "on_hit": [
             {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "4d8",
-                  2
-                ]
-              },
-              "damage_type": "necrotic"
-            },
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "2d8",
-                  2
-                ]
-              },
-              "damage_type": "necrotic"
-            },
-            {
               "op": "apply_condition",
               "condition": "dnd5e/condition/prone",
               "when": {

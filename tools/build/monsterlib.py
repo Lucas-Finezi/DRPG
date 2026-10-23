@@ -174,7 +174,9 @@ def split_name(raw):
 
 def damage_terms(s):
     out = []
-    for avg, dice, dtype in re.findall(r"(\d+) \((\d+d\d+(?: [+−] \d+)?)\) (\w+) damage", s):
+    # a damage term followed by a condition ("... damage if the attack roll had Advantage", "or ... while
+    # Bloodied") is not unconditional: it is left to the rider decision
+    for avg, dice, dtype in re.findall(r"(\d+) \((\d+d\d+(?: [+−] \d+)?)\) (\w+) damage(?![^.,]*?\b(?:if|while|when|instead)\b)(?!,? or )", s):
         if dtype.lower() in DAMAGE:
             out.append({"op": "damage", "amount": _dice(dice), "damage_type": dtype.lower(), "average": int(avg)})
     if not out:
@@ -229,7 +231,7 @@ def condition_terms(s):
 
 def residual(hit):
     """Text of a Hit/Failure clause left after its damage terms and the rider clauses handled above."""
-    s = re.sub(r"\d+ \(\d+d\d+(?: [+−] \d+)?\) \w+ damage", "", hit)
+    s = re.sub(r"\d+ \(\d+d\d+(?: [+−] \d+)?\) \w+ damage(?![^.,]*?\b(?:if|while|when|instead)\b)(?!,? or )", "", hit)
     s = re.sub(r"^\d+ \w+ damage", "", s)
     s = COND_RX.sub("", s)
     s = PUSH_RX.sub("", s)

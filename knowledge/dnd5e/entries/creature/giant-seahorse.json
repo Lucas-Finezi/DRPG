@@ -130,31 +130,7 @@
         {
           "op": "attack",
           "attack_type": "melee",
-          "bonus": 4,
-          "on_hit": [
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "2d6",
-                  2
-                ]
-              },
-              "damage_type": "bludgeoning"
-            },
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "2d8",
-                  2
-                ]
-              },
-              "damage_type": "bludgeoning"
-            }
-          ]
+          "bonus": 4
         }
       ],
       "action": "dnd5e/action/attack"

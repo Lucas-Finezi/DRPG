@@ -166,31 +166,7 @@
         {
           "op": "attack",
           "attack_type": "melee",
-          "bonus": 3,
-          "on_hit": [
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "2d4",
-                  1
-                ]
-              },
-              "damage_type": "poison"
-            },
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "1d4",
-                  1
-                ]
-              },
-              "damage_type": "poison"
-            }
-          ]
+          "bonus": 3
         }
       ],
       "action": "dnd5e/action/attack"

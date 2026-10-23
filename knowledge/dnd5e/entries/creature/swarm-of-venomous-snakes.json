@@ -155,28 +155,6 @@
           "on_hit": [
             {
               "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "1d8",
-                  4
-                ]
-              },
-              "damage_type": "piercing"
-            },
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "1d4",
-                  4
-                ]
-              },
-              "damage_type": "piercing"
-            },
-            {
-              "op": "damage",
               "amount": "3d6",
               "damage_type": "poison"
             }

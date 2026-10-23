@@ -156,19 +156,7 @@
         {
           "op": "attack",
           "attack_type": "melee",
-          "bonus": 2,
-          "on_hit": [
-            {
-              "op": "damage",
-              "amount": "2d4",
-              "damage_type": "piercing"
-            },
-            {
-              "op": "damage",
-              "amount": "1d4",
-              "damage_type": "piercing"
-            }
-          ]
+          "bonus": 2
         }
       ],
       "action": "dnd5e/action/attack"

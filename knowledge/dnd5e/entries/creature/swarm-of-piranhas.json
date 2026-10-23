@@ -167,30 +167,6 @@
           "op": "attack",
           "attack_type": "melee",
           "bonus": 5,
-          "on_hit": [
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "2d4",
-                  3
-                ]
-              },
-              "damage_type": "piercing"
-            },
-            {
-              "op": "damage",
-              "amount": {
-                "op": "add",
-                "args": [
-                  "1d4",
-                  3
-                ]
-              },
-              "damage_type": "piercing"
-            }
-          ],
           "note": "Attack: with Advantage if the target doesn’t have all its Hit Points."
         }
       ],
