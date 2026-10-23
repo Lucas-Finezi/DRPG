@@ -1,0 +1,522 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/spirit-naga",
+  "kind": "creature",
+  "name": "Spirit Naga",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      329
+    ],
+    "section": "Monsters A–Z/Spirit Naga/Spirit Naga",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Large Fiend, Chaotic Evil*\n\n| **AC** 17 | **Initiative** +3 (13) |\n\n**HP** 135 (18d10 + 36)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 17 | +3 | +6 | **Con** 14 | +2 | +5 |\n| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +5 | **Cha** 16 | +3 | +6 |\n\n**Immunities** Poison; Charmed, Poisoned\n\n**Senses** Darkvision 60 ft.; Passive Perception 12\n\n**Languages** Abyssal, Common\n\n**CR** 8 (XP 3,900; PB +3)\n\n##### Traits\n\n***Fiendish Restoration.*** If it dies, the naga returns to life in 1d6 days and regains all its Hit Points. Only a *Wish* spell can prevent this trait from functioning.\n\n##### Actions\n\n***Multiattack.*** The naga makes three attacks, using Bite or Necrotic Ray in any combination.\n\n***Bite.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 7 (1d6 + 4) Piercing damage plus 14 (4d6) Poison damage.\n\n***Necrotic Ray.*** *Ranged Attack Roll:* +6, range 60 ft. *Hit:* 21 (6d6) Necrotic damage.\n\n***Spellcasting.*** The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14):\n\n**At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Water Breathing*\n\n**2/Day Each:** *Detect Thoughts*, *Dimension Door*, *Hold Person* (level 3 version), *Lightning Bolt* (level 4 version)",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "cr": "8"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "type_line": "Large Fiend, Chaotic Evil",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 135,
+      "formula": {
+        "op": "add",
+        "args": [
+          "18d10",
+          36
+        ]
+      },
+      "text": "135 (18d10 + 36)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 6
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 5
+      },
+      "int": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "wis": {
+        "score": 15,
+        "mod": 2,
+        "save": 5
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 6
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Charmed, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 12",
+      "darkvision": 60,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Abyssal, Common"
+    },
+    "cr": {
+      "value": "8",
+      "xp": 3900,
+      "proficiency_bonus": 3,
+      "text": "8 (XP 3,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Fiendish Restoration",
+        "text": "If it dies, the naga returns to life in 1d6 days and regains all its Hit Points. Only a *Wish* spell can prevent this trait from functioning."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The naga makes three attacks, using Bite or Necrotic Ray in any combination."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +7, reach 10 ft. *Hit:* 7 (1d6 + 4) Piercing damage plus 14 (4d6) Poison damage."
+      },
+      {
+        "name": "Necrotic Ray",
+        "text": "*Ranged Attack Roll:* +6, range 60 ft. *Hit:* 21 (6d6) Necrotic damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14):\n\n**At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Water Breathing*\n\n**2/Day Each:** *Detect Thoughts*, *Dimension Door*, *Hold Person* (level 3 version), *Lightning Bolt* (level 4 version)"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The naga makes three attacks, using Bite or Necrotic Ray in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14): At Will: Detect Magic, Mage Hand, Minor Illusion, Water Breathing 2/Day Each: Detect Thoughts, Dimension Door, Hold Person (level 3 version), Lightning Bolt (level 4 version)",
+        "ability": "int",
+        "save_dc": 14,
+        "no_material_components": false,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/mage-hand",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/minor-illusion",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/water-breathing",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/detect-thoughts",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/dimension-door",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/hold-person",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/lightning-bolt",
+            "frequency": "2/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "4d6",
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Necrotic Ray",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "6d6",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Mage Hand"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/minor-illusion",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Minor Illusion"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/water-breathing",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Water Breathing"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-thoughts",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Detect Thoughts",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dimension-door",
+          "slot": "none",
+          "save_dc": 14
+        }
+      ],
+      "name": "Dimension Door",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/hold-person",
+          "slot": "none",
+          "level": 3,
+          "save_dc": 14
+        }
+      ],
+      "name": "Hold Person",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/lightning-bolt",
+          "slot": "none",
+          "level": 4,
+          "save_dc": 14
+        }
+      ],
+      "name": "Lightning Bolt",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_fiendish_restoration",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Fiendish Restoration as written.",
+      "source_text": "If it dies, the naga returns to life in 1d6 days and regains all its Hit Points. Only a Wish spell can prevent this trait from functioning."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Fiend, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 135 (18d10 + 36)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 17 | +3 | +6 | **Con** 14 | +2 | +5 |\n| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +5 | **Cha** 16 | +3 | +6 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Charmed, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Abyssal, Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 8 (XP 3,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Fiendish Restoration.*** If it dies, the naga returns to life in 1d6 days and regains all its Hit Points. Only a *Wish* spell can prevent this trait from functioning.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_fiendish_restoration"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The naga makes three attacks, using Bite or Necrotic Ray in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 7 (1d6 + 4) Piercing damage plus 14 (4d6) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Necrotic Ray.*** *Ranged Attack Roll:* +6, range 60 ft. *Hit:* 21 (6d6) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14):\n\n**At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Water Breathing*\n\n**2/Day Each:** *Detect Thoughts*, *Dimension Door*, *Hold Person* (level 3 version), *Lightning Bolt* (level 4 version)",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/detect-thoughts",
+    "dnd5e/spell/dimension-door",
+    "dnd5e/spell/hold-person",
+    "dnd5e/spell/lightning-bolt",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/minor-illusion",
+    "dnd5e/spell/water-breathing"
+  ]
+}

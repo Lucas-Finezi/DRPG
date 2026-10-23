@@ -1,0 +1,362 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/stone-giant",
+  "kind": "creature",
+  "name": "Stone Giant",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      330
+    ],
+    "section": "Monsters A–Z/Stone Giant/Stone Giant",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 2,
+  "text": "*Huge Giant, Neutral*\n\n| **AC** 17 | **Initiative** +5 (15) |\n\n**HP** 126 (11d12 + 55)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 15 | +2 | +5 | **Con** 20 | +5 | +8 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 9 | −1 | −1 |\n\n**Skills** Athletics +12, Perception +4, Stealth +5\n\n**Senses** Darkvision 60 ft.; Passive Perception 14\n\n**Languages** Giant\n\n**CR** 7 (XP 2,900; PB +3)\n\n##### Actions\n\n***Multiattack.*** The giant makes two attacks, using Stone Club or Boulder in any combination.\n\n***Stone Club.*** *Melee Attack Roll:* +9, reach 15 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage.\n\n***Boulder.*** *Ranged Attack Roll:* +9, range 60/240 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.\n\n##### Reactions\n\n***Deflect Missile (Recharge 5–6).*** *Trigger:* The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. *Response:* The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack’s force. *Dexterity Saving Throw:* DC 17, one creature the giant can see within 60 feet. *Failure:* 11 (1d10 + 6) Force damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Huge",
+    "type": "Giant",
+    "alignment": "Neutral",
+    "cr": "7"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Giant",
+    "alignment": "Neutral",
+    "type_line": "Huge Giant, Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 126,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d12",
+          55
+        ]
+      },
+      "text": "126 (11d12 + 55)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 23,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 5
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 8
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 4
+      },
+      "cha": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "athletics": 12,
+      "perception": 4,
+      "stealth": 5,
+      "text": "Athletics +12, Perception +4, Stealth +5"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 14",
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Giant"
+    },
+    "cr": {
+      "value": "7",
+      "xp": 2900,
+      "proficiency_bonus": 3,
+      "text": "7 (XP 2,900; PB +3)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The giant makes two attacks, using Stone Club or Boulder in any combination."
+      },
+      {
+        "name": "Stone Club",
+        "text": "*Melee Attack Roll:* +9, reach 15 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage."
+      },
+      {
+        "name": "Boulder",
+        "text": "*Ranged Attack Roll:* +9, range 60/240 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Deflect Missile",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Trigger:* The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. *Response:* The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack’s force. *Dexterity Saving Throw:* DC 17, one creature the giant can see within 60 feet. *Failure:* 11 (1d10 + 6) Force damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The giant makes two attacks, using Stone Club or Boulder in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Stone Club",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d10",
+                  6
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Boulder",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  6
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "text": "one creature the giant can see within 60 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  6
+                ]
+              },
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "note": "Trigger: The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Giant, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 126 (11d12 + 55)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 15 | +2 | +5 | **Con** 20 | +5 | +8 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 9 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Athletics +12, Perception +4, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Giant",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 7 (XP 2,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The giant makes two attacks, using Stone Club or Boulder in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Stone Club.*** *Melee Attack Roll:* +9, reach 15 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Boulder.*** *Ranged Attack Roll:* +9, range 60/240 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Deflect Missile (Recharge 5–6).*** *Trigger:* The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. *Response:* The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack’s force. *Dexterity Saving Throw:* DC 17, one creature the giant can see within 60 feet. *Failure:* 11 (1d10 + 6) Force damage.",
+      "status": "structured",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

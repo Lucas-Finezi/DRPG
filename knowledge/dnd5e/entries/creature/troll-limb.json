@@ -1,0 +1,281 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/troll-limb",
+  "kind": "creature",
+  "name": "Troll Limb",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      333
+    ],
+    "section": "Monsters A–Z/Troll/Troll Limb",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Small Giant, Chaotic Evil*\n\n| **AC** 13 | **Initiative** +1 (11) |\n\n**HP** 14 (4d6)\n\n**Speed** 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 1 | −5 | −5 |\n\n**Senses** Darkvision 60 ft.; Passive Perception 9\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Regeneration.*** The limb regains 5 Hit Points at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn’t function on the limb’s next turn. The limb dies only if it starts its turn with 0 Hit Points and doesn’t regenerate.\n\n***Troll Spawn.*** The limb uncannily has the same senses as a whole troll. If the limb isn’t destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a **Troll**. Otherwise, the limb withers away.\n\n##### Actions\n\n***Rend.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (2d4 + 4) Slashing damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "type_line": "Small Giant, Chaotic Evil",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 14,
+      "formula": "4d6",
+      "text": "14 (4d6)"
+    },
+    "speed": {
+      "text": "20 ft.",
+      "walk": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 9",
+      "darkvision": 60,
+      "passive_perception": 9
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Regeneration",
+        "text": "The limb regains 5 Hit Points at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn’t function on the limb’s next turn. The limb dies only if it starts its turn with 0 Hit Points and doesn’t regenerate."
+      },
+      {
+        "name": "Troll Spawn",
+        "text": "The limb uncannily has the same senses as a whole troll. If the limb isn’t destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a **Troll**. Otherwise, the limb withers away."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (2d4 + 4) Slashing damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "regeneration_suppressed_by",
+        "damage_types": [
+          "acid",
+          "fire"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self",
+        "which": "each"
+      },
+      "condition": {
+        "not": {
+          "pred": "at_zero_hp"
+        }
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": 5
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_troll_spawn",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Troll Spawn as written.",
+      "source_text": "The limb uncannily has the same senses as a whole troll. If the limb isn’t destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a Troll. Otherwise, the limb withers away."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Giant, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 14 (4d6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 9",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Regeneration.*** The limb regains 5 Hit Points at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn’t function on the limb’s next turn. The limb dies only if it starts its turn with 0 Hit Points and doesn’t regenerate.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Troll Spawn.*** The limb uncannily has the same senses as a whole troll. If the limb isn’t destroyed within 24 hours, roll 1d12. On a 12, the limb turns into a **Troll**. Otherwise, the limb withers away.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_troll_spawn"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (2d4 + 4) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

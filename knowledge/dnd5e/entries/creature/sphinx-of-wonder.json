@@ -1,0 +1,332 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/sphinx-of-wonder",
+  "kind": "creature",
+  "name": "Sphinx of Wonder",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      327
+    ],
+    "section": "Monsters A–Z/Sphinxes/Sphinx of Wonder",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Tiny Celestial, Lawful Good*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 24 (7d4 + 7)\n\n**Speed** 20 ft., Fly 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 11 | +0 | +0 |\n\n**Skills** Arcana +4, Religion +4, Stealth +5\n\n**Resistances** Necrotic, Psychic, Radiant\n\n**Senses** Darkvision 60 ft.; Passive Perception 11\n\n**Languages** Celestial, Common\n\n**CR** 1 (XP 200; PB +2)\n\n##### Traits\n\n***Magic Resistance.*** The sphinx has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 7 (2d6) Radiant damage.\n\n##### Reactions\n\n***Burst of Ingenuity (2/Day).*** *Trigger:* The sphinx or another creature within 30 feet makes an ability check or a saving throw. *Response:* The sphinx adds 2 to the roll.",
+  "facets": {
+    "group": "monster",
+    "size": "Tiny",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "type_line": "Tiny Celestial, Lawful Good",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 24,
+      "formula": {
+        "op": "add",
+        "args": [
+          "7d4",
+          7
+        ]
+      },
+      "text": "24 (7d4 + 7)"
+    },
+    "speed": {
+      "text": "20 ft., Fly 40 ft.",
+      "walk": 20,
+      "fly": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "arcana": 4,
+      "religion": 4,
+      "stealth": 5,
+      "text": "Arcana +4, Religion +4, Stealth +5"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic",
+        "psychic",
+        "radiant"
+      ],
+      "text": "Necrotic, Psychic, Radiant"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 11",
+      "darkvision": 60,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Celestial, Common"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "text": "The sphinx has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 7 (2d6) Radiant damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Burst of Ingenuity",
+        "per_day": 2,
+        "text": "*Trigger:* The sphinx or another creature within 30 feet makes an ability check or a saving throw. *Response:* The sphinx adds 2 to the roll."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against_spell_or_magic"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "radiant"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: The sphinx or another creature within 30 feet makes an ability check or a saving throw."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "reactions_burst_of_ingenuity_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Burst of Ingenuity as written.",
+      "source_text": ": The sphinx adds 2 to the roll."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Celestial, Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 24 (7d4 + 7)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Fly 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 11 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Arcana +4, Religion +4, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic, Psychic, Radiant",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Celestial, Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The sphinx has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 7 (2d6) Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Burst of Ingenuity (2/Day).*** *Trigger:* The sphinx or another creature within 30 feet makes an ability check or a saving throw. *Response:* The sphinx adds 2 to the roll.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2",
+        "md:reactions_burst_of_ingenuity_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/reaction"
+  ]
+}

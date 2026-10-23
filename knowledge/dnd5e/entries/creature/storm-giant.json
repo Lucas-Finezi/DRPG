@@ -1,0 +1,507 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/storm-giant",
+  "kind": "creature",
+  "name": "Storm Giant",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      330,
+      331
+    ],
+    "section": "Monsters A–Z/Storm Giant/Storm Giant",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Huge Giant, Chaotic Good*\n\n| **AC** 16 | **Initiative** +7 (17) |\n\n**HP** 230 (20d12 + 100)\n\n**Speed** 50 ft., Fly 25 ft. (hover), Swim 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 29 | +9 | +14 | **Dex** 14 | +2 | +2 | **Con** 20 | +5 | +10 |\n| **Int** | 16 | +3 | +3 | **Wis** 20 | +5 | +10 | **Cha** 18 | +4 | +9 |\n\n**Skills** Arcana +8, Athletics +14, History +8, Perception +10\n\n**Resistances** Cold\n\n**Immunities** Lightning, Thunder\n\n**Senses** Darkvision 120 ft., Truesight 30 ft.;\n\nPassive Perception 20\n\n**Languages** Common, Giant\n\n**CR** 13 (XP 10,000; PB +5)\n\n##### Traits\n\n***Amphibious.*** The giant can breathe air and water.\n\n##### Actions\n\n***Multiattack.*** The giant makes two attacks, using Storm Sword or Thunderbolt in any combination.\n\n***Storm Sword.*** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 23 (4d6 + 9) Slashing damage plus 13 (3d8) Lightning damage.\n\n***Thunderbolt.*** *Ranged Attack Roll:* +14, range 500 ft. *Hit:* 22 (2d12 + 9) Lightning damage, and the target has the Blinded and Deafened conditions until the start of the giant’s next turn.\n\n***Lightning Storm (Recharge 5–6).*** *Dexterity Saving Throw:* DC 18, each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.\n\n***Spellcasting.*** The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Light*\n\n**1/Day:** *Control Weather*",
+  "facets": {
+    "group": "monster",
+    "size": "Huge",
+    "type": "Giant",
+    "alignment": "Chaotic Good",
+    "cr": "13"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Giant",
+    "alignment": "Chaotic Good",
+    "type_line": "Huge Giant, Chaotic Good",
+    "ac": {
+      "value": 16,
+      "text": "16"
+    },
+    "initiative": {
+      "modifier": 7,
+      "score": 17,
+      "text": "+7 (17)"
+    },
+    "hp": {
+      "average": 230,
+      "formula": {
+        "op": "add",
+        "args": [
+          "20d12",
+          100
+        ]
+      },
+      "text": "230 (20d12 + 100)"
+    },
+    "speed": {
+      "text": "50 ft., Fly 25 ft. (hover), Swim 50 ft.",
+      "walk": 50,
+      "fly": 25,
+      "hover": true,
+      "swim": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 29,
+        "mod": 9,
+        "save": 14
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 10
+      },
+      "int": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "wis": {
+        "score": 20,
+        "mod": 5,
+        "save": 10
+      },
+      "cha": {
+        "score": 18,
+        "mod": 4,
+        "save": 9
+      }
+    },
+    "skills": {
+      "arcana": 8,
+      "athletics": 14,
+      "history": 8,
+      "perception": 10,
+      "text": "Arcana +8, Athletics +14, History +8, Perception +10"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning",
+        "thunder"
+      ],
+      "conditions": [],
+      "text": "Lightning, Thunder"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft., Truesight 30 ft.; Passive Perception 20",
+      "darkvision": 120,
+      "truesight": 30,
+      "passive_perception": 20
+    },
+    "languages": {
+      "text": "Common, Giant"
+    },
+    "cr": {
+      "value": "13",
+      "xp": 10000,
+      "proficiency_bonus": 5,
+      "text": "13 (XP 10,000; PB +5)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The giant can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The giant makes two attacks, using Storm Sword or Thunderbolt in any combination."
+      },
+      {
+        "name": "Storm Sword",
+        "text": "*Melee Attack Roll:* +14, reach 10 ft. *Hit:* 23 (4d6 + 9) Slashing damage plus 13 (3d8) Lightning damage."
+      },
+      {
+        "name": "Thunderbolt",
+        "text": "*Ranged Attack Roll:* +14, range 500 ft. *Hit:* 22 (2d12 + 9) Lightning damage, and the target has the Blinded and Deafened conditions until the start of the giant’s next turn."
+      },
+      {
+        "name": "Lightning Storm",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 18, each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Light*\n\n**1/Day:** *Control Weather*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The giant makes two attacks, using Storm Sword or Thunderbolt in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18): At Will: Detect Magic, Light 1/Day: Control Weather",
+        "ability": "wis",
+        "save_dc": 18,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/light",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/control-weather",
+            "frequency": "1/Day"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Storm Sword",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 14,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d6",
+                  9
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d8",
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Thunderbolt",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 14,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d12",
+                  9
+                ]
+              },
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Lightning Storm",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 18,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 500
+            },
+            "text": "each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d10",
+              "damage_type": "lightning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/light",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Light"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/control-weather",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Control Weather",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_thunderbolt_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Thunderbolt as written.",
+      "source_text": "22 (2d12 + 9) Lightning damage, and the target has the Blinded and Deafened conditions until the start of the giant’s next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Giant, Chaotic Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 16 | **Initiative** +7 (17) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 230 (20d12 + 100)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft., Fly 25 ft. (hover), Swim 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 29 | +9 | +14 | **Dex** 14 | +2 | +2 | **Con** 20 | +5 | +10 |\n| **Int** | 16 | +3 | +3 | **Wis** 20 | +5 | +10 | **Cha** 18 | +4 | +9 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Arcana +8, Athletics +14, History +8, Perception +10",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning, Thunder",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft., Truesight 30 ft.;\n\nPassive Perception 20",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Giant",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 13 (XP 10,000; PB +5)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The giant can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The giant makes two attacks, using Storm Sword or Thunderbolt in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Storm Sword.*** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 23 (4d6 + 9) Slashing damage plus 13 (3d8) Lightning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Thunderbolt.*** *Ranged Attack Roll:* +14, range 500 ft. *Hit:* 22 (2d12 + 9) Lightning damage, and the target has the Blinded and Deafened conditions until the start of the giant’s next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_thunderbolt_rider"
+      ]
+    },
+    {
+      "text": "***Lightning Storm (Recharge 5–6).*** *Dexterity Saving Throw:* DC 18, each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Light*\n\n**1/Day:** *Control Weather*",
+      "status": "structured",
+      "by": [
+        "/data/actions/4",
+        "/data/rules/1",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/control-weather",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/light"
+  ]
+}

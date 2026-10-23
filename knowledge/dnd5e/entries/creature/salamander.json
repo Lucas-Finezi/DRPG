@@ -1,0 +1,409 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/salamander",
+  "kind": "creature",
+  "name": "Salamander",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      321
+    ],
+    "section": "Monsters A–Z/Salamander/Salamander",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Large Elemental, Neutral Evil*\n\n| **AC** 15 | **Initiative** +2 (12) |\n\n**HP** 90 (12d10 + 24)\n\n**Speed** 30 ft., Climb 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 15 | +2 | +2 |\n| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 12 | +1 | +1 |\n\n**Vulnerabilities** Cold\n\n**Immunities** Fire\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Primordial (Ignan)\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Fire Aura.*** At the end of each of the salamander’s turns, each creature of the salamander’s choice in a 5-foot Emanation originating from the salamander takes 7 (2d6) Fire damage.\n\n##### Actions\n\n***Multiattack.*** The salamander makes two Flame Spear attacks. It can replace one attack with a use of Constrict.\n\n***Flame Spear.*** *Melee or Ranged Attack Roll:* +7, reach 5 ft. or range 20/60 ft. *Hit:* 13 (2d8 + 4) Piercing damage plus 7 (2d6) Fire damage. *Hit or Miss:* The spear magically returns to the salamander’s hand immediately after a ranged attack.\n\n***Constrict.*** *Strength Saving Throw:* DC 15, one Large or smaller creature the salamander can see within 10 feet. *Failure:* 11 (2d6 + 4) Bludgeoning damage plus 7 (2d6) Fire damage. The target has the Grappled condition (escape DC 14), and it has the Restrained condition until the grapple ends.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "type_line": "Large Elemental, Neutral Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 90,
+      "formula": {
+        "op": "add",
+        "args": [
+          "12d10",
+          24
+        ]
+      },
+      "text": "90 (12d10 + 24)"
+    },
+    "speed": {
+      "text": "30 ft., Climb 30 ft.",
+      "walk": 30,
+      "climb": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire"
+      ],
+      "conditions": [],
+      "text": "Fire"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Ignan)"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Fire Aura",
+        "text": "At the end of each of the salamander’s turns, each creature of the salamander’s choice in a 5-foot Emanation originating from the salamander takes 7 (2d6) Fire damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The salamander makes two Flame Spear attacks. It can replace one attack with a use of Constrict."
+      },
+      {
+        "name": "Flame Spear",
+        "text": "*Melee or Ranged Attack Roll:* +7, reach 5 ft. or range 20/60 ft. *Hit:* 13 (2d8 + 4) Piercing damage plus 7 (2d6) Fire damage. *Hit or Miss:* The spear magically returns to the salamander’s hand immediately after a ranged attack."
+      },
+      {
+        "name": "Constrict",
+        "text": "*Strength Saving Throw:* DC 15, one Large or smaller creature the salamander can see within 10 feet. *Failure:* 11 (2d6 + 4) Bludgeoning damage plus 7 (2d6) Fire damage. The target has the Grappled condition (escape DC 14), and it has the Restrained condition until the grapple ends."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Flame Spear",
+            "count": 2
+          }
+        ],
+        "text": "The salamander makes two Flame Spear attacks. It can replace one attack with a use of Constrict."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "self",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": "fire",
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 5,
+              "origin": "self"
+            }
+          }
+        }
+      ],
+      "note": "."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Flame Spear",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Constrict",
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 15,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 10
+            },
+            "text": "one Large or smaller creature the salamander can see within 10 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "fire"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 14
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "duration": {
+                "kind": "while",
+                "while": {
+                  "pred": "has_condition",
+                  "args": {
+                    "condition": "grappled"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_flame_spear_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Flame Spear as written.",
+      "source_text": "13 (2d8 + 4) Piercing damage plus 7 (2d6) Fire damage. Hit or Miss: The spear magically returns to the salamander’s hand immediately after a ranged attack."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 90 (12d10 + 24)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Climb 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 15 | +2 | +2 |\n| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Cold",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Fire Aura.*** At the end of each of the salamander’s turns, each creature of the salamander’s choice in a 5-foot Emanation originating from the salamander takes 7 (2d6) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The salamander makes two Flame Spear attacks. It can replace one attack with a use of Constrict.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Flame Spear.*** *Melee or Ranged Attack Roll:* +7, reach 5 ft. or range 20/60 ft. *Hit:* 13 (2d8 + 4) Piercing damage plus 7 (2d6) Fire damage. *Hit or Miss:* The spear magically returns to the salamander’s hand immediately after a ranged attack.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/1",
+        "md:actions_flame_spear_rider"
+      ]
+    },
+    {
+      "text": "***Constrict.*** *Strength Saving Throw:* DC 15, one Large or smaller creature the salamander can see within 10 feet. *Failure:* 11 (2d6 + 4) Bludgeoning damage plus 7 (2d6) Fire damage. The target has the Grappled condition (escape DC 14), and it has the Restrained condition until the grapple ends.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/restrained"
+  ]
+}
