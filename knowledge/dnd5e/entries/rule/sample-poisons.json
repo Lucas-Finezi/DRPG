@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sample-poisons",
+  "kind": "rule",
+  "name": "Sample Poisons",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      197
+    ],
+    "section": "Gameplay Toolbox/Poison/Sample Poisons",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 1,
+  "text": "Example poisons are detailed here in alphabetical order. Each poison’s description includes the suggested price for a single dose of the poison, its type (contact, ingested, inhaled, or injury), and a description of the poison’s debilitating effects.",
+  "data": {
+    "rules": [
+      {
+        "id": "order",
+        "alphabetical": true,
+        "fields": [
+          "price",
+          "type",
+          "effects"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Example poisons are detailed here in alphabetical order. Each poison’s description includes the suggested price for a single dose of the poison, its type (contact, ingested, inhaled, or injury), and a description of the poison’s debilitating effects.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

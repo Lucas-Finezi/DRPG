@@ -159,7 +159,7 @@ def render(nodes, heading_offset=None):
             # a line wrap the extractor kept as a paragraph break: the line ends with a space and no
             # closing punctuation ("... making the area Heavily " / "Obscured for creatures ...")
             space_wrap = (prev_node is not None and prev_node.type == "p" and prev_node.text.endswith(" ")
-                          and re.search(r"[A-Za-z,]$", last) and re.match(r"^[A-Z][a-z]", text))
+                          and re.search(r"[A-Za-z,]$", last) and re.match(r"^([A-Z][a-z]|\d)", text))
             if parts and parts[-1][0] == "p" and (header_wrap or not TERMINAL.search(last)) and (space_wrap or 
                     re.match(r"^[a-z(]", text) or label_wrap or word_wrap or header_wrap
                     or (cut and re.search(r"[a-z,;]$", last)

@@ -1,0 +1,82 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/potion-of-animal-friendship",
+  "kind": "magic-item",
+  "name": "Potion of Animal Friendship",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      235
+    ],
+    "section": "Magic Items/Magic Items A–Z/Potion of Animal Friendship",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Uncommon*\n\nWhen you drink this potion, you can cast the level 3 version of the *Animal Friendship* spell (save DC 13).\n\nAgitating this potion’s muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Uncommon",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Drink",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/animal-friendship",
+          "slot": "none",
+          "components": [],
+          "level": 3,
+          "save_dc": 13
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you drink this potion, you can cast the level 3 version of the *Animal Friendship* spell (save DC 13).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Agitating this potion’s muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/animal-friendship"
+  ]
+}

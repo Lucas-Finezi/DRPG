@@ -137,7 +137,7 @@ def entries():
                "Magic Items/Crafting Magic Items", [
                    (None, "ref", ["dnd5e/rule/brewing-potions-of-healing", "dnd5e/rule/scribing-spell-scrolls"])]))
     E.append(R("crafting-arcana-proficiency", "Arcana Proficiency (Crafting)", section("Arcana Proficiency", 3, page=206),
-               "Magic Items/Crafting Magic Items/Arcana Proficiency", [(None, "rule", {"id": "arcana", "crafter_and_assistants": "dnd5e/skill/arcana"})]))
+               "Magic Items/Crafting Magic Items/Arcana Proficiency", [(None, "rule", {"id": "arcana", "crafter_and_assistants": "arcana"})]))
     tools = section("Tools", 3, page=206)
     E.append(R("crafting-magic-item-tools", "Tools (Magic Item Crafting)", tools, "Magic Items/Crafting Magic Items/Tools", [
         (None, "rule", {"id": "tools", "required_and_proficient": True, "assistants_proficient": True}),

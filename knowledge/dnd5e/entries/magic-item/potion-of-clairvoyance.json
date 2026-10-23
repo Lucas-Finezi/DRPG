@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/potion-of-clairvoyance",
+  "kind": "magic-item",
+  "name": "Potion of Clairvoyance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      235
+    ],
+    "section": "Magic Items/Magic Items A–Z/Potion of Clairvoyance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Rare*\n\nWhen you drink this potion, you gain the effect of the *Clairvoyance* spell (no Concentration required).\n\nAn eyeball bobs in this potion’s yellowish liquid but vanishes when the potion is opened.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Rare",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Drink",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/clairvoyance",
+          "slot": "none",
+          "components": [],
+          "note": "No Concentration required."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you drink this potion, you gain the effect of the *Clairvoyance* spell (no Concentration required).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "An eyeball bobs in this potion’s yellowish liquid but vanishes when the potion is opened.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/clairvoyance"
+  ]
+}

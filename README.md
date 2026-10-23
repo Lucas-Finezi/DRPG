@@ -79,7 +79,11 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
 | 3 — Magias | L25 Magias de círculo 8 | concluído (17 magias; 175/175) |
 | 3 — Magias | L26 Magias de círculo 9 | concluído (16 magias; 174/174) |
 | 3 — Magias | L27 Listas de magia | concluído (8 listas de classe + 8 de subclasse, 939 vínculos, divergências registradas; 1040/1040) |
-| 4 — Equipamentos e itens | L28–L32 | pendente |
+| 4 — Equipamentos e itens | L28 Armas | concluído (38 armas, 10 propriedades, 8 maestrias; 96/96) |
+| 4 — Equipamentos e itens | L29 Armaduras | concluído (13 armaduras e escudo; 36/36) |
+| 4 — Equipamentos e itens | L30 Equipamento de aventura | concluído (192 entradas: ferramentas, equipamento, montarias, veículos, serviços, estilos de vida; 623/623) |
+| 4 — Equipamentos e itens | L31 Itens mágicos | concluído (233 itens, 2 criaturas embutidas, regras de itens mágicos; 1687/1687) |
+| 4 — Equipamentos e itens | L32 Poções, pergaminhos e venenos | concluído (25 itens, 14 venenos, regras de preparo e veneno; 211/211) |
 | 5 — Criaturas e encontros | L33–L42 | pendente |
 | 6 — Integração e auditoria | L43–L46 | pendente |
 

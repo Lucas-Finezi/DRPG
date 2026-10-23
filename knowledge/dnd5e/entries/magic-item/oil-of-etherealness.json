@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/oil-of-etherealness",
+  "kind": "magic-item",
+  "name": "Oil of Etherealness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      233
+    ],
+    "section": "Magic Items/Magic Items A–Z/Oil of Etherealness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Rare*\n\nOne vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the *Etherealness* spell for 1 hour.\n\nBeads of this cloudy, gray oil form on the outside of its container and quickly evaporate.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Rare",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "coverage",
+        "vials": "1 per Medium or smaller creature; +1 per size category above Medium",
+        "includes_gear": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "name": "Apply",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/etherealness",
+          "slot": "none",
+          "components": [],
+          "note": "The covered creature gains the spell's effect for 1 hour."
+        }
+      ],
+      "note": "Applying the oil takes 10 minutes."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "One vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the *Etherealness* spell for 1 hour.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Beads of this cloudy, gray oil form on the outside of its container and quickly evaporate.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/etherealness"
+  ]
+}

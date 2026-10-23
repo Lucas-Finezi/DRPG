@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/oil-of-slipperiness",
+  "kind": "magic-item",
+  "name": "Oil of Slipperiness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      233,
+      234
+    ],
+    "section": "Magic Items/Magic Items A–Z/Oil of Slipperiness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Uncommon*\n\nOne vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the *Freedom of Movement* spell for 8 hours.\n\nAlternatively, the oil can be poured on the ground as a Magic action, where it covers a 10-foot square, duplicating the effect of the *Grease* spell in that area for 8 hours.\n\nThis sticky, black unguent is thick and heavy, but it flows quickly when poured.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Uncommon",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "coverage",
+        "vials": "1 per Medium or smaller creature; +1 per size category above Medium"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "name": "Apply",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/freedom-of-movement",
+          "slot": "none",
+          "components": [],
+          "note": "Effect for 8 hours on the covered creature."
+        }
+      ],
+      "note": "Applying the oil takes 10 minutes."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/grease",
+          "slot": "none",
+          "components": [],
+          "note": "Duplicates Grease in a 10-foot square for 8 hours."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "One vial of this oil can cover one Medium or smaller creature, along with the equipment it’s wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the *Freedom of Movement* spell for 8 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Alternatively, the oil can be poured on the ground as a Magic action, where it covers a 10-foot square, duplicating the effect of the *Grease* spell in that area for 8 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "This sticky, black unguent is thick and heavy, but it flows quickly when poured.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/freedom-of-movement",
+    "dnd5e/spell/grease"
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/spell-scroll",
+  "kind": "magic-item",
+  "name": "Spell Scroll",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      244
+    ],
+    "section": "Magic Items/Magic Items A–Z/Spell Scroll",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Scroll, Rarity Varies*\n\nA *Spell Scroll* bears the words of a single spell, written in a mystical cipher. If the spell is on your spell list, you can read the scroll and cast its spell without Material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell’s normal casting time. Once the spell is cast, the scroll crumbles to dust. If the casting is interrupted, the scroll isn’t lost.\n\nIf the spell is on your spell list but of a higher level than you can normally cast, you make an ability check using your spellcasting ability to determine whether you cast the spell. The DC equals 10 plus the spell’s level. On a failed check, the spell disappears from the scroll with no other effect.\n\nThe level of the spell on the scroll determines the spell’s saving throw DC and attack bonus, as well as the scroll’s rarity, as shown in the following table.\n\n| **Spell Level** | **Rarity** | **Save DC** | **Attack Bonus** |\n| Cantrip | Common | 13 | +5 |\n| 1 | Common | 13 | +5 |\n| 2 | Uncommon | 13 | +5 |\n| 3 | Uncommon | 15 | +7 |\n| **Spell Level** | **Rarity** | **Save DC** | **Attack Bonus** |\n| 4 | Rare | 15 | +7 |\n| 5 | Rare | 17 | +9 |\n| 6 | Very Rare | 17 | +9 |\n| 7 | Very Rare | 18 | +10 |\n| 8 | Very Rare | 18 | +10 |\n| 9 | Legendary | 19 | +11 |\n\n***Copying a Scroll into a Spellbook.*** A Wizard spell on a *Spell Scroll* can be copied into a spellbook. When a spell is copied in this way, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 plus the spell’s level. On a successful check, the spell is copied. Whether the check succeeds or fails, the *Spell Scroll* is destroyed.",
+  "facets": {
+    "category": "scroll",
+    "rarity": [
+      "varies"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Scroll, Rarity Varies",
+      "category": "scroll",
+      "rarity": [
+        {
+          "rarity": "varies"
+        }
+      ],
+      "variants": [
+        {
+          "spell_level": 0,
+          "rarity": "common",
+          "save_dc": 13,
+          "attack_bonus": 5
+        },
+        {
+          "spell_level": 1,
+          "rarity": "common",
+          "save_dc": 13,
+          "attack_bonus": 5
+        },
+        {
+          "spell_level": 2,
+          "rarity": "uncommon",
+          "save_dc": 13,
+          "attack_bonus": 5
+        },
+        {
+          "spell_level": 3,
+          "rarity": "uncommon",
+          "save_dc": 15,
+          "attack_bonus": 7
+        },
+        {
+          "spell_level": 4,
+          "rarity": "rare",
+          "save_dc": 15,
+          "attack_bonus": 7
+        },
+        {
+          "spell_level": 5,
+          "rarity": "rare",
+          "save_dc": 17,
+          "attack_bonus": 9
+        },
+        {
+          "spell_level": 6,
+          "rarity": "very_rare",
+          "save_dc": 17,
+          "attack_bonus": 9
+        },
+        {
+          "spell_level": 7,
+          "rarity": "very_rare",
+          "save_dc": 18,
+          "attack_bonus": 10
+        },
+        {
+          "spell_level": 8,
+          "rarity": "very_rare",
+          "save_dc": 18,
+          "attack_bonus": 10
+        },
+        {
+          "spell_level": 9,
+          "rarity": "legendary",
+          "save_dc": 19,
+          "attack_bonus": 11
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "use",
+        "requires_spell_list": true,
+        "material_components": false,
+        "casting_time": "normal",
+        "crumbles_after_cast": true,
+        "interrupted_not_lost": true
+      },
+      {
+        "id": "numbers",
+        "by_spell_level": "table"
+      }
+    ],
+    "tables": [
+      {
+        "id": "spell_scroll",
+        "caption": "Spell Scroll",
+        "columns": [
+          "Spell Level",
+          "Rarity",
+          "Save DC",
+          "Attack Bonus"
+        ],
+        "rows": [
+          [
+            "Cantrip",
+            "Common",
+            "13",
+            "+5"
+          ],
+          [
+            "1",
+            "Common",
+            "13",
+            "+5"
+          ],
+          [
+            "2",
+            "Uncommon",
+            "13",
+            "+5"
+          ],
+          [
+            "3",
+            "Uncommon",
+            "15",
+            "+7"
+          ],
+          [
+            "4",
+            "Rare",
+            "15",
+            "+7"
+          ],
+          [
+            "5",
+            "Rare",
+            "17",
+            "+9"
+          ],
+          [
+            "6",
+            "Very Rare",
+            "17",
+            "+9"
+          ],
+          [
+            "7",
+            "Very Rare",
+            "18",
+            "+10"
+          ],
+          [
+            "8",
+            "Very Rare",
+            "18",
+            "+10"
+          ],
+          [
+            "9",
+            "Legendary",
+            "19",
+            "+11"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Read",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/spell-scroll",
+          "note": "Cast the stored spell with its normal casting time, without Material components."
+        }
+      ],
+      "requires": {
+        "pred": "spell_on_your_list"
+      }
+    },
+    {
+      "op": "check",
+      "ability": {
+        "var": "spellcasting_ability"
+      },
+      "dc": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "spell_level"
+          }
+        ]
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/spell-scroll",
+          "note": "The spell disappears with no other effect."
+        }
+      ],
+      "when": {
+        "pred": "spell_level_above_castable"
+      }
+    },
+    {
+      "op": "check",
+      "ability": "int",
+      "dc": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "spell_level"
+          }
+        ]
+      },
+      "skill": "arcana",
+      "on_success": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/wizard-spellcasting",
+          "note": "The Wizard spell is copied."
+        }
+      ],
+      "note": "The scroll is destroyed whether the check succeeds or fails."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Scroll, Rarity Varies*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "A *Spell Scroll* bears the words of a single spell, written in a mystical cipher. If the spell is on your spell list, you can read the scroll and cast its spell without Material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell’s normal casting time. Once the spell is cast, the scroll crumbles to dust. If the casting is interrupted, the scroll isn’t lost.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If the spell is on your spell list but of a higher level than you can normally cast, you make an ability check using your spellcasting ability to determine whether you cast the spell. The DC equals 10 plus the spell’s level. On a failed check, the spell disappears from the scroll with no other effect.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The level of the spell on the scroll determines the spell’s saving throw DC and attack bonus, as well as the scroll’s rarity, as shown in the following table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "| **Spell Level** | **Rarity** | **Save DC** | **Attack Bonus** |\n| Cantrip | Common | 13 | +5 |\n| 1 | Common | 13 | +5 |\n| 2 | Uncommon | 13 | +5 |\n| 3 | Uncommon | 15 | +7 |\n| **Spell Level** | **Rarity** | **Save DC** | **Attack Bonus** |\n| 4 | Rare | 15 | +7 |\n| 5 | Rare | 17 | +9 |\n| 6 | Very Rare | 17 | +9 |\n| 7 | Very Rare | 18 | +10 |\n| 8 | Very Rare | 18 | +10 |\n| 9 | Legendary | 19 | +11 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Copying a Scroll into a Spellbook.*** A Wizard spell on a *Spell Scroll* can be copied into a spellbook. When a spell is copied in this way, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 plus the spell’s level. On a successful check, the spell is copied. Whether the check succeeds or fails, the *Spell Scroll* is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/wizard-spellcasting",
+    "dnd5e/magic-item/spell-scroll"
+  ]
+}

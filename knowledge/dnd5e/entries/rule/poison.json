@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/poison",
+  "kind": "rule",
+  "name": "Poison",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      197
+    ],
+    "section": "Gameplay Toolbox/Poison",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 3,
+  "text": "Given their insidious and deadly nature, poisons are a favorite tool among assassins and evil creatures.\n\nPoisons come in the following four types:\n\n**Contact.** Contact poison can be smeared on an object and remains potent until it is touched or washed off. A creature that touches contact poison with exposed skin suffers its effects.\n\n**Ingested.** A creature must swallow an entire dose of ingested poison to suffer its effects. The dose can be delivered in food or a liquid. You may decide that a partial dose has a reduced effect, such as allowing Advantage on the saving throw or dealing only half as much damage on a failed save.\n\n**Inhaled.** Poisonous powders and gases take effect when inhaled. Blowing the powder or releasing the gas subjects creatures in a 5-foot Cube to its effect. The resulting cloud dissipates immediately afterward. Holding one’s breath is ineffective against inhaled poisons, as they affect nasal membranes, tear ducts, and other parts of the body.\n\n**Injury.** Injury poison can be applied as a Bonus Action to a weapon, a piece of ammunition, or similar object. The poison remains potent until delivered through a wound or washed off. A creature that takes Piercing or Slashing damage from an object coated with the poison is exposed to its effects.",
+  "data": {
+    "rules": [
+      {
+        "id": "types",
+        "values": [
+          "contact",
+          "ingested",
+          "inhaled",
+          "injury"
+        ]
+      },
+      {
+        "id": "contact",
+        "smeared_on_object": true,
+        "until": [
+          "touched",
+          "washed off"
+        ],
+        "exposed_skin": true
+      },
+      {
+        "id": "ingested",
+        "whole_dose": true,
+        "via": [
+          "food",
+          "liquid"
+        ]
+      },
+      {
+        "id": "inhaled",
+        "area": {
+          "shape": "cube",
+          "size_feet": 5
+        },
+        "dissipates": "immediately",
+        "holding_breath_ineffective": true
+      },
+      {
+        "id": "injury",
+        "apply": "bonus_action",
+        "on": [
+          "weapon",
+          "ammunition",
+          "similar object"
+        ],
+        "until": [
+          "delivered",
+          "washed off"
+        ],
+        "exposure": "piercing or slashing damage from the coated object"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "partial_dose",
+      "reason": "gm_judgment",
+      "prompt": "Does a partial dose have a reduced effect (e.g. Advantage on the save or half damage)?",
+      "source_text": "You may decide that a partial dose has a reduced effect"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Given their insidious and deadly nature, poisons are a favorite tool among assassins and evil creatures.",
+      "status": "descriptive"
+    },
+    {
+      "text": "Poisons come in the following four types:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Contact.** Contact poison can be smeared on an object and remains potent until it is touched or washed off. A creature that touches contact poison with exposed skin suffers its effects.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Ingested.** A creature must swallow an entire dose of ingested poison to suffer its effects. The dose can be delivered in food or a liquid. You may decide that a partial dose has a reduced effect, such as allowing Advantage on the saving throw or dealing only half as much damage on a failed save.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/2",
+        "md:partial_dose"
+      ]
+    },
+    {
+      "text": "**Inhaled.** Poisonous powders and gases take effect when inhaled. Blowing the powder or releasing the gas subjects creatures in a 5-foot Cube to its effect. The resulting cloud dissipates immediately afterward. Holding one’s breath is ineffective against inhaled poisons, as they affect nasal membranes, tear ducts, and other parts of the body.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Injury.** Injury poison can be applied as a Bonus Action to a weapon, a piece of ammunition, or similar object. The poison remains potent until delivered through a wound or washed off. A creature that takes Piercing or Slashing damage from an object coated with the poison is exposed to its effects.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ]
+}

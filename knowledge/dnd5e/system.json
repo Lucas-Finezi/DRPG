@@ -2203,6 +2203,24 @@
           209
         ],
         "lot": "L31"
+      },
+      {
+        "id": "item_variant_healing",
+        "description": "Hit Points regained by the potion's variant (Potions of Healing table).",
+        "type": "number",
+        "pages": [
+          236
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "spellcasting_ability",
+        "description": "The creature's spellcasting ability.",
+        "type": "identifier",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
       }
     ],
     "stats": [
@@ -3815,6 +3833,24 @@
           206
         ],
         "lot": "L31"
+      },
+      {
+        "id": "midnight",
+        "description": "The stroke of midnight.",
+        "type": "event",
+        "pages": [
+          197
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "shaken_awake",
+        "description": "Another creature takes an action to shake the creature awake.",
+        "type": "event",
+        "pages": [
+          197
+        ],
+        "lot": "L32"
       }
     ],
     "predicates": [
@@ -5999,6 +6035,24 @@
           215
         ],
         "lot": "L31"
+      },
+      {
+        "id": "spell_on_your_list",
+        "description": "The spell is on the creature's spell list.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "spell_level_above_castable",
+        "description": "The spell is of a higher level than the creature can normally cast.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
       }
     ],
     "frequencies": [
