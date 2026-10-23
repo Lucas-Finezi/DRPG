@@ -1,0 +1,15 @@
+{
+  "op": "trigger",
+  "event": {
+    "event": "hit_by_attack_roll",
+    "whose": "self"
+  },
+  "cost": "reaction",
+  "optional": true,
+  "then": [
+    {
+      "op": "cast_spell",
+      "spell": "dnd5e/spell/shield"
+    }
+  ]
+}

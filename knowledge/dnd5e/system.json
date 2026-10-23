@@ -1,0 +1,2759 @@
+{
+  "$schema": "../../schema/system.schema.json",
+  "id": "dnd5e",
+  "ref": "dnd5e/system/dnd5e",
+  "name": "Dungeons & Dragons fifth edition — System Reference Document 5.2.1",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      13,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      89,
+      176,
+      192
+    ],
+    "section": "System",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "core_rules": [
+    {
+      "id": "general_rules",
+      "text": "General rules govern each part of the game. For example, the combat rules tell you that melee attacks use Strength and ranged attacks use Dexterity. That’s a general rule, and a general rule is in effect as long as something in the game doesn’t explicitly say otherwise.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "exceptions_supersede",
+      "text": "When an exception and a general rule disagree, the exception wins.",
+      "pages": [
+        5
+      ],
+      "data": {
+        "precedence": [
+          "specific_exception",
+          "general_rule"
+        ]
+      }
+    },
+    {
+      "id": "round_down",
+      "text": "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.",
+      "pages": [
+        5,
+        187
+      ],
+      "data": {
+        "default_rounding": "down"
+      }
+    },
+    {
+      "id": "simultaneous_effects",
+      "text": "If two or more things happen at the same time on a turn, the person at the game table—player or GM—whose turn it is decides the order in which those things happen.",
+      "pages": [
+        187
+      ],
+      "data": {
+        "orderer": "controller_of_current_turn"
+      }
+    },
+    {
+      "id": "per_day",
+      "text": "If a rule says you can use something a certain number of times per day, that means you must finish a Long Rest to use it again after you run out of uses.",
+      "pages": [
+        186
+      ],
+      "data": {
+        "per_day_recovers_on": "long_rest_finish"
+      }
+    },
+    {
+      "id": "ally",
+      "text": "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.",
+      "pages": [
+        176
+      ],
+      "data": {
+        "relationship": "ally",
+        "designated_by": [
+          "party",
+          "rules",
+          "gm"
+        ]
+      }
+    },
+    {
+      "id": "enemy",
+      "text": "A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or GM.",
+      "pages": [
+        181
+      ],
+      "data": {
+        "relationship": "enemy",
+        "designated_by": [
+          "combat_side",
+          "rules",
+          "gm"
+        ]
+      }
+    },
+    {
+      "id": "monster",
+      "text": "A monster is a creature controlled by the GM, even if the creature is benevolent.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "controller": "gm"
+      }
+    },
+    {
+      "id": "player_character",
+      "text": "A player character is a character controlled by a player.",
+      "pages": [
+        186
+      ],
+      "data": {
+        "controller": "player"
+      }
+    },
+    {
+      "id": "nonplayer_character",
+      "text": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "is_a": "monster"
+      }
+    },
+    {
+      "id": "magical_effect",
+      "text": "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "sources": [
+          "spell",
+          "magic_item",
+          "rule_labelled_magical"
+        ]
+      }
+    },
+    {
+      "id": "shape_shifting",
+      "text": "Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.",
+      "pages": [
+        187
+      ],
+      "data": {
+        "ongoing_effects_carry_over": true,
+        "revert_on_death": true
+      }
+    },
+    {
+      "id": "telepathy.language",
+      "text": "Unless a rule states otherwise, the contacted creature doesn’t need to share a language with the telepath to understand this communication, but the contacted creature must be able to understand at least one language or be telepathic itself to understand.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "shared_language_required": false,
+        "target_needs": "any_language_or_telepathy"
+      }
+    },
+    {
+      "id": "telepathy.contact",
+      "text": "A telepath doesn’t need to see a contacted creature, and the telepath can start or end the telepathic contact at any time (no action required). Telepathic contact can’t be initiated and is immediately broken if either the telepath or the other creature has the Incapacitated condition. Telepathic contact is also broken if the contacted creature is no longer within the telepathy’s range or if the telepath contacts a different creature within range.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "sight_required": false,
+        "action_cost": "none",
+        "broken_by": [
+          "incapacitated_either",
+          "out_of_range",
+          "contacts_other_creature"
+        ]
+      }
+    },
+    {
+      "id": "telepathy.non_telepath",
+      "text": "A creature without telepathy can receive telepathic messages but can’t initiate a telepathic conversation. Once a telepathic conversation starts, the non-telepath can communicate mentally to the telepath until the telepathic connection ends.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "non_telepath_can_initiate": false,
+        "non_telepath_can_reply": true
+      }
+    },
+    {
+      "id": "teleportation.movement",
+      "text": "If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "expends_movement": false,
+        "provokes_opportunity_attacks": false
+      }
+    },
+    {
+      "id": "teleportation.passengers",
+      "text": "When you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "carried_equipment": true,
+        "touched_creatures": false
+      }
+    },
+    {
+      "id": "teleportation.blocked",
+      "text": "If the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "blocked_destination": "nearest_unoccupied_space_of_choice"
+      }
+    },
+    {
+      "id": "illusions",
+      "text": "If an illusion manifests in space, the illusion is insubstantial and weightless, yet it seems to be affected by the environment as if the illusion were real unless the effect that created it specifies otherwise.",
+      "pages": [
+        183
+      ],
+      "data": {
+        "insubstantial": true,
+        "weightless": true
+      }
+    },
+    {
+      "id": "stat_block.damage_notation",
+      "text": "A stat block usually provides both a static number and a die expression for each instance of damage. For example, an attack might deal 4 (1d4 + 2) damage on a hit. The GM determines whether you use the static number or the die expression in parentheses; you don’t use both.",
+      "pages": [
+        189
+      ],
+      "data": {
+        "modes": [
+          "static",
+          "dice"
+        ],
+        "chooser": "gm"
+      }
+    },
+    {
+      "id": "stat_block.attack_targets",
+      "text": "An attack is against one target unless its entry says otherwise.",
+      "pages": [
+        189,
+        256
+      ],
+      "data": {
+        "default_targets": 1
+      }
+    }
+  ],
+  "core_die": {
+    "die": "d20",
+    "rules": [
+      {
+        "id": "d20_test.kinds",
+        "text": "When the outcome of an action is uncertain, the game uses a d20 roll to determine success or failure. These rolls are called D20 Tests, and they come in three kinds: ability checks, saving throws, and attack rolls.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "kinds": [
+            "ability_check",
+            "saving_throw",
+            "attack_roll"
+          ]
+        }
+      },
+      {
+        "id": "d20_test.step_roll",
+        "text": "Roll 1d20. You always want to roll high.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "roll": "1d20"
+        }
+      },
+      {
+        "id": "d20_test.step_modifiers",
+        "text": "Add Modifiers. Add these modifiers to the number rolled on the d20:",
+        "pages": [
+          6
+        ],
+        "data": {
+          "modifiers": [
+            "ability_modifier",
+            "proficiency_bonus_if_relevant",
+            "circumstantial_bonuses_and_penalties"
+          ]
+        }
+      },
+      {
+        "id": "d20_test.success",
+        "text": "If the total of the d20 and its modifiers equals or exceeds the target number, the D20 Test succeeds. Otherwise, it fails.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "comparison": ">="
+        }
+      },
+      {
+        "id": "d20_test.target_numbers",
+        "text": "The target number for an ability check or a saving throw is called a Difficulty Class (DC). The target number for an attack roll is called an Armor Class (AC)",
+        "pages": [
+          6
+        ],
+        "data": {
+          "ability_check": "dc",
+          "saving_throw": "dc",
+          "attack_roll": "ac"
+        }
+      },
+      {
+        "id": "attack_roll.natural_20",
+        "text": "If you roll a 20 on the d20 (called a “natural 20”) for an attack roll, the attack hits regardless of any modifiers or the target’s AC. This is called a Critical Hit",
+        "pages": [
+          7
+        ],
+        "data": {
+          "roll": "attack_roll",
+          "natural": 20,
+          "result": "hit",
+          "critical_hit": true
+        }
+      },
+      {
+        "id": "attack_roll.natural_1",
+        "text": "If you roll a 1 on the d20 (a “natural 1”) for an attack roll, the attack misses regardless of any modifiers or the target’s AC.",
+        "pages": [
+          7
+        ],
+        "data": {
+          "roll": "attack_roll",
+          "natural": 1,
+          "result": "miss"
+        }
+      },
+      {
+        "id": "advantage.roll",
+        "text": "When a roll has either Advantage or Disadvantage, roll a second d20 when you make the roll. Use the higher of the two rolls if you have Advantage, and use the lower roll if you have Disadvantage.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "advantage": "highest_of_2d20",
+          "disadvantage": "lowest_of_2d20"
+        }
+      },
+      {
+        "id": "advantage.no_stacking",
+        "text": "If multiple situations affect a roll and they all grant Advantage on it, you still roll only two d20s. Similarly, if multiple situations impose Disadvantage on a roll, you roll only two d20s.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "stacks": false
+        }
+      },
+      {
+        "id": "advantage.cancel",
+        "text": "If circumstances cause a roll to have both Advantage and Disadvantage, the roll has neither of them, and you roll one d20. This is true even if multiple circumstances impose Disadvantage and only one grants Advantage or vice versa.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "both_present": "neither"
+        }
+      },
+      {
+        "id": "advantage.reroll",
+        "text": "When you have Advantage or Disadvantage and something in the game lets you reroll or replace the d20, you can reroll or replace only one die, not both. You choose which one.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "reroll_dice": 1,
+          "chooser": "roller"
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "id": "str",
+      "name": "Strength",
+      "abbreviation": "Str.",
+      "measures": "Physical might",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "dex",
+      "name": "Dexterity",
+      "abbreviation": "Dex.",
+      "measures": "Agility, reflexes, and balance",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "con",
+      "name": "Constitution",
+      "abbreviation": "Con.",
+      "measures": "Health and stamina",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "int",
+      "name": "Intelligence",
+      "abbreviation": "Int.",
+      "measures": "Reasoning and memory",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "wis",
+      "name": "Wisdom",
+      "abbreviation": "Wis.",
+      "measures": "Perceptiveness and mental fortitude",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "cha",
+      "name": "Charisma",
+      "abbreviation": "Cha.",
+      "measures": "Confidence, poise, and charm",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "ability_scores": {
+    "min": 1,
+    "max": 30,
+    "descriptors": [
+      {
+        "id": "ability_score.range_1_1",
+        "text": "This is the lowest a score can normally go. If an effect reduces a score to 0, that effect explains what happens.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ability_score.range_2_9",
+        "text": "This represents a weak capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 2,
+          "max": 9
+        }
+      },
+      {
+        "id": "ability_score.range_10_11",
+        "text": "This represents the human average.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 10,
+          "max": 11
+        }
+      },
+      {
+        "id": "ability_score.range_12_19",
+        "text": "This represents a strong capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 12,
+          "max": 19
+        }
+      },
+      {
+        "id": "ability_score.range_20_20",
+        "text": "This is the highest an adventurer’s score can go unless a feature says otherwise.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 20,
+          "max": 20
+        }
+      },
+      {
+        "id": "ability_score.range_21_29",
+        "text": "This represents an extraordinary capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 21,
+          "max": 29
+        }
+      },
+      {
+        "id": "ability_score.range_30_30",
+        "text": "This is the highest a score can go.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 30,
+          "max": 30
+        }
+      }
+    ],
+    "modifier_table": [
+      {
+        "min": 1,
+        "max": 1,
+        "modifier": -5
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "modifier": -4
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "modifier": -3
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "modifier": -2
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "modifier": -1
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "modifier": 0
+      },
+      {
+        "min": 12,
+        "max": 13,
+        "modifier": 1
+      },
+      {
+        "min": 14,
+        "max": 15,
+        "modifier": 2
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "modifier": 3
+      },
+      {
+        "min": 18,
+        "max": 19,
+        "modifier": 4
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "modifier": 5
+      },
+      {
+        "min": 22,
+        "max": 23,
+        "modifier": 6
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "modifier": 7
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "modifier": 8
+      },
+      {
+        "min": 28,
+        "max": 29,
+        "modifier": 9
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "modifier": 10
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ]
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "name": "Acrobatics",
+      "ability": "dex",
+      "example_uses": "Stay on your feet in a tricky situation, or perform an acrobatic stunt.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "animal_handling",
+      "name": "Animal Handling",
+      "ability": "wis",
+      "example_uses": "Calm or train an animal, or get an animal to behave in a certain way.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "arcana",
+      "name": "Arcana",
+      "ability": "int",
+      "example_uses": "Recall lore about spells, magic items, and the planes of existence.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "athletics",
+      "name": "Athletics",
+      "ability": "str",
+      "example_uses": "Jump farther than normal, stay afloat in rough water, or break something.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "deception",
+      "name": "Deception",
+      "ability": "cha",
+      "example_uses": "Tell a convincing lie, or wear a disguise convincingly.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "ability": "int",
+      "example_uses": "Recall lore about historical events, people, nations, and cultures.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "insight",
+      "name": "Insight",
+      "ability": "wis",
+      "example_uses": "Discern a person’s mood and intentions.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "intimidation",
+      "name": "Intimidation",
+      "ability": "cha",
+      "example_uses": "Awe or threaten someone into doing what you want.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "investigation",
+      "name": "Investigation",
+      "ability": "int",
+      "example_uses": "Find obscure information in books, or deduce how something works.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "ability": "wis",
+      "example_uses": "Diagnose an illness, or determine what killed the recently slain.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "ability": "int",
+      "example_uses": "Recall lore about terrain, plants, animals, and weather.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "perception",
+      "name": "Perception",
+      "ability": "wis",
+      "example_uses": "Using a combination of senses, notice something that’s easy to miss.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "ability": "cha",
+      "example_uses": "Act, tell a story, perform music, or dance.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "ability": "cha",
+      "example_uses": "Honestly and graciously convince someone of something.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "religion",
+      "name": "Religion",
+      "ability": "int",
+      "example_uses": "Recall lore about gods, religious rituals, and holy symbols.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "sleight_of_hand",
+      "name": "Sleight of Hand",
+      "ability": "dex",
+      "example_uses": "Pick a pocket, conceal a handheld object, or perform legerdemain.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "stealth",
+      "name": "Stealth",
+      "ability": "dex",
+      "example_uses": "Escape notice by moving quietly and hiding behind things.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "ability": "wis",
+      "example_uses": "Follow tracks, forage, find a trail, or avoid natural hazards.",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "proficiency_bonus": {
+    "by_level": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 4,
+      "13": 5,
+      "14": 5,
+      "15": 5,
+      "16": 5,
+      "17": 6,
+      "18": 6,
+      "19": 6,
+      "20": 6
+    },
+    "by_challenge_rating": [
+      {
+        "min": 0,
+        "max": 4,
+        "bonus": 2
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "bonus": 3
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "bonus": 4
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "bonus": 5
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "bonus": 6
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "bonus": 7
+      },
+      {
+        "min": 25,
+        "max": 28,
+        "bonus": 8
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "bonus": 9
+      }
+    ],
+    "rules": [
+      {
+        "id": "proficiency_bonus.once",
+        "text": "Your Proficiency Bonus can’t be added to a die roll or another number more than once.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "max_additions": 1
+        }
+      },
+      {
+        "id": "proficiency_bonus.multiply_divide_once",
+        "text": "Whenever the bonus is used, it can be multiplied only once and divided only once.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "max_multiplications": 1,
+          "max_divisions": 1
+        }
+      }
+    ],
+    "pages": [
+      8,
+      23
+    ]
+  },
+  "levels": {
+    "min": 1,
+    "max": 20,
+    "advancement": [
+      {
+        "level": 1,
+        "xp": 0,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 2,
+        "xp": 300,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 3,
+        "xp": 900,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 4,
+        "xp": 2700,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 5,
+        "xp": 6500,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 6,
+        "xp": 14000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 7,
+        "xp": 23000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 8,
+        "xp": 34000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 9,
+        "xp": 48000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 10,
+        "xp": 64000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 11,
+        "xp": 85000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 12,
+        "xp": 100000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 13,
+        "xp": 120000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 14,
+        "xp": 140000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 15,
+        "xp": 165000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 16,
+        "xp": 195000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 17,
+        "xp": 225000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 18,
+        "xp": 265000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 19,
+        "xp": 305000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 20,
+        "xp": 355000,
+        "proficiency_bonus": 6
+      }
+    ],
+    "tiers": [
+      {
+        "id": "tier_1",
+        "text": "In tier 1, characters are apprentice adventurers",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 1,
+          "max_level": 4
+        }
+      },
+      {
+        "id": "tier_2",
+        "text": "In tier 2, characters are full-fledged adventurers.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 5,
+          "max_level": 10
+        }
+      },
+      {
+        "id": "tier_3",
+        "text": "In tier 3, characters have reached a level of power that makes them special among adventurers.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 11,
+          "max_level": 16
+        }
+      },
+      {
+        "id": "tier_4",
+        "text": "At tier 4, characters achieve the pinnacle of their class features, becoming heroic archetypes.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 17,
+          "max_level": 20
+        }
+      }
+    ],
+    "rules": [
+      {
+        "id": "level.threshold",
+        "text": "When your XP total equals or exceeds a number in the Experience Points column, you reach the corresponding level.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "comparison": ">="
+        }
+      },
+      {
+        "id": "level.hit_points",
+        "text": "Each time you gain a level, you gain an additional Hit Die. Roll that die, add your Constitution modifier to the roll, and add the total (minimum of 1) to your Hit Point maximum. Instead of rolling, you can use the fixed value shown in the Fixed Hit Points by Class table.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "hit_dice_gained": 1,
+          "hp_gain": "roll_hit_die_plus_con_mod_min_1_or_fixed",
+          "minimum": 1
+        }
+      },
+      {
+        "id": "level.con_retroactive",
+        "text": "When your Constitution modifier increases by 1, your Hit Point maximum increases by 1 for each level you have attained.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "retroactive": true
+        }
+      },
+      {
+        "id": "level.ability_modifier_change",
+        "text": "If you choose a feat that increases one or more of your ability scores, your ability modifier also changes if the new score is an even number.",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "start_higher.xp",
+        "text": "You begin with the minimum amount of XP required to reach your starting level.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "starting_xp": "threshold_of_starting_level"
+        }
+      },
+      {
+        "id": "level.start_xp",
+        "text": "A level 1 character has 0 XP.",
+        "pages": [
+          19
+        ],
+        "data": {
+          "level": 1,
+          "xp": 0
+        }
+      },
+      {
+        "id": "level.start_hit_dice",
+        "text": "At level 1, your character has 1 Hit Die.",
+        "pages": [
+          22
+        ],
+        "data": {
+          "level": 1,
+          "hit_dice": 1
+        }
+      },
+      {
+        "id": "base_ac",
+        "text": "Without armor or a shield, your base Armor Class is 10 plus your Dexterity modifier.",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "ability_mod.dex"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "passive_perception",
+        "text": "Passive Perception = 10 + Wisdom (Perception) check modifier",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "check_mod.wis.perception"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "spell_save_dc",
+        "text": "Spell save DC = 8 + spellcasting ability modifier + Proficiency Bonus",
+        "pages": [
+          23
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "spellcasting_mod"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "spell_attack_bonus",
+        "text": "Spell attack bonus = spellcasting ability modifier + Proficiency Bonus",
+        "pages": [
+          23
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "spellcasting_mod"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melee_attack_bonus",
+        "text": "Melee attack bonus = Strength modifier + Proficiency Bonus",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.str"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "ranged_attack_bonus",
+        "text": "Ranged attack bonus = Dexterity modifier + Proficiency Bonus",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      23,
+      24
+    ]
+  },
+  "action_economy": [
+    {
+      "id": "action",
+      "name": "Action",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "turn.action_and_move",
+          "text": "On your turn, you can move a distance up to your Speed and take one action.",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "action.one_at_a_time",
+          "text": "You can take only one action at a time.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "bonus_action",
+      "name": "Bonus Action",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "bonus_action.granted_only",
+          "text": "You can take a Bonus Action only when a special ability, a spell, or another feature of the game states that you can do something as a Bonus Action. You otherwise don’t have a Bonus Action to take.",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "bonus_action.one_per_turn",
+          "text": "You can take only one Bonus Action on your turn",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "bonus_action.deprived",
+          "text": "Anything that deprives you of your ability to take actions also prevents you from taking a Bonus Action.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "reaction",
+      "name": "Reaction",
+      "per": "round",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "reaction.refresh",
+          "text": "When you take a Reaction, you can’t take another one until the start of your next turn.",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "reaction.timing",
+          "text": "In terms of timing, a Reaction takes place immediately after its trigger unless the Reaction’s description says otherwise.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "movement",
+      "name": "Movement",
+      "per": "turn",
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "turn.order_free",
+          "text": "You decide whether to move first or take your action first.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "object_interaction",
+      "name": "Interacting with Things",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "object_interaction.free",
+          "text": "You can interact with one object or feature of the environment for free, during either your move or action.",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "object_interaction.second",
+          "text": "If you want to interact with a second object, you need to take the Utilize action.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "free",
+      "name": "Communicating",
+      "per": "turn",
+      "rules": [
+        {
+          "id": "communicating",
+          "text": "You can communicate however you are able—through brief utterances and gestures—as you take your turn. Doing so uses neither your action nor your move.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "initiative": {
+    "check": "dex",
+    "rules": [
+      {
+        "id": "initiative.check",
+        "text": "When combat starts, every participant rolls Initiative; they make a Dexterity check that determines their place in the Initiative order.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "ability": "dex"
+        }
+      },
+      {
+        "id": "initiative.groups",
+        "text": "The GM rolls for monsters. For a group of identical creatures, the GM makes a single roll, so each member of the group has the same Initiative.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "identical_creatures": "single_roll"
+        }
+      },
+      {
+        "id": "initiative.surprise",
+        "text": "If a combatant is surprised by combat starting, that combatant has Disadvantage on their Initiative roll.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "surprised": "disadvantage"
+        }
+      },
+      {
+        "id": "initiative.order",
+        "text": "The GM ranks the combatants, from highest to lowest Initiative. This is the order in which they act during each round. The Initiative order remains the same from round to round.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "sort": "descending",
+          "fixed": true
+        }
+      },
+      {
+        "id": "initiative.ties",
+        "text": "If a tie occurs, the GM decides the order among tied monsters, and the players decide the order among tied characters. The GM decides the order if the tie is between a monster and a player character.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "monsters": "gm",
+          "player_characters": "players",
+          "mixed": "gm"
+        }
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  "rests": [
+    {
+      "id": "short_rest",
+      "name": "Short Rest",
+      "ref": "dnd5e/rule/short-rest",
+      "minimum_duration": {
+        "kind": "hours",
+        "amount": 1,
+        "text": "1-hour period"
+      },
+      "pages": [
+        187
+      ]
+    },
+    {
+      "id": "long_rest",
+      "name": "Long Rest",
+      "ref": "dnd5e/rule/long-rest",
+      "minimum_duration": {
+        "kind": "hours",
+        "amount": 8,
+        "text": "at least 8 hours"
+      },
+      "pages": [
+        185
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": "common",
+      "name": "Common",
+      "category": "standard",
+      "roll": "—",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "common_sign_language",
+      "name": "Common Sign Language",
+      "category": "standard",
+      "roll": "1",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "draconic",
+      "name": "Draconic",
+      "category": "standard",
+      "roll": "2",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "dwarvish",
+      "name": "Dwarvish",
+      "category": "standard",
+      "roll": "3–4",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "elvish",
+      "name": "Elvish",
+      "category": "standard",
+      "roll": "5–6",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "giant",
+      "name": "Giant",
+      "category": "standard",
+      "roll": "7",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "gnomish",
+      "name": "Gnomish",
+      "category": "standard",
+      "roll": "8",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "category": "standard",
+      "roll": "9",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "halfling",
+      "name": "Halfling",
+      "category": "standard",
+      "roll": "10–11",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "category": "standard",
+      "roll": "12",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "abyssal",
+      "name": "Abyssal",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "celestial",
+      "name": "Celestial",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "deep_speech",
+      "name": "Deep Speech",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "druidic",
+      "name": "Druidic",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "infernal",
+      "name": "Infernal",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "primordial",
+      "name": "Primordial",
+      "category": "rare",
+      "pages": [
+        20
+      ],
+      "note": "Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one."
+    },
+    {
+      "id": "sylvan",
+      "name": "Sylvan",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "thieves_cant",
+      "name": "Thieves’ Cant",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "undercommon",
+      "name": "Undercommon",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "currency": [
+    {
+      "id": "cp",
+      "name": "Copper Piece",
+      "abbreviation": "CP",
+      "value_in_cp": 1.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "sp",
+      "name": "Silver Piece",
+      "abbreviation": "SP",
+      "value_in_cp": 10.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "ep",
+      "name": "Electrum Piece",
+      "abbreviation": "EP",
+      "value_in_cp": 50.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "gp",
+      "name": "Gold Piece",
+      "abbreviation": "GP",
+      "value_in_cp": 100.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "pp",
+      "name": "Platinum Piece",
+      "abbreviation": "PP",
+      "value_in_cp": 1000.0,
+      "pages": [
+        89
+      ]
+    }
+  ],
+  "units": {
+    "distance": {
+      "unit": "foot",
+      "pages": [
+        188
+      ]
+    },
+    "long_distance": {
+      "unit": "mile",
+      "pages": [
+        12
+      ]
+    },
+    "weight": {
+      "unit": "pound",
+      "conversions": {
+        "coins_per_pound": 50
+      },
+      "pages": [
+        89
+      ]
+    }
+  },
+  "time": {
+    "round_seconds": 6,
+    "derived": {
+      "rounds_per_minute": 10
+    },
+    "rules": [
+      {
+        "id": "time.round",
+        "text": "A round represents about 6 seconds in the game world.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "seconds": 6,
+          "derives": {
+            "rounds_per_minute": "60 seconds / 6 seconds per round"
+          }
+        }
+      }
+    ]
+  },
+  "registries": {
+    "variables": [
+      {
+        "id": "ability_score",
+        "description": "A creature's score in an ability.",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          5
+        ]
+      },
+      {
+        "id": "ability_mod",
+        "description": "The modifier derived from an ability score (Ability Modifiers table).",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          5,
+          6
+        ]
+      },
+      {
+        "id": "proficiency_bonus",
+        "description": "Proficiency Bonus by character level or Challenge Rating.",
+        "type": "number",
+        "pages": [
+          8
+        ]
+      },
+      {
+        "id": "level",
+        "description": "Character level.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "class_level",
+        "description": "Levels the character has in one class.",
+        "params": [
+          "class"
+        ],
+        "type": "number",
+        "pages": [
+          24
+        ]
+      },
+      {
+        "id": "xp",
+        "description": "Experience Points total.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "cr",
+        "description": "Challenge Rating of a monster.",
+        "type": "number",
+        "pages": [
+          178
+        ]
+      },
+      {
+        "id": "speed",
+        "description": "Speed in feet for a movement mode.",
+        "params": [
+          "movement_mode"
+        ],
+        "type": "number",
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "hp_max",
+        "description": "Hit Point maximum.",
+        "type": "number",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "check_mod",
+        "description": "Total modifier of an ability check (ability, optional skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "type": "number",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "spellcasting_mod",
+        "description": "Spellcasting ability modifier of the feature that grants the spell.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "spell_save_dc",
+        "description": "8 + spellcasting ability modifier + Proficiency Bonus.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "spell_attack_bonus",
+        "description": "Spellcasting ability modifier + Proficiency Bonus.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "spell_slot_level",
+        "description": "Level of the spell slot used to cast the current spell.",
+        "type": "number",
+        "pages": [
+          104
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "id": "ac",
+        "name": "Armor Class",
+        "description": "Target number for attack rolls against the creature.",
+        "pages": [
+          6,
+          7
+        ]
+      },
+      {
+        "id": "attack_roll",
+        "description": "Bonus to attack rolls (optionally by attack kind).",
+        "params": [
+          "attack_kind"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "damage_roll",
+        "description": "Bonus to damage rolls.",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "saving_throw",
+        "description": "Bonus to saving throws (optionally one ability).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "ability_check",
+        "description": "Bonus to ability checks (optionally one ability or skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "initiative",
+        "description": "Initiative modifier.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "hp_max",
+        "description": "Hit Point maximum.",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "speed",
+        "description": "Speed (optionally one movement mode).",
+        "params": [
+          "movement_mode"
+        ],
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "passive_perception",
+        "description": "10 + Wisdom (Perception) check modifier.",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "spell_save_dc",
+        "description": "Spell save DC.",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "spell_attack_bonus",
+        "description": "Spell attack bonus.",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "damage_taken",
+        "description": "Damage the creature takes (param: the source's ref slug, e.g. a spell).",
+        "params": [
+          "source"
+        ],
+        "pages": [
+          162
+        ]
+      }
+    ],
+    "rolls": [
+      {
+        "id": "d20_test",
+        "description": "Any D20 Test: ability check, saving throw or attack roll.",
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "ability_check",
+        "description": "Ability check (optionally one ability or skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "saving_throw",
+        "description": "Saving throw (optionally one ability).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "attack_roll",
+        "description": "Attack roll (optionally by attack kind).",
+        "params": [
+          "attack_kind"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "damage_roll",
+        "description": "Damage roll.",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "initiative",
+        "description": "Initiative roll (a Dexterity check).",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "hit_point_die",
+        "description": "Roll of a Hit Point Die.",
+        "pages": [
+          23
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "turn_start",
+        "description": "Start of a creature's turn.",
+        "type": "event",
+        "pages": [
+          10,
+          13
+        ]
+      },
+      {
+        "id": "turn_end",
+        "description": "End of a creature's turn.",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "round_end",
+        "description": "End of a round (everyone has taken a turn).",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "initiative_rolled",
+        "description": "Initiative is rolled (combat starts).",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "d20_rolled",
+        "description": "Immediately after a die is rolled.",
+        "type": "event",
+        "pages": [
+          8
+        ]
+      },
+      {
+        "id": "short_rest_finished",
+        "description": "A Short Rest is finished.",
+        "type": "event",
+        "pages": [
+          187
+        ]
+      },
+      {
+        "id": "long_rest_finished",
+        "description": "A Long Rest is finished.",
+        "type": "event",
+        "pages": [
+          185
+        ]
+      },
+      {
+        "id": "level_gained",
+        "description": "The character gains a level.",
+        "type": "event",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "hit_by_attack_roll",
+        "description": "The creature is hit by an attack roll.",
+        "type": "event",
+        "pages": [
+          161
+        ]
+      },
+      {
+        "id": "targeted_by_spell",
+        "description": "The creature is targeted by a spell (param: spell ref slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "event",
+        "pages": [
+          161
+        ]
+      }
+    ],
+    "predicates": [
+      {
+        "id": "has_condition",
+        "description": "The creature has the condition (param: condition slug).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "wearing_armor",
+        "description": "The creature wears armor of the category (param: light, medium, heavy).",
+        "params": [
+          "category"
+        ],
+        "type": "predicate",
+        "pages": [
+          92
+        ]
+      },
+      {
+        "id": "creature_type",
+        "description": "The creature is of the type (param: creature type id).",
+        "params": [
+          "creature_type"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "can_see",
+        "description": "The acting creature can see the target.",
+        "type": "predicate",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "is_ally",
+        "description": "The target is an ally of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          176
+        ]
+      },
+      {
+        "id": "is_enemy",
+        "description": "The target is an enemy of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          181
+        ]
+      }
+    ],
+    "frequencies": [
+      {
+        "id": "turn",
+        "description": "Once per turn.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "round",
+        "description": "Once per round.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "short_rest",
+        "description": "Recovers when a Short or Long Rest is finished.",
+        "pages": [
+          187
+        ]
+      },
+      {
+        "id": "long_rest",
+        "description": "Recovers when a Long Rest is finished.",
+        "pages": [
+          185
+        ]
+      },
+      {
+        "id": "day",
+        "description": "Per day: recovers when a Long Rest is finished.",
+        "pages": [
+          186
+        ]
+      },
+      {
+        "id": "dawn",
+        "description": "Recovers at the next dawn.",
+        "pages": [
+          206
+        ]
+      }
+    ],
+    "damage_types": [
+      {
+        "id": "acid",
+        "name": "Acid",
+        "description": "Corrosive liquids, digestive enzymes",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "bludgeoning",
+        "name": "Bludgeoning",
+        "description": "Blunt objects, constriction, falling",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "cold",
+        "name": "Cold",
+        "description": "Freezing water, icy blasts",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "fire",
+        "name": "Fire",
+        "description": "Flames, unbearable heat",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "force",
+        "name": "Force",
+        "description": "Pure magical energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "lightning",
+        "name": "Lightning",
+        "description": "Electricity",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "necrotic",
+        "name": "Necrotic",
+        "description": "Life-draining energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "piercing",
+        "name": "Piercing",
+        "description": "Fangs, puncturing objects",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "poison",
+        "name": "Poison",
+        "description": "Toxic gas, venom",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "psychic",
+        "name": "Psychic",
+        "description": "Mind-rending energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "radiant",
+        "name": "Radiant",
+        "description": "Holy energy, searing radiation",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "slashing",
+        "name": "Slashing",
+        "description": "Claws, cutting objects",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "thunder",
+        "name": "Thunder",
+        "description": "Concussive sound",
+        "pages": [
+          180
+        ]
+      }
+    ],
+    "sizes": [
+      {
+        "id": "tiny",
+        "name": "Tiny",
+        "description": "Space 2½ by 2½ feet; 4 per square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "small",
+        "name": "Small",
+        "description": "Space 5 by 5 feet; 1 square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "medium",
+        "name": "Medium",
+        "description": "Space 5 by 5 feet; 1 square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "large",
+        "name": "Large",
+        "description": "Space 10 by 10 feet; 4 squares (2 by 2).",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "huge",
+        "name": "Huge",
+        "description": "Space 15 by 15 feet; 9 squares (3 by 3).",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "gargantuan",
+        "name": "Gargantuan",
+        "description": "Space 20 by 20 feet; 16 squares (4 by 4).",
+        "pages": [
+          14
+        ]
+      }
+    ],
+    "creature_types": [
+      {
+        "id": "aberration",
+        "name": "Aberration",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "beast",
+        "name": "Beast",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "celestial",
+        "name": "Celestial",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "construct",
+        "name": "Construct",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "dragon",
+        "name": "Dragon",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "elemental",
+        "name": "Elemental",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fey",
+        "name": "Fey",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fiend",
+        "name": "Fiend",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "giant",
+        "name": "Giant",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "humanoid",
+        "name": "Humanoid",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "monstrosity",
+        "name": "Monstrosity",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "ooze",
+        "name": "Ooze",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "plant",
+        "name": "Plant",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "undead",
+        "name": "Undead",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      }
+    ],
+    "area_shapes": [
+      {
+        "id": "cone",
+        "name": "Cone",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cone",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "cube",
+        "name": "Cube",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cube",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "cylinder",
+        "name": "Cylinder",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cylinder",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "emanation",
+        "name": "Emanation",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/emanation",
+        "pages": [
+          181
+        ]
+      },
+      {
+        "id": "line",
+        "name": "Line",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/line",
+        "pages": [
+          184
+        ]
+      },
+      {
+        "id": "sphere",
+        "name": "Sphere",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/sphere",
+        "pages": [
+          188
+        ]
+      }
+    ],
+    "senses": [
+      {
+        "id": "blindsight",
+        "name": "Blindsight",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/blindsight",
+        "pages": [
+          177
+        ]
+      },
+      {
+        "id": "darkvision",
+        "name": "Darkvision",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/darkvision",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "tremorsense",
+        "name": "Tremorsense",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/tremorsense",
+        "pages": [
+          190
+        ]
+      },
+      {
+        "id": "truesight",
+        "name": "Truesight",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/truesight",
+        "pages": [
+          190
+        ]
+      }
+    ],
+    "movement_modes": [
+      {
+        "id": "walk",
+        "name": "Speed",
+        "description": "Normal Speed.",
+        "ref": "dnd5e/rule/speed",
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "burrow",
+        "name": "Burrow Speed",
+        "description": "Burrow Speed.",
+        "ref": "dnd5e/rule/burrow-speed",
+        "pages": [
+          178
+        ]
+      },
+      {
+        "id": "climb",
+        "name": "Climb Speed",
+        "description": "Climb Speed.",
+        "ref": "dnd5e/rule/climb-speed",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fly",
+        "name": "Fly Speed",
+        "description": "Fly Speed.",
+        "ref": "dnd5e/rule/fly-speed",
+        "pages": [
+          182
+        ]
+      },
+      {
+        "id": "swim",
+        "name": "Swim Speed",
+        "description": "Swim Speed.",
+        "ref": "dnd5e/rule/swim-speed",
+        "pages": [
+          189
+        ]
+      }
+    ],
+    "alignments": [
+      {
+        "id": "lawful_good",
+        "name": "Lawful Good (LG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral_good",
+        "name": "Neutral Good (NG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_good",
+        "name": "Chaotic Good (CG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "lawful_neutral",
+        "name": "Lawful Neutral (LN)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral",
+        "name": "Neutral (N)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_neutral",
+        "name": "Chaotic Neutral (CN)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "lawful_evil",
+        "name": "Lawful Evil (LE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral_evil",
+        "name": "Neutral Evil (NE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_evil",
+        "name": "Chaotic Evil (CE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "unaligned",
+        "name": "Unaligned",
+        "description": "Creatures that lack the capacity for rational thought don't have alignments.",
+        "pages": [
+          22
+        ]
+      }
+    ]
+  },
+  "abbreviations": {
+    "AC": "Armor Class",
+    "C": "Concentration",
+    "CE": "Chaotic Evil",
+    "CG": "Chaotic Good",
+    "Cha.": "Charisma",
+    "CN": "Chaotic Neutral",
+    "Con.": "Constitution",
+    "CP": "Copper Piece(s)",
+    "CR": "Challenge Rating",
+    "DC": "Difficulty Class",
+    "Dex.": "Dexterity",
+    "EP": "Electrum Piece(s)",
+    "GM": "Game Master",
+    "GP": "Gold Piece(s)",
+    "HP": "Hit Point(s)",
+    "Int.": "Intelligence",
+    "LE": "Lawful Evil",
+    "LG": "Lawful Good",
+    "LN": "Lawful Neutral",
+    "M": "Material component",
+    "N": "Neutral",
+    "NE": "Neutral Evil",
+    "NG": "Neutral Good",
+    "NPC": "Nonplayer character",
+    "PB": "Proficiency Bonus",
+    "PP": "Platinum Piece(s)",
+    "R": "Ritual",
+    "S": "Somatic component",
+    "SP": "Silver Piece(s)",
+    "Str.": "Strength",
+    "V": "Verbal component",
+    "Wis.": "Wisdom",
+    "XP": "Experience Point(s)"
+  }
+}

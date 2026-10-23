@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:catalog_entry",
+  "title": "Catalog entry",
+  "description": "Envelope shared by every catalog entry (spell, creature, item, class, feature, condition, rule...). The catalog is the immutable template; instances (a combatant's HP, conditions, spent resources) live in game state and only point to the entry's ref. Kind-specific fields go in 'data' and are validated by the kind's schema (added by the lot that owns the kind).",
+  "type": "object",
+  "required": ["ref", "kind", "name", "source", "schema_version", "tier", "coverage"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "ref": { "$ref": "urn:drpg:schema:common#/$defs/ref" },
+    "kind": {
+      "description": "Entry kind; must equal the kind segment of the ref.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": { "description": "Name exactly as printed in the source.", "type": "string", "minLength": 1 },
+    "schema_version": { "const": "1.0" },
+    "source": { "$ref": "urn:drpg:schema:source" },
+    "tier": {
+      "description": "Automation tier. 0 = reference text only; 1 = structured stats in facets/data (or in system.json); 2 = declarative effects; 3 = master decisions for edge cases (with or without effects).",
+      "enum": [0, 1, 2, 3]
+    },
+    "text": {
+      "description": "Verbatim source text of the entry (markdown conventions of the extraction). Always present for official content: it is the tier-0 fallback and the reference for coverage.",
+      "$ref": "urn:drpg:schema:common#/$defs/text"
+    },
+    "facets": {
+      "description": "Flat, indexable summary used by the manifest (level, school, cr, rarity...).",
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": ["string", "number", "boolean"] },
+          { "type": "array", "items": { "type": ["string", "number", "boolean"] } }
+        ]
+      }
+    },
+    "data": {
+      "description": "Kind-specific structured content (see schema/kinds/*.schema.json when present).",
+      "type": "object"
+    },
+    "effects": { "$ref": "urn:drpg:schema:effect#/$defs/effects" },
+    "master_decisions": {
+      "type": "array",
+      "items": { "$ref": "urn:drpg:schema:master_decision" }
+    },
+    "coverage": {
+      "description": "Partition of 'text' into consecutive segments, each saying how it is represented. Joined in order, the segments must reproduce 'text' exactly (whitespace-normalized): this is how the validator proves no rule was dropped.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/coverage_segment" }
+    },
+    "refs": {
+      "description": "Every ref this entry points to (derived; recomputed by the validator).",
+      "type": "array",
+      "items": { "$ref": "urn:drpg:schema:common#/$defs/ref" },
+      "uniqueItems": true
+    },
+    "inconsistencies": {
+      "description": "Contradictions inside the source that affect this entry, recorded as found (never silently fixed).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["detail", "pages"],
+        "additionalProperties": false,
+        "properties": {
+          "detail": { "type": "string" },
+          "pages": { "type": "array", "items": { "type": "integer" }, "minItems": 1 },
+          "decision": { "description": "Master decision id that resolves it at the table.", "type": "string" }
+        }
+      }
+    },
+    "extends": {
+      "description": "Homebrew: the entry this one derives from. The engine resolves base + overrides; the base is never modified.",
+      "$ref": "urn:drpg:schema:common#/$defs/ref"
+    },
+    "overrides": {
+      "description": "Homebrew: JSON Merge Patch (RFC 7396) applied to the 'extends' entry.",
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "source": { "properties": { "origin": { "const": "official" } } } } },
+      "then": {
+        "required": ["text"],
+        "not": { "anyOf": [ { "required": ["extends"] }, { "required": ["overrides"] } ] }
+      }
+    },
+    {
+      "if": { "required": ["overrides"] },
+      "then": { "required": ["extends"] }
+    },
+    {
+      "if": { "properties": { "tier": { "const": 3 } } },
+      "then": { "required": ["master_decisions"], "properties": { "master_decisions": { "minItems": 1 } } }
+    },
+    {
+      "if": { "properties": { "tier": { "const": 2 } } },
+      "then": { "required": ["effects"], "properties": { "effects": { "minItems": 1 } } }
+    }
+  ],
+  "$defs": {
+    "coverage_segment": {
+      "type": "object",
+      "required": ["text", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "$ref": "urn:drpg:schema:common#/$defs/text" },
+        "status": {
+          "enum": ["structured", "shared_rule", "master_decision", "descriptive"],
+          "description": "structured: represented by effects/data (pointers in 'by'). shared_rule: defers to another entry (refs in 'by'). master_decision: needs the GM (decision ids in 'by'). descriptive: flavor or explanation with no mechanics."
+        },
+        "by": {
+          "description": "JSON pointers ('/effects/0'), refs ('dnd5e/condition/poisoned') or 'md:<id>' for master decisions.",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "enum": ["structured", "shared_rule", "master_decision"] } } },
+          "then": { "required": ["by"], "properties": { "by": { "minItems": 1 } } }
+        }
+      ]
+    }
+  }
+}

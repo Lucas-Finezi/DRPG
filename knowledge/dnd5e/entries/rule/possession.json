@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/possession",
+  "kind": "rule",
+  "name": "Possession",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186
+    ],
+    "section": "Rules Glossary/Rules Definitions/Possession",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 3,
+  "text": "Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates. Possession can be prevented by the *Protection from Evil and Good* spell and ended by the *Dispel Evil and Good* spell.",
+  "facets": {
+    "glossary": true
+  },
+  "master_decisions": [
+    {
+      "id": "possession",
+      "reason": "not_automatable",
+      "prompt": "A possessing effect defines how the possession operates: apply the specific effect's rules for this possession.",
+      "source_text": "Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates.",
+      "pages": [
+        186
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates.",
+      "status": "master_decision",
+      "by": [
+        "md:possession"
+      ]
+    },
+    {
+      "text": "Possession can be prevented by the *Protection from Evil and Good* spell and ended by the *Dispel Evil and Good* spell.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/spell/protection-from-evil-and-good",
+        "dnd5e/spell/dispel-evil-and-good"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/dispel-evil-and-good",
+    "dnd5e/spell/protection-from-evil-and-good"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/ability-score-and-modifier",
+  "kind": "rule",
+  "name": "Ability Score and Modifier",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      176
+    ],
+    "section": "Rules Glossary/Rules Definitions/Ability Score and Modifier",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "A creature has six ability scores—Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma—each of which has a corresponding modifier. Add the modifier when you make a D20 Test with the corresponding ability or when a rule asks you to do so. *See also* “Playing the Game” (“The Six Abilities”).",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "A creature has six ability scores—Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma—each of which has a corresponding modifier. Add the modifier when you make a D20 Test with the corresponding ability or when a rule asks you to do so.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/abilities",
+        "dnd5e/system/dnd5e#/ability_scores/modifier_table"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“The Six Abilities”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/the-six-abilities"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/the-six-abilities",
+    "dnd5e/system/dnd5e"
+  ]
+}

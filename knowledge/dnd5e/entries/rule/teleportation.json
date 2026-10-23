@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/teleportation",
+  "kind": "rule",
+  "name": "Teleportation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      190
+    ],
+    "section": "Rules Glossary/Rules Definitions/Teleportation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "Teleportation is a special kind of magical transportation. If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.\n\nWhen you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.\n\nIf the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.\n\nThe description of a teleportation effect tells you if you must see the teleportation’s destination.",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "Teleportation is a special kind of magical transportation.",
+      "status": "descriptive"
+    },
+    {
+      "text": "If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/15"
+      ]
+    },
+    {
+      "text": "When you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/16"
+      ]
+    },
+    {
+      "text": "If the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/17"
+      ]
+    },
+    {
+      "text": "The description of a teleportation effect tells you if you must see the teleportation’s destination.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/teleportation"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/teleportation",
+    "dnd5e/system/dnd5e"
+  ]
+}

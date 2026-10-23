@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:common",
+  "title": "Shared definitions",
+  "description": "Identifiers and small value types reused by every DRPG schema.",
+  "$defs": {
+    "ref": {
+      "description": "Stable reference to a catalog entry: '<system>/<kind>/<slug>' for official content, 'custom/<owner>/<kind>/<slug>' for homebrew. Links between entries always use refs, never names.",
+      "type": "string",
+      "pattern": "^(?:[a-z0-9]+|custom/[A-Za-z0-9_-]+)/[a-z0-9-]+/[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "identifier": {
+      "description": "Machine name used inside a system registry (abilities, skills, damage types, events...).",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "registry_name": {
+      "description": "Dotted name of a registered variable, predicate, event or stat. The first segment must be declared in the system's registry; later segments are parameters (e.g. 'ability_mod.str', 'class_level.barbarian').",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(?:\\.[a-z0-9_-]+)*$"
+    },
+    "lot": {
+      "type": "string",
+      "pattern": "^L[0-9]{2}$"
+    },
+    "text": {
+      "description": "Verbatim source text in the extraction's markdown conventions.",
+      "type": "string",
+      "minLength": 1
+    },
+    "action_cost": {
+      "description": "Part of the action economy an activation consumes. Values are declared in system.action_economy; 'none' means no cost.",
+      "$ref": "#/$defs/identifier"
+    },
+    "json_pointer": {
+      "description": "RFC 6901 pointer inside the same entry (e.g. '/effects/0/on_fail/1').",
+      "type": "string",
+      "pattern": "^(?:/[^/]*)*$"
+    }
+  }
+}

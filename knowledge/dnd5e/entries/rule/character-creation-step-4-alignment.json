@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/character-creation-step-4-alignment",
+  "kind": "rule",
+  "name": "Step 4: Alignment",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      21,
+      22
+    ],
+    "section": "Character Creation/Create Your Character/Step 4: Alignment",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 3,
+  "text": "Choose your character’s alignment from the options below, and note it on your character sheet.\n\nThe game assumes that player characters aren’t of an evil alignment. Check with your GM before making an evil character.\n\n#### The Nine Alignments\n\nA creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral).\n\nThe summaries of the alignments below describe the typical behavior of a creature with that alignment; individuals can vary from that behavior.\n\n***Lawful Good (LG).*** Lawful Good creatures endeavor to do the right thing as expected by society. Someone who fights injustice and protects the innocent without hesitation is probably Lawful Good.\n\n***Neutral Good (NG).*** Neutral Good creatures do the best they can, working within rules but not feeling bound by them. A kindly person who helps others according to their needs is probably Neutral Good.\n\n***Chaotic Good (CG).*** Chaotic Good creatures act as their conscience directs with little regard for what others expect. A rebel who waylays a cruel baron’s tax collectors and uses the stolen money to help the poor is probably Chaotic Good.\n\n***Lawful Neutral (LN).*** Lawful Neutral individuals act in accordance with law, tradition, or personal codes. Someone who follows a disciplined rule of life—and isn’t swayed either by the demands of those in need or by the temptations of evil—is probably Lawful Neutral.\n\n***Neutral (N).*** Neutral is the alignment of those who prefer to avoid moral questions and don’t take sides, doing what seems best at the time. Someone who’s bored by moral debate is probably Neutral.\n\n***Chaotic Neutral (CN).*** Chaotic Neutral creatures follow their whims, valuing their personal freedom above all else. A scoundrel who wanders the land living by their wits is probably Chaotic Neutral.\n\n***Lawful Evil (LE).*** Lawful Evil creatures methodically take what they want within the limits of a code of tradition, loyalty, or order. An aristocrat exploiting citizens while scheming for power is probably Lawful Evil.\n\n***Neutral Evil (NE).*** Neutral Evil is the alignment of those who are untroubled by the harm they cause as they pursue their desires. A criminal who robs and murders as they please is probably Neutral Evil.\n\n***Chaotic Evil (CE).*** Chaotic Evil creatures act with arbitrary violence, spurred by their hatred or bloodlust. A villain pursuing schemes of vengeance and havoc is probably Chaotic Evil.",
+  "master_decisions": [
+    {
+      "id": "evil_alignment",
+      "reason": "gm_judgment",
+      "prompt": "Allow this player character to have an evil alignment?",
+      "source_text": "The game assumes that player characters aren’t of an evil alignment. Check with your GM before making an evil character.",
+      "when": "on_gain",
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Choose your character’s alignment from the options below, and note it on your character sheet.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/alignments"
+      ]
+    },
+    {
+      "text": "The game assumes that player characters aren’t of an evil alignment. Check with your GM before making an evil character.",
+      "status": "master_decision",
+      "by": [
+        "md:evil_alignment"
+      ]
+    },
+    {
+      "text": "#### The Nine Alignments\n\nA creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral).",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/alignments"
+      ]
+    },
+    {
+      "text": "The summaries of the alignments below describe the typical behavior of a creature with that alignment; individuals can vary from that behavior.\n\n***Lawful Good (LG).*** Lawful Good creatures endeavor to do the right thing as expected by society. Someone who fights injustice and protects the innocent without hesitation is probably Lawful Good.\n\n***Neutral Good (NG).*** Neutral Good creatures do the best they can, working within rules but not feeling bound by them. A kindly person who helps others according to their needs is probably Neutral Good.\n\n***Chaotic Good (CG).*** Chaotic Good creatures act as their conscience directs with little regard for what others expect. A rebel who waylays a cruel baron’s tax collectors and uses the stolen money to help the poor is probably Chaotic Good.\n\n***Lawful Neutral (LN).*** Lawful Neutral individuals act in accordance with law, tradition, or personal codes. Someone who follows a disciplined rule of life—and isn’t swayed either by the demands of those in need or by the temptations of evil—is probably Lawful Neutral.\n\n***Neutral (N).*** Neutral is the alignment of those who prefer to avoid moral questions and don’t take sides, doing what seems best at the time. Someone who’s bored by moral debate is probably Neutral.\n\n***Chaotic Neutral (CN).*** Chaotic Neutral creatures follow their whims, valuing their personal freedom above all else. A scoundrel who wanders the land living by their wits is probably Chaotic Neutral.\n\n***Lawful Evil (LE).*** Lawful Evil creatures methodically take what they want within the limits of a code of tradition, loyalty, or order. An aristocrat exploiting citizens while scheming for power is probably Lawful Evil.\n\n***Neutral Evil (NE).*** Neutral Evil is the alignment of those who are untroubled by the harm they cause as they pursue their desires. A criminal who robs and murders as they please is probably Neutral Evil.\n\n***Chaotic Evil (CE).*** Chaotic Evil creatures act with arbitrary violence, spurred by their hatred or bloodlust. A villain pursuing schemes of vengeance and havoc is probably Chaotic Evil.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

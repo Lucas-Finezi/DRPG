@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/player-character",
+  "kind": "rule",
+  "name": "Player Character",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186
+    ],
+    "section": "Rules Glossary/Rules Definitions/Player Character",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "A player character is a character controlled by a player. *See also* “Character Creation.”",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "A player character is a character controlled by a player.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/8"
+      ]
+    },
+    {
+      "text": "*See also* “Character Creation.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/create-your-character"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/create-your-character",
+    "dnd5e/system/dnd5e"
+  ]
+}

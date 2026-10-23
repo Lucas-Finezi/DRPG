@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/shape-shifting",
+  "kind": "rule",
+  "name": "Shape-Shifting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      187
+    ],
+    "section": "Rules Glossary/Rules Definitions/Shape-Shifting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "If an effect, such as Wild Shape or the *Polymorph* spell, lets you shape-shift, its description specifies what happens to you. Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "If an effect, such as Wild Shape or the *Polymorph* spell, lets you shape-shift, its description specifies what happens to you.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/druid-wild-shape",
+        "dnd5e/spell/polymorph"
+      ]
+    },
+    {
+      "text": "Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/11"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/druid-wild-shape",
+    "dnd5e/spell/polymorph",
+    "dnd5e/system/dnd5e"
+  ]
+}

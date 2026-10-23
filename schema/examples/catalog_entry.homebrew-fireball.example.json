@@ -1,0 +1,117 @@
+{
+  "$schema": "../catalog_entry.schema.json",
+  "ref": "custom/table-42/spell/blue-fireball",
+  "kind": "spell",
+  "name": "Bola de Fogo Azul",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "homebrew",
+    "origin": "homebrew",
+    "owner": "table-42",
+    "license": {
+      "id": "homebrew"
+    }
+  },
+  "tier": 2,
+  "extends": "dnd5e/spell/fireball",
+  "overrides": {
+    "effects": [
+      {
+        "op": "save",
+        "ability": "dex",
+        "dc": {
+          "var": "spell_save_dc"
+        },
+        "target": {
+          "kind": "area",
+          "range": {
+            "kind": "distance",
+            "feet": 150
+          },
+          "area": {
+            "shape": "sphere",
+            "size_feet": 20,
+            "origin": "point"
+          }
+        },
+        "on_fail": [
+          {
+            "op": "damage",
+            "amount": {
+              "dice": {
+                "count": {
+                  "op": "add",
+                  "args": [
+                    8,
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "var": "spell_slot_level"
+                        },
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "faces": 6
+              }
+            },
+            "damage_type": "cold"
+          }
+        ],
+        "half_on_success": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "range": {
+          "kind": "distance",
+          "feet": 150
+        },
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  8,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      3
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "cold"
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": []
+}

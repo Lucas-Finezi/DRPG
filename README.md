@@ -15,22 +15,32 @@ o **D&D SRD 5.2.1** (CC-BY-4.0).
 | `source/` | PDF original (imutável) e seu SHA-256 |
 | `extraction/` | Texto extraído e validado (bruto por página e Markdown estruturado); ver `extraction/README.md` |
 | `inventory/dnd5e/srd-5.2.1/` | **L00**: inventário da fonte (capítulos, seções, tabelas, entradas esperadas, plano de lotes) |
-| `tools/` | Scripts reprodutíveis de extração e inventário |
+| `schema/` | **L01**: contrato de dados (JSON Schemas + exemplos válidos); ver `schema/README.md` |
+| `knowledge/dnd5e/system.json` | **L02**: definição do sistema e registros que fecham o vocabulário de efeitos |
+| `knowledge/dnd5e/entries/<kind>/<slug>.json` | Entradas de catálogo, uma por arquivo |
+| `tools/` | Scripts reprodutíveis: `extract/`, `inventory/`, `build/` (um construtor por lote), `validate/` |
 
 ## Ordem de leitura para agentes
 
 1. Este README.
 2. `extraction/README.md`: como o texto foi obtido e validado.
-3. `inventory/dnd5e/srd-5.2.1/README.md` e `lots.json`: o que existe na fonte e qual lote cuida de quê.
-4. `inventory/dnd5e/srd-5.2.1/entries.json`: a lista de entradas esperadas, com `ref`, página e lote.
-5. `extraction/SRD_CC_v5.2.1.md`: o texto da fonte, consultado pelos marcadores `<!-- page N -->`.
+3. `schema/README.md` e `schema/*.schema.json`: o formato dos dados e o vocabulário de `op`.
+4. `knowledge/dnd5e/system.json`: o sistema e seus registros.
+5. `inventory/dnd5e/srd-5.2.1/README.md` e `lots.json`: o que existe na fonte e qual lote cuida de quê.
+6. `inventory/dnd5e/srd-5.2.1/entries.json`: a lista de entradas esperadas, com `ref`, página e lote.
+7. `extraction/SRD_CC_v5.2.1.md`: o texto da fonte, consultado pelos marcadores `<!-- page N -->`.
 
 ## Como gerar de novo
 
 ```bash
-pip install -r tools/extract/requirements.txt          # e poppler-utils (pdftotext)
-python3 -I tools/extract/extract_srd.py source/SRD_CC_v5.2.1.pdf extraction
-python3 -I tools/inventory/build_inventory.py
+pip install -r tools/requirements.txt                  # e poppler-utils (pdftotext)
+python3 -I tools/extract/extract_srd.py source/SRD_CC_v5.2.1.pdf extraction   # texto
+python3 -I tools/inventory/build_inventory.py                                 # L00
+python3 -I tools/build/l02_system.py                                          # L02
+python3 -I tools/build/l01_examples.py                                        # L01 (exemplos)
+python3 -I tools/validate/validate.py      # schemas, exemplos, sistema e entradas
+python3 -I tools/validate/selftest.py      # o validador rejeita erros conhecidos
+python3 -I tools/validate/coverage.py      # cada trecho da fonte está em alguma entrada
 ```
 
 ## Status dos lotes
@@ -38,7 +48,8 @@ python3 -I tools/inventory/build_inventory.py
 | Fase | Lotes | Status |
 |---|---|---|
 | 0 — Fundações | L00 Inventário da fonte | concluído |
-| 0 — Fundações | L01 Contrato base, L02 Sistema D&D 5e | pendente |
+| 0 — Fundações | L01 Contrato base | concluído |
+| 0 — Fundações | L02 Sistema D&D 5e | concluído (system.json + 43 entradas de regra; cobertura 436/436 trechos) |
 | 1 — Regras compartilhadas | L03–L09 | pendente |
 | 2 — Catálogos de personagem | L10–L16 | pendente |
 | 3 — Magias | L17–L27 | pendente |

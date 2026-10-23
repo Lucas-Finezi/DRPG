@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:master_decision",
+  "title": "Master decision",
+  "description": "A point where the source requires (or the engine cannot safely replace) the Game Master's judgment. Instead of forcing fragile automation, the engine pauses and asks the GM, showing the verbatim source text and, when the source lists them, the options. Referenced from effects by {'op': 'master_decision', 'decision': id}.",
+  "type": "object",
+  "required": ["id", "reason", "prompt", "source_text"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+    "reason": {
+      "enum": [
+        "gm_judgment",
+        "narrative",
+        "player_choice_open",
+        "not_automatable",
+        "ambiguous_source",
+        "source_inconsistency"
+      ],
+      "description": "gm_judgment: the source says the GM decides/chooses/determines. narrative: outcome is descriptive or depends on the fiction. player_choice_open: the player chooses from an open-ended set the engine cannot enumerate. not_automatable: mechanical but outside the effect vocabulary. ambiguous_source: the text admits more than one reading. source_inconsistency: the SRD contradicts itself (see inventory source_inconsistencies)."
+    },
+    "prompt": {
+      "description": "Question shown to the GM.",
+      "type": "string",
+      "minLength": 1
+    },
+    "source_text": {
+      "description": "The exact source passage that requires the decision.",
+      "$ref": "urn:drpg:schema:common#/$defs/text"
+    },
+    "when": {
+      "description": "When the engine must ask.",
+      "enum": ["on_use", "on_gain", "on_rest", "campaign_setup", "continuous"],
+      "default": "on_use"
+    },
+    "options": {
+      "description": "Options the source itself offers. Never invented.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+          "label": { "type": "string" },
+          "effects": { "$ref": "urn:drpg:schema:effect#/$defs/effects" }
+        }
+      }
+    },
+    "default_option": {
+      "description": "Only when the source names a default or recommendation.",
+      "type": "string"
+    },
+    "pages": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1 }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/starting-at-higher-levels",
+  "kind": "rule",
+  "name": "Starting at Higher Levels",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      24
+    ],
+    "section": "Character Creation/Starting at Higher Levels",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 3,
+  "text": "Your GM might start your group’s characters at a level higher than 1. It is particularly recommended to start at level 3 if your group is composed of seasoned D&D players.\n\n### Creating Your Character\n\nCreating a higher-level character uses the same character-creation steps outlined in this chapter and the rules for advancing beyond level 1 provided in the “Level Advancement” section*.* You begin with the minimum amount of XP required to reach your starting level. For example, if the GM starts you at level 10, you have 64,000 XP.\n\n### Starting Equipment\n\nThe GM decides whether your character starts with more than the standard equipment for a level 1 character, possibly even one or more magic items. The Starting Equipment at Higher Levels table is a guide for the GM.\n\nAlso, check with your GM about what equipment is available for you to buy with your starting money. For example, the firearms described in “Equipment” are too expensive for level 1 characters, but they might be available for purchase if your GM allows them.\n\n##### Starting Equipment at Higher Levels\n\n| **Starting Level** | **Equipment and Money** | **Magic Items** |\n| 2–4 | Normal starting equipment | 1 Common |\n| 5–10 | 500 GP plus 1d10 × 25 GP plus normal starting equipment | 1 Common, 1 Uncommon |\n| 11–16 | 5,000 gp plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 3 Uncommon, 1 Rare |\n| 17–20 | 20,000 GP plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 4 Uncommon, 3 Rare, 1 Very Rare |",
+  "data": {
+    "tables": [
+      {
+        "id": "starting_equipment_at_higher_levels",
+        "caption": "Starting Equipment at Higher Levels",
+        "columns": [
+          "Starting Level",
+          "Equipment and Money",
+          "Magic Items"
+        ],
+        "rows": [
+          [
+            "2–4",
+            "Normal starting equipment",
+            "1 Common"
+          ],
+          [
+            "5–10",
+            "500 GP plus 1d10 × 25 GP plus normal starting equipment",
+            "1 Common, 1 Uncommon"
+          ],
+          [
+            "11–16",
+            "5,000 gp plus 1d10 × 250 GP plus normal starting equipment",
+            "2 Common, 3 Uncommon, 1 Rare"
+          ],
+          [
+            "17–20",
+            "20,000 GP plus 1d10 × 250 GP plus normal starting equipment",
+            "2 Common, 4 Uncommon, 3 Rare, 1 Very Rare"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "recommended_start",
+        "mechanic": {
+          "recommended_level": 3,
+          "when": "seasoned_players"
+        }
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "starting_level",
+      "reason": "gm_judgment",
+      "prompt": "Choose the level at which the characters start.",
+      "source_text": "Your GM might start your group’s characters at a level higher than 1.",
+      "when": "campaign_setup",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": "starting_equipment",
+      "reason": "gm_judgment",
+      "prompt": "Decide whether characters starting above level 1 get more than the standard equipment (the table is a guide).",
+      "source_text": "The GM decides whether your character starts with more than the standard equipment for a level 1 character, possibly even one or more magic items.",
+      "when": "campaign_setup",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": "equipment_availability",
+      "reason": "gm_judgment",
+      "prompt": "Decide which equipment is available to buy with starting money.",
+      "source_text": "Also, check with your GM about what equipment is available for you to buy with your starting money.",
+      "when": "campaign_setup",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your GM might start your group’s characters at a level higher than 1.",
+      "status": "master_decision",
+      "by": [
+        "md:starting_level"
+      ]
+    },
+    {
+      "text": "It is particularly recommended to start at level 3 if your group is composed of seasoned D&D players.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "### Creating Your Character\n\nCreating a higher-level character uses the same character-creation steps outlined in this chapter and the rules for advancing beyond level 1 provided in the “Level Advancement” section*.* You begin with the minimum amount of XP required to reach your starting level. For example, if the GM starts you at level 10, you have 64,000 XP.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/levels/rules/4"
+      ]
+    },
+    {
+      "text": "### Starting Equipment\n\nThe GM decides whether your character starts with more than the standard equipment for a level 1 character, possibly even one or more magic items. The Starting Equipment at Higher Levels table is a guide for the GM.",
+      "status": "master_decision",
+      "by": [
+        "md:starting_equipment"
+      ]
+    },
+    {
+      "text": "Also, check with your GM about what equipment is available for you to buy with your starting money. For example, the firearms described in “Equipment” are too expensive for level 1 characters, but they might be available for purchase if your GM allows them.",
+      "status": "master_decision",
+      "by": [
+        "md:equipment_availability"
+      ]
+    },
+    {
+      "text": "##### Starting Equipment at Higher Levels\n\n| **Starting Level** | **Equipment and Money** | **Magic Items** |\n| 2–4 | Normal starting equipment | 1 Common |\n| 5–10 | 500 GP plus 1d10 × 25 GP plus normal starting equipment | 1 Common, 1 Uncommon |\n| 11–16 | 5,000 gp plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 3 Uncommon, 1 Rare |\n| 17–20 | 20,000 GP plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 4 Uncommon, 3 Rare, 1 Very Rare |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}
