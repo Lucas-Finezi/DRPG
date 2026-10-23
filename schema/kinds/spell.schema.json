@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:kinds:spell",
+  "title": "Spell data",
+  "description": "The 'data' of a spell entry: the header of the spell description (casting time, range, components, duration) plus optional structured rules and tables. Level, school, classes, concentration and ritual are facets.",
+  "type": "object",
+  "required": [
+    "casting_time",
+    "range",
+    "components",
+    "duration"
+  ],
+  "properties": {
+    "casting_time": {
+      "type": "object",
+      "required": [
+        "cost"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cost": {
+          "description": "Part of the action economy, or 'time' for casting times measured in minutes or hours.",
+          "enum": [
+            "action",
+            "bonus_action",
+            "reaction",
+            "time"
+          ]
+        },
+        "minutes": {
+          "description": "For cost 'time': length of the casting in minutes.",
+          "type": "number"
+        },
+        "ritual": {
+          "description": "The spell can also be cast as a Ritual.",
+          "type": "boolean"
+        },
+        "trigger": {
+          "description": "For Reactions and conditional Bonus Actions: when it is taken, verbatim.",
+          "type": "string"
+        },
+        "alternatives": {
+          "description": "Other casting times the spell offers (e.g. Plant Growth).",
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "text": {
+          "type": "string"
+        },
+        "triggers": {
+          "description": "For Reactions and conditional Bonus Actions: the events that allow casting.",
+          "type": "array",
+          "items": {
+            "$ref": "urn:drpg:schema:duration#/$defs/event_ref"
+          }
+        }
+      }
+    },
+    "range": {
+      "$ref": "urn:drpg:schema:target#/$defs/range"
+    },
+    "components": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "verbal": {
+          "type": "boolean"
+        },
+        "somatic": {
+          "type": "boolean"
+        },
+        "material": {
+          "description": "The material component, verbatim.",
+          "type": "string"
+        },
+        "material_cost_gp": {
+          "description": "Minimum value in GP the material must have.",
+          "type": "number"
+        },
+        "material_consumed": {
+          "description": "The spell consumes the material.",
+          "type": "boolean"
+        }
+      }
+    },
+    "duration": {
+      "$ref": "urn:drpg:schema:duration"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "tables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

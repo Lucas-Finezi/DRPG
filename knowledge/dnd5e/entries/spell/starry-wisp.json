@@ -1,0 +1,156 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/starry-wisp",
+  "kind": "spell",
+  "name": "Starry Wisp",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      165
+    ],
+    "section": "Spells/Spell Descriptions/Starry Wisp",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 2,
+  "text": "*Evocation Cantrip (Bard, Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of your next turn, it emits Dim Light in a 10-foot radius and can’t benefit from the Invisible condition.\n\n***Cantrip Upgrade.*** The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+  "facets": {
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "glow",
+        "light": {
+          "bright_feet": 0,
+          "dim_feet": 10,
+          "rules": [
+            "dnd5e/rule/dim-light"
+          ]
+        },
+        "until": "end_of_your_next_turn"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_spell",
+      "target": {
+        "kind": "creature_or_object",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "scale": {
+                  "by": "level",
+                  "steps": [
+                    {
+                      "from": 1,
+                      "value": 1
+                    },
+                    {
+                      "from": 5,
+                      "value": 2
+                    },
+                    {
+                      "from": 11,
+                      "value": 3
+                    },
+                    {
+                      "from": 17,
+                      "value": 4
+                    }
+                  ]
+                }
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": "radiant"
+        },
+        {
+          "op": "restrict",
+          "restrictions": [
+            "benefit_from_invisible"
+          ],
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "source",
+              "which": "next"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Evocation Cantrip (Bard, Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of your next turn, it emits Dim Light in a 10-foot radius and can’t benefit from the Invisible condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Cantrip Upgrade.*** The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/dim-light"
+  ]
+}

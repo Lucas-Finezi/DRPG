@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/light",
+  "kind": "spell",
+  "name": "Light",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      144
+    ],
+    "section": "Spells/Spell Descriptions/Light",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 1,
+  "text": "*Evocation Cantrip (Bard, Cleric, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, M (a firefly or phosphorescent moss)\n\n**Duration:** 1 hour\n\nYou touch one Large or smaller object that isn’t being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.\n\nCovering the object with something opaque blocks the light. The spell ends if you cast it again.",
+  "facets": {
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "cleric",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": "a firefly or phosphorescent moss"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "light",
+        "target": "object_large_or_smaller_not_worn_or_carried_by_another",
+        "light": {
+          "bright_feet": 20,
+          "dim_feet": 20,
+          "rules": [
+            "dnd5e/rule/bright-light",
+            "dnd5e/rule/dim-light"
+          ]
+        },
+        "color": "any"
+      },
+      {
+        "id": "blocked",
+        "opaque_cover_blocks_light": true,
+        "ends_if_cast_again": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Evocation Cantrip (Bard, Cleric, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, M (a firefly or phosphorescent moss)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch one Large or smaller object that isn’t being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Covering the object with something opaque blocks the light. The spell ends if you cast it again.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

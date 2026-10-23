@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/eldritch-blast",
+  "kind": "spell",
+  "name": "Eldritch Blast",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      127
+    ],
+    "section": "Spells/Spell Descriptions/Eldritch Blast",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 2,
+  "text": "*Evocation Cantrip (Warlock)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage.\n\n***Cantrip Upgrade.*** The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+  "facets": {
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "warlock"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "repeat",
+      "times": {
+        "scale": {
+          "by": "level",
+          "steps": [
+            {
+              "from": 1,
+              "value": 1
+            },
+            {
+              "from": 5,
+              "value": 2
+            },
+            {
+              "from": 11,
+              "value": 3
+            },
+            {
+              "from": 17,
+              "value": 4
+            }
+          ]
+        }
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged_spell",
+          "target": {
+            "kind": "creature_or_object",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "1d10",
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "note": "One beam at level 1; separate attack roll per beam; same or different targets."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Evocation Cantrip (Warlock)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Cantrip Upgrade.*** The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+      "status": "structured",
+      "by": [
+        "/effects/0/times"
+      ]
+    }
+  ]
+}

@@ -40,9 +40,9 @@ def load_json(path):
 
 def schema_registry():
     schemas, resources = {}, []
-    for p in sorted(SCHEMA_DIR.glob("*.schema.json")):
+    for p in sorted(SCHEMA_DIR.glob("*.schema.json")) + sorted(SCHEMA_DIR.glob("kinds/*.schema.json")):
         doc = load_json(p)
-        name = p.name[: -len(".schema.json")]
+        name = ("kind:" if p.parent.name == "kinds" else "") + p.name[: -len(".schema.json")]
         schemas[name] = doc
         resources.append((doc["$id"], Resource.from_contents(doc)))
     return schemas, Registry().with_resources(resources)
@@ -314,6 +314,12 @@ def main(args):
         for e in errs:
             loc = "/".join(map(str, e.path))
             errors.append(f"{rel}{'/' + loc if loc else ''}: {e.message[:300]}")
+        kind_schema = validators.get(f"kind:{doc.get('kind')}") if schema_name == "catalog_entry" else None
+        if not errs and kind_schema is not None and "data" in doc:
+            for e in sorted(kind_schema.iter_errors(doc["data"]), key=lambda e: list(e.path)):
+                errs.append(e)
+                loc = "/".join(map(str, e.path))
+                errors.append(f"{rel}/data{'/' + loc if loc else ''}: {e.message[:300]}")
         if not errs and schema_name == "catalog_entry":
             vocab = systems.get(doc["source"]["system"])
             if vocab is None and doc["source"]["origin"] == "official":

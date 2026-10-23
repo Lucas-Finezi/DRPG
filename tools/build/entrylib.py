@@ -137,14 +137,19 @@ def render(nodes, heading_offset=None):
             # the extractor took for a paragraph break: the next line goes on mid-phrase
             label_wrap = (re.match(r"^\*\*[^*]+\*\*", last) and not last.startswith("**Duration:**")
                           and re.match(r"^[A-Z][a-z]*\b(?!\.)", text)
-                          and (re.search(r"[,(]$", last) or re.search(r"\s[A-Z][a-z]+$", last)
+                          and (re.search(r"[,(]$", last) or re.search(r"\s([A-Z][a-z]+|\d+)$", last)
                                or re.search(r"\s(a|an|the|of|in|by|to|and|or|either|with|for|on|at|as|your|its|have)$", last)))
             # any paragraph that stops on a function word ("... equal to your" / "Charisma modifier")
             word_wrap = (re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)
                          and re.match(r"^[A-Z][a-z]", text))
-            if parts and parts[-1][0] == "p" and not TERMINAL.search(last) and (
-                    re.match(r"^[a-z(]", text) or label_wrap or word_wrap
-                    or (cut and re.search(r"[a-z,;]$", last))):
+            # a labelled header line cut inside a parenthesis or after "or" ("**Components:** V, S, M
+            # (a miniature sword worth" / "250+ GP)", "**Casting Time:** Action (Overgrowth) or" / "8 hours")
+            header_wrap = (re.match(r"^\*\*[^*]+:\*\*", last)
+                           and (last.count("(") > last.count(")") or re.search(r"\sor$", last)))
+            if parts and parts[-1][0] == "p" and (header_wrap or not TERMINAL.search(last)) and (
+                    re.match(r"^[a-z(]", text) or label_wrap or word_wrap or header_wrap
+                    or (cut and re.search(r"[a-z,;]$", last)
+                        and not re.match(r"^\*\*(Casting Time|Range|Components?|Duration):\*\*", last))):
                 parts[-1] = ("p", parts[-1][1].rstrip() + " " + text)
             else:
                 parts.append(("p", text))
