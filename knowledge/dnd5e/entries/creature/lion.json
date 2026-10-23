@@ -1,0 +1,352 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/lion",
+  "kind": "creature",
+  "name": "Lion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      356,
+      357
+    ],
+    "section": "Animals/Lion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L36"
+  },
+  "tier": 3,
+  "text": "*Large Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 22 (4d10)\n\n**Speed** 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |\n\n**Skills** Perception +3, Stealth +4\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** None\n\n**CR** 1 (XP 200; PB +2)\n\n##### Traits\n\n***Pack Tactics.*** The lion has Advantage on an attack roll against a creature if at least one of the lion’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.\n\n***Running Leap.*** With a 10-foot running start, the lion can Long Jump up to 25 feet.\n\n##### Actions\n\n***Multiattack.*** The lion makes two Rend attacks. It can replace one attack with a use of Roar.\n\n***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage.\n\n***Roar.*** *Wisdom Saving Throw:* DC 11, one creature within 15 feet. *Failure:* The target has the Frightened condition until the start of the lion’s next turn.",
+  "facets": {
+    "group": "animal",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Large Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": "4d10",
+      "text": "22 (4d10)"
+    },
+    "speed": {
+      "text": "50 ft.",
+      "walk": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "stealth": 4,
+      "text": "Perception +3, Stealth +4"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "text": "The lion has Advantage on an attack roll against a creature if at least one of the lion’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition."
+      },
+      {
+        "name": "Running Leap",
+        "text": "With a 10-foot running start, the lion can Long Jump up to 25 feet."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The lion makes two Rend attacks. It can replace one attack with a use of Roar."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage."
+      },
+      {
+        "name": "Roar",
+        "text": "*Wisdom Saving Throw:* DC 11, one creature within 15 feet. *Failure:* The target has the Frightened condition until the start of the lion’s next turn."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 2
+          }
+        ],
+        "text": "The lion makes two Rend attacks. It can replace one attack with a use of Roar."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "pred": "ally_within_feet_of_target",
+        "args": {
+          "feet": 5,
+          "not_incapacitated": true
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Roar",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 11,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 15
+            },
+            "text": "one creature within 15 feet"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_running_leap",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Running Leap as written.",
+      "source_text": "With a 10-foot running start, the lion can Long Jump up to 25 feet."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (4d10)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Pack Tactics.*** The lion has Advantage on an attack roll against a creature if at least one of the lion’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Running Leap.*** With a 10-foot running start, the lion can Long Jump up to 25 feet.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_running_leap"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The lion makes two Rend attacks. It can replace one attack with a use of Roar.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Roar.*** *Wisdom Saving Throw:* DC 11, one creature within 15 feet. *Failure:* The target has the Frightened condition until the start of the lion’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened"
+  ]
+}
