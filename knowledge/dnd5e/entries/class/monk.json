@@ -1,0 +1,581 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/monk",
+  "kind": "class",
+  "name": "Monk",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      49,
+      50
+    ],
+    "section": "Classes/Monk",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Monk Traits\n\n| **Primary Ability** | Dexterity and Wisdom |\n| **Hit Point Die** | D8 per Monk level |\n| **Saving Throw Proficiencies** | Strength and Dexterity |\n| **Skill Proficiencies** | *Choose 2:* Acrobatics, Athletics, History, Insight, Religion, or Stealth |\n| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Light property |\n| **Tool Proficiencies** | *Choose one type of Artisan’s Tools or Musical Instrument* (see “Equipment”) |\n| **Armor Training** | None |\n| **Starting Equipment** | *Choose A or B:* (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP |\n\n### Becoming a Monk …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Monk Traits table.\n\n- Gain the Monk’s level 1 features, which are listed in the Monk Features table.\n\n#### As a Multiclass Character\n\n- Gain the Hit Point Die trait from the Core Monk Traits table.\n\n- Gain the Monk’s level 1 features, which are listed in the Monk Features table.\n\n### Monk Class Features\n\nAs a Monk, you gain the following class features when you reach the specified Monk levels. These features are listed in the Monk Features table.\n\n##### Monk Features\n\n| **Proficiency** | **Martial** | **Focus** | **Unarmored** |\n| **Level** | **Bonus** | **Class Features** | **Arts** | **Points** | **Movement** |\n| 1 | +2 | Martial Arts, Unarmored Defense | 1d6 | — | — |\n| 2 | +2 | Monk’s Focus, Unarmored Movement, Uncanny Metabolism | 1d6 | 2 | +10 ft. |\n| 3 | +2 | Deflect Attacks, Monk Subclass | 1d6 | 3 | +10 ft. |\n| 4 | +2 | Ability Score Improvement, Slow Fall | 1d6 | 4 | +10 ft. |\n| 5 | +3 | Extra Attack, Stunning Strike | 1d8 | 5 | +10 ft. |\n| 6 | +3 | Empowered Strikes, Subclass feature | 1d8 | 6 | +15 ft. |\n| 7 | +3 | Evasion | 1d8 | 7 | +15 ft. |\n| 8 | +3 | Ability Score Improvement | 1d8 | 8 | +15 ft. |\n| 9 | +4 | Acrobatic Movement | 1d8 | 9 | +15 ft. |\n| 10 | +4 | Heightened Focus, Self-Restoration | 1d8 | 10 | +20 ft. |\n| 11 | +4 | Subclass feature | 1d10 | 11 | +20 ft. |\n| 12 | +4 | Ability Score Improvement | 1d10 | 12 | +20 ft. |\n| 13 | +5 | Deflect Energy | 1d10 | 13 | +20 ft. |\n| 14 | +5 | Disciplined Survivor | 1d10 | 14 | +25 ft. |\n| 15 | +5 | Perfect Focus | 1d10 | 15 | +25 ft. |\n| 16 | +5 | Ability Score Improvement | 1d10 | 16 | +25 ft. |\n| 17 | +6 | Subclass feature | 1d12 | 17 | +25 ft. |\n| 18 | +6 | Superior Defense | 1d12 | 18 | +30 ft. |\n| 19 | +6 | Epic Boon | 1d12 | 19 | +30 ft. |\n| 20 | +6 | Body and Mind | 1d12 | 20 | +30 ft. |",
+  "facets": {
+    "hit_die": "d8",
+    "primary_ability": [
+      "dex",
+      "wis"
+    ],
+    "saving_throws": [
+      "str",
+      "dex"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Dexterity and Wisdom",
+      "Hit Point Die": "D8 per Monk level",
+      "Saving Throw Proficiencies": "Strength and Dexterity",
+      "Skill Proficiencies": "Choose 2: Acrobatics, Athletics, History, Insight, Religion, or Stealth",
+      "Weapon Proficiencies": "Simple weapons and Martial weapons that have the Light property",
+      "Tool Proficiencies": "Choose one type of Artisan’s Tools or Musical Instrument (see “Equipment”)",
+      "Armor Training": "None",
+      "Starting Equipment": "Choose A or B: (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP"
+    },
+    "hit_die": "d8",
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Spear",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/spear"
+          },
+          {
+            "name": "Daggers",
+            "quantity": 5,
+            "ref": "dnd5e/weapon/dagger"
+          },
+          {
+            "name": "Artisan’s Tools or Musical Instrument chosen for the tool proficiency above",
+            "quantity": 1
+          },
+          {
+            "name": "Explorer’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/explorers-pack"
+          }
+        ],
+        "gp": 11
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 50
+      }
+    ],
+    "features_table": {
+      "id": "monk_features",
+      "caption": "Monk Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Martial Arts",
+        "Focus Points",
+        "Unarmored Movement"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-martial-arts"
+          },
+          {
+            "ref": "dnd5e/feature/monk-unarmored-defense"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Martial Arts": "1d6",
+          "Focus Points": "—",
+          "Unarmored Movement": "—"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-monks-focus"
+          },
+          {
+            "ref": "dnd5e/feature/monk-unarmored-movement"
+          },
+          {
+            "ref": "dnd5e/feature/monk-uncanny-metabolism"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Martial Arts": "1d6",
+          "Focus Points": "2",
+          "Unarmored Movement": "+10 ft."
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-deflect-attacks"
+          },
+          {
+            "ref": "dnd5e/feature/monk-monk-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Martial Arts": "1d6",
+          "Focus Points": "3",
+          "Unarmored Movement": "+10 ft."
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-ability-score-improvement"
+          },
+          {
+            "ref": "dnd5e/feature/monk-slow-fall"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Martial Arts": "1d6",
+          "Focus Points": "4",
+          "Unarmored Movement": "+10 ft."
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-extra-attack"
+          },
+          {
+            "ref": "dnd5e/feature/monk-stunning-strike"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Martial Arts": "1d8",
+          "Focus Points": "5",
+          "Unarmored Movement": "+10 ft."
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-empowered-strikes"
+          },
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/warrior-of-the-open-hand"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Martial Arts": "1d8",
+          "Focus Points": "6",
+          "Unarmored Movement": "+15 ft."
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-evasion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Martial Arts": "1d8",
+          "Focus Points": "7",
+          "Unarmored Movement": "+15 ft."
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Martial Arts": "1d8",
+          "Focus Points": "8",
+          "Unarmored Movement": "+15 ft."
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-acrobatic-movement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Martial Arts": "1d8",
+          "Focus Points": "9",
+          "Unarmored Movement": "+15 ft."
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-heightened-focus"
+          },
+          {
+            "ref": "dnd5e/feature/monk-self-restoration"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Martial Arts": "1d8",
+          "Focus Points": "10",
+          "Unarmored Movement": "+20 ft."
+        }
+      },
+      "11": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/warrior-of-the-open-hand"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Martial Arts": "1d10",
+          "Focus Points": "11",
+          "Unarmored Movement": "+20 ft."
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Martial Arts": "1d10",
+          "Focus Points": "12",
+          "Unarmored Movement": "+20 ft."
+        }
+      },
+      "13": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-deflect-energy"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Martial Arts": "1d10",
+          "Focus Points": "13",
+          "Unarmored Movement": "+20 ft."
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-disciplined-survivor"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Martial Arts": "1d10",
+          "Focus Points": "14",
+          "Unarmored Movement": "+25 ft."
+        }
+      },
+      "15": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-perfect-focus"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Martial Arts": "1d10",
+          "Focus Points": "15",
+          "Unarmored Movement": "+25 ft."
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Martial Arts": "1d10",
+          "Focus Points": "16",
+          "Unarmored Movement": "+25 ft."
+        }
+      },
+      "17": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/warrior-of-the-open-hand"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Martial Arts": "1d12",
+          "Focus Points": "17",
+          "Unarmored Movement": "+25 ft."
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-superior-defense"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Martial Arts": "1d12",
+          "Focus Points": "18",
+          "Unarmored Movement": "+30 ft."
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Martial Arts": "1d12",
+          "Focus Points": "19",
+          "Unarmored Movement": "+30 ft."
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/monk-body-and-mind"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Martial Arts": "1d12",
+          "Focus Points": "20",
+          "Unarmored Movement": "+30 ft."
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/warrior-of-the-open-hand",
+    "unresolved_items": [
+      "Artisan’s Tools or Musical Instrument chosen for the tool proficiency above"
+    ],
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "dex",
+          "wis"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d8",
+        "saving_throws": [
+          "str",
+          "dex"
+        ],
+        "skills": {
+          "choose": 2,
+          "from": [
+            "acrobatics",
+            "athletics",
+            "history",
+            "insight",
+            "religion",
+            "stealth"
+          ]
+        },
+        "weapons": "Simple weapons and Martial weapons that have the Light property",
+        "tools": "Choose one type of Artisan’s Tools or Musical Instrument (see “Equipment”)",
+        "armor_training": "None"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "monk_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "str",
+        "dex"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 2,
+      "from": [
+        "acrobatics",
+        "athletics",
+        "history",
+        "insight",
+        "religion",
+        "stealth"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple"
+      ],
+      "note": "Simple weapons and Martial weapons that have the Light property",
+      "from": [
+        "martial_with:light"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "tool",
+      "note": "Choose one type of Artisan’s Tools or Musical Instrument (see “Equipment”)"
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/monk",
+              "note": "Gain data.starting_equipment[0]."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/monk",
+              "note": "Gain data.starting_equipment[1]."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Monk Traits\n\n| **Primary Ability** | Dexterity and Wisdom |\n| **Hit Point Die** | D8 per Monk level |\n| **Saving Throw Proficiencies** | Strength and Dexterity |\n| **Skill Proficiencies** | *Choose 2:* Acrobatics, Athletics, History, Insight, Religion, or Stealth |\n| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Light property |\n| **Tool Proficiencies** | *Choose one type of Artisan’s Tools or Musical Instrument* (see “Equipment”) |\n| **Armor Training** | None |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "### Becoming a Monk …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Monk Traits table.\n\n- Gain the Monk’s level 1 features, which are listed in the Monk Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the Hit Point Die trait from the Core Monk Traits table.\n\n- Gain the Monk’s level 1 features, which are listed in the Monk Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Monk Class Features\n\nAs a Monk, you gain the following class features when you reach the specified Monk levels. These features are listed in the Monk Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Monk Features\n\n| **Proficiency** | **Martial** | **Focus** | **Unarmored** |\n| **Level** | **Bonus** | **Class Features** | **Arts** | **Points** | **Movement** |\n| 1 | +2 | Martial Arts, Unarmored Defense | 1d6 | — | — |\n| 2 | +2 | Monk’s Focus, Unarmored Movement, Uncanny Metabolism | 1d6 | 2 | +10 ft. |\n| 3 | +2 | Deflect Attacks, Monk Subclass | 1d6 | 3 | +10 ft. |\n| 4 | +2 | Ability Score Improvement, Slow Fall | 1d6 | 4 | +10 ft. |\n| 5 | +3 | Extra Attack, Stunning Strike | 1d8 | 5 | +10 ft. |\n| 6 | +3 | Empowered Strikes, Subclass feature | 1d8 | 6 | +15 ft. |\n| 7 | +3 | Evasion | 1d8 | 7 | +15 ft. |\n| 8 | +3 | Ability Score Improvement | 1d8 | 8 | +15 ft. |\n| 9 | +4 | Acrobatic Movement | 1d8 | 9 | +15 ft. |\n| 10 | +4 | Heightened Focus, Self-Restoration | 1d8 | 10 | +20 ft. |\n| 11 | +4 | Subclass feature | 1d10 | 11 | +20 ft. |\n| 12 | +4 | Ability Score Improvement | 1d10 | 12 | +20 ft. |\n| 13 | +5 | Deflect Energy | 1d10 | 13 | +20 ft. |\n| 14 | +5 | Disciplined Survivor | 1d10 | 14 | +25 ft. |\n| 15 | +5 | Perfect Focus | 1d10 | 15 | +25 ft. |\n| 16 | +5 | Ability Score Improvement | 1d10 | 16 | +25 ft. |\n| 17 | +6 | Subclass feature | 1d12 | 17 | +25 ft. |\n| 18 | +6 | Superior Defense | 1d12 | 18 | +30 ft. |\n| 19 | +6 | Epic Boon | 1d12 | 19 | +30 ft. |\n| 20 | +6 | Body and Mind | 1d12 | 20 | +30 ft. |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/monk",
+    "dnd5e/feature/monk-ability-score-improvement",
+    "dnd5e/feature/monk-acrobatic-movement",
+    "dnd5e/feature/monk-body-and-mind",
+    "dnd5e/feature/monk-deflect-attacks",
+    "dnd5e/feature/monk-deflect-energy",
+    "dnd5e/feature/monk-disciplined-survivor",
+    "dnd5e/feature/monk-empowered-strikes",
+    "dnd5e/feature/monk-epic-boon",
+    "dnd5e/feature/monk-evasion",
+    "dnd5e/feature/monk-extra-attack",
+    "dnd5e/feature/monk-heightened-focus",
+    "dnd5e/feature/monk-martial-arts",
+    "dnd5e/feature/monk-monk-subclass",
+    "dnd5e/feature/monk-monks-focus",
+    "dnd5e/feature/monk-perfect-focus",
+    "dnd5e/feature/monk-self-restoration",
+    "dnd5e/feature/monk-slow-fall",
+    "dnd5e/feature/monk-stunning-strike",
+    "dnd5e/feature/monk-superior-defense",
+    "dnd5e/feature/monk-unarmored-defense",
+    "dnd5e/feature/monk-unarmored-movement",
+    "dnd5e/feature/monk-uncanny-metabolism",
+    "dnd5e/gear/explorers-pack",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/dagger",
+    "dnd5e/weapon/spear"
+  ]
+}

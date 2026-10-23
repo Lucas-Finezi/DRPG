@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-breaking-your-oath",
+  "kind": "rule",
+  "name": "Breaking Your Oath",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      54
+    ],
+    "section": "Classes/Paladin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 3,
+  "text": "A Paladin tries to hold to the highest standards of conduct, but even the most dedicated are fallible. Sometimes a Paladin transgresses their oath.\n\nA Paladin who has broken a vow typically seeks absolution, spending an all-night vigil as a sign of penitence or undertaking a fast. After a rite of forgiveness, the Paladin starts fresh.\n\nIf your Paladin unrepentantly violates their oath, talk to your GM. Your Paladin should probably take a more appropriate subclass or even abandon the class and adopt another one.",
+  "facets": {
+    "sidebar": true
+  },
+  "master_decisions": [
+    {
+      "id": "broken_oath",
+      "reason": "narrative",
+      "prompt": "The Paladin unrepentantly violated their oath: resolve the consequences with the player.",
+      "source_text": "If your Paladin unrepentantly violates their oath, talk to your GM.",
+      "pages": [
+        54
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A Paladin tries to hold to the highest standards of conduct, but even the most dedicated are fallible. Sometimes a Paladin transgresses their oath.\n\nA Paladin who has broken a vow typically seeks absolution, spending an all-night vigil as a sign of penitence or undertaking a fast. After a rite of forgiveness, the Paladin starts fresh.",
+      "status": "descriptive"
+    },
+    {
+      "text": "If your Paladin unrepentantly violates their oath, talk to your GM. Your Paladin should probably take a more appropriate subclass or even abandon the class and adopt another one.",
+      "status": "master_decision",
+      "by": [
+        "md:broken_oath"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/bard",
+  "kind": "class",
+  "name": "Bard",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      31
+    ],
+    "section": "Classes/Bard",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Bard Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D8 per Bard level |\n| **Saving Throw Proficiencies** | Dexterity and Charisma |\n| **Skill Proficiencies** | *Choose any 3 skills* (see “Playing the Game”) |\n| **Weapon Proficiencies** | Simple weapons |\n| **Tool Proficiencies** | *Choose 3 Musical Instruments* (see “Equipment”) |\n| **Armor Training** | Light armor |\n| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP |\n\n### Becoming a Bard …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Bard Traits table.\n\n- Gain the Bard’s level 1 features, which are listed in the Bard Features table.\n\n#### As a Multiclass Character\n\n- Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor.\n\n- Gain the Bard’s level 1 features, which are listed in the Bard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.\n\n### Bard Class Features\n\nAs a Bard, you gain the following class features when you reach the specified Bard levels. These features are listed in the Bard Features table.\n\n##### Bard Features\n\n| **Proficiency** | **Bardic** | **Prepared** | **——Spell Slots per Spell Level——** |\n| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| **Bonus** | **Die** | **Spells** |\n| 1 | +2 | Bardic Inspiration, Spellcasting | D6 | 2 | 4 | 2 | — | — | — | — | — | — | — | — |\n| 2 | +2 | Expertise, Jack of All Trades | D6 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |\n| 3 | +2 | Bard Subclass | D6 | 2 | 6 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | D6 | 3 | 7 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | +3 | Font of Inspiration | D8 | 3 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | +3 | Subclass feature | D8 | 3 | 10 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | +3 | Countercharm | D8 | 3 | 11 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | +3 | Ability Score Improvement | D8 | 3 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | +4 | Expertise | D8 | 3 | 14 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | +4 | Magical Secrets | D10 | 4 | 15 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | +4 | — | D10 | 4 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | +4 | Ability Score Improvement | D10 | 4 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | +5 | — | D10 | 4 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | +5 | Subclass feature | D10 | 4 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | +5 | — | D12 | 4 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | +5 | Ability Score Improvement | D12 | 4 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | +6 | — | D12 | 4 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | +6 | Superior Inspiration | D12 | 4 | 20 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | +6 | Epic Boon | D12 | 4 | 21 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | +6 | Words of Creation | D12 | 4 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+  "facets": {
+    "hit_die": "d8",
+    "primary_ability": [
+      "cha"
+    ],
+    "saving_throws": [
+      "dex",
+      "cha"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Charisma",
+      "Hit Point Die": "D8 per Bard level",
+      "Saving Throw Proficiencies": "Dexterity and Charisma",
+      "Skill Proficiencies": "Choose any 3 skills (see “Playing the Game”)",
+      "Weapon Proficiencies": "Simple weapons",
+      "Tool Proficiencies": "Choose 3 Musical Instruments (see “Equipment”)",
+      "Armor Training": "Light armor",
+      "Starting Equipment": "Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP"
+    },
+    "hit_die": "d8",
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Leather Armor",
+            "quantity": 1,
+            "ref": "dnd5e/armor/leather-armor"
+          },
+          {
+            "name": "Daggers",
+            "quantity": 2,
+            "ref": "dnd5e/weapon/dagger"
+          },
+          {
+            "name": "Musical Instrument of your choice",
+            "quantity": 1
+          },
+          {
+            "name": "Entertainer’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/entertainers-pack"
+          }
+        ],
+        "gp": 19
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 90
+      }
+    ],
+    "features_table": {
+      "id": "bard_features",
+      "caption": "Bard Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Bardic Die",
+        "Cantrips",
+        "Prepared Spells",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-bardic-inspiration"
+          },
+          {
+            "ref": "dnd5e/feature/bard-spellcasting"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Bardic Die": "D6",
+          "Cantrips": "2",
+          "Prepared Spells": "4",
+          "1": "2",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-expertise"
+          },
+          {
+            "ref": "dnd5e/feature/bard-jack-of-all-trades"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Bardic Die": "D6",
+          "Cantrips": "2",
+          "Prepared Spells": "5",
+          "1": "3",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-bard-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Bardic Die": "D6",
+          "Cantrips": "2",
+          "Prepared Spells": "6",
+          "1": "4",
+          "2": "2",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Bardic Die": "D6",
+          "Cantrips": "3",
+          "Prepared Spells": "7",
+          "1": "4",
+          "2": "3",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-font-of-inspiration"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Bardic Die": "D8",
+          "Cantrips": "3",
+          "Prepared Spells": "9",
+          "1": "4",
+          "2": "3",
+          "3": "2",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/college-of-lore"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Bardic Die": "D8",
+          "Cantrips": "3",
+          "Prepared Spells": "10",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-countercharm"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Bardic Die": "D8",
+          "Cantrips": "3",
+          "Prepared Spells": "11",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "1",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Bardic Die": "D8",
+          "Cantrips": "3",
+          "Prepared Spells": "12",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "2",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-expertise",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Bardic Die": "D8",
+          "Cantrips": "3",
+          "Prepared Spells": "14",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "1",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-magical-secrets"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Bardic Die": "D10",
+          "Cantrips": "4",
+          "Prepared Spells": "15",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "11": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Bardic Die": "D10",
+          "Cantrips": "4",
+          "Prepared Spells": "16",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Bardic Die": "D10",
+          "Cantrips": "4",
+          "Prepared Spells": "16",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "13": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Bardic Die": "D10",
+          "Cantrips": "4",
+          "Prepared Spells": "17",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/college-of-lore"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Bardic Die": "D10",
+          "Cantrips": "4",
+          "Prepared Spells": "17",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "15": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "18",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "—"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "18",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "—"
+        }
+      },
+      "17": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "19",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-superior-inspiration"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "20",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "21",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "2",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/bard-words-of-creation"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Bardic Die": "D12",
+          "Cantrips": "4",
+          "Prepared Spells": "22",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "2",
+          "7": "2",
+          "8": "1",
+          "9": "1"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/college-of-lore",
+    "unresolved_items": [
+      "Musical Instrument of your choice"
+    ],
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d8",
+        "saving_throws": [
+          "dex",
+          "cha"
+        ],
+        "skills": {
+          "choose": 3,
+          "from": "any"
+        },
+        "weapons": "Simple weapons",
+        "tools": "Choose 3 Musical Instruments (see “Equipment”)",
+        "armor_training": "Light armor"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "bard_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "dex",
+        "cha"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 3,
+      "note": "Any skills."
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "tool",
+      "note": "Choose 3 Musical Instruments (see “Equipment”)"
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "light"
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/bard",
+              "note": "Gain data.starting_equipment[0]."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/bard",
+              "note": "Gain data.starting_equipment[1]."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Bard Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D8 per Bard level |\n| **Saving Throw Proficiencies** | Dexterity and Charisma |\n| **Skill Proficiencies** | *Choose any 3 skills* (see “Playing the Game”) |\n| **Weapon Proficiencies** | Simple weapons |\n| **Tool Proficiencies** | *Choose 3 Musical Instruments* (see “Equipment”) |\n| **Armor Training** | Light armor |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "### Becoming a Bard …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Bard Traits table.\n\n- Gain the Bard’s level 1 features, which are listed in the Bard Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor.\n\n- Gain the Bard’s level 1 features, which are listed in the Bard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Bard Class Features\n\nAs a Bard, you gain the following class features when you reach the specified Bard levels. These features are listed in the Bard Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Bard Features\n\n| **Proficiency** | **Bardic** | **Prepared** | **——Spell Slots per Spell Level——** |\n| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| **Bonus** | **Die** | **Spells** |\n| 1 | +2 | Bardic Inspiration, Spellcasting | D6 | 2 | 4 | 2 | — | — | — | — | — | — | — | — |\n| 2 | +2 | Expertise, Jack of All Trades | D6 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |\n| 3 | +2 | Bard Subclass | D6 | 2 | 6 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | D6 | 3 | 7 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | +3 | Font of Inspiration | D8 | 3 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | +3 | Subclass feature | D8 | 3 | 10 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | +3 | Countercharm | D8 | 3 | 11 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | +3 | Ability Score Improvement | D8 | 3 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | +4 | Expertise | D8 | 3 | 14 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | +4 | Magical Secrets | D10 | 4 | 15 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | +4 | — | D10 | 4 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | +4 | Ability Score Improvement | D10 | 4 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | +5 | — | D10 | 4 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | +5 | Subclass feature | D10 | 4 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | +5 | — | D12 | 4 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | +5 | Ability Score Improvement | D12 | 4 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | +6 | — | D12 | 4 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | +6 | Superior Inspiration | D12 | 4 | 20 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | +6 | Epic Boon | D12 | 4 | 21 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | +6 | Words of Creation | D12 | 4 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/leather-armor",
+    "dnd5e/class/bard",
+    "dnd5e/feature/bard-ability-score-improvement",
+    "dnd5e/feature/bard-bard-subclass",
+    "dnd5e/feature/bard-bardic-inspiration",
+    "dnd5e/feature/bard-countercharm",
+    "dnd5e/feature/bard-epic-boon",
+    "dnd5e/feature/bard-expertise",
+    "dnd5e/feature/bard-font-of-inspiration",
+    "dnd5e/feature/bard-jack-of-all-trades",
+    "dnd5e/feature/bard-magical-secrets",
+    "dnd5e/feature/bard-spellcasting",
+    "dnd5e/feature/bard-superior-inspiration",
+    "dnd5e/feature/bard-words-of-creation",
+    "dnd5e/gear/entertainers-pack",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/dagger"
+  ]
+}

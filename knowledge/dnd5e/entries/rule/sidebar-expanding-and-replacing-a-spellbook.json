@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-expanding-and-replacing-a-spellbook",
+  "kind": "rule",
+  "name": "Expanding and Replacing a Spellbook",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      78
+    ],
+    "section": "Classes/Wizard",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 1,
+  "text": "The spells you add to your spellbook as you gain levels reflect your ongoing magical research, but you might find other spells during your adventures that you can add to the book. You could discover a Wizard spell on a *Spell Scroll*, for example, and then copy it into your spellbook.\n\n***Copying a Spell into the Book.*** When you find a level 1+ Wizard spell, you can copy it into your spellbook if it’s of a level you can prepare and if you have time to copy it. For each level of the spell, the transcription takes 2 hours and costs 50 GP. Afterward you can prepare the spell like the other spells in your spellbook.\n\n***Copying the Book.*** You can copy a spell from your spellbook into another book. This is like copying a new spell into your spellbook but faster, since you already know how to cast the spell. You need spend only 1 hour and 10 GP for each level of the copied spell.\n\nIf you lose your spellbook, you can use the same procedure to transcribe the Wizard spells that you have prepared into a new spellbook. Filling out the remainder of the new book requires you to find new spells to do so. For this reason, many wizards keep a backup spellbook.",
+  "facets": {
+    "sidebar": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "copy_spell",
+        "spell": "level_1_plus_wizard_spell",
+        "requires_slot_level_available": true,
+        "hours_per_spell_level": 2,
+        "gp_per_spell_level": 50
+      },
+      {
+        "id": "copy_book",
+        "hours_per_spell_level": 1,
+        "gp_per_spell_level": 10
+      },
+      {
+        "id": "replace_book",
+        "procedure": "same_as_copying",
+        "source": "prepared_spells"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The spells you add to your spellbook as you gain levels reflect your ongoing magical research, but you might find other spells during your adventures that you can add to the book. You could discover a Wizard spell on a *Spell Scroll*, for example, and then copy it into your spellbook.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Copying a Spell into the Book.*** When you find a level 1+ Wizard spell, you can copy it into your spellbook if it’s of a level you can prepare and if you have time to copy it. For each level of the spell, the transcription takes 2 hours and costs 50 GP. Afterward you can prepare the spell like the other spells in your spellbook.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Copying the Book.*** You can copy a spell from your spellbook into another book. This is like copying a new spell into your spellbook but faster, since you already know how to cast the spell. You need spend only 1 hour and 10 GP for each level of the copied spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If you lose your spellbook, you can use the same procedure to transcribe the Wizard spells that you have prepared into a new spellbook. Filling out the remainder of the new book requires you to find new spells to do so. For this reason, many wizards keep a backup spellbook.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

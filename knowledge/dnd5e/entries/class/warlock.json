@@ -1,0 +1,591 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/warlock",
+  "kind": "class",
+  "name": "Warlock",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      70,
+      71
+    ],
+    "section": "Classes/Warlock",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Warlock Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D8 per Warlock level |\n| **Saving Throw Proficiencies** | Wisdom and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion |\n| **Weapon Proficiencies** | Simple weapons |\n| **Armor Training** | Light armor |\n| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP |\n\n### Becoming a Warlock …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Warlock Traits table.\n\n- Gain the Warlock’s level 1 features, which are listed in the Warlock Features table.\n\n#### As a Multiclass Character\n\n- Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor.\n\n- Gain the Warlock’s level 1 features, which are listed in the Warlock Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.\n\n### Warlock Class Features\n\nAs a Warlock, you gain the following class features when you reach the specified Warlock levels. These features are listed in the Warlock Features table.\n\n##### Warlock Features\n\n| **Proficiency** | **Eldritch** | **Prepared** | **Spell** | **Slot** |\n| **Level** | **Bonus** | **Class Features** | **Invocations** | **Cantrips** | **Spells** | **Slots** | **Level** |\n| 1 | +2 | Eldritch Invocations, Pact Magic | 1 | 2 | 2 | 1 | 1 |\n| 2 | +2 | Magical Cunning | 3 | 2 | 3 | 2 | 1 |\n| 3 | +2 | Warlock Subclass | 3 | 2 | 4 | 2 | 2 |\n| 4 | +2 | Ability Score Improvement | 3 | 3 | 5 | 2 | 2 |\n| 5 | +3 | — | 5 | 3 | 6 | 2 | 3 |\n| 6 | +3 | Subclass feature | 5 | 3 | 7 | 2 | 3 |\n| 7 | +3 | — | 6 | 3 | 8 | 2 | 4 |\n| 8 | +3 | Ability Score Improvement | 6 | 3 | 9 | 2 | 4 |\n| 9 | +4 | Contact Patron | 7 | 3 | 10 | 2 | 5 |\n| 10 | +4 | Subclass feature | 7 | 4 | 10 | 2 | 5 |\n| 11 | +4 | Mystic Arcanum (level 6 spell) | 7 | 4 | 11 | 3 | 5 |\n| 12 | +4 | Ability Score Improvement | 8 | 4 | 11 | 3 | 5 |\n| 13 | +5 | Mystic Arcanum (level 7 spell) | 8 | 4 | 12 | 3 | 5 |\n| 14 | +5 | Subclass feature | 8 | 4 | 12 | 3 | 5 |\n| 15 | +5 | Mystic Arcanum (level 8 spell) | 9 | 4 | 13 | 3 | 5 |\n| 16 | +5 | Ability Score Improvement | 9 | 4 | 13 | 3 | 5 |\n| 17 | +6 | Mystic Arcanum (level 9 spell) | 9 | 4 | 14 | 4 | 5 |\n| 18 | +6 | — | 10 | 4 | 14 | 4 | 5 |\n| 19 | +6 | Epic Boon | 10 | 4 | 15 | 4 | 5 |\n| 20 | +6 | Eldritch Master | 10 | 4 | 15 | 4 | 5 |",
+  "facets": {
+    "hit_die": "d8",
+    "primary_ability": [
+      "cha"
+    ],
+    "saving_throws": [
+      "wis",
+      "cha"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Charisma",
+      "Hit Point Die": "D8 per Warlock level",
+      "Saving Throw Proficiencies": "Wisdom and Charisma",
+      "Skill Proficiencies": "Choose 2: Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
+      "Weapon Proficiencies": "Simple weapons",
+      "Armor Training": "Light armor",
+      "Starting Equipment": "Choose A or B: (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP"
+    },
+    "hit_die": "d8",
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Leather Armor",
+            "quantity": 1,
+            "ref": "dnd5e/armor/leather-armor"
+          },
+          {
+            "name": "Sickle",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/sickle"
+          },
+          {
+            "name": "Daggers",
+            "quantity": 2,
+            "ref": "dnd5e/weapon/dagger"
+          },
+          {
+            "name": "Arcane Focus (orb)",
+            "quantity": 1,
+            "ref": "dnd5e/gear/arcane-focus-orb"
+          },
+          {
+            "name": "Book (occult lore)",
+            "quantity": 1,
+            "ref": "dnd5e/gear/book"
+          },
+          {
+            "name": "Scholar’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/scholars-pack"
+          }
+        ],
+        "gp": 15
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 100
+      }
+    ],
+    "features_table": {
+      "id": "warlock_features",
+      "caption": "Warlock Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Eldritch Invocations",
+        "Cantrips",
+        "Prepared Spells",
+        "Spell Slots",
+        "Slot Level"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-eldritch-invocations"
+          },
+          {
+            "ref": "dnd5e/feature/warlock-pact-magic"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Eldritch Invocations": "1",
+          "Cantrips": "2",
+          "Prepared Spells": "2",
+          "Spell Slots": "1",
+          "Slot Level": "1"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-magical-cunning"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Eldritch Invocations": "3",
+          "Cantrips": "2",
+          "Prepared Spells": "3",
+          "Spell Slots": "2",
+          "Slot Level": "1"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-warlock-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Eldritch Invocations": "3",
+          "Cantrips": "2",
+          "Prepared Spells": "4",
+          "Spell Slots": "2",
+          "Slot Level": "2"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Eldritch Invocations": "3",
+          "Cantrips": "3",
+          "Prepared Spells": "5",
+          "Spell Slots": "2",
+          "Slot Level": "2"
+        }
+      },
+      "5": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Eldritch Invocations": "5",
+          "Cantrips": "3",
+          "Prepared Spells": "6",
+          "Spell Slots": "2",
+          "Slot Level": "3"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/fiend-patron"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Eldritch Invocations": "5",
+          "Cantrips": "3",
+          "Prepared Spells": "7",
+          "Spell Slots": "2",
+          "Slot Level": "3"
+        }
+      },
+      "7": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Eldritch Invocations": "6",
+          "Cantrips": "3",
+          "Prepared Spells": "8",
+          "Spell Slots": "2",
+          "Slot Level": "4"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Eldritch Invocations": "6",
+          "Cantrips": "3",
+          "Prepared Spells": "9",
+          "Spell Slots": "2",
+          "Slot Level": "4"
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-contact-patron"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Eldritch Invocations": "7",
+          "Cantrips": "3",
+          "Prepared Spells": "10",
+          "Spell Slots": "2",
+          "Slot Level": "5"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/fiend-patron"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Eldritch Invocations": "7",
+          "Cantrips": "4",
+          "Prepared Spells": "10",
+          "Spell Slots": "2",
+          "Slot Level": "5"
+        }
+      },
+      "11": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-mystic-arcanum",
+            "table_note": "level 6 spell"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Eldritch Invocations": "7",
+          "Cantrips": "4",
+          "Prepared Spells": "11",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Eldritch Invocations": "8",
+          "Cantrips": "4",
+          "Prepared Spells": "11",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "13": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-mystic-arcanum",
+            "again": true,
+            "table_note": "level 7 spell"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Eldritch Invocations": "8",
+          "Cantrips": "4",
+          "Prepared Spells": "12",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/fiend-patron"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Eldritch Invocations": "8",
+          "Cantrips": "4",
+          "Prepared Spells": "12",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "15": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-mystic-arcanum",
+            "again": true,
+            "table_note": "level 8 spell"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Eldritch Invocations": "9",
+          "Cantrips": "4",
+          "Prepared Spells": "13",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Eldritch Invocations": "9",
+          "Cantrips": "4",
+          "Prepared Spells": "13",
+          "Spell Slots": "3",
+          "Slot Level": "5"
+        }
+      },
+      "17": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-mystic-arcanum",
+            "again": true,
+            "table_note": "level 9 spell"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Eldritch Invocations": "9",
+          "Cantrips": "4",
+          "Prepared Spells": "14",
+          "Spell Slots": "4",
+          "Slot Level": "5"
+        }
+      },
+      "18": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Eldritch Invocations": "10",
+          "Cantrips": "4",
+          "Prepared Spells": "14",
+          "Spell Slots": "4",
+          "Slot Level": "5"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Eldritch Invocations": "10",
+          "Cantrips": "4",
+          "Prepared Spells": "15",
+          "Spell Slots": "4",
+          "Slot Level": "5"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/warlock-eldritch-master"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Eldritch Invocations": "10",
+          "Cantrips": "4",
+          "Prepared Spells": "15",
+          "Spell Slots": "4",
+          "Slot Level": "5"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/fiend-patron",
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d8",
+        "saving_throws": [
+          "wis",
+          "cha"
+        ],
+        "skills": {
+          "choose": 2,
+          "from": [
+            "arcana",
+            "deception",
+            "history",
+            "intimidation",
+            "investigation",
+            "nature",
+            "religion"
+          ]
+        },
+        "weapons": "Simple weapons",
+        "armor_training": "Light armor"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "warlock_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "wis",
+        "cha"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 2,
+      "from": [
+        "arcana",
+        "deception",
+        "history",
+        "intimidation",
+        "investigation",
+        "nature",
+        "religion"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "light"
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/warlock",
+              "note": "Gain data.starting_equipment[0]."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/warlock",
+              "note": "Gain data.starting_equipment[1]."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Warlock Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D8 per Warlock level |\n| **Saving Throw Proficiencies** | Wisdom and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion |\n| **Weapon Proficiencies** | Simple weapons |\n| **Armor Training** | Light armor |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "### Becoming a Warlock …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Warlock Traits table.\n\n- Gain the Warlock’s level 1 features, which are listed in the Warlock Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor.\n\n- Gain the Warlock’s level 1 features, which are listed in the Warlock Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Warlock Class Features\n\nAs a Warlock, you gain the following class features when you reach the specified Warlock levels. These features are listed in the Warlock Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Warlock Features\n\n| **Proficiency** | **Eldritch** | **Prepared** | **Spell** | **Slot** |\n| **Level** | **Bonus** | **Class Features** | **Invocations** | **Cantrips** | **Spells** | **Slots** | **Level** |\n| 1 | +2 | Eldritch Invocations, Pact Magic | 1 | 2 | 2 | 1 | 1 |\n| 2 | +2 | Magical Cunning | 3 | 2 | 3 | 2 | 1 |\n| 3 | +2 | Warlock Subclass | 3 | 2 | 4 | 2 | 2 |\n| 4 | +2 | Ability Score Improvement | 3 | 3 | 5 | 2 | 2 |\n| 5 | +3 | — | 5 | 3 | 6 | 2 | 3 |\n| 6 | +3 | Subclass feature | 5 | 3 | 7 | 2 | 3 |\n| 7 | +3 | — | 6 | 3 | 8 | 2 | 4 |\n| 8 | +3 | Ability Score Improvement | 6 | 3 | 9 | 2 | 4 |\n| 9 | +4 | Contact Patron | 7 | 3 | 10 | 2 | 5 |\n| 10 | +4 | Subclass feature | 7 | 4 | 10 | 2 | 5 |\n| 11 | +4 | Mystic Arcanum (level 6 spell) | 7 | 4 | 11 | 3 | 5 |\n| 12 | +4 | Ability Score Improvement | 8 | 4 | 11 | 3 | 5 |\n| 13 | +5 | Mystic Arcanum (level 7 spell) | 8 | 4 | 12 | 3 | 5 |\n| 14 | +5 | Subclass feature | 8 | 4 | 12 | 3 | 5 |\n| 15 | +5 | Mystic Arcanum (level 8 spell) | 9 | 4 | 13 | 3 | 5 |\n| 16 | +5 | Ability Score Improvement | 9 | 4 | 13 | 3 | 5 |\n| 17 | +6 | Mystic Arcanum (level 9 spell) | 9 | 4 | 14 | 4 | 5 |\n| 18 | +6 | — | 10 | 4 | 14 | 4 | 5 |\n| 19 | +6 | Epic Boon | 10 | 4 | 15 | 4 | 5 |\n| 20 | +6 | Eldritch Master | 10 | 4 | 15 | 4 | 5 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/leather-armor",
+    "dnd5e/class/warlock",
+    "dnd5e/feature/warlock-ability-score-improvement",
+    "dnd5e/feature/warlock-contact-patron",
+    "dnd5e/feature/warlock-eldritch-invocations",
+    "dnd5e/feature/warlock-eldritch-master",
+    "dnd5e/feature/warlock-epic-boon",
+    "dnd5e/feature/warlock-magical-cunning",
+    "dnd5e/feature/warlock-mystic-arcanum",
+    "dnd5e/feature/warlock-pact-magic",
+    "dnd5e/feature/warlock-warlock-subclass",
+    "dnd5e/gear/arcane-focus-orb",
+    "dnd5e/gear/book",
+    "dnd5e/gear/scholars-pack",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/dagger",
+    "dnd5e/weapon/sickle"
+  ]
+}

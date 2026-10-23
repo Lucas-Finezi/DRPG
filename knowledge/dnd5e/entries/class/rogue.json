@@ -1,0 +1,569 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/rogue",
+  "kind": "class",
+  "name": "Rogue",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      61,
+      62
+    ],
+    "section": "Classes/Rogue",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Rogue Traits\n\n| **Primary Ability** | Dexterity |\n| **Hit Point Die** | D8 per Rogue level |\n| **Saving Throw Proficiencies** | Dexterity and Intelligence |\n| **Skill Proficiencies** | *Choose 4:* Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth |\n| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Finesse or Light property |\n| **Tool Proficiencies** | Thieves’ Tools |\n| **Armor Training** | Light armor |\n| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP |\n\n### Becoming a Rogue …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Rogue Traits table.\n\n- Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.\n\n#### As a Multiclass Character\n\n- Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor.\n\n- Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.\n\n### Rogue Class Features\n\nAs a Rogue, you gain the following class features when you reach the specified Rogue levels. These features are listed in the Rogue Features table.\n\n##### Rogue Features\n\n**Proficiency**\n\n| **Level** | **Bonus** | **Class Features** | **Sneak Attack** |\n| 1 | +2 | Expertise, Sneak Attack, Thieves’ Cant, Weapon Mastery | 1d6 |\n| 2 | +2 | Cunning Action | 1d6 |\n| 3 | +2 | Rogue Subclass, Steady Aim | 2d6 |\n| 4 | +2 | Ability Score Improvement | 2d6 |\n| 5 | +3 | Cunning Strike, Uncanny Dodge | 3d6 |\n| 6 | +3 | Expertise | 3d6 |\n| 7 | +3 | Evasion, Reliable Talent | 4d6 |\n| 8 | +3 | Ability Score Improvement | 4d6 |\n| 9 | +4 | Subclass feature | 5d6 |\n| 10 | +4 | Ability Score Improvement | 5d6 |\n| 11 | +4 | Improved Cunning Strike | 6d6 |\n| 12 | +4 | Ability Score Improvement | 6d6 |\n| 13 | +5 | Subclass feature | 7d6 |\n| 14 | +5 | Devious Strikes | 7d6 |\n| 15 | +5 | Slippery Mind | 8d6 |\n| 16 | +5 | Ability Score Improvement | 8d6 |\n| 17 | +6 | Subclass feature | 9d6 |\n| 18 | +6 | Elusive | 9d6 |\n| 19 | +6 | Epic Boon | 10d6 |\n| 20 | +6 | Stroke of Luck | 10d6 |",
+  "facets": {
+    "hit_die": "d8",
+    "primary_ability": [
+      "dex"
+    ],
+    "saving_throws": [
+      "dex",
+      "int"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Dexterity",
+      "Hit Point Die": "D8 per Rogue level",
+      "Saving Throw Proficiencies": "Dexterity and Intelligence",
+      "Skill Proficiencies": "Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth",
+      "Weapon Proficiencies": "Simple weapons and Martial weapons that have the Finesse or Light property",
+      "Tool Proficiencies": "Thieves’ Tools",
+      "Armor Training": "Light armor",
+      "Starting Equipment": "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP"
+    },
+    "hit_die": "d8",
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Leather Armor",
+            "quantity": 1,
+            "ref": "dnd5e/armor/leather-armor"
+          },
+          {
+            "name": "Daggers",
+            "quantity": 2,
+            "ref": "dnd5e/weapon/dagger"
+          },
+          {
+            "name": "Shortsword",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/shortsword"
+          },
+          {
+            "name": "Shortbow",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/shortbow"
+          },
+          {
+            "name": "Arrows",
+            "quantity": 20,
+            "ref": "dnd5e/gear/ammunition-arrows"
+          },
+          {
+            "name": "Quiver",
+            "quantity": 1,
+            "ref": "dnd5e/gear/quiver"
+          },
+          {
+            "name": "Thieves’ Tools",
+            "quantity": 1,
+            "ref": "dnd5e/tool/thieves-tools"
+          },
+          {
+            "name": "Burglar’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/burglars-pack"
+          }
+        ],
+        "gp": 8
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 100
+      }
+    ],
+    "features_table": {
+      "id": "rogue_features",
+      "caption": "Rogue Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Sneak Attack"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-expertise"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-sneak-attack"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-thieves-cant"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-weapon-mastery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sneak Attack": "1d6"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-cunning-action"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sneak Attack": "1d6"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-rogue-subclass"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-steady-aim"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sneak Attack": "2d6"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sneak Attack": "2d6"
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-cunning-strike"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-uncanny-dodge"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sneak Attack": "3d6"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-expertise",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sneak Attack": "3d6"
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-evasion"
+          },
+          {
+            "ref": "dnd5e/feature/rogue-reliable-talent"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sneak Attack": "4d6"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sneak Attack": "4d6"
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/thief"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sneak Attack": "5d6"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sneak Attack": "5d6"
+        }
+      },
+      "11": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-improved-cunning-strike"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sneak Attack": "6d6"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sneak Attack": "6d6"
+        }
+      },
+      "13": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/thief"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sneak Attack": "7d6"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-devious-strikes"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sneak Attack": "7d6"
+        }
+      },
+      "15": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-slippery-mind"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sneak Attack": "8d6"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sneak Attack": "8d6"
+        }
+      },
+      "17": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/thief"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sneak Attack": "9d6"
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-elusive"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sneak Attack": "9d6"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sneak Attack": "10d6"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/rogue-stroke-of-luck"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sneak Attack": "10d6"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/thief",
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "dex"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d8",
+        "saving_throws": [
+          "dex",
+          "int"
+        ],
+        "skills": {
+          "choose": 4,
+          "from": [
+            "acrobatics",
+            "athletics",
+            "deception",
+            "insight",
+            "intimidation",
+            "investigation",
+            "perception",
+            "persuasion",
+            "sleight_of_hand",
+            "stealth"
+          ]
+        },
+        "weapons": "Simple weapons and Martial weapons that have the Finesse or Light property",
+        "tools": "Thieves’ Tools",
+        "armor_training": "Light armor"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "rogue_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "dex",
+        "int"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 4,
+      "from": [
+        "acrobatics",
+        "athletics",
+        "deception",
+        "insight",
+        "intimidation",
+        "investigation",
+        "perception",
+        "persuasion",
+        "sleight_of_hand",
+        "stealth"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple"
+      ],
+      "note": "Simple weapons and Martial weapons that have the Finesse or Light property",
+      "from": [
+        "martial_with:finesse",
+        "martial_with:light"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "tool",
+      "note": "Thieves’ Tools"
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "light"
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/rogue",
+              "note": "Gain data.starting_equipment[0]."
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/class/rogue",
+              "note": "Gain data.starting_equipment[1]."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Rogue Traits\n\n| **Primary Ability** | Dexterity |\n| **Hit Point Die** | D8 per Rogue level |\n| **Saving Throw Proficiencies** | Dexterity and Intelligence |\n| **Skill Proficiencies** | *Choose 4:* Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth |\n| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Finesse or Light property |\n| **Tool Proficiencies** | Thieves’ Tools |\n| **Armor Training** | Light armor |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "### Becoming a Rogue …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Rogue Traits table.\n\n- Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor.\n\n- Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Rogue Class Features\n\nAs a Rogue, you gain the following class features when you reach the specified Rogue levels. These features are listed in the Rogue Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Rogue Features\n\n**Proficiency**\n\n| **Level** | **Bonus** | **Class Features** | **Sneak Attack** |\n| 1 | +2 | Expertise, Sneak Attack, Thieves’ Cant, Weapon Mastery | 1d6 |\n| 2 | +2 | Cunning Action | 1d6 |\n| 3 | +2 | Rogue Subclass, Steady Aim | 2d6 |\n| 4 | +2 | Ability Score Improvement | 2d6 |\n| 5 | +3 | Cunning Strike, Uncanny Dodge | 3d6 |\n| 6 | +3 | Expertise | 3d6 |\n| 7 | +3 | Evasion, Reliable Talent | 4d6 |\n| 8 | +3 | Ability Score Improvement | 4d6 |\n| 9 | +4 | Subclass feature | 5d6 |\n| 10 | +4 | Ability Score Improvement | 5d6 |\n| 11 | +4 | Improved Cunning Strike | 6d6 |\n| 12 | +4 | Ability Score Improvement | 6d6 |\n| 13 | +5 | Subclass feature | 7d6 |\n| 14 | +5 | Devious Strikes | 7d6 |\n| 15 | +5 | Slippery Mind | 8d6 |\n| 16 | +5 | Ability Score Improvement | 8d6 |\n| 17 | +6 | Subclass feature | 9d6 |\n| 18 | +6 | Elusive | 9d6 |\n| 19 | +6 | Epic Boon | 10d6 |\n| 20 | +6 | Stroke of Luck | 10d6 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/leather-armor",
+    "dnd5e/class/rogue",
+    "dnd5e/feature/rogue-ability-score-improvement",
+    "dnd5e/feature/rogue-cunning-action",
+    "dnd5e/feature/rogue-cunning-strike",
+    "dnd5e/feature/rogue-devious-strikes",
+    "dnd5e/feature/rogue-elusive",
+    "dnd5e/feature/rogue-epic-boon",
+    "dnd5e/feature/rogue-evasion",
+    "dnd5e/feature/rogue-expertise",
+    "dnd5e/feature/rogue-improved-cunning-strike",
+    "dnd5e/feature/rogue-reliable-talent",
+    "dnd5e/feature/rogue-rogue-subclass",
+    "dnd5e/feature/rogue-slippery-mind",
+    "dnd5e/feature/rogue-sneak-attack",
+    "dnd5e/feature/rogue-steady-aim",
+    "dnd5e/feature/rogue-stroke-of-luck",
+    "dnd5e/feature/rogue-thieves-cant",
+    "dnd5e/feature/rogue-uncanny-dodge",
+    "dnd5e/feature/rogue-weapon-mastery",
+    "dnd5e/gear/ammunition-arrows",
+    "dnd5e/gear/burglars-pack",
+    "dnd5e/gear/quiver",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/tool/thieves-tools",
+    "dnd5e/weapon/dagger",
+    "dnd5e/weapon/shortbow",
+    "dnd5e/weapon/shortsword"
+  ]
+}
