@@ -198,6 +198,11 @@ RELOCATED_TABLES = {
     "Starting Equipment at Higher Levels": "L02",    # printed inside "Multiclassing" (p. 24)
     "Travel Terrain": "L41",                         # printed inside "Creating a Background" (p. 192)
 }
+# paragraphs the PDF's column flow printed inside another section: (page, text prefix) -> owner
+RELOCATED_FRAGMENTS = [
+    {"page": 131, "prefix": "face a choice of paths along the way there", "printed_in": "Find Steed",
+     "belongs_to": "Find the Path", "after": "Whenever you", "lot": "L23"},  # end of Find the Path (p. 132)
+]
 STAT_BLOCK_SECTIONS = {"Traits", "Actions", "Bonus Actions", "Reactions", "Legendary Actions"}
 
 SIZES = ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"]
@@ -839,7 +844,8 @@ def main():
     dump("outline.json", {"chapters": [{"title": c["title"], "page_start": c["page_start"],
                                         "page_end": c["page_end"]} for c in chapters], "sections": outline,
                           "sidebars": sidebars,
-                          "relocated_tables": [{"caption": c, "lot": l} for c, l in RELOCATED_TABLES.items()]})
+                          "relocated_tables": [{"caption": c, "lot": l} for c, l in RELOCATED_TABLES.items()],
+                          "relocated_fragments": RELOCATED_FRAGMENTS})
     dump("tables.json", {"count": len(tables),
                          "by_type": dict(collections.Counter(t["type"] for t in tables)), "tables": tables})
     dump("entries.json", {"count": len(b.entries), "by_kind": dict(sorted(counts_kind.items())),

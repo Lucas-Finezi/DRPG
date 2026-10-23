@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/continual-flame",
+  "kind": "spell",
+  "name": "Continual Flame",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      119
+    ],
+    "section": "Spells/Spell Descriptions/Continual Flame",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Evocation (Cleric, Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (ruby dust worth 50+ GP, which the spell consumes)\n\n**Duration:** Until dispelled\n\nA flame springs from an object that you touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "ruby dust worth 50+ GP, which the spell consumes",
+      "material_cost_gp": 50,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "until_dispelled",
+      "text": "Until dispelled"
+    },
+    "rules": [
+      {
+        "id": "flame",
+        "light": {
+          "bright_feet": 20,
+          "dim_feet": 20,
+          "rules": [
+            "dnd5e/rule/bright-light",
+            "dnd5e/rule/dim-light"
+          ]
+        },
+        "heat": false,
+        "fuel": false,
+        "can_be_covered": true,
+        "can_be_smothered": false
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Cleric, Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (ruby dust worth 50+ GP, which the spell consumes)\n\n**Duration:** Until dispelled",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A flame springs from an object that you touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/animal-messenger",
+  "kind": "spell",
+  "name": "Animal Messenger",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      108
+    ],
+    "section": "Spells/Spell Descriptions/Animal Messenger",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Enchantment (Bard, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a morsel of food)\n\n**Duration:** 24 hours\n\nA Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target’s Challenge Rating isn’t 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as “a person dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.\n\nWhen the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn’t reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.\n\n***Using a Higher-Level Spell Slot.*** The spell’s duration increases by 48 hours for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a morsel of food"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "message",
+        "location": "visited_by_caster",
+        "recipient": "general_description",
+        "max_words": 25,
+        "miles_per_24_hours": 25,
+        "flying_miles_per_24_hours": 50
+      },
+      {
+        "id": "delivery",
+        "mimics_communication": true,
+        "late": "message_lost_beast_returns"
+      },
+      {
+        "id": "duration",
+        "hours": {
+          "op": "add",
+          "args": [
+            24,
+            {
+              "op": "mul",
+              "args": [
+                48,
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "var": "spell_slot_level"
+                    },
+                    2
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "cha",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true,
+        "filter": {
+          "creature_types": [
+            "beast"
+          ],
+          "sizes": [
+            "tiny"
+          ]
+        }
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/animal-messenger",
+          "note": "The Beast attempts to deliver the message."
+        }
+      ],
+      "note": "A target whose Challenge Rating isn't 0 automatically succeeds."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Enchantment (Bard, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a morsel of food)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target’s Challenge Rating isn’t 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as “a person dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn’t reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The spell’s duration increases by 48 hours for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/animal-messenger"
+  ]
+}

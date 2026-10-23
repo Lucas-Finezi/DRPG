@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/protection-from-poison",
+  "kind": "spell",
+  "name": "Protection from Poison",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      157
+    ],
+    "section": "Spells/Spell Descriptions/Protection from Poison",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Abjuration (Cleric, Druid, Paladin, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 1 hour\n\nYou touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.",
+  "facets": {
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "remove_condition",
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "when": {
+        "pred": "save_against_condition",
+        "args": {
+          "condition": "poisoned"
+        }
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "poison"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Abjuration (Cleric, Druid, Paladin, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned"
+  ]
+}

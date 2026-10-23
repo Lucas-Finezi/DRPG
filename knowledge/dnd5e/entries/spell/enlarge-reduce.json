@@ -1,0 +1,248 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/enlarge-reduce",
+  "kind": "spell",
+  "name": "Enlarge/Reduce",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      127,
+      128
+    ],
+    "section": "Spells/Spell Descriptions/Enlarge/Reduce",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Transmutation (Bard, Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a pinch of powdered iron)\n\n**Duration:** Concentration, up to 1 minute\n\nFor the duration, the spell enlarges or reduces a creature or an object you can see within range (see the chosen effect below). A targeted object must be neither worn nor carried. If the target is an unwilling creature, it can make a Constitution saving throw. On a successful save, the spell has no effect.\n\nEverything that a targeted creature is wearing and carrying changes size with it. Any item it drops returns to normal size at once. A thrown weapon or piece of ammunition returns to normal size immediately after it hits or misses a target.\n\n***Enlarge.*** The target’s size increases by one category—from Medium to Large, for example. The target also has Advantage on Strength checks and Strength saving throws. The target’s attacks with its enlarged weapons or Unarmed Strikes deal an extra 1d4 damage on a hit.\n\n***Reduce.*** The target’s size decreases by one category—from Medium to Small, for example. The target also has Disadvantage on Strength checks and Strength saving throws. The target’s attacks with its reduced weapons or Unarmed Strikes deal 1d4 less damage on a hit (this can’t reduce the damage below 1).",
+  "facets": {
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a pinch of powdered iron"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "targets",
+        "object_not_worn_or_carried": true
+      },
+      {
+        "id": "gear",
+        "gear_changes_size": true,
+        "dropped_items_revert": true,
+        "thrown_or_ammunition_reverts_after_attack": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature_or_object",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true
+      },
+      "note": "Only an unwilling creature saves; on a success the spell has no effect."
+    },
+    {
+      "op": "modifier",
+      "stat": "size",
+      "mode": "add",
+      "value": 1,
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check.str",
+        "saving_throw.str"
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "any": [
+          {
+            "pred": "attack_uses_weapon"
+          },
+          {
+            "pred": "attack_is_unarmed_strike"
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d4",
+          "damage_type": {
+            "var": "chosen.weapon_damage_type"
+          },
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ]
+    },
+    {
+      "op": "modifier",
+      "stat": "size",
+      "mode": "add",
+      "value": -1,
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check.str",
+        "saving_throw.str"
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": {
+        "op": "neg",
+        "args": [
+          "1d4"
+        ]
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Weapons or Unarmed Strikes; damage can't drop below 1.",
+      "when": {
+        "any": [
+          {
+            "pred": "attack_uses_weapon"
+          },
+          {
+            "pred": "attack_is_unarmed_strike"
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Transmutation (Bard, Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a pinch of powdered iron)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, the spell enlarges or reduces a creature or an object you can see within range (see the chosen effect below). A targeted object must be neither worn nor carried. If the target is an unwilling creature, it can make a Constitution saving throw. On a successful save, the spell has no effect.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Everything that a targeted creature is wearing and carrying changes size with it. Any item it drops returns to normal size at once. A thrown weapon or piece of ammunition returns to normal size immediately after it hits or misses a target.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Enlarge.*** The target’s size increases by one category—from Medium to Large, for example. The target also has Advantage on Strength checks and Strength saving throws. The target’s attacks with its enlarged weapons or Unarmed Strikes deal an extra 1d4 damage on a hit.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Reduce.*** The target’s size decreases by one category—from Medium to Small, for example. The target also has Disadvantage on Strength checks and Strength saving throws. The target’s attacks with its reduced weapons or Unarmed Strikes deal 1d4 less damage on a hit (this can’t reduce the damage below 1).",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/effects/5",
+        "/effects/6"
+      ]
+    }
+  ]
+}

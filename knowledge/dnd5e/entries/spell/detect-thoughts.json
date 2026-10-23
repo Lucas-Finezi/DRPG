@@ -1,0 +1,203 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/detect-thoughts",
+  "kind": "spell",
+  "name": "Detect Thoughts",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      123
+    ],
+    "section": "Spells/Spell Descriptions/Detect Thoughts",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 3,
+  "text": "*Level 2 Divination (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (1 Copper Piece)\n\n**Duration:** Concentration, up to 1 minute\n\nYou activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.\n\n***Sense Thoughts.*** You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.\n\nThe spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.\n\n***Read Thoughts.*** Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.\n\nAs a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an Intelligence (Arcana) check against your spell save DC, ending the spell on a success.",
+  "facets": {
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "1 Copper Piece"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "activation",
+        "choose": [
+          "sense_thoughts",
+          "read_thoughts"
+        ],
+        "later_turns_cost": "dnd5e/action/magic"
+      },
+      {
+        "id": "blocked_by",
+        "blocked_by": [
+          "1_foot_stone_dirt_or_wood",
+          "1_inch_metal",
+          "thin_sheet_of_lead"
+        ]
+      },
+      {
+        "id": "read",
+        "range_feet": 30,
+        "requires": "target_knows_language_or_telepathic"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "sense_thoughts",
+      "range_feet": 30,
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/spell/detect-thoughts",
+              "note": "Discern reasoning, emotions and something that looms large."
+            }
+          ],
+          "on_success": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "note": "The target, while you probe its mind.",
+      "then": [
+        {
+          "op": "check",
+          "ability": "int",
+          "skill": "arcana",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "on_success": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "surface_thoughts",
+      "reason": "narrative",
+      "prompt": "What is most on the target's mind right now?",
+      "source_text": "You learn what is most on the target’s mind right now."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Divination (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (1 Copper Piece)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic action on your later turns.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Sense Thoughts.*** You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don’t read the thoughts, but you know that a thinking creature is present.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Read Thoughts.*** Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target’s mind right now. If the target doesn’t know any languages and isn’t telepathic, you learn nothing.",
+      "status": "master_decision",
+      "by": [
+        "md:surface_thoughts",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Magic action on your next turn, you can try to probe deeper into the target’s mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target’s reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target’s mind, the target can take an action on its turn to make an Intelligence (Arcana) check against your spell save DC, ending the spell on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/detect-thoughts"
+  ]
+}

@@ -47,6 +47,9 @@ def main(lots):
         elif n.type != "t":
             table_lot = None
         owner[n.index] = side_lot if n.sidebar else (table_lot if table_lot and n.type in ("t", "h") else current)
+        for f in outline.get("relocated_fragments", []):
+            if n.page == f["page"] and n.text.startswith(f["prefix"]):
+                owner[n.index] = f["lot"]
 
     texts = defaultdict(str)
     for p in (ROOT / "knowledge").glob("*/entries/**/*.json"):

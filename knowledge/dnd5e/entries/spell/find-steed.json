@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/find-steed",
+  "kind": "spell",
+  "name": "Find Steed",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      130
+    ],
+    "section": "Spells/Spell Descriptions/Find Steed",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Conjuration (Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Component:** V, S\n\n**Duration:** Instantaneous\n\nYou summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the **Otherworldly Steed** stat block. If you already have a steed from this spell, the steed is replaced by the new one.\n\nThe steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed’s creature type—Celestial, Fey, or Fiend—which determines certain traits in the stat block.\n\n***Combat.*** The steed is an ally to you and your allies. In combat, it shares your Initiative count, and it functions as a controlled mount while you ride it (as defined in the rules on mounted combat). If you have the Incapacitated condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting you.\n\n***Disappearance of the Steed.*** The steed disappears if it drops to 0 Hit Points or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the steed that disappeared or a different one.\n\n***Using a Higher-Level Spell Slot.*** Use the spell slot’s level for the spell’s level in the stat block.",
+  "facets": {
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "form",
+        "size": "large",
+        "rideable_animal_of_choice": true,
+        "creature_type_choice": [
+          "celestial",
+          "fey",
+          "fiend"
+        ]
+      },
+      {
+        "id": "combat",
+        "ally": true,
+        "shares_initiative": true,
+        "controlled_mount_when_ridden": true,
+        "rule": "dnd5e/rule/mounted-combat",
+        "if_you_incapacitated": "acts_independently_after_you"
+      },
+      {
+        "id": "disappearance",
+        "on": [
+          "steed_0_hp",
+          "you_die"
+        ],
+        "leaves_gear": true,
+        "recast_choice": "same_or_different"
+      },
+      {
+        "id": "stat_block_level",
+        "spell_level_in_stat_block": {
+          "var": "spell_slot_level"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "summon",
+      "creature": "dnd5e/creature/otherworldly-steed",
+      "controller": "summoner",
+      "initiative": "shared",
+      "note": "Replaces a steed already summoned by this spell."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Conjuration (Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Component:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the **Otherworldly Steed** stat block. If you already have a steed from this spell, the steed is replaced by the new one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed’s creature type—Celestial, Fey, or Fiend—which determines certain traits in the stat block.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Combat.*** The steed is an ally to you and your allies. In combat, it shares your Initiative count, and it functions as a controlled mount while you ride it (as defined in the rules on mounted combat). If you have the Incapacitated condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Disappearance of the Steed.*** The steed disappears if it drops to 0 Hit Points or if you die. When it disappears, it leaves behind anything it was wearing or carrying. If you cast this spell again, you decide whether you summon the steed that disappeared or a different one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** Use the spell slot’s level for the spell’s level in the stat block.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/otherworldly-steed",
+    "dnd5e/rule/mounted-combat"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/mind-spike",
+  "kind": "spell",
+  "name": "Mind Spike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      149
+    ],
+    "section": "Spells/Spell Descriptions/Mind Spike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Divination (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** S\n\n**Duration:** Concentration, up to 1 hour\n\nYou drive a spike of psionic energy into the mind of one creature you can see within range. The target makes a Wisdom saving throw, taking 3d8 Psychic damage on a failed save or half as much damage on a successful one. On a failed save, you also always know the target’s location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can’t become hidden from you, and if it has the Invisible condition, it gains no benefit from that condition against you.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": false,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  3,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      2
+                    ]
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": "psychic"
+        },
+        {
+          "op": "sense",
+          "sense": "know_target_location",
+          "range_feet": 0,
+          "duration": {
+            "kind": "hours",
+            "amount": 1,
+            "concentration": true,
+            "up_to": true
+          },
+          "note": "Same plane only; the target can't hide from you and gains no benefit from Invisible against you."
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Divination (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** S\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You drive a spike of psionic energy into the mind of one creature you can see within range. The target makes a Wisdom saving throw, taking 3d8 Psychic damage on a failed save or half as much damage on a successful one. On a failed save, you also always know the target’s location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can’t become hidden from you, and if it has the Invisible condition, it gains no benefit from that condition against you.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/amount"
+      ]
+    }
+  ]
+}

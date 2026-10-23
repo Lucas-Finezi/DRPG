@@ -21,6 +21,8 @@ from entrylib import NODES, build, find, section, slugify  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 INV = {e["name"]: e for e in json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entries.json").read_text(
     encoding="utf-8"))["entries"] if e["kind"] == "spell"}
+RELOCATED = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/outline.json").read_text(encoding="utf-8")).get(
+    "relocated_fragments", [])
 SCHOOLS = ["abjuration", "conjuration", "divination", "enchantment", "evocation", "illusion", "necromancy",
            "transmutation"]
 NUM = {"one": 1, "two": 2, "three": 3}
@@ -322,6 +324,13 @@ def SPELL(name, items, lot, extra_data=None, skip=(), **kw):
     if extra_data:
         data.update(extra_data)
     nodes = section(name, 4, page=inv["page"])
+    for f in RELOCATED:  # fragments printed inside another spell's section
+        if f["printed_in"] == name:
+            nodes = [n for n in nodes if not (n.page == f["page"] and n.text.startswith(f["prefix"]))]
+        if f["belongs_to"] == name:  # inserted after the paragraph it continues (cut mid-sentence)
+            moved = [n for n in NODES if n.page == f["page"] and n.text.startswith(f["prefix"])]
+            k = next(i for i, n in enumerate(nodes) if n.type == "p" and n.text.rstrip().endswith(f["after"]))
+            nodes = nodes[:k + 1] + moved + nodes[k + 1:]
     if skip:
         nodes = [n for n in nodes if n.text not in skip]
     # first paragraph after the header (the header ends with the Duration line)

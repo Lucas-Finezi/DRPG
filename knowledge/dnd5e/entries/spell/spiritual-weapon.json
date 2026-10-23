@@ -1,0 +1,179 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/spiritual-weapon",
+  "kind": "spell",
+  "name": "Spiritual Weapon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      165
+    ],
+    "section": "Spells/Spell Descriptions/Spiritual Weapon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Evocation (Cleric)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nYou create a floating, spectral force that resembles a weapon of your choice and lasts for the duration. The force appears within range in a space of your choice, and you can immediately make one melee spell attack against one creature within 5 feet of the force. On a hit, the target takes Force damage equal to 1d8 plus your spellcasting ability modifier.\n\nAs a Bonus Action on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for every slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "melee_spell",
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "add",
+            "args": [
+              {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      1,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          2
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 8
+                }
+              },
+              {
+                "var": "spellcasting_mod"
+              }
+            ]
+          },
+          "damage_type": "force"
+        }
+      ],
+      "note": "Against a creature within 5 feet of the force."
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 20,
+          "note": "The force."
+        },
+        {
+          "op": "attack",
+          "attack_type": "melee_spell",
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  {
+                    "dice": {
+                      "count": {
+                        "op": "add",
+                        "args": [
+                          1,
+                          {
+                            "op": "sub",
+                            "args": [
+                              {
+                                "var": "spell_slot_level"
+                              },
+                              2
+                            ]
+                          }
+                        ]
+                      },
+                      "faces": 8
+                    }
+                  },
+                  {
+                    "var": "spellcasting_mod"
+                  }
+                ]
+              },
+              "damage_type": "force"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Cleric)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a floating, spectral force that resembles a weapon of your choice and lasts for the duration. The force appears within range in a space of your choice, and you can immediately make one melee spell attack against one creature within 5 feet of the force. On a hit, the target takes Force damage equal to 1d8 plus your spellcasting ability modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "As a Bonus Action on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for every slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount",
+        "/effects/1/then/1/on_hit/0/amount"
+      ]
+    }
+  ]
+}

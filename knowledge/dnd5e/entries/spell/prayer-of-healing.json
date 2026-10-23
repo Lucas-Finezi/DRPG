@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/prayer-of-healing",
+  "kind": "spell",
+  "name": "Prayer of Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      154
+    ],
+    "section": "Spells/Spell Descriptions/Prayer of Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Abjuration (Cleric, Paladin)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nUp to five creatures of your choice who remain within range for the spell’s entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can’t be affected by this spell again until that creature finishes a Long Rest.\n\n***Using a Higher-Level Spell Slot.*** The healing increases by 1d8 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes",
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "limit",
+        "once_per": "long_rest_finished",
+        "must_stay_in_range_for_casting": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "reference",
+      "rule": "dnd5e/rule/short-rest",
+      "target": {
+        "kind": "creature",
+        "count": 5,
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      },
+      "note": "The benefits of a Short Rest."
+    },
+    {
+      "op": "heal",
+      "amount": {
+        "dice": {
+          "count": {
+            "op": "add",
+            "args": [
+              2,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_slot_level"
+                  },
+                  2
+                ]
+              }
+            ]
+          },
+          "faces": 8
+        }
+      },
+      "target": {
+        "kind": "creature",
+        "count": 5,
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Abjuration (Cleric, Paladin)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Up to five creatures of your choice who remain within range for the spell’s entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can’t be affected by this spell again until that creature finishes a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The healing increases by 1d8 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/1/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/short-rest"
+  ]
+}

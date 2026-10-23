@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/suggestion",
+  "kind": "spell",
+  "name": "Suggestion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      166
+    ],
+    "section": "Spells/Spell Descriptions/Suggestion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Enchantment (Bard, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, M (a drop of honey)\n\n**Duration:** Concentration, up to 8 hours\n\nYou suggest a course of activity—described in no more than 25 words—to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, “Fetch the key to the cult’s treasure vault, and give the key to me.” Or you could say, “Stop fighting, leave this library peacefully, and don’t return.”\n\nThe target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.",
+  "facets": {
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": "a drop of honey"
+    },
+    "duration": {
+      "text": "Concentration, up to 8 hours",
+      "kind": "hours",
+      "amount": 8,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "suggestion",
+        "max_words": 25,
+        "must_sound_achievable": true,
+        "no_obvious_harm": true,
+        "target_must_hear_and_understand": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/charmed",
+          "note": "Ends if you or your allies damage it; pursues the suggestion; ends when completed.",
+          "duration": {
+            "kind": "hours",
+            "amount": 8,
+            "concentration": true,
+            "up_to": true
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Enchantment (Bard, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, M (a drop of honey)\n\n**Duration:** Concentration, up to 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You suggest a course of activity—described in no more than 25 words—to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, “Fetch the key to the cult’s treasure vault, and give the key to me.” Or you could say, “Stop fighting, leave this library peacefully, and don’t return.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed"
+  ]
+}

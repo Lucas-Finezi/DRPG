@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/magic-weapon",
+  "kind": "spell",
+  "name": "Magic Weapon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      146,
+      147
+    ],
+    "section": "Spells/Spell Descriptions/Magic Weapon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Transmutation (Paladin, Ranger, Sorcerer,* *Wizard)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 1 hour\n\nYou touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. The spell ends early if you cast it again.\n\n***Using a Higher-Level Spell Slot.*** The bonus increases to +2 with a level 3–5 spell slot. The bonus increases to +3 with a level 6+ spell slot.",
+  "facets": {
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "weapon_bonus",
+      "mode": "set",
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "value": {
+        "scale": {
+          "by": "spell_slot_level",
+          "steps": [
+            {
+              "from": 2,
+              "value": 1
+            },
+            {
+              "from": 3,
+              "value": 2
+            },
+            {
+              "from": 6,
+              "value": 3
+            }
+          ]
+        }
+      },
+      "note": "A nonmagical weapon becomes magic; bonus to attack and damage rolls; ends if cast again."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Transmutation (Paladin, Ranger, Sorcerer,* *Wizard)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. The spell ends early if you cast it again.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The bonus increases to +2 with a level 3–5 spell slot. The bonus increases to +3 with a level 6+ spell slot.",
+      "status": "structured",
+      "by": [
+        "/effects/0/value"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/aid",
+  "kind": "spell",
+  "name": "Aid",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      107
+    ],
+    "section": "Spells/Spell Descriptions/Aid",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Abjuration (Bard, Cleric, Druid, Paladin,* *Ranger)* \n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a strip of white cloth)\n\n**Duration:** 8 hours\n\nChoose up to three creatures within range. Each target’s Hit Point maximum and current Hit Points increase by 5 for the duration.\n\n***Using a Higher-Level Spell Slot.*** Each target’s Hit Points increase by 5 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a strip of white cloth"
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp_max",
+      "mode": "add",
+      "value": {
+        "op": "add",
+        "args": [
+          5,
+          {
+            "op": "mul",
+            "args": [
+              5,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_slot_level"
+                  },
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "target": {
+        "kind": "creature",
+        "count": 3,
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    },
+    {
+      "op": "heal",
+      "amount": {
+        "op": "add",
+        "args": [
+          5,
+          {
+            "op": "mul",
+            "args": [
+              5,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_slot_level"
+                  },
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "target": {
+        "kind": "creature",
+        "count": 3,
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      },
+      "note": "Current Hit Points increase by the same amount."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Abjuration (Bard, Cleric, Druid, Paladin,* *Ranger)* \n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a strip of white cloth)\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose up to three creatures within range. Each target’s Hit Point maximum and current Hit Points increase by 5 for the duration.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** Each target’s Hit Points increase by 5 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/0/value",
+        "/effects/1/amount"
+      ]
+    }
+  ]
+}

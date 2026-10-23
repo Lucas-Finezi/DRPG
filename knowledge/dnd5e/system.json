@@ -2544,6 +2544,30 @@
           130
         ],
         "lot": "L18"
+      },
+      {
+        "id": "weapon_bonus",
+        "description": "Magic bonus of a weapon to attack and damage rolls.",
+        "pages": [
+          148
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "leaves_tracks",
+        "description": "The creature leaves tracks (1) or not (0).",
+        "pages": [
+          151
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "spider_climb",
+        "description": "The creature can move on vertical surfaces and ceilings with hands free.",
+        "pages": [
+          164
+        ],
+        "lot": "L19"
       }
     ],
     "rolls": [
@@ -3210,6 +3234,38 @@
           146
         ],
         "lot": "L18"
+      },
+      {
+        "id": "ends_turn_within_feet_of_effect",
+        "description": "A creature ends its turn within a distance of the spell's effect.",
+        "pages": [
+          132
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "attacks_deals_damage_or_casts",
+        "description": "The creature makes an attack roll, deals damage, or casts a spell.",
+        "pages": [
+          142
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "moves_within_area",
+        "description": "A creature moves into or within the area.",
+        "pages": [
+          164
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "enters_or_starts_turn_in_area",
+        "description": "A creature enters the area or starts its turn there.",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
       }
     ],
     "predicates": [
@@ -4591,6 +4647,57 @@
           163
         ],
         "lot": "L18"
+      },
+      {
+        "id": "attacker_perceives_with",
+        "description": "The attacker perceives the target with one of these senses (param).",
+        "params": [
+          "senses"
+        ],
+        "type": "predicate",
+        "pages": [
+          114
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "in_spell_area",
+        "description": "The creature is in the spell's area.",
+        "type": "predicate",
+        "pages": [
+          137
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "phantasm_is_dangerous",
+        "description": "The phantasm represents a dangerous creature or hazard and the target is in or within 5 feet of it.",
+        "type": "predicate",
+        "pages": [
+          152
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "roll_uses_ability",
+        "description": "The D20 Test uses this ability (param).",
+        "params": [
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          157
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "in_burning_webs",
+        "description": "The creature starts its turn in webs that are burning.",
+        "type": "predicate",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
       }
     ],
     "frequencies": [
@@ -5063,6 +5170,38 @@
           124
         ],
         "lot": "L18"
+      },
+      {
+        "id": "sense_thoughts",
+        "description": "Sense the presence of thinking creatures within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "know_target_location",
+        "description": "Always know the target's location (same plane).",
+        "pages": [
+          149
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "see_invisible",
+        "description": "See Invisible creatures and objects as if visible.",
+        "pages": [
+          161
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "see_ethereal",
+        "description": "See into the Ethereal Plane.",
+        "pages": [
+          161
+        ],
+        "lot": "L19"
       }
     ],
     "movement_modes": [
@@ -5427,6 +5566,22 @@
           161
         ],
         "lot": "L18"
+      },
+      {
+        "id": "cast_verbal_spells",
+        "description": "The creature can't cast a spell that includes a Verbal component.",
+        "pages": [
+          163
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "speak_deliberate_lie",
+        "description": "The creature can't speak a deliberate lie.",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
       }
     ],
     "conditions": [

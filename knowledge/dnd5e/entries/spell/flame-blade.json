@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/flame-blade",
+  "kind": "spell",
+  "name": "Flame Blade",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      132
+    ],
+    "section": "Spells/Spell Descriptions/Flame Blade",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Evocation (Druid, Sorcerer)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S, M (a sumac leaf)\n\n**Duration:** Concentration, up to 10 minutes\n\nYou evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke it again as a Bonus Action.\n\nAs a Magic action, you can make a melee spell attack with the fiery blade. On a hit, the target takes Fire damage equal to 3d6 plus your spellcasting ability modifier.\n\nThe flaming blade sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a sumac leaf"
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "blade",
+        "size_like": "dnd5e/weapon/scimitar",
+        "reevoke": "bonus_action"
+      },
+      {
+        "id": "light",
+        "light": {
+          "bright_feet": 10,
+          "dim_feet": 10,
+          "rules": [
+            "dnd5e/rule/bright-light",
+            "dnd5e/rule/dim-light"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee_spell",
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  {
+                    "dice": {
+                      "count": {
+                        "op": "add",
+                        "args": [
+                          3,
+                          {
+                            "op": "sub",
+                            "args": [
+                              {
+                                "var": "spell_slot_level"
+                              },
+                              2
+                            ]
+                          }
+                        ]
+                      },
+                      "faces": 6
+                    }
+                  },
+                  {
+                    "var": "spellcasting_mod"
+                  }
+                ]
+              },
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Druid, Sorcerer)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S, M (a sumac leaf)\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke it again as a Bonus Action.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "As a Magic action, you can make a melee spell attack with the fiery blade. On a hit, the target takes Fire damage equal to 3d6 plus your spellcasting ability modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The flaming blade sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_hit/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}
