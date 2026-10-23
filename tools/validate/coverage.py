@@ -63,7 +63,8 @@ def main(lots):
         own = [n for n in nodes if owner[n.index] == lot]
         missing = []
         for n in own:
-            t = norm(n.text if n.type != "h" else re.sub(r" \[[^\]]+\]$", "", n.text))
+            # headings: a "[Tag]" suffix and a "Level N: " prefix (kept in the entry's facets) are not text
+            t = norm(n.text if n.type != "h" else re.sub(r"^Level \d+: | \[[^\]]+\]$", "", n.text))
             if not t or (n.type == "h" and n.level <= 2):
                 continue
             nxt = nodes[n.index + 1] if n.index + 1 < len(nodes) else None
@@ -71,7 +72,7 @@ def main(lots):
                 continue  # a grouping heading with no text of its own
             if t not in all_text:
                 missing.append({"page": n.page, "type": n.type, "text": t[:120]})
-        report[lot] = {"nodes": len(own), "uncovered": len(missing), "examples": missing[:15]}
+        report[lot] = {"nodes": len(own), "uncovered": len(missing), "examples": missing[:40]}
         failed |= bool(missing)
     print(json.dumps(report, ensure_ascii=False, indent=1))
     return 1 if failed else 0

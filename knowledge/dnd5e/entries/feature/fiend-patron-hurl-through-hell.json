@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fiend-patron-hurl-through-hell",
+  "kind": "feature",
+  "name": "Hurl Through Hell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Subclass: Fiend Patron/Level 14: Hurl Through Hell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Once per turn when you hit a creature with an attack roll, you can try to instantly transport the target through the Lower Planes. The target must succeed on a Charisma saving throw against your spell save DC, or the target disappears and hurtles through a nightmare landscape. The target takes 8d10 Psychic damage if it isn’t a Fiend, and it has the Incapacitated condition until the end of your next turn, when it returns to the space it previously occupied or the nearest unoccupied space.\n\nOnce you use this feature, you can’t use it again until you finish a Long Rest unless you expend a Pact Magic spell slot (no action required) to restore your use of it.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/fiend-patron",
+    "level": 14
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "condition": {
+        "pred": "resource_available",
+        "args": {
+          "resource": "hurl_through_hell"
+        }
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "hurl_through_hell",
+          "amount": 1
+        },
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "8d10",
+              "damage_type": "psychic",
+              "when": {
+                "not": {
+                  "pred": "creature_type",
+                  "args": {
+                    "type": "fiend"
+                  }
+                }
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/incapacitated",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "source",
+                  "which": "next"
+                }
+              },
+              "note": "The target disappears, then returns to its previous space or the nearest unoccupied one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "hurl_through_hell",
+      "max": 1,
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "uses": {
+        "resource": "pact_magic_slot",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "hurl_through_hell",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Once per turn when you hit a creature with an attack roll, you can try to instantly transport the target through the Lower Planes. The target must succeed on a Charisma saving throw against your spell save DC, or the target disappears and hurtles through a nightmare landscape. The target takes 8d10 Psychic damage if it isn’t a Fiend, and it has the Incapacitated condition until the end of your next turn, when it returns to the space it previously occupied or the nearest unoccupied space.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Once you use this feature, you can’t use it again until you finish a Long Rest unless you expend a Pact Magic spell slot (no action required) to restore your use of it.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-investment-of-the-chain-master",
+  "kind": "feature",
+  "name": "Investment of the Chain Master",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      73
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Investment of the Chain Master",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 5+ Warlock, Pact of the Chain Invocation*\n\nWhen you cast *Find Familiar*, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.\n\n***Aerial or Aquatic.*** The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.\n\n***Quick Attack.*** As a Bonus Action, you can command the familiar to take the Attack action.\n\n***Necrotic or Radiant Damage.*** Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.\n\n***Your Save DC.*** If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n\n***Resistance.*** When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 5,
+        "invocation": "dnd5e/feature/warlock-invocation-pact-of-the-chain"
+      },
+      {
+        "id": "damage_type",
+        "replaces": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "choose_from": [
+          "necrotic",
+          "radiant"
+        ]
+      },
+      {
+        "id": "save_dc",
+        "familiar_uses": "spell_save_dc"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "familiar_movement",
+      "choose": 1,
+      "options": [
+        {
+          "id": "fly",
+          "label": "Fly Speed",
+          "effects": [
+            {
+              "op": "speed",
+              "movement": "fly",
+              "mode": "set",
+              "value": 40
+            }
+          ]
+        },
+        {
+          "id": "swim",
+          "label": "Swim Speed",
+          "effects": [
+            {
+              "op": "speed",
+              "movement": "swim",
+              "mode": "set",
+              "value": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/action/attack",
+          "note": "The familiar takes the Attack action."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "familiar_takes_damage"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "defense",
+          "kind": "resistance",
+          "damage_types": [
+            {
+              "var": "chosen.trigger_damage_type"
+            }
+          ],
+          "note": "The familiar, against that damage."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 5+ Warlock, Pact of the Chain Invocation*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast *Find Familiar*, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/spell/find-familiar"
+      ]
+    },
+    {
+      "text": "***Aerial or Aquatic.*** The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Quick Attack.*** As a Bonus Action, you can command the familiar to take the Attack action.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Necrotic or Radiant Damage.*** Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Your Save DC.*** If the familiar forces a creature to make a saving throw, it uses your spell save DC.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Resistance.*** When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/attack",
+    "dnd5e/spell/find-familiar"
+  ]
+}

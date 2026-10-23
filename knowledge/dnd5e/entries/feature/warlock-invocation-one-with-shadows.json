@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-one-with-shadows",
+  "kind": "feature",
+  "name": "One with Shadows",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      74
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/One with Shadows",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 5+ Warlock*\n\nWhile you’re in an area of Dim Light or Darkness, you can cast *Invisibility* on yourself without expending a spell slot.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 5
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "target": {
+            "kind": "self"
+          }
+        }
+      ],
+      "note": "Casting time as normal for the spell.",
+      "requires": {
+        "any": [
+          {
+            "pred": "in_dim_light"
+          },
+          {
+            "pred": "in_darkness"
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 5+ Warlock*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While you’re in an area of Dim Light or Darkness, you can cast *Invisibility* on yourself without expending a spell slot.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/invisibility"
+  ]
+}

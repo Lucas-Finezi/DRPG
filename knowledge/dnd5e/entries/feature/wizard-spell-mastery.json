@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-spell-mastery",
+  "kind": "feature",
+  "name": "Spell Mastery",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      79
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 18: Spell Mastery",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have achieved such mastery over certain spells that you can cast them at will. Choose a level 1 and a level 2 spell in your spellbook that have a casting time of an action. You always have those spells prepared, and you can cast them at their lowest level without expending a spell slot. To cast either spell at a higher level, you must expend a spell slot.\n\nWhenever you finish a Long Rest, you can study your spellbook and replace one of those spells with an eligible spell of the same level from the book.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 18
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "mastery_spells",
+        "levels": [
+          1,
+          2
+        ],
+        "from": "spellbook",
+        "casting_time": "action",
+        "always_prepared": true,
+        "higher_level_requires_slot": true
+      },
+      {
+        "id": "replace",
+        "on": "long_rest_finished",
+        "count": 1,
+        "same_level": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell-list/wizard",
+          "slot": "none"
+        }
+      ],
+      "note": "One of the chosen level 1 and level 2 spells, at its lowest level; at will."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have achieved such mastery over certain spells that you can cast them at will. Choose a level 1 and a level 2 spell in your spellbook that have a casting time of an action. You always have those spells prepared, and you can cast them at their lowest level without expending a spell slot. To cast either spell at a higher level, you must expend a spell slot.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Whenever you finish a Long Rest, you can study your spellbook and replace one of those spells with an eligible spell of the same level from the book.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/wizard"
+  ]
+}

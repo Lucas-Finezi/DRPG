@@ -1,0 +1,98 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic-extended-spell",
+  "kind": "feature",
+  "name": "Extended Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      67
+    ],
+    "section": "Classes/Sorcerer/Metamagic Options/Extended Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Cost: 1 Sorcery Point*\n\nWhen you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours.\n\nIf the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration.",
+  "facets": {
+    "feature_type": "metamagic_option",
+    "owner": "dnd5e/class/sorcerer"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cost",
+        "resource": "sorcery_points",
+        "amount": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "casts_spell"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "spell_duration_at_least_minutes",
+        "args": {
+          "minutes": 1
+        }
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "sorcery_points",
+          "amount": 1
+        },
+        {
+          "op": "modifier",
+          "stat": "spell_duration",
+          "mode": "multiply",
+          "value": 2,
+          "note": "Maximum duration 24 hours."
+        }
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw.con"
+      ],
+      "when": {
+        "pred": "concentration_save_for_extended_spell"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Cost: 1 Sorcery Point*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

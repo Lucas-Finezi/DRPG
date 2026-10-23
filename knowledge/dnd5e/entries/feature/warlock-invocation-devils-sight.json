@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-devils-sight",
+  "kind": "feature",
+  "name": "Devil’s Sight",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Devil’s Sight",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 2+ Warlock*\n\nYou can see normally in Dim Light and Darkness—both magical and nonmagical—within 120 feet of yourself.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 2
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "devils_sight",
+      "range_feet": 120
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 2+ Warlock*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can see normally in Dim Light and Darkness—both magical and nonmagical—within 120 feet of yourself.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

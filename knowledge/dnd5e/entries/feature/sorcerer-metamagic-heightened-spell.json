@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic-heightened-spell",
+  "kind": "feature",
+  "name": "Heightened Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      67
+    ],
+    "section": "Classes/Sorcerer/Metamagic Options/Heightened Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Cost: 2 Sorcery Points*\n\nWhen you cast a spell that forces a creature to make a saving throw, you can spend 2 Sorcery Points to give one target of the spell Disadvantage on saves against the spell.",
+  "facets": {
+    "feature_type": "metamagic_option",
+    "owner": "dnd5e/class/sorcerer"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cost",
+        "resource": "sorcery_points",
+        "amount": 2
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "casts_spell_forcing_save"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "spend",
+          "resource": "sorcery_points",
+          "amount": 2
+        },
+        {
+          "op": "roll_mode",
+          "mode": "disadvantage",
+          "rolls": [
+            "saving_throw"
+          ],
+          "target": {
+            "kind": "creature",
+            "count": 1
+          },
+          "note": "One target, on saves against the spell."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Cost: 2 Sorcery Points*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast a spell that forces a creature to make a saving throw, you can spend 2 Sorcery Points to give one target of the spell Disadvantage on saves against the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-signature-spells",
+  "kind": "feature",
+  "name": "Signature Spells",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      79
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 20: Signature Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Choose two level 3 spells in your spellbook as your signature spells. You always have these spells prepared, and you can cast each of them once at level 3 without expending a spell slot. When you do so, you can’t cast them in this way again until you finish a Short or Long Rest. To cast either spell at a higher level, you must expend a spell slot.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 20
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "signature_spells",
+        "count": 2,
+        "level": 3,
+        "from": "spellbook",
+        "always_prepared": true,
+        "higher_level_requires_slot": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "signature_spells",
+      "max": 2,
+      "note": "One free casting of each.",
+      "recovery": [
+        {
+          "on": {
+            "event": "short_rest_finished"
+          },
+          "amount": "all"
+        },
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Choose two level 3 spells in your spellbook as your signature spells. You always have these spells prepared, and you can cast each of them once at level 3 without expending a spell slot. When you do so, you can’t cast them in this way again until you finish a Short or Long Rest. To cast either spell at a higher level, you must expend a spell slot.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

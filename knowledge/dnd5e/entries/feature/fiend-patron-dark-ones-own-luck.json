@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fiend-patron-dark-ones-own-luck",
+  "kind": "feature",
+  "name": "Dark One’s Own Luck",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Subclass: Fiend Patron/Level 6: Dark One’s Own Luck",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can call on your fiendish patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add 1d10 to your roll. You can do so after seeing the roll but before any of the roll’s effects occur.\n\nYou can use this feature a number of times equal to your Charisma modifier (minimum of once), but you can use it no more than once per roll. You regain all expended uses when you finish a Long Rest.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/fiend-patron",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "d20_rolled"
+      },
+      "optional": true,
+      "condition": {
+        "any": [
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "ability_check"
+            }
+          },
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "saving_throw"
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "count": 1,
+        "per": "instance"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "dark_ones_own_luck",
+          "amount": 1
+        },
+        {
+          "op": "modifier",
+          "stat": "triggering_roll",
+          "mode": "add",
+          "value": "1d10",
+          "note": "After seeing the roll, before its effects."
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "dark_ones_own_luck",
+      "max": {
+        "op": "max",
+        "args": [
+          1,
+          {
+            "var": "ability_mod.cha"
+          }
+        ]
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can call on your fiendish patron to alter fate in your favor. When you make an ability check or a saving throw, you can use this feature to add 1d10 to your roll. You can do so after seeing the roll but before any of the roll’s effects occur.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can use this feature a number of times equal to your Charisma modifier (minimum of once), but you can use it no more than once per roll. You regain all expended uses when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

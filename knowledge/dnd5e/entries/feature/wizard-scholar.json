@@ -1,0 +1,54 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-scholar",
+  "kind": "feature",
+  "name": "Scholar",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      78
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 2: Scholar",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "While studying magic, you also specialized in another field of study. Choose one of the following skills in which you have proficiency: Arcana, History, Investigation, Medicine, Nature, or Religion. You have Expertise in the chosen skill.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 2
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "expertise": true,
+      "choose": 1,
+      "from": [
+        "arcana",
+        "history",
+        "investigation",
+        "medicine",
+        "nature",
+        "religion"
+      ],
+      "note": "A skill you have proficiency in."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While studying magic, you also specialized in another field of study. Choose one of the following skills in which you have proficiency: Arcana, History, Investigation, Medicine, Nature, or Religion. You have Expertise in the chosen skill.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

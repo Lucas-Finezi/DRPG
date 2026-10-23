@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/evoker-potent-cantrip",
+  "kind": "feature",
+  "name": "Potent Cantrip",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      82
+    ],
+    "section": "Classes/Wizard/Wizard Subclass: Evoker/Level 3: Potent Cantrip",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your damaging cantrips affect even creatures that avoid the brunt of the effect. When you cast a cantrip at a creature and you miss with the attack roll or the target succeeds on a saving throw against the cantrip, the target takes half the cantrip’s damage (if any) but suffers no additional effect from the cantrip.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/evoker",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "cantrip_misses_or_saved"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "div",
+            "args": [
+              {
+                "var": "damage_amount"
+              },
+              2
+            ]
+          },
+          "damage_type": {
+            "var": "chosen.cantrip_damage_type"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "Half the cantrip's damage (if any) and no additional effect."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your damaging cantrips affect even creatures that avoid the brunt of the effect. When you cast a cantrip at a creature and you miss with the attack roll or the target succeeds on a saving throw against the cantrip, the target takes half the cantrip’s damage (if any) but suffers no additional effect from the cantrip.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-ritual-adept",
+  "kind": "feature",
+  "name": "Ritual Adept",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      78
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 1: Ritual Adept",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn’t have the spell prepared, but you must read from the book to cast a spell in this way.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "ritual_adept",
+        "cast_as_ritual": "ritual_tag_spells_in_spellbook",
+        "needs_prepared": false,
+        "must_read_from_book": true,
+        "ritual_rules": "dnd5e/rule/spell-level"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn’t have the spell prepared, but you must read from the book to cast a spell in this way.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

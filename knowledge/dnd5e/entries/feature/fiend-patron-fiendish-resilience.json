@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fiend-patron-fiendish-resilience",
+  "kind": "feature",
+  "name": "Fiendish Resilience",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Subclass: Fiend Patron/Level 10: Fiendish Resilience",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Choose one damage type, other than Force, whenever you finish a Short or Long Rest. You have Resistance to that damage type until you choose a different one with this feature.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/fiend-patron",
+    "level": 10
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "rest_finished"
+      },
+      "then": [
+        {
+          "op": "defense",
+          "kind": "resistance",
+          "damage_types": [
+            {
+              "var": "chosen.fiendish_resilience"
+            }
+          ],
+          "note": "One damage type other than Force, until you choose a different one."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Choose one damage type, other than Force, whenever you finish a Short or Long Rest. You have Resistance to that damage type until you choose a different one with this feature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

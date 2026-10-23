@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-warlock-subclass",
+  "kind": "feature",
+  "name": "Warlock Subclass",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Warlock Class Features/Level 3: Warlock Subclass",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain a Warlock subclass of your choice. The Fiend Patron subclass is detailed after this class’s description. A subclass is a specialization that grants you features at certain Warlock levels. For the rest of your career, you gain each of your subclass’s features that are of your Warlock level or lower.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/warlock",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/subclass/fiend-patron"
+      ],
+      "choose": 1,
+      "note": "Gain each subclass feature of your Warlock level or lower."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain a Warlock subclass of your choice. The Fiend Patron subclass is detailed after this class’s description. A subclass is a specialization that grants you features at certain Warlock levels. For the rest of your career, you gain each of your subclass’s features that are of your Warlock level or lower.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/subclass/fiend-patron"
+  ]
+}

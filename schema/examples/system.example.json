@@ -780,6 +780,18 @@
         "lot": "L14"
       },
       {
+        "id": "aura_size",
+        "description": "Size in feet of a creature's aura (param: feature slug).",
+        "params": [
+          "feature"
+        ],
+        "type": "number",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
         "id": "chosen",
         "description": "Value fixed by an earlier choice of the same entry (param: the choice id).",
         "params": [
@@ -1134,6 +1146,89 @@
         "lot": "L14"
       },
       {
+        "id": "aura_size",
+        "description": "Size in feet of a creature's aura (param: feature slug).",
+        "params": [
+          "feature"
+        ],
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "sneak_attack_dice",
+        "description": "Number of Sneak Attack damage dice rolled.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "d20_roll",
+        "description": "The number rolled on the d20.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "jump_ability",
+        "description": "Ability score used to determine jump distance.",
+        "pages": [
+          64
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "max_attuned_items",
+        "description": "Maximum magic items the creature can be attuned to at once.",
+        "pages": [
+          64
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_range",
+        "description": "Range of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_duration",
+        "description": "Duration of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_casting_time",
+        "description": "Casting time of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_components",
+        "description": "Components required by the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_effective_level",
+        "description": "Effective level of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
         "id": "size",
         "description": "The creature's size category.",
         "pages": [
@@ -1154,6 +1249,30 @@
         "description": "Hit Point maximum increase per level.",
         "pages": [
           84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "breathe_underwater",
+        "description": "The creature can breathe underwater (1) or not (0).",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spellcasting_focus",
+        "description": "The item can be used as a Spellcasting Focus.",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_damage_dice",
+        "description": "How the spell's damage dice are resolved (0 = maximum).",
+        "pages": [
+          82
         ],
         "lot": "L14"
       }
@@ -1617,6 +1736,57 @@
         "lot": "L14"
       },
       {
+        "id": "casts_spell",
+        "description": "The creature casts a spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "pages": [
+          57
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_damage",
+        "description": "The creature deals damage to a creature.",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_sneak_attack_damage",
+        "description": "The creature deals Sneak Attack damage.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "casts_spell_forcing_save",
+        "description": "The creature casts a spell that forces creatures to make a saving throw.",
+        "pages": [
+          66
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolls_spell_damage",
+        "description": "The creature rolls damage for a spell.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "misses_with_spell_attack",
+        "description": "The creature makes an attack roll for a spell and misses.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
         "id": "condition_gained",
         "description": "The creature gains a condition (param: condition slug).",
         "params": [
@@ -1673,6 +1843,38 @@
         "type": "event",
         "pages": [
           85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "enemy_reduced_to_0_hp",
+        "description": "An enemy is reduced to 0 Hit Points.",
+        "pages": [
+          76
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "familiar_takes_damage",
+        "description": "The creature's familiar takes damage.",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rest_finished",
+        "description": "The creature finishes a Short or Long Rest.",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cantrip_misses_or_saved",
+        "description": "The creature casts a cantrip at a creature and misses with the attack roll or the target succeeds on its save.",
+        "pages": [
+          82
         ],
         "lot": "L14"
       }
@@ -2492,6 +2694,241 @@
         "lot": "L14"
       },
       {
+        "id": "in_aura",
+        "description": "The creature is inside the source's aura (param: feature slug).",
+        "params": [
+          "aura"
+        ],
+        "type": "predicate",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_melee_weapon",
+        "description": "The attack roll uses a Melee weapon.",
+        "type": "predicate",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "holds_melee_weapon",
+        "description": "The creature holds a Melee weapon.",
+        "type": "predicate",
+        "pages": [
+          56
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_chosen_weapon",
+        "description": "The attack uses the weapon chosen for the effect.",
+        "type": "predicate",
+        "pages": [
+          56
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "forced_by_creature_type",
+        "description": "The saving throw is forced by a creature of this type (param).",
+        "params": [
+          "type"
+        ],
+        "type": "predicate",
+        "pages": [
+          57
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "marked_by_spell",
+        "description": "The target is currently marked by the source's spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          59
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "target_missing_hit_points",
+        "description": "The target is missing any of its Hit Points.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_is_opportunity_attack",
+        "description": "The attack is an Opportunity Attack.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attacker_is_trigger_creature",
+        "description": "The attacker is the creature that caused the trigger.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_weapon_property",
+        "description": "The attack uses a weapon with this property (param).",
+        "params": [
+          "property"
+        ],
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_ranged_weapon",
+        "description": "The attack uses a Ranged weapon.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_advantage_on_roll",
+        "description": "The creature has Advantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_disadvantage_on_roll",
+        "description": "The creature has Disadvantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "ally_within_feet_of_target",
+        "description": "An ally without the Incapacitated condition is within N feet (param) of the target.",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "moved_this_turn",
+        "description": "The creature has moved during this turn.",
+        "type": "predicate",
+        "pages": [
+          62
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_uses_own_proficiency",
+        "description": "The ability check uses one of the creature's skill or tool proficiencies.",
+        "type": "predicate",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_condition_from",
+        "description": "The creature has the condition (param) from the given source (param).",
+        "params": [
+          "condition",
+          "source"
+        ],
+        "type": "predicate",
+        "pages": [
+          64
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_of_class",
+        "description": "The spell is a spell of this class (param) for the creature.",
+        "params": [
+          "class"
+        ],
+        "type": "predicate",
+        "pages": [
+          65
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_duration_at_least_minutes",
+        "description": "The spell's duration is at least N minutes (param).",
+        "params": [
+          "minutes"
+        ],
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "concentration_save_for_extended_spell",
+        "description": "A saving throw to maintain Concentration on a spell modified by Extended Spell.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_casting_time",
+        "description": "The spell has this casting time (param).",
+        "params": [
+          "time"
+        ],
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cast_level_1_plus_spell_this_turn",
+        "description": "The creature has already cast a level 1+ spell this turn.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_targets_more_at_higher_level",
+        "description": "The spell can be cast with a higher-level slot to target an additional creature.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
         "id": "on_stone_surface",
         "description": "The creature is on or touching a stone surface.",
         "type": "predicate",
@@ -2551,6 +2988,121 @@
         "type": "predicate",
         "pages": [
           85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "save_against_spell",
+        "description": "The saving throw is against this spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "is_chosen_spell",
+        "description": "The spell is the one chosen for this feature (param: choice id).",
+        "params": [
+          "choice"
+        ],
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "concentration_save",
+        "description": "The saving throw is made to maintain Concentration.",
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_pact_weapon",
+        "description": "The attack uses the Warlock's pact weapon.",
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "name_on_page",
+        "description": "The creature's name is on the Gift of the Protectors page.",
+        "type": "predicate",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_dim_light",
+        "description": "The creature is in an area of Dim Light.",
+        "type": "predicate",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_darkness",
+        "description": "The creature is in an area of Darkness.",
+        "type": "predicate",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "reduced_by_source",
+        "description": "The source reduced the creature to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          76
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_school",
+        "description": "The spell belongs to this school (param).",
+        "params": [
+          "school"
+        ],
+        "type": "predicate",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_slot_level_between",
+        "description": "The spell slot level is within [min, max] (params).",
+        "params": [
+          "min",
+          "max"
+        ],
+        "type": "predicate",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_since_long_rest",
+        "description": "The feature (param) was already used since the last Long Rest.",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          82
         ],
         "lot": "L14"
       }
@@ -2969,6 +3521,30 @@
         "pages": [
           190
         ]
+      },
+      {
+        "id": "divine_sense",
+        "description": "Knows the location and type of Celestials, Fiends and Undead, and consecrated or desecrated places and objects, within range.",
+        "pages": [
+          54
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "devils_sight",
+        "description": "See normally in Dim Light and Darkness, both magical and nonmagical, within range.",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "shared_senses",
+        "description": "Perceive through another creature's senses.",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
       }
     ],
     "movement_modes": [
@@ -3251,6 +3827,30 @@
         "description": "The creature can't make Opportunity Attacks.",
         "pages": [
           30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "more_than_one_of_move_action_bonus_action",
+        "description": "On its turns, can do only one of: move, take an action, or take a Bonus Action.",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_rolls_against_have_advantage",
+        "description": "No attack roll can have Advantage against the creature.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cast_level_1_plus_spells",
+        "description": "The creature can't cast a level 1+ spell.",
+        "pages": [
+          67
         ],
         "lot": "L14"
       },

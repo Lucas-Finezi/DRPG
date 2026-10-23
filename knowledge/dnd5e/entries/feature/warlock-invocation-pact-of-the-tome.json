@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-pact-of-the-tome",
+  "kind": "feature",
+  "name": "Pact of the Tome",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      74
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Pact of the Tome",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This *Book of Shadows* (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.\n\n***Cantrips and Rituals.*** When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class’s spell list, and they must be spells you don’t already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.\n\n***Spellcasting Focus.*** You can use the book as a Spellcasting Focus.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "book_spells",
+        "cantrips": 3,
+        "level_1_ritual_spells": 2,
+        "from": "any_class_spell_list",
+        "not_already_prepared": true,
+        "prepared_while_on_person": true,
+        "count_as": "dnd5e/class/warlock"
+      },
+      {
+        "id": "focus",
+        "book_is_spellcasting_focus": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "rest_finished"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/warlock-invocation-pact-of-the-tome",
+          "note": "Conjure the Book of Shadows; it disappears if you conjure another or die."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This *Book of Shadows* (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Cantrips and Rituals.*** When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class’s spell list, and they must be spells you don’t already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spellcasting Focus.*** You can use the book as a Spellcasting Focus.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/warlock-invocation-pact-of-the-tome"
+  ]
+}

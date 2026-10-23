@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic",
+  "kind": "feature",
+  "name": "Metamagic",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      66
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Class Features/Level 2: Metamagic",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "Because your magic flows from within, you can alter your spells to suit your needs; you gain two Metamagic options of your choice from “Metamagic Options” later in this class’s description. You use the chosen options to temporarily modify spells you cast. To use an option, you must spend the number of Sorcery Points that it costs.\n\nYou can use only one Metamagic option on a spell when you cast it unless otherwise noted in one of those options.\n\nWhenever you gain a Sorcerer level, you can replace one of your Metamagic options with one you don’t know. You gain two more options at Sorcerer level 10 and two more at Sorcerer level 17.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/sorcerer",
+    "level": 2
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "metamagic",
+        "options_known": {
+          "scale": {
+            "by": "class_level.sorcerer",
+            "steps": [
+              {
+                "from": 2,
+                "value": 2
+              },
+              {
+                "from": 10,
+                "value": 4
+              },
+              {
+                "from": 17,
+                "value": 6
+              }
+            ]
+          }
+        },
+        "from": "feature_type:metamagic_option",
+        "cost": "sorcery_points"
+      },
+      {
+        "id": "one_per_spell",
+        "max_options_per_spell": 1,
+        "unless_option_says_otherwise": true
+      },
+      {
+        "id": "replace",
+        "on": "level_gained",
+        "count": 1
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Because your magic flows from within, you can alter your spells to suit your needs; you gain two Metamagic options of your choice from “Metamagic Options” later in this class’s description. You use the chosen options to temporarily modify spells you cast. To use an option, you must spend the number of Sorcery Points that it costs.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can use only one Metamagic option on a spell when you cast it unless otherwise noted in one of those options.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Whenever you gain a Sorcerer level, you can replace one of your Metamagic options with one you don’t know. You gain two more options at Sorcerer level 10 and two more at Sorcerer level 17.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

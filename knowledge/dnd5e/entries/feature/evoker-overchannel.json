@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/evoker-overchannel",
+  "kind": "feature",
+  "name": "Overchannel",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      82
+    ],
+    "section": "Classes/Wizard/Wizard Subclass: Evoker/Level 14: Overchannel",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can increase the power of your spells. When you cast a Wizard spell with a spell slot of levels 1–5 that deals damage, you can deal maximum damage with that spell on the turn you cast it.\n\nThe first time you do so, you suffer no adverse effect. If you use this feature again before you finish a Long Rest, you take 2d12 Necrotic damage for each level of the spell slot immediately after you cast it. This damage ignores Resistance and Immunity.\n\nEach time you use this feature again before finishing a Long Rest, the Necrotic damage per spell level increases by 1d12.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/evoker",
+    "level": 14
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "casts_spell"
+      },
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "spell_of_class",
+            "args": {
+              "class": "wizard"
+            }
+          },
+          {
+            "pred": "spell_slot_level_between",
+            "args": {
+              "min": 1,
+              "max": 5
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "spell_damage_dice",
+          "mode": "set",
+          "value": 0,
+          "note": "Maximum damage on the turn you cast it."
+        }
+      ]
+    },
+    {
+      "op": "damage",
+      "damage_type": "necrotic",
+      "target": {
+        "kind": "self"
+      },
+      "when": {
+        "pred": "used_since_long_rest",
+        "args": {
+          "feature": "evoker-overchannel"
+        }
+      },
+      "amount": {
+        "dice": {
+          "count": {
+            "op": "mul",
+            "args": [
+              {
+                "var": "spell_slot_level"
+              },
+              {
+                "op": "add",
+                "args": [
+                  1,
+                  {
+                    "var": "uses_since_rest.evoker-overchannel"
+                  }
+                ]
+              }
+            ]
+          },
+          "faces": 12
+        }
+      },
+      "note": "2d12 per slot level on the second use, +1d12 per level on each later use; ignores Resistance and Immunity."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can increase the power of your spells. When you cast a Wizard spell with a spell slot of levels 1–5 that deals damage, you can deal maximum damage with that spell on the turn you cast it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a Long Rest, you take 2d12 Necrotic damage for each level of the spell slot immediately after you cast it. This damage ignores Resistance and Immunity.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Each time you use this feature again before finishing a Long Rest, the Necrotic damage per spell level increases by 1d12.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}
