@@ -1,0 +1,110 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/ability-score-improvement",
+  "kind": "feat",
+  "name": "Ability Score Improvement",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/General Feats/Ability Score Improvement",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*General Feat (Prerequisite: Level 4+)*\n\nIncrease one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can’t increase an ability score above 20.\n\n***Repeatable.*** You can take this feat more than once.",
+  "facets": {
+    "category": "general",
+    "prerequisite": "Level 4+",
+    "repeatable": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "General",
+        "prerequisite": {
+          "character_level": 4
+        }
+      },
+      {
+        "id": "cap",
+        "max_score": 20
+      },
+      {
+        "id": "repeatable",
+        "repeatable": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "asi",
+      "choose": 1,
+      "options": [
+        {
+          "id": "plus_two",
+          "label": "+2 to one ability score",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.chosen",
+              "mode": "add",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "plus_one_two",
+          "label": "+1 to two ability scores",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.chosen",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.chosen_second",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*General Feat (Prerequisite: Level 4+)*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can’t increase an ability score above 20.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Repeatable.*** You can take this feat more than once.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

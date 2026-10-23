@@ -1275,6 +1275,14 @@
           82
         ],
         "lot": "L14"
+      },
+      {
+        "id": "damage_die_min",
+        "description": "Lowest value a damage die counts as.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
       }
     ],
     "rolls": [
@@ -1877,6 +1885,30 @@
           82
         ],
         "lot": "L14"
+      },
+      {
+        "id": "takes_attack_or_magic_action",
+        "description": "The creature takes the Attack action or the Magic action.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "d20_test_resolved",
+        "description": "A creature succeeds on or fails a D20 Test.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "rolls_natural_20_attack",
+        "description": "The creature rolls a 20 on the d20 for an attack roll.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
       }
     ],
     "predicates": [
@@ -3105,6 +3137,42 @@
           82
         ],
         "lot": "L14"
+      },
+      {
+        "id": "target_grappled_by_source",
+        "description": "The target has the Grappled condition from the source.",
+        "type": "predicate",
+        "pages": [
+          87
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "wielded_two_handed",
+        "description": "The weapon is held with two hands.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "extra_attack_from_light_property",
+        "description": "The attack is the extra attack from using a Light weapon.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "adds_ability_mod_to_damage",
+        "description": "The attack already adds the ability modifier to its damage.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
       }
     ],
     "frequencies": [
@@ -3157,6 +3225,14 @@
           17
         ],
         "lot": "L06"
+      },
+      {
+        "id": "improve_fate",
+        "description": "Until the creature rolls Initiative or finishes a Short or Long Rest.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
       }
     ],
     "damage_types": [

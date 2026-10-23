@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/skilled",
+  "kind": "feat",
+  "name": "Skilled",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/Origin Feats/Skilled",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Origin Feat*\n\nYou gain proficiency in any combination of three skills or tools of your choice.\n\n***Repeatable.*** You can take this feat more than once.",
+  "facets": {
+    "category": "origin",
+    "repeatable": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Origin"
+      },
+      {
+        "id": "repeatable",
+        "repeatable": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "skilled",
+      "choose": 3,
+      "distinct": false,
+      "options": [
+        {
+          "id": "skill",
+          "label": "Skill",
+          "effects": [
+            {
+              "op": "proficiency",
+              "category": "skill",
+              "choose": 1,
+              "from": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tool",
+          "label": "Tool",
+          "effects": [
+            {
+              "op": "proficiency",
+              "category": "tool",
+              "choose": 1,
+              "from": [
+                "any"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Origin Feat*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You gain proficiency in any combination of three skills or tools of your choice.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Repeatable.*** You can take this feat more than once.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

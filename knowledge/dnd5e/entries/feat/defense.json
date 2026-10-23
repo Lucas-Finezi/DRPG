@@ -1,0 +1,85 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/defense",
+  "kind": "feat",
+  "name": "Defense",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      88
+    ],
+    "section": "Feats/Feat Descriptions/Fighting Style Feats/Defense",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Fighting Style Feat (Prerequisite: Fighting Style Feature)*\n\nWhile you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+  "facets": {
+    "category": "fighting_style",
+    "prerequisite": "Fighting Style Feature",
+    "repeatable": false
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Fighting Style",
+        "prerequisite": {
+          "feature": "fighting_style"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "any": [
+          {
+            "pred": "wearing_armor",
+            "args": {
+              "category": "light"
+            }
+          },
+          {
+            "pred": "wearing_armor",
+            "args": {
+              "category": "medium"
+            }
+          },
+          {
+            "pred": "wearing_armor",
+            "args": {
+              "category": "heavy"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Fighting Style Feat (Prerequisite: Fighting Style Feature)*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

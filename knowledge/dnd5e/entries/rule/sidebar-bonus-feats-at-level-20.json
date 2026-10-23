@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-bonus-feats-at-level-20",
+  "kind": "rule",
+  "name": "Bonus Feats at Level 20",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      24
+    ],
+    "section": "Character Creation/Level Advancement",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 3,
+  "text": "A GM can use feats as a form of advancement after characters reach level 20 to provide greater power to characters who have no more levels to gain. With this approach, each character gains one feat of their choice for every 30,000 XP the character earns above 355,000 XP. Epic Boon feats are especially appropriate for these bonus feats, but a player can choose any feat for which their level 20 character qualifies.",
+  "data": {
+    "rules": [
+      {
+        "id": "bonus_feats",
+        "requires_character_level": 20,
+        "xp_threshold": 355000,
+        "xp_per_feat": 30000,
+        "recommended_category": "epic_boon",
+        "any_qualifying_feat": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "use_bonus_feats",
+      "reason": "gm_judgment",
+      "prompt": "Does the GM use feats as advancement after level 20?",
+      "source_text": "A GM can use feats as a form of advancement after characters reach level 20 to provide greater power to characters who have no more levels to gain.",
+      "pages": [
+        23
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A GM can use feats as a form of advancement after characters reach level 20 to provide greater power to characters who have no more levels to gain.",
+      "status": "master_decision",
+      "by": [
+        "md:use_bonus_feats"
+      ]
+    },
+    {
+      "text": "With this approach, each character gains one feat of their choice for every 30,000 XP the character earns above 355,000 XP. Epic Boon feats are especially appropriate for these bonus feats, but a player can choose any feat for which their level 20 character qualifies.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

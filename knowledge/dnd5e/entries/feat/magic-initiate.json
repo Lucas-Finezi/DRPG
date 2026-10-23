@@ -1,0 +1,200 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/magic-initiate",
+  "kind": "feat",
+  "name": "Magic Initiate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/Origin Feats/Magic Initiate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Origin Feat*\n\nYou gain the following benefits.\n\n***Two Cantrips.*** You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).\n\n***Level 1 Spell.*** Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n\n***Spell Change.*** Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\n***Repeatable.*** You can take this feat more than once, but you must choose a different spell list each time.",
+  "facets": {
+    "category": "origin",
+    "repeatable": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Origin"
+      },
+      {
+        "id": "spell_change",
+        "on": "level_gained",
+        "count": 1,
+        "same_level": true,
+        "same_list": true
+      },
+      {
+        "id": "repeatable",
+        "repeatable": true,
+        "each_time": "different_spell_list"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "spell_list",
+      "choose": 1,
+      "options": [
+        {
+          "id": "cleric",
+          "label": "Cleric",
+          "value": "dnd5e/spell-list/cleric",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell-list/cleric"
+              ],
+              "choose": 2,
+              "note": "Two cantrips."
+            }
+          ]
+        },
+        {
+          "id": "druid",
+          "label": "Druid",
+          "value": "dnd5e/spell-list/druid",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell-list/druid"
+              ],
+              "choose": 2,
+              "note": "Two cantrips."
+            }
+          ]
+        },
+        {
+          "id": "wizard",
+          "label": "Wizard",
+          "value": "dnd5e/spell-list/wizard",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell-list/wizard"
+              ],
+              "choose": 2,
+              "note": "Two cantrips."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "spellcasting_ability",
+      "choose": 1,
+      "options": [
+        {
+          "id": "int",
+          "label": "INT",
+          "value": "int",
+          "effects": []
+        },
+        {
+          "id": "wis",
+          "label": "WIS",
+          "value": "wis",
+          "effects": []
+        },
+        {
+          "id": "cha",
+          "label": "CHA",
+          "value": "cha",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell-list/cleric",
+        "dnd5e/spell-list/druid",
+        "dnd5e/spell-list/wizard"
+      ],
+      "choose": 1,
+      "note": "One level 1 spell from the chosen list; always prepared."
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/feat/magic-initiate",
+          "slot": "none",
+          "ability": {
+            "var": "chosen.spellcasting_ability"
+          }
+        }
+      ],
+      "note": "The chosen level 1 spell; it can also be cast with any spell slots you have."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Origin Feat*\n\nYou gain the following benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Two Cantrips.*** You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Level 1 Spell.*** Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Spell Change.*** Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Repeatable.*** You can take this feat more than once, but you must choose a different spell list each time.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/magic-initiate",
+    "dnd5e/spell-list/cleric",
+    "dnd5e/spell-list/druid",
+    "dnd5e/spell-list/wizard"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/great-weapon-fighting",
+  "kind": "feat",
+  "name": "Great Weapon Fighting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      88
+    ],
+    "section": "Feats/Feat Descriptions/Fighting Style Feats/Great Weapon Fighting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Fighting Style Feat (Prerequisite: Fighting Style Feature)*\n\nWhen you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+  "facets": {
+    "category": "fighting_style",
+    "prerequisite": "Fighting Style Feature",
+    "repeatable": false
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Fighting Style",
+        "prerequisite": {
+          "feature": "fighting_style"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "damage_die_min",
+      "mode": "min",
+      "value": 3,
+      "when": {
+        "all": [
+          {
+            "pred": "attack_with_melee_weapon"
+          },
+          {
+            "pred": "wielded_two_handed"
+          },
+          {
+            "any": [
+              {
+                "pred": "attack_with_weapon_property",
+                "args": {
+                  "property": "two-handed"
+                }
+              },
+              {
+                "pred": "attack_with_weapon_property",
+                "args": {
+                  "property": "versatile"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Treat any 1 or 2 on a damage die as a 3."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Fighting Style Feat (Prerequisite: Fighting Style Feature)*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

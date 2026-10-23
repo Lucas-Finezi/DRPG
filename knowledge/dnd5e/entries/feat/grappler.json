@@ -1,0 +1,177 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/grappler",
+  "kind": "feat",
+  "name": "Grappler",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/General Feats/Grappler",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*General Feat (Prerequisite: Level 4+, Strength or Dexterity 13+)*\n\nYou gain the following benefits.\n\n***Ability Score Increase.*** Increase your Strength or Dexterity score by 1, to a maximum of 20.\n\n***Punch and Grab.*** When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n\n***Attack Advantage.*** You have Advantage on attack rolls against a creature Grappled by you.\n\n***Fast Wrestler.*** You don’t have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+  "facets": {
+    "category": "general",
+    "prerequisite": "Level 4+, Strength or Dexterity 13+",
+    "repeatable": false
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "General",
+        "prerequisite": {
+          "character_level": 4,
+          "ability_any_of": {
+            "str": 13,
+            "dex": 13
+          }
+        }
+      },
+      {
+        "id": "fast_wrestler",
+        "move_grappled_creature_extra_cost": 0,
+        "max_size": "own_size_or_smaller"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "ability_score_increase",
+      "choose": 1,
+      "options": [
+        {
+          "id": "str",
+          "label": "STR",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score_max.str",
+              "mode": "max",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "id": "dex",
+          "label": "DEX",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score_max.dex",
+              "mode": "max",
+              "value": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is_unarmed_strike"
+          },
+          {
+            "pred": "own_turn"
+          },
+          {
+            "pred": "attack_from_feature",
+            "args": {
+              "feature": "attack_action"
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/unarmed-strike",
+          "note": "Use both the Damage and the Grapple option."
+        }
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "pred": "target_grappled_by_source"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*General Feat (Prerequisite: Level 4+, Strength or Dexterity 13+)*\n\nYou gain the following benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Ability Score Increase.*** Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Punch and Grab.*** When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Attack Advantage.*** You have Advantage on attack rolls against a creature Grappled by you.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Fast Wrestler.*** You don’t have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/unarmed-strike"
+  ]
+}

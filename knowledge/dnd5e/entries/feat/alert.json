@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/alert",
+  "kind": "feat",
+  "name": "Alert",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/Origin Feats/Alert",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Origin Feat*\n\nYou gain the following benefits.\n\n***Initiative Proficiency.*** When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\n***Initiative Swap.*** Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can’t make this swap if you or the ally has the Incapacitated condition.",
+  "facets": {
+    "category": "origin",
+    "repeatable": false
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Origin"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "initiative",
+      "mode": "add",
+      "value": {
+        "var": "proficiency_bonus"
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "initiative_rolled"
+      },
+      "optional": true,
+      "condition": {
+        "not": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "incapacitated"
+          }
+        }
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "initiative",
+          "mode": "set",
+          "value": {
+            "var": "chosen.ally_initiative"
+          },
+          "note": "Swap Initiative with one willing ally in the same combat; not if either has the Incapacitated condition."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Origin Feat*\n\nYou gain the following benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Initiative Proficiency.*** When you roll Initiative, you can add your Proficiency Bonus to the roll.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Initiative Swap.*** Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can’t make this swap if you or the ally has the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}
