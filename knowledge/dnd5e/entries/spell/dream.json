@@ -1,0 +1,155 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/dream",
+  "kind": "spell",
+  "name": "Dream",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      126
+    ],
+    "section": "Spells/Spell Descriptions/Dream",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Illusion (Bard, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Special\n\n**Components:** V, S, M (a handful of sand)\n\n**Duration:** 8 hours\n\nYou target a creature you know on the same plane of existence. You or a willing creature you touch enters a trance state to act as a dream messenger. While in the trance, the messenger is Incapacitated and has a Speed of 0.\n\nIf the target is asleep, the messenger appears in the target’s dreams and can converse with the target as long as it remains asleep, through the spell’s duration. The messenger can also shape the dream’s environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking.\n\nIf the target is awake when you cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams.\n\nYou can make the messenger terrifying to the target. If you do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up.",
+  "facets": {
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "special"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a handful of sand"
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    },
+    "rules": [
+      {
+        "id": "messenger",
+        "target": "known_creature_same_plane",
+        "messenger": [
+          "you",
+          "willing_creature_touched"
+        ],
+        "messenger_state": [
+          "dnd5e/condition/incapacitated",
+          "speed_0"
+        ]
+      },
+      {
+        "id": "awake",
+        "messenger_knows": true,
+        "end_or_wait": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "special"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "restrict",
+          "restrictions": [
+            "benefit_from_rest"
+          ]
+        },
+        {
+          "op": "damage",
+          "amount": "3d6",
+          "damage_type": "psychic",
+          "note": "When it wakes up."
+        }
+      ],
+      "note": "After a message of no more than ten words."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "dream_content",
+      "reason": "narrative",
+      "prompt": "What happens in the dream?",
+      "source_text": "The messenger can also shape the dream’s environment, creating landscapes, objects, and other images."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Illusion (Bard, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Special\n\n**Components:** V, S, M (a handful of sand)\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You target a creature you know on the same plane of existence. You or a willing creature you touch enters a trance state to act as a dream messenger. While in the trance, the messenger is Incapacitated and has a Speed of 0.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If the target is asleep, the messenger appears in the target’s dreams and can converse with the target as long as it remains asleep, through the spell’s duration. The messenger can also shape the dream’s environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking.",
+      "status": "master_decision",
+      "by": [
+        "md:dream_content"
+      ]
+    },
+    {
+      "text": "If the target is awake when you cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "You can make the messenger terrifying to the target. If you do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated"
+  ]
+}

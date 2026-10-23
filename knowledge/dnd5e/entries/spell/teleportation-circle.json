@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/teleportation-circle",
+  "kind": "spell",
+  "name": "Teleportation Circle",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      168,
+      169
+    ],
+    "section": "Spells/Spell Descriptions/Teleportation Circle",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Conjuration (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, M (rare inks worth 50+ GP, which the spell consumes)\n\n**Duration:** 1 round\n\nAs you cast the spell, you draw a 5-foot-radius circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.\n\nMany major temples, guildhalls, and other important places have permanent teleportation circles. Each circle includes a unique sigil sequence—a string of runes arranged in a particular pattern. \n\nWhen you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the GM. You might learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.\n\nYou can create a permanent teleportation circle by casting this spell in the same location every day for 365 days.",
+  "facets": {
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": "rare inks worth 50+ GP, which the spell consumes",
+      "material_cost_gp": 50,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "1 round",
+      "kind": "rounds",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "circle",
+        "radius_feet": 5,
+        "destination": "known_permanent_circle_same_plane",
+        "portal_open_until": "end_of_next_turn",
+        "arrival": "within_5_feet_of_destination"
+      },
+      {
+        "id": "learning",
+        "memorize_minutes": 1
+      },
+      {
+        "id": "permanent",
+        "daily_castings": 365
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "sigil_sequences",
+      "reason": "gm_judgment",
+      "prompt": "Which two Material Plane destinations does the caster know?",
+      "source_text": "When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Conjuration (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, M (rare inks worth 50+ GP, which the spell consumes)\n\n**Duration:** 1 round",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "As you cast the spell, you draw a 5-foot-radius circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Many major temples, guildhalls, and other important places have permanent teleportation circles. Each circle includes a unique sigil sequence—a string of runes arranged in a particular pattern.",
+      "status": "descriptive"
+    },
+    {
+      "text": "When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the GM. You might learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute.",
+      "status": "master_decision",
+      "by": [
+        "md:sigil_sequences",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "You can create a permanent teleportation circle by casting this spell in the same location every day for 365 days.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

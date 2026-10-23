@@ -202,6 +202,22 @@ RELOCATED_TABLES = {
 RELOCATED_FRAGMENTS = [
     {"page": 131, "prefix": "face a choice of paths along the way there", "printed_in": "Find Steed",
      "belongs_to": "Find the Path", "after": "Whenever you", "lot": "L23"},  # end of Find the Path (p. 132)
+    # pp. 108-110: the ends of Antilife Shell and Antipathy/Sympathy were printed inside the
+    # neighbouring spells
+    {"page": 109, "prefix": "or make attacks with Ranged or Reach weapons", "printed_in": "Animate Objects",
+     "belongs_to": "Antilife Shell", "after": "An affected creature can cast spells", "lot": "L22"},
+    {"page": 109, "prefix": "If you move so that an affected creature is forced", "printed_in": "Animate Objects",
+     "belongs_to": "Antilife Shell", "after": "through the barrier.", "lot": "L22"},
+    {"page": 110, "prefix": "Wisdom saving throw to end the effect, as described below.", "printed_in": "Antilife Shell",
+     "belongs_to": "Antipathy/Sympathy", "after": "that creature can make a", "lot": "L25"},
+    {"page": 110, "prefix": "***Ending the Effect.*** If the Frightened or Charmed", "printed_in": "Antilife Shell",
+     "belongs_to": "Antipathy/Sympathy", "after": "as described below.", "lot": "L25"},
+]
+# defects in the source text itself (also present in the raw page text): kept verbatim, flagged
+TEXT_DEFECTS = [
+    {"subject": "Telekinesis", "ref": "dnd5e/spell/telekinesis", "lot": "L22", "type": "truncated_text",
+     "detail": "the last sentence stops mid-phrase: 'such as manipulating a simple tool,' (p. 168)",
+     "resolution": "kept verbatim; the open-ended fine control is a master decision", "pages": [168]},
 ]
 STAT_BLOCK_SECTIONS = {"Traits", "Actions", "Bonus Actions", "Reactions", "Legendary Actions"}
 
@@ -802,7 +818,7 @@ def main():
         del o["_node"]
 
     duplicates = sorted(r for r, c in b.refs.items() if c > 1)
-    inconsistencies = spell_consistency(b)
+    inconsistencies = spell_consistency(b) + TEXT_DEFECTS
     spell_refs = {x["ref"] for x in b.entries if x["kind"] == "spell"}
     unresolved = sorted({m["spell"] for m in b.memberships if m["spell_ref"] not in spell_refs})
 

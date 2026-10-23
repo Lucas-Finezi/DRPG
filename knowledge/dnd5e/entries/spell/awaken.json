@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/awaken",
+  "kind": "spell",
+  "name": "Awaken",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      111,
+      112
+    ],
+    "section": "Spells/Spell Descriptions/Awaken",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Transmutation (Bard, Druid)*\n\n**Casting Time:** 8 hours\n\n**Range:** Touch\n\n**Components:** V, S, M (an agate worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nYou spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn’t a creature. The target gains an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. The GM chooses statistics appropriate for the awakened Plant, such as the statistics for the **Awakened Shrub** or **Awakened Tree** in “Monsters.”\n\nThe awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.",
+  "facets": {
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "8 hours",
+      "cost": "time",
+      "minutes": 480
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "an agate worth 1,000+ GP, which the spell consumes",
+      "material_cost_gp": 1000,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "awaken",
+        "targets": [
+          "beast_or_plant_creature_int_3_or_less",
+          "natural_plant"
+        ],
+        "int": 10,
+        "speaks_one_of_your_languages": true,
+        "plant_becomes_creature": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/charmed",
+      "note": "Ends early if you or your allies damage it; it then chooses its attitude.",
+      "duration": {
+        "kind": "days",
+        "amount": 30
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "awakened_plant_stats",
+      "reason": "gm_judgment",
+      "prompt": "Which statistics does the awakened Plant use?",
+      "source_text": "The GM chooses statistics appropriate for the awakened Plant, such as the statistics for the Awakened Shrub or Awakened Tree in “Monsters.”",
+      "options": [
+        {
+          "id": "awakened_shrub",
+          "label": "Awakened Shrub"
+        },
+        {
+          "id": "awakened_tree",
+          "label": "Awakened Tree"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Transmutation (Bard, Druid)*\n\n**Casting Time:** 8 hours\n\n**Range:** Touch\n\n**Components:** V, S, M (an agate worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn’t a creature. The target gains an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. The GM chooses statistics appropriate for the awakened Plant, such as the statistics for the **Awakened Shrub** or **Awakened Tree** in “Monsters.”",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:awakened_plant_stats",
+        "dnd5e/creature/awakened-shrub",
+        "dnd5e/creature/awakened-tree"
+      ]
+    },
+    {
+      "text": "The awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/creature/awakened-shrub",
+    "dnd5e/creature/awakened-tree"
+  ]
+}

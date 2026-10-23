@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/raise-dead",
+  "kind": "spell",
+  "name": "Raise Dead",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      157
+    ],
+    "section": "Spells/Spell Descriptions/Raise Dead",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Necromancy (Bard, Cleric, Paladin)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (a diamond worth 500+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nWith a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn’t Undead when it died.\n\nThe creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death.\n\nThis spell closes all mortal wounds, but it doesn’t restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.\n\nComing back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.",
+  "facets": {
+    "level": 5,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 hour",
+      "cost": "time",
+      "minutes": 60
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a diamond worth 500+ GP, which the spell consumes",
+      "material_cost_gp": 500,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "poisons",
+        "neutralizes_poisons": true
+      },
+      {
+        "id": "body",
+        "restores_missing_parts": false,
+        "fails_without_vital_parts": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp",
+      "mode": "set",
+      "value": 1,
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "note": "Dead no longer than 10 days and not Undead when it died."
+    },
+    {
+      "op": "modifier",
+      "stat": "d20_test",
+      "mode": "add",
+      "value": -4,
+      "note": "Reduced by 1 each time the target finishes a Long Rest."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Necromancy (Bard, Cleric, Paladin)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (a diamond worth 500+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "With a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn’t Undead when it died.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "This spell closes all mortal wounds, but it doesn’t restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

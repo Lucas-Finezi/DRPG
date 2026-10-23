@@ -1,0 +1,367 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/draconic-spirit",
+  "kind": "creature",
+  "name": "Draconic Spirit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      166
+    ],
+    "section": "Spells/Spell Descriptions/Summon Dragon/Draconic Spirit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Large Dragon, Neutral*\n\n**AC** 14 + the spell’s level\n\n**HP** 50 + 10 for each spell level above 5\n\n**Speed** 30 ft., Fly 60 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 17 | +3 | +3 |\n| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 14 | +2 | +2 |\n\n**Resistances** Acid, Cold, Fire, Lightning, Poison\n\n**Immunities** Charmed, Frightened, Poisoned\n\n**Senses** Blindsight 30 ft., Darkvision 60 ft.;\n\nPassive Perception 12\n\n**Languages** Draconic, understands the languages you know\n\n**CR** None (XP 0; PB equals your Proficiency Bonus)\n\n##### Traits\n\n***Shared Resistances.*** When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.\n\n##### Actions\n\n***Multiattack.*** The spirit makes a number of Rend attacks equal to half the spell’s level (round down), and it uses Breath Weapon.\n\n***Rend.*** *Melee Attack Roll:* Bonus equals your spell attack modifier, reach 10 feet. *Hit:* 1d6 + 4 + the spell’s level Piercing damage.\n\n***Breath Weapon.*** *Dexterity Saving Throw:* DC equals your spell save DC, each creature in a 30-foot Cone. *Failure:* 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). *Success:* Half damage.",
+  "facets": {
+    "group": "embedded",
+    "size": "Large",
+    "type": "Dragon"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Neutral",
+    "ac": {
+      "text": "14 + the spell’s level",
+      "value": {
+        "op": "add",
+        "args": [
+          14,
+          {
+            "var": "spell_level"
+          }
+        ]
+      }
+    },
+    "hp": {
+      "text": "50 + 10 for each spell level above 5",
+      "value": {
+        "op": "add",
+        "args": [
+          50,
+          {
+            "op": "mul",
+            "args": [
+              10,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_level"
+                  },
+                  5
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft., Swim 30 ft.",
+      "walk": 30,
+      "fly": 60,
+      "swim": 30
+    },
+    "resistances": {
+      "text": "Acid, Cold, Fire, Lightning, Poison"
+    },
+    "immunities": {
+      "text": "Charmed, Frightened, Poisoned"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 60 ft.; Passive Perception 12"
+    },
+    "languages": {
+      "text": "Draconic, understands the languages you know"
+    },
+    "cr": {
+      "text": "None (XP 0; PB equals your Proficiency Bonus)"
+    },
+    "traits": [
+      {
+        "name": "Shared Resistances",
+        "text": "When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The spirit makes a number of Rend attacks equal to half the spell’s level (round down), and it uses Breath Weapon."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* Bonus equals your spell attack modifier, reach 10 feet. *Hit:* 1d6 + 4 + the spell’s level Piercing damage.",
+        "attack": {
+          "kind": "melee",
+          "terms": "Bonus equals your spell attack modifier, reach 10 feet",
+          "hit": "1d6 + 4 + the spell’s level Piercing damage."
+        }
+      },
+      {
+        "name": "Breath Weapon",
+        "text": "*Dexterity Saving Throw:* DC equals your spell save DC, each creature in a 30-foot Cone. *Failure:* 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). *Success:* Half damage.",
+        "save": {
+          "ability": "dex",
+          "terms": "DC equals your spell save DC, each creature in a 30-foot Cone",
+          "failure": "2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). *Success:* Half damage."
+        }
+      }
+    ],
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "summoned_by": "dnd5e/spell/summon-dragon"
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "target": {
+        "kind": "self"
+      },
+      "damage_types": [
+        {
+          "choose_from": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "poison"
+          ]
+        }
+      ],
+      "note": "The summoner, until the spell ends."
+    },
+    {
+      "op": "repeat",
+      "times": {
+        "op": "div",
+        "args": [
+          {
+            "var": "spell_level"
+          },
+          2
+        ]
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "note": "Rend."
+        }
+      ]
+    },
+    {
+      "op": "attack",
+      "attack_type": "melee",
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d6",
+              4,
+              {
+                "var": "spell_level"
+              }
+            ]
+          },
+          "damage_type": "piercing"
+        }
+      ],
+      "bonus": {
+        "var": "spell_attack_bonus"
+      }
+    },
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cone",
+          "size_feet": 30,
+          "origin": "self"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": {
+            "choose_from": [
+              "acid",
+              "cold",
+              "fire",
+              "lightning",
+              "poison"
+            ]
+          }
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "**AC** 14 + the spell’s level",
+      "status": "structured",
+      "by": [
+        "/data/ac"
+      ]
+    },
+    {
+      "text": "**HP** 50 + 10 for each spell level above 5",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 17 | +3 | +3 |\n| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 14 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Cold, Fire, Lightning, Poison",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Charmed, Frightened, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 60 ft.;\n\nPassive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Draconic, understands the languages you know",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** None (XP 0; PB equals your Proficiency Bonus)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Shared Resistances.*** When you summon the spirit, choose one of its Resistances. You have Resistance to the chosen damage type until the spell ends.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The spirit makes a number of Rend attacks equal to half the spell’s level (round down), and it uses Breath Weapon.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* Bonus equals your spell attack modifier, reach 10 feet. *Hit:* 1d6 + 4 + the spell’s level Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Breath Weapon.*** *Dexterity Saving Throw:* DC equals your spell save DC, each creature in a 30-foot Cone. *Failure:* 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    }
+  ]
+}

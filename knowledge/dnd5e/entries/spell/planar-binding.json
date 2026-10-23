@@ -1,0 +1,160 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/planar-binding",
+  "kind": "spell",
+  "name": "Planar Binding",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      152,
+      153
+    ],
+    "section": "Spells/Spell Descriptions/Planar Binding",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Abjuration (Bard, Cleric, Druid, Warlock,* *Wizard)*\n\n**Casting Time:** 1 hour\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a jewel worth 1,000+ GP, which the spell consumes)\n\n**Duration:** 24 hours\n\nYou attempt to bind a Celestial, an Elemental, a Fey, or a Fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of the inverted version of the *Magic Circle* spell to trap it while this spell is cast.) At the completion of the casting, the target must succeed on a Charisma saving throw or be bound to serve you for the duration. If the creature was summoned or created by another spell, that spell’s duration is extended to match the duration of this spell.\n\nA bound creature must follow your commands to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. If the creature is Hostile, it strives to twist your commands to achieve its own objectives. If the creature carries out your commands completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane, it returns to the place where you bound it and remains there until the spell ends.\n\n***Using a Higher-Level Spell Slot.*** The duration increases with a spell slot of level 6 (10 days), 7 (30 days), 8 (180 days), and 9 (366 days).",
+  "facets": {
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 hour",
+      "cost": "time",
+      "minutes": 60
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a jewel worth 1,000+ GP, which the spell consumes",
+      "material_cost_gp": 1000,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "casting",
+        "within_range_entire_casting": true,
+        "typical_trap": "dnd5e/spell/magic-circle",
+        "extends_summoning_spell": true
+      },
+      {
+        "id": "report",
+        "same_plane": "travels_to_report",
+        "other_plane": "returns_to_binding_place"
+      },
+      {
+        "id": "upcast_duration_days",
+        "by_slot_level": {
+          "6": 10,
+          "7": 30,
+          "8": 180,
+          "9": 366
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "cha",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "filter": {
+          "creature_types": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend"
+          ]
+        }
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/planar-binding",
+          "note": "Bound to serve you for the duration."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "bound_service",
+      "reason": "narrative",
+      "prompt": "How does the bound creature carry out (or twist) the commands?",
+      "source_text": "If the creature is Hostile, it strives to twist your commands to achieve its own objectives."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Abjuration (Bard, Cleric, Druid, Warlock,* *Wizard)*\n\n**Casting Time:** 1 hour\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a jewel worth 1,000+ GP, which the spell consumes)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You attempt to bind a Celestial, an Elemental, a Fey, or a Fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of the inverted version of the *Magic Circle* spell to trap it while this spell is cast.) At the completion of the casting, the target must succeed on a Charisma saving throw or be bound to serve you for the duration. If the creature was summoned or created by another spell, that spell’s duration is extended to match the duration of this spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A bound creature must follow your commands to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. If the creature is Hostile, it strives to twist your commands to achieve its own objectives. If the creature carries out your commands completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane, it returns to the place where you bound it and remains there until the spell ends.",
+      "status": "master_decision",
+      "by": [
+        "md:bound_service",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The duration increases with a spell slot of level 6 (10 days), 7 (30 days), 8 (180 days), and 9 (366 days).",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/planar-binding"
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/creation",
+  "kind": "spell",
+  "name": "Creation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      121
+    ],
+    "section": "Spells/Spell Descriptions/Creation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 1,
+  "text": "*Level 5 Illusion (Sorcerer, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a paintbrush)\n\n**Duration:** Special\n\nYou pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot Cube, and the object must be of a form and material that you have seen.\n\nThe spell’s duration depends on the object’s material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell’s Material component causes the other spell to fail.\n\n##### Materials\n\n| **Material** | **Duration** |\n| Vegetable matter | 24 hours |\n| Stone or crystal | 12 hours |\n| Precious metals | 1 hour |\n| Gems | 10 minutes |\n| Adamantine or mithral | 1 minute |\n\n***Using a Higher-Level Spell Slot.*** The Cube increases by 5 feet for each spell slot level above 5.",
+  "facets": {
+    "level": 5,
+    "school": "illusion",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a paintbrush"
+    },
+    "duration": {
+      "kind": "special",
+      "text": "Special"
+    },
+    "rules": [
+      {
+        "id": "object",
+        "matter": [
+          "vegetable",
+          "mineral"
+        ],
+        "max_cube_feet": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "op": "mul",
+              "args": [
+                5,
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "var": "spell_slot_level"
+                    },
+                    5
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "seen_form_and_material": true
+      },
+      {
+        "id": "duration",
+        "by_material": "materials",
+        "multiple_materials": "shortest",
+        "as_material_component": "other_spell_fails"
+      }
+    ],
+    "tables": [
+      {
+        "id": "materials",
+        "caption": "Materials",
+        "columns": [
+          "Material",
+          "Duration"
+        ],
+        "rows": [
+          [
+            "Vegetable matter",
+            "24 hours"
+          ],
+          [
+            "Stone or crystal",
+            "12 hours"
+          ],
+          [
+            "Precious metals",
+            "1 hour"
+          ],
+          [
+            "Gems",
+            "10 minutes"
+          ],
+          [
+            "Adamantine or mithral",
+            "1 minute"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 5 Illusion (Sorcerer, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a paintbrush)\n\n**Duration:** Special",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot Cube, and the object must be of a form and material that you have seen.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The spell’s duration depends on the object’s material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell’s Material component causes the other spell to fail.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "##### Materials\n\n| **Material** | **Duration** |\n| Vegetable matter | 24 hours |\n| Stone or crystal | 12 hours |\n| Precious metals | 1 hour |\n| Gems | 10 minutes |\n| Adamantine or mithral | 1 minute |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The Cube increases by 5 feet for each spell slot level above 5.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

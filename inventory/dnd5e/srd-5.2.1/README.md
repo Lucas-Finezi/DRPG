@@ -128,3 +128,4 @@ Divergências internas do SRD, confirmadas no texto bruto das duas ferramentas. 
 - **Phantasmal Force** (L27): description header names Bard (p. 151) but the spell is absent from the Bard spell list → D-001: enabled for Bard (the description header is authoritative)
 - **Phantasmal Force** (L27): description header names Sorcerer (p. 151) but the spell is absent from the Sorcerer spell list → D-001: enabled for Sorcerer (the description header is authoritative)
 - **Phantasmal Force** (L27): description header names Wizard (p. 151) but the spell is absent from the Wizard spell list → D-001: enabled for Wizard (the description header is authoritative)
+- **Telekinesis** (L22): the last sentence stops mid-phrase: 'such as manipulating a simple tool,' (p. 168) → kept verbatim; the open-ended fine control is a master decision

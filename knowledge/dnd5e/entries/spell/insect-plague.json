@@ -1,0 +1,206 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/insect-plague",
+  "kind": "spell",
+  "name": "Insect Plague",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      143
+    ],
+    "section": "Spells/Spell Descriptions/Insect Plague",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Conjuration (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 300 feet\n\n**Components:** V, S, M (a locust)\n\n**Duration:** Concentration, up to 10 minutes\n\nSwarming locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The Sphere remains for the duration, and its area is Lightly Obscured and Difficult Terrain.\n\nWhen the swarm appears, each creature in it makes a Constitution saving throw, taking 4d10 Piercing damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell’s area for the first time on a turn or ends its turn there. A creature makes this save only once per turn.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d10 for each spell slot level above 5.",
+  "facets": {
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 300
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a locust"
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "swarm",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 20
+        },
+        "lightly_obscured": true,
+        "difficult_terrain": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 300
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  4,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      5
+                    ]
+                  }
+                ]
+              },
+              "faces": 10
+            }
+          },
+          "damage_type": "piercing"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_ends_turn_in_area"
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      4,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 10
+                }
+              },
+              "damage_type": "piercing"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Conjuration (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 300 feet\n\n**Components:** V, S, M (a locust)\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Swarming locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The Sphere remains for the duration, and its area is Lightly Obscured and Difficult Terrain.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the swarm appears, each creature in it makes a Constitution saving throw, taking 4d10 Piercing damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell’s area for the first time on a turn or ends its turn there. A creature makes this save only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d10 for each spell slot level above 5.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/amount",
+        "/effects/1/then/0/on_fail/0/amount"
+      ]
+    }
+  ]
+}

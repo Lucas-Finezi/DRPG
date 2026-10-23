@@ -7,6 +7,9 @@ A ref resolves when it is
   - a rule entry for an outline section of a lot not built yet ("pending section").
 Anything else is an error (typo or invented ref).
 
+It also checks completeness: every expected inventory entry of a lot that has been built
+(at least one entry extracted by it) must exist.
+
 Usage: python3 -I tools/validate/refs.py
 """
 import json
@@ -46,10 +49,14 @@ def main():
             pending[sections[ref] + " (section)"] += 1
         else:
             errors.append(f"{src} -> {ref}")
+    missing = sorted(ref for ref, lot in expected.items() if lot in built and ref not in existing)
     for e in sorted(errors):
         print("UNRESOLVED", e)
-    print(json.dumps({"resolved": ok, "pending_future_lots": dict(sorted(pending.items())), "unresolved": len(errors)}))
-    return 1 if errors else 0
+    for ref in missing:
+        print("MISSING", ref, f"(expected from {expected[ref]})")
+    print(json.dumps({"resolved": ok, "pending_future_lots": dict(sorted(pending.items())), "unresolved": len(errors),
+                      "missing_expected_entries": len(missing)}))
+    return 1 if errors or missing else 0
 
 
 if __name__ == "__main__":

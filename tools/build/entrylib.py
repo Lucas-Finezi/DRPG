@@ -140,8 +140,10 @@ def render(nodes, heading_offset=None):
                           and (re.search(r"[,(]$", last) or re.search(r"\s([A-Z][a-z]+|\d+)$", last)
                                or re.search(r"\s(a|an|the|of|in|by|to|and|or|either|with|for|on|at|as|your|its|have)$", last)))
             # any paragraph that stops on a function word ("... equal to your" / "Charisma modifier")
-            word_wrap = (re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)
-                         and re.match(r"^[A-Z][a-z]", text))
+            word_wrap = ((re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)
+                          and re.match(r"^([A-Z][a-z]|\d)", text))
+                         or (re.search(r"\s\d+d\d+$", last) and re.match(r"^[A-Z][a-z]+ damage", text))  # "14d6" / "Necrotic damage"
+                         or (last.startswith("- ") and re.match(r"^\d+\+? [a-z]", text)))  # list item cut before a number
             # a labelled header line cut inside a parenthesis or after "or" ("**Components:** V, S, M
             # (a miniature sword worth" / "250+ GP)", "**Casting Time:** Action (Overgrowth) or" / "8 hours")
             header_wrap = (re.match(r"^\*\*[^*]+:\*\*", last)

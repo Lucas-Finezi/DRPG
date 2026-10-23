@@ -1,0 +1,216 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/modify-memory",
+  "kind": "spell",
+  "name": "Modify Memory",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      150
+    ],
+    "section": "Spells/Spell Descriptions/Modify Memory",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Enchantment (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nYou attempt to reshape another creature’s memories. One creature that you can see within range makes a Wisdom saving throw. If you are fighting the creature, it has Advantage on the save. On a failed save, the target has the Charmed condition for the duration. While Charmed in this way, the target also has the Incapacitated condition and is unaware of its surroundings, though it can hear you. If it takes any damage or is targeted by another spell, this spell ends, and no memories are modified.\n\nWhile this charm lasts, you can affect the target’s memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity, change its memory of the event’s details, or create a memory of some other event.\n\nYou must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you finish describing the modified memories, the creature’s memory isn’t altered. Otherwise, the modified memories take hold when the spell ends.\n\nA modified memory doesn’t necessarily affect how a creature behaves, particularly if the memory contradicts the creature’s natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The GM might deem a modified memory too nonsensical to affect a creature.\n\nA *Remove Curse* or *Greater Restoration* spell cast on the target restores the creature’s true memory.\n\n***Using a Higher-Level Spell Slot.*** You can alter the target’s memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature’s past (level 9 spell slot).",
+  "facets": {
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "memory",
+        "event_within_hours": 24,
+        "event_max_minutes": 10,
+        "options": [
+          "eliminate",
+          "perfect_recall",
+          "change_details",
+          "create_other"
+        ]
+      },
+      {
+        "id": "describe",
+        "target_must_understand": true,
+        "ends_early": "no_change",
+        "takes_hold_on_end": true
+      },
+      {
+        "id": "restored_by",
+        "spells": [
+          "dnd5e/spell/remove-curse",
+          "dnd5e/spell/greater-restoration"
+        ]
+      },
+      {
+        "id": "upcast",
+        "event_age_days": {
+          "scale": {
+            "by": "spell_slot_level",
+            "steps": [
+              {
+                "from": 5,
+                "value": 1
+              },
+              {
+                "from": 6,
+                "value": 7
+              },
+              {
+                "from": 7,
+                "value": 30
+              },
+              {
+                "from": 8,
+                "value": 365
+              }
+            ]
+          }
+        },
+        "slot_9": "any_time"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/charmed",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1,
+            "concentration": true,
+            "up_to": true
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/incapacitated",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1,
+            "concentration": true,
+            "up_to": true
+          }
+        }
+      ],
+      "note": "Advantage if you are fighting it; it is unaware of its surroundings but hears you; ends with no change if it takes damage or is targeted by another spell."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "memory_effect",
+      "reason": "gm_judgment",
+      "prompt": "Does the modified memory affect the creature's behavior, or is it too nonsensical?",
+      "source_text": "The GM might deem a modified memory too nonsensical to affect a creature."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Enchantment (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You attempt to reshape another creature’s memories. One creature that you can see within range makes a Wisdom saving throw. If you are fighting the creature, it has Advantage on the save. On a failed save, the target has the Charmed condition for the duration. While Charmed in this way, the target also has the Incapacitated condition and is unaware of its surroundings, though it can hear you. If it takes any damage or is targeted by another spell, this spell ends, and no memories are modified.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "While this charm lasts, you can affect the target’s memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity, change its memory of the event’s details, or create a memory of some other event.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you finish describing the modified memories, the creature’s memory isn’t altered. Otherwise, the modified memories take hold when the spell ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "A modified memory doesn’t necessarily affect how a creature behaves, particularly if the memory contradicts the creature’s natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The GM might deem a modified memory too nonsensical to affect a creature.",
+      "status": "master_decision",
+      "by": [
+        "md:memory_effect"
+      ]
+    },
+    {
+      "text": "A *Remove Curse* or *Greater Restoration* spell cast on the target restores the creature’s true memory.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can alter the target’s memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature’s past (level 9 spell slot).",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/incapacitated",
+    "dnd5e/spell/greater-restoration",
+    "dnd5e/spell/remove-curse"
+  ]
+}

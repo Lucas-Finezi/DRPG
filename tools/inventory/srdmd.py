@@ -45,6 +45,14 @@ def split_cells(row):
     return [strip_md(p) for p in parts]
 
 
+# (page, text) where a line of the Markdown joins the end of one paragraph with a paragraph
+# printed elsewhere by the PDF's column flow; the node is split before `text` (the text itself
+# is unchanged). The fragment's real owner is recorded in the inventory (relocated_fragments).
+PARAGRAPH_SPLITS = [
+    (109, "or make attacks with Ranged or Reach weapons through the barrier."),  # Antilife Shell, inside Animate Objects
+]
+
+
 def load(path):
     nodes, page, side = [], 0, False
     for raw in Path(path).read_text(encoding="utf-8").split("\n"):
@@ -70,7 +78,13 @@ def load(path):
                 cells[0] = cells[0][2:]
             nodes.append(Node(page, "t", raw, cells=cells, indented=indented, sidebar=side))
         else:
-            nodes.append(Node(page, "p", raw, sidebar=side))
+            cut = next((c for pg, c in PARAGRAPH_SPLITS if pg == page and c in raw and not raw.startswith(c)), None)
+            if cut:  # two paragraphs from different columns joined into one line: split them
+                k = raw.index(cut)
+                nodes.append(Node(page, "p", raw[:k].rstrip(), sidebar=side))
+                nodes.append(Node(page, "p", raw[k:], sidebar=side))
+            else:
+                nodes.append(Node(page, "p", raw, sidebar=side))
     for i, n in enumerate(nodes):
         n.index = i
         n.sidebar = n.sidebar or False

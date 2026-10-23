@@ -1,0 +1,301 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/reincarnate",
+  "kind": "spell",
+  "name": "Reincarnate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      158
+    ],
+    "section": "Spells/Spell Descriptions/Reincarnate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Necromancy (Druid)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (rare oils worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nYou touch a dead Humanoid or a piece of one. If the creature has been dead no longer than 10 days, the spell forms a new body for it and calls the soul to enter that body. Roll 1d10 and consult the table below to determine the body’s species, or the GM chooses another playable species.\n\n| **1d10** | **Species** | **1d10** | **Species** |\n| 1 | Roll again. | 6 | Goliath |\n| 2 | Dragonborn | 7 | Halfling |\n| 3 | Dwarf | 8 | Human |\n| 4 | Elf | 9 | Orc |\n| 5 | Gnome | 10 | Tiefling |\n\nThe reincarnated creature makes any choices that a species’ description offers, and the creature recalls its former life. It retains the capabilities it had in its original form, except it loses the traits of its previous species and gains the traits of its new one.",
+  "facets": {
+    "level": 5,
+    "school": "necromancy",
+    "classes": [
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 hour",
+      "cost": "time",
+      "minutes": 60
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "rare oils worth 1,000+ GP, which the spell consumes",
+      "material_cost_gp": 1000,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "tables": [
+      {
+        "id": "reincarnate",
+        "caption": "Reincarnate species",
+        "columns": [
+          "1d10",
+          "Species"
+        ],
+        "rows": [
+          [
+            "1",
+            "Roll again."
+          ],
+          [
+            "2",
+            "Dragonborn"
+          ],
+          [
+            "3",
+            "Dwarf"
+          ],
+          [
+            "4",
+            "Elf"
+          ],
+          [
+            "5",
+            "Gnome"
+          ],
+          [
+            "6",
+            "Goliath"
+          ],
+          [
+            "7",
+            "Halfling"
+          ],
+          [
+            "8",
+            "Human"
+          ],
+          [
+            "9",
+            "Orc"
+          ],
+          [
+            "10",
+            "Tiefling"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "result",
+        "keeps_capabilities": true,
+        "loses_old_species_traits": true,
+        "gains_new_species_traits": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "species",
+      "choose": 1,
+      "chooser": "random",
+      "options": [
+        {
+          "id": "reroll",
+          "label": "Roll again",
+          "roll": "1",
+          "effects": []
+        },
+        {
+          "id": "dragonborn",
+          "label": "Dragonborn",
+          "roll": "2",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/dragonborn"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dwarf",
+          "label": "Dwarf",
+          "roll": "3",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/dwarf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "elf",
+          "label": "Elf",
+          "roll": "4",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/elf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "label": "Gnome",
+          "roll": "5",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/gnome"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "goliath",
+          "label": "Goliath",
+          "roll": "6",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/goliath"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "halfling",
+          "label": "Halfling",
+          "roll": "7",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/halfling"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "human",
+          "label": "Human",
+          "roll": "8",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/human"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "orc",
+          "label": "Orc",
+          "roll": "9",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/orc"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tiefling",
+          "label": "Tiefling",
+          "roll": "10",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/species/tiefling"
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Dead no longer than 10 days; a dead Humanoid or a piece of one."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "other_species",
+      "reason": "gm_judgment",
+      "prompt": "Does the GM choose another playable species instead of rolling?",
+      "source_text": "Roll 1d10 and consult the table below to determine the body’s species, or the GM chooses another playable species."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Necromancy (Druid)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (rare oils worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a dead Humanoid or a piece of one. If the creature has been dead no longer than 10 days, the spell forms a new body for it and calls the soul to enter that body. Roll 1d10 and consult the table below to determine the body’s species, or the GM chooses another playable species.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:other_species"
+      ]
+    },
+    {
+      "text": "| **1d10** | **Species** | **1d10** | **Species** |\n| 1 | Roll again. | 6 | Goliath |\n| 2 | Dragonborn | 7 | Halfling |\n| 3 | Dwarf | 8 | Human |\n| 4 | Elf | 9 | Orc |\n| 5 | Gnome | 10 | Tiefling |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "The reincarnated creature makes any choices that a species’ description offers, and the creature recalls its former life. It retains the capabilities it had in its original form, except it loses the traits of its previous species and gains the traits of its new one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/species/dragonborn",
+    "dnd5e/species/dwarf",
+    "dnd5e/species/elf",
+    "dnd5e/species/gnome",
+    "dnd5e/species/goliath",
+    "dnd5e/species/halfling",
+    "dnd5e/species/human",
+    "dnd5e/species/orc",
+    "dnd5e/species/tiefling"
+  ]
+}

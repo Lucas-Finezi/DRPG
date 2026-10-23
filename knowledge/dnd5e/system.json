@@ -2601,6 +2601,22 @@
           134
         ],
         "lot": "L21"
+      },
+      {
+        "id": "ability_score_reduction",
+        "description": "Total reduction applied to the creature's ability scores.",
+        "pages": [
+          138
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "hp_max_reduction",
+        "description": "Total reduction applied to the creature's Hit Point maximum.",
+        "pages": [
+          138
+        ],
+        "lot": "L22"
       }
     ],
     "rolls": [
@@ -3390,6 +3406,33 @@
           172
         ],
         "lot": "L21"
+      },
+      {
+        "id": "enters_space_or_starts_turn_near_spirit",
+        "description": "A creature enters the spirit's space or starts its turn within 5 feet of it.",
+        "pages": [
+          119
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "condition_would_end",
+        "description": "An effect would end a condition (param) on the creature.",
+        "params": [
+          "condition"
+        ],
+        "pages": [
+          121
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "acts_against_command",
+        "description": "The Charmed creature acts in a manner directly counter to the command.",
+        "pages": [
+          137
+        ],
+        "lot": "L22"
       }
     ],
     "predicates": [
@@ -4870,6 +4913,24 @@
           153
         ],
         "lot": "L21"
+      },
+      {
+        "id": "spirit_restrains_creature",
+        "description": "The spirit already has a creature Restrained.",
+        "type": "predicate",
+        "pages": [
+          119
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "creature_type_chosen",
+        "description": "The creature is of a type chosen for the effect.",
+        "type": "predicate",
+        "pages": [
+          139
+        ],
+        "lot": "L22"
       }
     ],
     "frequencies": [
@@ -5794,6 +5855,38 @@
           134
         ],
         "lot": "L21"
+      },
+      {
+        "id": "pass_or_reach_through_barrier",
+        "description": "The creature can't pass or reach through the barrier.",
+        "pages": [
+          109
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "benefit_from_rest",
+        "description": "The creature gains no benefit from its rest.",
+        "pages": [
+          127
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "enter_area_willingly",
+        "description": "The creature can't willingly enter the area.",
+        "pages": [
+          139
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "teleport_or_planar_travel_in_area",
+        "description": "The creature can't enter or exit the area by teleportation or interplanar travel.",
+        "pages": [
+          139
+        ],
+        "lot": "L22"
       }
     ],
     "conditions": [
