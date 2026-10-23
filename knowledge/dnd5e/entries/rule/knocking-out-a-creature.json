@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/knocking-out-a-creature",
+  "kind": "rule",
+  "name": "Knocking Out a Creature",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      184
+    ],
+    "section": "Rules Glossary/Rules Definitions/Knocking Out a Creature",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the Unconscious condition and starts a Short Rest.\n\nThe creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "starts_short_rest",
+        "target_starts": "short_rest"
+      },
+      {
+        "id": "ends_when",
+        "regains_hit_points": true,
+        "first_aid": {
+          "cost": "action",
+          "check": {
+            "ability": "wis",
+            "skill": "medicine",
+            "dc": 10
+          }
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "would_drop_to_0_hp_by_melee"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "hp",
+          "mode": "set",
+          "value": 1,
+          "target": {
+            "kind": "inherit"
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/unconscious",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The creature then has the Unconscious condition and starts a Short Rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/unconscious"
+  ]
+}

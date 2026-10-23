@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/flying",
+  "kind": "rule",
+  "name": "Flying",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Flying",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "A variety of effects allow a creature to fly. While flying, you fall if you have the Incapacitated or Prone condition or your Fly Speed is reduced to 0. You can stay aloft in those circumstances if you can hover. *See also* “Falling” and “Fly Speed.”",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "falls_when",
+        "conditions": [
+          "dnd5e/condition/incapacitated",
+          "dnd5e/condition/prone"
+        ],
+        "fly_speed_zero": true,
+        "unless": "can_hover"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A variety of effects allow a creature to fly. While flying, you fall if you have the Incapacitated or Prone condition or your Fly Speed is reduced to 0. You can stay aloft in those circumstances if you can hover.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Falling” and “Fly Speed.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/hazard/falling",
+        "dnd5e/rule/fly-speed"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated",
+    "dnd5e/condition/prone",
+    "dnd5e/hazard/falling",
+    "dnd5e/rule/fly-speed"
+  ]
+}

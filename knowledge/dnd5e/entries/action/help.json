@@ -1,0 +1,158 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/help",
+  "kind": "action",
+  "name": "Help",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182,
+      183
+    ],
+    "section": "Rules Glossary/Rules Definitions/Help [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "When you take the Help action, you do one of the following.\n\n***Assist an Ability Check.*** Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has Advantage on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn’t use it before the start of your next turn. The GM has final say on whether your assistance is possible.\n\n***Assist an Attack Roll.*** You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "assist_check",
+        "choose": "skill_or_tool_proficiency",
+        "ally_must_be_near": true,
+        "uses": 1
+      },
+      {
+        "id": "assist_attack",
+        "enemy_within_feet": 5,
+        "uses": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Help",
+      "cost": "action",
+      "then": [
+        {
+          "op": "choice",
+          "choose": 1,
+          "options": [
+            {
+              "id": "assist_ability_check",
+              "label": "Assist an Ability Check",
+              "effects": [
+                {
+                  "op": "roll_mode",
+                  "mode": "advantage",
+                  "rolls": [
+                    "ability_check"
+                  ],
+                  "target": {
+                    "kind": "creature",
+                    "filter": {
+                      "allies_only": true
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self"
+                    }
+                  },
+                  "note": "Next check with the chosen skill or tool proficiency."
+                }
+              ]
+            },
+            {
+              "id": "assist_attack_roll",
+              "label": "Assist an Attack Roll",
+              "effects": [
+                {
+                  "op": "roll_mode",
+                  "mode": "advantage",
+                  "rolls": [
+                    "attack_roll"
+                  ],
+                  "direction": "against",
+                  "target": {
+                    "kind": "creature",
+                    "range": {
+                      "kind": "distance",
+                      "feet": 5
+                    },
+                    "filter": {
+                      "enemies_only": true
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self"
+                    }
+                  },
+                  "note": "Next attack roll by one of your allies against that enemy."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "assist_possible",
+      "reason": "gm_judgment",
+      "prompt": "Is this assistance possible here?",
+      "source_text": "The GM has final say on whether your assistance is possible.",
+      "pages": [
+        182
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Help action, you do one of the following.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Assist an Ability Check.*** Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has Advantage on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn’t use it before the start of your next turn.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The GM has final say on whether your assistance is possible.",
+      "status": "master_decision",
+      "by": [
+        "md:assist_possible"
+      ]
+    },
+    {
+      "text": "***Assist an Attack Roll.*** You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/ready",
+  "kind": "action",
+  "name": "Ready",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186,
+      187
+    ],
+    "section": "Rules Glossary/Rules Definitions/Ready [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "You take the Ready action to wait for a particular circumstance before you act. To do so, you take this action on your turn, which lets you act by taking a Reaction before the start of your next turn.\n\nFirst, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it. Examples include “If the cultist steps on the trapdoor, I’ll pull the lever that opens it,” and “If the zombie steps next to me, I move away.”\n\nWhen the trigger occurs, you can either take your Reaction right after the trigger finishes or ignore the trigger.\n\nWhen you Ready a spell, you cast it as normal (expending any resources used to cast it) but hold its energy, which you release with your Reaction when the trigger occurs. To be readied, a spell must have a casting time of an action, and holding on to the spell’s magic requires Concentration, which you can maintain up to the start of your next turn. If your Concentration is broken, the spell dissipates without taking effect.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "ready_timing",
+        "when": "right_after_trigger_finishes",
+        "may_ignore": true
+      },
+      {
+        "id": "ready_spell",
+        "resources_spent_on_ready": true,
+        "casting_time_required": "action",
+        "concentration_until": "turn_start",
+        "on_concentration_broken": "spell_dissipates"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Ready",
+      "cost": "action",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "readied_trigger"
+          },
+          "cost": "reaction",
+          "optional": true,
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_start",
+              "whose": "self"
+            }
+          },
+          "then": [
+            {
+              "op": "master_decision",
+              "decision": "readied_response"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "readied_response",
+      "reason": "player_choice_open",
+      "prompt": "The readied circumstance occurred: resolve the chosen action (or move up to Speed).",
+      "source_text": "First, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it.",
+      "pages": [
+        186
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You take the Ready action to wait for a particular circumstance before you act. To do so, you take this action on your turn, which lets you act by taking a Reaction before the start of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "First, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it. Examples include “If the cultist steps on the trapdoor, I’ll pull the lever that opens it,” and “If the zombie steps next to me, I move away.”",
+      "status": "master_decision",
+      "by": [
+        "md:readied_response"
+      ]
+    },
+    {
+      "text": "When the trigger occurs, you can either take your Reaction right after the trigger finishes or ignore the trigger.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you Ready a spell, you cast it as normal (expending any resources used to cast it) but hold its energy, which you release with your Reaction when the trigger occurs. To be readied, a spell must have a casting time of an action, and holding on to the spell’s magic requires Concentration, which you can maintain up to the start of your next turn. If your Concentration is broken, the spell dissipates without taking effect.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

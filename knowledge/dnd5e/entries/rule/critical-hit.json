@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/critical-hit",
+  "kind": "rule",
+  "name": "Critical Hit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      179
+    ],
+    "section": "Rules Glossary/Rules Definitions/Critical Hit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "If you roll a 20 on the d20 for an attack roll, you score a Critical Hit, and the attack hits regardless of any modifiers or the target’s AC. A Critical Hit lets you roll extra dice for the attack’s damage against the target. Roll all of the attack’s damage dice twice and add them together. Then add any relevant modifiers. *See also* “Playing the Game” (“Damage and Healing”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "critical_damage",
+        "damage_dice": "roll_twice",
+        "modifiers": "add_once"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "If you roll a 20 on the d20 for an attack roll, you score a Critical Hit, and the attack hits regardless of any modifiers or the target’s AC.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/5"
+      ]
+    },
+    {
+      "text": "A Critical Hit lets you roll extra dice for the attack’s damage against the target. Roll all of the attack’s damage dice twice and add them together. Then add any relevant modifiers.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“Damage and Healing”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/damage-and-healing"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-and-healing",
+    "dnd5e/system/dnd5e"
+  ]
+}

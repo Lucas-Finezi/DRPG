@@ -33,15 +33,20 @@ def main(lots):
 
     # owner lot per node: the last outline heading (levels 1-4, in document order) before it,
     # or the sidebar it belongs to
+    relocated = {t["caption"]: t["lot"] for t in outline.get("relocated_tables", [])}
     heads = [n for n in nodes if n.type == "h" and n.level <= 4 and not n.sidebar]
-    owner, k, current, side_lot = {}, 0, None, None
+    owner, k, current, side_lot, table_lot = {}, 0, None, None, None
     for n in nodes:
         if k < len(heads) and n is heads[k]:
             current = sections[k]["lot"]
             k += 1
         if n.sidebar and n.type == "h" and n.level == 5:
             side_lot = sidebars.get(n.text, current)
-        owner[n.index] = side_lot if n.sidebar else current
+        if n.type == "h" and n.level == 5 and not n.sidebar:
+            table_lot = relocated.get(n.text)
+        elif n.type != "t":
+            table_lot = None
+        owner[n.index] = side_lot if n.sidebar else (table_lot if table_lot and n.type in ("t", "h") else current)
 
     texts = defaultdict(str)
     for p in (ROOT / "knowledge").glob("*/entries/**/*.json"):

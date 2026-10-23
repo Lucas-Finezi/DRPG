@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/cover",
+  "kind": "rule",
+  "name": "Cover",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      179
+    ],
+    "section": "Rules Glossary/Rules Definitions/Cover",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "Cover provides a degree of protection to a target behind it. There are three degrees of cover, each of which provides a different benefit to a target: Half Cover (+2 bonus to AC and Dexterity saving throws), Three-Quarters Cover (+5 bonus to AC and Dexterity saving throws), and Total Cover (can’t be targeted directly). If behind more than one degree of cover, a target benefits only from the most protective degree. *See also* “Playing the Game” (“Combat”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cover_degrees",
+        "half": {
+          "ac": 2,
+          "dex_saves": 2
+        },
+        "three_quarters": {
+          "ac": 5,
+          "dex_saves": 5
+        },
+        "total": {
+          "targetable_directly": false
+        },
+        "multiple": "most_protective_only"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Cover provides a degree of protection to a target behind it. There are three degrees of cover, each of which provides a different benefit to a target: Half Cover (+2 bonus to AC and Dexterity saving throws), Three-Quarters Cover (+5 bonus to AC and Dexterity saving throws), and Total Cover (can’t be targeted directly). If behind more than one degree of cover, a target benefits only from the most protective degree.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“Combat”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/combat-cover"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/combat-cover"
+  ]
+}

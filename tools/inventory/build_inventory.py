@@ -192,6 +192,11 @@ SIDEBAR_LOTS = {
     "Magic Item Rules": "L31",
     "Running a Monster": "L33",
 }
+# Tables the PDF's column flow prints inside another section, with the lot that owns them.
+RELOCATED_TABLES = {
+    "Skills": "L05",                                 # printed inside "Actions" (p. 9)
+    "Starting Equipment at Higher Levels": "L02",    # printed inside "Multiclassing" (p. 24)
+}
 STAT_BLOCK_SECTIONS = {"Traits", "Actions", "Bonus Actions", "Reactions", "Legendary Actions"}
 
 SIZES = ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"]
@@ -832,7 +837,8 @@ def main():
     sidebars = build_sidebars(nodes)
     dump("outline.json", {"chapters": [{"title": c["title"], "page_start": c["page_start"],
                                         "page_end": c["page_end"]} for c in chapters], "sections": outline,
-                          "sidebars": sidebars})
+                          "sidebars": sidebars,
+                          "relocated_tables": [{"caption": c, "lot": l} for c, l in RELOCATED_TABLES.items()]})
     dump("tables.json", {"count": len(tables),
                          "by_type": dict(collections.Counter(t["type"] for t in tables)), "tables": tables})
     dump("entries.json", {"count": len(b.entries), "by_kind": dict(sorted(counts_kind.items())),

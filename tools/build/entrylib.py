@@ -344,8 +344,11 @@ def build(kind, slug, name, nodes, lot, section_path, items, text=None, **kw):
     data = dict(kw.pop("data", {}) or {})
     effects = list(kw.pop("effects", []) or [])
     mds = list(kw.pop("master_decisions", []) or [])
+    text = text if text is not None else render(nodes)
     segments = []  # [anchor, set_of_tags, by]
     for anchor, tag, payload in items:
+        if anchor is not None and text.startswith(anchor):
+            anchor = None  # an anchor at the very start is the first segment
         if not segments or segments[-1][0] != anchor:
             segments.append([anchor, set(), []])
         seg = segments[-1]

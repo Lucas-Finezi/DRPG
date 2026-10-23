@@ -1,0 +1,82 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/climbing",
+  "kind": "rule",
+  "name": "Climbing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      178,
+      179
+    ],
+    "section": "Rules Glossary/Rules Definitions/Climbing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "While you’re climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Climb Speed and use it to climb.\n\nAt the GM’s option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "climb_cost",
+        "extra_feet_per_foot": 1,
+        "extra_in_difficult_terrain": 2,
+        "ignored_with": "climb_speed"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "climb_check",
+      "reason": "gm_judgment",
+      "prompt": "Does this surface require a DC 15 Strength (Athletics) check?",
+      "source_text": "At the GM’s option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.",
+      "options": [
+        {
+          "id": "check",
+          "label": "DC 15 Strength (Athletics)",
+          "effects": [
+            {
+              "op": "check",
+              "ability": "str",
+              "skill": "athletics",
+              "dc": 15
+            }
+          ]
+        },
+        {
+          "id": "no_check",
+          "label": "No check"
+        }
+      ],
+      "pages": [
+        178
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you’re climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Climb Speed and use it to climb.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "At the GM’s option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.",
+      "status": "master_decision",
+      "by": [
+        "md:climb_check"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/fly-speed",
+  "kind": "rule",
+  "name": "Fly Speed",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Fly Speed",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. *See also* “Flying” and “Speed.”",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "stay_aloft",
+        "until": [
+          "land",
+          "fall",
+          "die"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Fly Speed can be used to travel through the air.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/movement_modes/3"
+      ]
+    },
+    {
+      "text": "While you have a Fly Speed, you can stay aloft until you land, fall, or die.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Flying” and “Speed.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/flying",
+        "dnd5e/rule/speed"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/flying",
+    "dnd5e/rule/speed",
+    "dnd5e/system/dnd5e"
+  ]
+}

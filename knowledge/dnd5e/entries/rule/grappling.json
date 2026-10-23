@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/grappling",
+  "kind": "rule",
+  "name": "Grappling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Grappling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "A creature can grapple another creature. Characters typically grapple by using an Unarmed Strike. Many monsters have special attacks that allow them to quickly grapple prey. However a grapple is initiated, it follows these rules. *See also* “Unarmed Strike” and “Grappled.”\n\n***Grappled Condition.*** Successfully grappling a creature gives it the Grappled condition.\n\n***One Grapple per Hand.*** A creature must have a hand free to grapple another creature. Some stat blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part. Whatever part a grappler uses, it can grapple only one creature at a time with that part, and the grappler can’t use that part to target another creature unless it ends the grapple.\n\n***Ending a Grapple.*** A Grappled creature can use its action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple’s escape DC, ending the condition on itself on a success. The condition also ends if the grappler has the Incapacitated condition or if the distance between the Grappled target and the grappler exceeds the grapple’s range. In addition, the grappler can release the target at any time (no action required).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "one_grapple_per_part",
+        "requires_free_hand": true,
+        "creatures_per_part": 1,
+        "part_cannot_target_others_until_released": true
+      },
+      {
+        "id": "grapple_ends",
+        "when": [
+          "grappler_incapacitated",
+          "distance_exceeds_grapple_range",
+          "grappler_releases"
+        ],
+        "release_cost": "none"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/grappled"
+    },
+    {
+      "op": "activation",
+      "name": "Escape a grapple",
+      "cost": "action",
+      "requires": {
+        "pred": "has_condition",
+        "args": {
+          "condition": "grappled"
+        }
+      },
+      "then": [
+        {
+          "op": "check",
+          "ability": {
+            "choose_from": [
+              "str",
+              "dex"
+            ]
+          },
+          "skill": {
+            "choose_from": [
+              "athletics",
+              "acrobatics"
+            ]
+          },
+          "dc": {
+            "var": "escape_dc"
+          },
+          "on_success": [
+            {
+              "op": "remove_condition",
+              "conditions": [
+                "dnd5e/condition/grappled"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature can grapple another creature. Characters typically grapple by using an Unarmed Strike. Many monsters have special attacks that allow them to quickly grapple prey.",
+      "status": "descriptive"
+    },
+    {
+      "text": "However a grapple is initiated, it follows these rules. *See also* “Unarmed Strike” and “Grappled.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/unarmed-strike",
+        "dnd5e/condition/grappled"
+      ]
+    },
+    {
+      "text": "***Grappled Condition.*** Successfully grappling a creature gives it the Grappled condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***One Grapple per Hand.*** A creature must have a hand free to grapple another creature. Some stat blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part. Whatever part a grappler uses, it can grapple only one creature at a time with that part, and the grappler can’t use that part to target another creature unless it ends the grapple.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Ending a Grapple.*** A Grappled creature can use its action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple’s escape DC, ending the condition on itself on a success. The condition also ends if the grappler has the Incapacitated condition or if the distance between the Grappled target and the grappler exceeds the grapple’s range. In addition, the grappler can release the target at any time (no action required).",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/rule/unarmed-strike"
+  ]
+}

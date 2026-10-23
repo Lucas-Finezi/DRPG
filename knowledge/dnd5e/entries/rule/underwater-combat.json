@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/underwater-combat",
+  "kind": "rule",
+  "name": "Underwater Combat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      16
+    ],
+    "section": "Playing the Game/Combat/Underwater Combat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "A fight underwater follows these rules.\n\n#### Impeded Weapons\n\nWhen making a melee attack roll with a weapon underwater, a creature that lacks a Swim Speed has Disadvantage on the attack roll unless the weapon deals Piercing damage.\n\nA ranged attack roll with a weapon underwater automatically misses a target beyond the weapon’s normal range, and the attack roll has Disadvantage against a target within normal range.\n\n#### Fire Resistance\n\nAnything underwater has Resistance to Fire damage (explained in “Damage and Healing”).",
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll.melee_weapon"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "underwater"
+          },
+          {
+            "not": {
+              "pred": "has_speed",
+              "args": {
+                "movement_mode": "swim"
+              }
+            }
+          },
+          {
+            "not": {
+              "pred": "deals_damage_type",
+              "args": {
+                "damage_type": "piercing"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "attack_roll.ranged_weapon"
+      ],
+      "result": "miss",
+      "when": {
+        "all": [
+          {
+            "pred": "underwater"
+          },
+          {
+            "pred": "beyond_normal_range"
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll.ranged_weapon"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "underwater"
+          },
+          {
+            "not": {
+              "pred": "beyond_normal_range"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "fire"
+      ],
+      "when": {
+        "pred": "underwater"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A fight underwater follows these rules.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Impeded Weapons\n\nWhen making a melee attack roll with a weapon underwater, a creature that lacks a Swim Speed has Disadvantage on the attack roll unless the weapon deals Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A ranged attack roll with a weapon underwater automatically misses a target beyond the weapon’s normal range, and the attack roll has Disadvantage against a target within normal range.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "#### Fire Resistance\n\nAnything underwater has Resistance to Fire damage (explained in “Damage and Healing”).",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ]
+}

@@ -621,6 +621,54 @@
           181
         ],
         "lot": "L03"
+      },
+      {
+        "id": "target_ability_score",
+        "description": "An ability score of the target of the current effect.",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "check_total",
+        "description": "Total of the ability check just made.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "height",
+        "description": "The creature's height in feet.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "jump_height",
+        "description": "Height in feet of the current High Jump.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "escape_dc",
+        "description": "Escape DC of the grapple affecting the creature.",
+        "type": "number",
+        "pages": [
+          182
+        ],
+        "lot": "L04"
       }
     ],
     "stats": [
@@ -741,6 +789,38 @@
           186
         ],
         "lot": "L03"
+      },
+      {
+        "id": "movement",
+        "description": "Movement (feet) available to the creature this turn.",
+        "pages": [
+          180
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "provokes_opportunity_attacks",
+        "description": "Whether the creature's movement provokes Opportunity Attacks (1 or 0).",
+        "pages": [
+          181
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "reach",
+        "description": "Reach in feet (default 5).",
+        "pages": [
+          186
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "hp",
+        "description": "Current Hit Points.",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
       }
     ],
     "rolls": [
@@ -900,6 +980,71 @@
           191
         ],
         "lot": "L03"
+      },
+      {
+        "id": "leaves_reach",
+        "description": "A creature the reactor can see leaves its reach (using its action, Bonus Action, Reaction or one of its speeds).",
+        "type": "event",
+        "pages": [
+          15,
+          185
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "would_drop_to_0_hp_by_melee",
+        "description": "The creature would reduce another creature to 0 Hit Points with a melee attack.",
+        "type": "event",
+        "pages": [
+          17,
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "readied_trigger",
+        "description": "The perceivable circumstance chosen with the Ready action occurs.",
+        "type": "event",
+        "pages": [
+          186
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "regains_hit_points",
+        "description": "The creature regains any Hit Points.",
+        "type": "event",
+        "pages": [
+          17
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "attack_roll_made",
+        "description": "The creature makes an attack roll.",
+        "type": "event",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "mount_moved_against_will",
+        "description": "An effect is about to move the creature's mount against its will.",
+        "type": "event",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "knocked_prone_while_mounted",
+        "description": "The rider or its mount is knocked Prone.",
+        "type": "event",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
       }
     ],
     "predicates": [
@@ -1068,6 +1213,139 @@
           182
         ],
         "lot": "L03"
+      },
+      {
+        "id": "heavily_obscured",
+        "description": "The creature is in a Heavily Obscured area.",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "behind_cover",
+        "description": "The creature is behind cover of a degree ('half', 'three_quarters', 'total') or better.",
+        "params": [
+          "degree"
+        ],
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_enemy_line_of_sight",
+        "description": "The creature is in any enemy's line of sight.",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "hidden",
+        "description": "The creature is hidden (Hide action).",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "underwater",
+        "description": "The creature or attack is underwater.",
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "has_speed",
+        "description": "The creature has the movement mode (param).",
+        "params": [
+          "movement_mode"
+        ],
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "deals_damage_type",
+        "description": "The weapon or attack deals the damage type (param).",
+        "params": [
+          "damage_type"
+        ],
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "beyond_normal_range",
+        "description": "The target is beyond the attack's normal range.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "beyond_long_range",
+        "description": "The target is beyond the attack's long (or single) range.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "enemy_within_feet_sees",
+        "description": "An enemy within 'feet' can see the creature and doesn't have the Incapacitated condition.",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "moved_on_foot_before",
+        "description": "The creature moved at least 'feet' on foot immediately before (jumps).",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          183,
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_difficult_terrain",
+        "description": "The space is Difficult Terrain.",
+        "type": "predicate",
+        "pages": [
+          181
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "mounted",
+        "description": "The creature is riding a mount.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
       }
     ],
     "frequencies": [

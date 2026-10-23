@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/initiative",
+  "kind": "rule",
+  "name": "Initiative",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      184
+    ],
+    "section": "Rules Glossary/Rules Definitions/Initiative",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "Initiative determines the order of turns during combat. The combat rules in “Playing the Game” explain how to roll Initiative.\n\nSometimes a GM might have combatants use their Initiative scores instead of rolling Initiative. Your Initiative score equals 10 plus your Dexterity modifier. If you have Advantage on Initiative rolls, increase your Initiative score by 5. If you have Disadvantage on those rolls, decrease that score by 5. *See also* “Playing the Game” (“Combat”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "initiative_score",
+        "score": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "ability_mod.dex"
+            }
+          ]
+        },
+        "advantage": 5,
+        "disadvantage": -5
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "initiative_scores",
+      "reason": "gm_judgment",
+      "prompt": "Use Initiative scores instead of rolling?",
+      "source_text": "Sometimes a GM might have combatants use their Initiative scores instead of rolling Initiative.",
+      "when": "campaign_setup",
+      "options": [
+        {
+          "id": "roll",
+          "label": "Roll Initiative"
+        },
+        {
+          "id": "score",
+          "label": "Use Initiative scores"
+        }
+      ],
+      "pages": [
+        184
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Initiative determines the order of turns during combat. The combat rules in “Playing the Game” explain how to roll Initiative.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative"
+      ]
+    },
+    {
+      "text": "Sometimes a GM might have combatants use their Initiative scores instead of rolling Initiative.",
+      "status": "master_decision",
+      "by": [
+        "md:initiative_scores"
+      ]
+    },
+    {
+      "text": "Your Initiative score equals 10 plus your Dexterity modifier. If you have Advantage on Initiative rolls, increase your Initiative score by 5. If you have Disadvantage on those rolls, decrease that score by 5.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“Combat”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/combat"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/combat",
+    "dnd5e/system/dnd5e"
+  ]
+}

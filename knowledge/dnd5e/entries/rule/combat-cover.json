@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/combat-cover",
+  "kind": "rule",
+  "name": "Cover",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      15
+    ],
+    "section": "Playing the Game/Combat/Cover",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "Walls, trees, creatures, and other obstacles can provide cover, making a target more difficult to harm. As detailed in the Cover table, there are three degrees of cover, each of which gives a different benefit to a target.\n\nA target can benefit from cover only when an attack or other effect originates on the opposite side of the cover. If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren’t added together. For example, if a target is behind a creature that gives Half Cover and a tree trunk that gives Three-Quarters Cover, the target has Three-Quarters Cover.\n\n##### Cover\n\n| **Degree** | **Benefit to Target** | **Offered By …** |\n| Half | +2 bonus to AC and Dexterity saving throws | Another creature or an object that covers at least half of the target |\n\nThree- Quarters\n\n+5 bonus to AC and Dexterity saving throws\n\nAn object that covers at least three-quarters of the target\n\n| Total | Can’t be targeted directly | An object that covers the whole target |",
+  "data": {
+    "rules": [
+      {
+        "id": "cover_applies",
+        "only_if_effect_originates_opposite_side": true,
+        "multiple": "most_protective_only"
+      }
+    ],
+    "tables": [
+      {
+        "id": "cover",
+        "caption": "Cover",
+        "columns": [
+          "Degree",
+          "Benefit to Target",
+          "Offered By …"
+        ],
+        "rows": [
+          [
+            "Half",
+            "+2 bonus to AC and Dexterity saving throws",
+            "Another creature or an object that covers at least half of the target"
+          ],
+          [
+            "Three-Quarters",
+            "+5 bonus to AC and Dexterity saving throws",
+            "An object that covers at least three-quarters of the target"
+          ],
+          [
+            "Total",
+            "Can’t be targeted directly",
+            "An object that covers the whole target"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "behind_cover",
+        "args": {
+          "degree": "half"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "saving_throw.dex",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "behind_cover",
+        "args": {
+          "degree": "half"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 5,
+      "when": {
+        "pred": "behind_cover",
+        "args": {
+          "degree": "three_quarters"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "saving_throw.dex",
+      "mode": "add",
+      "value": 5,
+      "when": {
+        "pred": "behind_cover",
+        "args": {
+          "degree": "three_quarters"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Walls, trees, creatures, and other obstacles can provide cover, making a target more difficult to harm. As detailed in the Cover table, there are three degrees of cover, each of which gives a different benefit to a target.\n\nA target can benefit from cover only when an attack or other effect originates on the opposite side of the cover. If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren’t added together. For example, if a target is behind a creature that gives Half Cover and a tree trunk that gives Three-Quarters Cover, the target has Three-Quarters Cover.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Cover\n\n| **Degree** | **Benefit to Target** | **Offered By …** |\n| Half | +2 bonus to AC and Dexterity saving throws | Another creature or an object that covers at least half of the target |\n\nThree- Quarters\n\n+5 bonus to AC and Dexterity saving throws\n\nAn object that covers at least three-quarters of the target\n\n| Total | Can’t be targeted directly | An object that covers the whole target |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ]
+}

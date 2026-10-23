@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/disengage",
+  "kind": "action",
+  "name": "Disengage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Disengage [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "If you take the Disengage action, your movement doesn’t provoke Opportunity Attacks for the rest of the current turn.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Disengage",
+      "cost": "action",
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "provokes_opportunity_attacks",
+          "mode": "set",
+          "value": 0,
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "self"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you take the Disengage action, your movement doesn’t provoke Opportunity Attacks for the rest of the current turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/magic",
+  "kind": "action",
+  "name": "Magic",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      185
+    ],
+    "section": "Rules Glossary/Rules Definitions/Magic [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "When you take the Magic action, you cast a spell that has a casting time of an action or use a feature or magic item that requires a Magic action to be activated.\n\nIf you cast a spell that has a casting time of 1 minute or longer, you must take the Magic action on each turn of that casting, and you must maintain Concentration while you do so. If your Concentration is broken, the spell fails, but you don’t expend a spell slot. *See also* “Concentration.”",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "long_casting",
+        "magic_action_each_turn": true,
+        "concentration_required": true,
+        "on_concentration_broken": {
+          "spell_fails": true,
+          "slot_expended": false
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Magic",
+      "cost": "action",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/casting-spells",
+          "note": "Cast a spell with a casting time of an action, or use a feature or magic item that requires a Magic action."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Magic action, you cast a spell that has a casting time of an action or use a feature or magic item that requires a Magic action to be activated.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you cast a spell that has a casting time of 1 minute or longer, you must take the Magic action on each turn of that casting, and you must maintain Concentration while you do so. If your Concentration is broken, the spell fails, but you don’t expend a spell slot.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Concentration.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/concentration"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/casting-spells",
+    "dnd5e/rule/concentration"
+  ]
+}
