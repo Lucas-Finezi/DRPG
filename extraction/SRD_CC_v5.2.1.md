@@ -99,9 +99,7 @@ Properties...................................................89 Mastery Properti
 
 **Animals................................................. 344**
 
-# Index of Stat
-
-# Blocks
+# Index of Stat Blocks
 
 Aboleth...........................................................258 Adult Black Dragon..................................264 Adult Blue Dragon.....................................266 Adult Brass Dragon..................................268 Adult Bronze Dragon............................... 270 Adult Copper Dragon................................276 Adult Gold Dragon....................................291 Adult Green Dragon.................................294 Adult Red Dragon...................................... 318 Adult Silver Dragon.................................. 324 Adult White Dragon.................................340 Air Elemental..............................................258 Allosaurus.....................................................344 Ancient Black Dragon..............................265 Ancient Blue Dragon................................ 267 Ancient Brass Dragon.............................269 Ancient Bronze Dragon.......................... 271 Ancient Copper Dragon..........................277 Ancient Gold Dragon...............................292 Ancient Green Dragon............................294 Ancient Red Dragon..................................319 Ancient Silver Dragon............................. 325 Ancient White Dragon............................ 341 Animated Armor....................................... 259 Animated Flying Sword......................... 259 Animated Rug of Smothering.............. 259
 
@@ -962,7 +960,7 @@ Here are the main ways a creature can die instantly.
 
 #### Character Demise
 
-If your character dies, others might find a magical way to revive your character, such as with the *Raise* *Dead* spell. Or talk with the GM about making a new character to join the group. “Rules Glossary” has more information on being dead.
+If your character dies, others might find a magical way to revive your character, such as with the *Raise Dead* spell. Or talk with the GM about making a new character to join the group. “Rules Glossary” has more information on being dead.
 
 #### Falling Unconscious
 
@@ -1012,9 +1010,7 @@ If you have 0 Hit Points, receiving Temporary Hit Points doesn’t restore you t
 
 <!-- page 19 -->
 
-# Character
-
-# Creation
+# Character Creation
 
 ## Choose a Character Sheet
 
@@ -1040,30 +1036,21 @@ Choose a class, and write it on your character sheet. The Class Overview table s
 
 ##### Class Overview
 
-| **Class** | **Likes ...** | **Primary** **Ability** | **Complexity** |
+| **Class** | **Likes ...** | **Primary Ability** | **Complexity** |
 | Barbarian Battle | Strength | Average |
 | Bard | Performing | Charisma | High |
 | Cleric | Gods | Wisdom | Average |
 | Druid | Nature | Wisdom | High |
-| Fighter | Weapons | Strength or Dexterity |
-
-Low
-
+| Fighter | Weapons | Strength or Dexterity | Low |
 | Monk | Unarmed combat |
 
 Dexterity and Wisdom
 
 High
 
-| Paladin | Defense | Strength and Charisma |
-
-Average
-
-| Ranger | Survival | Dexterity and Wisdom |
-
-Average
-
-| **Class** | **Likes ...** | **Primary** **Ability** | **Complexity** |
+| Paladin | Defense | Strength and Charisma | Average |
+| Ranger | Survival | Dexterity and Wisdom | Average |
+| **Class** | **Likes ...** | **Primary Ability** | **Complexity** |
 | Rogue | Stealth | Dexterity | Low |
 | Sorcerer | Power | Charisma | High |
 | Warlock | Occult lore | Charisma | High |
@@ -1443,7 +1430,7 @@ In tier 1, characters are apprentice adventurers, though they are already set ap
 
 #### Tier 2 (Levels 5–10)
 
-In tier 2, characters are full-fledged adventurers. Spellcasters gain iconic spells such as *Fireball*, *Light**ning Bolt*, and *Raise Dead*. Most weapon-focused classes gain the ability to make multiple attacks in a round. The characters now face dangers that threaten cities and kingdoms.
+In tier 2, characters are full-fledged adventurers. Spellcasters gain iconic spells such as *Fireball*, *Lightning Bolt*, and *Raise Dead*. Most weapon-focused classes gain the ability to make multiple attacks in a round. The characters now face dangers that threaten cities and kingdoms.
 
 #### Tier 3 (Levels 11–16)
 
@@ -1481,17 +1468,9 @@ To qualify for a new class, you must have a score of at least 13 in the primary 
 
 | **Starting Level** | **Equipment and Money** | **Magic Items** |
 | 2–4 | Normal starting equipment | 1 Common |
-| 5–10 | 500 GP plus 1d10 × 25 GP plus normal starting equipment |
-
-1 Common, 1 Uncommon
-
-| 11–16 | 5,000 gp plus 1d10 × 250 GP plus normal starting equipment |
-
-2 Common, 3 Uncommon, 1 Rare
-
-| 17–20 | 20,000 GP plus 1d10 × 250 GP plus normal starting equipment |
-
-2 Common, 4 Uncommon, 3 Rare, 1 Very Rare
+| 5–10 | 500 GP plus 1d10 × 25 GP plus normal starting equipment | 1 Common, 1 Uncommon |
+| 11–16 | 5,000 gp plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 3 Uncommon, 1 Rare |
+| 17–20 | 20,000 GP plus 1d10 × 250 GP plus normal starting equipment | 2 Common, 4 Uncommon, 3 Rare, 1 Very Rare |
 
 <!-- page 25 -->
 
@@ -1891,9 +1870,7 @@ You gain an Epic Boon feat (see “Feats”) or another feat of your choice for 
 
 You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.
 
-### Barbarian Subclass:
-
-### Path of the Berserker
+### Barbarian Subclass: Path of the Berserker
 
 *Channel Rage into Violent Fury*
 
@@ -1967,11 +1944,10 @@ You can supernaturally inspire others through words, music, or dance. This inspi
 ##### Bard Features
 
 | **Proficiency** | **Bardic** | **Prepared** | **——Spell Slots per Spell Level——** |
-| **Level** | **Bonus** | **Class Features** | **Die** | **Cantrips** | **Spells** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
-| 1 | +2 | Bardic Inspiration, Spellcasting |
-| D6 | 2 | 4 | 2 | — | — | — | — | — | — | — | — |
-| 2 | +2 | Expertise, Jack of All Trades |
-| D6 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |
+| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Bonus** | **Die** | **Spells** |
+| 1 | +2 | Bardic Inspiration, Spellcasting | D6 | 2 | 4 | 2 | — | — | — | — | — | — | — | — |
+| 2 | +2 | Expertise, Jack of All Trades | D6 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |
 | 3 | +2 | Bard Subclass | D6 | 2 | 6 | 4 | 2 | — | — | — | — | — | — | — |
 | 4 | +2 | Ability Score Improvement | D6 | 3 | 7 | 4 | 3 | — | — | — | — | — | — | — |
 | 5 | +3 | Font of Inspiration | D8 | 3 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |
@@ -2005,7 +1981,7 @@ Once within the next hour when the creature fails a D20 Test, the creature can r
 
 You have learned to cast spells through your bardic arts. See “Spells” for the rules on spellcasting. The information below details how you use those rules with Bard spells, which appear in the Bard spell list later in the class’s description.
 
-***Cantrips.*** You know two cantrips of your choice from the Bard spell list. *Dancing Lights* and *Vicious* *Mockery* are recommended.
+***Cantrips.*** You know two cantrips of your choice from the Bard spell list. *Dancing Lights* and *Vicious Mockery* are recommended.
 
 Whenever you gain a Bard level, you can replace one of your cantrips with another cantrip of your choice from the Bard spell list.
 
@@ -2013,7 +1989,7 @@ When you reach Bard levels 4 and 10, you learn another cantrip of your choice fr
 
 ***Spell Slots.*** The Bard Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.
 
-***Prepared Spells of Level 1+.*** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Bard spell list. *Charm Person*, *Color* *Spray*, *Dissonant Whispers*, and *Healing Word* are recommended.
+***Prepared Spells of Level 1+.*** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Bard spell list. *Charm Person*, *Color Spray*, *Dissonant Whispers*, and *Healing Word* are recommended.
 
 The number of spells on your list increases as you gain Bard levels, as shown in the Prepared Spells column of the Bard Features table. Whenever that number increases, choose additional spells from the Bard spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you’re a level 3 Bard, your list of 
 
@@ -2255,9 +2231,7 @@ This section presents the Bard spell list. The spells are organized by spell lev
 | *Prismatic Wall* | Abjuration | — |
 | *True Polymorph* | Transmutation | C |
 
-### Bard Subclass:
-
-### College of Lore
+### Bard Subclass: College of Lore
 
 *Plumb the Depths of Magical Knowledge*
 
@@ -2334,7 +2308,8 @@ Whenever you gain a Cleric level, you can replace one of your cantrips with anot
 **——Spell Slots per Spell Level——**
 
 | **Proficiency** | **Channel** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Divinity** | **Cantrips** | **Spells** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Bonus** | **Divinity** | **Spells** |
 | 1 | +2 | Spellcasting, Divine Order | — | 3 | 4 | 2 | — | — | — | — | — | — | — | — |
 | 2 | +2 | Channel Divinity | 2 | 3 | 5 | 3 | — | — | — | — | — | — | — | — |
 | 3 | +2 | Cleric Subclass | 2 | 3 | 6 | 4 | 2 | — | — | — | — | — | — | — |
@@ -2362,7 +2337,7 @@ When you reach Cleric levels 4 and 10, you learn another cantrip of your choice 
 
 ***Spell Slots.*** The Cleric Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.
 
-***Prepared Spells of Level 1+.*** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Cleric spell list. *Bless*, *Cure Wounds*, *Guiding* *Bolt*, and *Shield of Faith* are recommended.
+***Prepared Spells of Level 1+.*** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose four level 1 spells from the Cleric spell list. *Bless*, *Cure Wounds*, *Guiding Bolt*, and *Shield of Faith* are recommended.
 
 The number of spells on your list increases as you gain Cleric levels, as shown in the Prepared Spells column of the Cleric Features table. Whenever that number increases, choose additional spells from the Cleric spell list until the number of spells on your list matches the number on the table. The chosen spells must be of a level for which you have spell slots. For example, if you’re a level 3 Cleric, your list of prepared spells can include six spells of levels 1 and 2 in any combination.
 
@@ -2686,11 +2661,10 @@ You have learned to cast spells through studying the mystical forces of nature. 
 **——Spell Slots per Spell Level——**
 
 | **Proficiency** | **Wild** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Shape** | **Cantrips** | **Spells** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
-| 1 | +2 | Spellcasting, Druidic, Primal Order |
-| — | 2 | 4 | 2 | — | — | — | — | — | — | — | — |
-| 2 | +2 | Wild Shape, Wild Companion |
-| 2 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |
+| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Bonus** | **Shape** | **Spells** |
+| 1 | +2 | Spellcasting, Druidic, Primal Order | — | 2 | 4 | 2 | — | — | — | — | — | — | — | — |
+| 2 | +2 | Wild Shape, Wild Companion | 2 | 2 | 5 | 3 | — | — | — | — | — | — | — | — |
 | 3 | +2 | Druid Subclass | 2 | 2 | 6 | 4 | 2 | — | — | — | — | — | — | — |
 | 4 | +2 | Ability Score Improvement | 2 | 3 | 7 | 4 | 3 | — | — | — | — | — | — | — |
 | 5 | +3 | Wild Resurgence | 2 | 3 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |
@@ -2714,7 +2688,7 @@ You have learned to cast spells through studying the mystical forces of nature. 
 
 how you use those rules with Druid spells, which appear on the Druid spell list later in the class’s description.
 
-***Cantrips.*** You know two cantrips of your choice from the Druid spell list. *Druidcraft* and *Produce* *Flame* are recommended.
+***Cantrips.*** You know two cantrips of your choice from the Druid spell list. *Druidcraft* and *Produce Flame* are recommended.
 
 Whenever you gain a Druid level, you can replace one of your cantrips with another cantrip of your choice from the Druid spell list.
 
@@ -3016,9 +2990,7 @@ This section presents the Druid spell list. The spells are organized by spell le
 
 <!-- page 46 -->
 
-### Druid Subclass:
-
-### Circle of the Land
+### Druid Subclass: Circle of the Land
 
 *Celebrate Connection to the Natural World*
 
@@ -3287,7 +3259,7 @@ Strength and Dexterity
 
 weapons that have the Light property
 
-| **Tool Proficiencies** | *Choose one type of Artisan’s* *Tools or Musical Instrument* (see “Equipment”) |
+| **Tool Proficiencies** | *Choose one type of Artisan’s Tools or Musical Instrument* (see “Equipment”) |
 | **Armor Training** | None |
 | **Starting Equipment** | *Choose A or B:* (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP |
 
@@ -3350,8 +3322,7 @@ Some features that use Focus Points require your target to make a saving throw. 
 | **Proficiency** | **Martial** | **Focus** | **Unarmored** |
 | **Level** | **Bonus** | **Class Features** | **Arts** | **Points** | **Movement** |
 | 1 | +2 | Martial Arts, Unarmored Defense | 1d6 | — | — |
-| 2 | +2 | Monk’s Focus, Unarmored Movement, Uncanny Metabolism |
-| 1d6 | 2 | +10 ft. |
+| 2 | +2 | Monk’s Focus, Unarmored Movement, Uncanny Metabolism | 1d6 | 2 | +10 ft. |
 | 3 | +2 | Deflect Attacks, Monk Subclass | 1d6 | 3 | +10 ft. |
 | 4 | +2 | Ability Score Improvement, Slow Fall | 1d6 | 4 | +10 ft. |
 | 5 | +3 | Extra Attack, Stunning Strike | 1d8 | 5 | +10 ft. |
@@ -3473,9 +3444,7 @@ You gain an Epic Boon feat (see “Feats”) or another feat of your choice for 
 
 You have developed your body and mind to new heights. Your Dexterity and Wisdom scores increase by 4, to a maximum of 25.
 
-### Monk Subclass: Warrior of the
-
-### Open Hand
+### Monk Subclass: Warrior of the Open Hand
 
 *Master Unarmed Combat Techniques*
 
@@ -3556,9 +3525,9 @@ Your blessed touch can heal wounds. You have a pool of healing power that replen
 **—Spell Slots per Spell Level—**
 
 | **Proficiency** | **Channel** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Divinity** | **Spells** | **1** | **2** | **3** | **4** | **5** |
-| 1 | +2 | Lay On Hands, Spellcasting, Weapon Mastery |
-| — | 2 | 2 | — | — | — | — |
+| **Level** | **Class Features** | **1** | **2** | **3** | **4** | **5** |
+| **Bonus** | **Divinity** | **Spells** |
+| 1 | +2 | Lay On Hands, Spellcasting, Weapon Mastery | — | 2 | 2 | — | — | — | — |
 | 2 | +2 | Fighting Style, Paladin’s Smite | — | 3 | 2 | — | — | — | — |
 | 3 | +2 | Channel Divinity, Paladin Subclass | 2 | 4 | 3 | — | — | — | — |
 | 4 | +2 | Ability Score Improvement | 2 | 5 | 3 | — | — | — | — |
@@ -3887,9 +3856,9 @@ Your training with weapons allows you to use the mastery properties of two kinds
 **—Spell Slots per Spell Level—**
 
 | **Proficiency** | **Favored** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Enemy** | **Spells** | **1** | **2** | **3** | **4** | **5** |
-| 1 | +2 | Spellcasting, Favored Enemy, Weapon Mastery |
-| 2 | 2 | 2 | — | — | — | — |
+| **Level** | **Class Features** | **1** | **2** | **3** | **4** | **5** |
+| **Bonus** | **Enemy** | **Spells** |
+| 1 | +2 | Spellcasting, Favored Enemy, Weapon Mastery | 2 | 2 | 2 | — | — | — | — |
 | 2 | +2 | Deft Explorer, Fighting Style | 2 | 3 | 2 | — | — | — | — |
 | 3 | +2 | Ranger Subclass | 2 | 4 | 3 | — | — | — | — |
 | 4 | +2 | Ability Score Improvement | 2 | 5 | 3 | — | — | — | — |
@@ -4384,30 +4353,24 @@ An event in your past left an indelible mark on you, infusing you with simmering
 **——Spell Slots per Spell Level——**
 
 | **Proficiency** | **Sorcery** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Points** | **Cantrips** | **Spells** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
-| 1 | +2 | Spellcasting, Innate Sorcery |
-| — | 4 | 2 | 2 | — | — | — | — | — | — | — | — |
-| 2 | +2 | Font of Magic, Metamagic |
-| 2 | 4 | 4 | 3 | — | — | — | — | — | — | — | — |
+| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Bonus** | **Points** | **Spells** |
+| 1 | +2 | Spellcasting, Innate Sorcery | — | 4 | 2 | 2 | — | — | — | — | — | — | — | — |
+| 2 | +2 | Font of Magic, Metamagic | 2 | 4 | 4 | 3 | — | — | — | — | — | — | — | — |
 | 3 | +2 | Sorcerer Subclass | 3 | 4 | 6 | 4 | 2 | — | — | — | — | — | — | — |
-| 4 | +2 | Ability Score Improvement |
-| 4 | 5 | 7 | 4 | 3 | — | — | — | — | — | — | — |
-| 5 | +3 | Sorcerous Restoration |
-| 5 | 5 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |
+| 4 | +2 | Ability Score Improvement | 4 | 5 | 7 | 4 | 3 | — | — | — | — | — | — | — |
+| 5 | +3 | Sorcerous Restoration | 5 | 5 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |
 | 6 | +3 | Subclass feature | 6 | 5 | 10 | 4 | 3 | 3 | — | — | — | — | — | — |
 | 7 | +3 | Sorcery Incarnate | 7 | 5 | 11 | 4 | 3 | 3 | 1 | — | — | — | — | — |
-| 8 | +3 | Ability Score Improvement |
-| 8 | 5 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |
+| 8 | +3 | Ability Score Improvement | 8 | 5 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |
 | 9 | +4 | — | 9 | 5 | 14 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |
 | 10 | +4 | Metamagic | 10 | 6 | 15 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |
 | 11 | +4 | — | 11 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |
-| 12 | +4 | Ability Score Improvement |
-| 12 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |
+| 12 | +4 | Ability Score Improvement | 12 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |
 | 13 | +5 | — | 13 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |
 | 14 | +5 | Subclass feature | 14 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |
 | 15 | +5 | — | 15 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |
-| 16 | +5 | Ability Score Improvement |
-| 16 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |
+| 16 | +5 | Ability Score Improvement | 16 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |
 | 17 | +6 | Metamagic | 17 | 6 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |
 | 18 | +6 | Subclass feature | 18 | 6 | 20 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |
 | 19 | +6 | Epic Boon | 19 | 6 | 21 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |
@@ -4740,9 +4703,7 @@ This section presents the Sorcerer spell list. The spells are organized by spell
 | *Time Stop* | Transmutation | — |
 | *Wish* | Conjuration | — |
 
-### Sorcerer Subclass: Draconic
-
-### Sorcery
+### Sorcerer Subclass: Draconic Sorcery
 
 *Breathe the Magic of Dragons*
 
@@ -4937,7 +4898,7 @@ Eldritch Invocation options appear in alphabetical order.
 
 #### Agonizing Blast
 
-*Prerequisite: Level 2+ Warlock, a Warlock Cantrip* *That Deals Damage*
+*Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage*
 
 Choose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell’s damage rolls.
 
@@ -4961,7 +4922,7 @@ You can see normally in Dim Light and Darkness—both magical and nonmagical—w
 
 #### Devouring Blade
 
-*Prerequisite: Level 12+ Warlock, Thirsting Blade* *Invocation*
+*Prerequisite: Level 12+ Warlock, Thirsting Blade Invocation*
 
 The Extra Attack of your Thirsting Blade invocation confers two extra attacks rather than one.
 
@@ -4971,7 +4932,7 @@ You have Advantage on Constitution saving throws that you make to maintain Conce
 
 #### Eldritch Smite
 
-*Prerequisite: Level 5+ Warlock, Pact of the Blade* *Invocation*
+*Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation*
 
 Once per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, 
 
@@ -4981,7 +4942,7 @@ plus another 1d8 per level of the spell slot, and you can give the target the Pr
 
 #### Eldritch Spear
 
-*Prerequisite: Level 2+ Warlock, a Warlock Cantrip* *That Deals Damage*
+*Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage*
 
 Choose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.
 
@@ -5011,7 +4972,7 @@ You can also cast *Water Breathing* once without expending a spell slot. You reg
 
 #### Gift of the Protectors
 
-*Prerequisite: Level 9+ Warlock, Pact of the Tome* *Invocation*
+*Prerequisite: Level 9+ Warlock, Pact of the Tome Invocation*
 
 A new page appears in your *Book of Shadows* when you conjure it. With your permission, a creature can take an action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of one name).
 
@@ -5023,7 +4984,7 @@ As a Magic action, you can erase a name on the page by touching it.
 
 #### Investment of the Chain Master
 
-*Prerequisite: Level 5+ Warlock, Pact of the Chain* *Invocation*
+*Prerequisite: Level 5+ Warlock, Pact of the Chain Invocation*
 
 When you cast *Find Familiar*, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.
 
@@ -5047,7 +5008,7 @@ You have received knowledge from an elder entity of the multiverse, allowing you
 
 #### Lifedrinker
 
-*Prerequisite: Level 9+ Warlock, Pact of the Blade* *Invocation*
+*Prerequisite: Level 9+ Warlock, Pact of the Blade Invocation*
 
 Once per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).
 
@@ -5095,11 +5056,7 @@ Your bond with the weapon ends if you use this feature’s Bonus Action again, i
 
 You learn the *Find Familiar* spell and can cast it as a Magic action without expending a spell slot.
 
-When you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit,** 
-
-**Skeleton, Sphinx of Wonder, Sprite,** or **Venomous**
-
-**Snake** (see “Monsters” for the familiar’s stat block).
+When you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit,** **Skeleton, Sphinx of Wonder, Sprite,** or **Venomous Snake** (see “Monsters” for the familiar’s stat block).
 
 Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.
 
@@ -5115,7 +5072,7 @@ book disappears if you conjure another book with this feature or if you die.
 
 #### Repelling Blast
 
-*Prerequisite: Level 2+ Warlock, a Warlock Cantrip* *That Deals Damage via an Attack Roll*
+*Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll*
 
 Choose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.
 
@@ -5123,7 +5080,7 @@ Choose one of your known Warlock cantrips that requires an attack roll. When you
 
 #### Thirsting Blade
 
-*Prerequisite: Level 5+ Warlock, Pact of the Blade* *Invocation*
+*Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation*
 
 You gain the Extra Attack feature for your pact weapon only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.
 
@@ -5355,9 +5312,9 @@ As a student of arcane magic, you have learned to cast spells. See “Spells” 
 **——Spell Slots per Spell Level——**
 
 | **Proficiency** | **Prepared** |
-| **Level** | **Bonus** | **Class Features** | **Cantrips** | **Spells** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
-| 1 | +2 | Spellcasting, Ritual Adept, Arcane Recovery |
-| 3 | 4 | 2 | — | — | — | — | — | — | — | — |
+| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |
+| **Bonus** | **Spells** |
+| 1 | +2 | Spellcasting, Ritual Adept, Arcane Recovery | 3 | 4 | 2 | — | — | — | — | — | — | — | — |
 | 2 | +2 | Scholar | 3 | 5 | 3 | — | — | — | — | — | — | — | — |
 | 3 | +2 | Wizard Subclass | 3 | 6 | 4 | 2 | — | — | — | — | — | — | — |
 | 4 | +2 | Ability Score Improvement | 4 | 7 | 4 | 3 | — | — | — | — | — | — | — |
@@ -5394,7 +5351,7 @@ When you reach Wizard levels 4 and 10, you learn another Wizard cantrip of your 
 
 ***Spellbook.*** Your wizardly apprenticeship culminated in the creation of a unique book: your spellbook. It is a Tiny object that weighs 3 pounds, contains 100 pages, and can be read only by you or someone casting *Identify*. You determine the book’s appearance and materials, such as a gilt-edged tome or a collection of vellum bound with twine.
 
-The book contains the level 1+ spells you know. It starts with six level 1 Wizard spells of your choice. *Detect Magic*, *Feather Fall*, *Mage Armor*, *Magic Mis**sile*, *Sleep*, and *Thunderwave* are recommended.
+The book contains the level 1+ spells you know. It starts with six level 1 Wizard spells of your choice. *Detect Magic*, *Feather Fall*, *Mage Armor*, *Magic Missile*, *Sleep*, and *Thunderwave* are recommended.
 
 Whenever you gain a Wizard level after 1, add two Wizard spells of your choice to your spellbook. Each of these spells must be of a level for which you have spell slots, as shown in the Wizard Features table. The spells are the culmination of arcane research you do regularly.
 
@@ -5843,7 +5800,7 @@ Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP
 
 **Skill Proficiencies:** Athletics and Intimidation
 
-**Tool Proficiency:** *Choose one kind of* *Gaming Set* (see
+**Tool Proficiency:** *Choose one kind of Gaming Set* (see
 
 “Equipment”)
 
@@ -5984,7 +5941,7 @@ As a Gnome, you have these special traits.
 
 You also always have the *Speak with Animals* spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.
 
-**Rock Gnome.** You know the *Mending* and *Presti**digitation* cantrips. In addition, you can spend 10 minutes casting *Prestidigitation* to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from *Prestidigitation*; the device produces that 
+**Rock Gnome.** You know the *Mending* and *Prestidigitation* cantrips. In addition, you can spend 10 minutes casting *Prestidigitation* to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from *Prestidigitation*; the device produces that 
 
 effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.
 
@@ -6023,12 +5980,9 @@ damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to 
 ##### Elven Lineages
 
 | **Lineage** | **Level 1** | **Level 3** | **Level 5** |
-| Drow | The range of your Darkvision increases to 120 feet. You also know the *Dancing Lights* cantrip. |
-| *Faerie Fire* | *Darkness* |
-| High Elf | You know the *Prestidigitation* cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. |
-| *Detect Magic* | *Misty Step* |
-| Wood Elf | Your Speed increases to 35 feet. You also know the *Druidcraft* cantrip. |
-| *Longstrider* | *Pass without Trace* |
+| Drow | The range of your Darkvision increases to 120 feet. You also know the *Dancing Lights* cantrip. | *Faerie Fire* | *Darkness* |
+| High Elf | You know the *Prestidigitation* cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. | *Detect Magic* | *Misty Step* |
+| Wood Elf | Your Speed increases to 35 feet. You also know the *Druidcraft* cantrip. | *Longstrider* | *Pass without Trace* |
 
 <!-- page 86 -->
 
@@ -6114,17 +6068,14 @@ When you reach character levels 3 and 5, you learn a higher-level spell, as show
 
 Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).
 
-***Otherworldly Presence.*** You know the *Thauma**turgy* cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.
+***Otherworldly Presence.*** You know the *Thaumaturgy* cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.
 
 ##### Fiendish Legacies
 
 | **Legacy** | **Level 1** | **Level 3** | **Level 5** |
-| Abyssal | You have Resistance to Poison damage. You also know the *Poison Spray* cantrip. |
-| *Ray of Sickness* | *Hold Person* |
-| Chthonic | You have Resistance to Necrotic damage. You also know the *Chill Touch* cantrip. |
-| *False Life* | *Ray of Enfeeblement* |
-| Infernal | You have Resistance to Fire damage. You also know the *Fire Bolt* cantrip. |
-| *Hellish Rebuke* | *Darkness* |
+| Abyssal | You have Resistance to Poison damage. You also know the *Poison Spray* cantrip. | *Ray of Sickness* | *Hold Person* |
+| Chthonic | You have Resistance to Necrotic damage. You also know the *Chill Touch* cantrip. | *False Life* | *Ray of Enfeeblement* |
+| Infernal | You have Resistance to Fire damage. You also know the *Fire Bolt* cantrip. | *Hellish Rebuke* | *Darkness* |
 
 <!-- page 87 -->
 
@@ -6198,7 +6149,7 @@ Increase one ability score of your choice by 2, or increase two ability scores o
 
 #### Grappler
 
-*General Feat (Prerequisite: Level 4+, Strength or* *Dexterity 13+)*
+*General Feat (Prerequisite: Level 4+, Strength or Dexterity 13+)*
 
 You gain the following benefits.
 
@@ -6214,7 +6165,7 @@ You gain the following benefits.
 
 #### Archery
 
-*Fighting Style Feat (Prerequisite: Fighting Style* *Feature)*
+*Fighting Style Feat (Prerequisite: Fighting Style Feature)*
 
 You gain a +2 bonus to attack rolls you make with Ranged weapons.
 
@@ -6222,19 +6173,19 @@ You gain a +2 bonus to attack rolls you make with Ranged weapons.
 
 #### Defense
 
-*Fighting Style Feat (Prerequisite: Fighting Style* *Feature)*
+*Fighting Style Feat (Prerequisite: Fighting Style Feature)*
 
 While you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.
 
 #### Great Weapon Fighting
 
-*Fighting Style Feat (Prerequisite: Fighting Style* *Feature)*
+*Fighting Style Feat (Prerequisite: Fighting Style Feature)*
 
 When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.
 
 #### Two-Weapon Fighting
 
-*Fighting Style Feat (Prerequisite: Fighting Style* *Feature)*
+*Fighting Style Feat (Prerequisite: Fighting Style Feature)*
 
 When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren’t already adding it to the damage.
 
@@ -6286,7 +6237,7 @@ You gain the following benefits.
 
 #### Boon of Spell Recall
 
-*Epic Boon Feat (Prerequisite: Level 19+, Spellcasting* *Feature)* 
+*Epic Boon Feat (Prerequisite: Level 19+, Spellcasting Feature)* 
 
 You gain the following benefits.
 
@@ -6459,57 +6410,53 @@ If you hit a creature with this weapon and deal damage to the creature, you have
 
 *Simple Melee Weapons*
 
-| Club | 1d4 Bludgeoning | Light | Slow | 2 lb. | 1 SP |
-| Dagger | 1d4 Piercing | Finesse, Light, Thrown (Range 20/60) | Nick | 1 lb. | 2 GP |
-| Greatclub | 1d8 Bludgeoning | Two-Handed | Push | 10 lb. | 2 SP |
-| Handaxe | 1d6 Slashing | Light, Thrown (Range 20/60) | Vex | 2 lb. | 5 GP |
-| Javelin | 1d6 Piercing | Thrown (Range 30/120) | Slow | 2 lb. | 5 SP |
-| Light Hammer | 1d4 Bludgeoning | Light, Thrown (Range 20/60) | Nick | 2 lb. | 2 GP |
-| Mace | 1d6 Bludgeoning | — | Sap | 4 lb. | 5 GP |
-| Quarterstaff | 1d6 Bludgeoning | Versatile (1d8) | Topple | 4 lb. | 2 SP |
-| Sickle | 1d4 Slashing | Light | Nick | 2 lb. | 1 GP |
-| Spear | 1d6 Piercing | Thrown (Range 20/60), Versatile (1d8) | Sap | 3 lb. | 1 GP |
+| ↳ Club | 1d4 Bludgeoning | Light | Slow | 2 lb. | 1 SP |
+| ↳ Dagger | 1d4 Piercing | Finesse, Light, Thrown (Range 20/60) | Nick | 1 lb. | 2 GP |
+| ↳ Greatclub | 1d8 Bludgeoning | Two-Handed | Push | 10 lb. | 2 SP |
+| ↳ Handaxe | 1d6 Slashing | Light, Thrown (Range 20/60) | Vex | 2 lb. | 5 GP |
+| ↳ Javelin | 1d6 Piercing | Thrown (Range 30/120) | Slow | 2 lb. | 5 SP |
+| ↳ Light Hammer | 1d4 Bludgeoning | Light, Thrown (Range 20/60) | Nick | 2 lb. | 2 GP |
+| ↳ Mace | 1d6 Bludgeoning | — | Sap | 4 lb. | 5 GP |
+| ↳ Quarterstaff | 1d6 Bludgeoning | Versatile (1d8) | Topple | 4 lb. | 2 SP |
+| ↳ Sickle | 1d4 Slashing | Light | Nick | 2 lb. | 1 GP |
+| ↳ Spear | 1d6 Piercing | Thrown (Range 20/60), Versatile (1d8) | Sap | 3 lb. | 1 GP |
 
 *Simple Ranged Weapons*
 
-| Dart | 1d4 Piercing | Finesse, Thrown (Range 20/60) | Vex | 1/4 lb. | 5 CP |
-| Light Crossbow | 1d8 Piercing | Ammunition (Range 80/320; Bolt), Loading, Two-Handed |
-| Slow | 5 lb. | 25 GP |
-| Shortbow | 1d6 Piercing | Ammunition (Range 80/320; Arrow), Two-Handed | Vex | 2 lb. | 25 GP |
-| Sling | 1d4 Bludgeoning | Ammunition (Range 30/120; Bullet) | Slow | — | 1 SP |
+| ↳ Dart | 1d4 Piercing | Finesse, Thrown (Range 20/60) | Vex | 1/4 lb. | 5 CP |
+| ↳ Light Crossbow | 1d8 Piercing | Ammunition (Range 80/320; Bolt), Loading, Two-Handed | Slow | 5 lb. | 25 GP |
+| ↳ Shortbow | 1d6 Piercing | Ammunition (Range 80/320; Arrow), Two-Handed | Vex | 2 lb. | 25 GP |
+| ↳ Sling | 1d4 Bludgeoning | Ammunition (Range 30/120; Bullet) | Slow | — | 1 SP |
 
 *Martial Melee Weapons*
 
-| Battleaxe | 1d8 Slashing | Versatile (1d10) | Topple | 4 lb. | 10 GP |
-| Flail | 1d8 Bludgeoning | — | Sap | 2 lb. | 10 GP |
-| Glaive | 1d10 Slashing | Heavy, Reach, Two-Handed | Graze | 6 lb. | 20 GP |
-| Greataxe | 1d12 Slashing | Heavy, Two-Handed | Cleave | 7 lb. | 30 GP |
-| Greatsword | 2d6 Slashing | Heavy, Two-Handed | Graze | 6 lb. | 50 GP |
-| Halberd | 1d10 Slashing | Heavy, Reach, Two-Handed | Cleave | 6 lb. | 20 GP |
-| Lance | 1d10 Piercing | Heavy, Reach, Two-Handed (unless mounted) | Topple | 6 lb. | 10 GP |
-| Longsword | 1d8 Slashing | Versatile (1d10) | Sap | 3 lb. | 15 GP |
-| Maul | 2d6 Bludgeoning | Heavy, Two-Handed | Topple | 10 lb. | 10 GP |
-| Morningstar | 1d8 Piercing | — | Sap | 4 lb. | 15 GP |
-| Pike | 1d10 Piercing | Heavy, Reach, Two-Handed | Push | 18 lb. | 5 GP |
-| Rapier | 1d8 Piercing | Finesse | Vex | 2 lb. | 25 GP |
-| Scimitar | 1d6 Slashing | Finesse, Light | Nick | 3 lb. | 25 GP |
-| Shortsword | 1d6 Piercing | Finesse, Light | Vex | 2 lb. | 10 GP |
-| Trident | 1d8 Piercing | Thrown (Range 20/60), Versatile (1d10) | Topple | 4 lb. | 5 GP |
-| Warhammer | 1d8 Bludgeoning | Versatile (1d10) | Push | 5 lb. | 15 GP |
-| War Pick | 1d8 Piercing | Versatile (1d10) | Sap | 2 lb. | 5 GP |
-| Whip | 1d4 Slashing | Finesse, Reach | Slow | 3 lb. | 2 GP |
+| ↳ Battleaxe | 1d8 Slashing | Versatile (1d10) | Topple | 4 lb. | 10 GP |
+| ↳ Flail | 1d8 Bludgeoning | — | Sap | 2 lb. | 10 GP |
+| ↳ Glaive | 1d10 Slashing | Heavy, Reach, Two-Handed | Graze | 6 lb. | 20 GP |
+| ↳ Greataxe | 1d12 Slashing | Heavy, Two-Handed | Cleave | 7 lb. | 30 GP |
+| ↳ Greatsword | 2d6 Slashing | Heavy, Two-Handed | Graze | 6 lb. | 50 GP |
+| ↳ Halberd | 1d10 Slashing | Heavy, Reach, Two-Handed | Cleave | 6 lb. | 20 GP |
+| ↳ Lance | 1d10 Piercing | Heavy, Reach, Two-Handed (unless mounted) | Topple | 6 lb. | 10 GP |
+| ↳ Longsword | 1d8 Slashing | Versatile (1d10) | Sap | 3 lb. | 15 GP |
+| ↳ Maul | 2d6 Bludgeoning | Heavy, Two-Handed | Topple | 10 lb. | 10 GP |
+| ↳ Morningstar | 1d8 Piercing | — | Sap | 4 lb. | 15 GP |
+| ↳ Pike | 1d10 Piercing | Heavy, Reach, Two-Handed | Push | 18 lb. | 5 GP |
+| ↳ Rapier | 1d8 Piercing | Finesse | Vex | 2 lb. | 25 GP |
+| ↳ Scimitar | 1d6 Slashing | Finesse, Light | Nick | 3 lb. | 25 GP |
+| ↳ Shortsword | 1d6 Piercing | Finesse, Light | Vex | 2 lb. | 10 GP |
+| ↳ Trident | 1d8 Piercing | Thrown (Range 20/60), Versatile (1d10) | Topple | 4 lb. | 5 GP |
+| ↳ Warhammer | 1d8 Bludgeoning | Versatile (1d10) | Push | 5 lb. | 15 GP |
+| ↳ War Pick | 1d8 Piercing | Versatile (1d10) | Sap | 2 lb. | 5 GP |
+| ↳ Whip | 1d4 Slashing | Finesse, Reach | Slow | 3 lb. | 2 GP |
 
 *Martial Ranged Weapons*
 
-| Blowgun | 1 Piercing | Ammunition (Range 25/100; Needle), Loading | Vex | 1 lb. | 10 GP |
-| Hand Crossbow | 1d6 Piercing | Ammunition (Range 30/120; Bolt), Light, Loading | Vex | 3 lb. | 75 GP |
-| Heavy Crossbow | 1d10 Piercing | Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed |
-| Push | 18 lb. | 50 GP |
-| Longbow | 1d8 Piercing | Ammunition (Range 150/600; Arrow), Heavy, Two-Handed |
-| Slow | 2 lb. | 50 GP |
-| Musket | 1d12 Piercing | Ammunition (Range 40/120; Bullet), Loading, Two-Handed |
-| Slow | 10 lb. | 500 GP |
-| Pistol | 1d10 Piercing | Ammunition (Range 30/90; Bullet), Loading | Vex | 3 lb. | 250 GP |
+| ↳ Blowgun | 1 Piercing | Ammunition (Range 25/100; Needle), Loading | Vex | 1 lb. | 10 GP |
+| ↳ Hand Crossbow | 1d6 Piercing | Ammunition (Range 30/120; Bolt), Light, Loading | Vex | 3 lb. | 75 GP |
+| ↳ Heavy Crossbow | 1d10 Piercing | Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed | Push | 18 lb. | 50 GP |
+| ↳ Longbow | 1d8 Piercing | Ammunition (Range 150/600; Arrow), Heavy, Two-Handed | Slow | 2 lb. | 50 GP |
+| ↳ Musket | 1d12 Piercing | Ammunition (Range 40/120; Bullet), Loading, Two-Handed | Slow | 10 lb. | 500 GP |
+| ↳ Pistol | 1d10 Piercing | Ammunition (Range 30/90; Bullet), Loading | Vex | 3 lb. | 250 GP |
 
 <!-- page 92 -->
 
@@ -6555,28 +6502,28 @@ A creature can wear only one suit of armor at a time and wield only one Shield a
 
 *Light Armor (1 Minute to Don or Doff)*
 
-| Padded Armor | 11 + Dex modifier | — | Disadvantage | 8 lb. | 5 GP |
-| Leather Armor | 11 + Dex modifier | — | — | 10 lb. | 10 GP |
-| Studded Leather Armor | 12 + Dex modifier | — | — | 13 lb. | 45 GP |
+| ↳ Padded Armor | 11 + Dex modifier | — | Disadvantage | 8 lb. | 5 GP |
+| ↳ Leather Armor | 11 + Dex modifier | — | — | 10 lb. | 10 GP |
+| ↳ Studded Leather Armor | 12 + Dex modifier | — | — | 13 lb. | 45 GP |
 
 *Medium Armor (5 Minutes to Don and 1 Minute to Doff)*
 
-| Hide Armor | 12 + Dex modifier (max 2) | — | — | 12 lb. | 10 GP |
-| Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |
-| Scale Mail | 14 + Dex modifier (max 2) | — | Disadvantage | 45 lb. | 50 GP |
-| Breastplate | 14 + Dex modifier (max 2) | — | — | 20 lb. | 400 GP |
-| Half Plate Armor | 15 + Dex modifier (max 2) | — | Disadvantage | 40 lb. | 750 GP |
+| ↳ Hide Armor | 12 + Dex modifier (max 2) | — | — | 12 lb. | 10 GP |
+| ↳ Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |
+| ↳ Scale Mail | 14 + Dex modifier (max 2) | — | Disadvantage | 45 lb. | 50 GP |
+| ↳ Breastplate | 14 + Dex modifier (max 2) | — | — | 20 lb. | 400 GP |
+| ↳ Half Plate Armor | 15 + Dex modifier (max 2) | — | Disadvantage | 40 lb. | 750 GP |
 
 *Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*
 
-| Ring Mail | 14 | — | Disadvantage | 40 lb. | 30 GP |
-| Chain Mail | 16 | Str 13 | Disadvantage | 55 lb. | 75 GP |
-| Splint Armor | 17 | Str 15 | Disadvantage | 60 lb. | 200 GP |
-| Plate Armor | 18 | Str 15 | Disadvantage | 65 lb. | 1,500 GP |
+| ↳ Ring Mail | 14 | — | Disadvantage | 40 lb. | 30 GP |
+| ↳ Chain Mail | 16 | Str 13 | Disadvantage | 55 lb. | 75 GP |
+| ↳ Splint Armor | 17 | Str 15 | Disadvantage | 60 lb. | 200 GP |
+| ↳ Plate Armor | 18 | Str 15 | Disadvantage | 65 lb. | 1,500 GP |
 
 *Shield (Utilize Action to Don or Doff)*
 
-| Shield | +2 | — | — | 6 lb. | 10 GP |
+| ↳ Shield | +2 | — | — | 6 lb. | 10 GP |
 
 <!-- page 93 -->
 
@@ -7285,9 +7232,7 @@ Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each si
 
 When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away.
 
-#### Spell Scroll (Cantrip, 30 GP;
-
-#### Level 1, 50 GP)
+#### Spell Scroll (Cantrip, 30 GP; Level 1, 50 GP)
 
 A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.
 
@@ -7367,9 +7312,9 @@ A saddle comes with a bit, a bridle, reins, and any other equipment needed to us
 
 *Saddle*
 
-| Exotic | 40 lb. | 60 GP |
-| Military | 30 lb. | 20 GP |
-| Riding | 25 lb. | 10 GP |
+| ↳ Exotic | 40 lb. | 60 GP |
+| ↳ Military | 30 lb. | 20 GP |
+| ↳ Riding | 25 lb. | 10 GP |
 | Sled | 300 lb. | 20 GP |
 | Stabling per day | — | 5 SP |
 | Wagon | 400 lb. | 35 GP |
@@ -7449,19 +7394,19 @@ The Food, Drink, and Lodging table gives prices for food and a single night’s 
 
 *Inn Stay per Day*
 
-| Squalid | 7 CP |
-| Poor | 1 SP |
-| Modest | 5 SP |
+| ↳ Squalid | 7 CP |
+| ↳ Poor | 1 SP |
+| ↳ Modest | 5 SP |
 | **Item** | **Cost** |
-| Comfortable | 8 SP |
-| Wealthy | 2 GP |
-| Aristocratic | 4 GP |
+| ↳ Comfortable | 8 SP |
+| ↳ Wealthy | 2 GP |
+| ↳ Aristocratic | 4 GP |
 
 *Meal*
 
-| Squalid | 1 CP |
-| Poor | 2 CP |
-| Modest | 1 SP |
+| ↳ Squalid | 1 CP |
+| ↳ Poor | 2 CP |
+| ↳ Modest | 1 SP |
 
 ##### Airborne and Waterborne Vehicles
 
@@ -7477,15 +7422,15 @@ The Food, Drink, and Lodging table gives prices for food and a single night’s 
 <!-- page 102 -->
 
 | **Item** | **Cost** |
-| Comfortable | 2 SP |
-| Wealthy | 3 SP |
-| Aristocratic | 6 SP |
+| ↳ Comfortable | 2 SP |
+| ↳ Wealthy | 3 SP |
+| ↳ Aristocratic | 6 SP |
 | **Item** | **Cost** |
 
 *Wine (bottle)*
 
-| Common | 2 SP |
-| Fine | 10 GP |
+| ↳ Common | 2 SP |
+| ↳ Fine | 10 GP |
 
 ## Hirelings
 
@@ -7667,7 +7612,7 @@ Every spell has a level from 0 to 9, which is indicated in a spell’s descripti
 
 Spellcasting is taxing, so a spellcaster can cast only a limited number of level 1+ spells before resting. Spell slots are the main way a spellcaster’s magical potential is represented. Each spellcasting class gives its members a limited number of spell slots of certain spell levels. For example, a level 3 Wizard has four level 1 spell slots and two level 2 slots.
 
-When you cast a spell, you expend a slot of that spell’s level or higher, effectively “filling” a slot with the spell. Imagine a spell slot is a groove of a certain size—small for a level 1 slot and larger for a higher-level spell. A level 1 spell fits into a slot of any size, but a level 2 spell fits only into a slot that’s at least level 2. So when a level 3 Wizard casts *Magic* *Missile*, a level 1 spell, that Wizard spends one of four level 1 slots and has three remaining.
+When you cast a spell, you expend a slot of that spell’s level or higher, effectively “filling” a slot with the spell. Imagine a spell slot is a groove of a certain size—small for a level 1 slot and larger for a higher-level spell. A level 1 spell fits into a slot of any size, but a level 2 spell fits only into a slot that’s at least level 2. So when a level 3 Wizard casts *Magic Missile*, a level 1 spell, that Wizard spends one of four level 1 slots and has three remaining.
 
 Finishing a Long Rest restores any expended spell slots.
 
@@ -7695,7 +7640,7 @@ When a spellcaster casts a spell using a slot that is of a higher level than the
 
 <!-- page 105 -->
 
-Some spells, such as *Magic Missile* and *Cure* *Wounds*, have more powerful effects when cast at a higher level, as detailed in a spell’s description.
+Some spells, such as *Magic Missile* and *Cure Wounds*, have more powerful effects when cast at a higher level, as detailed in a spell’s description.
 
 ### School of Magic
 
@@ -7805,7 +7750,7 @@ A typical spell requires the caster to pick one or more targets to be affected b
 
 ***Targeting Yourself.*** If a spell targets a creature of your choice, you can choose yourself unless the creature must be Hostile or specifically a creature other than you.
 
-***Areas of Effect.*** Some spells, such as *Thunder**wave*, cover an area called an area of effect, which is defined in “Rules Glossary.” The area determines what the spell targets. The description of a spell specifies whether it has an area of effect, which is typically one of these shapes: Cone, Cube, Cylinder, Emanation, Line, or Sphere.
+***Areas of Effect.*** Some spells, such as *Thunderwave*, cover an area called an area of effect, which is defined in “Rules Glossary.” The area determines what the spell targets. The description of a spell specifies whether it has an area of effect, which is typically one of these shapes: Cone, Cube, Cylinder, Emanation, Line, or Sphere.
 
 ***Awareness of Being Targeted.*** Unless a spell has a perceptible effect, a creature doesn’t know it was targeted by the spell. An effect like lightning is obvious, but a more subtle effect, such as an attempt to read thoughts, goes unnoticed unless a spell’s description says otherwise.
 
@@ -8315,9 +8260,7 @@ You spend the casting time tracing magical pathways within a precious gemstone, 
 
 <!-- page 112 -->
 
-an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. The GM chooses statistics appropriate for the awakened Plant, such as the statistics for the **Awakened** 
-
-**Shrub** or **Awakened Tree** in “Monsters.”
+an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. The GM chooses statistics appropriate for the awakened Plant, such as the statistics for the **Awakened Shrub** or **Awakened Tree** in “Monsters.”
 
 The awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When that condition ends, the awakened creature chooses its attitude toward you.
 
@@ -9295,9 +9238,7 @@ The creature is under your control for 24 hours, after which it stops obeying an
 
 ***Using a Higher-Level Spell Slot.*** If you use a level 7 spell slot, you can animate or reassert control over four **Ghouls**. If you use a level 8 spell slot, you can animate or reassert control over five **Ghouls** 
 
-or two **Ghasts** or **Wights**. If you use a level 9 spell slot, you can animate or reassert control over six 
-
-**Ghouls**, three **Ghasts** or **Wights**, or two **Mummies**. See “Monsters” for these stat blocks.
+or two **Ghasts** or **Wights**. If you use a level 9 spell slot, you can animate or reassert control over six **Ghouls**, three **Ghasts** or **Wights**, or two **Mummies**. See “Monsters” for these stat blocks.
 
 #### Creation
 
@@ -9594,7 +9535,7 @@ To discern that you are disguised, a creature must take the Study action to insp
 
 You launch a green ray at a target you can see within range. The target can be a creature, a nonmagical object, or a creation of magical force, such as the wall created by *Wall of Force.*
 
-A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a *True Res**urrection* or a *Wish* spell.
+A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a *True Resurrection* or a *Wish* spell.
 
 This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it.
 
@@ -10178,9 +10119,7 @@ which the spell consumes)
 
 **Duration:** Instantaneous
 
-You gain the service of a familiar, a spirit that takes an animal form you choose: **Bat, Cat, Frog, Hawk,** 
-
-**Lizard, Octopus, Owl, Rat, Raven, Spider, Weasel,** or another Beast that has a Challenge Rating of 0. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form (see “Monsters”), though it is a Celestial, Fey, or Fiend (your choice) instead of a Beast. Your familiar acts independently of you, but it obeys your commands.
+You gain the service of a familiar, a spirit that takes an animal form you choose: **Bat, Cat, Frog, Hawk,** **Lizard, Octopus, Owl, Rat, Raven, Spider, Weasel,** or another Beast that has a Challenge Rating of 0. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form (see “Monsters”), though it is a Celestial, Fey, or Fiend (your choice) instead of a Beast. Your familiar acts independently of you, but it obeys your commands.
 
 ***Telepathic Connection.*** While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as a Bonus Action, you can see through the familiar’s eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses it has.
 
@@ -10206,9 +10145,7 @@ take a Reaction to deliver the touch when you cast the spell.
 
 **Duration:** Instantaneous
 
-You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the **Otherworldly** 
-
-**Steed** stat block. If you already have a steed from this spell, the steed is replaced by the new one.
+You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the **Otherworldly Steed** stat block. If you already have a steed from this spell, the steed is replaced by the new one.
 
 The steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed’s creature type—Celestial, Fey, or Fiend—which determines certain traits in the stat block.
 
@@ -10456,7 +10393,7 @@ You attempt to turn one creature that you can see within range into stone. The t
 
 A Restrained target makes another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the Petrified condition for the duration. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind.
 
-If you maintain your Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by *Greater Resto**ration* or similar magic.
+If you maintain your Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by *Greater Restoration* or similar magic.
 
 #### Floating Disk
 
@@ -10744,7 +10681,7 @@ The creature is an ally to you and your allies. In combat, the creature shares y
 
 ##### Bonus Actions
 
-***Venomous Spew (Centipede Only).*** *Constitution Saving* *Throw:* Your spell save DC, one creature the insect can see within 10 feet. *Failure:* The target has the Poisoned condition until the start of the insect’s next turn.
+***Venomous Spew (Centipede Only).*** *Constitution Saving Throw:* Your spell save DC, one creature the insect can see within 10 feet. *Failure:* The target has the Poisoned condition until the start of the insect’s next turn.
 
 #### Glibness
 
@@ -10920,7 +10857,7 @@ When you cast this spell, you can specify individuals that are unaffected by the
 
 <!-- page 138 -->
 
-The spell creates the effects below within the warded area. *Dispel Magic* has no effect on *Guards* *and Wards* itself, but each of the following effects can be dispelled. If all four are dispelled, *Guards and* *Wards* ends. If you cast the spell every day for 365 days on the same area, the spell thereafter lasts until all its effects are dispelled.
+The spell creates the effects below within the warded area. *Dispel Magic* has no effect on *Guards and Wards* itself, but each of the following effects can be dispelled. If all four are dispelled, *Guards and Wards* ends. If you cast the spell every day for 365 days on the same area, the spell thereafter lasts until all its effects are dispelled.
 
 ***Corridors.*** Fog fills all the warded corridors, making them Heavily Obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you believes it is going in the opposite direction from the one it chooses.
 
@@ -10930,11 +10867,11 @@ The spell creates the effects below within the warded area. *Dispel Magic* has n
 
 ***Other Spell Effect.*** Place one of the following magical effects within the warded area:
 
-- *Dancing Lights* in four corridors, with a simple program that the lights repeat as long as *Guards* *and Wards* lasts
+- *Dancing Lights* in four corridors, with a simple program that the lights repeat as long as *Guards and Wards* lasts
 
 - *Magic Mouth* in two locations
 
-- *Stinking Cloud* in two locations (the vapors return within 10 minutes if dispersed while *Guards and* *Wards* lasts)
+- *Stinking Cloud* in two locations (the vapors return within 10 minutes if dispersed while *Guards and Wards* lasts)
 
 - *Gust of Wind* in one corridor or room (the wind blows continuously while the spell lasts)
 
@@ -11694,7 +11631,7 @@ Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. 
 
 Describe or name a creature that is familiar to you. You sense the direction to the creature’s location if that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.
 
-The spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as under the effects of a *Flesh to* *Stone* or *Polymorph* spell, this spell doesn’t locate the creature.
+The spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as under the effects of a *Flesh to Stone* or *Polymorph* spell, this spell doesn’t locate the creature.
 
 This spell can’t locate a creature if any thickness of lead blocks a direct path between you and the creature.
 
@@ -12242,7 +12179,7 @@ A *Remove Curse* or *Greater Restoration* spell cast on the target restores the 
 
 A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and you can take a Magic action on later turns to move the Cylinder up to 60 feet.
 
-When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the *Poly**morph* spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.
+When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the *Polymorph* spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.
 
 ***Using a Higher-Level Spell Slot.*** The damage increases by 1d10 for each spell slot level above 2.
 
@@ -12593,15 +12530,15 @@ Eight rays of light flash from you in a 60-foot Cone. Each creature in the Cone 
 ##### Prismatic Rays
 
 | **1d8** | **Ray** |
-| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful* *Save:* Half as much damage. |
-| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Successful* *Save:* Half as much damage. |
-| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Suc**cessful Save:* Half as much damage. |
-| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Success**ful Save:* Half as much damage. |
+| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful Save:* Half as much damage. |
+| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Successful Save:* Half as much damage. |
+| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Successful Save:* Half as much damage. |
+| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Successful Save:* Half as much damage. |
 
 <!-- page 155 -->
 
 | **1d8** | **Ray** |
-| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Successful* *Save:* Half as much damage. |
+| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Successful Save:* Half as much damage. |
 | 6 | **Indigo.** *Failed Save:* The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the *Greater Restoration* spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. |
 | 7 | **Violet.** *Failed Save:* The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (GM’s choice). |
 | 8 | **Special.** The target is struck by two rays. Roll twice, rerolling any 8. |
@@ -12631,11 +12568,11 @@ specific to each layer. If a layer is destroyed, it is gone for the duration. *A
 ##### Prismatic Layers
 
 | **Order** | **Effects** |
-| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful* *Save:* Half as much damage. *Additional Effects*: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage. |
-| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Suc**cessful Save:* Half as much damage. *Additional* *Effects:* Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by *Gust* *of Wind*). |
-| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Successful Save:* Half as much damage. *Addi**tional Effects:* The layer is destroyed if it takes at least 60 Force damage. |
-| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Suc**cessful Save:* Half as much damage. *Additional* *Effects:* A *Passwall* spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer. |
-| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Success**ful Save:* Half as much damage. *Additional Ef**fects:* The layer is destroyed if it takes at least 25 Fire damage. |
+| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful Save:* Half as much damage. *Additional Effects*: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage. |
+| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Successful Save:* Half as much damage. *Additional Effects:* Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by *Gust of Wind*). |
+| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 60 Force damage. |
+| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Successful Save:* Half as much damage. *Additional Effects:* A *Passwall* spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer. |
+| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 25 Fire damage. |
 | 6 | **Indigo.** *Failed Save:* The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the *Greater Restoration* spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. *Additional Effects:* Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the *Daylight* spell. |
 | 7 | **Violet.** *Failed Save:* The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (GM’s choice). *Additional Effects:* This layer is destroyed by *Dispel Magic*. |
 
@@ -14671,7 +14608,7 @@ Search Study Utilize
 
 #### Advantage
 
-If you have Advantage on a D20 Test, roll two d20s, and use the higher roll. A roll can’t be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other. *See* *also* “Playing the Game” (“D20 Tests”).
+If you have Advantage on a D20 Test, roll two d20s, and use the higher roll. A roll can’t be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other. *See also* “Playing the Game” (“D20 Tests”).
 
 #### Adventure
 
@@ -14820,11 +14757,11 @@ While dragging, lifting, or pushing weight in excess of the maximum weight you c
 
 #### Challenge Rating
 
-Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters. Compare a monster’s CR to the characters’ level. If the CR is higher, the monster is likely a danger. If the CR is lower, the monster likely poses little threat. But circumstances and the number of player characters can significantly alter how threatening a monster is in actual play. “Gameplay Toolbox” (“Combat Encounters”) provides guidance to the GM on using CR while planning potential combat encounters. *See* *also* “Stat Block.”
+Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters. Compare a monster’s CR to the characters’ level. If the CR is higher, the monster is likely a danger. If the CR is lower, the monster likely poses little threat. But circumstances and the number of player characters can significantly alter how threatening a monster is in actual play. “Gameplay Toolbox” (“Combat Encounters”) provides guidance to the GM on using CR while planning potential combat encounters. *See also* “Stat Block.”
 
 #### Character Sheet
 
-A character sheet is a paper or digital record that you use to track your character’s information. *See* *also* “Character Creation.”
+A character sheet is a paper or digital record that you use to track your character’s information. *See also* “Character Creation.”
 
 #### Charmed [Condition]
 
@@ -14844,7 +14781,7 @@ At the GM’s option, climbing a slippery surface or one with few handholds migh
 
 #### Climb Speed
 
-A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing. *See* *also* “Climbing” and “Speed.”
+A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing. *See also* “Climbing” and “Speed.”
 
 #### Concentration
 
@@ -14880,7 +14817,7 @@ Cover provides a degree of protection to a target behind it. There are three deg
 
 #### Crawling
 
-While you’re crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). *See* *also* “Speed.”
+While you’re crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). *See also* “Speed.”
 
 #### Creature
 
@@ -14910,7 +14847,7 @@ A Cube’s point of origin isn’t included in the area of effect unless its cre
 
 #### Curses
 
-Some game effects curse a creature or an object. The effect that confers a curse defines what the curse does. Curses can be removed by the *Remove* *Curse* and *Greater Restoration* spells or other magic that explicitly ends curses.
+Some game effects curse a creature or an object. The effect that confers a curse defines what the curse does. Curses can be removed by the *Remove Curse* and *Greater Restoration* spells or other magic that explicitly ends curses.
 
 <!-- page 180 -->
 
@@ -14960,7 +14897,7 @@ Attacks and other harmful effects deal different types of damage. Damage types h
 
 #### Darkness
 
-An area of Darkness is Heavily Obscured. *See* *also* “Heavily Obscured” and “Playing the Game” (“Exploration”).
+An area of Darkness is Heavily Obscured. *See also* “Heavily Obscured” and “Playing the Game” (“Exploration”).
 
 #### Darkvision
 
@@ -15029,11 +14966,11 @@ A Difficulty Class (DC) is the target number for an ability check or a saving th
 
 #### Dim Light
 
-An area with Dim Light is Lightly Obscured. *See* *also* “Lightly Obscured” and “Playing the Game” (“Exploration”).
+An area with Dim Light is Lightly Obscured. *See also* “Lightly Obscured” and “Playing the Game” (“Exploration”).
 
 #### Disadvantage
 
-If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other. *See* *also* “Playing the Game” (“D20 Tests”).
+If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other. *See also* “Playing the Game” (“D20 Tests”).
 
 #### Disengage [Action]
 
@@ -15457,7 +15394,7 @@ A creature has a reach of 5 feet unless a rule says otherwise.
 
 #### Reaction
 
-A Reaction is a special action taken in response to a trigger defined in the Reaction’s description. You can take a Reaction on another creature’s turn, and if you take it on your turn, you can do so even if you also take an action, a Bonus Action, or both. Once you take a Reaction, you can’t take another one until the start of your next turn. The Opportunity Attack is a Reaction available to all creatures. *See* *also* “Opportunity Attacks” and “Playing the Game” (“Actions”).
+A Reaction is a special action taken in response to a trigger defined in the Reaction’s description. You can take a Reaction on another creature’s turn, and if you take it on your turn, you can do so even if you also take an action, a Bonus Action, or both. Once you take a Reaction, you can’t take another one until the start of your next turn. The Opportunity Attack is a Reaction available to all creatures. *See also* “Opportunity Attacks” and “Playing the Game” (“Actions”).
 
 #### Ready [Action]
 
@@ -15617,7 +15554,7 @@ A stat block contains the game statistics of a monster. Each stat block includes
 
 <!-- page 189 -->
 
-***CR.*** Challenge Rating summarizes the threat a monster poses and is detailed in “Monsters.” The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow. Some creatures that are created by magic have no CR. *See* *also* “Challenge Rating” and “Experience Points.”
+***CR.*** Challenge Rating summarizes the threat a monster poses and is detailed in “Monsters.” The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow. Some creatures that are created by magic have no CR. *See also* “Challenge Rating” and “Experience Points.”
 
 ***Traits.*** The monster’s traits, if any, are features that are active at all times or in certain situations.
 
@@ -15700,7 +15637,7 @@ The description of a teleportation effect tells you if you must see the teleport
 
 #### Temporary Hit Points
 
-Temporary Hit Points are granted by certain effects and act as a buffer against losing real Hit Points. *See* *also* “Playing the Game” (“Damage and Healing”).
+Temporary Hit Points are granted by certain effects and act as a buffer against losing real Hit Points. *See also* “Playing the Game” (“Damage and Healing”).
 
 #### Tremorsense
 
@@ -15879,9 +15816,7 @@ Choose one tool used in the practice of the background or often associated with 
 
 Assemble a package of equipment worth 50 GP (including unspent gold). Don’t include Martial weapons or armor, as characters get them from their class choices.
 
-## Curses and
-
-## Magical Contagions
+## Curses and Magical Contagions
 
 A curse is a magical burden that lasts for a specified time or until it is ended by some means. A magical contagion is an adverse effect of magical origin that is contagious by definition.
 
@@ -16092,7 +16027,7 @@ Exposure to mental stress can cause prolonged effects. Consider the following po
 
 ***Short-Term Effects.*** The character has the Frightened, Incapacitated, or Stunned condition for 1d10 minutes. This condition might be accompanied by alarming behavior or hallucinations. These effects can be suppressed with the *Calm Emotions* spell or removed by the *Lesser Restoration* spell. 
 
-***Long-Term Effects.*** The character has Disadvantage on some or all ability checks for 1d10 × 10 hours, stemming from an unwillingness or inability to exert a particular set of abilities. The character might feel enervated and unable to exert much Strength, for example, or become so suspicious of others that Charisma checks are more difficult. These effects can be suppressed with the *Calm* *Emotions* spell or removed by the *Lesser Restoration* spell.
+***Long-Term Effects.*** The character has Disadvantage on some or all ability checks for 1d10 × 10 hours, stemming from an unwillingness or inability to exert a particular set of abilities. The character might feel enervated and unable to exert much Strength, for example, or become so suspicious of others that Charisma checks are more difficult. These effects can be suppressed with the *Calm Emotions* spell or removed by the *Lesser Restoration* spell.
 
 ***Indefinite Effects.*** An indefinite effect is a long-term effect (see above) that lasts until removed by a *Greater Restoration* spell. It can be suppressed by a *Calm Emotions* spell.
 
@@ -16388,7 +16323,7 @@ condition for 1 hour. On a successful save, the creature takes half as much dama
 
 #### Rolling Stone
 
-*Deadly Trap (Levels 11–16) or Nuisance Trap (Levels* *17–20)*
+*Deadly Trap (Levels 11–16) or Nuisance Trap (Levels 17–20)*
 
 **Trigger:** A creature moves onto a pressure plate
 
@@ -16527,9 +16462,7 @@ five level 3 characters has an XP budget of 225 × 5, for a total of 1,125 XP. W
 
 15 characters has an XP budget of 7,800 × 6, for a total of 46,800 XP. With that, you could build this encounter:
 
-**•** 2 **Adult Red Dragons** (18,000 XP each) and 2 **Fire**
-
-**Giants** (5,000 XP each), for 46,000 XP total
+**•** 2 **Adult Red Dragons** (18,000 XP each) and 2 **Fire Giants** (5,000 XP each), for 46,000 XP total
 
 ### Troubleshooting
 
@@ -16668,7 +16601,7 @@ Wondrous Items include wearable items such as boots, belts, capes, amulets, broo
 
 Every magic item has a rarity, which provides a rough measure of an item’s power relative to other magic items. The rarities are shown in the Magic Item Rarities and Values table.
 
-Common magic items, such as a *Potion of Healing*, are the most plentiful. Artifacts, such as the *Dragon* *Orb*, are priceless, unique, and difficult to acquire.
+Common magic items, such as a *Potion of Healing*, are the most plentiful. Artifacts, such as the *Dragon Orb*, are priceless, unique, and difficult to acquire.
 
 ### Magic Item Values by Rarity
 
@@ -16731,7 +16664,7 @@ An Artifact can be destroyed only in some special way. Otherwise, it is impervio
 
 ## Crafting Magic Items
 
-“Equipment” contains rules on brewing *Potions of* *Healing* and scribing *Spell Scrolls*. To create other magic items, follow the rules below. In these rules, “you” refers to the character crafting the magic item.
+“Equipment” contains rules on brewing *Potions of Healing* and scribing *Spell Scrolls*. To create other magic items, follow the rules below. In these rules, “you” refers to the character crafting the magic item.
 
 ### Arcana Proficiency
 
@@ -16927,9 +16860,7 @@ After dealing its extra damage to a creature, the ammunition becomes nonmagical.
 
 Your Constitution is 19 while you wear this amulet. It has no effect on you if your Constitution is 19 or higher without it.
 
-#### Amulet of Proof against Detection
-
-#### and Location
+#### Amulet of Proof against Detection and Location
 
 *Wondrous Item, Uncommon (Requires Attunement)*
 
@@ -16972,13 +16903,13 @@ A creature in the compartment can take a Utilize action to move as many as two o
 
 #### Armor, +1, +2, or +3
 
-*Armor (Any Light, Medium, or Heavy), Rare (+1), Very* *Rare (+2), or Legendary (+3)* 
+*Armor (Any Light, Medium, or Heavy), Rare (+1), Very Rare (+2), or Legendary (+3)* 
 
 You have a bonus to Armor Class while wearing this armor. The bonus is determined by its rarity.
 
 #### Armor of Invulnerability
 
-*Armor (Plate Armor), Legendary (Requires* *Attunement)*
+*Armor (Plate Armor), Legendary (Requires Attunement)*
 
 You have Resistance to Bludgeoning, Piercing, and Slashing damage while you wear this armor.
 
@@ -16986,7 +16917,7 @@ You have Resistance to Bludgeoning, Piercing, and Slashing damage while you wear
 
 #### Armor of Resistance
 
-*Armor (Any Light, Medium, or Heavy), Rare (Requires* *Attunement)*
+*Armor (Any Light, Medium, or Heavy), Rare (Requires Attunement)*
 
 You have Resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly by rolling on the following table.
 
@@ -17003,10 +16934,7 @@ You have Resistance to one type of damage while you wear this armor. The GM choo
 | 1 | Legs extend, allowing the apparatus to walk and swim. | Legs retract, reducing the apparatus’s Speed and Swim Speed to 0 and making it unable to benefit from bonuses to speed. |
 | 2 | Forward window shutter opens. | Forward window shutter closes. |
 | 3 | Side window shutters open (two per side). | Side window shutters close (two per side). |
-| 4 | Two claws extend from the front side of the apparatus. |
-
-The claws retract.
-
+| 4 | Two claws extend from the front side of the apparatus. | The claws retract. |
 | 5 | Each extended claw makes the following melee attack: +8 to hit, reach 5 ft. *Hit:* 7 (2d6) Bludgeoning damage. |
 
 Each extended claw makes the following melee attack: +8 to hit, reach 5 ft. *Hit:* The target has the Grappled condition (escape DC 15).
@@ -17019,10 +16947,7 @@ The apparatus walks or swims backward provided its legs are extended.
 
 The apparatus turns 90 degrees clockwise provided its legs are extended.
 
-| 8 | Eyelike fixtures emit Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. |
-
-The light turns off.
-
+| 8 | Eyelike fixtures emit Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. | The light turns off. |
 | 9 | The apparatus sinks up to 20 feet if it’s in liquid. | The apparatus rises up to 20 feet if it’s in liquid. |
 | 10 | The rear hatch unseals and opens. | The rear hatch closes and seals. |
 
@@ -17030,7 +16955,7 @@ The light turns off.
 
 #### Armor of Vulnerability
 
-*Armor (Any Light, Medium, or Heavy), Rare (Requires* *Attunement)*
+*Armor (Any Light, Medium, or Heavy), Rare (Requires Attunement)*
 
 While wearing this armor, you have Resistance to one of the following damage types: Bludgeoning, Piercing, or Slashing. The GM chooses the type or determines it randomly.
 
@@ -17091,7 +17016,7 @@ This bag has an interior space considerably larger than its outside dimensions�
 
 If the bag is overloaded, pierced, or torn, it is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth unharmed, but the bag must be put right before it can be used again. The bag holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.
 
-Placing a *Bag of Holding* inside an extradimensional space created by a *Handy Haversack*, *Portable* *Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.
+Placing a *Bag of Holding* inside an extradimensional space created by a *Handy Haversack*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.
 
 #### Bag of Tricks
 
@@ -17349,7 +17274,7 @@ The chime can be used 10 times. After the tenth time, it cracks and becomes usel
 
 *Wondrous Item, Uncommon*
 
-While wearing this circlet, you can cast *Scorching* *Ray* with it (+5 to hit). The circlet can’t cast this spell again until the next dawn.
+While wearing this circlet, you can cast *Scorching Ray* with it (+5 to hit). The circlet can’t cast this spell again until the next dawn.
 
 #### Cloak of Arachnida
 
@@ -17417,13 +17342,13 @@ While touching this crystal orb, you can cast *Scrying* (save DC 17) with it.
 
 *Wondrous Item, Legendary (Requires Attunement)*
 
-While touching this crystal orb, you can cast *Scrying* (save DC 17) with it. In addition, you can cast *Detect* *Thoughts* (save DC 17) targeting creatures you can see within 30 feet of the spell’s sensor. You don’t need to concentrate on this *Detect Thoughts* spell to maintain it during its duration, but it ends if the *Scrying* spell ends.
+While touching this crystal orb, you can cast *Scrying* (save DC 17) with it. In addition, you can cast *Detect Thoughts* (save DC 17) targeting creatures you can see within 30 feet of the spell’s sensor. You don’t need to concentrate on this *Detect Thoughts* spell to maintain it during its duration, but it ends if the *Scrying* spell ends.
 
 #### Crystal Ball of Telepathy
 
 *Wondrous Item, Legendary (Requires Attunement)*
 
-While touching this crystal orb, you can cast *Scry**ing* (save DC 17) with it. In addition, you can communicate telepathically with creatures you can see within 30 feet of the spell’s sensor. You can also cast *Suggestion* (save DC 17) through the sensor on one of those creatures. You don’t need to concentrate on this *Suggestion* to maintain it during its duration, but it ends if *Scrying* ends. You can’t cast *Suggestion* in this way again until the next dawn.
+While touching this crystal orb, you can cast *Scrying* (save DC 17) with it. In addition, you can communicate telepathically with creatures you can see within 30 feet of the spell’s sensor. You can also cast *Suggestion* (save DC 17) through the sensor on one of those creatures. You don’t need to concentrate on this *Suggestion* to maintain it during its duration, but it ends if *Scrying* ends. You can’t cast *Suggestion* in this way again until the next dawn.
 
 #### Crystal Ball of True Seeing
 
@@ -17473,7 +17398,7 @@ You can take a Bonus Action to magically coat the blade with poison. The poison 
 
 #### Dancing Sword
 
-*Weapon (Greatsword, Longsword, Rapier, Scimitar, or* *Shortsword), Very Rare (Requires Attunement)*
+*Weapon (Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)*
 
 You can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.
 
@@ -17507,7 +17432,7 @@ The magic of the deck functions only if its cards are drawn at random. You can t
 
 it to the ground at a point within 30 feet of yourself. An illusion of a creature, determined by rolling on the Deck of Illusions table, forms over the thrown card and remains until dispelled. The illusory creature created by the card looks and behaves like a real creature of its kind, except that it can do no harm. While you are within 120 feet of the illusory creature and can see it, you can take a Magic action to move it anywhere within 30 feet of its card.
 
-Any physical interaction with the illusory creature reveals it to be false, because objects pass through it. A creature that takes a Study action to visually inspect the illusory creature identifies it as an illusion with a successful DC 15 Intelligence (Investigation) check. The illusion lasts until its card is moved or the illusion is dispelled (using a *Dispel* *Magic* spell or a similar effect). When the illusion ends, the image on its card disappears, and that card can’t be used again.
+Any physical interaction with the illusory creature reveals it to be false, because objects pass through it. A creature that takes a Study action to visually inspect the illusory creature identifies it as an illusion with a successful DC 15 Intelligence (Investigation) check. The illusion lasts until its card is moved or the illusion is dispelled (using a *Dispel Magic* spell or a similar effect). When the illusion ends, the image on its card disappears, and that card can’t be used again.
 
 ##### Deck of Illusions
 
@@ -17554,7 +17479,7 @@ Any physical interaction with the illusory creature reveals it to be false, beca
 
 #### Defender
 
-*Weapon (Any Melee Weapon), Legendary (Requires* *Attunement)*
+*Weapon (Any Melee Weapon), Legendary (Requires Attunement)*
 
 You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon.
 
@@ -17667,7 +17592,7 @@ While wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an
 
 #### Dwarven Thrower
 
-*Weapon (Warhammer), Very Rare (Requires* *Attunement by a Dwarf or a Creature Attuned to a Belt* *of Dwarvenkind)*
+*Weapon (Warhammer), Very Rare (Requires Attunement by a Dwarf or a Creature Attuned to a Belt of Dwarvenkind)*
 
 You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. It has the Thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 Force damage, or an extra 2d8 Force damage if the target is a Giant. Immediately after hitting or missing, the weapon flies back to your hand.
 
@@ -17722,7 +17647,7 @@ You gain a +1 bonus to Armor Class while you wear this armor. You are considered
 
 #### Energy Bow
 
-*Weapon (Longbow or Shortbow), Very Rare (Requires* *Attunement)*
+*Weapon (Longbow or Shortbow), Very Rare (Requires Attunement)*
 
 You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.
 
@@ -17746,7 +17671,7 @@ Each minute the bottle remains open, the size of the Emanation increases by 10 f
 
 <!-- page 221 -->
 
-Closing the bottle causes the cloud to become fixed in place until it disperses after 10 minutes. A strong wind (such as that created by the *Gust of* *Wind* spell) disperses the cloud after 1 minute.
+Closing the bottle causes the cloud to become fixed in place until it disperses after 10 minutes. A strong wind (such as that created by the *Gust of Wind* spell) disperses the cloud after 1 minute.
 
 #### Eyes of Charming
 
@@ -17846,17 +17771,13 @@ a 30-foot Emanation originating from the goat must succeed on a DC 15 Wisdom sav
 
 **Goat of Traveling.** This figurine can become a
 
-Large goat with the same statistics as a **Riding**
-
-**Horse**. It has 24 charges, and each hour or portion thereof it spends in goat form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can’t be used again until 7 days have passed, when it regains all expended charges.
+Large goat with the same statistics as a **Riding Horse**. It has 24 charges, and each hour or portion thereof it spends in goat form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can’t be used again until 7 days have passed, when it regains all expended charges.
 
 **Goat of Travail.** This figurine can become a **Giant**
 
 **Goat** for up to 3 hours. Once it has been used, it can’t be used again until 30 days have passed.
 
-***Marble Elephant (Rare).*** This marble statuette resembles a trumpeting elephant. It can become an 
-
-**Elephant** for up to 24 hours. Once it has been used, it can’t be used again until 7 days have passed.
+***Marble Elephant (Rare).*** This marble statuette resembles a trumpeting elephant. It can become an **Elephant** for up to 24 hours. Once it has been used, it can’t be used again until 7 days have passed.
 
 ***Obsidian Steed (Very Rare).*** This polished obsidian horse can become a **Nightmare** for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can’t be used again until 5 days have passed.
 
@@ -17872,7 +17793,7 @@ The figurine has a 10 percent chance each time you use it to ignore your orders,
 
 #### Flame Tongue
 
-*Weapon (Any Melee Weapon), Rare (Requires* *Attunement)*
+*Weapon (Any Melee Weapon), Rare (Requires Attunement)*
 
 While holding this magic weapon, you can take a Bonus Action and use a command word to cause flames to engulf the damage-dealing part of the weapon. These flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet. While the weapon is ablaze, it deals an extra 2d6 Fire damage on a hit. The flames last until you take a Bonus Action to issue the command again or until you drop, stow, or sheathe the weapon.
 
@@ -17900,7 +17821,7 @@ Statistics for the Rowboat and Keelboat appear in “Equipment.” If either ves
 
 #### Frost Brand
 
-*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, or Shortsword), Very Rare (Requires* *Attunement)*
+*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, or Shortsword), Very Rare (Requires Attunement)*
 
 When you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage.
 
@@ -17986,7 +17907,7 @@ While wearing these dark lenses, you have Darkvision out to 60 feet. If you alre
 
 #### Hammer of Thunderbolts
 
-*Weapon (Maul or Warhammer), Legendary (Requires* *Attunement)*
+*Weapon (Maul or Warhammer), Legendary (Requires Attunement)*
 
 You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.
 
@@ -18000,7 +17921,7 @@ attack roll made with this weapon against a Giant, the creature must succeed on 
 
 **Might of Giants.** The Strength score bestowed by
 
-your *Belt of Giant Strength* or *Gauntlets of Ogre* *Power* increases by 4, to a maximum of 30.
+your *Belt of Giant Strength* or *Gauntlets of Ogre Power* increases by 4, to a maximum of 30.
 
 #### Handy Haversack
 
@@ -18020,11 +17941,11 @@ Placing the haversack inside an extradimensional space created by a *Bag of Hold
 
 *Wondrous Item, Uncommon (Requires Attunement)*
 
-While wearing this hat, you can cast the *Disguise* *Self* spell. The spell ends if the hat is removed.
+While wearing this hat, you can cast the *Disguise Self* spell. The spell ends if the hat is removed.
 
 #### Hat of Many Spells
 
-*Wondrous Item, Very Rare (Requires Attunement by a* *Wizard)*
+*Wondrous Item, Very Rare (Requires Attunement by a Wizard)*
 
 This pointed hat has the following properties.
 
@@ -18037,7 +17958,7 @@ This pointed hat has the following properties.
 Any spell you cast from the hat uses your spell save DC and spell attack bonus.
 
 | **1d100** | **Effect** |
-| 01–50 | You cast a random spell determined by rolling 1d10: on a **1**, *Enlarge/Reduce* (enlarge effect); on a **2**, *Enlarge/Reduce* (reduce effect); on a **3**, *Faerie Fire*; on a **4**, *Fireball*; on a **5**, *Gust of* *Wind*; on a **6**, *Invisibility* (cast on yourself); on a **7**, *Lightning Bolt*; on an **8**, *Phantasmal Force*; on a **9**, *Polymorph*; on a **10**, *Stinking Cloud*. |
+| 01–50 | You cast a random spell determined by rolling 1d10: on a **1**, *Enlarge/Reduce* (enlarge effect); on a **2**, *Enlarge/Reduce* (reduce effect); on a **3**, *Faerie Fire*; on a **4**, *Fireball*; on a **5**, *Gust of Wind*; on a **6**, *Invisibility* (cast on yourself); on a **7**, *Lightning Bolt*; on an **8**, *Phantasmal Force*; on a **9**, *Polymorph*; on a **10**, *Stinking Cloud*. |
 | 51–55 | You have the Stunned condition until the end of your next turn, believing something awesome just happened. |
 | 56–60 | A harmless swarm of butterflies fills a 10-foot Cube within 30 feet of yourself. The swarm disperses after 1 minute. |
 | 61–65 | You pull a nonmagical object out of the hat. Roll 1d4 to determine the object: on a **1**, a vial of Acid; on a **2**, a flask of Alchemist’s Fire; on a **3**, a Crowbar; on a **4**, a lit Torch. |
@@ -18070,7 +17991,7 @@ You gain the following benefits while wearing the helm.
 
 ***Ruby Resistance.*** As long as the helm has at least one ruby, you have Resistance to Fire damage.
 
-***Spells.*** You can cast one of the following spells (save DC 18), using one of the helm’s gems of the specified type as a component: *Daylight* (opal), *Fire**ball* (fire opal), *Prismatic Spray* (diamond), or *Wall of* *Fire* (ruby). The gem is destroyed when the spell is cast and disappears from the helm.
+***Spells.*** You can cast one of the following spells (save DC 18), using one of the helm’s gems of the specified type as a component: *Daylight* (opal), *Fireball* (fire opal), *Prismatic Spray* (diamond), or *Wall of Fire* (ruby). The gem is destroyed when the spell is cast and disappears from the helm.
 
 ***Taking Fire Damage.*** Roll 1d20 if you are wearing the helm and take Fire damage as a result of failing 
 
@@ -18082,7 +18003,7 @@ a saving throw against a spell. On a roll of 1, the helm emits beams of light fr
 
 *Wondrous Item, Uncommon*
 
-While wearing this helm, you can cast *Comprehend* *Languages* from it.
+While wearing this helm, you can cast *Comprehend Languages* from it.
 
 #### Helm of Telepathy
 
@@ -18098,7 +18019,7 @@ This helm has 3 charges. While wearing it, you can expend 1 charge to cast *Tele
 
 #### Holy Avenger
 
-*Weapon (Any Simple or Martial), Legendary (Requires* *Attunement by a Paladin)*
+*Weapon (Any Simple or Martial), Legendary (Requires Attunement by a Paladin)*
 
 You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Fiend or an Undead with it, that creature takes an extra 2d10 Radiant damage.
 
@@ -18168,7 +18089,7 @@ Magic prevents the tower from being tipped over. The roof, the door, and the wal
 
 Roughly marble sized, *Ioun Stones* are named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of *Ioun Stones* exist, each type a distinct combination of shape and color.
 
-When you take a Magic action to toss an *Ioun* *Stone* into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three *Ioun Stones* orbiting your head at the same time.
+When you take a Magic action to toss an *Ioun Stone* into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three *Ioun Stones* orbiting your head at the same time.
 
 Each *Ioun Stone* orbiting your head is considered to be an object you are wearing. The orbiting stone avoids contact with other creatures and objects, adjusting its orbit to avoid collisions and thwarting all attempts by other creatures to attack or snatch it.
 
@@ -18252,7 +18173,7 @@ action to lower the hood, reducing the lantern’s light to Dim Light in a 5-foo
 
 #### Luck Blade
 
-*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, Sickle, or Shortsword), Legendary (Requires* *Attunement)*
+*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, Sickle, or Shortsword), Legendary (Requires Attunement)*
 
 You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. While the weapon is on your person, you also gain a +1 bonus to saving throws.
 
@@ -18509,13 +18430,13 @@ While wearing this necklace, you can breathe normally in any environment, and yo
 
 *Wondrous Item, Rare*
 
-This necklace has 1d6 + 3 beads hanging from it. You can take a Magic action to detach a bead and throw it up to 60 feet away. When it reaches the end of its trajectory, the bead detonates as a level 3 *Fire**ball* (save DC 15).
+This necklace has 1d6 + 3 beads hanging from it. You can take a Magic action to detach a bead and throw it up to 60 feet away. When it reaches the end of its trajectory, the bead detonates as a level 3 *Fireball* (save DC 15).
 
 You can hurl multiple beads, or even the whole necklace, at one time. When you do so, increase the damage of the *Fireball* by 1d6 for each bead after the first (maximum 12d6).
 
 #### Necklace of Prayer Beads
 
-*Wondrous Item, Rare (Requires Attunement by a* *Cleric, Druid, or Paladin)*
+*Wondrous Item, Rare (Requires Attunement by a Cleric, Druid, or Paladin)*
 
 This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.
 
@@ -18527,13 +18448,11 @@ Six types of magic beads exist. The GM decides the type of each bead on the neck
 | 13–16 | Bead of Favor | *Greater Restoration* |
 | 17–18 | Bead of Smiting | *Shining Smite* |
 | 19 | Bead of Summons | *Guardian of Faith* |
-| 20 | Bead of Wind Walking |
-
-*Wind Walk*
+| 20 | Bead of Wind Walking | *Wind Walk* |
 
 #### Nine Lives Stealer
 
-*Weapon (Any Simple or Martial), Very Rare (Requires* *Attunement)*
+*Weapon (Any Simple or Martial), Very Rare (Requires Attunement)*
 
 You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon.
 
@@ -18541,7 +18460,7 @@ You gain a +2 bonus to attack rolls and damage rolls made with this magic weapon
 
 #### Oathbow
 
-*Weapon (Longbow or Shortbow), Very Rare (Requires* *Attunement)*
+*Weapon (Longbow or Shortbow), Very Rare (Requires Attunement)*
 
 When you nock an arrow on this bow, it whispers in Elvish, “Swift defeat to my enemies.” When you use this weapon to make a ranged attack, you can utter or sign the following command words: “Swift death to you who have wronged me.” The target of your attack becomes your sworn enemy until it dies or until dawn 7 days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.
 
@@ -18581,7 +18500,7 @@ This sticky, black unguent is thick and heavy, but it flows quickly when poured.
 
 #### Pearl of Power
 
-*Wondrous Item, Uncommon (Requires Attunement by* *a Spellcaster)*
+*Wondrous Item, Uncommon (Requires Attunement by a Spellcaster)*
 
 While this pearl is on your person, you can take a Magic action to regain one expended spell slot of level 3 or lower. Once you use the pearl, it can’t be used again until the next dawn.
 
@@ -18631,9 +18550,7 @@ repeats it at the end of each of its turns, ending the effect on itself on a suc
 
 While these pipes are on your person, ordinary rats and giant rats are Indifferent toward you and won’t attack you unless you threaten or harm them.
 
-The pipes have 3 charges and regain 1d3 expended charges daily at dawn. If you play the pipes as a Magic action, you can take a Bonus Action to expend 1 to 3 charges, calling forth one **Swarm** 
-
-**of Rats** with each expended charge if enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren’t enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren’t under your control otherwise.
+The pipes have 3 charges and regain 1d3 expended charges daily at dawn. If you play the pipes as a Magic action, you can take a Bonus Action to expend 1 to 3 charges, calling forth one **Swarm of Rats** with each expended charge if enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren’t enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren’t under your control otherwise.
 
 Whenever a **Swarm of Rats** that isn’t under another creature’s control comes within 30 feet of you while you are playing the pipes, the swarm makes a DC 15 Wisdom saving throw. On a successful save, the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours. On a failed save, the swarm is swayed by the pipes’ music and becomes Friendly to you and your allies for as long as you continue to play the pipes each round as a Magic action. A Friendly swarm obeys your commands. If you issue no commands to a Friendly swarm, it defends itself but otherwise takes no actions. If a Friendly swarm starts its turn more than 30 feet away from you, your control over that swarm ends, and the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours.
 
@@ -18649,15 +18566,15 @@ While you’re wearing this armor, you can take a Magic action and use a command
 
 This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.
 
-You can take a Magic action to unfold a *Por**table Hole* and place it on or against a solid surface, whereupon the *Portable Hole* creates an 
+You can take a Magic action to unfold a *Portable Hole* and place it on or against a solid surface, whereupon the *Portable Hole* creates an 
 
 <!-- page 235 -->
 
 extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane of existence, so it can’t be used to create open passages. Any creature inside an open *Portable Hole* can exit the hole by climbing out of it.
 
-You can take a Magic action to close a *Portable* *Hole* by taking hold of the edges of the cloth and folding it up. Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. No matter what’s in it, the hole weighs next to nothing.
+You can take a Magic action to close a *Portable Hole* by taking hold of the edges of the cloth and folding it up. Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. No matter what’s in it, the hole weighs next to nothing.
 
-If the hole is folded up, a creature within the hole’s extradimensional space can take an action to make a DC 10 Strength (Athletics) check. On a successful check, the creature forces its way out and appears within 5 feet of the *Portable Hole*. A closed *Portable* *Hole* holds enough air for 1 hour of breathing, divided by the number of breathing creatures inside.
+If the hole is folded up, a creature within the hole’s extradimensional space can take an action to make a DC 10 Strength (Athletics) check. On a successful check, the creature forces its way out and appears within 5 feet of the *Portable Hole*. A closed *Portable Hole* holds enough air for 1 hour of breathing, divided by the number of breathing creatures inside.
 
 Placing a *Portable Hole* inside an extradimensional space created by a *Bag of Holding*, *Handy Haversack*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.
 
@@ -18786,7 +18703,7 @@ This potion’s syrupy liquid looks like liquefied iron.
 
 *Potion, Very Rare*
 
-When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a *Potion of Lon**gevity*, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years.
+When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a *Potion of Longevity*, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years.
 
 Suspended in this amber liquid is a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.
 
@@ -18847,7 +18764,7 @@ This potion’s cloudy green fluid smells of the sea and has a jellyfish-like bu
 
 #### Quarterstaff of the Acrobat
 
-*Weapon (Quarterstaff), Very Rare (Requires* *Attunement)*
+*Weapon (Quarterstaff), Very Rare (Requires Attunement)*
 
 You have a +2 bonus to attack rolls and damage rolls made with this magic weapon.
 
@@ -18926,7 +18843,7 @@ Fire damage.
 <!-- page 238 -->
 
 | **Plane** | **Spells (Charges)** |
-| Air | *Chain Lightning* (3 charges), *Feather Fall* (0 charges), *Gust of Wind* (2 charges), *Wind* *Wall* (1 charge) |
+| Air | *Chain Lightning* (3 charges), *Feather Fall* (0 charges), *Gust of Wind* (2 charges), *Wind Wall* (1 charge) |
 | Earth | *Earthquake* (5 charges), *Stone Shape* (2 charges), *Stoneskin* (3 charges), *Wall of Stone* (3 charges) |
 | Fire | *Burning Hands* (1 charge), *Fireball* (2 charges), *Fire Storm* (4 charges), *Wall of Fire* (3 charges) |
 | Water | *Create or Destroy Water* (1 charge), *Ice Storm* (2 charges), *Tsunami* (5 charges), *Wall of Ice* (3 charges), *Water Walk* (2 charges) |
@@ -19011,7 +18928,7 @@ You can cast *Dancing Lights* or *Light* from the ring.
 
 The ring has 6 charges and regains 1d6 expended charges daily at dawn. You can expend its charges to use the properties below.
 
-***Faerie Fire.*** You can expend 1 charge to cast *Fa**erie Fire* from the ring.
+***Faerie Fire.*** You can expend 1 charge to cast *Faerie Fire* from the ring.
 
 ***Lightning Spheres.*** You can expend 2 charges as a Magic action to create up to four 3-foot-diameter spheres of lightning.
 
@@ -19134,7 +19051,7 @@ While you wear the robe, you can take a Magic action to enter the Astral Plane a
 
 #### Robe of the Archmagi
 
-*Wondrous Item, Legendary (Requires Attunement by a* *Sorcerer, Warlock, or Wizard)*
+*Wondrous Item, Legendary (Requires Attunement by a Sorcerer, Warlock, or Wizard)*
 
 This elegant garment is made from exquisite cloth and adorned with runes.
 
@@ -19343,7 +19260,7 @@ While holding this Shield, you have Advantage on Initiative rolls and Wisdom (Pe
 
 #### Shield, +1, +2, or +3
 
-*Armor (Shield), Uncommon (+1), Rare (+2), or Very* *Rare (+3)* 
+*Armor (Shield), Uncommon (+1), Rare (+2), or Very Rare (+3)* 
 
 While holding this Shield, you have a bonus to Armor Class determined by the Shield’s rarity, in addition to the Shield’s normal bonus to AC.
 
@@ -19443,7 +19360,7 @@ This staff has 10 charges. While holding the staff, you can use any of its prope
 
 **Cast Spell.** You can expend 1 of the staff’s charges
 
-to cast *Charm Person*, *Command*, or *Comprehend* *Languages* from it using your spell save DC.
+to cast *Charm Person*, *Command*, or *Comprehend Languages* from it using your spell save DC.
 
 **Reflect Enchantment.** If you succeed on a saving
 
@@ -19487,7 +19404,7 @@ You have Resistance to Cold damage while you hold this staff.
 
 #### Staff of Healing
 
-*Staff, Rare (Requires Attunement by a Bard, Cleric, or* *Druid)*
+*Staff, Rare (Requires Attunement by a Bard, Cleric, or Druid)*
 
 This staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell.
 
@@ -19608,9 +19525,7 @@ This staff has 50 charges and can be wielded as a magic Quarterstaff that grants
 
 *Staff, Uncommon (Requires Attunement)*
 
-As a Magic action, you can throw this staff so that it lands in an unoccupied space within 10 feet of you, causing the staff to become a **Giant Constrictor** 
-
-**Snake** in that space. The snake is under your control and shares your Initiative count, taking its turn immediately after yours. 
+As a Magic action, you can throw this staff so that it lands in an unoccupied space within 10 feet of you, causing the staff to become a **Giant Constrictor Snake** in that space. The snake is under your control and shares your Initiative count, taking its turn immediately after yours. 
 
 On your turn, you can mentally command the snake (no action required) if it is within 60 feet of you and you don’t have the Incapacitated condition. You decide what action the snake takes and where it moves during its turn, or you can issue it a general command, such as to attack your enemies or guard a location. Absent commands from you, the snake defends itself.
 
@@ -19671,9 +19586,7 @@ The staff can be wielded as a magic Quarterstaff. On a hit, it deals damage as a
 
 *Wondrous Item, Rare*
 
-While touching this 5-pound stone to the ground, you can take a Magic action to summon an **Earth** 
-
-**Elemental**. The elemental appears in an unoccupied space you choose within 30 feet of yourself, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The stone can’t be used this way again until the next dawn.
+While touching this 5-pound stone to the ground, you can take a Magic action to summon an **Earth Elemental**. The elemental appears in an unoccupied space you choose within 30 feet of yourself, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The stone can’t be used this way again until the next dawn.
 
 #### Stone of Good Luck (Luckstone)
 
@@ -19717,7 +19630,7 @@ When you hit a creature with an attack using this magic weapon, the target takes
 
 #### Talisman of Pure Good
 
-*Wondrous Item, Legendary (Requires Attunement by a* *Cleric or Paladin)*
+*Wondrous Item, Legendary (Requires Attunement by a Cleric or Paladin)*
 
 This talisman is a mighty symbol of goodness. A Fiend or an Undead that touches the talisman takes 8d6 Radiant damage and takes the damage again each time it ends its turn holding or carrying the talisman.
 
@@ -19731,7 +19644,7 @@ This talisman is a mighty symbol of goodness. A Fiend or an Undead that touches 
 
 *Wondrous Item, Legendary (Requires Attunement)*
 
-While holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check you make to control a *Sphere of Annihilation*. In addition, when you start your turn in control of a *Sphere of* *Annihilation*, you can take a Magic action to move it 10 feet plus a number of additional feet equal to 10 times your Intelligence modifier. This movement doesn’t have to be in a straight line.
+While holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check you make to control a *Sphere of Annihilation*. In addition, when you start your turn in control of a *Sphere of Annihilation*, you can take a Magic action to move it 10 feet plus a number of additional feet equal to 10 times your Intelligence modifier. This movement doesn’t have to be in a straight line.
 
 #### Talisman of Ultimate Evil
 
@@ -19781,7 +19694,7 @@ This book contains intuition and insight exercises, and its words are charged wi
 
 *Weapon (Trident), Uncommon (Requires Attunement)*
 
-This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast *Dominate* *Beast* (save DC 15) from it on a Beast that has a Swim Speed.
+This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast *Dominate Beast* (save DC 15) from it on a Beast that has a Swim Speed.
 
 #### Universal Solvent
 
@@ -19789,7 +19702,7 @@ This magic weapon has 3 charges, and it regains 1d3 expended charges daily at da
 
 This tube holds milky liquid with a strong alcohol smell. When found, a tube contains 1d6 + 1 ounces.
 
-You can take a Utilize action to pour 1 or more ounces of solvent from the tube onto a surface within reach. Each ounce instantly dissolves up to 1 square foot of adhesive it touches, including *Sover**eign Glue*.
+You can take a Utilize action to pour 1 or more ounces of solvent from the tube onto a surface within reach. Each ounce instantly dissolves up to 1 square foot of adhesive it touches, including *Sovereign Glue*.
 
 #### Vicious Weapon
 
@@ -19860,7 +19773,7 @@ This wand has 7 charges. While holding it, you can expend no more than 3 charges
 
 *Wand, Rare (Requires Attunement by a Spellcaster)*
 
-This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast *Lightning* *Bolt* (save DC 15) from it. For 1 charge, you cast the level 3 version of the spell. You can increase the spell’s level by 1 for each additional charge you expend.
+This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast *Lightning Bolt* (save DC 15) from it. For 1 charge, you cast the level 3 version of the spell. You can increase the spell’s level by 1 for each additional charge you expend.
 
 ***Regaining Charges.*** The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand’s last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.
 
@@ -19888,7 +19801,7 @@ This wand has 7 charges. While holding it, you can take a Magic action to expend
 
 #### Wand of Polymorph
 
-*Wand, Very Rare (Requires Attunement by a* *Spellcaster)*
+*Wand, Very Rare (Requires Attunement by a Spellcaster)*
 
 This wand has 7 charges. While holding it, you can expend 1 charge to cast *Polymorph* (save DC 15) from it.
 
@@ -19908,7 +19821,7 @@ While holding this wand, you gain a bonus to spell attack rolls determined by th
 
 #### Wand of Web
 
-*Wand, Uncommon (Requires Attunement by a* *Spellcaster)*
+*Wand, Uncommon (Requires Attunement by a Spellcaster)*
 
 This wand has 7 charges. While holding it, you can expend 1 charge to cast *Web* (save DC 13) from it.
 
@@ -19927,7 +19840,7 @@ This wand has 7 charges. While holding it, you can take a Magic action to expend
 ##### Wand of Wonder Effects
 
 | **1d100** | **Effect** |
-| 01–20 | You cast a spell originating from the chosen point. Roll 1d10 to determine the spell: on a **1–2,** *Darkness*; on a **3–4,** *Faerie Fire*; on a **5–6,** *Fireball*; on a **7–8,** *Slow*; on a **9–10,** *Stinking* *Cloud*. |
+| 01–20 | You cast a spell originating from the chosen point. Roll 1d10 to determine the spell: on a **1–2,** *Darkness*; on a **3–4,** *Faerie Fire*; on a **5–6,** *Fireball*; on a **7–8,** *Slow*; on a **9–10,** *Stinking Cloud*. |
 | 21–25 | Nothing happens at the chosen point of origin. Instead, you have the Stunned condition until the start of your next turn, believing something awesome just happened. |
 | 26–30 | You cast *Gust of Wind*. The Line created by the spell extends from you to the chosen point of origin. |
 | 31–35 | Nothing happens at the chosen point of origin. Instead, you take 1d6 Psychic damage. |
@@ -19957,7 +19870,7 @@ You have a bonus to attack rolls and damage rolls made with this magic weapon. T
 
 #### Weapon of Warning
 
-*Weapon (Any Simple or Martial), Uncommon (Requires* *Attunement)*
+*Weapon (Any Simple or Martial), Uncommon (Requires Attunement)*
 
 As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.
 
@@ -19971,7 +19884,7 @@ As long as this weapon is within your reach and you are attuned to it, you and a
 
 This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.
 
-You can take a Magic action to unfold the *Well of* *Many Worlds* and place it on a solid surface, whereupon it forms a two-way, 6-foot-diameter, circular portal to another world or plane of existence. Each time the item opens a portal, the GM decides where it leads. The portal remains open until a creature within 5 feet of it takes a Magic action to close it by taking hold of the edges of the cloth and folding it up.
+You can take a Magic action to unfold the *Well of Many Worlds* and place it on a solid surface, whereupon it forms a two-way, 6-foot-diameter, circular portal to another world or plane of existence. Each time the item opens a portal, the GM decides where it leads. The portal remains open until a creature within 5 feet of it takes a Magic action to close it by taking hold of the edges of the cloth and folding it up.
 
 Once the *Well of Many Worlds* has opened a portal, it can’t do so again for 1d8 hours.
 
@@ -20291,7 +20204,7 @@ Some creatures can make more than one attack when they take the Attack action. S
 
 If a monster can cast any spells, its stat block lists the spells and provides the monster’s spellcasting ability, spell save DC (if any spells require a saving throw), and spell attack bonus (if any spells require an attack roll). Unless noted otherwise, a spell of level 1 or higher is always cast at its lowest possible level and can’t be cast at a higher level.
 
-A monster’s spell can have special rules or restrictions. For example, a green hag can cast the *Invisi**bility* spell, but the spell has a “self only” restriction, which means the spell affects only the hag. 
+A monster’s spell can have special rules or restrictions. For example, a green hag can cast the *Invisibility* spell, but the spell has a “self only” restriction, which means the spell affects only the hag. 
 
 ***Spell Components.*** The Spellcasting trait notes whether the monster’s spellcasting ignores the need for certain spell components. If any spell components are required, describe the monster’s use of Verbal, Somatic, or Material components to signal to characters that it is casting a spell. A monster that requires Material components has them.
 
@@ -20383,7 +20296,7 @@ The target repeats the save whenever it takes damage as well as after every 24 h
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the aboleth can expend a use to* *take one of the following actions. The aboleth regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the aboleth can expend a use to take one of the following actions. The aboleth regains all expended uses at the start of each of its turns.*
 
 ***Lash.*** The aboleth makes one Tentacle attack.
 
@@ -20751,7 +20664,7 @@ Passive Perception 11
 
 ##### Traits
 
-***Death Throes.*** The balor explodes when it dies. *Dex**terity Saving Throw:* DC 20, each creature in a 30-foot Emanation originating from the balor. *Failure:* 31 (9d6) Fire damage plus 31 (9d6) Force damage. *Success:* Half damage. *Failure or Success:* If the balor dies outside the Abyss, it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.
+***Death Throes.*** The balor explodes when it dies. *Dexterity Saving Throw:* DC 20, each creature in a 30-foot Emanation originating from the balor. *Failure:* 31 (9d6) Fire damage plus 31 (9d6) Force damage. *Success:* Half damage. *Failure or Success:* If the balor dies outside the Abyss, it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.
 
 ***Fire Aura.*** At the end of each of the balor’s turns, each creature in a 5-foot Emanation originating from the balor takes 13 (3d8) Fire damage.
 
@@ -20915,7 +20828,7 @@ Darkness); Passive Perception 18
 
 ##### Bonus Actions
 
-***Petrifying Gaze (Recharge 4–6).*** *Constitution Saving* *Throw:* DC 12, each creature in a 30-foot Cone. If the basilisk sees its reflection in the Cone, the basilisk must make this save. *First Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition instead of the Restrained condition.
+***Petrifying Gaze (Recharge 4–6).*** *Constitution Saving Throw:* DC 12, each creature in a 30-foot Cone. If the basilisk sees its reflection in the Cone, the basilisk must make this save. *First Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition instead of the Restrained condition.
 
 ## Bearded Devil
 
@@ -20957,7 +20870,7 @@ Darkness); Passive Perception 10
 
 ***Beard.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil’s next turn. Until this poison ends, the target can’t regain Hit Points.
 
-***Infernal Glaive.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. *Constitution Saving* *Throw:* DC 12. *Failure:* The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.
+***Infernal Glaive.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.
 
 ## Behir
 
@@ -20993,7 +20906,7 @@ Darkness); Passive Perception 10
 
 ***Constrict.*** *Strength Saving Throw:* DC 18, one Large or smaller creature the behir can see within 5 feet. *Failure:* 28 (5d8 + 6) Bludgeoning damage. The target has the Grappled condition (escape DC 16), and it has the Restrained condition until the grapple ends.
 
-***Lightning Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 16, each creature in a 90-foot-long, 5-foot-wide Line. *Failure:* 66 (12d10) Lightning damage. *Suc**cess:* Half damage.
+***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 16, each creature in a 90-foot-long, 5-foot-wide Line. *Failure:* 66 (12d10) Lightning damage. *Success:* Half damage.
 
 ##### Bonus Actions
 
@@ -21161,7 +21074,7 @@ Passive Perception 21
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Cloud of Insects.*** *Dexterity Saving Throw:* DC 17, one creature the dragon can see within 120 feet. *Failure:* 22 (4d10) Poison damage, and the target has Disadvantage on saving throws to maintain Concentration until the end of its next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -21217,11 +21130,11 @@ Passive Perception 26
 
 *Magic*, *Fear*
 
-**1/Day Each:** *Create Undead*, *Speak with Dead*, *Vitriolic* *Sphere* (level 5 version)
+**1/Day Each:** *Create Undead*, *Speak with Dead*, *Vitriolic Sphere* (level 5 version)
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Cloud of Insects.*** *Dexterity Saving Throw:* DC 21, one creature the dragon can see within 120 feet. *Failure:* 33 (6d10) Poison damage, and the target has Disadvantage on saving throws to maintain Concentration until the end of its next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -21345,7 +21258,7 @@ Passive Perception 14
 
 ***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 8 (1d10 + 3) Slashing damage plus 3 (1d6) Lightning damage.
 
-***Lightning Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 12, each creature in a 30-foot-long, 5-foot-wide Line. *Failure:* 21 (6d6) Lightning damage. *Success:* Half damage.
+***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 12, each creature in a 30-foot-long, 5-foot-wide Line. *Failure:* 21 (6d6) Lightning damage. *Success:* Half damage.
 
 ### Young Blue Dragon
 
@@ -21379,7 +21292,7 @@ Passive Perception 19
 
 ***Rend.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 5 (1d10) Lightning damage.
 
-***Lightning Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 16, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Suc**cess:* Half damage.
+***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 16, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.
 
 ### Adult Blue Dragon
 
@@ -21417,11 +21330,11 @@ Passive Perception 22
 
 ***Rend.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.
 
-***Lightning Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 19, each creature in a 90-foot-long, 5-foot-
+***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 19, each creature in a 90-foot-long, 5-foot-
 
 <!-- page 267 -->
 
-wide Line. *Failure:* 60 (11d10) Lightning damage. *Suc**cess:* Half damage.
+wide Line. *Failure:* 60 (11d10) Lightning damage. *Success:* Half damage.
 
 ***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):
 
@@ -21431,11 +21344,11 @@ wide Line. *Failure:* 60 (11d10) Lightning damage. *Suc**cess:* Half damage.
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
-***Cloaked Flight.*** The dragon uses Spellcasting to cast *In**visibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.
+***Cloaked Flight.*** The dragon uses Spellcasting to cast *Invisibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.
 
-***Sonic Boom.*** The dragon uses Spellcasting to cast *Shat**ter*. The dragon can’t take this action again until the start of its next turn.
+***Sonic Boom.*** The dragon uses Spellcasting to cast *Shatter*. The dragon can’t take this action again until the start of its next turn.
 
 ***Tail Swipe.*** The dragon makes one Rend attack.
 
@@ -21475,7 +21388,7 @@ Passive Perception 27
 
 ***Rend.*** *Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 11 (2d10) Lightning damage.
 
-***Lightning Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 88 (16d10) Lightning damage. *Success:* Half damage.
+***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 88 (16d10) Lightning damage. *Success:* Half damage.
 
 ***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22):
 
@@ -21487,11 +21400,11 @@ Passive Perception 27
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
-***Cloaked Flight.*** The dragon uses Spellcasting to cast *In**visibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.
+***Cloaked Flight.*** The dragon uses Spellcasting to cast *Invisibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.
 
-***Sonic Boom.*** The dragon uses Spellcasting to cast *Shat**ter* (level 3 version). The dragon can’t take this action again until the start of its next turn.
+***Sonic Boom.*** The dragon uses Spellcasting to cast *Shatter* (level 3 version). The dragon can’t take this action again until the start of its next turn.
 
 ***Tail Swipe.*** The dragon makes one Rend attack.
 
@@ -21667,7 +21580,7 @@ Passive Perception 21
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Blazing Light.*** The dragon uses Spellcasting to cast *Scorching Ray*.
 
@@ -21727,7 +21640,7 @@ Passive Perception 24
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Blazing Light.*** The dragon uses Spellcasting to cast *Scorching Ray* (level 3 version).
 
@@ -21775,7 +21688,7 @@ Passive Perception 14
 
 ***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 8 (1d10 + 3) Slashing damage.
 
-***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving* *Throw:* DC 12, each creature in a 40-foot-long, 5-foot-wide Line. *Failure:* 16 (3d10) Lightning damage. *Suc**cess:* Half damage.
+***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 12, each creature in a 40-foot-long, 5-foot-wide Line. *Failure:* 16 (3d10) Lightning damage. *Success:* Half damage.
 
 ***Repulsion Breath.*** *Strength Saving Throw:* DC 12, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 30 feet straight away from the dragon and has the Prone condition.
 
@@ -21815,7 +21728,7 @@ Passive Perception 17
 
 ***Rend.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage.
 
-***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving* *Throw:* DC 15, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 49 (9d10) Lightning damage. *Suc**cess:* Half damage.
+***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 15, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 49 (9d10) Lightning damage. *Success:* Half damage.
 
 ***Repulsion Breath.*** *Strength Saving Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 40 feet straight away from the dragon and has the Prone condition.
 
@@ -21857,7 +21770,7 @@ Passive Perception 22
 
 ***Rend.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 16 (2d8 + 7) Slashing damage plus 5 (1d10) Lightning damage.
 
-***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving* *Throw:* DC 19, each creature in a 90-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Suc**cess:* Half damage.
+***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 19, each creature in a 90-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.
 
 ***Repulsion Breath.*** *Strength Saving Throw:* DC 19, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 60 feet straight away from the dragon and has the Prone condition.
 
@@ -21871,7 +21784,7 @@ Passive Perception 22
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Guiding Light.*** The dragon uses Spellcasting to cast *Guiding Bolt* (level 2 version).
 
@@ -21921,7 +21834,7 @@ Passive Perception 27
 
 ***Rend.*** *Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 9 (2d8) Lightning damage.
 
-***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving* *Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 82 (15d10) Lightning damage. *Success:* Half damage.
+***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 82 (15d10) Lightning damage. *Success:* Half damage.
 
 ***Repulsion Breath.*** *Strength Saving Throw:* DC 23, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 60 feet straight away from the dragon and has the Prone condition.
 
@@ -21935,7 +21848,7 @@ Passive Perception 27
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Guiding Light.*** The dragon uses Spellcasting to cast *Guiding Bolt* (level 2 version).
 
@@ -22053,7 +21966,7 @@ Passive Perception 16
 
 ***Bite.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 17 (2d12 + 4) Piercing damage.
 
-***Deadly Leap.*** The bulette spends 5 feet of movement to jump to a space within 15 feet that contains one or more Large or smaller creatures. *Dexterity Saving* *Throw:* DC 15, each creature in the bulette’s destination space. *Failure:* 19 (3d12) Bludgeoning damage, and 
+***Deadly Leap.*** The bulette spends 5 feet of movement to jump to a space within 15 feet that contains one or more Large or smaller creatures. *Dexterity Saving Throw:* DC 15, each creature in the bulette’s destination space. *Failure:* 19 (3d12) Bludgeoning damage, and 
 
 the target has the Prone condition. *Success:* Half damage, and the target is pushed 5 feet straight away from the bulette.
 
@@ -22097,7 +22010,7 @@ the target has the Prone condition. *Success:* Half damage, and the target is pu
 
 ##### Bonus Actions
 
-***Trampling Charge (Recharge 5–6).*** The centaur moves up to its Speed without provoking Opportunity Attacks and can move through the spaces of Medium or smaller creatures. Each creature whose space the centaur enters is targeted once by the following effect. *Strength* *Saving Throw:* DC 14. *Failure:* 7 (1d6 + 4) Bludgeoning damage, and the target has the Prone condition.
+***Trampling Charge (Recharge 5–6).*** The centaur moves up to its Speed without provoking Opportunity Attacks and can move through the spaces of Medium or smaller creatures. Each creature whose space the centaur enters is targeted once by the following effect. *Strength Saving Throw:* DC 14. *Failure:* 7 (1d6 + 4) Bludgeoning damage, and the target has the Prone condition.
 
 ## Chain Devil
 
@@ -22389,7 +22302,7 @@ The cloaker can detach itself by spending 5 feet of movement. The target or a cr
 
 ##### Actions
 
-***Petrifying Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution* *Saving Throw:* DC 11. *First Failure:* The target has the Restrained condition. The target repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition, instead of the Restrained condition, for 24 hours.
+***Petrifying Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 11. *First Failure:* The target has the Restrained condition. The target repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition, instead of the Restrained condition, for 24 hours.
 
 ## Commoner
 
@@ -22547,11 +22460,11 @@ Passive Perception 22
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Giggling Magic.*** *Charisma Saving Throw:* DC 17, one creature the dragon can see within 90 feet. *Failure:* 24 (7d6) Psychic damage. Until the end of its next turn, the target rolls 1d6 whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
-***Mind Jolt.*** The dragon uses Spellcasting to cast *Mind* *Spike* (level 4 version). The dragon can’t take this action again until the start of its next turn.
+***Mind Jolt.*** The dragon uses Spellcasting to cast *Mind Spike* (level 4 version). The dragon can’t take this action again until the start of its next turn.
 
 <!-- page 277 -->
 
@@ -22607,11 +22520,11 @@ Passive Perception 27
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Giggling Magic.*** *Charisma Saving Throw:* DC 21, one creature the dragon can see within 120 feet. *Failure:* 31 (9d6) Psychic damage. Until the end of its next turn, the target rolls 1d8 whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
-***Mind Jolt.*** The dragon uses Spellcasting to cast *Mind* *Spike* (level 5 version). The dragon can’t take this action again until the start of its next turn.
+***Mind Jolt.*** The dragon uses Spellcasting to cast *Mind Spike* (level 5 version). The dragon can’t take this action again until the start of its next turn.
 
 ***Pounce.*** The dragon moves up to half its Speed, and it makes one Rend attack.
 
@@ -22661,11 +22574,11 @@ Passive Perception 27
 
 and no Concentration or Temporary Hit Points required to maintain the spell)
 
-**1/Day Each:** *Create Food and Water*, *Dream*, *Greater* *Restoration*, *Scrying*, *Sleep*
+**1/Day Each:** *Create Food and Water*, *Dream*, *Greater Restoration*, *Scrying*, *Sleep*
 
 ##### Bonus Actions
 
-***Divine Aid (2/Day).*** The couatl casts *Bless*, *Lesser Res**toration*, or *Sanctuary*, requiring no spell components and using the same spellcasting ability as Spellcasting.
+***Divine Aid (2/Day).*** The couatl casts *Bless*, *Lesser Restoration*, or *Sanctuary*, requiring no spell components and using the same spellcasting ability as Spellcasting.
 
 ## Crawling Claw
 
@@ -22771,7 +22684,7 @@ Frightened, Grappled, Incapacitated, Paralyzed, Petrified, Poisoned, Prone, Rest
 
 ##### Bonus Actions
 
-***Spiritual Weapon (2/Day).*** The cultist casts the *Spiritual* *Weapon* spell, using the same spellcasting ability as Spellcasting.
+***Spiritual Weapon (2/Day).*** The cultist casts the *Spiritual Weapon* spell, using the same spellcasting ability as Spellcasting.
 
 ## Darkmantle
 
@@ -22841,7 +22754,7 @@ Stunned, Unconscious
 
 ***Multiattack.*** The death dog makes two Bite attacks.
 
-***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving* *Throw:* DC 12. *First Failure:* The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. *Subsequent* *Failures:* The Poisoned target’s Hit Point maximum decreases by 5 (1d10).
+***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *First Failure:* The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. *Subsequent Failures:* The Poisoned target’s Hit Point maximum decreases by 5 (1d10).
 
 ## Deva
 
@@ -22949,7 +22862,7 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 
 **2/Day Each:** *Create Food and Water* (can create wine instead of water), *Tongues*, *Wind Walk*
 
-**1/Day Each:** *Creation*, *Gaseous Form*, *Invisibility*, *Major* *Image*, *Plane Shift*
+**1/Day Each:** *Creation*, *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*
 
 ## Doppelganger
 
@@ -22983,7 +22896,7 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 
 ***Slam.*** *Melee Attack Roll:* +6 (with Advantage during the first round of each combat), reach 5 ft. *Hit:* 11 (2d6 + 4) Bludgeoning damage.
 
-***Read Thoughts.*** The doppelganger casts *Detect* *Thoughts*, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 12).
+***Read Thoughts.*** The doppelganger casts *Detect Thoughts*, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 12).
 
 ***Unsettling Visage (Recharge 6).*** *Wisdom Saving Throw:* DC 12, each creature in a 15-foot Emanation originating from the doppelganger that can see the doppelganger. *Failure:* The target has the Frightened condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
@@ -23029,7 +22942,7 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 
 ***Tail.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.
 
-***Steam Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Fire damage. *Success:* Half damage. *Failure or* *Success:* Being underwater doesn’t grant Resistance to this Fire damage.
+***Steam Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Fire damage. *Success:* Half damage. *Failure or Success:* Being underwater doesn’t grant Resistance to this Fire damage.
 
 ## Dretch
 
@@ -23151,7 +23064,7 @@ creatures that understand Abyssal)
 
 **2/Day Each:** *Entangle*, *Thunderwave*
 
-**1/Day Each:** *Animal Messenger*, *Long**strider*, *Moonbeam*
+**1/Day Each:** *Animal Messenger*, *Longstrider*, *Moonbeam*
 
 ## Dryad
 
@@ -23337,7 +23250,7 @@ Passive Perception 10
 
 ***Withering Sword.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 13 (2d8 + 4) Slashing damage plus 11 (2d10) Necrotic damage.
 
-***Entangling Rope (Requires Magic Rope).*** *Strength* *Saving Throw:* DC 16, one creature the erinyes can see within 120 feet. *Failure:* 14 (4d6) Force damage, and the target has the Restrained condition until the rope is destroyed, the erinyes uses a Bonus Action to release the target, or the erinyes uses Entangling Rope again.
+***Entangling Rope (Requires Magic Rope).*** *Strength Saving Throw:* DC 16, one creature the erinyes can see within 120 feet. *Failure:* 14 (4d6) Force damage, and the target has the Restrained condition until the rope is destroyed, the erinyes uses a Bonus Action to release the target, or the erinyes uses Entangling Rope again.
 
 ##### Reactions
 
@@ -23765,7 +23678,7 @@ As an action, a creature within 5 feet of the cube can pull a creature or an obj
 
 ***Bite.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage plus 9 (2d8) Necrotic damage.
 
-***Claw.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage. If the target is a non-Undead creature, it is subjected to the following effect. *Consti**tution Saving Throw:* DC 10. *Failure:* The target has the Paralyzed condition until the end of its next turn.
+***Claw.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage. If the target is a non-Undead creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 10. *Failure:* The target has the Paralyzed condition until the end of its next turn.
 
 ## Ghost
 
@@ -23815,7 +23728,7 @@ Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
 
 ***Horrific Visage.*** *Wisdom Saving Throw:* DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. *Failure:* 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. *Success:* The target is immune to this ghost’s Horrific Visage for 24 hours.
 
-***Possession (Recharge 6).*** *Charisma Saving Throw:* DC 13, one Humanoid the ghost can see within 5 feet. *Fail**ure:* The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. 
+***Possession (Recharge 6).*** *Charisma Saving Throw:* DC 13, one Humanoid the ghost can see within 5 feet. *Failure:* The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. 
 
 The possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. 
 
@@ -23881,7 +23794,7 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 
 ***Aberrant Ground.*** The ground in a 10-foot Emanation originating from the mouther is Difficult Terrain.
 
-***Gibbering.*** The mouther babbles incoherently while it doesn’t have the Incapacitated condition. *Wisdom* *Saving Throw:* DC 10, any creature that starts its turn within 20 feet of the mouther while it is babbling. *Failure:* The target rolls 1d8 to determine what it does during the current turn:
+***Gibbering.*** The mouther babbles incoherently while it doesn’t have the Incapacitated condition. *Wisdom Saving Throw:* DC 10, any creature that starts its turn within 20 feet of the mouther while it is babbling. *Failure:* The target rolls 1d8 to determine what it does during the current turn:
 
 **1–4.** The target does nothing.
 
@@ -23893,7 +23806,7 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 
 ***Bite.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 7 (2d6) Piercing damage. If the target is a Medium or smaller creature, it has the Prone condition. The target dies if it is reduced to 0 Hit Points by this attack. Its body is then absorbed into the mouther, leaving only equipment behind.
 
-***Blinding Spittle (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 10, each creature in a 10-foot-radius Sphere centered on a point within 30 feet. *Failure:* 7 (2d6) Radiant damage, and the target has the Blinded condition until the end of the mouther’s next turn.
+***Blinding Spittle (Recharge 5–6).*** *Dexterity Saving Throw:* DC 10, each creature in a 10-foot-radius Sphere centered on a point within 30 feet. *Failure:* 7 (2d6) Radiant damage, and the target has the Blinded condition until the end of the mouther’s next turn.
 
 <!-- page 289 -->
 
@@ -24265,7 +24178,7 @@ Passive Perception 24
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Banish.*** *Charisma Saving Throw:* DC 21, one creature the dragon can see within 120 feet. *Failure:* 10 (3d6) Force damage, and the target has the Incapacitated condition and is transported to a harmless demiplane until the start of the dragon’s next turn, at which point it reappears in an unoccupied space of the dragon’s choice within 120 feet of the dragon. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -24323,13 +24236,13 @@ Charisma as the spellcasting ability (spell save DC 24, +16 to hit with spell at
 
 *Shapechange* (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)
 
-**1/Day Each:** *Flame Strike* (level 6 version), *Word of Re**call*, *Zone of Truth*
+**1/Day Each:** *Flame Strike* (level 6 version), *Word of Recall*, *Zone of Truth*
 
 ***Weakening Breath.*** *Strength Saving Throw:* DC 24, each creature that isn’t currently affected by this breath in a 90-foot Cone. *Failure:* The target has Disadvantage on Strength-based D20 Tests and subtracts 5 (1d10) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Banish.*** *Charisma Saving Throw:* DC 24, one creature the dragon can see within 120 feet. *Failure:* 24 (7d6) Force damage, and the target has the Incapacitated condition and is transported to a harmless demiplane until the start of the dragon’s next turn, at which point it reappears in an unoccupied space of the dragon’s choice within 120 feet of the dragon. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -24369,7 +24282,7 @@ Charisma as the spellcasting ability (spell save DC 24, +16 to hit with spell at
 
 ***Gore.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 18 (2d12 + 5) Piercing damage. If the target is a Large or smaller creature and the gorgon moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.
 
-***Petrifying Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 15, each creature in a 30-foot Cone. *First* *Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second* *Failure:* The target has the Petrified condition instead of the Restrained condition.
+***Petrifying Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 15, each creature in a 30-foot Cone. *First Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition instead of the Restrained condition.
 
 ##### Bonus Actions
 
@@ -24455,7 +24368,7 @@ Passive Perception 14
 
 ***Rend.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (1d10 + 2) Slashing damage plus 3 (1d6) Poison damage.
 
-***Poison Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 11, each creature in a 15-foot Cone. *Failure:* 21 (6d6) Poison damage. *Success:* Half damage.
+***Poison Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 11, each creature in a 15-foot Cone. *Failure:* 21 (6d6) Poison damage. *Success:* Half damage.
 
 ### Young Green Dragon
 
@@ -24495,7 +24408,7 @@ Passive Perception 17
 
 ***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 11 (2d6 + 4) Slashing damage plus 7 (2d6) Poison damage.
 
-***Poison Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* 42 (12d6) Poison damage. *Success:* Half damage.
+***Poison Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* 42 (12d6) Poison damage. *Success:* Half damage.
 
 ### Adult Green Dragon
 
@@ -24537,7 +24450,7 @@ Passive Perception 22
 
 ***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage plus 7 (2d6) Poison damage.
 
-***Poison Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 18, each creature in a 60-foot Cone. *Fail**ure:* 56 (16d6) Poison damage. *Success:* Half damage.
+***Poison Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Poison damage. *Success:* Half damage.
 
 ***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):
 
@@ -24547,7 +24460,7 @@ Passive Perception 22
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Mind Invasion.*** The dragon uses Spellcasting to cast *Mind Spike* (level 3 version).
 
@@ -24595,7 +24508,7 @@ Passive Perception 27
 
 ***Rend.*** *Melee Attack Roll:* +15, reach 15 ft. *Hit:* 17 (2d8 + 8) Slashing damage plus 10 (3d6) Poison damage.
 
-***Poison Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 22, each creature in a 90-foot Cone. *Fail**ure:* 77 (22d6) Poison damage. *Success:* Half damage.
+***Poison Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 22, each creature in a 90-foot Cone. *Failure:* 77 (22d6) Poison damage. *Success:* Half damage.
 
 ***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 21):
 
@@ -24607,7 +24520,7 @@ Passive Perception 27
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Mind Invasion.*** The dragon uses Spellcasting to cast *Mind Spike* (level 5 version).
 
@@ -24781,7 +24694,7 @@ Restrained
 
 ##### Traits
 
-***Celestial Restoration.*** If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless *Dispel* *Evil and Good* is cast on its remains.
+***Celestial Restoration.*** If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless *Dispel Evil and Good* is cast on its remains.
 
 ##### Actions
 
@@ -24901,7 +24814,7 @@ Passive Perception 15
 
 ***Claw.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 6 (1d4 + 4) Slashing damage plus 7 (2d6) damage of the type chosen for the Draconic Origin trait.
 
-***Dragon’s Breath (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* 28 (8d6) damage of the type chosen for the Draconic Origin trait. *Success:* Half damage.
+***Dragon’s Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* 28 (8d6) damage of the type chosen for the Draconic Origin trait. *Success:* Half damage.
 
 ##### Bonus Actions
 
@@ -24933,7 +24846,7 @@ Passive Perception 15
 
 ***Claw.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Slashing damage.
 
-***Luring Song.*** The harpy sings a magical melody, which lasts until the harpy’s Concentration ends on it. *Wisdom* *Saving Throw:* DC 11, each Humanoid and Giant in a 300-foot Emanation originating from the harpy when the song starts. *Failure:* The target has the Charmed condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the Incapacitated condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the harpy, the target moves on its turn toward the harpy by the most direct route, trying to get within 5 feet of the harpy. It doesn’t avoid Opportunity Attacks; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the harpy, the target repeats the save. *Success:* The target is immune to this harpy’s Luring Song for 24 hours.
+***Luring Song.*** The harpy sings a magical melody, which lasts until the harpy’s Concentration ends on it. *Wisdom Saving Throw:* DC 11, each Humanoid and Giant in a 300-foot Emanation originating from the harpy when the song starts. *Failure:* The target has the Charmed condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the Incapacitated condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the harpy, the target moves on its turn toward the harpy by the most direct route, trying to get within 5 feet of the harpy. It doesn’t avoid Opportunity Attacks; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the harpy, the target repeats the save. *Success:* The target is immune to this harpy’s Luring Song for 24 hours.
 
 ## Hell Hound
 
@@ -25503,7 +25416,7 @@ languages but can’t speak
 
 ***Fiery Bolt.*** *Ranged Attack Roll:* +10, range 120 ft. *Hit:* 36 (8d8) Fire damage.
 
-***Poison Breath (Recharge 6).*** *Constitution Saving* *Throw:* DC 18, each creature in a 60-foot Cone. *Fail**ure:* 55 (10d10) Poison damage. *Success:* Half damage.
+***Poison Breath (Recharge 6).*** *Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *Failure:* 55 (10d10) Poison damage. *Success:* Half damage.
 
 ## Knight
 
@@ -25635,7 +25548,7 @@ turn from a creature inside it, the kraken must succeed on a DC 25 Constitution 
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the kraken can expend a use to* *take one of the following actions. The kraken regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the kraken can expend a use to take one of the following actions. The kraken regains all expended uses at the start of each of its turns.*
 
 ***Storm Bolt.*** The kraken uses Lightning Strike.
 
@@ -25777,7 +25690,7 @@ Frightened, Paralyzed, Poisoned
 
 **2/Day Each:** *Animate Dead*, *Dimension Door*, *Plane Shift*
 
-**1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power* *Word Kill*, *Scrying*
+**1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power Word Kill*, *Scrying*
 
 ##### Reactions
 
@@ -25785,7 +25698,7 @@ Frightened, Paralyzed, Poisoned
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the lich can expend a use to take* *one of the following actions. The lich regains all expended* *uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the lich can expend a use to take one of the following actions. The lich regains all expended uses at the start of each of its turns.*
 
 ***Deathly Teleport.*** The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 (2d10) Necrotic damage.
 
@@ -25885,7 +25798,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 **At Will:** *Detect Magic*, *Detect Thoughts*, *Disguise Self*,
 
-*Invisibility*, *Light*, *Mage Armor* (included in AC), *Mage* *Hand*, *Prestidigitation*
+*Invisibility*, *Light*, *Mage Armor* (included in AC), *Mage Hand*, *Prestidigitation*
 
 **2/Day Each:** *Fly*, *Lightning Bolt* (level 7 version)
 
@@ -25897,7 +25810,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Reactions
 
-***Protective Magic (3/Day).*** The archmage casts *Coun**terspell* or *Shield* in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
+***Protective Magic (3/Day).*** The archmage casts *Counterspell* or *Shield* in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.
 
 ## Magmin
 
@@ -25925,7 +25838,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Traits
 
-***Death Burst.*** The magmin explodes when it dies. *Dex**terity Saving Throw:* DC 11, each creature in a 10-foot Emanation originating from the magmin. *Failure*: 7 (2d6) Fire damage. *Success:* Half damage.
+***Death Burst.*** The magmin explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 10-foot Emanation originating from the magmin. *Failure*: 7 (2d6) Fire damage. *Success:* Half damage.
 
 ##### Actions
 
@@ -26057,7 +25970,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Bonus Actions
 
-***Petrifying Gaze (Recharge*** ***5–6).*** *Constitution Saving* *Throw:* DC 13, each creature in a 30-foot Cone. If the medusa sees its reflection in the Cone, the medusa must make this save. *First Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition instead of the Restrained condition.
+***Petrifying Gaze (Recharge 5–6).*** *Constitution Saving Throw:* DC 13, each creature in a 30-foot Cone. If the medusa sees its reflection in the Cone, the medusa must make this save. *First Failure:* The target has the Restrained condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. *Second Failure:* The target has the Petrified condition instead of the Restrained condition.
 
 ## Mephits
 
@@ -26089,7 +26002,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Traits
 
-***Death Burst.*** The mephit explodes when it dies. *Dex**terity Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Bludgeoning damage. *Success:* Half damage.
+***Death Burst.*** The mephit explodes when it dies. *Dexterity Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Bludgeoning damage. *Success:* Half damage.
 
 ##### Actions
 
@@ -26127,7 +26040,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Traits
 
-***Death Burst.*** The mephit explodes when it dies. *Consti**tution Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Cold damage. *Success:* Half damage.
+***Death Burst.*** The mephit explodes when it dies. *Constitution Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Cold damage. *Success:* Half damage.
 
 ##### Actions
 
@@ -26165,7 +26078,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Traits
 
-***Death Burst.*** The mephit explodes when it dies. *Dex**terity Saving Throw:* DC 11, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.
+***Death Burst.*** The mephit explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.
 
 ##### Actions
 
@@ -26203,7 +26116,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ***Blurred Form.*** Attack rolls against the mephit are made with Disadvantage unless the mephit has the Incapacitated condition.
 
-***Death Burst.*** The mephit explodes when it dies. *Dex**terity Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Fire damage. *Success:* Half damage.
+***Death Burst.*** The mephit explodes when it dies. *Dexterity Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Fire damage. *Success:* Half damage.
 
 ##### Actions
 
@@ -26239,7 +26152,7 @@ AC), *Mage Hand*, *Prestidigitation*
 
 ##### Actions
 
-***Ocean Spear.*** *Melee or Ranged Attack Roll:* +2, reach 5 ft. or range 20/60 ft. *Hit:* 3 (1d6) Piercing damage plus 2 (1d4) Cold damage. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. *Hit or* *Miss:* The spear magically returns to the merfolk’s hand immediately after a ranged attack.
+***Ocean Spear.*** *Melee or Ranged Attack Roll:* +2, reach 5 ft. or range 20/60 ft. *Hit:* 3 (1d6) Piercing damage plus 2 (1d4) Cold damage. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. *Hit or Miss:* The spear magically returns to the merfolk’s hand immediately after a ranged attack.
 
 ## Merrow
 
@@ -26445,7 +26358,7 @@ Frightened, Paralyzed, Poisoned
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the mummy can expend a use to* *take one of the following actions. The mummy regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the mummy can expend a use to take one of the following actions. The mummy regains all expended uses at the start of each of its turns.*
 
 ***Dread Command.*** The mummy casts *Command* (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn.
 
@@ -26495,7 +26408,7 @@ Frightened, Paralyzed, Poisoned
 
 ##### Bonus Actions
 
-***Horror Nimbus (Recharge 5–6).*** *Wisdom Saving* *Throw:* DC 15, each creature in a 15-foot Emanation originating from the nalfeshnee. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened condition for 1 minute, until it takes damage, or until it ends its turn with the nalfeshnee out of line of sight. *Success:* 
+***Horror Nimbus (Recharge 5–6).*** *Wisdom Saving Throw:* DC 15, each creature in a 15-foot Emanation originating from the nalfeshnee. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened condition for 1 minute, until it takes damage, or until it ends its turn with the nalfeshnee out of line of sight. *Success:* 
 
 <!-- page 311 -->
 
@@ -26569,7 +26482,7 @@ If the target takes damage from the *Dream* spell, the target’s Hit Point maxi
 
 ### Nightmare
 
-*Large Fiend, Neutral* *Evil*
+*Large Fiend, Neutral Evil*
 
 | **AC** 13 | **Initiative** +2 (12) |
 
@@ -26789,11 +26702,11 @@ receiving creature to respond telepathically)
 
 ***Multiattack.*** The otyugh makes one Bite attack and two Tentacle attacks.
 
-***Bite.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. *Constitution* *Saving Throw:* DC 15. *Failure:* The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. *Success:* The Poisoned condition ends.
+***Bite.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. *Constitution Saving Throw:* DC 15. *Failure:* The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. *Success:* The Poisoned condition ends.
 
 ***Tentacle.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles.
 
-***Tentacle Slam.*** *Constitution Saving Throw:* DC 14, each creature Grappled by the otyugh. *Failure:* 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh’s next turn. *Suc**cess:* Half damage only.
+***Tentacle Slam.*** *Constitution Saving Throw:* DC 14, each creature Grappled by the otyugh. *Failure:* 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh’s next turn. *Success:* Half damage only.
 
 ## Owlbear
 
@@ -27015,7 +26928,7 @@ Sylvan but can’t speak
 
 ***Multiattack.*** The pit fiend makes one Bite attack, two Devilish Claw attacks, and one Fiery Mace attack.
 
-***Bite.*** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 18 (3d6 + 8) Piercing damage. If the target is a creature, it must make the following saving throw. *Constitution Saving* *Throw:* DC 21. *Failure:* The target has the Poisoned condition. While Poisoned, the target can’t regain Hit Points and takes 21 (6d6) Poison damage at the start of each of its turns, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
+***Bite.*** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 18 (3d6 + 8) Piercing damage. If the target is a creature, it must make the following saving throw. *Constitution Saving Throw:* DC 21. *Failure:* The target has the Poisoned condition. While Poisoned, the target can’t regain Hit Points and takes 21 (6d6) Poison damage at the start of each of its turns, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
 ***Devilish Claw.*** *Melee Attack Roll:* +14, reach 10 ft. *Hit:* 26 (4d8 + 8) Necrotic damage.
 
@@ -27071,7 +26984,7 @@ Sylvan but can’t speak
 
 **At Will:** *Detect Evil and Good*
 
-**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil* *and Good*, *Raise Dead*
+**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Raise Dead*
 
 ##### Bonus Actions
 
@@ -27117,7 +27030,7 @@ Sylvan but can’t speak
 
 ##### Bonus Actions
 
-***Divine Aid (1/Day).*** The priest casts *Bless*, *Healing* *Word*, or *Sanctuary*, using the same spellcasting ability as Spellcasting.
+***Divine Aid (1/Day).*** The priest casts *Bless*, *Healing Word*, or *Sanctuary*, using the same spellcasting ability as Spellcasting.
 
 ### Priest
 
@@ -27159,7 +27072,7 @@ Sylvan but can’t speak
 
 ##### Bonus Actions
 
-***Divine Aid (3/Day).*** The priest casts *Bless*, *Dispel* *Magic*, *Healing Word*, or *Lesser Restoration*, using the same spellcasting ability as Spellcasting.
+***Divine Aid (3/Day).*** The priest casts *Bless*, *Dispel Magic*, *Healing Word*, or *Lesser Restoration*, using the same spellcasting ability as Spellcasting.
 
 ## Pseudodragon
 
@@ -27331,7 +27244,7 @@ creatures under the effect of a *Bless* spell
 
 ***Cursed Touch.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.
 
-***Baleful Command (Recharge 5–6).*** *Wisdom Saving* *Throw:* DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn.
+***Baleful Command (Recharge 5–6).*** *Wisdom Saving Throw:* DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn.
 
 ***Spellcasting.*** The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):
 
@@ -27461,11 +27374,11 @@ Passive Perception 23
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Commanding Presence.*** The dragon uses Spellcasting to cast *Command* (level 2 version). The dragon can’t take this action again until the start of its next turn.
 
-***Fiery Rays.*** The dragon uses Spellcasting to cast *Scorch**ing Ray*. The dragon can’t take this action again until the start of its next turn.
+***Fiery Rays.*** The dragon uses Spellcasting to cast *Scorching Ray*. The dragon can’t take this action again until the start of its next turn.
 
 ***Pounce.*** The dragon moves up to half its Speed, and it makes one Rend attack.
 
@@ -27517,11 +27430,11 @@ Passive Perception 26
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Commanding Presence.*** The dragon uses Spellcasting to cast *Command* (level 2 version). The dragon can’t take this action again until the start of its next turn.
 
-***Fiery Rays.*** The dragon uses Spellcasting to cast *Scorch**ing Ray* (level 3 version). The dragon can’t take this action again until the start of its next turn.
+***Fiery Rays.*** The dragon uses Spellcasting to cast *Scorching Ray* (level 3 version). The dragon can’t take this action again until the start of its next turn.
 
 ***Pounce.*** The dragon moves up to half its Speed, and it makes one Rend attack.
 
@@ -27679,7 +27592,7 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 
 <!-- page 321 -->
 
-***Antennae.*** The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. *Dexterity Saving* *Throw:* DC 11, the creature with the object. *Failure:* The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the armor or weapon.
+***Antennae.*** The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. *Dexterity Saving Throw:* DC 11, the creature with the object. *Failure:* The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the armor or weapon.
 
 ***Destroy Metal.*** The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object.
 
@@ -28051,7 +27964,7 @@ Passive Perception 14
 
 ***Rend.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (1d10 + 4) Piercing damage.
 
-***Cold Breath (Recharge 5–6)*****.** *Constitution Saving* *Throw:* DC 13, each creature in a 15-foot Cone. *Failure:* 18 (4d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 13, each creature in a 15-foot Cone. *Failure:* 18 (4d8) Cold damage. *Success:* Half damage.
 
 ***Paralyzing Breath.*** *Constitution Saving Throw:* DC 13, each creature in a 15-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
@@ -28087,7 +28000,7 @@ Passive Perception 18
 
 ***Rend.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage.
 
-***Cold Breath (Recharge 5–6)*****.** *Constitution Saving* *Throw:* DC 17, each creature in a 30-foot Cone. *Failure:* 49 (11d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *Failure:* 49 (11d8) Cold damage. *Success:* Half damage.
 
 ***Paralyzing Breath.*** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
@@ -28127,7 +28040,7 @@ Passive Perception 21
 
 ***Rend.*** *Melee Attack Roll:* +13, reach 10 ft. *Hit:* 17 (2d8 + 8) Slashing damage plus 4 (1d8) Cold damage.
 
-***Cold Breath (Recharge 5–6)*****.** *Constitution Saving* *Throw:* DC 20, each creature in a 60-foot Cone. *Fail**ure:* 54 (12d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 20, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage.
 
 ***Paralyzing Breath.*** *Constitution Saving Throw:* DC 20, each creature in a 60-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
@@ -28143,9 +28056,9 @@ Passive Perception 21
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
-***Chill.*** The dragon uses Spellcasting to cast *Hold Mon**ster*. The dragon can’t take this action again until the start of its next turn.
+***Chill.*** The dragon uses Spellcasting to cast *Hold Monster*. The dragon can’t take this action again until the start of its next turn.
 
 ***Cold Gale.*** *Dexterity Saving Throw:* DC 19, each creature in a 60-foot-long, 10-foot-wide Line. *Failure:* 14 (4d6) Cold damage, and the target is pushed up to 30 feet straight away from the dragon. *Success:* Half damage only. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -28187,7 +28100,7 @@ Passive Perception 26
 
 ***Rend.*** *Melee Attack Roll:* +17, reach 15 ft. *Hit:* 19 (2d8 + 10) Slashing damage plus 9 (2d8) Cold damage.
 
-***Cold Breath (Recharge 5–6)*****.** *Constitution Saving* *Throw:* DC 24, each creature in a 90-foot Cone. *Fail**ure:* 67 (15d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 24, each creature in a 90-foot Cone. *Failure:* 67 (15d8) Cold damage. *Success:* Half damage.
 
 ***Paralyzing Breath.*** *Constitution Saving Throw:* DC 24, each creature in a 90-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.
 
@@ -28201,9 +28114,9 @@ version), *Shapechange* (Beast or Humanoid form only, no Temporary Hit Points ga
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
-***Chill.*** The dragon uses Spellcasting to cast *Hold Mon**ster*. The dragon can’t take this action again until the start of its next turn.
+***Chill.*** The dragon uses Spellcasting to cast *Hold Monster*. The dragon can’t take this action again until the start of its next turn.
 
 ***Cold Gale.*** *Dexterity Saving Throw:* DC 23, each creature in a 60-foot-long, 10-foot-wide Line. *Failure:* 14 (4d6) Cold damage, and the target is pushed up to 30 feet straight away from the dragon. *Success:* Half damage only. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -28355,7 +28268,7 @@ Frightened, Poisoned
 
 **At Will:** *Detect Evil and Good*
 
-**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil* *and Good*, *Resurrection*
+**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Resurrection*
 
 ##### Bonus Actions
 
@@ -28365,9 +28278,9 @@ Frightened, Poisoned
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3. Immediately after another* *creature’s turn, the solar can expend a use to take one of* *the following actions. The solar regains all expended uses* *at the start of each of its turns.*
+*Legendary Action Uses: 3. Immediately after another creature’s turn, the solar can expend a use to take one of the following actions. The solar regains all expended uses at the start of each of its turns.*
 
-***Blinding Gaze.*** *Constitution Saving Throw:* DC 25, one creature the solar can see within 120 feet. *Failure:* The target has the Blinded condition for 1 minute. *Failure or* *Success:* The solar can’t take this action again until the start of its next turn.
+***Blinding Gaze.*** *Constitution Saving Throw:* DC 25, one creature the solar can see within 120 feet. *Failure:* The target has the Blinded condition for 1 minute. *Failure or Success:* The solar can’t take this action again until the start of its next turn.
 
 ***Radiant Teleport.*** The solar teleports up to 60 feet to an unoccupied space it can see. *Dexterity Saving Throw:* DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. *Failure:* 11 (2d10) Radiant damage. *Success:* Half damage.
 
@@ -28493,21 +28406,21 @@ Religion +12
 
 ***Claw.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 14 (3d6 + 4) Slashing damage.
 
-***Mind-Rending Roar (Recharge 5–6).*** *Wisdom Saving* *Throw:* DC 16, each enemy in a 300-foot Emanation originating from the sphinx. *Failure:* 35 (10d6) Psychic damage, and the target has the Incapacitated condition until the start of the sphinx’s next turn.
+***Mind-Rending Roar (Recharge 5–6).*** *Wisdom Saving Throw:* DC 16, each enemy in a 300-foot Emanation originating from the sphinx. *Failure:* 35 (10d6) Psychic damage, and the target has the Incapacitated condition until the start of the sphinx’s next turn.
 
 ***Spellcasting.*** The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):
 
-**At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illu**sion*, *Prestidigitation*
+**At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illusion*, *Prestidigitation*
 
 **1/Day Each:** *Dispel Magic*, *Legend Lore*, *Locate Object*, *Plane Shift*, *Remove Curse*, *Tongues*
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the sphinx can expend a use to* *take one of the following actions. The sphinx regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the sphinx can expend a use to take one of the following actions. The sphinx regains all expended uses at the start of each of its turns.*
 
 ***Arcane Prowl.*** The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack.
 
-***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Fail**ure or Success:* The sphinx can’t take this action again until the start of its next turn.
+***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Failure or Success:* The sphinx can’t take this action again until the start of its next turn.
 
 ### Sphinx of Valor
 
@@ -28565,15 +28478,15 @@ enemy in a 500-foot Emanation originating from the sphinx. *Failure:* 44 (8d10) 
 
 **At Will:** *Detect Evil and Good*, *Thaumaturgy*
 
-**1/Day Each:** *Detect Magic*, *Dispel Magic*, *Greater Res**toration*, *Heroes’ Feast*, *Zone of Truth*
+**1/Day Each:** *Detect Magic*, *Dispel Magic*, *Greater Restoration*, *Heroes’ Feast*, *Zone of Truth*
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the sphinx can expend a use to* *take one of the following actions. The sphinx regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the sphinx can expend a use to take one of the following actions. The sphinx regains all expended uses at the start of each of its turns.*
 
 ***Arcane Prowl.*** The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack.
 
-***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Fail**ure or Success:* The sphinx can’t take this action again until the start of its next turn.
+***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Failure or Success:* The sphinx can’t take this action again until the start of its next turn.
 
 <!-- page 329 -->
 
@@ -28615,7 +28528,7 @@ enemy in a 500-foot Emanation originating from the sphinx. *Failure:* 44 (8d10) 
 
 ***Spellcasting.*** The naga casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC 14):
 
-**At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Wa**ter Breathing*
+**At Will:** *Detect Magic*, *Mage Hand*, *Minor Illusion*, *Water Breathing*
 
 **2/Day Each:** *Detect Thoughts*, *Dimension Door*, *Hold Person* (level 3 version), *Lightning Bolt* (level 4 version)
 
@@ -28755,7 +28668,7 @@ The stirge can detach itself by spending 5 feet of its movement. The target or a
 
 ##### Reactions
 
-***Deflect Missile (Recharge 5–6).*** *Trigger:* The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. *Response:* The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack’s force. *Dexterity Saving* *Throw:* DC 17, one creature the giant can see within 60 feet. *Failure:* 11 (1d10 + 6) Force damage.
+***Deflect Missile (Recharge 5–6).*** *Trigger:* The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. *Response:* The giant reduces the damage it takes from the attack by 11 (1d10 + 6), and if that damage is reduced to 0, the giant can redirect some of the attack’s force. *Dexterity Saving Throw:* DC 17, one creature the giant can see within 60 feet. *Failure:* 11 (1d10 + 6) Force damage.
 
 ## Stone Golem
 
@@ -28847,7 +28760,7 @@ Passive Perception 20
 
 ***Thunderbolt.*** *Ranged Attack Roll:* +14, range 500 ft. *Hit:* 22 (2d12 + 9) Lightning damage, and the target has the Blinded and Deafened conditions until the start of the giant’s next turn.
 
-***Lightning Storm (Recharge 5–6).*** *Dexterity Saving* *Throw:* DC 18, each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.
+***Lightning Storm (Recharge 5–6).*** *Dexterity Saving Throw:* DC 18, each creature in a 10-foot-radius, 40-foot-high Cylinder originating from a point the giant can see within 500 feet. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.
 
 ***Spellcasting.*** The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 18):
 
@@ -28895,7 +28808,7 @@ Passive Perception 20
 
 ***Charm.*** The succubus casts *Dominate Person* (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).
 
-***Draining Kiss.*** *Constitution Saving Throw:* DC 15, one creature Charmed by the succubus within 5 feet. *Fail**ure:* 13 (3d8) Psychic damage. *Success:* Half damage. *Failure or Success:* The target’s Hit Point maximum decreases by an amount equal to the damage taken.
+***Draining Kiss.*** *Constitution Saving Throw:* DC 15, one creature Charmed by the succubus within 5 feet. *Failure:* 13 (3d8) Psychic damage. *Success:* Half damage. *Failure or Success:* The target’s Hit Point maximum decreases by an amount equal to the damage taken.
 
 ##### Bonus Actions
 
@@ -28955,7 +28868,7 @@ condition (escape DC 20). Until the grapple ends, the target has the Restrained 
 
 ***Tail.*** *Melee Attack Roll:* +19, reach 30 ft. *Hit:* 23 (3d8 + 10) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.
 
-***Thunderous Bellow (Recharge 5–6).*** *Constitution Sav**ing Throw:* DC 27, each creature and each object that isn’t being worn or carried in a 150-foot Cone. *Failure:* 78 (12d12) Thunder damage, and the target has the Deafened and Frightened conditions until the end of its next turn. *Success:* Half damage only.
+***Thunderous Bellow (Recharge 5–6).*** *Constitution Saving Throw:* DC 27, each creature and each object that isn’t being worn or carried in a 150-foot Cone. *Failure:* 78 (12d12) Thunder damage, and the target has the Deafened and Frightened conditions until the end of its next turn. *Success:* Half damage only.
 
 ##### Bonus Actions
 
@@ -28965,7 +28878,7 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3. Immediately after another* *creature’s turn, the tarrasque can expend a use to take* *one of the following actions. The tarrasque regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3. Immediately after another creature’s turn, the tarrasque can expend a use to take one of the following actions. The tarrasque regains all expended uses at the start of each of its turns.*
 
 ***Onslaught.*** The tarrasque moves up to half its Speed, and it makes one Claw or Tail attack.
 
@@ -29195,7 +29108,7 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 
 **At Will:** *Detect Evil and Good*, *Druidcraft*
 
-**1/Day Each:** *Calm Emotions*, *Dispel Evil and Good*, *En**tangle*, *Pass without Trace*, *Word of Recall*
+**1/Day Each:** *Calm Emotions*, *Dispel Evil and Good*, *Entangle*, *Pass without Trace*, *Word of Recall*
 
 ##### Bonus Actions
 
@@ -29203,7 +29116,7 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3. Immediately after another* *creature’s turn, the unicorn can expend a use to take one* *of the following actions. The unicorn regains all expended* *uses at the start of each of its turns.*
+*Legendary Action Uses: 3. Immediately after another creature’s turn, the unicorn can expend a use to take one of the following actions. The unicorn regains all expended uses at the start of each of its turns.*
 
 ***Charging Horn.*** The unicorn moves up to half its Speed without provoking Opportunity Attacks, and it makes one Radiant Horn attack.
 
@@ -29369,7 +29282,7 @@ starts its turn in sunlight. While in sunlight, it has Disadvantage on attack ro
 
 ***Grave Strike (Vampire Form Only).*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 8 (1d8 + 4) Bludgeoning damage plus 7 (2d6) Necrotic damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two hands.
 
-***Bite (Bat or Vampire Form Only).*** *Constitution Saving* *Throw:* DC 17, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. *Failure:* 6 (1d4 + 4) Piercing damage plus 13 (3d8) Necrotic damage. The target’s Hit Point maximum 
+***Bite (Bat or Vampire Form Only).*** *Constitution Saving Throw:* DC 17, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. *Failure:* 6 (1d4 + 4) Piercing damage plus 13 (3d8) Necrotic damage. The target’s Hit Point maximum 
 
 <!-- page 336 -->
 
@@ -29379,7 +29292,7 @@ decreases by an amount equal to the Necrotic damage taken, and the vampire regai
 
 ##### Bonus Actions
 
-***Charm (Recharge 5–6).*** The vampire casts *Charm Per**son*, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17), and the duration is 24 hours. The Charmed target is a willing recipient of the vampire’s Bite, the damage of which doesn’t end the spell. When the spell ends, the target is unaware it was Charmed by the vampire.
+***Charm (Recharge 5–6).*** The vampire casts *Charm Person*, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17), and the duration is 24 hours. The Charmed target is a willing recipient of the vampire’s Bite, the damage of which doesn’t end the spell. When the spell ends, the target is unaware it was Charmed by the vampire.
 
 ***Shape-Shift.*** If the vampire isn’t in sunlight or running water, it shape-shifts into a Tiny bat (Speed 5 ft., Fly Speed 30 ft.) or a Medium cloud of mist (Speed 5 ft., Fly Speed 20 ft. [hover]), or it returns to its vampire form. Anything it is wearing transforms with it. 
 
@@ -29389,7 +29302,7 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the vampire can expend a use to* *take one of the following actions. The vampire regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the vampire can expend a use to take one of the following actions. The vampire regains all expended uses at the start of each of its turns.*
 
 ***Beguile.*** The vampire casts *Command*, requiring no spell components and using Charisma as the spellcasting ability (spell save DC 17). The vampire can’t take this action again until the start of its next turn.
 
@@ -29435,7 +29348,7 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 
 ***Spores (Recharge 6).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes 5 (1d10) Poison damage at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.
 
-***Stunning Screech (1/Day).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically). *Fail**ure:* 10 (3d6) Thunder damage, and the target has the Stunned condition until the end of the vrock’s next turn.
+***Stunning Screech (1/Day).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically). *Failure:* 10 (3d6) Thunder damage, and the target has the Stunned condition until the end of the vrock’s next turn.
 
 ## Warriors
 
@@ -29545,7 +29458,7 @@ Petrified, Poisoned, Prone, Restrained, Unconscious
 
 ***Multiattack.*** The elemental makes two Slam attacks.
 
-***Slam.*** *Melee* *Attack Roll:* +7, reach 5 ft. *Hit:* 13 (2d8 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.
+***Slam.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 13 (2d8 + 4) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Prone condition.
 
 ***Whelm (Recharge 4–6).*** *Strength Saving Throw:* DC 15, each creature in the elemental’s space. *Failure:* 22 (4d8 + 4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14). Until the grapple ends, the target has the Restrained condition, is suffocating unless it can breathe water, and takes 9 (2d8) Bludgeoning damage at the start of each of the elemental’s turns. The elemental can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the elemental can pull a creature out of it by succeeding on a DC 14 Strength (Athletics) check. *Success:* Half damage only.
 
@@ -29587,7 +29500,7 @@ form only)
 
 control and has 10 Hit Points. *Success:* The target is immune to this werebear’s curse for 24 hours.
 
-***Handaxe (Humanoid or Hybrid Form Only).*** *Melee* *or Ranged Attack Roll:* +7, reach 5 ft or range 20/60 ft. *Hit:* 14 (3d6 + 4) Slashing damage.
+***Handaxe (Humanoid or Hybrid Form Only).*** *Melee or Ranged Attack Roll:* +7, reach 5 ft or range 20/60 ft. *Hit:* 14 (3d6 + 4) Slashing damage.
 
 ***Rend (Bear or Hybrid Form Only).*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 13 (2d8 + 4) Slashing damage.
 
@@ -29627,7 +29540,7 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 
 ***Gore (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Wereboar** under the GM’s control and has 10 Hit Points. *Success:* The target is immune to this wereboar’s curse for 24 hours.
 
-***Javelin (Humanoid or Hybrid Form Only).*** *Melee or* *Ranged Attack Roll:* +5, reach 5 ft. or range 30/120 ft. *Hit:* 13 (3d6 + 3) Piercing damage.
+***Javelin (Humanoid or Hybrid Form Only).*** *Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 30/120 ft. *Hit:* 13 (3d6 + 3) Piercing damage.
 
 ***Tusk (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.
 
@@ -29711,7 +29624,7 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 
 ***Scratch.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage.
 
-***Longbow (Humanoid or Hybrid Form Only).*** *Ranged* *Attack Roll:* +4, range 150/600 ft. *Hit:* 11 (2d8 + 2) Piercing damage.
+***Longbow (Humanoid or Hybrid Form Only).*** *Ranged Attack Roll:* +4, range 150/600 ft. *Hit:* 11 (2d8 + 2) Piercing damage.
 
 ##### Bonus Actions
 
@@ -29757,7 +29670,7 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 
 ***Scratch.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage.
 
-***Longbow (Humanoid or Hybrid Form Only).*** *Ranged* *Attack Roll:* +4, range 150/600 ft. *Hit:* 11 (2d8 + 2) Piercing damage.
+***Longbow (Humanoid or Hybrid Form Only).*** *Ranged Attack Roll:* +4, range 150/600 ft. *Hit:* 11 (2d8 + 2) Piercing damage.
 
 ##### Bonus Actions
 
@@ -29803,7 +29716,7 @@ Passive Perception 14
 
 ***Rend.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage plus 2 (1d4) Cold damage.
 
-***Cold Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 12, each creature in a 15-foot Cone. *Failure:* 22 (5d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 12, each creature in a 15-foot Cone. *Failure:* 22 (5d8) Cold damage. *Success:* Half damage.
 
 ### Young White Dragon
 
@@ -29841,7 +29754,7 @@ Passive Perception 16
 
 ***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 9 (2d4 + 4) Slashing damage plus 2 (1d4) Cold damage.
 
-***Cold Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* 40 (9d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* 40 (9d8) Cold damage. *Success:* Half damage.
 
 ### Adult White Dragon
 
@@ -29881,11 +29794,11 @@ Passive Perception 21
 
 ***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 4 (1d8) Cold damage.
 
-***Cold Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage.
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Freezing Burst.*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. *Failure:* 7 (2d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -29933,11 +29846,11 @@ Passive Perception 23
 
 ***Rend.*** *Melee Attack Roll:* +14, reach 15 ft. *Hit:* 17 (2d8 + 8) Slashing damage plus 7 (2d6) Cold damage.
 
-***Cold Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 22, each creature in a 90-foot Cone. *Fail**ure:* 63 (14d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 22, each creature in a 90-foot Cone. *Failure:* 63 (14d8) Cold damage. *Success:* Half damage.
 
 ##### Legendary Actions
 
-*Legendary Action Uses: 3 (4 in Lair). Immediately after* *another creature’s turn, the dragon can expend a use to* *take one of the following actions. The dragon regains all* *expended uses at the start of each of its turns.*
+*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*
 
 ***Freezing Burst.*** *Constitution Saving Throw:* DC 20, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. *Failure:* 14 (4d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.
 
@@ -30075,7 +29988,7 @@ Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 
 ***Bite.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 11 (2d6 + 4) Piercing damage. If the target is a Large or smaller creature, it has the Prone condition.
 
-***Cold Breath (Recharge 5–6).*** *Constitution Saving* *Throw:* DC 12, each creature in a 15-foot Cone. *Failure:* 18 (4d8) Cold damage. *Success:* Half damage.
+***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 12, each creature in a 15-foot Cone. *Failure:* 18 (4d8) Cold damage. *Success:* Half damage.
 
 ## Worg
 
@@ -31017,7 +30930,7 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 
 ***Fist.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage.
 
-***Boulder Toss (Recharge 6).*** The ape hurls a boulder at a point it can see within 90 feet. *Dexterity Saving* *Throw:* DC 17, each creature in a 5-foot-radius Sphere centered on that point. *Failure:* 24 (7d6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition. *Success:* Half damage only.
+***Boulder Toss (Recharge 6).*** The ape hurls a boulder at a point it can see within 90 feet. *Dexterity Saving Throw:* DC 17, each creature in a 5-foot-radius Sphere centered on that point. *Failure:* 24 (7d6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition. *Success:* Half damage only.
 
 ##### Bonus Actions
 
@@ -31157,7 +31070,7 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 
 ***Bite.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 11 (2d6 + 4) Piercing damage.
 
-***Constrict.*** *Strength Saving Throw:* DC 14, one Large or smaller creature the snake can see within 10 feet. *Fail**ure:* 13 (2d8 + 4) Bludgeoning damage, and the target has the Grappled condition (escape DC 14).
+***Constrict.*** *Strength Saving Throw:* DC 14, one Large or smaller creature the snake can see within 10 feet. *Failure:* 13 (2d8 + 4) Bludgeoning damage, and the target has the Grappled condition (escape DC 14).
 
 ### Giant Crab
 
@@ -32241,7 +32154,7 @@ Passive Perception 13
 
 ##### Reactions
 
-***Ink Cloud (1/Day).*** *Trigger:* A creature ends its turn within 5 feet of the octopus while underwater. *Re**sponse:* The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.
+***Ink Cloud (1/Day).*** *Trigger:* A creature ends its turn within 5 feet of the octopus while underwater. *Response:* The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.
 
 ### Owl
 

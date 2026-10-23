@@ -26,6 +26,7 @@ import pymupdf
 
 FOOTER_Y = 735          # every page carries "N  System Reference Document 5.2.1" below this
 ROW_TOL = 2.5          # baseline tolerance (pt) for cells of the same table row
+INDENT = 4.0           # first-cell indentation (pt) that marks a sub-item row
 CELL_GAP = 6.0          # horizontal gap (pt) between spans that marks a table cell boundary
 BODY_FONTS = ("Cambria", "Optima", "ScalaSans")
 INVISIBLE = {"­": "", "​": ""}
@@ -86,6 +87,39 @@ def merge_rows(raw_lines):
     return rows
 
 
+def is_prose(line):
+    return any(s["font"].startswith("Cambria") for s in line["spans"] if s["text"].strip())
+
+
+def merge_split_rows(raw_blocks):
+    """Reattach trailing table cells that the PDF stores as a separate block.
+
+    A table row whose middle cell wraps (e.g. Light Crossbow's properties) is laid out as one
+    block holding the first cells plus the wrapped text, and another block holding the last
+    cells on the first line's baseline. Each line of such a block is merged into the line of
+    the previous block that shares its baseline and ends to its left. Only non-prose lines
+    whose target already has several cells are merged, so prose columns never fuse.
+    """
+    out = []
+    for lines in raw_blocks:
+        lines = [{"y": r["y"], "x0": min(a for a, _ in r["xr"]), "x1": max(b for _, b in r["xr"]),
+                  "spans": r["spans"]} for r in merge_rows(lines)]
+        prev = out[-1] if out else None
+        targets = []
+        if prev and len(lines) <= 3 and not any(is_prose(l) for l in lines):
+            for l in lines:
+                t = next((p for p in prev if abs(p["y"] - l["y"]) < ROW_TOL and p["x1"] < l["x0"]
+                          and not is_prose(p) and len(split_cells(p["spans"])) >= 2), None)
+                targets.append(t)
+        if targets and all(targets):
+            for l, t in zip(lines, targets):
+                t["spans"] = t["spans"] + l["spans"]
+                t["x1"] = max(t["x1"], l["x1"])
+            continue
+        out.append(lines)
+    return out
+
+
 def is_header_block(lines):
     spans = [s for l in lines for s in l["spans"] if s["text"].strip()]
     return bool(spans) and all(s["font"].startswith("GillSans-SemiBold") and s["size"] < 10 for s in spans)
@@ -112,6 +146,7 @@ def page_lines(page):
         if lines:
             raw_blocks.append(lines)
 
+    raw_blocks = merge_split_rows(raw_blocks)
     pooled = []
     for lines in raw_blocks:
         if pooled and is_header_block(lines) and pooled[-1][0] == "header":
@@ -252,15 +287,34 @@ def page_markdown(blocks, pno, dehy):
         if t.startswith("\t") or t.lstrip().startswith("•"):
             return True
         if spans and span_style(spans[0])[0]:
-            return True
+            if not spans[0]["font"].startswith("Cambria"):
+                return True  # stat-block and table labels (Optima / GillSans) always open a line
+            # running prose: a bold run opens a paragraph only when it is a label ("Trigger:",
+            # "Evasion.") or the previous line closed a sentence; otherwise it is a bold word
+            # (e.g. a creature name) that merely wrapped to the start of the line
+            first_run = ""
+            for x in spans:
+                if not span_style(x)[0]:
+                    break
+                first_run += x["text"]
+            prev_text = paras[-1][1] if paras and paras[-1][0] == "para" else ""
+            if re.search(r"[.:!?]\**$", first_run.strip()) or re.search(r"[.:!?)”0-9]\**$", prev_text.strip()):
+                return True
+            return False
         return False
 
-    for lines in blocks:
+    for bi, lines in enumerate(blocks):
         first = True
         for cells in lines:
             lvl = heading_level(cells)
             if lvl:
-                paras.append(("heading", "#" * lvl + " " + render_spans(cells[0]).strip().replace("**", "")))
+                title = render_spans(cells[0]).strip().replace("**", "")
+                prev = paras[-1] if paras else None
+                if prev and prev[0] == "heading" and (prev[2] == (bi, lvl) or prev[2][1] == lvl == 1) and lvl <= 4:
+                    # a heading wrapped onto several lines (e.g. "Curses and" / "Magical Contagions")
+                    paras[-1] = ("heading", prev[1] + " " + title, prev[2])
+                else:
+                    paras.append(("heading", "#" * lvl + " " + title, (bi, lvl)))
                 first = True
                 continue
             xs = [c[0]["bbox"][0] for c in cells]
@@ -287,7 +341,32 @@ def page_markdown(blocks, pno, dehy):
             first = False
         # column/block continuation on the same page: previous paragraph ends with a
         # hyphen and this block starts with a lowercase word -> merge
-    paras = [("table", "| " + " | ".join(p[1]) + " |") if p[0] == "table" else p for p in paras]
+    # rows printed indented under an italic group label (e.g. "Saddle" -> Exotic, Military,
+    # Riding) keep that membership only through their x position: mark them with "↳ "
+    k = 0
+    while k < len(paras):
+        if paras[k][0] != "table":
+            k += 1
+            continue
+        run, has_label = [], False
+        while k < len(paras) and (paras[k][0] == "table" or (
+                paras[k][0] == "para" and re.match(r"^\*[^*].*\*$", paras[k][1]))):
+            if paras[k][0] == "table":
+                run.append(k)
+            else:
+                has_label = True
+            k += 1
+        if not has_label:
+            continue  # only tables with group labels have sub-item rows
+        # indentation is measured against the header row of the same table half (some tables
+        # are printed as two side-by-side halves, each with its own header)
+        base = min(paras[r][2][0] for r in run)
+        for r in run:
+            if paras[r][1][0].startswith("**"):
+                base = paras[r][2][0]
+            elif paras[r][2][0] - base > INDENT:
+                paras[r][1][0] = "↳ " + paras[r][1][0]
+    paras = [("table", "| " + " | ".join(p[1]) + " |") if p[0] == "table" else p[:2] for p in paras]
     merged = []
     for kind, text in paras:
         if (merged and kind == "para" and merged[-1][0] == "para"
@@ -295,6 +374,10 @@ def page_markdown(blocks, pno, dehy):
             merged[-1] = ("para", dehy.join(merged[-1][1], text, pno))
         else:
             merged.append((kind, text))
+    # a bold or italic phrase broken across lines yields "**a** **b**": rejoin it
+    # and a word hyphenated inside an emphasis run yields "*Suc**cess:*": drop the inner markers
+    merged = [(k, re.sub(r"(?<=\w)\*\*(?=\w)", "", re.sub(r"(?<=\w)(\*{1,3}) \1(?=\w)", " ", t)))
+              if k != "heading" else (k, t) for k, t in merged]
     out = []
     prev = None
     for kind, text in merged:

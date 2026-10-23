@@ -54,17 +54,30 @@ relatório.
 - **Tabelas:**
   - células na mesma linha de base viram `| a | b |`;
   - cabeçalhos com duas linhas aparecem como duas linhas de cabeçalho;
-  - texto quebrado dentro de uma célula é anexado a ela.
+  - texto quebrado dentro de uma célula é anexado a ela;
+  - células finais que o PDF guarda num bloco separado (quando uma célula do meio
+    quebra, como em Light Crossbow) são reunidas à sua linha.
+- **Linhas recuadas (`↳ `):** numa tabela com rótulos de grupo em itálico (ex.:
+  *Saddle*, *Meal*, *Simple Melee Weapons*), uma linha impressa recuada sob o rótulo
+  recebe o prefixo `↳ `. O recuo é medido em relação ao cabeçalho da mesma metade da
+  tabela, porque algumas tabelas são impressas em duas metades lado a lado. Só assim
+  se distingue `Saddle → Exotic` de `Sled`, que não pertence ao grupo.
+- **Títulos quebrados em várias linhas** (ex.: "Curses and" / "Magical Contagions")
+  são unidos num único título.
+- **Negrito no texto corrido:** uma palavra em negrito que cai no início da linha só
+  abre parágrafo quando é um rótulo terminado em `.`/`:` ou quando a linha anterior
+  fechou a frase (ex.: "the **Otherworldly Steed** stat block"). Ênfases partidas pela
+  quebra de linha (`**a** **b**`, `*Suc**cess:*`) são religadas.
 
 ## Limitações conhecidas
 
-- **Células deslocadas:** em poucas tabelas, quando uma célula do meio quebra em duas
-  linhas, as células seguintes vão para uma linha separada. Exemplo: Light Crossbow,
-  p. 91, onde `| Slow | 5 lb. | 25 GP |` aparece numa linha à parte. O conteúdo e a
-  ordem estão corretos; confira no texto bruto.
 - **Atributos de monstros:** as células da tabela de atributos podem sair agrupadas
   de forma irregular (`**Dex** 18 +4 | +7`). A sequência é sempre atributo, valor,
   modificador, resistência.
+- **Ordem de leitura:** a ordem segue a do documento do PDF (story order). Blocos
+  laterais e tabelas podem aparecer fora do lugar visual; por exemplo, a continuação da
+  tabela *Food, Drink, and Lodging* (p. 102) vem depois da tabela de veículos. O
+  inventário (L00) trata esses casos explicitamente.
 - **Ilustrações:** as 18 imagens do PDF não contêm texto e foram ignoradas.
 
 ## Como gerar de novo
