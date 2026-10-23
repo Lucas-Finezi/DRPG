@@ -88,7 +88,10 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
 | 5 — Criaturas e encontros | L34–L40 Criaturas D–Z | concluído (251 criaturas; efeitos automáticos de ataque, salvaguarda, reação, conjuração e traços; o restante como decisão do mestre — relatórios em inventory/dnd5e/srd-5.2.1/reports) |
 | 5 — Criaturas e encontros | L41 Exploração e perigos | concluído (11 termos do glossário, 5 maldições, 3 contágios, 9 ambientes, 8 armadilhas, regras; 320/320) |
 | 5 — Criaturas e encontros | L42 Encontros de combate | concluído (dificuldade, orçamento de XP, solução de problemas; 66/66) |
-| 6 — Integração e auditoria | L43–L46 | pendente |
+| 6 — Integração e auditoria | L43 Grafo de referências | concluído (knowledge/dnd5e/graph/refs.json: 1952 nós, 4117 arestas, 0 não resolvidas) |
+| 6 — Integração e auditoria | L44 Manifest global | concluído (knowledge/dnd5e/manifest.json: 1951 entradas) |
+| 6 — Integração e auditoria | L45 Testes de comportamento | concluído (tests/behaviour: 21 cenários) |
+| 6 — Integração e auditoria | L46 Auditoria final | concluído (docs/audit.md: 1747/1747 entradas do inventário, 17306/17306 nós cobertos) |
 
 ## Licença do conteúdo
 
