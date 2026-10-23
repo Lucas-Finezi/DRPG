@@ -1,0 +1,354 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/conjure-celestial",
+  "kind": "spell",
+  "name": "Conjure Celestial",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      118
+    ],
+    "section": "Spells/Spell Descriptions/Conjure Celestial",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Conjuration (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou conjure a spirit from the Upper Planes, which manifests as a pillar of light in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range. For each creature you can see in the Cylinder, choose which of these lights shines on it:\n\n**Healing Light.** The target regains Hit Points equal to 4d12 plus your spellcasting ability modifier.\n\n**Searing Light.** The target makes a Dexterity saving throw, taking 6d12 Radiant damage on a failed save or half as much damage on a successful one.\n\nUntil the spell ends, Bright Light fills the Cylinder, and when you move on your turn, you can also move the Cylinder up to 30 feet.\n\nWhenever the Cylinder moves into the space of a creature you can see and whenever a creature you can see enters the Cylinder or ends its turn there, you can bathe it in one of the lights. A creature can be affected by this spell only once per turn.\n\n***Using a Higher-Level Spell Slot.*** The healing and damage increase by 1d12 for each spell slot level above 7.",
+  "facets": {
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 90
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "pillar",
+        "radius_feet": 10,
+        "height_feet": 40
+      },
+      {
+        "id": "light",
+        "bright_light_in_cylinder": true,
+        "rule": "dnd5e/rule/bright-light"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "light",
+      "choose": 1,
+      "options": [
+        {
+          "id": "healing",
+          "label": "Healing Light",
+          "effects": [
+            {
+              "op": "heal",
+              "amount": {
+                "op": "add",
+                "args": [
+                  {
+                    "dice": {
+                      "count": {
+                        "op": "add",
+                        "args": [
+                          4,
+                          {
+                            "op": "sub",
+                            "args": [
+                              {
+                                "var": "spell_slot_level"
+                              },
+                              7
+                            ]
+                          }
+                        ]
+                      },
+                      "faces": 12
+                    }
+                  },
+                  {
+                    "var": "spellcasting_mod"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "searing",
+          "label": "Searing Light",
+          "effects": [
+            {
+              "op": "save",
+              "ability": "dex",
+              "dc": {
+                "var": "spell_save_dc"
+              },
+              "target": {
+                "kind": "inherit"
+              },
+              "on_fail": [
+                {
+                  "op": "damage",
+                  "amount": {
+                    "dice": {
+                      "count": {
+                        "op": "add",
+                        "args": [
+                          6,
+                          {
+                            "op": "sub",
+                            "args": [
+                              {
+                                "var": "spell_slot_level"
+                              },
+                              7
+                            ]
+                          }
+                        ]
+                      },
+                      "faces": 12
+                    }
+                  },
+                  "damage_type": "radiant"
+                }
+              ],
+              "half_on_success": true
+            }
+          ]
+        }
+      ],
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 10,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 90
+        }
+      },
+      "note": "Each creature you can see in the Cylinder; once per turn per creature."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "moves_on_turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 30,
+          "note": "The Cylinder."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "creature_within_feet_of_effect"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "light",
+          "choose": 1,
+          "options": [
+            {
+              "id": "healing",
+              "label": "Healing Light",
+              "effects": [
+                {
+                  "op": "heal",
+                  "amount": {
+                    "op": "add",
+                    "args": [
+                      {
+                        "dice": {
+                          "count": {
+                            "op": "add",
+                            "args": [
+                              4,
+                              {
+                                "op": "sub",
+                                "args": [
+                                  {
+                                    "var": "spell_slot_level"
+                                  },
+                                  7
+                                ]
+                              }
+                            ]
+                          },
+                          "faces": 12
+                        }
+                      },
+                      {
+                        "var": "spellcasting_mod"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "searing",
+              "label": "Searing Light",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "dex",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "damage",
+                      "amount": {
+                        "dice": {
+                          "count": {
+                            "op": "add",
+                            "args": [
+                              6,
+                              {
+                                "op": "sub",
+                                "args": [
+                                  {
+                                    "var": "spell_slot_level"
+                                  },
+                                  7
+                                ]
+                              }
+                            ]
+                          },
+                          "faces": 12
+                        }
+                      },
+                      "damage_type": "radiant"
+                    }
+                  ],
+                  "half_on_success": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Conjuration (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You conjure a spirit from the Upper Planes, which manifests as a pillar of light in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range. For each creature you can see in the Cylinder, choose which of these lights shines on it:",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Healing Light.** The target regains Hit Points equal to 4d12 plus your spellcasting ability modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "**Searing Light.** The target makes a Dexterity saving throw, taking 6d12 Radiant damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/1"
+      ]
+    },
+    {
+      "text": "Until the spell ends, Bright Light fills the Cylinder, and when you move on your turn, you can also move the Cylinder up to 30 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Whenever the Cylinder moves into the space of a creature you can see and whenever a creature you can see enters the Cylinder or ends its turn there, you can bathe it in one of the lights. A creature can be affected by this spell only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The healing and damage increase by 1d12 for each spell slot level above 7.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0/effects/0/amount",
+        "/effects/0/options/1/effects/0/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/bright-light"
+  ]
+}

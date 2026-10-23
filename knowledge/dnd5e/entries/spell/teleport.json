@@ -1,0 +1,277 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/teleport",
+  "kind": "spell",
+  "name": "Teleport",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      168
+    ],
+    "section": "Spells/Spell Descriptions/Teleport",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 3,
+  "text": "*Level 7 Conjuration (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 10 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nThis spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can’t be held or carried by an unwilling creature.\n\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The GM rolls 1d100 and consults the Teleportation Outcome table and the explanations after it.\n\n##### Teleportation Outcome\n\n| **Similar** | **Off** | **On** |\n| **Familiarity** | **Mishap** | **Area** | **Target** | **Target** |\n| Permanent circle | — | — | — | 01–00 |\n| Linked object | — | — | — | 01–00 |\n| Very familiar | 01–05 | 06–13 | 14–24 | 25–00 |\n| Seen casually | 01–33 | 34–43 | 44–53 | 54–00 |\n| Viewed once or described | 01–43 | 44–53 | 54–73 | 74–00 |\n| False destination | 01–50 | 51–00 | — | — |\n\n***Familiarity.*** Here are the meanings of the terms in the table’s Familiarity column:\n\n- “Permanent circle” means a permanent teleportation circle whose sigil sequence you know.\n\n- “Linked object” means you possess an object taken from the desired destination within the last six months, such as a book from a wizard’s library.\n\n- “Very familiar” is a place you have visited often, a place you have carefully studied, or a place you can see when you cast the spell.\n\n- “Seen casually” is a place you have seen more than once but with which you aren’t very familiar.\n\n- “Viewed once or described” is a place you have seen once, possibly using magic, or a place you know through someone else’s description, perhaps from a map.\n\n- “False destination” is a place that doesn’t exist. Perhaps you tried to scry an enemy’s sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.\n\n***Mishap.*** The spell’s unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 Force damage, and the GM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).\n\n***Similar Area.*** You and your group (or the target object) appear in a different area that’s visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person’s laboratory in the same city.\n\n***Off Target.*** You and your group (or the target object) appear 2d12 miles away from the destination in a random direction. Roll 1d8 for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.\n\n***On Target.*** You and your group (or the target object) appear where you intended.",
+  "facets": {
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "tables": [
+      {
+        "id": "teleportation_outcome",
+        "caption": "Teleportation Outcome",
+        "columns": [
+          "Familiarity",
+          "Mishap",
+          "Similar Area",
+          "Off Target",
+          "On Target"
+        ],
+        "rows": [
+          [
+            "Permanent circle",
+            "—",
+            "—",
+            "—",
+            "01–00"
+          ],
+          [
+            "Linked object",
+            "—",
+            "—",
+            "—",
+            "01–00"
+          ],
+          [
+            "Very familiar",
+            "01–05",
+            "06–13",
+            "14–24",
+            "25–00"
+          ],
+          [
+            "Seen casually",
+            "01–33",
+            "34–43",
+            "44–53",
+            "54–00"
+          ],
+          [
+            "Viewed once or described",
+            "01–43",
+            "44–53",
+            "54–73",
+            "74–00"
+          ],
+          [
+            "False destination",
+            "01–50",
+            "51–00",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "familiarity",
+        "levels": [
+          "permanent_circle",
+          "linked_object",
+          "very_familiar",
+          "seen_casually",
+          "viewed_once_or_described",
+          "false_destination"
+        ],
+        "linked_object_months": 6
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "move",
+      "mode": "teleport",
+      "target": {
+        "kind": "creature",
+        "count": 9,
+        "range": {
+          "kind": "distance",
+          "feet": 10
+        },
+        "must_see": true,
+        "filter": {
+          "willing": true
+        }
+      },
+      "note": "You and up to eight willing creatures, or one Large or smaller object not carried by an unwilling creature."
+    },
+    {
+      "op": "choice",
+      "id": "outcome",
+      "choose": 1,
+      "chooser": "gm",
+      "note": "The GM rolls 1d100 on the Teleportation Outcome table by familiarity.",
+      "options": [
+        {
+          "id": "mishap",
+          "label": "Mishap",
+          "effects": [
+            {
+              "op": "damage",
+              "amount": "3d10",
+              "damage_type": "force",
+              "note": "Each teleporting creature or the object; the GM rerolls on the table."
+            }
+          ]
+        },
+        {
+          "id": "similar_area",
+          "label": "Similar Area",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/spell/teleport",
+              "note": "Closest similar place."
+            }
+          ]
+        },
+        {
+          "id": "off_target",
+          "label": "Off Target",
+          "effects": [
+            {
+              "op": "move",
+              "mode": "teleport",
+              "note": "2d12 miles away; 1d8 for direction."
+            }
+          ]
+        },
+        {
+          "id": "on_target",
+          "label": "On Target",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/spell/teleport",
+              "note": "Where you intended."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "similar_area",
+      "reason": "gm_judgment",
+      "prompt": "Which similar place do the travelers reach?",
+      "source_text": "You appear in the closest similar place."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Conjuration (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 10 feet\n\n**Components:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can’t be held or carried by an unwilling creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The GM rolls 1d100 and consults the Teleportation Outcome table and the explanations after it.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Teleportation Outcome\n\n| **Similar** | **Off** | **On** |\n| **Familiarity** | **Mishap** | **Area** | **Target** | **Target** |\n| Permanent circle | — | — | — | 01–00 |\n| Linked object | — | — | — | 01–00 |\n| Very familiar | 01–05 | 06–13 | 14–24 | 25–00 |\n| Seen casually | 01–33 | 34–43 | 44–53 | 54–00 |\n| Viewed once or described | 01–43 | 44–53 | 54–73 | 74–00 |\n| False destination | 01–50 | 51–00 | — | — |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Familiarity.*** Here are the meanings of the terms in the table’s Familiarity column:\n\n- “Permanent circle” means a permanent teleportation circle whose sigil sequence you know.\n\n- “Linked object” means you possess an object taken from the desired destination within the last six months, such as a book from a wizard’s library.\n\n- “Very familiar” is a place you have visited often, a place you have carefully studied, or a place you can see when you cast the spell.\n\n- “Seen casually” is a place you have seen more than once but with which you aren’t very familiar.\n\n- “Viewed once or described” is a place you have seen once, possibly using magic, or a place you know through someone else’s description, perhaps from a map.\n\n- “False destination” is a place that doesn’t exist. Perhaps you tried to scry an enemy’s sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Mishap.*** The spell’s unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 Force damage, and the GM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/0"
+      ]
+    },
+    {
+      "text": "***Similar Area.*** You and your group (or the target object) appear in a different area that’s visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person’s laboratory in the same city.",
+      "status": "master_decision",
+      "by": [
+        "/effects/1/options/1",
+        "md:similar_area"
+      ]
+    },
+    {
+      "text": "***Off Target.*** You and your group (or the target object) appear 2d12 miles away from the destination in a random direction. Roll 1d8 for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/2"
+      ]
+    },
+    {
+      "text": "***On Target.*** You and your group (or the target object) appear where you intended.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/teleport"
+  ]
+}

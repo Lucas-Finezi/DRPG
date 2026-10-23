@@ -401,3 +401,10 @@ def extra_targets(level, base=1):
 
 def S_for(lot):
     return lambda name, items, **kw: SPELL(name, items, lot, **kw)
+
+
+def tab(caption, columns, tid=None, page=None, nodes=None):
+    """A captioned table of the source as data: body rows (header rows in bold are skipped)."""
+    from entrylib import table_nodes
+    rows = [n.cells for n in (nodes or table_nodes(caption, page))[1:] if n.type == "t" and not n.text.startswith("| **")]
+    return {"id": tid or slugify(caption).replace("-", "_"), "caption": caption, "columns": columns, "rows": rows}

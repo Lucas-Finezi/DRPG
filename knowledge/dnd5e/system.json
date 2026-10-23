@@ -2064,6 +2064,24 @@
           153
         ],
         "lot": "L21"
+      },
+      {
+        "id": "rounds_elapsed",
+        "description": "Number of the caster's turns that ended while the spell lasted.",
+        "type": "number",
+        "pages": [
+          122
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "feet_moved",
+        "description": "Distance in feet the creature was moved.",
+        "type": "number",
+        "pages": [
+          129
+        ],
+        "lot": "L24"
       }
     ],
     "stats": [
@@ -3433,6 +3451,22 @@
           137
         ],
         "lot": "L22"
+      },
+      {
+        "id": "touches_effect",
+        "description": "A creature touches the spell's effect.",
+        "pages": [
+          122
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "tries_teleport_out",
+        "description": "A creature tries to use teleportation or interplanar travel to leave.",
+        "pages": [
+          133
+        ],
+        "lot": "L24"
       }
     ],
     "predicates": [
@@ -4931,6 +4965,39 @@
           139
         ],
         "lot": "L22"
+      },
+      {
+        "id": "creature_type_in",
+        "description": "The creature's type is one of these (param).",
+        "params": [
+          "types"
+        ],
+        "type": "predicate",
+        "pages": [
+          124
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "space_occupied",
+        "description": "The arrival space is occupied.",
+        "type": "predicate",
+        "pages": [
+          129
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "dead_at_least_days",
+        "description": "The creature has been dead at least N days (param).",
+        "params": [
+          "days"
+        ],
+        "type": "predicate",
+        "pages": [
+          159
+        ],
+        "lot": "L24"
       }
     ],
     "frequencies": [
@@ -5903,6 +5970,22 @@
           173
         ],
         "lot": "L23"
+      },
+      {
+        "id": "targeted_by_divination",
+        "description": "The creature can't be targeted by Divination spells.",
+        "pages": [
+          161
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "detected_or_viewed_by_magic",
+        "description": "The creature can't be detected by magic or viewed remotely with magic.",
+        "pages": [
+          161
+        ],
+        "lot": "L24"
       }
     ],
     "conditions": [

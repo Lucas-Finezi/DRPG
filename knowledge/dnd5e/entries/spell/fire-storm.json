@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/fire-storm",
+  "kind": "spell",
+  "name": "Fire Storm",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      132
+    ],
+    "section": "Spells/Spell Descriptions/Fire Storm",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Evocation (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nA storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which you arrange as you like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one.\n\nFlammable objects in the area that aren’t being worn or carried start burning.",
+  "facets": {
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "cubes",
+        "max": 10,
+        "contiguous": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cube",
+          "size_feet": 10,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 150
+        },
+        "count": 10
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "7d10",
+          "damage_type": "fire"
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Evocation (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which you arrange as you like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Flammable objects in the area that aren’t being worn or carried start burning.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/hazard/burning"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/burning"
+  ]
+}

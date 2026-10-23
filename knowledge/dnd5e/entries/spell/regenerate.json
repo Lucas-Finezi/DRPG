@@ -1,0 +1,121 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/regenerate",
+  "kind": "spell",
+  "name": "Regenerate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      158
+    ],
+    "section": "Spells/Spell Descriptions/Regenerate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Transmutation (Bard, Cleric, Druid)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (a prayer wheel)\n\n**Duration:** 1 hour\n\nA creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
+  "facets": {
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a prayer wheel"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "regrow",
+        "severed_parts_regrow_minutes": 2
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": {
+        "op": "add",
+        "args": [
+          "4d8",
+          15
+        ]
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "target",
+        "which": "each"
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": 1,
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Transmutation (Bard, Cleric, Druid)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (a prayer wheel)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

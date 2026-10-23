@@ -1,0 +1,401 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/symbol",
+  "kind": "spell",
+  "name": "Symbol",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      167
+    ],
+    "section": "Spells/Spell Descriptions/Symbol",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 3,
+  "text": "*Level 7 Abjuration (Bard, Cleric, Druid, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (powdered diamond worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Until dispelled or triggered\n\nYou inscribe a harmful glyph either on a surface (such as a section of floor or wall) or within an object that can be closed (such as a book or chest). The glyph can cover an area no larger than 10 feet in diameter. If you choose an object, it must remain in place; if it is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.\n\nThe glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against your spell save DC to notice.\n\nWhen you inscribe the glyph, you set its trigger and choose which effect the symbol bears: Death, Discord, Fear, Pain, Sleep, or Stunning. Each one is explained below.\n\n***Set the Trigger.*** You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph.\n\nYou can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). You can also set conditions for creatures that don’t trigger the glyph, such as those who say a certain password.\n\nOnce triggered, the glyph glows, filling a 60-foot-radius Sphere with Dim Light for 10 minutes, after which time the spell ends. Each creature in the Sphere when the glyph activates is targeted by its effect, as is a creature that enters the Sphere for the first time on a turn or ends its turn there. A creature is targeted only once per turn.\n\n***Death.*** Each target makes a Constitution saving throw, taking 10d10 Necrotic damage on a failed save or half as much damage on a successful save.\n\n***Discord.*** Each target makes a Wisdom saving throw. On a failed save, a target argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has Disadvantage on attack rolls and ability checks.\n\n***Fear.*** Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute. While Frightened, the target must move at least 30 feet away from the glyph on each of its turns, if able.\n\n***Pain.*** Each target must succeed on a Constitution saving throw or have the Incapacitated condition for 1 minute.\n\n***Sleep.*** Each target must succeed on a Wisdom saving throw or have the Unconscious condition for 10 minutes. A creature awakens if it takes damage or if someone takes an action to shake it awake.\n\n***Stunning.*** Each target must succeed on a Wisdom saving throw or have the Stunned condition for 1 minute.",
+  "facets": {
+    "level": 7,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "powdered diamond worth 1,000+ GP, which the spell consumes",
+      "material_cost_gp": 1000,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "until_dispelled_or_triggered",
+      "text": "Until dispelled or triggered"
+    },
+    "rules": [
+      {
+        "id": "glyph",
+        "max_diameter_feet": 10,
+        "breaks_if_moved_feet": 10
+      },
+      {
+        "id": "notice",
+        "check": {
+          "ability": "wis",
+          "skill": "perception",
+          "dc": "spell_save_dc"
+        }
+      },
+      {
+        "id": "effect_choice",
+        "options": [
+          "death",
+          "discord",
+          "fear",
+          "pain",
+          "sleep",
+          "stunning"
+        ]
+      },
+      {
+        "id": "refine",
+        "by_creature_type": true,
+        "exemptions": "e.g._password"
+      },
+      {
+        "id": "glow",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 60
+        },
+        "light": {
+          "bright_feet": 0,
+          "dim_feet": 60,
+          "rules": [
+            "dnd5e/rule/dim-light"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_ends_turn_in_area"
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "symbol",
+          "choose": 1,
+          "options": [
+            {
+              "id": "death",
+              "label": "Death",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "con",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "damage",
+                      "amount": "10d10",
+                      "damage_type": "necrotic"
+                    }
+                  ],
+                  "half_on_success": true
+                }
+              ]
+            },
+            {
+              "id": "discord",
+              "label": "Discord",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "wis",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "roll_mode",
+                      "mode": "disadvantage",
+                      "rolls": [
+                        "attack_roll",
+                        "ability_check"
+                      ],
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      },
+                      "note": "It argues and can't communicate meaningfully."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "fear",
+              "label": "Fear",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "wis",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/frightened",
+                      "note": "Must move at least 30 feet away from the glyph each turn, if able.",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "pain",
+              "label": "Pain",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "con",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/incapacitated",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sleep",
+              "label": "Sleep",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "wis",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/unconscious",
+                      "note": "Wakes if it takes damage or is shaken awake.",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 10
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "stunning",
+              "label": "Stunning",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "wis",
+                  "dc": {
+                    "var": "spell_save_dc"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/stunned",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Also each creature in the Sphere when it activates."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "symbol_trigger",
+      "reason": "gm_judgment",
+      "prompt": "Has the glyph's trigger occurred?",
+      "source_text": "You decide what triggers the glyph when you cast the spell."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Abjuration (Bard, Cleric, Druid, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (powdered diamond worth 1,000+ GP, which the spell consumes)\n\n**Duration:** Until dispelled or triggered",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You inscribe a harmful glyph either on a surface (such as a section of floor or wall) or within an object that can be closed (such as a book or chest). The glyph can cover an area no larger than 10 feet in diameter. If you choose an object, it must remain in place; if it is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against your spell save DC to notice.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When you inscribe the glyph, you set its trigger and choose which effect the symbol bears: Death, Discord, Fear, Pain, Sleep, or Stunning. Each one is explained below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Set the Trigger.*** You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph.",
+      "status": "master_decision",
+      "by": [
+        "md:symbol_trigger"
+      ]
+    },
+    {
+      "text": "You can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). You can also set conditions for creatures that don’t trigger the glyph, such as those who say a certain password.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "Once triggered, the glyph glows, filling a 60-foot-radius Sphere with Dim Light for 10 minutes, after which time the spell ends. Each creature in the Sphere when the glyph activates is targeted by its effect, as is a creature that enters the Sphere for the first time on a turn or ends its turn there. A creature is targeted only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Death.*** Each target makes a Constitution saving throw, taking 10d10 Necrotic damage on a failed save or half as much damage on a successful save.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/0"
+      ]
+    },
+    {
+      "text": "***Discord.*** Each target makes a Wisdom saving throw. On a failed save, a target argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has Disadvantage on attack rolls and ability checks.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/1"
+      ]
+    },
+    {
+      "text": "***Fear.*** Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute. While Frightened, the target must move at least 30 feet away from the glyph on each of its turns, if able.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/2"
+      ]
+    },
+    {
+      "text": "***Pain.*** Each target must succeed on a Constitution saving throw or have the Incapacitated condition for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/3"
+      ]
+    },
+    {
+      "text": "***Sleep.*** Each target must succeed on a Wisdom saving throw or have the Unconscious condition for 10 minutes. A creature awakens if it takes damage or if someone takes an action to shake it awake.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/4"
+      ]
+    },
+    {
+      "text": "***Stunning.*** Each target must succeed on a Wisdom saving throw or have the Stunned condition for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/incapacitated",
+    "dnd5e/condition/stunned",
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/dim-light"
+  ]
+}
