@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/crafting-nonmagical-items",
+  "kind": "rule",
+  "name": "Crafting Nonmagical Items",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      103
+    ],
+    "section": "Equipment/Crafting Nonmagical Items",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L08"
+  },
+  "tier": 3,
+  "text": "To craft a nonmagical item, you need tools, raw materials, and time, each of which is detailed below. If you meet the requirements, you make the item, and you can use it or sell it at its normal price.\n\n### Tools\n\nThe “Tools” section of “Equipment” lists which tools are required to make certain items. The GM assigns required tools for items not listed there.\n\nYou must use the required tool to make an item and have proficiency with that tool. Anyone who helps you must also have proficiency with it.\n\n### Raw Materials\n\nTo make an item, you need raw materials worth half its purchase cost (round down). For example, you need 750 GP of raw materials to make Plate Armor, which sells for 1,500 GP. The GM determines whether appropriate raw materials are available.\n\n### Time\n\nTo determine how many days (working 8 hours a day) it takes to make an item, divide its purchase cost in GP by 10 (round a fraction up to a day). For example, you need 5 days to make a Heavy Crossbow, which sells for 50 GP.\n\nIf an item requires multiple days, the days needn’t be consecutive.\n\nCharacters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants.",
+  "data": {
+    "rules": [
+      {
+        "id": "requirements",
+        "needs": [
+          "tools",
+          "raw_materials",
+          "time"
+        ],
+        "result_sells_at": "normal_price"
+      },
+      {
+        "id": "tool_proficiency",
+        "crafter_and_helpers_proficient": true
+      },
+      {
+        "id": "materials",
+        "cost_fraction": 0.5,
+        "round": "down"
+      },
+      {
+        "id": "time",
+        "days": {
+          "op": "div",
+          "args": [
+            {
+              "var": "item_cost_gp"
+            },
+            10
+          ],
+          "round": "up"
+        },
+        "hours_per_day": 8,
+        "consecutive": false
+      },
+      {
+        "id": "assistants",
+        "time_divided_by": "workers",
+        "default_max_assistants": 1
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "craft_tools",
+      "reason": "gm_judgment",
+      "prompt": "Which tool is required to make this item?",
+      "source_text": "The GM assigns required tools for items not listed there.",
+      "pages": [
+        103
+      ]
+    },
+    {
+      "id": "materials_available",
+      "reason": "gm_judgment",
+      "prompt": "Are appropriate raw materials available?",
+      "source_text": "The GM determines whether appropriate raw materials are available.",
+      "pages": [
+        103
+      ]
+    },
+    {
+      "id": "more_assistants",
+      "reason": "gm_judgment",
+      "prompt": "Allow more than one assistant?",
+      "source_text": "Normally, only one other character can assist you, but the GM might allow more assistants.",
+      "pages": [
+        103
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "To craft a nonmagical item, you need tools, raw materials, and time, each of which is detailed below. If you meet the requirements, you make the item, and you can use it or sell it at its normal price.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "### Tools\n\nThe “Tools” section of “Equipment” lists which tools are required to make certain items.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/tools"
+      ]
+    },
+    {
+      "text": "The GM assigns required tools for items not listed there.",
+      "status": "master_decision",
+      "by": [
+        "md:craft_tools"
+      ]
+    },
+    {
+      "text": "You must use the required tool to make an item and have proficiency with that tool. Anyone who helps you must also have proficiency with it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "### Raw Materials\n\nTo make an item, you need raw materials worth half its purchase cost (round down). For example, you need 750 GP of raw materials to make Plate Armor, which sells for 1,500 GP.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The GM determines whether appropriate raw materials are available.",
+      "status": "master_decision",
+      "by": [
+        "md:materials_available"
+      ]
+    },
+    {
+      "text": "### Time\n\nTo determine how many days (working 8 hours a day) it takes to make an item, divide its purchase cost in GP by 10 (round a fraction up to a day). For example, you need 5 days to make a Heavy Crossbow, which sells for 50 GP.\n\nIf an item requires multiple days, the days needn’t be consecutive.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "Characters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you,",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "but the GM might allow more assistants.",
+      "status": "master_decision",
+      "by": [
+        "md:more_assistants"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/tools"
+  ]
+}

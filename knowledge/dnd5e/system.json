@@ -1958,6 +1958,25 @@
           185
         ],
         "lot": "L06"
+      },
+      {
+        "id": "hit_point_die",
+        "description": "The die type of one of the creature's Hit Point Dice.",
+        "type": "dice",
+        "pages": [
+          183,
+          187
+        ],
+        "lot": "L07"
+      },
+      {
+        "id": "item_cost_gp",
+        "description": "Purchase cost of the item in GP.",
+        "type": "number",
+        "pages": [
+          103
+        ],
+        "lot": "L08"
       }
     ],
     "stats": [
@@ -2391,6 +2410,16 @@
           17
         ],
         "lot": "L06"
+      },
+      {
+        "id": "rest_interrupted",
+        "description": "A rest is stopped by an interruption.",
+        "type": "event",
+        "pages": [
+          185,
+          187
+        ],
+        "lot": "L07"
       }
     ],
     "predicates": [
@@ -2791,6 +2820,33 @@
           189
         ],
         "lot": "L06"
+      },
+      {
+        "id": "wearing_untrained_armor",
+        "description": "The creature wears Light, Medium or Heavy armor it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "using_untrained_shield",
+        "description": "The creature uses a Shield it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "moving_weight_over_carry",
+        "description": "The creature drags, lifts or pushes weight above its carrying capacity.",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L08"
       }
     ],
     "frequencies": [
@@ -3467,6 +3523,22 @@
           191
         ],
         "lot": "L03"
+      },
+      {
+        "id": "cast_spells",
+        "description": "The creature can't cast spells.",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "shield_ac_bonus",
+        "description": "The creature doesn't gain a Shield's AC bonus.",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
       }
     ],
     "conditions": [
@@ -3651,6 +3723,17 @@
           183
         ],
         "lot": "L05"
+      }
+    ],
+    "pools": [
+      {
+        "id": "hit_point_dice",
+        "name": "Hit Point Dice",
+        "description": "Hit Point Dice available to spend (spent dice are tracked).",
+        "pages": [
+          183
+        ],
+        "lot": "L07"
       }
     ]
   },

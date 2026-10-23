@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/armor-class",
+  "kind": "rule",
+  "name": "Armor Class",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177
+    ],
+    "section": "Rules Glossary/Rules Definitions/Armor Class",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L08"
+  },
+  "tier": 1,
+  "text": "An Armor Class (AC) is the target number for an attack roll. AC represents how difficult it is to hit a target.\n\nYour base AC calculation is 10 plus your Dexterity modifier. If a rule gives you another base AC calculation, you choose which calculation to use; you can’t use more than one. *See also* “Attack Roll.”",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "one_base_ac",
+        "choose_one": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An Armor Class (AC) is the target number for an attack roll. AC represents how difficult it is to hit a target.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/4"
+      ]
+    },
+    {
+      "text": "Your base AC calculation is 10 plus your Dexterity modifier.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/levels/rules/7"
+      ]
+    },
+    {
+      "text": "If a rule gives you another base AC calculation, you choose which calculation to use; you can’t use more than one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Attack Roll.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/attack-roll"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/attack-roll",
+    "dnd5e/system/dnd5e"
+  ]
+}
