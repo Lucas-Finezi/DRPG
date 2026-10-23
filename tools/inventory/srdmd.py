@@ -21,6 +21,7 @@ class Node:
     cells: list = field(default_factory=list)
     index: int = 0
     indented: bool = False  # table row printed indented under an italic group label ("↳ ")
+    sidebar: bool = False   # inside a boxed sidebar (<!-- sidebar --> ... <!-- /sidebar -->)
 
 
 def strip_md(text):
@@ -45,25 +46,32 @@ def split_cells(row):
 
 
 def load(path):
-    nodes, page = [], 0
+    nodes, page, side = [], 0, False
     for raw in Path(path).read_text(encoding="utf-8").split("\n"):
         m = PAGE_RE.match(raw)
         if m:
             page = int(m.group(1))
             continue
+        if raw.startswith("<!-- sidebar -->"):
+            side = True
+            continue
+        if raw.startswith("<!-- /sidebar -->"):
+            side = False
+            continue
         if not raw.strip() or raw.startswith("<!--"):
             continue
         h = HEAD_RE.match(raw)
         if h:
-            nodes.append(Node(page, "h", strip_md(h.group(2)), level=len(h.group(1))))
+            nodes.append(Node(page, "h", strip_md(h.group(2)), level=len(h.group(1)), sidebar=side))
         elif raw.startswith("| ") and raw.rstrip().endswith("|"):
             cells = split_cells(raw)
             indented = cells[0].startswith("↳ ")
             if indented:
                 cells[0] = cells[0][2:]
-            nodes.append(Node(page, "t", raw, cells=cells, indented=indented))
+            nodes.append(Node(page, "t", raw, cells=cells, indented=indented, sidebar=side))
         else:
-            nodes.append(Node(page, "p", raw))
+            nodes.append(Node(page, "p", raw, sidebar=side))
     for i, n in enumerate(nodes):
         n.index = i
+        n.sidebar = n.sidebar or False
     return nodes

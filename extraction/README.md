@@ -62,6 +62,11 @@ relatório.
   recebe o prefixo `↳ `. O recuo é medido em relação ao cabeçalho da mesma metade da
   tabela, porque algumas tabelas são impressas em duas metades lado a lado. Só assim
   se distingue `Saddle → Exotic` de `Sled`, que não pertence ao grupo.
+- **Quadros laterais:** os boxes de regra (texto em GillSans 9 pt, como "Heroic
+  Inspiration" e "Round Down") ficam entre `<!-- sidebar -->` e `<!-- /sidebar -->`,
+  com o título H5. Assim, um parágrafo do texto principal cortado por um quadro pode ser
+  religado, e o quadro vira uma entrada própria.
+- **Caracteres de controle** do PDF (ex.: BEL em "4:\t\x07Choose") são removidos.
 - **Títulos quebrados em várias linhas** (ex.: "Curses and" / "Magical Contagions")
   são unidos num único título.
 - **Negrito no texto corrido:** uma palavra em negrito que cai no início da linha só
@@ -83,7 +88,7 @@ relatório.
 ## Como gerar de novo
 
 ```bash
-pip install -r tools/extract/requirements.txt   # requer também poppler-utils (pdftotext)
+pip install -r tools/requirements.txt   # requer também poppler-utils (pdftotext)
 python3 -I tools/extract/extract_srd.py source/SRD_CC_v5.2.1.pdf extraction
 ```
 

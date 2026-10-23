@@ -29,6 +29,9 @@ ROW_TOL = 2.5          # baseline tolerance (pt) for cells of the same table row
 INDENT = 4.0           # first-cell indentation (pt) that marks a sub-item row
 ROW_GAP = 14.0         # max vertical distance (pt) from a row to the wrapped line of one of its cells
 CELL_MAX_WIDTH = 160.0 # a table cell line is narrower than a text column
+SIDEBAR_MIN_SIZE = 8.5  # table footnotes are set at 8 pt and are not sidebars
+SIDEBAR_MAX_SIZE = 9.4  # sidebar body text is set at 9 pt (main text: 10 pt Cambria)
+SIDEBAR_MIN_WIDTH = 150.0  # and runs as prose lines, wider than table cells
 CELL_GAP = 6.0          # horizontal gap (pt) between spans that marks a table cell boundary
 BODY_FONTS = ("Cambria", "Optima", "ScalaSans")
 DEHY = None             # set in main(); used to rejoin hyphenated words inside folded table cells
@@ -50,7 +53,7 @@ def sha256(path):
 def clean(text):
     for k, v in INVISIBLE.items():
         text = text.replace(k, v)
-    return text
+    return re.sub(r"[\x00-\x08\x0b-\x1f]", "", text)  # stray control glyphs (e.g. BEL in "4:\t\x07Choose")
 
 
 # ---------------------------------------------------------------- span model
@@ -157,6 +160,16 @@ def merge_split_rows(raw_blocks):
             continue
         out.append(lines)
     return out
+
+
+def is_sidebar_line(cells):
+    """Body text of a boxed sidebar: every span in the sans-serif face at about 9 pt."""
+    spans = [s for c in cells for s in c if s["text"].strip()]
+    if not spans or len(cells) != 1 or not all(
+            s["font"].startswith("GillSans") and SIDEBAR_MIN_SIZE < s["size"] < SIDEBAR_MAX_SIZE for s in spans):
+        return False
+    labelled = spans[0]["font"] == "GillSans-BoldItalic"  # "Only One at a Time." style label
+    return labelled or sum(s["bbox"][2] - s["bbox"][0] for s in spans) > SIDEBAR_MIN_WIDTH
 
 
 def is_header_block(lines):
@@ -342,6 +355,8 @@ def page_markdown(blocks, pno, dehy):
                     break
                 first_run += x["text"]
             prev_text = paras[-1][1] if paras and paras[-1][0] == "para" else ""
+            if re.fullmatch(r"\*\*[^*]+\*\*", prev_text.strip()) and not re.search(r"[.:!?]\**$", prev_text.strip()):
+                return False  # second line of a bold label wrapped mid-phrase ("... Characters" / "Do.")
             if re.search(r"[.:!?]\**$", first_run.strip()) or re.search(r"[.:!?)”0-9]\**$", prev_text.strip()):
                 return True
             return False
@@ -382,9 +397,9 @@ def page_markdown(blocks, pno, dehy):
             if stripped.startswith("•"):
                 text = "- " + stripped[1:].lstrip()
             if is_new_para(cells, first) or not paras or paras[-1][0] != "para":
-                paras.append(("para", text.strip()))
-            else:
-                paras[-1] = ("para", dehy.join(paras[-1][1], text, pno))
+                paras.append(("para", text.strip(), is_sidebar_line(cells)))
+            else:  # continuation line: same paragraph, same sidebar status
+                paras[-1] = ("para", dehy.join(paras[-1][1], text, pno), paras[-1][2])
             first = False
         # column/block continuation on the same page: previous paragraph ends with a
         # hyphen and this block starts with a lowercase word -> merge
@@ -413,25 +428,48 @@ def page_markdown(blocks, pno, dehy):
                 base = paras[r][2][0]
             elif paras[r][2][0] - base > INDENT:
                 paras[r][1][0] = "↳ " + paras[r][1][0]
-    paras = [("table", "| " + " | ".join(p[1]) + " |") if p[0] == "table" else p[:2] for p in paras]
+    paras = [("table", "| " + " | ".join(p[1]) + " |", False) if p[0] == "table"
+             else (p[0], p[1], p[2] if p[0] == "para" else False) for p in paras]
     merged = []
-    for kind, text in paras:
-        if (merged and kind == "para" and merged[-1][0] == "para"
-                and re.search(r"[A-Za-z]-\**$", merged[-1][1]) and re.match(r"\**[a-z]", text)):
-            merged[-1] = ("para", dehy.join(merged[-1][1], text, pno))
+    for kind, text, side in paras:
+        # a paragraph continued in the next block (column break, hanging indent): the
+        # previous one ends without closing punctuation and this one starts in lowercase
+        if (merged and kind == "para" and merged[-1][0] == "para" and merged[-1][2] == side
+                and not re.search(r"[.:!?)”\]]\**$", merged[-1][1]) and re.match(r"\**[a-z]", text)):
+            merged[-1] = ("para", dehy.join(merged[-1][1], text, pno), side)
         else:
-            merged.append((kind, text))
+            merged.append((kind, text, side))
     # a bold or italic phrase broken across lines yields "**a** **b**": rejoin it
     # and a word hyphenated inside an emphasis run yields "*Suc**cess:*": drop the inner markers
-    merged = [(k, re.sub(r"(?<=\w)\*\*(?=\w)", "", re.sub(r"(?<=\w)(\*{1,3}) \1(?=\w)", " ", t)))
-              if k != "heading" else (k, t) for k, t in merged]
+    merged = [(k, re.sub(r"(?<=\w)(?:\*\*)+(?=\w)", "", re.sub(r"(?<=\w)(\*{1,3}) \1(?=\w)", " ", t)), sd)
+              if k != "heading" else (k, t, sd) for k, t, sd in merged]
+    # sidebars (boxed text set in the sans-serif body face) are wrapped in markers, together
+    # with the level-5 heading that introduces them
     out = []
     prev = None
-    for kind, text in merged:
+    k = 0
+    while k < len(merged):
+        kind, text, side = merged[k]
+        if side or (kind == "heading" and text.startswith("##### ") and k + 1 < len(merged)
+                    and merged[k + 1][2]):
+            run = [merged[k]]
+            k += 1
+            while k < len(merged) and merged[k][2]:
+                run.append(merged[k])
+                k += 1
+            if out:
+                out.append("")
+            out.append("<!-- sidebar -->")
+            for _, t, _ in run:
+                out += ["", t]
+            out += ["", "<!-- /sidebar -->"]
+            prev = "sidebar"
+            continue
         if out and not (kind == "table" and prev == "table"):
             out.append("")
         out.append(text)
         prev = kind
+        k += 1
     return "\n".join(out)
 
 
@@ -486,7 +524,8 @@ def main(pdf_path, out_dir):
         footer_at = raw_pt.rfind("System Reference Document 5.2.1")
         pt_body = raw_pt[:footer_at] + raw_pt[footer_at + len("System Reference Document 5.2.1"):]
         pt_body = re.sub(rf"(?m)^\s*{pno}\s*$", "", pt_body, count=1)
-        c_pt, c_mu, c_md = alnum_counter(clean(pt_body)), alnum_counter(clean(raw_mu)), alnum_counter(md)
+        c_pt, c_mu = alnum_counter(clean(pt_body)), alnum_counter(clean(raw_mu))
+        c_md = alnum_counter(re.sub(r"<!--.*?-->", "", md))  # structural markers are not content
         mu_vs_pt = counter_diff(c_pt, c_mu)
         md_vs_mu = counter_diff(c_mu, c_md)
         pages.append({
