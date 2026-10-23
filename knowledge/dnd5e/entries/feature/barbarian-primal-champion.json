@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/barbarian-primal-champion",
+  "kind": "feature",
+  "name": "Primal Champion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Class Features/Level 20: Primal Champion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/barbarian",
+    "level": 20
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_score.str",
+      "mode": "add",
+      "value": 4
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.con",
+      "mode": "add",
+      "value": 4
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score_max.str",
+      "mode": "max",
+      "value": 25
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score_max.con",
+      "mode": "max",
+      "value": 25
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ]
+}

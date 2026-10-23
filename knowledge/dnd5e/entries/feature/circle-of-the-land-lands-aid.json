@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/circle-of-the-land-lands-aid",
+  "kind": "feature",
+  "name": "Land’s Aid",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Druid Subclass: Circle of the Land/Level 3: Land’s Aid",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point. Each creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much damage on a successful one. One creature of your choice in that area regains 2d6 Hit Points.\n\nThe damage and healing increase by 1d6 when you reach Druid levels 10 (3d6) and 14 (4d6).",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/circle-of-the-land",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "wild_shape",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "half_on_success": true,
+          "target": {
+            "kind": "area",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "area": {
+              "shape": "sphere",
+              "size_feet": 10
+            },
+            "filter": {
+              "predicate": {
+                "pred": "chosen_by_source"
+              }
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "damage_type": "necrotic",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "scale": {
+                      "by": "class_level.druid",
+                      "steps": [
+                        {
+                          "from": 3,
+                          "value": 2
+                        },
+                        {
+                          "from": 10,
+                          "value": 3
+                        },
+                        {
+                          "from": 14,
+                          "value": 4
+                        }
+                      ]
+                    }
+                  },
+                  "faces": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "op": "heal",
+          "amount": {
+            "dice": {
+              "count": {
+                "scale": {
+                  "by": "class_level.druid",
+                  "steps": [
+                    {
+                      "from": 3,
+                      "value": 2
+                    },
+                    {
+                      "from": 10,
+                      "value": 3
+                    },
+                    {
+                      "from": 14,
+                      "value": 4
+                    }
+                  ]
+                }
+              },
+              "faces": 6
+            }
+          },
+          "target": {
+            "kind": "creature"
+          },
+          "note": "One creature of your choice in the area."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point. Each creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much damage on a successful one. One creature of your choice in that area regains 2d6 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The damage and healing increase by 1d6 when you reach Druid levels 10 (3d6) and 14 (4d6).",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_fail/0/amount"
+      ]
+    }
+  ]
+}

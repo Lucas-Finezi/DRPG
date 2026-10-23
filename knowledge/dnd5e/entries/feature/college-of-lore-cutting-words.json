@@ -1,0 +1,106 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/college-of-lore-cutting-words",
+  "kind": "feature",
+  "name": "Cutting Words",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      35
+    ],
+    "section": "Classes/Bard/Bard Subclass: College of Lore/Level 3: Cutting Words",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You learn to use your wit to supernaturally distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of yourself makes a damage roll or succeeds on an ability check or attack roll, you can take a Reaction to expend one use of your Bardic Inspiration; roll your Bardic Inspiration die, and subtract the number rolled from the creature’s roll, reducing the damage or potentially turning the success into a failure.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/college-of-lore",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "cost": "reaction",
+      "optional": true,
+      "event": {
+        "event": "creature_roll_made"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "can_see",
+            "args": {
+              "who": "creature"
+            }
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "feet": 60
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "damage_roll"
+                }
+              },
+              {
+                "pred": "roll_succeeded",
+                "args": {
+                  "roll": "ability_check"
+                }
+              },
+              {
+                "pred": "roll_succeeded",
+                "args": {
+                  "roll": "attack_roll"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "bardic_inspiration",
+          "amount": 1
+        },
+        {
+          "op": "modifier",
+          "stat": "triggering_roll",
+          "mode": "add",
+          "value": {
+            "op": "mul",
+            "args": [
+              -1,
+              {
+                "var": "rolled.bardic_inspiration_die"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You learn to use your wit to supernaturally distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of yourself makes a damage roll or succeeds on an ability check or attack roll, you can take a Reaction to expend one use of your Bardic Inspiration; roll your Bardic Inspiration die, and subtract the number rolled from the creature’s roll, reducing the damage or potentially turning the success into a failure.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

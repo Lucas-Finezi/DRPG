@@ -1,0 +1,519 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+  "kind": "feature",
+  "name": "Circle of the Land Spells",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Druid Subclass: Circle of the Land/Level 3: Circle of the Land Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.\n\n##### Arid Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Blur*, *Burning Hands*, *Fire Bolt* |\n| 5 | *Fireball* |\n| 7 | *Blight* |\n| 9 | *Wall of Stone* |\n\n##### Polar Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Fog Cloud*, *Hold Person*, *Ray of Frost* |\n| 5 | *Sleet Storm* |\n| 7 | *Ice Storm* |\n| 9 | *Cone of Cold* |\n\n##### Temperate Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Misty Step*, *Shocking Grasp*, *Sleep* |\n| 5 | *Lightning Bolt* |\n| 7 | *Freedom of Movement* |\n| 9 | *Tree Stride* |\n\n##### Tropical Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Acid Splash*, *Ray of Sickness*, *Web* |\n| 5 | *Stinking Cloud* |\n| 7 | *Polymorph* |\n| 9 | *Insect Plague* |",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/circle-of-the-land",
+    "level": 3
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "land_choice",
+        "rechoose_on": "long_rest_finished"
+      }
+    ],
+    "tables": [
+      {
+        "id": "arid_land",
+        "caption": "Arid Land",
+        "columns": [
+          "Druid Level",
+          "Circle Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/blur",
+              "dnd5e/spell/burning-hands",
+              "dnd5e/spell/fire-bolt"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/fireball"
+            ]
+          ],
+          [
+            7,
+            [
+              "dnd5e/spell/blight"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/wall-of-stone"
+            ]
+          ]
+        ]
+      },
+      {
+        "id": "polar_land",
+        "caption": "Polar Land",
+        "columns": [
+          "Druid Level",
+          "Circle Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/fog-cloud",
+              "dnd5e/spell/hold-person",
+              "dnd5e/spell/ray-of-frost"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/sleet-storm"
+            ]
+          ],
+          [
+            7,
+            [
+              "dnd5e/spell/ice-storm"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/cone-of-cold"
+            ]
+          ]
+        ]
+      },
+      {
+        "id": "temperate_land",
+        "caption": "Temperate Land",
+        "columns": [
+          "Druid Level",
+          "Circle Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/misty-step",
+              "dnd5e/spell/shocking-grasp",
+              "dnd5e/spell/sleep"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/lightning-bolt"
+            ]
+          ],
+          [
+            7,
+            [
+              "dnd5e/spell/freedom-of-movement"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/tree-stride"
+            ]
+          ]
+        ]
+      },
+      {
+        "id": "tropical_land",
+        "caption": "Tropical Land",
+        "columns": [
+          "Druid Level",
+          "Circle Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/acid-splash",
+              "dnd5e/spell/ray-of-sickness",
+              "dnd5e/spell/web"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/stinking-cloud"
+            ]
+          ],
+          [
+            7,
+            [
+              "dnd5e/spell/polymorph"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/insect-plague"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "land_type",
+      "choose": 1,
+      "options": [
+        {
+          "id": "arid",
+          "label": "Arid",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/blur",
+                "dnd5e/spell/burning-hands",
+                "dnd5e/spell/fire-bolt"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 3
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/fireball"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 5
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/blight"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 7
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/wall-of-stone"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "polar",
+          "label": "Polar",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/fog-cloud",
+                "dnd5e/spell/hold-person",
+                "dnd5e/spell/ray-of-frost"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 3
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/sleet-storm"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 5
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/ice-storm"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 7
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/cone-of-cold"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "temperate",
+          "label": "Temperate",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/misty-step",
+                "dnd5e/spell/shocking-grasp",
+                "dnd5e/spell/sleep"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 3
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/lightning-bolt"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 5
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/freedom-of-movement"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 7
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/tree-stride"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "tropical",
+          "label": "Tropical",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/acid-splash",
+                "dnd5e/spell/ray-of-sickness",
+                "dnd5e/spell/web"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 3
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/stinking-cloud"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 5
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/polymorph"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 7
+                }
+              }
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/insect-plague"
+              ],
+              "note": "Prepared.",
+              "when": {
+                "pred": "class_level_at_least",
+                "args": {
+                  "class": "druid",
+                  "level": 9
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Arid Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Blur*, *Burning Hands*, *Fire Bolt* |\n| 5 | *Fireball* |\n| 7 | *Blight* |\n| 9 | *Wall of Stone* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/circle-of-the-land-spells-arid-land",
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Polar Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Fog Cloud*, *Hold Person*, *Ray of Frost* |\n| 5 | *Sleet Storm* |\n| 7 | *Ice Storm* |\n| 9 | *Cone of Cold* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/circle-of-the-land-spells-polar-land",
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Temperate Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Misty Step*, *Shocking Grasp*, *Sleep* |\n| 5 | *Lightning Bolt* |\n| 7 | *Freedom of Movement* |\n| 9 | *Tree Stride* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/circle-of-the-land-spells-temperate-land",
+        "/data/tables/2"
+      ]
+    },
+    {
+      "text": "##### Tropical Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Acid Splash*, *Ray of Sickness*, *Web* |\n| 5 | *Stinking Cloud* |\n| 7 | *Polymorph* |\n| 9 | *Insect Plague* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/circle-of-the-land-spells-tropical-land",
+        "/data/tables/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/circle-of-the-land-spells-arid-land",
+    "dnd5e/spell-list/circle-of-the-land-spells-polar-land",
+    "dnd5e/spell-list/circle-of-the-land-spells-temperate-land",
+    "dnd5e/spell-list/circle-of-the-land-spells-tropical-land",
+    "dnd5e/spell/acid-splash",
+    "dnd5e/spell/blight",
+    "dnd5e/spell/blur",
+    "dnd5e/spell/burning-hands",
+    "dnd5e/spell/cone-of-cold",
+    "dnd5e/spell/fire-bolt",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/fog-cloud",
+    "dnd5e/spell/freedom-of-movement",
+    "dnd5e/spell/hold-person",
+    "dnd5e/spell/ice-storm",
+    "dnd5e/spell/insect-plague",
+    "dnd5e/spell/lightning-bolt",
+    "dnd5e/spell/misty-step",
+    "dnd5e/spell/polymorph",
+    "dnd5e/spell/ray-of-frost",
+    "dnd5e/spell/ray-of-sickness",
+    "dnd5e/spell/shocking-grasp",
+    "dnd5e/spell/sleep",
+    "dnd5e/spell/sleet-storm",
+    "dnd5e/spell/stinking-cloud",
+    "dnd5e/spell/tree-stride",
+    "dnd5e/spell/wall-of-stone",
+    "dnd5e/spell/web"
+  ]
+}

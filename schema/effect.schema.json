@@ -268,7 +268,7 @@
           "damage_types": {
             "type": "array",
             "items": {
-              "$ref": "urn:drpg:schema:common#/$defs/identifier"
+              "$ref": "#/$defs/identifier_or_choice"
             }
           },
           "conditions": {
@@ -885,6 +885,10 @@
           "movement_cost": {
             "description": "Movement (in feet) the activation spends.",
             "$ref": "urn:drpg:schema:expression"
+          },
+          "action": {
+            "description": "The specific action taken when cost is 'action' (ref to an action entry, e.g. dnd5e/action/magic for 'As a Magic action').",
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
           }
         }
       }
@@ -943,6 +947,13 @@
                 },
                 "effects": {
                   "$ref": "#/$defs/effects"
+                },
+                "value": {
+                  "description": "Value this option fixes, readable later as {'var': 'chosen.<choice id>'}.",
+                  "type": [
+                    "string",
+                    "number"
+                  ]
                 }
               }
             }
@@ -1189,6 +1200,10 @@
               "default": "on_use"
             }
           }
+        },
+        {
+          "description": "Value fixed by an earlier choice (e.g. {'var': 'chosen.draconic_ancestry'}).",
+          "$ref": "urn:drpg:schema:expression#/$defs/var"
         }
       ]
     },

@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-expertise",
+  "kind": "feature",
+  "name": "Expertise",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 9: Expertise",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 9
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "expertise": true,
+      "choose": 2,
+      "from": [
+        "proficient_skills_without_expertise"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

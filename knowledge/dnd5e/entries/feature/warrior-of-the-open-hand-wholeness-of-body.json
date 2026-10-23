@@ -1,0 +1,109 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warrior-of-the-open-hand-wholeness-of-body",
+  "kind": "feature",
+  "name": "Wholeness of Body",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      52
+    ],
+    "section": "Classes/Monk/Monk Subclass: Warrior of the Open Hand/Level 6: Wholeness of Body",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain the ability to heal yourself. As a Bonus Action, you can roll your Martial Arts die. You regain a number of Hit Points equal to the number rolled plus your Wisdom modifier (minimum of 1 Hit Point regained).\n\nYou can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/warrior-of-the-open-hand",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Wholeness of Body",
+      "cost": "bonus_action",
+      "uses": {
+        "resource": "wholeness_of_body",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "heal",
+          "target": {
+            "kind": "self"
+          },
+          "amount": {
+            "op": "max",
+            "args": [
+              1,
+              {
+                "op": "add",
+                "args": [
+                  {
+                    "table": "dnd5e/class/monk",
+                    "table_id": "monk_features",
+                    "key": {
+                      "var": "class_level.monk"
+                    },
+                    "column": "Martial Arts"
+                  },
+                  {
+                    "var": "ability_mod.wis"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "wholeness_of_body",
+      "max": {
+        "op": "max",
+        "args": [
+          1,
+          {
+            "var": "ability_mod.wis"
+          }
+        ]
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain the ability to heal yourself. As a Bonus Action, you can roll your Martial Arts die. You regain a number of Hit Points equal to the number rolled plus your Wisdom modifier (minimum of 1 Hit Point regained).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/monk"
+  ]
+}

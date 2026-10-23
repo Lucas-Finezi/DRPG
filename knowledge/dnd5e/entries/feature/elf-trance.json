@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/elf-trance",
+  "kind": "feature",
+  "name": "Trance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      85
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Elf",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Trance.*** You don’t need to sleep, and magic can’t put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/elf"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "trance",
+        "long_rest_hours": 4,
+        "conscious": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "need_sleep",
+        "magical_sleep"
+      ],
+      "note": "Immunities: no need to sleep; magic can't cause sleep."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Trance.*** You don’t need to sleep, and magic can’t put you to sleep.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/oath-of-devotion-oath-of-devotion-spells",
+  "kind": "feature",
+  "name": "Oath of Devotion Spells",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      56
+    ],
+    "section": "Classes/Paladin/Paladin Subclass: Oath of Devotion/Level 3: Oath of Devotion Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the Oath of Devotion Spells table, you thereafter always have the listed spells prepared.\n\n##### Oath of Devotion Spells\n\n| **Paladin Level** | **Spells** |\n| 3 | *Protection from Evil and Good*, *Shield of Faith* |\n| 5 | *Aid*, *Zone of Truth* |\n| 9 | *Beacon of Hope*, *Dispel Magic* |\n| 13 | *Freedom of Movement*, *Guardian of Faith* |\n| 17 | *Commune*, *Flame Strike* |",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/oath-of-devotion",
+    "level": 3
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "oath_of_devotion_spells",
+        "caption": "Oath of Devotion Spells",
+        "columns": [
+          "Paladin Level",
+          "Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/protection-from-evil-and-good",
+              "dnd5e/spell/shield-of-faith"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/aid",
+              "dnd5e/spell/zone-of-truth"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/beacon-of-hope",
+              "dnd5e/spell/dispel-magic"
+            ]
+          ],
+          [
+            13,
+            [
+              "dnd5e/spell/freedom-of-movement",
+              "dnd5e/spell/guardian-of-faith"
+            ]
+          ],
+          [
+            17,
+            [
+              "dnd5e/spell/commune",
+              "dnd5e/spell/flame-strike"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/protection-from-evil-and-good",
+        "dnd5e/spell/shield-of-faith"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "class_level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 3
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/aid",
+        "dnd5e/spell/zone-of-truth"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "class_level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 5
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/beacon-of-hope",
+        "dnd5e/spell/dispel-magic"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "class_level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 9
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/freedom-of-movement",
+        "dnd5e/spell/guardian-of-faith"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "class_level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 13
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/commune",
+        "dnd5e/spell/flame-strike"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "class_level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 17
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the Oath of Devotion Spells table, you thereafter always have the listed spells prepared.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "##### Oath of Devotion Spells\n\n| **Paladin Level** | **Spells** |\n| 3 | *Protection from Evil and Good*, *Shield of Faith* |\n| 5 | *Aid*, *Zone of Truth* |\n| 9 | *Beacon of Hope*, *Dispel Magic* |\n| 13 | *Freedom of Movement*, *Guardian of Faith* |\n| 17 | *Commune*, *Flame Strike* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/oath-of-devotion-spells",
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/oath-of-devotion-spells",
+    "dnd5e/spell/aid",
+    "dnd5e/spell/beacon-of-hope",
+    "dnd5e/spell/commune",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/flame-strike",
+    "dnd5e/spell/freedom-of-movement",
+    "dnd5e/spell/guardian-of-faith",
+    "dnd5e/spell/protection-from-evil-and-good",
+    "dnd5e/spell/shield-of-faith",
+    "dnd5e/spell/zone-of-truth"
+  ]
+}

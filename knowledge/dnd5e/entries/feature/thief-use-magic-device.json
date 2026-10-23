@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/thief-use-magic-device",
+  "kind": "feature",
+  "name": "Use Magic Device",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64
+    ],
+    "section": "Classes/Rogue/Rogue Subclass: Thief/Level 13: Use Magic Device",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You’ve learned how to maximize use of magic items, granting you the following benefits.\n\n***Attunement.*** You can attune to up to four magic items at once.\n\n***Charges.*** Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.\n\n***Scrolls.*** You can use any *Spell Scroll*, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell’s level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/thief",
+    "level": 13
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "charges",
+        "on": "expends_item_charges",
+        "roll": "1d6",
+        "on_6": "no_charges_expended"
+      },
+      {
+        "id": "scrolls",
+        "item": "dnd5e/magic-item/spell-scroll",
+        "ability": "int",
+        "reliable_levels": [
+          0,
+          1
+        ],
+        "higher_level_check": {
+          "ability": "int",
+          "skill": "arcana",
+          "dc": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "spell_level"
+              }
+            ]
+          },
+          "on_fail": "scroll_disintegrates"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "max_attuned_items",
+      "mode": "max",
+      "value": 4
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You’ve learned how to maximize use of magic items, granting you the following benefits.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Attunement.*** You can attune to up to four magic items at once.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Charges.*** Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Scrolls.*** You can use any *Spell Scroll*, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell’s level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

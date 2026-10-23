@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/life-domain-preserve-life",
+  "kind": "feature",
+  "name": "Preserve Life",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      40
+    ],
+    "section": "Classes/Cleric/Cleric Subclass: Life Domain/Level 3: Preserve Life",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to evoke healing energy that can restore a number of Hit Points equal to five times your Cleric level. Choose Bloodied creatures within 30 feet of yourself (which can include you), and divide those Hit Points among them. This feature can restore a creature to no more than half its Hit Point maximum.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/life-domain",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Preserve Life",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "channel_divinity",
+        "amount": 1
+      },
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "holy_symbol"
+        }
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "op": "mul",
+            "args": [
+              5,
+              {
+                "var": "class_level.cleric"
+              }
+            ]
+          },
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "predicate": {
+                "all": [
+                  {
+                    "pred": "bloodied"
+                  },
+                  {
+                    "pred": "chosen_by_source"
+                  }
+                ]
+              }
+            }
+          },
+          "note": "Divided among the chosen creatures (can include you); no more than half each one's Hit Point maximum."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to evoke healing energy that can restore a number of Hit Points equal to five times your Cleric level. Choose Bloodied creatures within 30 feet of yourself (which can include you), and divide those Hit Points among them. This feature can restore a creature to no more than half its Hit Point maximum.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

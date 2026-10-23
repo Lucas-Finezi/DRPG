@@ -102,6 +102,8 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
         elif isinstance(value, dict):
             for v in value.get("choose_from", []):
                 chk(registry, v, path)
+            if "var" in value:
+                chk("variables", value["var"], path)
 
     def rec(n, path):
         if isinstance(n, list):
@@ -135,7 +137,7 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
                 chk("rolls", r, path)
         elif op == "defense":
             for d in n.get("damage_types", []):
-                chk("damage_types", d, path)
+                ident_or_choice(d, "damage_types", path)
         elif op in ("save", "check"):
             ident_or_choice(n.get("ability"), "abilities", path)
             if "skill" in n:
@@ -243,6 +245,45 @@ def check_entry(entry, where, vocab):
     return errors
 
 
+def check_lookups(docs):
+    """Every table lookup names a table (by id) and a column that exist in the referenced entry."""
+    errors = []
+
+    def tables(n, out):
+        if isinstance(n, dict):
+            if "id" in n and isinstance(n.get("columns"), list):
+                out[n["id"]] = n["columns"]
+            for v in n.values():
+                tables(v, out)
+        elif isinstance(n, list):
+            for v in n:
+                tables(v, out)
+        return out
+
+    def walk(n, where):
+        if isinstance(n, dict):
+            if "table" in n and "column" in n and "key" in n:
+                target = docs.get(n["table"])
+                if target is None:
+                    errors.append(f"{where}: lookup table entry '{n['table']}' not found")
+                else:
+                    cols = tables(target[0].get("data", {}), {})
+                    tid = n.get("table_id")
+                    if tid is not None and tid not in cols:
+                        errors.append(f"{where}: table '{tid}' not in {n['table']}")
+                    elif tid is not None and n["column"] not in cols[tid]:
+                        errors.append(f"{where}: column '{n['column']}' not in table '{tid}'")
+            for v in n.values():
+                walk(v, where)
+        elif isinstance(n, list):
+            for v in n:
+                walk(v, where)
+
+    for doc, rel in docs.values():
+        walk({k: v for k, v in doc.items() if k in ("effects", "data", "master_decisions")}, rel)
+    return errors
+
+
 # ---------------------------------------------------------------- main
 
 def main(args):
@@ -289,8 +330,12 @@ def main(args):
         validate_file(p, name)
         counts["examples"] += 1
 
+    docs = {}
     for p in sorted(KNOWLEDGE.glob("**/entries/**/*.json")) if KNOWLEDGE.exists() else []:
-        validate_file(p, "catalog_entry")
+        doc = validate_file(p, "catalog_entry")
+        if isinstance(doc, dict) and "ref" in doc:
+            docs[doc["ref"]] = (doc, str(p.relative_to(ROOT)))
+    errors.extend(check_lookups(docs))
 
     for e in errors:
         print("ERROR", e)

@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-feral-senses",
+  "kind": "feature",
+  "name": "Feral Senses",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 18: Feral Senses",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your connection to the forces of nature grants you Blindsight with a range of 30 feet.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 18
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "blindsight",
+      "range_feet": 30
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your connection to the forces of nature grants you Blindsight with a range of 30 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

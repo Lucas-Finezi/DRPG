@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/barbarian-improved-brutal-strike-level-13",
+  "kind": "feature",
+  "name": "Improved Brutal Strike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Class Features/Level 13: Improved Brutal Strike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have honed new ways to attack furiously. The following effects are now among your Brutal Strike options.\n\n***Staggering Blow.*** The target has Disadvantage on the next saving throw it makes, and it can’t make Opportunity Attacks until the start of your next turn.\n\n***Sundering Blow.*** Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus to the roll. An attack roll can gain only one Sundering Blow bonus.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/barbarian",
+    "level": 13
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "new_options",
+        "adds_options_to": "dnd5e/feature/barbarian-brutal-strike"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "target": {
+        "kind": "inherit"
+      },
+      "note": "The target's next saving throw."
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "make_opportunity_attacks"
+      ],
+      "target": {
+        "kind": "inherit"
+      },
+      "duration": {
+        "kind": "until_event",
+        "until": {
+          "event": "turn_start",
+          "whose": "source"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 5,
+      "target": {
+        "kind": "inherit"
+      },
+      "note": "Next attack roll by another creature against the target before the start of your next turn; only one Sundering Blow bonus per roll."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have honed new ways to attack furiously. The following effects are now among your Brutal Strike options.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Staggering Blow.*** The target has Disadvantage on the next saving throw it makes, and it can’t make Opportunity Attacks until the start of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Sundering Blow.*** Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus to the roll. An attack roll can gain only one Sundering Blow bonus.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/druid-wild-companion",
+  "kind": "feature",
+  "name": "Wild Companion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      43
+    ],
+    "section": "Classes/Druid/Druid Class Features/Level 2: Wild Companion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can summon a nature spirit that assumes an animal form to aid you. As a Magic action, you can expend a spell slot or a use of Wild Shape to cast the *Find Familiar* spell without Material components.\n\nWhen you cast the spell in this way, the familiar is Fey and disappears when you finish a Long Rest.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/druid",
+    "level": 2
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "fey_familiar",
+        "creature_type": "fey",
+        "disappears_on": "long_rest_finished"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "wild_companion_cost",
+      "choose": 1,
+      "options": [
+        {
+          "id": "spell_slot",
+          "label": "Expend a spell slot",
+          "effects": [
+            {
+              "op": "activation",
+              "cost": "action",
+              "action": "dnd5e/action/magic",
+              "uses": {
+                "resource": "spell_slot",
+                "amount": 1
+              },
+              "then": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/find-familiar",
+                  "components": [
+                    "V",
+                    "S"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wild_shape",
+          "label": "Expend a use of Wild Shape",
+          "effects": [
+            {
+              "op": "activation",
+              "cost": "action",
+              "action": "dnd5e/action/magic",
+              "uses": {
+                "resource": "wild_shape",
+                "amount": 1
+              },
+              "then": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/find-familiar",
+                  "slot": "none",
+                  "components": [
+                    "V",
+                    "S"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can summon a nature spirit that assumes an animal form to aid you. As a Magic action, you can expend a spell slot or a use of Wild Shape to cast the *Find Familiar* spell without Material components.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "When you cast the spell in this way, the familiar is Fey and disappears when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/find-familiar"
+  ]
+}

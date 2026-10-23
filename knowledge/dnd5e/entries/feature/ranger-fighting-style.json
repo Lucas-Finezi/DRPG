@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-fighting-style",
+  "kind": "feature",
+  "name": "Fighting Style",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 2: Fighting Style",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain a Fighting Style feat of your choice (see “Feats”). Instead of choosing one of those feats, you can choose the option below.\n\n***Druidic Warrior.*** You learn two Druid cantrips of your choice (see the Druid class’s section for a list of Druid spells). *Guidance* and *Starry Wisp* are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 2
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "druidic_warrior",
+        "cantrips": 2,
+        "from": "dnd5e/spell-list/druid",
+        "recommended": [
+          "dnd5e/spell/guidance",
+          "dnd5e/spell/starry-wisp"
+        ],
+        "count_as": "dnd5e/class/ranger",
+        "ability": "wis",
+        "replace": {
+          "on": "level_gained",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "fighting_style",
+      "choose": 1,
+      "options": [
+        {
+          "id": "feat",
+          "label": "Fighting Style feat",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/feat/archery",
+                "dnd5e/feat/defense",
+                "dnd5e/feat/great-weapon-fighting",
+                "dnd5e/feat/two-weapon-fighting"
+              ],
+              "choose": 1
+            }
+          ]
+        },
+        {
+          "id": "druidic_warrior",
+          "label": "Druidic Warrior",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell-list/druid"
+              ],
+              "choose": 2,
+              "note": "Two Druid cantrips; Guidance and Starry Wisp are recommended."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain a Fighting Style feat of your choice (see “Feats”). Instead of choosing one of those feats, you can choose the option below.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Druidic Warrior.*** You learn two Druid cantrips of your choice (see the Druid class’s section for a list of Druid spells). *Guidance* and *Starry Wisp* are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/archery",
+    "dnd5e/feat/defense",
+    "dnd5e/feat/great-weapon-fighting",
+    "dnd5e/feat/two-weapon-fighting",
+    "dnd5e/spell-list/druid",
+    "dnd5e/spell/guidance",
+    "dnd5e/spell/starry-wisp"
+  ]
+}

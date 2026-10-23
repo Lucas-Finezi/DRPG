@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/monk-heightened-focus",
+  "kind": "feature",
+  "name": "Heightened Focus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      51,
+      52
+    ],
+    "section": "Classes/Monk/Monk Class Features/Level 10: Heightened Focus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your Flurry of Blows, Patient Defense, and Step of the Wind gain the following benefits.\n\n***Flurry of Blows.*** You can expend 1 Focus Point to use Flurry of Blows and make three Unarmed Strikes with it instead of two.\n\n***Patient Defense.*** When you expend a Focus Point to use Patient Defense, you gain a number of Temporary Hit Points equal to two rolls of your Martial Arts die.\n\n***Step of the Wind.*** When you expend a Focus Point to use Step of the Wind, you can choose a willing creature within 5 feet of yourself that is Large or smaller. You move the creature with you until the end of your turn. The creature’s movement doesn’t provoke Opportunity Attacks.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/monk",
+    "level": 10
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "improves",
+        "features": [
+          "flurry_of_blows",
+          "patient_defense",
+          "step_of_the_wind"
+        ]
+      },
+      {
+        "id": "flurry_of_blows",
+        "unarmed_strikes": 3
+      },
+      {
+        "id": "step_of_the_wind",
+        "carry_willing_creature": {
+          "within_feet": 5,
+          "max_size": "large",
+          "until": "end_of_turn",
+          "provokes_opportunity_attacks": false
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "uses_feature.monk-monks-focus.patient_defense"
+      },
+      "condition": {
+        "pred": "spent_focus_point"
+      },
+      "then": [
+        {
+          "op": "temp_hp",
+          "amount": {
+            "op": "add",
+            "args": [
+              {
+                "table": "dnd5e/class/monk",
+                "table_id": "monk_features",
+                "key": {
+                  "var": "class_level.monk"
+                },
+                "column": "Martial Arts"
+              },
+              {
+                "table": "dnd5e/class/monk",
+                "table_id": "monk_features",
+                "key": {
+                  "var": "class_level.monk"
+                },
+                "column": "Martial Arts"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your Flurry of Blows, Patient Defense, and Step of the Wind gain the following benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Flurry of Blows.*** You can expend 1 Focus Point to use Flurry of Blows and make three Unarmed Strikes with it instead of two.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Patient Defense.*** When you expend a Focus Point to use Patient Defense, you gain a number of Temporary Hit Points equal to two rolls of your Martial Arts die.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Step of the Wind.*** When you expend a Focus Point to use Step of the Wind, you can choose a willing creature within 5 feet of yourself that is Large or smaller. You move the creature with you until the end of your turn. The creature’s movement doesn’t provoke Opportunity Attacks.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/monk"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/paladin-fighting-style",
+  "kind": "feature",
+  "name": "Fighting Style",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      54
+    ],
+    "section": "Classes/Paladin/Paladin Class Features/Level 2: Fighting Style",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain a Fighting Style feat of your choice (see “Feats” for feats). Instead of choosing one of those feats, you can choose the option below.\n\n***Blessed Warrior.*** You learn two Cleric cantrips of your choice (see the Cleric class’s section for a list of Cleric spells). *Guidance* and *Sacred Flame* are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/paladin",
+    "level": 2
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "blessed_warrior",
+        "cantrips": 2,
+        "from": "dnd5e/spell-list/cleric",
+        "recommended": [
+          "dnd5e/spell/guidance",
+          "dnd5e/spell/sacred-flame"
+        ],
+        "count_as": "dnd5e/class/paladin",
+        "ability": "cha",
+        "replace": {
+          "on": "level_gained",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "fighting_style",
+      "choose": 1,
+      "options": [
+        {
+          "id": "feat",
+          "label": "Fighting Style feat",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/feat/archery",
+                "dnd5e/feat/defense",
+                "dnd5e/feat/great-weapon-fighting",
+                "dnd5e/feat/two-weapon-fighting"
+              ],
+              "choose": 1
+            }
+          ]
+        },
+        {
+          "id": "blessed_warrior",
+          "label": "Blessed Warrior",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell-list/cleric"
+              ],
+              "choose": 2,
+              "note": "Two Cleric cantrips; Guidance and Sacred Flame are recommended."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain a Fighting Style feat of your choice (see “Feats” for feats). Instead of choosing one of those feats, you can choose the option below.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Blessed Warrior.*** You learn two Cleric cantrips of your choice (see the Cleric class’s section for a list of Cleric spells). *Guidance* and *Sacred Flame* are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/archery",
+    "dnd5e/feat/defense",
+    "dnd5e/feat/great-weapon-fighting",
+    "dnd5e/feat/two-weapon-fighting",
+    "dnd5e/spell-list/cleric",
+    "dnd5e/spell/guidance",
+    "dnd5e/spell/sacred-flame"
+  ]
+}

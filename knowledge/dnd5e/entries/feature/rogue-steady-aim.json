@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-steady-aim",
+  "kind": "feature",
+  "name": "Steady Aim",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      62
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 3: Steady Aim",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven’t moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.\n\n**Proficiency**\n\n| **Level** | **Bonus** | **Class Features** | **Sneak Attack** |\n| 1 | +2 | Expertise, Sneak Attack, Thieves’ Cant, Weapon Mastery | 1d6 |\n| 2 | +2 | Cunning Action | 1d6 |\n| 3 | +2 | Rogue Subclass, Steady Aim | 2d6 |\n| 4 | +2 | Ability Score Improvement | 2d6 |\n| 5 | +3 | Cunning Strike, Uncanny Dodge | 3d6 |\n| 6 | +3 | Expertise | 3d6 |\n| 7 | +3 | Evasion, Reliable Talent | 4d6 |\n| 8 | +3 | Ability Score Improvement | 4d6 |\n| 9 | +4 | Subclass feature | 5d6 |\n| 10 | +4 | Ability Score Improvement | 5d6 |\n| 11 | +4 | Improved Cunning Strike | 6d6 |\n| 12 | +4 | Ability Score Improvement | 6d6 |\n| 13 | +5 | Subclass feature | 7d6 |\n| 14 | +5 | Devious Strikes | 7d6 |\n| 15 | +5 | Slippery Mind | 8d6 |\n| 16 | +5 | Ability Score Improvement | 8d6 |\n| 17 | +6 | Subclass feature | 9d6 |\n| 18 | +6 | Elusive | 9d6 |\n| 19 | +6 | Epic Boon | 10d6 |\n| 20 | +6 | Stroke of Luck | 10d6 |",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Steady Aim",
+      "cost": "bonus_action",
+      "requires": {
+        "not": {
+          "pred": "moved_this_turn"
+        }
+      },
+      "then": [
+        {
+          "op": "roll_mode",
+          "mode": "advantage",
+          "rolls": [
+            "attack_roll"
+          ],
+          "note": "Next attack roll this turn.",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "self"
+            }
+          }
+        },
+        {
+          "op": "speed",
+          "movement": "walk",
+          "mode": "set",
+          "value": 0,
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "self"
+            }
+          },
+          "note": "Your Speed is 0."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven’t moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.\n\n**Proficiency**\n\n| **Level** | **Bonus** | **Class Features** | **Sneak Attack** |\n| 1 | +2 | Expertise, Sneak Attack, Thieves’ Cant, Weapon Mastery | 1d6 |\n| 2 | +2 | Cunning Action | 1d6 |\n| 3 | +2 | Rogue Subclass, Steady Aim | 2d6 |\n| 4 | +2 | Ability Score Improvement | 2d6 |\n| 5 | +3 | Cunning Strike, Uncanny Dodge | 3d6 |\n| 6 | +3 | Expertise | 3d6 |\n| 7 | +3 | Evasion, Reliable Talent | 4d6 |\n| 8 | +3 | Ability Score Improvement | 4d6 |\n| 9 | +4 | Subclass feature | 5d6 |\n| 10 | +4 | Ability Score Improvement | 5d6 |\n| 11 | +4 | Improved Cunning Strike | 6d6 |\n| 12 | +4 | Ability Score Improvement | 6d6 |\n| 13 | +5 | Subclass feature | 7d6 |\n| 14 | +5 | Devious Strikes | 7d6 |\n| 15 | +5 | Slippery Mind | 8d6 |\n| 16 | +5 | Ability Score Improvement | 8d6 |\n| 17 | +6 | Subclass feature | 9d6 |\n| 18 | +6 | Elusive | 9d6 |\n| 19 | +6 | Epic Boon | 10d6 |\n| 20 | +6 | Stroke of Luck | 10d6 |",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

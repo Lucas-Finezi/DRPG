@@ -1,0 +1,55 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/champion-superior-critical",
+  "kind": "feature",
+  "name": "Superior Critical",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      49
+    ],
+    "section": "Classes/Fighter/Fighter Subclass: Champion/Level 15: Superior Critical",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18–20 on the d20.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/champion",
+    "level": 15
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "critical_hit_min_d20",
+      "mode": "min",
+      "value": 18,
+      "when": {
+        "any": [
+          {
+            "pred": "attack_uses_weapon"
+          },
+          {
+            "pred": "attack_is_unarmed_strike"
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18–20 on the d20.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

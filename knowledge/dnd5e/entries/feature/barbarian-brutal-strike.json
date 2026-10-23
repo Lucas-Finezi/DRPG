@@ -1,0 +1,157 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/barbarian-brutal-strike",
+  "kind": "feature",
+  "name": "Brutal Strike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      29,
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Class Features/Level 9: Brutal Strike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "If you use Reckless Attack, you can forgo any Advantage on one Strength-based attack roll of your choice on your turn. The chosen attack roll mustn’t have Disadvantage. If the chosen attack roll hits, the target takes an extra 1d10 damage of the same type dealt by the weapon or Unarmed Strike, and you can cause one Brutal Strike effect of your choice. You have the following effect options.\n\n***Forceful Blow.*** The target is pushed 15 feet straight away from you. You can then move up to half your Speed straight toward the target without provoking Opportunity Attacks.\n\n***Hamstring Blow.*** The target’s Speed is reduced by 15 feet until the start of your next turn. A target can be affected by only one Hamstring Blow at a time—the most recent one.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/barbarian",
+    "level": 9
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "attack_roll_made"
+      },
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "effect_active",
+            "args": {
+              "effect": "barbarian-reckless-attack"
+            }
+          },
+          {
+            "pred": "attack_uses_ability",
+            "args": {
+              "ability": "str"
+            }
+          }
+        ]
+      },
+      "note": "Forgo Advantage on one Strength-based attack roll without Disadvantage, once per turn.",
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "1d10",
+              "damage_type": {
+                "var": "chosen.weapon_damage_type"
+              },
+              "note": "Same type as the weapon or Unarmed Strike."
+            },
+            {
+              "op": "choice",
+              "id": "brutal_strike_effect",
+              "choose": 1,
+              "options": [
+                {
+                  "id": "forceful_blow",
+                  "label": "Forceful Blow",
+                  "effects": [
+                    {
+                      "op": "move",
+                      "mode": "push",
+                      "distance_feet": 15,
+                      "target": {
+                        "kind": "inherit"
+                      }
+                    },
+                    {
+                      "op": "move",
+                      "mode": "move",
+                      "distance_feet": {
+                        "op": "div",
+                        "args": [
+                          {
+                            "var": "speed.walk"
+                          },
+                          2
+                        ]
+                      },
+                      "provokes_opportunity_attacks": false,
+                      "note": "Straight toward the target (optional)."
+                    }
+                  ]
+                },
+                {
+                  "id": "hamstring_blow",
+                  "label": "Hamstring Blow",
+                  "effects": [
+                    {
+                      "op": "speed",
+                      "movement": "walk",
+                      "mode": "add",
+                      "value": -15,
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "duration": {
+                        "kind": "until_event",
+                        "until": {
+                          "event": "turn_start",
+                          "whose": "source"
+                        }
+                      },
+                      "note": "Only one Hamstring Blow at a time (the most recent)."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you use Reckless Attack, you can forgo any Advantage on one Strength-based attack roll of your choice on your turn. The chosen attack roll mustn’t have Disadvantage. If the chosen attack roll hits, the target takes an extra 1d10 damage of the same type dealt by the weapon or Unarmed Strike, and you can cause one Brutal Strike effect of your choice. You have the following effect options.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Forceful Blow.*** The target is pushed 15 feet straight away from you. You can then move up to half your Speed straight toward the target without provoking Opportunity Attacks.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_hit/1/options/0"
+      ]
+    },
+    {
+      "text": "***Hamstring Blow.*** The target’s Speed is reduced by 15 feet until the start of your next turn. A target can be affected by only one Hamstring Blow at a time—the most recent one.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_hit/1/options/1"
+      ]
+    }
+  ]
+}

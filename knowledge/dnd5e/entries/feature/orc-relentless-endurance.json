@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/orc-relentless-endurance",
+  "kind": "feature",
+  "name": "Relentless Endurance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Orc",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Relentless Endurance.*** When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can’t do so again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/orc"
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "relentless_endurance",
+      "max": 1,
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reduced_to_0_hp_not_killed"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "spend",
+          "resource": "relentless_endurance",
+          "amount": 1
+        },
+        {
+          "op": "modifier",
+          "stat": "hp",
+          "mode": "set",
+          "value": 1
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Relentless Endurance.*** When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can’t do so again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

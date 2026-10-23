@@ -1,0 +1,188 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/oath-of-devotion-holy-nimbus",
+  "kind": "feature",
+  "name": "Holy Nimbus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      57
+    ],
+    "section": "Classes/Paladin/Paladin Subclass: Oath of Devotion/Level 20: Holy Nimbus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can’t use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).\n\n***Holy Ward.*** You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.\n\n***Radiant Damage.*** Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.\n\n***Sunlight.*** The aura is filled with Bright Light that is sunlight.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/oath-of-devotion",
+    "level": 20
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "sunlight",
+        "aura_light": "bright",
+        "is_sunlight": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Holy Nimbus",
+      "cost": "bonus_action",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/oath-of-devotion-holy-nimbus",
+          "duration": {
+            "kind": "minutes",
+            "amount": 10
+          },
+          "note": "Benefits below; end at will (no action)."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "Restore Holy Nimbus",
+      "cost": "none",
+      "uses": {
+        "resource": "spell_slot",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/oath-of-devotion-holy-nimbus",
+          "note": "Regain the use; requires a level 5 spell slot."
+        }
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "effect_active",
+            "args": {
+              "effect": "oath-of-devotion-holy-nimbus"
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "forced_by_creature_type",
+                "args": {
+                  "type": "fiend"
+                }
+              },
+              {
+                "pred": "forced_by_creature_type",
+                "args": {
+                  "type": "undead"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "target"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "effect_active",
+            "args": {
+              "effect": "oath-of-devotion-holy-nimbus"
+            }
+          },
+          {
+            "pred": "is_enemy"
+          },
+          {
+            "pred": "in_aura",
+            "args": {
+              "aura": "paladin-aura-of-protection"
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "damage",
+          "damage_type": "radiant",
+          "target": {
+            "kind": "inherit"
+          },
+          "amount": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.cha"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Bonus Action, you can imbue your Aura of Protection with holy power, granting the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can’t use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Holy Ward.*** You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Radiant Damage.*** Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Sunlight.*** The aura is filled with Bright Light that is sunlight.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/oath-of-devotion-holy-nimbus"
+  ]
+}

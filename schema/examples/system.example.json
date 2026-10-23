@@ -742,6 +742,54 @@
           104
         ],
         "lot": "L09"
+      },
+      {
+        "id": "uses_since_rest",
+        "description": "Times a feature was used since the last Short or Long Rest (param).",
+        "params": [
+          "feature"
+        ],
+        "type": "number",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolled",
+        "description": "Result of a die rolled by the effect (param: die name, e.g. bardic_inspiration_die).",
+        "params": [
+          "die"
+        ],
+        "type": "number",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "resource",
+        "description": "Current (unexpended) uses of a resource of the creature (param: resource id).",
+        "params": [
+          "resource"
+        ],
+        "type": "number",
+        "pages": [
+          33
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "chosen",
+        "description": "Value fixed by an earlier choice of the same entry (param: the choice id).",
+        "params": [
+          "choice"
+        ],
+        "type": "identifier",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
       }
     ],
     "stats": [
@@ -894,6 +942,220 @@
           16
         ],
         "lot": "L04"
+      },
+      {
+        "id": "base_ac",
+        "description": "Base Armor Class calculation (one alternative may be chosen).",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attacks_per_attack_action",
+        "description": "Number of attacks when taking the Attack action.",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "weapon_mastery_kinds",
+        "description": "Kinds of weapons whose mastery property the creature can use.",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "ability_score_max",
+        "description": "Maximum of an ability score (param).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "ability_score",
+        "description": "An ability score (param).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "triggering_roll",
+        "description": "The roll that caused the trigger.",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cantrips_known",
+        "description": "Number of cantrips the creature knows from a feature.",
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "creature_type",
+        "description": "The creature's type.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hit_point_dice",
+        "description": "The creature's Hit Point Dice.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "class_features",
+        "description": "The creature's class features.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "languages",
+        "description": "The languages the creature knows.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "feats",
+        "description": "The creature's feats.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "skill_proficiencies",
+        "description": "The creature's skill proficiencies.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "saving_throw_proficiencies",
+        "description": "The creature's saving throw proficiencies.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "proficiency_bonus",
+        "description": "The creature's Proficiency Bonus.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "actions_this_turn",
+        "description": "Number of actions the creature can take this turn.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "critical_hit_min_d20",
+        "description": "Lowest d20 roll that scores a Critical Hit (default 20).",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "death_save_natural_20_min",
+        "description": "Lowest Death Saving Throw roll that counts as a 20.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "weapon_damage_die",
+        "description": "Damage die used for the weapon or Unarmed Strike.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_ability",
+        "description": "Ability modifier used for attack and damage rolls.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "unarmed_strike_save_dc_ability",
+        "description": "Ability modifier used for the save DC of Unarmed Strike's Grapple or Shove.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "jump_distance",
+        "description": "The creature's jump distance.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "evasion",
+        "description": "Evasion: on a Dexterity save for half damage, no damage on a success and half on a failure.",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "size",
+        "description": "The creature's size category.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "size_for_carrying_capacity",
+        "description": "Size used to determine carrying capacity.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hp_max_per_level",
+        "description": "Hit Point maximum increase per level.",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
       }
     ],
     "rolls": [
@@ -964,6 +1226,14 @@
           183
         ],
         "lot": "L05"
+      },
+      {
+        "id": "death_saving_throw",
+        "description": "A Death Saving Throw.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
       }
     ],
     "events": [
@@ -1203,6 +1473,208 @@
           179
         ],
         "lot": "L09"
+      },
+      {
+        "id": "takes_attack_action",
+        "description": "The creature takes the Attack action on its turn.",
+        "type": "event",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "drops_to_0_hp_not_killed",
+        "description": "The creature drops to 0 Hit Points and doesn't die outright.",
+        "type": "event",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "damaged_by_creature_within_feet",
+        "description": "The creature takes damage from a creature within 'feet'.",
+        "params": [
+          "feet"
+        ],
+        "type": "event",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "enters_effect",
+        "description": "The creature activates an effect (param: entry slug).",
+        "params": [
+          "effect"
+        ],
+        "type": "event",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_d20_test",
+        "description": "The creature fails a D20 Test.",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_saving_throw",
+        "description": "A creature fails a saving throw.",
+        "pages": [
+          33
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_roll",
+        "description": "The creature makes a roll and fails.",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "creature_roll_made",
+        "description": "A creature makes a roll (damage roll, ability check, attack roll...).",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "uses_feature",
+        "description": "The creature uses a feature (param: feature slug; optional option id).",
+        "params": [
+          "feature",
+          "option"
+        ],
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_damage_with_spell",
+        "description": "The creature casts a spell and deals damage to a creature with it.",
+        "pages": [
+          38
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_restores_hp",
+        "description": "A spell the creature casts restores Hit Points to one or more creatures.",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_ability_check",
+        "description": "The creature fails an ability check.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "misses_with_attack_roll",
+        "description": "The creature makes an attack roll against a creature and misses.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "scores_critical_hit",
+        "description": "The creature scores a Critical Hit.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "falls",
+        "description": "The creature falls.",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "bonus_action_taken",
+        "description": "The creature takes a Bonus Action.",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "condition_gained",
+        "description": "The creature gains a condition (param: condition slug).",
+        "params": [
+          "condition"
+        ],
+        "type": "event",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_action_attack",
+        "description": "One of the attacks of the creature's Attack action on its turn.",
+        "type": "event",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hits_with_attack_roll",
+        "description": "The creature hits a target with an attack roll and deals damage to it.",
+        "type": "event",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolls_natural_1",
+        "description": "The creature rolls a 1 on the d20 of a D20 Test.",
+        "type": "event",
+        "pages": [
+          86
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "reduced_to_0_hp_not_killed",
+        "description": "The creature is reduced to 0 Hit Points but not killed outright.",
+        "type": "event",
+        "pages": [
+          86
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "damaged_by_creature_within",
+        "description": "The creature takes damage from a creature within 'feet'.",
+        "params": [
+          "feet"
+        ],
+        "type": "event",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
       }
     ],
     "predicates": [
@@ -1657,6 +2129,430 @@
           105
         ],
         "lot": "L09"
+      },
+      {
+        "id": "effect_active",
+        "description": "An effect of the creature (param: entry slug, e.g. barbarian-rage) is active.",
+        "params": [
+          "effect"
+        ],
+        "type": "predicate",
+        "pages": [
+          28
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "wearing_armor_any",
+        "description": "The creature wears any armor.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "using_shield",
+        "description": "The creature uses a Shield.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_uses_ability",
+        "description": "The attack uses the ability (param).",
+        "params": [
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          28
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "first_attack_this_turn",
+        "description": "It is the creature's first attack roll on its turn.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "own_turn",
+        "description": "It is the creature's turn.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "chosen_by_source",
+        "description": "The creature is one the source chose.",
+        "type": "predicate",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "can_hear_source",
+        "description": "The creature can hear the source.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "holds_bardic_inspiration_die",
+        "description": "The creature has an unexpended Bardic Inspiration die.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_uses_unproficient_skill",
+        "description": "The ability check uses a skill the creature lacks proficiency in.",
+        "type": "predicate",
+        "pages": [
+          32
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_adds_proficiency_bonus",
+        "description": "The check already uses the Proficiency Bonus.",
+        "type": "predicate",
+        "pages": [
+          32
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "roll_is",
+        "description": "The triggering roll is of this kind (param: roll).",
+        "params": [
+          "roll"
+        ],
+        "type": "predicate",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "roll_succeeded",
+        "description": "The roll (param) succeeds.",
+        "params": [
+          "roll"
+        ],
+        "type": "predicate",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_uses_skill",
+        "description": "The ability check uses this skill (param).",
+        "params": [
+          "skill"
+        ],
+        "type": "predicate",
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "holds_item",
+        "description": "The creature holds or presents an item of this kind (param).",
+        "params": [
+          "item"
+        ],
+        "type": "predicate",
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_uses_weapon",
+        "description": "The attack roll is made using a weapon.",
+        "type": "predicate",
+        "pages": [
+          38
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cantrip_of_class",
+        "description": "The spell is a cantrip of this class (param) for the creature.",
+        "params": [
+          "class"
+        ],
+        "type": "predicate",
+        "pages": [
+          38
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_cast_with_slot",
+        "description": "The spell was cast with a spell slot.",
+        "type": "predicate",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "heals_other_creature",
+        "description": "The spell restores Hit Points to a creature other than the caster.",
+        "type": "predicate",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "class_level_at_least",
+        "description": "The creature's level in a class is at least N (params: class, level).",
+        "params": [
+          "class",
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "known_wild_shape_form",
+        "description": "The Beast form is one the Druid has learned for Wild Shape.",
+        "type": "predicate",
+        "pages": [
+          42
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "resource_empty",
+        "description": "The creature has no uses of this resource left (param).",
+        "params": [
+          "resource"
+        ],
+        "type": "predicate",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "wild_shape_form_attack",
+        "description": "The attack is a Beast form's attack made in Wild Shape.",
+        "type": "predicate",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "resource_available",
+        "description": "The creature has at least one unexpended use of this resource (param).",
+        "params": [
+          "resource"
+        ],
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_bonus_action",
+        "description": "The triggering feature was activated with a Bonus Action.",
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_mastered_weapon",
+        "description": "The attack uses a weapon whose mastery property the creature can use.",
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_is_unarmed_strike",
+        "description": "The attack is an Unarmed Strike.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_combat",
+        "description": "The creature is in combat.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_heroic_inspiration",
+        "description": "The creature has Heroic Inspiration.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "only_monk_weapons_or_unarmed",
+        "description": "The creature is unarmed or wields only Monk weapons.",
+        "type": "predicate",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_with_monk_weapon",
+        "description": "The attack uses a Monk weapon.",
+        "type": "predicate",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "damage_reduced_to_zero",
+        "description": "The triggering attack's damage was reduced to 0.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spent_focus_point",
+        "description": "A Focus Point was expended for the triggering use.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_feature_this_trigger",
+        "description": "The creature used this feature (param) for the same trigger.",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_from_feature",
+        "description": "The attack or action was granted by this feature (param).",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "same_plane_as_target",
+        "description": "The creature and the target are on the same plane of existence.",
+        "type": "predicate",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "on_stone_surface",
+        "description": "The creature is on or touching a stone surface.",
+        "type": "predicate",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "big_enough_space",
+        "description": "The creature is in a space big enough for the new size.",
+        "type": "predicate",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "obscured_by_larger_creature",
+        "description": "The creature is obscured only by a creature at least one size larger.",
+        "type": "predicate",
+        "pages": [
+          86
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "character_level_at_least",
+        "description": "Character level is at least 'level'.",
+        "params": [
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "save_against_condition",
+        "description": "The saving throw is made to avoid or end the condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_to_end_condition",
+        "description": "The ability check is made to end the condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
       }
     ],
     "frequencies": [
@@ -2349,6 +3245,30 @@
           177
         ],
         "lot": "L08"
+      },
+      {
+        "id": "make_opportunity_attacks",
+        "description": "The creature can't make Opportunity Attacks.",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "need_sleep",
+        "description": "The creature doesn't need to sleep.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "magical_sleep",
+        "description": "Magic can't put the creature to sleep.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
       }
     ],
     "conditions": [

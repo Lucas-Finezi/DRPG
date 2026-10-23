@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/thief-second-story-work",
+  "kind": "feature",
+  "name": "Second-Story Work",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64
+    ],
+    "section": "Classes/Rogue/Rogue Subclass: Thief/Level 3: Second-Story Work",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You’ve trained to get into especially hard-to-reach places, granting you these benefits.\n\n***Climber.*** You gain a Climb Speed equal to your Speed.\n\n***Jumper.*** You can determine your jump distance using your Dexterity rather than your Strength.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/thief",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "climb",
+      "mode": "equal_to_walk",
+      "value": 0
+    },
+    {
+      "op": "modifier",
+      "stat": "jump_ability",
+      "mode": "set",
+      "value": {
+        "var": "ability_score.dex"
+      },
+      "note": "Dexterity rather than Strength determines your jump distance."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You’ve trained to get into especially hard-to-reach places, granting you these benefits.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Climber.*** You gain a Climb Speed equal to your Speed.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Jumper.*** You can determine your jump distance using your Dexterity rather than your Strength.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

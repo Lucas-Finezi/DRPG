@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/tiefling-fiendish-legacy",
+  "kind": "feature",
+  "name": "Fiendish Legacy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Tiefling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Fiendish Legacy.*** You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/tiefling"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "lineage_spells",
+        "levels": [
+          3,
+          5
+        ],
+        "from_table": "dnd5e/species/tiefling",
+        "always_prepared": true,
+        "free_casting": {
+          "count": 1,
+          "recovery": "long_rest_finished"
+        },
+        "may_use_slots": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "abyssal",
+          "label": "Abyssal",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Abyssal: level 1 benefit from the Fiendish Legacies table."
+            }
+          ]
+        },
+        {
+          "id": "chthonic",
+          "label": "Chthonic",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Chthonic: level 1 benefit from the Fiendish Legacies table."
+            }
+          ]
+        },
+        {
+          "id": "infernal",
+          "label": "Infernal",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Infernal: level 1 benefit from the Fiendish Legacies table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "int",
+          "label": "INT",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Spellcasting ability for this legacy: int."
+            }
+          ]
+        },
+        {
+          "id": "wis",
+          "label": "WIS",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Spellcasting ability for this legacy: wis."
+            }
+          ]
+        },
+        {
+          "id": "cha",
+          "label": "CHA",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/species/tiefling",
+              "note": "Spellcasting ability for this legacy: cha."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Fiendish Legacy.*** You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/species/tiefling"
+  ]
+}

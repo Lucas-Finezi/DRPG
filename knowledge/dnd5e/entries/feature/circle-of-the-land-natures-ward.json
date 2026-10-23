@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/circle-of-the-land-natures-ward",
+  "kind": "feature",
+  "name": "Nature’s Ward",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Druid Subclass: Circle of the Land/Level 10: Nature’s Ward",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature’s Ward table.\n\n##### Nature’s Ward\n\n| **Land Type** | **Resistance** |\n| Arid | Fire |\n| Polar | Cold |\n| **Land Type** | **Resistance** |\n| Temperate | Lightning |\n| Tropical | Poison |",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/circle-of-the-land",
+    "level": 10
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "natures_ward",
+        "caption": "Nature’s Ward",
+        "columns": [
+          "Land Type",
+          "Resistance"
+        ],
+        "rows": [
+          [
+            "Arid",
+            "Fire"
+          ],
+          [
+            "Polar",
+            "Cold"
+          ],
+          [
+            "Temperate",
+            "Lightning"
+          ],
+          [
+            "Tropical",
+            "Poison"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ]
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "var": "chosen.land_type_damage"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature’s Ward table.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Nature’s Ward\n\n| **Land Type** | **Resistance** |\n| Arid | Fire |\n| Polar | Cold |\n| **Land Type** | **Resistance** |\n| Temperate | Lightning |\n| Tropical | Poison |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned"
+  ]
+}

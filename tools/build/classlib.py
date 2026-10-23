@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from entrylib import NODES, find, slugify  # noqa: E402
+from entrylib import NODES, find, slugify, table_nodes  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 INV = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entries.json").read_text(encoding="utf-8"))["entries"]
@@ -94,3 +94,143 @@ def resolve_feature_names(cls, level, names):
             item["table_note"] = note
         out.append(item)
     return out
+
+
+# ---------------------------------------------------------------- feature helpers
+
+from entrylib import build, section  # noqa: E402
+
+FEATURE_LOT = "L14"
+
+
+def trait_nodes(species, trait):
+    """Paragraphs of a species trait: from '***Trait.***' to the next trait or heading (tables excluded)."""
+    nodes = section(species, 4)
+    out, on = [], False
+    for n in nodes:
+        if n.type == "p" and n.text.startswith("***"):
+            on = n.text.startswith(f"***{trait}.***")
+        elif n.type == "h":
+            if n.level <= 4:
+                on = False
+            continue
+        if on and n.type == "p":
+            out.append(n)
+    if not out:
+        raise KeyError(f"trait not found: {species} / {trait}")
+    return out
+
+
+def feature(owner_slug, name, nodes, path, items, feature_type, owner_ref, level=None, slug=None, **kw):
+    facets = {"feature_type": feature_type, "owner": owner_ref}
+    if level is not None:
+        facets["level"] = level
+    return build("feature", slug or f"{owner_slug}-{slugify(name)}", name, nodes, FEATURE_LOT, path, items,
+                 facets=facets, **kw)
+
+
+def CF(cls, name, level, items, sub=None, page=None, slug=None, **kw):
+    """Class or subclass feature 'Level N: Name' (the class Features table is excluded from its text)."""
+    title = f"Level {level}: {name}"
+    owner_cls = slugify(cls)
+    hits = [e for e in INV if e["kind"] == "feature" and e["name"] == name and e["facets"].get("level") == level
+            and e["facets"]["owner"] == (f"dnd5e/subclass/{slugify(sub)}" if sub else f"dnd5e/class/{owner_cls}")]
+    if len(hits) != 1:
+        raise KeyError(f"feature not in inventory: {cls}/{sub}/{title}: {hits}")
+    inv = hits[0]
+    nodes = section(title, 4, page=page or inv["page"], skip_tables=(f"{cls} Features",))
+    path = f"Classes/{cls}/" + (f"{cls} Subclass: {sub}/" if sub else f"{cls} Class Features/") + title
+    owner = inv["facets"]["owner"]
+    return feature(owner_cls if not sub else slugify(sub), name, nodes, path, items,
+                   "subclass_feature" if sub else "class_feature", owner, level=level,
+                   slug=slug or inv["ref"].rsplit("/", 1)[1], **kw)
+
+
+def col(cls, column):
+    """Expression reading a column of the class Features table at the current class level."""
+    s = slugify(cls)
+    return {"table": f"dnd5e/class/{s}", "table_id": f"{s}_features", "key": {"var": f"class_level.{s}"},
+            "column": column}
+
+
+def active(slug):
+    return {"pred": "effect_active", "args": {"effect": slug}}
+
+
+COMMON_REGISTRY = {
+    "predicates": [
+        {"id": "effect_active", "description": "An effect of the creature (param: entry slug, e.g. barbarian-rage) is active.", "params": ["effect"], "type": "predicate", "pages": [28]},
+        {"id": "wearing_armor_any", "description": "The creature wears any armor.", "type": "predicate", "pages": [29]},
+        {"id": "using_shield", "description": "The creature uses a Shield.", "type": "predicate", "pages": [29]},
+        {"id": "attack_uses_ability", "description": "The attack uses the ability (param).", "params": ["ability"], "type": "predicate", "pages": [28]},
+        {"id": "first_attack_this_turn", "description": "It is the creature's first attack roll on its turn.", "type": "predicate", "pages": [29]},
+        {"id": "own_turn", "description": "It is the creature's turn.", "type": "predicate", "pages": [29]},
+    ],
+    "events": [
+        {"id": "takes_attack_action", "description": "The creature takes the Attack action on its turn.", "type": "event", "pages": [29]},
+        {"id": "drops_to_0_hp_not_killed", "description": "The creature drops to 0 Hit Points and doesn't die outright.", "type": "event", "pages": [30]},
+        {"id": "damaged_by_creature_within_feet", "description": "The creature takes damage from a creature within 'feet'.", "params": ["feet"], "type": "event", "pages": [30]},
+        {"id": "enters_effect", "description": "The creature activates an effect (param: entry slug).", "params": ["effect"], "type": "event", "pages": [29]},
+    ],
+    "stats": [
+        {"id": "base_ac", "description": "Base Armor Class calculation (one alternative may be chosen).", "pages": [29]},
+        {"id": "attacks_per_attack_action", "description": "Number of attacks when taking the Attack action.", "pages": [29]},
+        {"id": "weapon_mastery_kinds", "description": "Kinds of weapons whose mastery property the creature can use.", "pages": [29]},
+        {"id": "ability_score_max", "description": "Maximum of an ability score (param).", "params": ["ability"], "pages": [30]},
+        {"id": "ability_score", "description": "An ability score (param).", "params": ["ability"], "pages": [30]},
+    ],
+}
+
+
+def OPT(cls, name, feature_type, group, items, **kw):
+    """Option feature listed under a class section (Metamagic, Eldritch Invocation), e.g. '#### Careful Spell'."""
+    hits = [e for e in INV if e["kind"] == "feature" and e["name"] == name
+            and e["facets"].get("feature_type") == feature_type]
+    if len(hits) != 1:
+        raise KeyError(f"option not in inventory: {cls}/{name}: {hits}")
+    inv = hits[0]
+    nodes = section(name, 4, page=inv["page"])
+    return feature(slugify(cls), name, nodes, f"Classes/{cls}/{group}/{name}", items, feature_type,
+                   inv["facets"]["owner"], slug=inv["ref"].rsplit("/", 1)[1], **kw)
+
+
+def spell_table(caption, page=None):
+    """A subclass 'always prepared' spell table: rows of (class level, [spell refs])."""
+    rows = []
+    for n in table_nodes(caption, page)[1:]:
+        if n.type != "t" or n.text.startswith("| **"):
+            continue
+        spells = [slugify(re.sub(r"[*]", "", s)) for s in n.cells[1].split(",")]
+        rows.append({"level": int(n.cells[0]), "spells": [f"dnd5e/spell/{s}" for s in spells]})
+    return rows
+
+
+def spellcasting(cls, ability, focus, prepared_start, prepared_recommended, change, cantrips=None, extra=()):
+    """Items of a class 'Spellcasting' feature (the labelled paragraphs shared by the spellcasting classes).
+
+    cantrips: (start, recommended, replace_on) or None; change: how prepared spells change
+    ('level_gain_one', 'long_rest_one' or 'long_rest_any')."""
+    s = slugify(cls)
+    spell = lambda names: [f"dnd5e/spell/{slugify(n)}" for n in names]  # noqa: E731
+    items = [(None, "rule", {"id": "spellcasting", "spell_list_of": f"dnd5e/spell-list/{s}",
+                             "note": "Spells whose class list includes this class (D-001)."}),
+             ("See “Spells”", "ref", ["dnd5e/rule/spells"])]
+    if cantrips:
+        start, rec, replace_on = cantrips
+        items.append(("***Cantrips.***", "rule", {
+            "id": "cantrips", "known": col(cls, "Cantrips"), "start": start, "from": f"dnd5e/spell-list/{s}",
+            "recommended": spell(rec), "replace": {"on": replace_on, "count": 1}, "gain_at_levels": [4, 10]}))
+    items += [
+        ("***Spell Slots.***", "rule", {
+            "id": "spell_slots", "pool": "spell_slot",
+            "slots_by_spell_level": {str(n): col(cls, str(n)) for n in range(1, 10 if cls not in ("Paladin", "Ranger") else 6)}}),
+        ("***Spell Slots.***", "fx", {"op": "trigger", "event": {"event": "long_rest_finished"},
+                                     "then": [{"op": "restore", "resource": "spell_slot", "amount": "all"}]}),
+        ("***Prepared Spells of Level 1+", "rule", {
+            "id": "prepared_spells", "count": col(cls, "Prepared Spells"), "start_level_1_spells": prepared_start,
+            "from": f"dnd5e/spell-list/{s}", "recommended": spell(prepared_recommended),
+            "must_have_slot_level": True, "always_prepared_from_features_do_not_count": True}),
+        ("***Changing Your Prepared Spells.***", "rule", {"id": "changing_prepared_spells", "mode": change}),
+        ("***Spellcasting Ability.***", "rule", {"id": "spellcasting_ability", "ability": ability}),
+        ("***Spellcasting Focus.***", "rule", {"id": "spellcasting_focus", "focus": focus})]
+    return items + list(extra)

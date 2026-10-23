@@ -64,8 +64,11 @@ def table_nodes(caption, page=None):
     """A level-5 caption with its table rows (and italic group labels)."""
     i = find(caption, 5, page)
     out = [NODES[i]]
-    for n in NODES[i + 1:]:
+    for k, n in enumerate(NODES[i + 1:], i + 1):
         if n.type == "t" or (n.type == "p" and re.match(r"^\*[^*].*\*$", n.text)):
+            out.append(n)
+        elif (n.type == "p" and re.match(r"^\*\*[^*]{1,40}\*\*$", n.text) and k + 1 < len(NODES)
+              and NODES[k + 1].type == "t"):  # header fragment split from its table
             out.append(n)
         else:
             break
@@ -129,8 +132,19 @@ def render(nodes, heading_offset=None):
         else:
             text = n.text
             cut = prev_node is not None and (n.index != prev_node.index + 1 or n.page != prev_node.page)
-            if parts and parts[-1][0] == "p" and not TERMINAL.search(parts[-1][1].rstrip()) and (
-                    re.match(r"^[a-z(]", text) or (cut and re.search(r"[a-z,;]$", parts[-1][1].rstrip()))):
+            last = parts[-1][1].rstrip() if parts and parts[-1][0] == "p" else ""
+            # a labelled paragraph ("**Strength.** If the table shows ... in the") whose line wrap
+            # the extractor took for a paragraph break: the next line goes on mid-phrase
+            label_wrap = (re.match(r"^\*\*[^*]+\*\*", last) and not last.startswith("**Duration:**")
+                          and re.match(r"^[A-Z][a-z]*\b(?!\.)", text)
+                          and (re.search(r"[,(]$", last) or re.search(r"\s[A-Z][a-z]+$", last)
+                               or re.search(r"\s(a|an|the|of|in|by|to|and|or|either|with|for|on|at|as|your|its|have)$", last)))
+            # any paragraph that stops on a function word ("... equal to your" / "Charisma modifier")
+            word_wrap = (re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)
+                         and re.match(r"^[A-Z][a-z]", text))
+            if parts and parts[-1][0] == "p" and not TERMINAL.search(last) and (
+                    re.match(r"^[a-z(]", text) or label_wrap or word_wrap
+                    or (cut and re.search(r"[a-z,;]$", last))):
                 parts[-1] = ("p", parts[-1][1].rstrip() + " " + text)
             else:
                 parts.append(("p", text))
