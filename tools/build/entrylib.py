@@ -138,6 +138,7 @@ def render(nodes, heading_offset=None):
             label_wrap = (re.match(r"^\*\*[^*]+\*\*", last) and not last.startswith("**Duration:**")
                           and re.match(r"^[A-Z][a-z]*\b(?!\.)", text)
                           and (re.search(r"[,(]$", last) or re.search(r"\s([A-Z][a-z]+|\d+)$", last)
+                               or (re.search(r"category:$", last) and re.match(r"^[A-Z][a-z]+, ", text))
                                or re.search(r"\s(a|an|the|of|in|by|to|and|or|either|with|for|on|at|as|your|its|have)$", last)))
             # any paragraph that stops on a function word ("... equal to your" / "Charisma modifier")
             word_wrap = ((re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)
@@ -273,6 +274,10 @@ def write_entry(e):
     kind, slug = e["ref"].split("/")[-2:]
     path = KNOWLEDGE / SYSTEM / "entries" / kind / f"{slug}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():  # never silently replace another lot's entry (slug collision)
+        old = json.loads(path.read_text(encoding="utf-8"))["source"]["extracted_by"]
+        if old != e["source"]["extracted_by"]:
+            raise ValueError(f"{e['ref']} already written by {old}; {e['source']['extracted_by']} needs another slug")
     path.write_text(json.dumps(e, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return path
 

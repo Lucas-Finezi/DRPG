@@ -1,0 +1,41 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/one-at-a-time",
+  "kind": "rule",
+  "name": "One at a Time",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      92
+    ],
+    "section": "Equipment/Armor/One at a Time",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L29"
+  },
+  "tier": 1,
+  "text": "A creature can wear only one suit of armor at a time and wield only one Shield at a time.\n\n##### Armor\n\n| **Armor** | **Armor Class (AC)** | **Strength** | **Stealth** | **Weight** | **Cost** |\n\n*Light Armor (1 Minute to Don or Doff)*\n\n| ↳ Padded Armor | 11 + Dex modifier | — | Disadvantage | 8 lb. | 5 GP |\n| ↳ Leather Armor | 11 + Dex modifier | — | — | 10 lb. | 10 GP |\n| ↳ Studded Leather Armor | 12 + Dex modifier | — | — | 13 lb. | 45 GP |\n\n*Medium Armor (5 Minutes to Don and 1 Minute to Doff)*\n\n| ↳ Hide Armor | 12 + Dex modifier (max 2) | — | — | 12 lb. | 10 GP |\n| ↳ Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |\n| ↳ Scale Mail | 14 + Dex modifier (max 2) | — | Disadvantage | 45 lb. | 50 GP |\n| ↳ Breastplate | 14 + Dex modifier (max 2) | — | — | 20 lb. | 400 GP |\n| ↳ Half Plate Armor | 15 + Dex modifier (max 2) | — | Disadvantage | 40 lb. | 750 GP |\n\n*Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*\n\n| ↳ Ring Mail | 14 | — | Disadvantage | 40 lb. | 30 GP |\n| ↳ Chain Mail | 16 | Str 13 | Disadvantage | 55 lb. | 75 GP |\n| ↳ Splint Armor | 17 | Str 15 | Disadvantage | 60 lb. | 200 GP |\n| ↳ Plate Armor | 18 | Str 15 | Disadvantage | 65 lb. | 1,500 GP |\n\n*Shield (Utilize Action to Don or Doff)*\n\n| ↳ Shield | +2 | — | — | 6 lb. | 10 GP |",
+  "data": {
+    "rules": [
+      {
+        "id": "one_at_a_time",
+        "max_armor_suits": 1,
+        "max_shields": 1
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A creature can wear only one suit of armor at a time and wield only one Shield at a time.\n\n##### Armor\n\n| **Armor** | **Armor Class (AC)** | **Strength** | **Stealth** | **Weight** | **Cost** |\n\n*Light Armor (1 Minute to Don or Doff)*\n\n| ↳ Padded Armor | 11 + Dex modifier | — | Disadvantage | 8 lb. | 5 GP |\n| ↳ Leather Armor | 11 + Dex modifier | — | — | 10 lb. | 10 GP |\n| ↳ Studded Leather Armor | 12 + Dex modifier | — | — | 13 lb. | 45 GP |\n\n*Medium Armor (5 Minutes to Don and 1 Minute to Doff)*\n\n| ↳ Hide Armor | 12 + Dex modifier (max 2) | — | — | 12 lb. | 10 GP |\n| ↳ Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |\n| ↳ Scale Mail | 14 + Dex modifier (max 2) | — | Disadvantage | 45 lb. | 50 GP |\n| ↳ Breastplate | 14 + Dex modifier (max 2) | — | — | 20 lb. | 400 GP |\n| ↳ Half Plate Armor | 15 + Dex modifier (max 2) | — | Disadvantage | 40 lb. | 750 GP |\n\n*Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*\n\n| ↳ Ring Mail | 14 | — | Disadvantage | 40 lb. | 30 GP |\n| ↳ Chain Mail | 16 | Str 13 | Disadvantage | 55 lb. | 75 GP |\n| ↳ Splint Armor | 17 | Str 15 | Disadvantage | 60 lb. | 200 GP |\n| ↳ Plate Armor | 18 | Str 15 | Disadvantage | 65 lb. | 1,500 GP |\n\n*Shield (Utilize Action to Don or Doff)*\n\n| ↳ Shield | +2 | — | — | 6 lb. | 10 GP |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}
