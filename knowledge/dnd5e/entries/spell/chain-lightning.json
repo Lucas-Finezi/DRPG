@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/chain-lightning",
+  "kind": "spell",
+  "name": "Chain Lightning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      114
+    ],
+    "section": "Spells/Spell Descriptions/Chain Lightning",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L23"
+  },
+  "tier": 2,
+  "text": "*Level 6 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (three silver pins)\n\n**Duration:** Instantaneous\n\nYou launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nEach target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one.\n\n***Using a Higher-Level Spell Slot.*** One additional bolt leaps from the first target to another target for each spell slot level above 6.",
+  "facets": {
+    "level": 6,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "three silver pins"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature_or_object",
+        "range": {
+          "kind": "distance",
+          "feet": 150
+        },
+        "must_see": true,
+        "distinct": true,
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                3,
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "var": "spell_slot_level"
+                    },
+                    6
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "10d8",
+          "damage_type": "lightning"
+        }
+      ],
+      "half_on_success": true,
+      "note": "The first target plus up to three others within 30 feet of it; each targeted by one bolt only."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 6 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (three silver pins)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.\n\nEach target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** One additional bolt leaps from the first target to another target for each spell slot level above 6.",
+      "status": "structured",
+      "by": [
+        "/effects/0/target/count"
+      ]
+    }
+  ]
+}

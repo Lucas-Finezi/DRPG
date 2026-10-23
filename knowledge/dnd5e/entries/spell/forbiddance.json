@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/forbiddance",
+  "kind": "spell",
+  "name": "Forbiddance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      133
+    ],
+    "section": "Spells/Spell Descriptions/Forbiddance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L23"
+  },
+  "tier": 2,
+  "text": "*Level 6 Abjuration (Cleric)*\n\n**Casting Time:** 10 minutes or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (ruby dust worth 1,000+ GP)\n\n**Duration:** 1 day\n\nYou create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can’t teleport into the area or use portals, such as those created by the *Gate* spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, the Ethereal Plane, the Feywild, the Shadowfell, or the *Plane Shift* spell.\n\nIn addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: Aberrations, Celestials, Elementals, Fey, Fiends, and Undead. When a creature of a chosen type enters the spell’s area for the first time on a turn or ends its turn there, the creature takes 5d10 Radiant or Necrotic damage (your choice when you cast this spell).\n\nYou can designate a password when you cast the spell. A creature that speaks the password as it enters the area takes no damage from the spell.\n\nThe spell’s area can’t overlap with the area of another *Forbiddance* spell. If you cast *Forbiddance* every day for 30 days in the same location, the spell lasts until it is dispelled, and the Material components are consumed on the last casting.",
+  "facets": {
+    "level": 6,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "ruby dust worth 1,000+ GP",
+      "material_cost_gp": 1000
+    },
+    "duration": {
+      "text": "1 day",
+      "kind": "days",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "ward",
+        "floor_square_feet": 40000,
+        "height_feet": 30,
+        "blocks": [
+          "teleportation",
+          "portals",
+          "planar_travel"
+        ],
+        "examples": [
+          "dnd5e/spell/gate",
+          "dnd5e/spell/plane-shift"
+        ]
+      },
+      {
+        "id": "types",
+        "choose_any_of": [
+          "aberration",
+          "celestial",
+          "elemental",
+          "fey",
+          "fiend",
+          "undead"
+        ]
+      },
+      {
+        "id": "password",
+        "speaker_takes_no_damage": true
+      },
+      {
+        "id": "limits",
+        "no_overlap": true,
+        "daily_castings": 30,
+        "then": "until_dispelled"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_ends_turn_in_area"
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "days",
+        "amount": 1
+      },
+      "condition": {
+        "pred": "creature_type_chosen"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "5d10",
+          "damage_type": {
+            "choose_from": [
+              "radiant",
+              "necrotic"
+            ]
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "Type chosen when casting."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 6 Abjuration (Cleric)*\n\n**Casting Time:** 10 minutes or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (ruby dust worth 1,000+ GP)\n\n**Duration:** 1 day",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can’t teleport into the area or use portals, such as those created by the *Gate* spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, the Ethereal Plane, the Feywild, the Shadowfell, or the *Plane Shift* spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: Aberrations, Celestials, Elementals, Fey, Fiends, and Undead. When a creature of a chosen type enters the spell’s area for the first time on a turn or ends its turn there, the creature takes 5d10 Radiant or Necrotic damage (your choice when you cast this spell).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "You can designate a password when you cast the spell. A creature that speaks the password as it enters the area takes no damage from the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The spell’s area can’t overlap with the area of another *Forbiddance* spell. If you cast *Forbiddance* every day for 30 days in the same location, the spell lasts until it is dispelled, and the Material components are consumed on the last casting.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/gate",
+    "dnd5e/spell/plane-shift"
+  ]
+}
