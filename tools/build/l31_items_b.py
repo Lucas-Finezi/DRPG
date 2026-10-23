@@ -91,7 +91,7 @@ def entries():
                                               "study": {"action": "dnd5e/action/study", "check": "int.investigation", "dc": 15},
                                               "ends": ["card_moved", "dispelled"], "dispel": SP("Dispel Magic"), "card_used_up": True}),
         ("##### Deck of Illusions", "table", tab("Deck of Illusions", ["1d100", "Illusion"], rows_of(deck))),
-        ("\\*Stat blocks", "ref", ["dnd5e/rule/monsters"])]))
+        ("\\*Stat blocks", "ref", ["dnd5e/rule/stat-block-overview"])]))
     E.append(MI("Defender", [
         ("^", "fx", plus_weapon(3)),
         ("The first time you attack", "fx", trig({"event": "attack_roll_made", "which": "each"},

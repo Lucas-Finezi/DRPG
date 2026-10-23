@@ -1,0 +1,257 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ankylosaurus",
+  "kind": "creature",
+  "name": "Ankylosaurus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      344
+    ],
+    "section": "Animals/Ankylosaurus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Huge Beast (Dinosaur), Unaligned*\n\n| **AC** 15 | **Initiative** +0 (10) |\n\n**HP** 68 (8d12 + 16)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +6 | **Dex** 11 | +0 | +0 | **Con** 15 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |\n\n**Senses** Passive Perception 11\n\n**Languages** None\n\n**CR** 3 (XP 700; PB +2)\n\n##### Actions\n\n***Multiattack.*** The ankylosaurus makes two Tail attacks.\n\n***Tail.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.",
+  "facets": {
+    "group": "animal",
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "3"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "tags": [
+      "Dinosaur"
+    ],
+    "type_line": "Huge Beast (Dinosaur), Unaligned",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 68,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d12",
+          16
+        ]
+      },
+      "text": "68 (8d12 + 16)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 6
+      },
+      "dex": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "senses": {
+      "text": "Passive Perception 11",
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "3",
+      "xp": 700,
+      "proficiency_bonus": 2,
+      "text": "3 (XP 700; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The ankylosaurus makes two Tail attacks."
+      },
+      {
+        "name": "Tail",
+        "text": "*Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Tail",
+            "count": 2
+          }
+        ],
+        "text": "The ankylosaurus makes two Tail attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tail",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "huge"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Beast (Dinosaur), Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 68 (8d12 + 16)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +6 | **Dex** 11 | +0 | +0 | **Con** 15 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (XP 700; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The ankylosaurus makes two Tail attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Tail.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

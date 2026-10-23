@@ -1,0 +1,393 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/bone-devil",
+  "kind": "creature",
+  "name": "Bone Devil",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      267,
+      268
+    ],
+    "section": "Monsters A–Z/Bone Devil/Bone Devil",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Fiend (Devil), Lawful Evil*\n\n| **AC** 16 | **Initiative** +7 (17) |\n\n**HP** 161 (17d10 + 68)\n\n**Speed** 40 ft., Fly 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +8 | **Dex** 16 | +3 | +3 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +5 | **Wis** 14 | +2 | +6 | **Cha** 16 | +3 | +7 |\n\n**Skills** Deception +7, Insight +6\n\n**Resistances** Cold\n\n**Immunities** Fire, Poison; Poisoned\n\n**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 12\n\n**Languages** Infernal; telepathy 120 ft.\n\n**CR** 9 (XP 5,000; PB +4)\n\n##### Traits\n\n***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.\n\n***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The devil makes two Claw attacks and one Infernal Sting attack.\n\n***Claw.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 13 (2d8 + 4) Slashing damage.\n\n***Infernal Sting.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison damage, and the target has the Poisoned condition until the start of the devil’s next turn. While Poisoned, the target can’t regain Hit Points.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "cr": "9"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Devil"
+    ],
+    "type_line": "Large Fiend (Devil), Lawful Evil",
+    "ac": {
+      "value": 16,
+      "text": "16"
+    },
+    "initiative": {
+      "modifier": 7,
+      "score": 17,
+      "text": "+7 (17)"
+    },
+    "hp": {
+      "average": 161,
+      "formula": {
+        "op": "add",
+        "args": [
+          "17d10",
+          68
+        ]
+      },
+      "text": "161 (17d10 + 68)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 40 ft.",
+      "walk": 40,
+      "fly": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 8
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 13,
+        "mod": 1,
+        "save": 5
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 6
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      }
+    },
+    "skills": {
+      "deception": 7,
+      "insight": 6,
+      "text": "Deception +7, Insight +6"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft. (unimpeded by magical Darkness); Passive Perception 12",
+      "darkvision": 120,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Infernal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "9",
+      "xp": 5000,
+      "proficiency_bonus": 4,
+      "text": "9 (XP 5,000; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Diabolical Restoration",
+        "text": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The devil makes two Claw attacks and one Infernal Sting attack."
+      },
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 13 (2d8 + 4) Slashing damage."
+      },
+      {
+        "name": "Infernal Sting",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison \n\ndamage, and the target has the Poisoned condition until the start of the devil’s next turn. While Poisoned, the target can’t regain Hit Points."
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Nine Hells",
+        "revives_in": "Nine Hells",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Claw",
+            "count": 2
+          },
+          {
+            "name": "Infernal Sting",
+            "count": 1
+          }
+        ],
+        "text": "The devil makes two Claw attacks and one Infernal Sting attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against_spell_or_magic"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Infernal Sting",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_infernal_sting_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Infernal Sting as written.",
+      "source_text": "15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Fiend (Devil), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 16 | **Initiative** +7 (17) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 161 (17d10 + 68)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +8 | **Dex** 16 | +3 | +3 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +5 | **Wis** 14 | +2 | +6 | **Cha** 16 | +3 | +7 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +7, Insight +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Infernal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 9 (XP 5,000; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The devil makes two Claw attacks and one Infernal Sting attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 13 (2d8 + 4) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Infernal Sting.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 15 (2d10 + 4) Piercing damage plus 18 (4d8) Poison damage, and the target has the Poisoned condition until the start of the devil’s next turn. While Poisoned, the target can’t regain Hit Points.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_infernal_sting_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned"
+  ]
+}

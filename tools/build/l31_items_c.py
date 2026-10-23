@@ -243,7 +243,7 @@ def entries():
         ("^", "rule", {"id": "prerequisite", "spellcaster": True, "min_level_5_slots": 2}),
         ("^", "fx", trig({"event": "reads_item"}, dmg("6d6", "psychic"), condition={"not": {"pred": "can_use_item", "args": THIS}})),
         ("To create a golem", "rule", {"id": "creation", "time": "table", "max_rest_hours_per_day": 8, "uninterrupted": True, "cost": "table"}),
-        ("Once you finish creating", "fx", ref("dnd5e/rule/monsters", note="The golem of the manual's type (table) animates under your control; the book is consumed.")),
+        ("Once you finish creating", "fx", ref("dnd5e/rule/stat-block-overview", note="The golem of the manual's type (table) animates under your control; the book is consumed.")),
         ("| **1d20**", "table", tab("Manual of Golems", ["1d20", "Golem", "Time", "Cost"], rows_of(golems))),
         ("| **1d20**", "ref", ["dnd5e/creature/clay-golem", "dnd5e/creature/flesh-golem", "dnd5e/creature/iron-golem", "dnd5e/creature/stone-golem"])]))
     E.append(manual("Manual of Quickness of Action", "dex"))

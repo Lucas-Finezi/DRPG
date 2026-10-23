@@ -196,7 +196,7 @@ def entries():
         ("- Attempt to take control", "sys", ["/effects/1"])]))
     E.append(R("magic-items-a-z", "Magic Items A–Z", section("Magic Items A–Z", 2, page=209, stop_titles=("Adamantine Armor",)), "Magic Items/Magic Items A–Z", [
         (None, "rule", {"id": "order", "alphabetical": True}),
-        ("If a magic item description", "ref", ["dnd5e/rule/monsters"])]))
+        ("If a magic item description", "ref", ["dnd5e/rule/stat-block-overview"])]))
     E.append(build("rule", "magic-item-rules", "Magic Item Rules", sidebar("Magic Item Rules", 205), LOT, "Magic Items/Magic Item Rules (sidebar)", [
         (None, "ref", ["dnd5e/rule/using-magic-items"]),
         ("***Attunement Prerequisites.***", "rule", {"id": "prerequisites", "class_member": True, "spellcaster": "casts at least one spell from traits or features"}),

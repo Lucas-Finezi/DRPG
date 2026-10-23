@@ -1,0 +1,334 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/bugbear-warrior",
+  "kind": "creature",
+  "name": "Bugbear Warrior",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      272
+    ],
+    "section": "Monsters A–Z/Bugbears/Bugbear Warrior",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Medium Fey (Goblinoid), Chaotic Evil*\n\n| **AC** 14 | **Initiative** +2 (12) |\n\n**HP** 33 (6d8 + 6)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |\n\n**Skills** Stealth +6, Survival +2\n\n**Gear** Hide Armor, Light Hammers (3)\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Common, Goblin\n\n**CR** 1 (XP 200; PB +2)\n\n##### Traits\n\n***Abduct.*** The bugbear needn’t spend extra movement to move a creature it is grappling.\n\n##### Actions\n\n***Grab.*** *Melee Attack Roll:* +4, reach 10 ft. *Hit:* 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12).\n\n***Light Hammer.*** *Melee or Ranged Attack Roll:* +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. *Hit:* 9 (3d4 + 2) Bludgeoning damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Chaotic Evil",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Goblinoid"
+    ],
+    "type_line": "Medium Fey (Goblinoid), Chaotic Evil",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 33,
+      "formula": {
+        "op": "add",
+        "args": [
+          "6d8",
+          6
+        ]
+      },
+      "text": "33 (6d8 + 6)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "stealth": 6,
+      "survival": 2,
+      "text": "Stealth +6, Survival +2"
+    },
+    "gear": {
+      "text": "Hide Armor, Light Hammers (3)"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Common, Goblin"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Abduct",
+        "text": "The bugbear needn’t spend extra movement to move a creature it is grappling."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Grab",
+        "text": "*Melee Attack Roll:* +4, reach 10 ft. *Hit:* 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12)."
+      },
+      {
+        "name": "Light Hammer",
+        "text": "*Melee or Ranged Attack Roll:* +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. *Hit:* 9 (3d4 + 2) Bludgeoning damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Grab",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  2
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 12
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Light Hammer",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 10
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d4",
+                  2
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "note": "Attack: with Advantage if the target is Grappled by the bugbear."
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_abduct",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Abduct as written.",
+      "source_text": "The bugbear needn’t spend extra movement to move a creature it is grappling."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fey (Goblinoid), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 33 (6d8 + 6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +6, Survival +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Hide Armor, Light Hammers (3)",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Goblin",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Abduct.*** The bugbear needn’t spend extra movement to move a creature it is grappling.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_abduct"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Grab.*** *Melee Attack Roll:* +4, reach 10 ft. *Hit:* 9 (2d6 + 2) Bludgeoning damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 12).",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Light Hammer.*** *Melee or Ranged Attack Roll:* +4 (with Advantage if the target is Grappled by the bugbear), reach 10 ft. or range 20/60 ft. *Hit:* 9 (3d4 + 2) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled"
+  ]
+}

@@ -968,6 +968,15 @@
           244
         ],
         "lot": "L32"
+      },
+      {
+        "id": "hit_point_dice_count",
+        "description": "Number of Hit Dice in a monster's Hit Point expression.",
+        "type": "number",
+        "pages": [
+          255
+        ],
+        "lot": "L33"
       }
     ],
     "stats": [
@@ -2598,6 +2607,15 @@
           197
         ],
         "lot": "L32"
+      },
+      {
+        "id": "reaction_trigger",
+        "description": "The trigger stated in a stat block Reaction (its text is in the effect's note).",
+        "type": "event",
+        "pages": [
+          257
+        ],
+        "lot": "L33"
       }
     ],
     "predicates": [
@@ -4800,6 +4818,27 @@
           244
         ],
         "lot": "L32"
+      },
+      {
+        "id": "target_size_at_most",
+        "description": "The target is of this size or smaller (param: size).",
+        "params": [
+          "size"
+        ],
+        "type": "predicate",
+        "pages": [
+          254
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "in_sunlight",
+        "description": "The creature is in sunlight.",
+        "type": "predicate",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
       }
     ],
     "frequencies": [
@@ -5932,6 +5971,30 @@
           215
         ],
         "lot": "L31"
+      },
+      {
+        "id": "provoke_opportunity_attack_when_flying_out_of_reach",
+        "description": "Provoke Opportunity Attacks when flying out of an enemy's reach.",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "shape_changed",
+        "description": "Have its shape changed (shape-shifting effects).",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "web_movement_restrictions",
+        "description": "Be subject to movement restrictions caused by webs.",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
       }
     ],
     "conditions": [

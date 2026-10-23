@@ -1,0 +1,446 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/cloaker",
+  "kind": "creature",
+  "name": "Cloaker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      274
+    ],
+    "section": "Monsters A–Z/Cloaker/Cloaker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Aberration, Chaotic Neutral*\n\n| **AC** 14 | **Initiative** +5 (15) |\n\n**HP** 91 (14d10 + 14)\n\n**Speed** 10 ft., Fly 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |\n| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 7 | −2 | −2 |\n\n**Skills** Stealth +5\n\n**Immunities** Frightened\n\n**Senses** Darkvision 120 ft.; Passive Perception 12\n\n**Languages** Deep Speech, Undercommon\n\n**CR** 8 (XP 3,900; PB +3)\n\n##### Traits\n\n***Light Sensitivity.*** While in Bright Light, the cloaker has Disadvantage on attack rolls.\n\n##### Actions\n\n***Multiattack.*** The cloaker makes one Attach attack and two Tail attacks.\n\n***Attach.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (3d6 + 3) Piercing damage. If the target is a Large or smaller creature, the cloaker attaches to it. While the cloaker is attached, the target has the Blinded condition, and the cloaker can’t make Attach attacks against other targets. In addition, the cloaker halves the damage it takes (round down), and the target takes the same amount of damage. \n\nThe cloaker can detach itself by spending 5 feet of movement. The target or a creature within 5 feet of it can take an action to try to detach the cloaker, doing so by succeeding on a DC 14 Strength (Athletics) check.\n\n***Tail.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage.\n\n##### Bonus Actions\n\n***Moan.*** *Wisdom Saving Throw:* DC 13, each creature in a 60-foot Emanation originating from the cloaker. *Failure:* The target has the Frightened condition until the end of the cloaker’s next turn. *Success:* The target is immune to this cloaker’s Moan for the next 24 hours.\n\n***Phantasms (Recharge after a Short or Long Rest).*** The cloaker casts the *Mirror Image* spell, requiring no spell components and using Wisdom as the spellcasting ability. The spell ends early if the cloaker starts or ends its turn in Bright Light.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Chaotic Neutral",
+    "cr": "8"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Chaotic Neutral",
+    "type_line": "Large Aberration, Chaotic Neutral",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 91,
+      "formula": {
+        "op": "add",
+        "args": [
+          "14d10",
+          14
+        ]
+      },
+      "text": "91 (14d10 + 14)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 40 ft.",
+      "walk": 10,
+      "fly": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "stealth": 5,
+      "text": "Stealth +5"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/frightened"
+      ],
+      "text": "Frightened"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 12",
+      "darkvision": 120,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Deep Speech, Undercommon"
+    },
+    "cr": {
+      "value": "8",
+      "xp": 3900,
+      "proficiency_bonus": 3,
+      "text": "8 (XP 3,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Light Sensitivity",
+        "text": "While in Bright Light, the cloaker has Disadvantage on attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The cloaker makes one Attach attack and two Tail attacks."
+      },
+      {
+        "name": "Attach",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (3d6 + 3) Piercing damage. If the target is a Large or smaller creature, the cloaker attaches to it. While the cloaker is attached, the target has the Blinded condition, and the cloaker can’t make Attach attacks against other targets. In addition, the cloaker halves the damage it takes (round down), and the target takes the same amount of damage. \n\nThe cloaker can detach itself by spending 5 feet of movement. The target or a creature within 5 feet of it can take an action to try to detach the cloaker, doing so by succeeding on a DC 14 Strength (Athletics) check."
+      },
+      {
+        "name": "Tail",
+        "text": "*Melee Attack Roll:* +6, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Moan",
+        "text": "*Wisdom Saving Throw:* DC 13, each creature in a 60-foot Emanation originating from the cloaker. *Failure:* The target has the Frightened condition until the end of the cloaker’s next turn. *Success:* The target is immune to this cloaker’s Moan for the next 24 hours."
+      },
+      {
+        "name": "Phantasms",
+        "recharge": {
+          "rest": "short_or_long"
+        },
+        "text": "The cloaker casts the *Mirror Image* spell, requiring no spell components and using Wisdom as the spellcasting ability. The spell ends early if the cloaker starts or ends its turn in Bright Light."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Attach",
+            "count": 1
+          },
+          {
+            "name": "Tail",
+            "count": 2
+          }
+        ],
+        "text": "The cloaker makes one Attach attack and two Tail attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Attach",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tail",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Moan",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 13,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 60,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot Emanation originating from the cloaker"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Phantasms",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mirror-image",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "note": "Recharges after a rest."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_light_sensitivity",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Light Sensitivity as written.",
+      "source_text": "While in Bright Light, the cloaker has Disadvantage on attack rolls."
+    },
+    {
+      "id": "actions_attach_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Attach as written.",
+      "source_text": "13 (3d6 + 3) Piercing damage. If the target is a Large or smaller creature, the cloaker attaches to it. While the cloaker is attached, the target has the Blinded condition, and the cloaker can’t make Attach attacks against other targets. In addition, the cloaker halves the damage it takes (round down), and the target takes the same amount of damage."
+    },
+    {
+      "id": "bonus_actions_moan_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Moan as written.",
+      "source_text": "Success: The target is immune to this cloaker’s Moan for the next 24 hours."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Aberration, Chaotic Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 91 (14d10 + 14)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |\n| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Frightened",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Deep Speech, Undercommon",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 8 (XP 3,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Light Sensitivity.*** While in Bright Light, the cloaker has Disadvantage on attack rolls.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_light_sensitivity"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The cloaker makes one Attach attack and two Tail attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Attach.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (3d6 + 3) Piercing damage. If the target is a Large or smaller creature, the cloaker attaches to it. While the cloaker is attached, the target has the Blinded condition, and the cloaker can’t make Attach attacks against other targets. In addition, the cloaker halves the damage it takes (round down), and the target takes the same amount of damage. \n\nThe cloaker can detach itself by spending 5 feet of movement. The target or a creature within 5 feet of it can take an action to try to detach the cloaker, doing so by succeeding on a DC 14 Strength (Athletics) check.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_attach_rider"
+      ]
+    },
+    {
+      "text": "***Tail.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Moan.*** *Wisdom Saving Throw:* DC 13, each creature in a 60-foot Emanation originating from the cloaker. *Failure:* The target has the Frightened condition until the end of the cloaker’s next turn. *Success:* The target is immune to this cloaker’s Moan for the next 24 hours.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/2",
+        "md:bonus_actions_moan_rider"
+      ]
+    },
+    {
+      "text": "***Phantasms (Recharge after a Short or Long Rest).*** The cloaker casts the *Mirror Image* spell, requiring no spell components and using Wisdom as the spellcasting ability. The spell ends early if the cloaker starts or ends its turn in Bright Light.",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/1",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/frightened",
+    "dnd5e/spell/mirror-image"
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/chain-devil",
+  "kind": "creature",
+  "name": "Chain Devil",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      272,
+      273
+    ],
+    "section": "Monsters A–Z/Chain Devil/Chain Devil",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Medium Fiend (Devil), Lawful Evil*\n\n| **AC** 15 | **Initiative** +5 (15) |\n\n**HP** 85 (10d8 + 40)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 18 | +4 | +7 |\n| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 14 | +2 | +2 |\n\n**Resistances** Bludgeoning, Cold, Piercing, Slashing\n\n**Immunities** Fire, Poison; Poisoned\n\n**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 11\n\n**Languages** Infernal; telepathy 120 ft.\n\n**CR** 8 (XP 3,900; PB +3)\n\n##### Traits\n\n***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.\n\n***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The devil makes two Chain attacks and uses Conjure Infernal Chain.\n\n***Chain.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 11 (2d6 + 4) Slashing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two chains, and it has the Restrained condition until the grapple ends.\n\n***Conjure Infernal Chain.*** The devil conjures a fiery chain to bind a creature. *Dexterity Saving Throw:* DC 15, one creature the devil can see within 60 feet. *Failure:* 9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil’s next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. *Success:* The chain disappears.\n\n##### Reactions\n\n***Unnerving Gaze.*** *Trigger:* A creature the devil can see starts its turn within 30 feet of the devil and can see the devil. *Response—Wisdom Saving Throw:* DC 15, the triggering creature. *Failure:* The target has the Frightened condition until the end of its turn. *Success:* The target is immune to this devil’s Unnerving Gaze for 24 hours.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "cr": "8"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Devil"
+    ],
+    "type_line": "Medium Fiend (Devil), Lawful Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 85,
+      "formula": {
+        "op": "add",
+        "args": [
+          "10d8",
+          40
+        ]
+      },
+      "text": "85 (10d8 + 40)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 7
+      },
+      "int": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 4
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "cold",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Cold, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft. (unimpeded by magical Darkness); Passive Perception 11",
+      "darkvision": 120,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Infernal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "8",
+      "xp": 3900,
+      "proficiency_bonus": 3,
+      "text": "8 (XP 3,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Diabolical Restoration",
+        "text": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The devil makes two Chain attacks and uses Conjure Infernal Chain."
+      },
+      {
+        "name": "Chain",
+        "text": "*Melee Attack Roll:* +7, reach 10 ft. *Hit:* 11 (2d6 + 4) Slashing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two chains, and it has the Restrained condition until the grapple ends."
+      },
+      {
+        "name": "Conjure Infernal Chain",
+        "text": "The devil conjures a fiery chain to bind a creature. *Dexterity Saving Throw:* DC 15, one creature the devil can see within 60 feet. *Failure:* 9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil’s next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. *Success:* The chain disappears."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Unnerving Gaze",
+        "text": "*Trigger:* A creature the devil can see starts its turn within 30 feet of the devil and can see the devil. *Response—Wisdom Saving Throw:* DC 15, the triggering creature. *Failure:* The target has the Frightened condition until the end of its turn. *Success:* The target is immune to this devil’s Unnerving Gaze for 24 hours."
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Nine Hells",
+        "revives_in": "Nine Hells",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Chain",
+            "count": 2
+          }
+        ],
+        "text": "The devil makes two Chain attacks and uses Conjure Infernal Chain."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against_spell_or_magic"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Chain",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 14
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "duration": {
+                "kind": "while",
+                "while": {
+                  "pred": "has_condition",
+                  "args": {
+                    "condition": "grappled"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Conjure Infernal Chain",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 15,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "text": "one creature the devil can see within 60 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  4
+                ]
+              },
+              "damage_type": "fire"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 15,
+          "target": {
+            "kind": "creature",
+            "text": "the triggering creature"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened"
+            }
+          ]
+        }
+      ],
+      "note": "Trigger: A creature the devil can see starts its turn within 30 feet of the devil and can see the devil."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_conjure_infernal_chain_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Conjure Infernal Chain as written.",
+      "source_text": "9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil’s next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. Success: The chain disappears."
+    },
+    {
+      "id": "reactions_unnerving_gaze_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Unnerving Gaze as written.",
+      "source_text": "The target has the Frightened condition until the end of its turn. Success: The target is immune to this devil’s Unnerving Gaze for 24 hours."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fiend (Devil), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 85 (10d8 + 40)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 18 | +4 | +7 |\n| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 14 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Cold, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Infernal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 8 (XP 3,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The devil makes two Chain attacks and uses Conjure Infernal Chain.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Chain.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 11 (2d6 + 4) Slashing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two chains, and it has the Restrained condition until the grapple ends.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Conjure Infernal Chain.*** The devil conjures a fiery chain to bind a creature. *Dexterity Saving Throw:* DC 15, one creature the devil can see within 60 feet. *Failure:* 9 (2d4 + 4) Fire damage, and the target has the Restrained condition until the end of the devil’s next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself. *Success:* The chain disappears.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_conjure_infernal_chain_rider"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Unnerving Gaze.*** *Trigger:* A creature the devil can see starts its turn within 30 feet of the devil and can see the devil. *Response—Wisdom Saving Throw:* DC 15, the triggering creature. *Failure:* The target has the Frightened condition until the end of its turn. *Success:* The target is immune to this devil’s Unnerving Gaze for 24 hours.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/3",
+        "md:reactions_unnerving_gaze_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/restrained"
+  ]
+}

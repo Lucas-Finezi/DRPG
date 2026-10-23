@@ -1,0 +1,278 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/blood-hawk",
+  "kind": "creature",
+  "name": "Blood Hawk",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      345,
+      346
+    ],
+    "section": "Animals/Blood Hawk",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Small Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 7 (2d6)\n\n**Speed** 10 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 5 | −3 | −3 |\n\n**Skills** Perception +6\n\n**Senses** Passive Perception 16\n\n**Languages** None\n\n**CR** 1/8 (XP 25; PB +2)\n\n##### Traits\n\n***Pack Tactics.*** The hawk has Advantage on an attack roll against a creature if at least one of the hawk’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.\n\n##### Actions\n\n***Beak.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage, or 6 (1d8 + 2) Piercing damage if the target is Bloodied.",
+  "facets": {
+    "group": "animal",
+    "size": "Small",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1/8"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Small Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 7,
+      "formula": "2d6",
+      "text": "7 (2d6)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 60 ft.",
+      "walk": 10,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "text": "Perception +6"
+    },
+    "senses": {
+      "text": "Passive Perception 16",
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/8",
+      "xp": 25,
+      "proficiency_bonus": 2,
+      "text": "1/8 (XP 25; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "text": "The hawk has Advantage on an attack roll against a creature if at least one of the hawk’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beak",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage, or 6 (1d8 + 2) Piercing damage if the target is Bloodied."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "pred": "ally_within_feet_of_target",
+        "args": {
+          "feet": 5,
+          "not_incapacitated": true
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Beak",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_beak_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Beak as written.",
+      "source_text": "4 (1d4 + 2) Piercing damage, or 6 (1d8 + 2) Piercing damage if the target is Bloodied."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 7 (2d6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/8 (XP 25; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Pack Tactics.*** The hawk has Advantage on an attack roll against a creature if at least one of the hawk’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Beak.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage, or 6 (1d8 + 2) Piercing damage if the target is Bloodied.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/1",
+        "md:actions_beak_rider"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-alignment",
+  "kind": "rule",
+  "name": "Alignment (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      254
+    ],
+    "section": "Monsters/Parts of a Stat Block/Alignment",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "The alignment specified in a monster’s stat block is a default suggestion of how to roleplay the monster, inspired by its traditional role in the game or real-world folklore. Change a monster’s alignment to suit your storytelling needs. The Neutral alignment, in particular, is an invitation for you to consider whether an individual leans toward one of the other alignments.\n\n“Character Creation” describes the nine alignments and unaligned creatures.",
+  "master_decisions": [
+    {
+      "id": "monster_alignment",
+      "reason": "narrative",
+      "prompt": "Change this monster's alignment for the story?",
+      "source_text": "Change a monster’s alignment to suit your storytelling needs."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The alignment specified in a monster’s stat block is a default suggestion of how to roleplay the monster, inspired by its traditional role in the game or real-world folklore. Change a monster’s alignment to suit your storytelling needs. The Neutral alignment, in particular, is an invitation for you to consider whether an individual leans toward one of the other alignments.",
+      "status": "master_decision",
+      "by": [
+        "md:monster_alignment"
+      ]
+    },
+    {
+      "text": "“Character Creation” describes the nine alignments and unaligned creatures.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/alignment"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/alignment"
+  ]
+}

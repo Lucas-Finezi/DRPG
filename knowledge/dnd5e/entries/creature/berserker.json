@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/berserker",
+  "kind": "creature",
+  "name": "Berserker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      263
+    ],
+    "section": "Monsters A–Z/Berserker/Berserker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Humanoid, Neutral*\n\n| **AC** 13 | **Initiative** +1 (11) |\n\n**HP** 67 (9d8 + 27)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 17 | +3 | +3 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |\n\n**Gear** Greataxe, Hide Armor\n\n**Senses** Passive Perception 10\n\n**Languages** Common\n\n**CR** 2 (XP 450; PB +2)\n\n##### Traits\n\n***Bloodied Frenzy.*** While Bloodied, the berserker has Advantage on attack rolls and saving throws.\n\n##### Actions\n\n***Greataxe.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 9 (1d12 + 3) Slashing damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "type_line": "Medium or Small Humanoid, Neutral",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 67,
+      "formula": {
+        "op": "add",
+        "args": [
+          "9d8",
+          27
+        ]
+      },
+      "text": "67 (9d8 + 27)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "gear": {
+      "text": "Greataxe, Hide Armor"
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Common"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Bloodied Frenzy",
+        "text": "While Bloodied, the berserker has Advantage on attack rolls and saving throws."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Greataxe",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 9 (1d12 + 3) Slashing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Greataxe",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d12",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_bloodied_frenzy",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Bloodied Frenzy as written.",
+      "source_text": "While Bloodied, the berserker has Advantage on attack rolls and saving throws."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 67 (9d8 + 27)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 17 | +3 | +3 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Gear** Greataxe, Hide Armor",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Bloodied Frenzy.*** While Bloodied, the berserker has Advantage on attack rolls and saving throws.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_bloodied_frenzy"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Greataxe.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 9 (1d12 + 3) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

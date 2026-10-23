@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/running-a-monster",
+  "kind": "rule",
+  "name": "Running a Monster",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      255
+    ],
+    "section": "Monsters/Running a Monster (sidebar)",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "To ensure a monster acts in accordance with its Challenge Rating, follow these rules during combat:\n\n**Special Abilities.** If the monster has a special ability that deals a lot of damage but has a limited number of uses, such as a recharging breath weapon or a spell it can cast only once per day, have it use that special ability as quickly and as often as possible.\n\n**Multiattack.** If the monster has Multiattack, have it use Multiattack on any of its turns in which it’s not using one of its more powerful abilities.\n\n**Bonus Actions, Reactions, Legendary Actions.** If the monster has Bonus Actions, Reactions, or Legendary Actions in its stat block, make sure it uses them as often as it can.",
+  "data": {
+    "rules": [
+      {
+        "id": "special_abilities",
+        "use_early_and_often": true
+      },
+      {
+        "id": "multiattack",
+        "use_when_not_using_stronger": true
+      },
+      {
+        "id": "use_often",
+        "bonus_actions": true,
+        "reactions": true,
+        "legendary_actions": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "To ensure a monster acts in accordance with its Challenge Rating, follow these rules during combat:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Special Abilities.** If the monster has a special ability that deals a lot of damage but has a limited number of uses, such as a recharging breath weapon or a spell it can cast only once per day, have it use that special ability as quickly and as often as possible.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Multiattack.** If the monster has Multiattack, have it use Multiattack on any of its turns in which it’s not using one of its more powerful abilities.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Bonus Actions, Reactions, Legendary Actions.** If the monster has Bonus Actions, Reactions, or Legendary Actions in its stat block, make sure it uses them as often as it can.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

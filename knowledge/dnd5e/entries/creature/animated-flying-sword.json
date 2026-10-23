@@ -1,0 +1,245 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/animated-flying-sword",
+  "kind": "creature",
+  "name": "Animated Flying Sword",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      259
+    ],
+    "section": "Monsters A–Z/Animated Objects/Animated Flying Sword",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Small Construct, Unaligned*\n\n| **AC** 17 | **Initiative** +4 (14) |\n\n**HP** 14 (4d6)\n\n**Speed** 5 ft., Fly 50 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 15 | +2 | +4 | **Con** 11 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 5 | −3 | −3 | **Cha** 1 | −5 | −5 |\n\n**Immunities** Poison, Psychic; Charmed, Deafened, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned\n\n**Senses** Blindsight 60 ft.; Passive Perception 7\n\n**Languages** None\n\n**CR** 1/4 (XP 50; PB +2)\n\n##### Actions\n\n***Slash.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "cr": "1/4"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "type_line": "Small Construct, Unaligned",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 14,
+      "formula": "4d6",
+      "text": "14 (4d6)"
+    },
+    "speed": {
+      "text": "5 ft., Fly 50 ft. (hover)",
+      "walk": 5,
+      "fly": 50,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 4
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "poison",
+        "psychic"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison, Psychic; Charmed, Deafened, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft.; Passive Perception 7",
+      "blindsight": 60,
+      "passive_perception": 7
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/4",
+      "xp": 50,
+      "proficiency_bonus": 2,
+      "text": "1/4 (XP 50; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Slash",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slash",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  2
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Construct, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 14 (4d6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Fly 50 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 15 | +2 | +4 | **Con** 11 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 5 | −3 | −3 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison, Psychic; Charmed, Deafened, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft.; Passive Perception 7",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/4 (XP 50; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Slash.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned"
+  ]
+}
