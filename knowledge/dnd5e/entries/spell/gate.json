@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/gate",
+  "kind": "spell",
+  "name": "Gate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      135
+    ],
+    "section": "Spells/Spell Descriptions/Gate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 3,
+  "text": "*Level 9 Conjuration (Cleric, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a diamond worth 5,000+ GP)\n\n**Duration:** Concentration, up to 1 minute\n\nYou conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration, and the portal’s destination is visible through it.\n\nThe portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal.\n\nDeities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains.\n\nWhen you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn’t work). If that creature is on a plane other than the one you are on, the portal opens next to the named creature and transports it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the GM deems appropriate. It might leave, attack you, or help you.",
+  "facets": {
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a diamond worth 5,000+ GP",
+      "material_cost_gp": 5000
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "portal",
+        "diameter_feet": [
+          5,
+          20
+        ],
+        "any_orientation": true,
+        "destination_visible": true
+      },
+      {
+        "id": "travel",
+        "front_only": true,
+        "arrival": "nearest_unoccupied_space"
+      },
+      {
+        "id": "blocked_by",
+        "deities_and_planar_rulers": true
+      },
+      {
+        "id": "summon_named",
+        "true_name_required": true,
+        "pulled_through_if_on_other_plane": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "named_creature",
+      "reason": "gm_judgment",
+      "prompt": "How does the summoned named creature act?",
+      "source_text": "You gain no special power over the creature, and it is free to act as the GM deems appropriate. It might leave, attack you, or help you.",
+      "options": [
+        {
+          "id": "leave",
+          "label": "Leave"
+        },
+        {
+          "id": "attack",
+          "label": "Attack"
+        },
+        {
+          "id": "help",
+          "label": "Help"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Conjuration (Cleric, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a diamond worth 5,000+ GP)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration, and the portal’s destination is visible through it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "When you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn’t work). If that creature is on a plane other than the one you are on, the portal opens next to the named creature and transports it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the GM deems appropriate. It might leave, attack you, or help you.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/3",
+        "md:named_creature"
+      ]
+    }
+  ]
+}

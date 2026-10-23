@@ -1,0 +1,249 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/storm-of-vengeance",
+  "kind": "spell",
+  "name": "Storm of Vengeance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      165,
+      166
+    ],
+    "section": "Spells/Spell Descriptions/Storm of Vengeance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Conjuration (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 1 mile\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nA churning storm cloud forms for the duration, centered on a point within range and spreading to a radius of 300 feet. Each creature under the cloud when it appears must succeed on a Constitution saving throw or take 2d6 Thunder damage and have the Deafened condition for the duration.\n\nAt the start of each of your later turns, the storm produces different effects, as detailed below.\n\n***Turn 2.*** Acidic rain falls. Each creature and object under the cloud takes 4d6 Acid damage.\n\n***Turn 3.*** You call six bolts of lightning from the cloud to strike six different creatures or objects beneath it. Each target makes a Dexterity saving throw, taking 10d6 Lightning damage on a failed save or half as much damage on a successful one.\n\n***Turn 4.*** Hailstones rain down. Each creature under the cloud takes 2d6 Bludgeoning damage.\n\n***Turns 5–10.*** Gusts and freezing rain assail the area under the cloud. Each creature there takes 1d6 Cold damage. Until the spell ends, the area is Difficult Terrain and Heavily Obscured, ranged attacks with weapons are impossible there, and strong wind blows through the area.",
+  "facets": {
+    "level": 9,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "miles": 1
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "rounds",
+        "by_turn": true
+      },
+      {
+        "id": "late_turns",
+        "difficult_terrain": true,
+        "heavily_obscured": true,
+        "strong_wind": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 300,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "miles": 1
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": "thunder"
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/deafened",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1,
+            "concentration": true,
+            "up_to": true
+          }
+        }
+      ]
+    },
+    {
+      "op": "damage",
+      "amount": "4d6",
+      "damage_type": "acid",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 300,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "miles": 1
+        }
+      },
+      "note": "Each creature and object under the cloud."
+    },
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature_or_object",
+        "count": 6,
+        "distinct": true
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "10d6",
+          "damage_type": "lightning"
+        }
+      ],
+      "half_on_success": true,
+      "note": "Six different creatures or objects beneath the cloud."
+    },
+    {
+      "op": "damage",
+      "amount": "2d6",
+      "damage_type": "bludgeoning",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 300,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "miles": 1
+        }
+      }
+    },
+    {
+      "op": "damage",
+      "amount": "1d6",
+      "damage_type": "cold",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 300,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "miles": 1
+        }
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "ranged_weapon_attacks"
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Conjuration (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 1 mile\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A churning storm cloud forms for the duration, centered on a point within range and spreading to a radius of 300 feet. Each creature under the cloud when it appears must succeed on a Constitution saving throw or take 2d6 Thunder damage and have the Deafened condition for the duration.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "At the start of each of your later turns, the storm produces different effects, as detailed below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Turn 2.*** Acidic rain falls. Each creature and object under the cloud takes 4d6 Acid damage.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Turn 3.*** You call six bolts of lightning from the cloud to strike six different creatures or objects beneath it. Each target makes a Dexterity saving throw, taking 10d6 Lightning damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Turn 4.*** Hailstones rain down. Each creature under the cloud takes 2d6 Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Turns 5–10.*** Gusts and freezing rain assail the area under the cloud. Each creature there takes 1d6 Cold damage. Until the spell ends, the area is Difficult Terrain and Heavily Obscured, ranged attacks with weapons are impossible there, and strong wind blows through the area.",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/effects/5",
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/deafened"
+  ]
+}

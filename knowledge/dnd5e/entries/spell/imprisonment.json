@@ -1,0 +1,241 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/imprisonment",
+  "kind": "spell",
+  "name": "Imprisonment",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      142
+    ],
+    "section": "Spells/Spell Descriptions/Imprisonment",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 3,
+  "text": "*Level 9 Abjuration (Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a statuette of the target worth 5,000+ GP)\n\n**Duration:** Until dispelled\n\nYou create a magical restraint to hold a creature that you can see within range. The target must make a Wisdom saving throw. On a successful save, the target is unaffected, and it is immune to this spell for the next 24 hours. On a failed save, the target is imprisoned. While imprisoned, the target doesn’t need to breathe, eat, or drink, and it doesn’t age. Divination spells can’t locate or perceive the imprisoned target, and the target can’t teleport.\n\nUntil the spell ends, the target is also affected by one of the following effects of your choice:\n\n**Burial.** The target is entombed beneath the earth in a hollow globe of magical force that is just large enough to contain the target. Nothing can pass into or out of the globe.\n\n**Chaining.** Chains firmly rooted in the ground hold the target in place. The target has the Restrained condition and can’t be moved by any means.\n\n**Hedged Prison.** The target is trapped in a demiplane that is warded against teleportation and planar travel. The demiplane is your choice of a labyrinth, a cage, a tower, or the like.\n\n**Minimus Containment.** The target becomes 1 inch tall and is trapped inside an indestructible gemstone or a similar object. Light can pass through the gemstone (allowing the target to see out and other creatures to see in), but nothing else can pass through by any means.\n\n**Slumber.** The target has the Unconscious condition and can’t be awoken.\n\n***Ending the Spell.*** When you cast the spell, specify a trigger that will end it. The trigger can be as simple or as elaborate as you choose, but the GM must agree that it has a high likelihood of happening within the next decade. The trigger must be an observable action, such as someone making a particular offering at the temple of your god, saving your true love, or defeating a specific monster.\n\nA *Dispel Magic* spell can end the spell only if it is cast with a level 9 spell slot, targeting either the prison or the component used to create it.",
+  "facets": {
+    "level": 9,
+    "school": "abjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a statuette of the target worth 5,000+ GP",
+      "material_cost_gp": 5000
+    },
+    "duration": {
+      "kind": "until_dispelled",
+      "text": "Until dispelled"
+    },
+    "rules": [
+      {
+        "id": "dispel",
+        "spell": "dnd5e/spell/dispel-magic",
+        "slot_level": 9,
+        "targets": [
+          "prison",
+          "component"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/imprisonment",
+          "note": "Imprisoned: no need to breathe, eat or drink; doesn't age; can't be located by Divination; can't teleport."
+        },
+        {
+          "op": "choice",
+          "id": "prison",
+          "choose": 1,
+          "options": [
+            {
+              "id": "burial",
+              "label": "Burial",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/spell/imprisonment",
+                  "note": "Entombed in a globe of force; nothing passes in or out."
+                }
+              ]
+            },
+            {
+              "id": "chaining",
+              "label": "Chaining",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/restrained",
+                  "note": "Can't be moved by any means.",
+                  "duration": {
+                    "kind": "until_dispelled"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hedged_prison",
+              "label": "Hedged Prison",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/spell/imprisonment",
+                  "note": "Demiplane warded against teleportation and planar travel."
+                }
+              ]
+            },
+            {
+              "id": "minimus_containment",
+              "label": "Minimus Containment",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/spell/imprisonment",
+                  "note": "1 inch tall inside an indestructible gemstone; only light passes."
+                }
+              ]
+            },
+            {
+              "id": "slumber",
+              "label": "Slumber",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/unconscious",
+                  "note": "Can't be awoken.",
+                  "duration": {
+                    "kind": "until_dispelled"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "On a success, immune to this spell for 24 hours."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "imprisonment_trigger",
+      "reason": "gm_judgment",
+      "prompt": "Does the GM agree the ending trigger is likely within a decade, and has it occurred?",
+      "source_text": "The trigger can be as simple or as elaborate as you choose, but the GM must agree that it has a high likelihood of happening within the next decade."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Abjuration (Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a statuette of the target worth 5,000+ GP)\n\n**Duration:** Until dispelled",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a magical restraint to hold a creature that you can see within range. The target must make a Wisdom saving throw. On a successful save, the target is unaffected, and it is immune to this spell for the next 24 hours. On a failed save, the target is imprisoned. While imprisoned, the target doesn’t need to breathe, eat, or drink, and it doesn’t age. Divination spells can’t locate or perceive the imprisoned target, and the target can’t teleport.\n\nUntil the spell ends, the target is also affected by one of the following effects of your choice:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Burial.** The target is entombed beneath the earth in a hollow globe of magical force that is just large enough to contain the target. Nothing can pass into or out of the globe.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/1/options/0"
+      ]
+    },
+    {
+      "text": "**Chaining.** Chains firmly rooted in the ground hold the target in place. The target has the Restrained condition and can’t be moved by any means.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/1/options/1"
+      ]
+    },
+    {
+      "text": "**Hedged Prison.** The target is trapped in a demiplane that is warded against teleportation and planar travel. The demiplane is your choice of a labyrinth, a cage, a tower, or the like.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/1/options/2"
+      ]
+    },
+    {
+      "text": "**Minimus Containment.** The target becomes 1 inch tall and is trapped inside an indestructible gemstone or a similar object. Light can pass through the gemstone (allowing the target to see out and other creatures to see in), but nothing else can pass through by any means.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/1/options/3"
+      ]
+    },
+    {
+      "text": "**Slumber.** The target has the Unconscious condition and can’t be awoken.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/1/options/4"
+      ]
+    },
+    {
+      "text": "***Ending the Spell.*** When you cast the spell, specify a trigger that will end it. The trigger can be as simple or as elaborate as you choose, but the GM must agree that it has a high likelihood of happening within the next decade. The trigger must be an observable action, such as someone making a particular offering at the temple of your god, saving your true love, or defeating a specific monster.",
+      "status": "master_decision",
+      "by": [
+        "md:imprisonment_trigger"
+      ]
+    },
+    {
+      "text": "A *Dispel Magic* spell can end the spell only if it is cast with a level 9 spell slot, targeting either the prison or the component used to create it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/imprisonment"
+  ]
+}
