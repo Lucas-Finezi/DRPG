@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-property/ammunition",
+  "kind": "weapon-property",
+  "name": "Ammunition",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      89
+    ],
+    "section": "Equipment/Weapons/Properties/Ammunition",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 1,
+  "text": "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon’s range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+  "data": {
+    "rules": [
+      {
+        "id": "ammunition",
+        "requires_ammunition": true,
+        "type_with_range": true,
+        "expended_per_attack": 1,
+        "drawing_part_of_attack": true,
+        "one_handed_loading_needs_free_hand": true
+      },
+      {
+        "id": "recovery",
+        "minutes": 1,
+        "recover_fraction": 0.5,
+        "round": "down"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon’s range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon).",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

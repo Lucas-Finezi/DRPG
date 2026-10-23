@@ -829,6 +829,15 @@
           129
         ],
         "lot": "L24"
+      },
+      {
+        "id": "attack_ability_mod",
+        "description": "The ability modifier used for the attack roll.",
+        "type": "number",
+        "pages": [
+          90
+        ],
+        "lot": "L28"
       }
     ],
     "stats": [
@@ -3831,6 +3840,28 @@
           155
         ],
         "lot": "L26"
+      },
+      {
+        "id": "ability_score_below",
+        "description": "The creature's ability score (param) is below a value (param).",
+        "params": [
+          "ability",
+          "score"
+        ],
+        "type": "predicate",
+        "pages": [
+          89
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "attack_with_light_weapon",
+        "description": "The attack uses a Light weapon.",
+        "type": "predicate",
+        "pages": [
+          89
+        ],
+        "lot": "L28"
       }
     ],
     "frequencies": [
@@ -4851,6 +4882,14 @@
           165
         ],
         "lot": "L26"
+      },
+      {
+        "id": "attack_beyond_long_range",
+        "description": "The creature can't attack a target beyond the weapon's long range.",
+        "pages": [
+          90
+        ],
+        "lot": "L28"
       }
     ],
     "conditions": [

@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon/dart",
+  "kind": "weapon",
+  "name": "Dart",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      91
+    ],
+    "section": "Equipment/Weapons/Weapons/Simple Ranged Weapons/Dart",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "| ↳ Dart | 1d4 Piercing | Finesse, Thrown (Range 20/60) | Vex | 1/4 lb. | 5 CP |",
+  "facets": {
+    "category": "simple",
+    "melee_or_ranged": "ranged",
+    "damage_type": "piercing",
+    "mastery": "vex",
+    "cost_cp": 5
+  },
+  "data": {
+    "category": "simple",
+    "melee_or_ranged": "ranged",
+    "damage": {
+      "amount": "1d4",
+      "type": "piercing"
+    },
+    "properties": [
+      {
+        "ref": "dnd5e/weapon-property/finesse"
+      },
+      {
+        "ref": "dnd5e/weapon-property/thrown",
+        "range": {
+          "normal_feet": 20,
+          "long_feet": 60
+        }
+      }
+    ],
+    "mastery": "dnd5e/weapon-mastery/vex",
+    "weight_lb": 0.25,
+    "cost": {
+      "amount": 5,
+      "unit": "cp",
+      "cp": 5
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_weapon",
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": "1d4",
+          "damage_type": "piercing",
+          "note": "Plus the attack's ability modifier."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "| ↳ Dart | 1d4 Piercing | Finesse, Thrown (Range 20/60) | Vex | 1/4 lb. | 5 CP |",
+      "status": "structured",
+      "by": [
+        "/data/category",
+        "/data/melee_or_ranged",
+        "/data/damage",
+        "/data/properties",
+        "/data/mastery",
+        "/data/weight_lb",
+        "/data/cost",
+        "/effects/0",
+        "dnd5e/weapon-property/finesse",
+        "dnd5e/weapon-property/thrown",
+        "dnd5e/weapon-mastery/vex"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-mastery/vex",
+    "dnd5e/weapon-property/finesse",
+    "dnd5e/weapon-property/thrown"
+  ]
+}

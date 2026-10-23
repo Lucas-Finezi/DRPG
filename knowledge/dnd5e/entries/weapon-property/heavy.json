@@ -1,0 +1,73 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-property/heavy",
+  "kind": "weapon-property",
+  "name": "Heavy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      89
+    ],
+    "section": "Equipment/Weapons/Properties/Heavy",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "You have Disadvantage on attack rolls with a Heavy weapon if it’s a Melee weapon and your Strength score isn’t at least 13 or if it’s a Ranged weapon and your Dexterity score isn’t at least 13.",
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "any": [
+          {
+            "all": [
+              {
+                "pred": "attack_with_melee_weapon"
+              },
+              {
+                "pred": "ability_score_below",
+                "args": {
+                  "ability": "str",
+                  "score": 13
+                }
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "pred": "attack_with_ranged_weapon"
+              },
+              {
+                "pred": "ability_score_below",
+                "args": {
+                  "ability": "dex",
+                  "score": 13
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have Disadvantage on attack rolls with a Heavy weapon if it’s a Melee weapon and your Strength score isn’t at least 13 or if it’s a Ranged weapon and your Dexterity score isn’t at least 13.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}
