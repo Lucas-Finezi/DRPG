@@ -22,7 +22,7 @@ Todo conteúdo, oficial ou homebrew, é validado contra eles por
 |---|---|
 | Vida | `damage`, `heal`, `temp_hp` |
 | Condições | `apply_condition`, `remove_condition` |
-| Modificadores | `modifier` (soma/define/mín./máx./multiplica um stat), `roll_mode` (vantagem/desvantagem), `defense` (resistência/imunidade/vulnerabilidade), `proficiency`, `sense`, `speed` |
+| Modificadores | `modifier` (soma/define/mín./máx./multiplica um stat), `roll_mode` (vantagem/desvantagem), `auto_result` (falha/sucesso/acerto/erro/crítico automático), `reroll`, `restrict` (algo que a criatura não pode fazer), `defense` (resistência/imunidade/vulnerabilidade), `proficiency`, `sense`, `speed` |
 | Recursos | `resource` (define máximo e recuperação), `spend`, `restore` |
 | Resolução | `save`, `attack`, `check` (com ramos `on_fail`/`on_success`/`on_hit`...) |
 | Ações e fluxo | `trigger` (evento → efeitos), `activation` (custo de ação → efeitos), `choice`, `repeat`, `end_effect` |

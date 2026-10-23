@@ -1977,6 +1977,24 @@
           103
         ],
         "lot": "L08"
+      },
+      {
+        "id": "damage_amount",
+        "description": "Amount of damage just taken.",
+        "type": "number",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "spell_level",
+        "description": "Level of the spell as cast (the slot level when cast with a higher slot).",
+        "type": "number",
+        "pages": [
+          104
+        ],
+        "lot": "L09"
       }
     ],
     "stats": [
@@ -2420,6 +2438,24 @@
           187
         ],
         "lot": "L07"
+      },
+      {
+        "id": "concentration_effect_started",
+        "description": "The creature starts casting a Concentration spell or activates another Concentration effect.",
+        "type": "event",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "dies",
+        "description": "The creature dies.",
+        "type": "event",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
       }
     ],
     "predicates": [
@@ -2847,6 +2883,33 @@
           178
         ],
         "lot": "L08"
+      },
+      {
+        "id": "concentrating",
+        "description": "The creature is concentrating on an effect.",
+        "type": "predicate",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "has_hand_free",
+        "description": "The creature has a hand free.",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "can_speak_normally",
+        "description": "The creature can utter words in a normal speaking voice (not gagged or in magical silence).",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
       }
     ],
     "frequencies": [
@@ -3734,6 +3797,89 @@
           183
         ],
         "lot": "L07"
+      },
+      {
+        "id": "spell_slot",
+        "name": "Spell Slots",
+        "description": "Spell slots by level (param: level).",
+        "pages": [
+          104
+        ],
+        "lot": "L09"
+      }
+    ],
+    "schools": [
+      {
+        "id": "abjuration",
+        "name": "Abjuration",
+        "description": "Prevents or reverses harmful effects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "conjuration",
+        "name": "Conjuration",
+        "description": "Transports creatures or objects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "divination",
+        "name": "Divination",
+        "description": "Reveals information",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "enchantment",
+        "name": "Enchantment",
+        "description": "Influences minds",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "evocation",
+        "name": "Evocation",
+        "description": "Channels energy to create effects that are often destructive",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "illusion",
+        "name": "Illusion",
+        "description": "Deceives the mind or senses",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "necromancy",
+        "name": "Necromancy",
+        "description": "Manipulates life and death",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "transmutation",
+        "name": "Transmutation",
+        "description": "Transforms creatures or objects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
       }
     ]
   },

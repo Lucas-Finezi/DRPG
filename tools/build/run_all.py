@@ -5,7 +5,7 @@
   2. clear knowledge/dnd5e/entries and run each lot builder (lNN_*.py) in lot order;
      L02 writes system.json first, later lots add the registry names they need
   3. L01 examples (they embed an excerpt of the final system.json)
-  4. validate.py, selftest.py, coverage.py
+  4. validate.py, selftest.py, coverage.py, refs.py
 
 Usage: python3 -I tools/build/run_all.py [--extract]   (--extract also re-extracts the PDF)
 """
@@ -36,6 +36,7 @@ def main():
     run(*PY, "tools/validate/validate.py")
     run(*PY, "tools/validate/selftest.py")
     run(*PY, "tools/validate/coverage.py")
+    run(*PY, "tools/validate/refs.py")
 
 
 if __name__ == "__main__":

@@ -19,6 +19,7 @@ o **D&D SRD 5.2.1** (CC-BY-4.0).
 | `knowledge/dnd5e/system.json` | **L02**: definição do sistema e registros que fecham o vocabulário de efeitos |
 | `knowledge/dnd5e/entries/<kind>/<slug>.json` | Entradas de catálogo, uma por arquivo |
 | `tools/` | Scripts reprodutíveis: `extract/`, `inventory/`, `build/` (um construtor por lote), `validate/` |
+| `docs/decisions.md` | Decisões do projeto (D-001 acesso de classe às magias pelo cabeçalho; D-002 idioma) |
 
 ## Ordem de leitura para agentes
 
@@ -35,13 +36,16 @@ o **D&D SRD 5.2.1** (CC-BY-4.0).
 ```bash
 pip install -r tools/requirements.txt                  # e poppler-utils (pdftotext)
 python3 -I tools/extract/extract_srd.py source/SRD_CC_v5.2.1.pdf extraction   # texto
-python3 -I tools/inventory/build_inventory.py                                 # L00
-python3 -I tools/build/l02_system.py                                          # L02
-python3 -I tools/build/l01_examples.py                                        # L01 (exemplos)
-python3 -I tools/validate/validate.py      # schemas, exemplos, sistema e entradas
-python3 -I tools/validate/selftest.py      # o validador rejeita erros conhecidos
-python3 -I tools/validate/coverage.py      # cada trecho da fonte está em alguma entrada
+python3 -I tools/build/run_all.py          # inventário, todos os lotes em ordem e todas as checagens
 ```
+
+`run_all.py` executa:
+- **construção:** `build_inventory.py` (L00) e os construtores `tools/build/lNN_*.py` em ordem; `l01_examples.py` por último;
+- **checagens:**
+  - `validate.py`: schemas, exemplos, sistema e entradas;
+  - `selftest.py`: o validador rejeita erros conhecidos;
+  - `coverage.py`: cada trecho da fonte está em alguma entrada do seu lote;
+  - `refs.py`: todo `ref` existe ou está previsto para um lote futuro.
 
 ## Status dos lotes
 
@@ -50,7 +54,13 @@ python3 -I tools/validate/coverage.py      # cada trecho da fonte está em algum
 | 0 — Fundações | L00 Inventário da fonte | concluído |
 | 0 — Fundações | L01 Contrato base | concluído |
 | 0 — Fundações | L02 Sistema D&D 5e | concluído (system.json + 43 entradas de regra; cobertura 436/436 trechos) |
-| 1 — Regras compartilhadas | L03–L09 | pendente |
+| 1 — Regras compartilhadas | L03 Condições | concluído (15 condições + regra; 84/84 trechos) |
+| 1 — Regras compartilhadas | L04 Regras de combate | concluído (12 ações, 32 termos, seções e quadros; 304/304) |
+| 1 — Regras compartilhadas | L05 Testes e proficiências | concluído (16 termos, 3 atitudes, seções; 201/201) |
+| 1 — Regras compartilhadas | L06 Dano, cura e resistências | concluído (20 termos, 5 perigos, seções; 137/137) |
+| 1 — Regras compartilhadas | L07 Recursos e descansos | concluído (descansos, Dados de Vida; 31/31) |
+| 1 — Regras compartilhadas | L08 Regras de equipamento | concluído (CA, treino em armadura, carga, moedas, criação; 43/43) |
+| 1 — Regras compartilhadas | L09 Regras de magia | concluído (espaços, componentes, concentração, áreas; 145/145) |
 | 2 — Catálogos de personagem | L10–L16 | pendente |
 | 3 — Magias | L17–L27 | pendente |
 | 4 — Equipamentos e itens | L28–L32 | pendente |

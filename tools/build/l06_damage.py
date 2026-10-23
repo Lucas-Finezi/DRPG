@@ -187,7 +187,7 @@ def sections():
                                                                            "vulnerability"]})], page=17))
     E.append(sec("playing-the-game-immunity", "Immunity", [(None, "ref", [ref_of("Immunity")])], page=17))
     E.append(sec("playing-the-game-healing", "Healing", [
-        (None, "ref", ["dnd5e/spell/cure-wounds", "dnd5e/magic-item/potion-of-healing",
+        (None, "ref", ["dnd5e/spell/cure-wounds", "dnd5e/magic-item/potions-of-healing",
                        ref_of("Short Rest"), ref_of("Long Rest")]),
         ("When you receive healing", "rule", {"id": "healing_cap", "max": {"var": "hp_max"}, "excess": "lost"})],
         page=17))

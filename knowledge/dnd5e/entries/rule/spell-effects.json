@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/spell-effects",
+  "kind": "rule",
+  "name": "Effects",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      106
+    ],
+    "section": "Spells/Casting Spells/Effects",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L09"
+  },
+  "tier": 3,
+  "text": "The effects of a spell are detailed after its duration entry. Those details present exactly what the spell does, which ignores mundane physical laws; any outcomes beyond those effects are under the GM’s purview. Whatever the effects, they typically deal with targets, saving throws, attack rolls, or all three, each of which is detailed below.\n\n#### Targets\n\nA typical spell requires the caster to pick one or more targets to be affected by the spell’s magic. A spell’s description says whether the spell targets creatures, objects, or something else.\n\n***A Clear Path to the Target.*** To target something with a spell, a caster must have a clear path to it, so it can’t be behind Total Cover.\n\n***Targeting Yourself.*** If a spell targets a creature of your choice, you can choose yourself unless the creature must be Hostile or specifically a creature other than you.\n\n***Areas of Effect.*** Some spells, such as *Thunderwave*, cover an area called an area of effect, which is defined in “Rules Glossary.” The area determines what the spell targets. The description of a spell specifies whether it has an area of effect, which is typically one of these shapes: Cone, Cube, Cylinder, Emanation, Line, or Sphere.\n\n***Awareness of Being Targeted.*** Unless a spell has a perceptible effect, a creature doesn’t know it was targeted by the spell. An effect like lightning is obvious, but a more subtle effect, such as an attempt to read thoughts, goes unnoticed unless a spell’s description says otherwise.\n\n***Invalid Targets.*** If you cast a spell on someone or something that can’t be affected by it, nothing happens to that target, but if you used a spell slot to cast the spell, the slot is still expended.\n\nIf the spell normally has no effect on a target that succeeds on a saving throw, the invalid target appears to have succeeded on its saving throw, even though it didn’t attempt one (giving no hint that the creature is an invalid target). Otherwise, you perceive that the spell did nothing to the target.\n\n#### Saving Throws\n\nMany spells specify that a target makes a saving throw to avoid some or all of a spell’s effects. The spell specifies the ability that the target uses for the save and what happens on a success or failure. Here’s how to calculate the DC for your spells:\n\n**Spell save DC** = 8 + your spellcasting ability modifier\n\n+ your Proficiency Bonus\n\n#### Attack Rolls\n\nSome spells require the caster to make an attack roll to determine whether the spell hits a target. Here’s how to calculate the attack modifier for your spells:\n\n**Spell attack modifier** = your spellcasting ability modifier + your Proficiency Bonus\n\n#### Combining Spell Effects\n\nThe effects of different spells add together while their durations overlap. In contrast, the effects of the same spell cast multiple times don’t combine. Instead, the most potent effect—such as the highest bonus—from those castings applies while their durations overlap. The most recent effect applies if the castings are equally potent and their durations overlap. For example, if two Clerics cast *Bless* on the same target, that target gains the spell’s benefit only once; the target doesn’t receive two bonus dice. But if the durations of the spells overlap, the effect continues until the duration of the second *Bless* ends.",
+  "data": {
+    "rules": [
+      {
+        "id": "clear_path",
+        "blocked_by": "total_cover"
+      },
+      {
+        "id": "target_self",
+        "allowed_if_creature_of_choice": true,
+        "unless": [
+          "must_be_hostile",
+          "must_be_other_creature"
+        ]
+      },
+      {
+        "id": "awareness",
+        "aware_only_if_perceptible": true
+      },
+      {
+        "id": "invalid_target",
+        "no_effect": true,
+        "slot_still_expended": true,
+        "appears_to_succeed_save_if_save_negates": true
+      },
+      {
+        "id": "combining",
+        "different_spells": "add",
+        "same_spell": "most_potent_applies",
+        "equal_potency": "most_recent"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "beyond_spell_effects",
+      "reason": "gm_judgment",
+      "prompt": "Rule on outcomes beyond what the spell's description states.",
+      "source_text": "Those details present exactly what the spell does, which ignores mundane physical laws; any outcomes beyond those effects are under the GM’s purview.",
+      "pages": [
+        106
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The effects of a spell are detailed after its duration entry. Those details present exactly what the spell does, which ignores mundane physical laws; any outcomes beyond those effects are under the GM’s purview. Whatever the effects, they typically deal with targets, saving throws, attack rolls, or all three, each of which is detailed below.",
+      "status": "master_decision",
+      "by": [
+        "md:beyond_spell_effects"
+      ]
+    },
+    {
+      "text": "#### Targets\n\nA typical spell requires the caster to pick one or more targets to be affected by the spell’s magic. A spell’s description says whether the spell targets creatures, objects, or something else.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***A Clear Path to the Target.*** To target something with a spell, a caster must have a clear path to it, so it can’t be behind Total Cover.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Targeting Yourself.*** If a spell targets a creature of your choice, you can choose yourself unless the creature must be Hostile or specifically a creature other than you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Areas of Effect.*** Some spells, such as *Thunderwave*, cover an area called an area of effect, which is defined in “Rules Glossary.” The area determines what the spell targets. The description of a spell specifies whether it has an area of effect, which is typically one of these shapes: Cone, Cube, Cylinder, Emanation, Line, or Sphere.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/area-of-effect"
+      ]
+    },
+    {
+      "text": "***Awareness of Being Targeted.*** Unless a spell has a perceptible effect, a creature doesn’t know it was targeted by the spell. An effect like lightning is obvious, but a more subtle effect, such as an attempt to read thoughts, goes unnoticed unless a spell’s description says otherwise.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Invalid Targets.*** If you cast a spell on someone or something that can’t be affected by it, nothing happens to that target, but if you used a spell slot to cast the spell, the slot is still expended.\n\nIf the spell normally has no effect on a target that succeeds on a saving throw, the invalid target appears to have succeeded on its saving throw, even though it didn’t attempt one (giving no hint that the creature is an invalid target). Otherwise, you perceive that the spell did nothing to the target.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### Saving Throws\n\nMany spells specify that a target makes a saving throw to avoid some or all of a spell’s effects. The spell specifies the ability that the target uses for the save and what happens on a success or failure. Here’s how to calculate the DC for your spells:\n\n**Spell save DC** = 8 + your spellcasting ability modifier\n\n+ your Proficiency Bonus",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/levels/rules/9"
+      ]
+    },
+    {
+      "text": "#### Attack Rolls\n\nSome spells require the caster to make an attack roll to determine whether the spell hits a target. Here’s how to calculate the attack modifier for your spells:\n\n**Spell attack modifier** = your spellcasting ability modifier + your Proficiency Bonus",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/levels/rules/10"
+      ]
+    },
+    {
+      "text": "#### Combining Spell Effects\n\nThe effects of different spells add together while their durations overlap. In contrast, the effects of the same spell cast multiple times don’t combine. Instead, the most potent effect—such as the highest bonus—from those castings applies while their durations overlap. The most recent effect applies if the castings are equally potent and their durations overlap. For example, if two Clerics cast *Bless* on the same target, that target gains the spell’s benefit only once; the target doesn’t receive two bonus dice. But if the durations of the spells overlap, the effect continues until the duration of the second *Bless* ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/area-of-effect",
+    "dnd5e/system/dnd5e"
+  ]
+}
