@@ -104,7 +104,7 @@ def parse_components(t):
     if "M" in letters:
         mat = m.group(2)
         out["material"] = mat
-        c = re.search(r"worth ([\d,]+)\+\s?GP", mat)
+        c = re.search(r"([\d,]+)\+\s?GP", mat)
         if c:
             out["material_cost_gp"] = int(c.group(1).replace(",", ""))
         if "which the spell consumes" in mat:

@@ -21,7 +21,9 @@ Conjuration na descrição e como Evocation nas listas de Druid, Sorcerer e Wiza
 descrição é tratada como autoritativa também para a escola (Conjuration); as listas
 registram a divergência.
 
-Aplicada por: `tools/inventory/build_inventory.py` (campo `resolution`) e pelo lote L27.
+Aplicada por: `tools/inventory/build_inventory.py` (campo `resolution`) e pelo lote L27: cada
+entrada `spell-list` guarda a lista impressa (`printed_spells`), a lista efetiva (`spells`, que
+inclui as magias cujo cabeçalho cita a classe) e as divergências em `inconsistencies`.
 
 ## D-002 — Idioma
 

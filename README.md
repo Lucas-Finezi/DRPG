@@ -45,7 +45,7 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
   - `validate.py`: schemas, exemplos, sistema e entradas;
   - `selftest.py`: o validador rejeita erros conhecidos;
   - `coverage.py`: cada trecho da fonte está em alguma entrada do seu lote;
-  - `refs.py`: todo `ref` existe ou está previsto para um lote futuro.
+  - `refs.py`: todo `ref` existe ou está previsto para um lote futuro, e toda entrada esperada de um lote já construído existe.
 
 ## Status dos lotes
 
@@ -68,7 +68,17 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
 | 2 — Catálogos de personagem | L14 Features | concluído (303 features: 33 traços de espécie, 232 de classe/subclasse, 10 Metamagias, 28 Invocações; 1220/1220) |
 | 2 — Catálogos de personagem | L15 Talentos | concluído (17 talentos + seções e quadro; 94/94) |
 | 2 — Catálogos de personagem | L16 Multiclasse | concluído (regras e tabela Multiclass Spellcaster; 59/59) |
-| 3 — Magias | L17–L27 | pendente |
+| 3 — Magias | L17 Truques | concluído (27 magias; 238/238) |
+| 3 — Magias | L18 Magias de círculo 1 | concluído (57 magias; 472/472) |
+| 3 — Magias | L19 Magias de círculo 2 | concluído (57 magias + Otherworldly Steed; 509/509) |
+| 3 — Magias | L20 Magias de círculo 3 | concluído (42 magias; 378/378) |
+| 3 — Magias | L21 Magias de círculo 4 | concluído (34 magias + Giant Insect; 331/331) |
+| 3 — Magias | L22 Magias de círculo 5 | concluído (38 magias + Animated Object e Draconic Spirit; 437/437) |
+| 3 — Magias | L23 Magias de círculo 6 | concluído (31 magias; 296/296) |
+| 3 — Magias | L24 Magias de círculo 7 | concluído (20 magias; 235/235) |
+| 3 — Magias | L25 Magias de círculo 8 | concluído (17 magias; 175/175) |
+| 3 — Magias | L26 Magias de círculo 9 | concluído (16 magias; 174/174) |
+| 3 — Magias | L27 Listas de magia | concluído (8 listas de classe + 8 de subclasse, 939 vínculos, divergências registradas; 1040/1040) |
 | 4 — Equipamentos e itens | L28–L32 | pendente |
 | 5 — Criaturas e encontros | L33–L42 | pendente |
 | 6 — Integração e auditoria | L43–L46 | pendente |
