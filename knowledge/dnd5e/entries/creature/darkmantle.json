@@ -1,0 +1,265 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/darkmantle",
+  "kind": "creature",
+  "name": "Darkmantle",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      278,
+      279
+    ],
+    "section": "Monsters A–Z/Darkmantle/Darkmantle",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Small Aberration, Unaligned*\n\n| **AC** 11 | **Initiative** +3 (13) |\n\n**HP** 22 (5d6 + 5)\n\n**Speed** 10 ft., Fly 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |\n\n**Skills** Stealth +3\n\n**Senses** Blindsight 60 ft.; Passive Perception 10\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Actions\n\n***Crush.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Bludgeoning damage, and the darkmantle attaches to the target. If the target is a Medium or smaller creature and the darkmantle had Advantage on the attack roll, it covers the target, which has the Blinded condition and is suffocating while the darkmantle is attached in this way. \n\nWhile attached to a target, the darkmantle can attack only the target but has Advantage on its attack rolls. Its Speed becomes 0, it can’t benefit from any bonus to its Speed, and it moves with the target. \n\nA creature can take an action to try to detach the darkmantle from itself, doing so with a successful DC 13 Strength (Athletics) check. On its turn, the darkmantle can detach itself by using 5 feet of movement.\n\n***Darkness Aura (1/Day).*** Magical Darkness fills a 15-foot Emanation originating from the darkmantle. This effect lasts while the darkmantle maintains Concentration on it, up to 10 minutes. Darkvision can’t penetrate this area, and no light can illuminate it.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Aberration",
+    "alignment": "Unaligned",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Aberration",
+    "alignment": "Unaligned",
+    "type_line": "Small Aberration, Unaligned",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": {
+        "op": "add",
+        "args": [
+          "5d6",
+          5
+        ]
+      },
+      "text": "22 (5d6 + 5)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 30 ft.",
+      "walk": 10,
+      "fly": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "stealth": 3,
+      "text": "Stealth +3"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft.; Passive Perception 10",
+      "blindsight": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Crush",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Bludgeoning damage, and the darkmantle attaches to the target. If the target is a Medium or smaller creature and the darkmantle had Advantage on the attack roll, it covers the target, which has the Blinded condition and is suffocating while the darkmantle is attached in this way. \n\nWhile attached to a target, the darkmantle can attack only the target but has Advantage on its attack rolls. Its Speed becomes 0, it can’t benefit from any bonus to its Speed, and it moves with the target. \n\nA creature can take an action to try to detach the darkmantle from itself, doing so with a successful DC 13 Strength (Athletics) check. On its turn, the darkmantle can detach itself by using 5 feet of movement."
+      },
+      {
+        "name": "Darkness Aura",
+        "per_day": 1,
+        "text": "Magical Darkness fills a 15-foot Emanation originating from the darkmantle. This effect lasts while the darkmantle maintains Concentration on it, up to 10 minutes. Darkvision can’t penetrate this area, and no light can illuminate it."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Crush",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_crush_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Crush as written.",
+      "source_text": "6 (1d6 + 3) Bludgeoning damage, and the darkmantle attaches to the target. If the target is a Medium or smaller creature and the darkmantle had Advantage on the attack roll, it covers the target, which has the Blinded condition and is suffocating while the darkmantle is attached in this way."
+    },
+    {
+      "id": "actions_darkness_aura",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Darkness Aura as written.",
+      "source_text": "Magical Darkness fills a 15-foot Emanation originating from the darkmantle. This effect lasts while the darkmantle maintains Concentration on it, up to 10 minutes. Darkvision can’t penetrate this area, and no light can illuminate it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Aberration, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (5d6 + 5)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Crush.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Bludgeoning damage, and the darkmantle attaches to the target. If the target is a Medium or smaller creature and the darkmantle had Advantage on the attack roll, it covers the target, which has the Blinded condition and is suffocating while the darkmantle is attached in this way. \n\nWhile attached to a target, the darkmantle can attack only the target but has Advantage on its attack rolls. Its Speed becomes 0, it can’t benefit from any bonus to its Speed, and it moves with the target. \n\nA creature can take an action to try to detach the darkmantle from itself, doing so with a successful DC 13 Strength (Athletics) check. On its turn, the darkmantle can detach itself by using 5 feet of movement.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/0",
+        "md:actions_crush_rider"
+      ]
+    },
+    {
+      "text": "***Darkness Aura (1/Day).*** Magical Darkness fills a 15-foot Emanation originating from the darkmantle. This effect lasts while the darkmantle maintains Concentration on it, up to 10 minutes. Darkvision can’t penetrate this area, and no light can illuminate it.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "md:actions_darkness_aura"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded"
+  ]
+}

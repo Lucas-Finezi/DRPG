@@ -1,0 +1,456 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/drider",
+  "kind": "creature",
+  "name": "Drider",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      281
+    ],
+    "section": "Monsters A–Z/Drider/Drider",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 2,
+  "text": "*Large Monstrosity, Chaotic Evil*\n\n| **AC** 19 | **Initiative** +4 (14) |\n\n**HP** 123 (13d10 + 52)\n\n**Speed** 30 ft., Climb 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 12 | +1 | +1 |\n\n**Skills** Perception +6, Stealth +10\n\n**Senses** Darkvision 120 ft.; Passive Perception 16\n\n**Languages** Elvish, Undercommon\n\n**CR** 6 (XP 2,300; PB +3)\n\n##### Traits\n\n***Spider Climb.*** The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n***Sunlight Sensitivity.*** While in sunlight, the drider has Disadvantage on ability checks and attack rolls.\n\n***Web Walker.*** The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web.\n\n##### Actions\n\n***Multiattack.*** The drider makes three attacks, using Foreleg or Poison Burst in any combination.\n\n***Foreleg.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 13 (2d8 + 4) Piercing damage.\n\n***Poison Burst.*** *Ranged Attack Roll:* +6, range 120 ft. *Hit:* 13 (3d6 + 3) Poison damage.\n\n##### Bonus Actions\n\n***Magic of the Spider Queen (Recharge 5–6).*** The drider casts *Darkness*, *Faerie Fire*, or *Web*, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Monstrosity",
+    "alignment": "Chaotic Evil",
+    "cr": "6"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Monstrosity",
+    "alignment": "Chaotic Evil",
+    "type_line": "Large Monstrosity, Chaotic Evil",
+    "ac": {
+      "value": 19,
+      "text": "19"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 123,
+      "formula": {
+        "op": "add",
+        "args": [
+          "13d10",
+          52
+        ]
+      },
+      "text": "123 (13d10 + 52)"
+    },
+    "speed": {
+      "text": "30 ft., Climb 30 ft.",
+      "walk": 30,
+      "climb": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "stealth": 10,
+      "text": "Perception +6, Stealth +10"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 16",
+      "darkvision": 120,
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "Elvish, Undercommon"
+    },
+    "cr": {
+      "value": "6",
+      "xp": 2300,
+      "proficiency_bonus": 3,
+      "text": "6 (XP 2,300; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "text": "The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Sunlight Sensitivity",
+        "text": "While in sunlight, the drider has Disadvantage on ability checks and attack rolls."
+      },
+      {
+        "name": "Web Walker",
+        "text": "The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The drider makes three attacks, using Foreleg or Poison Burst in any combination."
+      },
+      {
+        "name": "Foreleg",
+        "text": "*Melee Attack Roll:* +7, reach 10 ft. *Hit:* 13 (2d8 + 4) Piercing damage."
+      },
+      {
+        "name": "Poison Burst",
+        "text": "*Ranged Attack Roll:* +6, range 120 ft. *Hit:* 13 (3d6 + 3) Poison damage."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Magic of the Spider Queen",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "The drider casts *Darkness*, *Faerie Fire*, or *Web*, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14)."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The drider makes three attacks, using Foreleg or Poison Burst in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll",
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "in_sunlight"
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "attack_roll"
+                }
+              },
+              {
+                "pred": "check_uses_skill",
+                "args": {
+                  "skill": "perception"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Attack rolls and Wisdom (Perception) checks while in sunlight."
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "web_movement_restrictions"
+      ],
+      "note": "Ignores movement restrictions caused by webs and knows the location of any creature in contact with the same web."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Foreleg",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Poison Burst",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  3
+                ]
+              },
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Magic of the Spider Queen",
+      "then": [
+        {
+          "op": "choice",
+          "id": "magic_of_the_spider_queen",
+          "choose": 1,
+          "options": [
+            {
+              "id": "darkness",
+              "label": "darkness",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/darkness",
+                  "slot": "none"
+                }
+              ]
+            },
+            {
+              "id": "faerie_fire",
+              "label": "faerie-fire",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/faerie-fire",
+                  "slot": "none"
+                }
+              ]
+            },
+            {
+              "id": "web",
+              "label": "web",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/web",
+                  "slot": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Recharge 5–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Monstrosity, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 19 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 123 (13d10 + 52)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Climb 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6, Stealth +10",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Elvish, Undercommon",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 6 (XP 2,300; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Sunlight Sensitivity.*** While in sunlight, the drider has Disadvantage on ability checks and attack rolls.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Web Walker.*** The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The drider makes three attacks, using Foreleg or Poison Burst in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Foreleg.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 13 (2d8 + 4) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Poison Burst.*** *Ranged Attack Roll:* +6, range 120 ft. *Hit:* 13 (3d6 + 3) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Magic of the Spider Queen (Recharge 5–6).*** The drider casts *Darkness*, *Faerie Fire*, or *Web*, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 14).",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/faerie-fire",
+    "dnd5e/spell/web"
+  ]
+}

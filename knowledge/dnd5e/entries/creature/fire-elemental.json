@@ -1,0 +1,404 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/fire-elemental",
+  "kind": "creature",
+  "name": "Fire Elemental",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      284,
+      285
+    ],
+    "section": "Monsters A–Z/Fire Elemental/Fire Elemental",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Large Elemental, Neutral*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 93 (11d10 + 33)\n\n**Speed** 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 10 | +0 | +0 | **Dex** 17 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |\n\n**Resistances** Bludgeoning, Piercing, Slashing\n\n**Immunities** Fire, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Primordial (Ignan)\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Fire Aura.*** At the end of each of the elemental’s turns, each creature in a 10-foot Emanation originating from the elemental takes 5 (1d10) Fire damage. Creatures and flammable objects in the Emanation start burning.\n\n***Fire Form.*** The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature’s space and stop there. The first time it enters a creature’s space on a turn, that creature takes 5 (1d10) Fire damage.\n\n***Illumination.*** The elemental sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.\n\n***Water Susceptibility.*** The elemental takes 3 (1d6) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it.\n\n##### Actions\n\n***Multiattack.*** The elemental makes two Burn attacks.\n\n***Burn.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Fire damage. If the target is a creature or a flammable object, it starts burning.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "type_line": "Large Elemental, Neutral",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 93,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d10",
+          33
+        ]
+      },
+      "text": "93 (11d10 + 33)"
+    },
+    "speed": {
+      "text": "50 ft.",
+      "walk": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Fire, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Ignan)"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Fire Aura",
+        "text": "At the end of each of the elemental’s turns, each creature in a 10-foot Emanation originating from the elemental takes 5 (1d10) Fire damage. Creatures and flammable objects in the Emanation start burning."
+      },
+      {
+        "name": "Fire Form",
+        "text": "The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature’s space and stop there. The first time it enters a creature’s space on a turn, that creature takes 5 (1d10) Fire damage."
+      },
+      {
+        "name": "Illumination",
+        "text": "The elemental sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet."
+      },
+      {
+        "name": "Water Susceptibility",
+        "text": "The elemental takes 3 (1d6) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The elemental makes two Burn attacks."
+      },
+      {
+        "name": "Burn",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Fire damage. If the target is a creature or a flammable object, it starts burning."
+      }
+    ],
+    "rules": [
+      {
+        "id": "light",
+        "bright_feet": 30,
+        "dim_feet": 30,
+        "rules": [
+          "dnd5e/rule/bright-light",
+          "dnd5e/rule/dim-light"
+        ]
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Burn",
+            "count": 2
+          }
+        ],
+        "text": "The elemental makes two Burn attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "self",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d10",
+          "damage_type": "fire",
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 10,
+              "origin": "self"
+            }
+          }
+        }
+      ],
+      "note": ". Creatures and flammable objects in the Emanation start burning."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Burn",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  3
+                ]
+              },
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_fire_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Fire Form as written.",
+      "source_text": "The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature’s space and stop there. The first time it enters a creature’s space on a turn, that creature takes 5 (1d10) Fire damage."
+    },
+    {
+      "id": "traits_water_susceptibility",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Water Susceptibility as written.",
+      "source_text": "The elemental takes 3 (1d6) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it."
+    },
+    {
+      "id": "actions_burn_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Burn as written.",
+      "source_text": "10 (2d6 + 3) Fire damage. If the target is a creature or a flammable object, it starts burning."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 93 (11d10 + 33)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 10 | +0 | +0 | **Dex** 17 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Fire Aura.*** At the end of each of the elemental’s turns, each creature in a 10-foot Emanation originating from the elemental takes 5 (1d10) Fire damage. Creatures and flammable objects in the Emanation start burning.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Fire Form.*** The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature’s space and stop there. The first time it enters a creature’s space on a turn, that creature takes 5 (1d10) Fire damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_fire_form"
+      ]
+    },
+    {
+      "text": "***Illumination.*** The elemental sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Water Susceptibility.*** The elemental takes 3 (1d6) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/3",
+        "md:traits_water_susceptibility"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The elemental makes two Burn attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Burn.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Fire damage. If the target is a creature or a flammable object, it starts burning.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/1",
+        "md:actions_burn_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

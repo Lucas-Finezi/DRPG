@@ -1,0 +1,379 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/earth-elemental",
+  "kind": "creature",
+  "name": "Earth Elemental",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      282,
+      283
+    ],
+    "section": "Monsters A–Z/Earth Elemental/Earth Elemental",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Large Elemental, Neutral*\n\n| **AC** 17 | **Initiative** −1 (9) |\n\n**HP** 147 (14d10 + 70)\n\n**Speed** 30 ft., Burrow 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |\n\n**Vulnerabilities** Thunder\n\n**Immunities** Poison; Exhaustion, Paralyzed, Petrified, Poisoned, Unconscious\n\n**Senses** Darkvision 60 ft., Tremorsense 60 ft.;\n\nPassive Perception 10\n\n**Languages** Primordial (Terran)\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Earth Glide.*** The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn’t disturb the material it moves through.\n\n***Siege Monster.*** The elemental deals double damage to objects and structures.\n\n##### Actions\n\n***Multiattack.*** The elemental makes two attacks, using Slam or Rock Launch in any combination.\n\n***Slam.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Bludgeoning damage.\n\n***Rock Launch.*** *Ranged Attack Roll:* +8, range 60 ft. *Hit:* 8 (1d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "type_line": "Large Elemental, Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": -1,
+      "score": 9,
+      "text": "−1 (9)"
+    },
+    "hp": {
+      "average": 147,
+      "formula": {
+        "op": "add",
+        "args": [
+          "14d10",
+          70
+        ]
+      },
+      "text": "147 (14d10 + 70)"
+    },
+    "speed": {
+      "text": "30 ft., Burrow 30 ft.",
+      "walk": 30,
+      "burrow": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "thunder"
+      ],
+      "text": "Thunder"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Poison; Exhaustion, Paralyzed, Petrified, Poisoned, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft., Tremorsense 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "tremorsense": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Terran)"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Earth Glide",
+        "text": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn’t disturb the material it moves through."
+      },
+      {
+        "name": "Siege Monster",
+        "text": "The elemental deals double damage to objects and structures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The elemental makes two attacks, using Slam or Rock Launch in any combination."
+      },
+      {
+        "name": "Slam",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Bludgeoning damage."
+      },
+      {
+        "name": "Rock Launch",
+        "text": "*Ranged Attack Roll:* +8, range 60 ft. *Hit:* 8 (1d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The elemental makes two attacks, using Slam or Rock Launch in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "multiply",
+      "value": 2,
+      "when": {
+        "pred": "target_is_object"
+      },
+      "note": "Double damage to objects and structures."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slam",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  5
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rock Launch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  5
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_earth_glide",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Earth Glide as written.",
+      "source_text": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn’t disturb the material it moves through."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** −1 (9) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 147 (14d10 + 70)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Burrow 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Thunder",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Exhaustion, Paralyzed, Petrified, Poisoned, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft., Tremorsense 60 ft.;\n\nPassive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Terran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Earth Glide.*** The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn’t disturb the material it moves through.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_earth_glide"
+      ]
+    },
+    {
+      "text": "***Siege Monster.*** The elemental deals double damage to objects and structures.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The elemental makes two attacks, using Slam or Rock Launch in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Slam.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Rock Launch.*** *Ranged Attack Roll:* +8, range 60 ft. *Hit:* 8 (1d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/unconscious"
+  ]
+}

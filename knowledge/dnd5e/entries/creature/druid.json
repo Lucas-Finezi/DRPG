@@ -1,0 +1,482 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/druid",
+  "kind": "creature",
+  "name": "Druid",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      282
+    ],
+    "section": "Monsters A–Z/Druid/Druid",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 2,
+  "text": "*Medium or Small Humanoid (Druid), Neutral*\n\n| **AC** 13 | **Initiative** +1 (11) |\n\n**HP** 44 (8d8 + 8)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 10 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 11 | +0 | +0 |\n\n**Skills** Medicine +5, Nature +3, Perception +5\n\n**Gear** Studded Leather Armor\n\n**Senses** Passive Perception 15\n\n**Languages** Common, Druidic, Sylvan\n\n**CR** 2 (XP 450; PB +2)\n\n##### Actions\n\n***Multiattack.*** The druid makes two attacks, using Vine Staff or Verdant Wisp in any combination.\n\n***Vine Staff.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage plus 2 (1d4) Poison damage.\n\n***Verdant Wisp.*** *Ranged Attack Roll:* +5, range 90 ft. *Hit:* 10 (3d6) Radiant damage.\n\n***Spellcasting.*** The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):\n\n**At Will:** *Druidcraft*, *Speak with Animals*\n\n**2/Day Each:** *Entangle*, *Thunderwave*\n\n**1/Day Each:** *Animal Messenger*, *Longstrider*, *Moonbeam*",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "tags": [
+      "Druid"
+    ],
+    "type_line": "Medium or Small Humanoid (Druid), Neutral",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 44,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d8",
+          8
+        ]
+      },
+      "text": "44 (8d8 + 8)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "cha": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "medicine": 5,
+      "nature": 3,
+      "perception": 5,
+      "text": "Medicine +5, Nature +3, Perception +5"
+    },
+    "gear": {
+      "text": "Studded Leather Armor"
+    },
+    "senses": {
+      "text": "Passive Perception 15",
+      "passive_perception": 15
+    },
+    "languages": {
+      "text": "Common, Druidic, Sylvan"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The druid makes two attacks, using Vine Staff or Verdant Wisp in any combination."
+      },
+      {
+        "name": "Vine Staff",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage plus 2 (1d4) Poison damage."
+      },
+      {
+        "name": "Verdant Wisp",
+        "text": "*Ranged Attack Roll:* +5, range 90 ft. *Hit:* 10 (3d6) Radiant damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):\n\n**At Will:** *Druidcraft*, *Speak with Animals*\n\n**2/Day Each:** *Entangle*, *Thunderwave*\n\n**1/Day Each:** *Animal Messenger*, *Longstrider*, *Moonbeam*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The druid makes two attacks, using Vine Staff or Verdant Wisp in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13): At Will: Druidcraft, Speak with Animals 2/Day Each: Entangle, Thunderwave 1/Day Each: Animal Messenger, Longstrider, Moonbeam",
+        "ability": "wis",
+        "save_dc": 13,
+        "no_material_components": false,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/druidcraft",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/speak-with-animals",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/entangle",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/thunderwave",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/animal-messenger",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/longstrider",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/moonbeam",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Vine Staff",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "damage",
+              "amount": "1d4",
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Verdant Wisp",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "radiant"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/druidcraft",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Druidcraft"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/speak-with-animals",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Speak with Animals"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/entangle",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Entangle",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/thunderwave",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Thunderwave",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/animal-messenger",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Animal Messenger",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/longstrider",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Longstrider",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/moonbeam",
+          "slot": "none",
+          "save_dc": 13
+        }
+      ],
+      "name": "Moonbeam",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid (Druid), Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 44 (8d8 + 8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 10 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 11 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Medicine +5, Nature +3, Perception +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Studded Leather Armor",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 15",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Druidic, Sylvan",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The druid makes two attacks, using Vine Staff or Verdant Wisp in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Vine Staff.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage plus 2 (1d4) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Verdant Wisp.*** *Ranged Attack Roll:* +5, range 90 ft. *Hit:* 10 (3d6) Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC 13):\n\n**At Will:** *Druidcraft*, *Speak with Animals*\n\n**2/Day Each:** *Entangle*, *Thunderwave*\n\n**1/Day Each:** *Animal Messenger*, *Longstrider*, *Moonbeam*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/animal-messenger",
+    "dnd5e/spell/druidcraft",
+    "dnd5e/spell/entangle",
+    "dnd5e/spell/longstrider",
+    "dnd5e/spell/moonbeam",
+    "dnd5e/spell/speak-with-animals",
+    "dnd5e/spell/thunderwave"
+  ]
+}
