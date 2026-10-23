@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/holy-aura",
+  "kind": "spell",
+  "name": "Holy Aura",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      141
+    ],
+    "section": "Spells/Spell Descriptions/Holy Aura",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 2,
+  "text": "*Level 8 Abjuration (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a reliquary worth 1,000+ GP)\n\n**Duration:** Concentration, up to 1 minute\n\nFor the duration, you emit an aura in a 30-foot Emanation. While in the aura, creatures of your choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn.",
+  "facets": {
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a reliquary worth 1,000+ GP",
+      "material_cost_gp": 1000
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 30,
+          "origin": "self"
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Creatures of your choice in the aura."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hit_by_attack_roll"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is_melee"
+          },
+          {
+            "pred": "attacker_creature_type_in",
+            "args": {
+              "types": [
+                "fiend",
+                "undead"
+              ]
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "creature"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "target",
+                  "which": "next"
+                }
+              }
+            }
+          ],
+          "note": "The attacker."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Abjuration (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a reliquary worth 1,000+ GP)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, you emit an aura in a 30-foot Emanation. While in the aura, creatures of your choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded"
+  ]
+}

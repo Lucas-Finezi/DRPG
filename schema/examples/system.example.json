@@ -1382,6 +1382,14 @@
           138
         ],
         "lot": "L22"
+      },
+      {
+        "id": "truth_detection_result",
+        "description": "Magic that determines truthfulness reports the creature as truthful (1).",
+        "pages": [
+          137
+        ],
+        "lot": "L25"
       }
     ],
     "rolls": [
@@ -2214,6 +2222,25 @@
           133
         ],
         "lot": "L24"
+      },
+      {
+        "id": "comes_within_feet_of_target",
+        "description": "A creature comes within N feet (param) of the target.",
+        "params": [
+          "feet"
+        ],
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "damaged_by_target",
+        "description": "The creature is damaged by the spell's target.",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
       }
     ],
     "predicates": [
@@ -3745,6 +3772,48 @@
           159
         ],
         "lot": "L24"
+      },
+      {
+        "id": "cr_at_most",
+        "description": "The form's Challenge Rating is at most N (param).",
+        "params": [
+          "cr"
+        ],
+        "type": "predicate",
+        "pages": [
+          108
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "creature_kind_specified",
+        "description": "The creature is of the kind specified when the spell was cast.",
+        "type": "predicate",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "farther_than_feet_from_target",
+        "description": "The creature is more than N feet (param) from the target.",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "attack_is_melee",
+        "description": "The attack is a melee attack roll.",
+        "type": "predicate",
+        "pages": [
+          141
+        ],
+        "lot": "L25"
       }
     ],
     "frequencies": [
@@ -4733,6 +4802,30 @@
           161
         ],
         "lot": "L24"
+      },
+      {
+        "id": "take_magic_action",
+        "description": "The creature can't take the Magic action.",
+        "pages": [
+          113
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "create_magical_effects",
+        "description": "The creature can't create magical effects.",
+        "pages": [
+          109
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "sensed_read_or_located_by_magic",
+        "description": "Magic can't sense the creature's emotions or alignment, read its thoughts or locate it.",
+        "pages": [
+          149
+        ],
+        "lot": "L25"
       }
     ],
     "conditions": [

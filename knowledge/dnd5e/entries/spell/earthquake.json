@@ -1,0 +1,225 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/earthquake",
+  "kind": "spell",
+  "name": "Earthquake",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      127
+    ],
+    "section": "Spells/Spell Descriptions/Earthquake",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 2,
+  "text": "*Level 8 Transmutation (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 500 feet\n\n**Components:** V, S, M (a fractured rock)\n\n**Duration:** Concentration, up to 1 minute\n\nChoose a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point. The ground there is Difficult Terrain.\n\nWhen you cast this spell and at the end of each of your turns for the duration, each creature on the ground in the area makes a Dexterity saving throw. On a failed save, a creature has the Prone condition, and its Concentration is broken.\n\nYou can also cause the effects below.\n\n***Fissures.*** A total of 1d6 fissures open in the spell’s area at the end of the turn you cast it. You choose the fissures’ locations, which can’t be under structures. Each fissure is 1d10 × 10 feet deep and 10 feet wide, and it extends from one edge of the spell’s area to another edge. A creature in the same space as a fissure must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure’s edge as it opens.\n\n***Structures.*** The tremor deals 50 Bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the end of each of your turns until the spell ends. If a structure drops to 0 Hit Points, it collapses.\n\nA creature within a distance from a collapsing structure equal to half the structure’s height makes a Dexterity saving throw. On a failed save, the creature takes 12d6 Bludgeoning damage, has the Prone condition, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. On a successful save, the creature takes half as much damage only.",
+  "facets": {
+    "level": 8,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 500
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a fractured rock"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "tremor",
+        "radius_feet": 100,
+        "difficult_terrain": true
+      },
+      {
+        "id": "fissures",
+        "count": "1d6",
+        "depth_feet": "1d10 x 10",
+        "width_feet": 10,
+        "not_under_structures": true
+      },
+      {
+        "id": "structures",
+        "damage": 50,
+        "damage_type": "bludgeoning",
+        "when": [
+          "cast",
+          "end_of_each_of_your_turns"
+        ],
+        "collapse_at_0_hp": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "self",
+        "which": "each"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Also when you cast it.",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cylinder",
+              "size_feet": 100,
+              "origin": "point"
+            },
+            "range": {
+              "kind": "distance",
+              "feet": 500
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            },
+            {
+              "op": "end_effect",
+              "scope": "concentration"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "move",
+          "mode": "fall",
+          "note": "Falls into the fissure."
+        }
+      ],
+      "note": "A creature in a fissure's space; on a success it moves with the edge."
+    },
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "12d6",
+          "damage_type": "bludgeoning"
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone"
+        }
+      ],
+      "half_on_success": true,
+      "note": "Within half the structure's height; buried: DC 20 Strength (Athletics) check as an action to escape."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Transmutation (Cleric, Druid, Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 500 feet\n\n**Components:** V, S, M (a fractured rock)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point. The ground there is Difficult Terrain.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast this spell and at the end of each of your turns for the duration, each creature on the ground in the area makes a Dexterity saving throw. On a failed save, a creature has the Prone condition, and its Concentration is broken.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can also cause the effects below.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Fissures.*** A total of 1d6 fissures open in the spell’s area at the end of the turn you cast it. You choose the fissures’ locations, which can’t be under structures. Each fissure is 1d10 × 10 feet deep and 10 feet wide, and it extends from one edge of the spell’s area to another edge. A creature in the same space as a fissure must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure’s edge as it opens.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Structures.*** The tremor deals 50 Bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the end of each of your turns until the spell ends. If a structure drops to 0 Hit Points, it collapses.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "A creature within a distance from a collapsing structure equal to half the structure’s height makes a Dexterity saving throw. On a failed save, the creature takes 12d6 Bludgeoning damage, has the Prone condition, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. On a successful save, the creature takes half as much damage only.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

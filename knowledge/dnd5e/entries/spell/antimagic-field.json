@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/antimagic-field",
+  "kind": "spell",
+  "name": "Antimagic Field",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      109
+    ],
+    "section": "Spells/Spell Descriptions/Antimagic Field",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 2,
+  "text": "*Level 8 Abjuration (Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (iron filings)\n\n**Duration:** Concentration, up to 1 hour\n\nAn aura of antimagic surrounds you in 10-foot Emanation. No one can cast spells, take Magic actions, or create other magical effects inside the aura, and those things can’t target or otherwise affect anything inside it. Magical properties of magic items don’t work inside the aura or on anything inside it.\n\nAreas of effect created by spells or other magic can’t extend into the aura, and no one can teleport into or out of it or use planar travel there. Portals close temporarily while in the aura.\n\nOngoing spells, except those cast by an Artifact or a deity, are suppressed in the area. While an effect is suppressed, it doesn’t function, but the time it spends suppressed counts against its duration.\n\n*Dispel Magic* has no effect on the aura, and the auras created by different *Antimagic Field* spells don’t nullify each other.",
+  "facets": {
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "iron filings"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "aura",
+        "magic_cannot_affect_inside": true,
+        "magic_items_inert_inside": true
+      },
+      {
+        "id": "barriers",
+        "areas_cannot_extend_in": true,
+        "teleport_or_planar_travel": false,
+        "portals_close": true
+      },
+      {
+        "id": "suppression",
+        "suppressed": true,
+        "except": [
+          "artifact",
+          "deity"
+        ],
+        "time_counts": true
+      },
+      {
+        "id": "dispel",
+        "dispel_magic": false,
+        "fields_dont_nullify": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "cast_spells",
+        "take_magic_action",
+        "create_magical_effects"
+      ],
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 10,
+          "origin": "self"
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Abjuration (Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (iron filings)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "An aura of antimagic surrounds you in 10-foot Emanation. No one can cast spells, take Magic actions, or create other magical effects inside the aura, and those things can’t target or otherwise affect anything inside it. Magical properties of magic items don’t work inside the aura or on anything inside it.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Areas of effect created by spells or other magic can’t extend into the aura, and no one can teleport into or out of it or use planar travel there. Portals close temporarily while in the aura.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Ongoing spells, except those cast by an Artifact or a deity, are suppressed in the area. While an effect is suppressed, it doesn’t function, but the time it spends suppressed counts against its duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "*Dispel Magic* has no effect on the aura, and the auras created by different *Antimagic Field* spells don’t nullify each other.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

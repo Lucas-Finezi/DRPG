@@ -1,0 +1,190 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/incendiary-cloud",
+  "kind": "spell",
+  "name": "Incendiary Cloud",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      142,
+      143
+    ],
+    "section": "Spells/Spell Descriptions/Incendiary Cloud",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 2,
+  "text": "*Level 8 Conjuration (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nA swirling cloud of embers and smoke fills a 20-foot-radius Sphere centered on a point within range. The cloud’s area is Heavily Obscured. It lasts for the duration or until a strong wind (like that created by *Gust of Wind*) disperses it.\n\nWhen the cloud appears, each creature in it makes a Dexterity saving throw, taking 10d8 Fire damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn.\n\nThe cloud moves 10 feet away from you in a direction you choose at the start of each of your turns.",
+  "facets": {
+    "level": 8,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "cloud",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 20
+        },
+        "heavily_obscured": true,
+        "dispersed_by_strong_wind": true,
+        "example": "dnd5e/spell/gust-of-wind"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 150
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "10d8",
+          "damage_type": "fire"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_ends_turn_in_area"
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d8",
+              "damage_type": "fire"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self",
+        "which": "each"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 10,
+          "note": "The cloud, away from you."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Conjuration (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A swirling cloud of embers and smoke fills a 20-foot-radius Sphere centered on a point within range. The cloud’s area is Heavily Obscured. It lasts for the duration or until a strong wind (like that created by *Gust of Wind*) disperses it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the cloud appears, each creature in it makes a Dexterity saving throw, taking 10d8 Fire damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The cloud moves 10 feet away from you in a direction you choose at the start of each of your turns.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}
