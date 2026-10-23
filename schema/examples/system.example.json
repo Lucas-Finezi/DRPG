@@ -669,6 +669,42 @@
           182
         ],
         "lot": "L04"
+      },
+      {
+        "id": "hp",
+        "description": "Current Hit Points.",
+        "type": "number",
+        "pages": [
+          16
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "temp_hp",
+        "description": "Current Temporary Hit Points.",
+        "type": "number",
+        "pages": [
+          18
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "fall_feet",
+        "description": "Distance in feet of the current fall.",
+        "type": "number",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "days_without_food",
+        "description": "Consecutive days the creature has eaten nothing.",
+        "type": "number",
+        "pages": [
+          185
+        ],
+        "lot": "L06"
       }
     ],
     "stats": [
@@ -1064,6 +1100,44 @@
           183
         ],
         "lot": "L05"
+      },
+      {
+        "id": "fall_ends",
+        "description": "A falling creature lands.",
+        "type": "event",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "day_ends",
+        "description": "The end of a day (food and water needs).",
+        "type": "event",
+        "pages": [
+          181,
+          185
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "damage_taken",
+        "description": "The creature takes damage.",
+        "type": "event",
+        "pages": [
+          17,
+          18
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "drops_to_0_hp",
+        "description": "The creature drops to 0 Hit Points.",
+        "type": "event",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
       }
     ],
     "predicates": [
@@ -1408,6 +1482,62 @@
           183
         ],
         "lot": "L05"
+      },
+      {
+        "id": "bloodied",
+        "description": "The creature has half its Hit Points or fewer remaining.",
+        "type": "predicate",
+        "pages": [
+          16,
+          177
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "at_zero_hp",
+        "description": "The creature has 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "stable",
+        "description": "The creature is Stable.",
+        "type": "predicate",
+        "pages": [
+          18,
+          188
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "is_monster",
+        "description": "The creature is a monster (controlled by the GM).",
+        "type": "predicate",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "falls_into_liquid",
+        "description": "The fall ends in water or another liquid.",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "out_of_breath",
+        "description": "The creature has run out of breath or is choking.",
+        "type": "predicate",
+        "pages": [
+          189
+        ],
+        "lot": "L06"
       }
     ],
     "frequencies": [
@@ -1452,6 +1582,14 @@
         "pages": [
           206
         ]
+      },
+      {
+        "id": "instance",
+        "description": "Once per instance of damage.",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
       }
     ],
     "damage_types": [

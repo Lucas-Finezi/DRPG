@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/hazard/falling",
+  "kind": "hazard",
+  "name": "Falling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Falling [Hazard]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 2,
+  "text": "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6. When the creature lands, it has the Prone condition unless it avoids taking any damage from the fall.\n\nA creature that falls into water or another liquid can use its Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Hazard"
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fall_ends"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "min",
+                "args": [
+                  20,
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "var": "fall_feet"
+                      },
+                      10
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "bludgeoning"
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone",
+          "note": "Unless the creature took no damage from the fall."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fall_ends"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "falls_into_liquid"
+      },
+      "then": [
+        {
+          "op": "check",
+          "ability": {
+            "choose_from": [
+              "str",
+              "dex"
+            ]
+          },
+          "skill": {
+            "choose_from": [
+              "athletics",
+              "acrobatics"
+            ]
+          },
+          "dc": 15,
+          "on_success": [
+            {
+              "op": "modifier",
+              "stat": "damage_taken",
+              "mode": "multiply",
+              "value": 0.5,
+              "note": "Fall damage is halved."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6. When the creature lands, it has the Prone condition unless it avoids taking any damage from the fall.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A creature that falls into water or another liquid can use its Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

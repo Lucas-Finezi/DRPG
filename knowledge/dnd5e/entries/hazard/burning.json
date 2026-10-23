@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/hazard/burning",
+  "kind": "hazard",
+  "name": "Burning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      178
+    ],
+    "section": "Rules Glossary/Rules Definitions/Burning [Hazard]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 2,
+  "text": "A burning creature or object takes 1d4 Fire damage at the start of each of its turns. As an action, you can extinguish fire on yourself by giving yourself the Prone condition and rolling on the ground. The fire also goes out if it is doused, submerged, or suffocated.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Hazard"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "extinguished_by",
+        "doused": true,
+        "submerged": true,
+        "suffocated": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d4",
+          "damage_type": "fire"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "Extinguish fire",
+      "cost": "action",
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone"
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A burning creature or object takes 1d4 Fire damage at the start of each of its turns.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "As an action, you can extinguish fire on yourself by giving yourself the Prone condition and rolling on the ground.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The fire also goes out if it is doused, submerged, or suffocated.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

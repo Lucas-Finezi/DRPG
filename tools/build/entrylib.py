@@ -424,6 +424,8 @@ def glossary(name, kind, lot, items, slug=None, **kw):
 def ref_of(name, kind=None):
     inv = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entries.json").read_text(encoding="utf-8"))["entries"]
     hit = [e["ref"] for e in inv if e["name"] == name and (kind is None or e["kind"] == kind)]
+    if len(hit) > 1 and kind is None:  # a glossary rule wins over same-named catalog items
+        hit = [h for h in hit if h.split("/")[1] == "rule"] or hit
     if len(hit) != 1:
         raise KeyError(f"inventory ref for {name!r} ({kind}): {hit}")
     return hit[0]

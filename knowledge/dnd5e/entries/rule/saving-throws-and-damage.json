@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/saving-throws-and-damage",
+  "kind": "rule",
+  "name": "Saving Throws and Damage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      16
+    ],
+    "section": "Playing the Game/Damage and Healing/Saving Throws and Damage",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 1,
+  "text": "Damage dealt via saving throws uses these rules.\n\n#### Damage against Multiple Targets\n\nWhen you create a damaging effect that forces two or more targets to make saving throws against it at the same time, roll the damage once for all the targets. For example, when a wizard casts *Fireball*, the spell’s damage is rolled once for all creatures caught in the blast.\n\n#### Half Damage\n\nMany saving throw effects deal half damage (round down) to a target when the target succeeds on the saving throw. The halved damage is equal to half the damage that would be dealt on a failed save.",
+  "data": {
+    "rules": [
+      {
+        "id": "roll_once",
+        "multiple_targets": "single_damage_roll"
+      },
+      {
+        "id": "half_damage",
+        "multiplier": 0.5,
+        "round": "down",
+        "of": "damage_on_failed_save"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Damage dealt via saving throws uses these rules.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Damage against Multiple Targets\n\nWhen you create a damaging effect that forces two or more targets to make saving throws against it at the same time, roll the damage once for all the targets. For example, when a wizard casts *Fireball*, the spell’s damage is rolled once for all creatures caught in the blast.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Half Damage\n\nMany saving throw effects deal half damage (round down) to a target when the target succeeds on the saving throw. The halved damage is equal to half the damage that would be dealt on a failed save.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

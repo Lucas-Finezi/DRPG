@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/playing-the-game-temporary-hit-points",
+  "kind": "rule",
+  "name": "Temporary Hit Points",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      18
+    ],
+    "section": "Playing the Game/Damage and Healing/Temporary Hit Points",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 1,
+  "text": "Some spells and other effects confer Temporary Hit Points, which are a buffer against losing actual Hit Points, as explained below.\n\n#### Lose Temporary Hit Points First\n\nIf you have Temporary Hit Points and take damage, those points are lost first, and any leftover damage carries over to your Hit Points. For example, if you have 5 Temporary Hit Points and take 7 damage, you lose those points and then lose 2 Hit Points.\n\n#### Duration\n\nTemporary Hit Points last until they’re depleted or you finish a Long Rest (see “Rules Glossary”).\n\n#### They Don’t Stack\n\nTemporary Hit Points can’t be added together. If you have Temporary Hit Points and receive more of them, you decide whether to keep the ones you have or to gain the new ones. For example, if a spell grants you 12 Temporary Hit Points when you already have 10, you can have 12 or 10, not 22.\n\n#### They’re Not Hit Points or Healing\n\nTemporary Hit Points can’t be added to your Hit Points, healing can’t restore them, and receiving Temporary Hit Points doesn’t count as healing. Because Temporary Hit Points aren’t Hit Points, a creature can be at full Hit Points and receive Temporary Hit Points.\n\nIf you have 0 Hit Points, receiving Temporary Hit Points doesn’t restore you to consciousness. Only true healing can save you.",
+  "data": {
+    "rules": [
+      {
+        "id": "buffer",
+        "temp_hp_are_not_hp": true
+      },
+      {
+        "id": "lost_first",
+        "overflow": "to_hit_points"
+      },
+      {
+        "id": "duration",
+        "until": [
+          "depleted",
+          "long_rest_finished"
+        ]
+      },
+      {
+        "id": "no_stacking",
+        "on_new": "choose_keep_or_replace"
+      },
+      {
+        "id": "not_healing",
+        "added_to_hp": false,
+        "restored_by_healing": false,
+        "counts_as_healing": false,
+        "at_0_hp_restores_consciousness": false
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Some spells and other effects confer Temporary Hit Points, which are a buffer against losing actual Hit Points, as explained below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Lose Temporary Hit Points First\n\nIf you have Temporary Hit Points and take damage, those points are lost first, and any leftover damage carries over to your Hit Points. For example, if you have 5 Temporary Hit Points and take 7 damage, you lose those points and then lose 2 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Duration\n\nTemporary Hit Points last until they’re depleted or you finish a Long Rest (see “Rules Glossary”).",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### They Don’t Stack\n\nTemporary Hit Points can’t be added together. If you have Temporary Hit Points and receive more of them, you decide whether to keep the ones you have or to gain the new ones. For example, if a spell grants you 12 Temporary Hit Points when you already have 10, you can have 12 or 10, not 22.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### They’re Not Hit Points or Healing\n\nTemporary Hit Points can’t be added to your Hit Points, healing can’t restore them, and receiving Temporary Hit Points doesn’t count as healing. Because Temporary Hit Points aren’t Hit Points, a creature can be at full Hit Points and receive Temporary Hit Points.\n\nIf you have 0 Hit Points, receiving Temporary Hit Points doesn’t restore you to consciousness. Only true healing can save you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ]
+}
