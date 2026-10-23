@@ -24,6 +24,19 @@ INV = {e["name"]: e for e in json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entri
 SCHOOLS = ["abjuration", "conjuration", "divination", "enchantment", "evocation", "illusion", "necromancy",
            "transmutation"]
 NUM = {"one": 1, "two": 2, "three": 3}
+_HIT_MELEE = [{"event": "hits_with_attack_roll"}]
+TRIGGERS = {  # casting-time trigger wording -> events (the wording stays in 'trigger')
+    "when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components":
+        [{"event": "sees_creature_casting_spell", "whose": "any"}],
+    "immediately after hitting a target with a Melee weapon or an Unarmed Strike": _HIT_MELEE,
+    "immediately after hitting a creature with a weapon": _HIT_MELEE,
+    "immediately after hitting a creature with a Melee weapon or an Unarmed Strike": _HIT_MELEE,
+    "when you or a creature you can see within 60 feet of you falls": [{"event": "falls", "whose": "any"}],
+    "in response to taking damage from a creature that you can see within 60 feet of yourself":
+        [{"event": "damaged_by_creature_within_feet.60"}],
+    "when you are hit by an attack roll or targeted by the Magic Missile spell":
+        [{"event": "hit_by_attack_roll"}, {"event": "targeted_by_spell.magic-missile"}],
+}
 
 # ---------------------------------------------------------------- header parsing
 
@@ -58,6 +71,7 @@ def parse_casting_time(t):
         out["cost"] = {"Action": "action", "Bonus Action": "bonus_action", "Reaction": "reaction"}[m.group(1)]
         if m.group(2):
             out["trigger"] = m.group(2)
+            out["triggers"] = TRIGGERS[m.group(2)]
         return out
     m = re.fullmatch(r"(\d+) (minute|minutes|hour|hours)", t)
     if not m:

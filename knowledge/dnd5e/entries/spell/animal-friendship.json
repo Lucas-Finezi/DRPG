@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/animal-friendship",
+  "kind": "spell",
+  "name": "Animal Friendship",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      107,
+      108
+    ],
+    "section": "Spells/Spell Descriptions/Animal Friendship",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Enchantment (Bard, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a morsel of food)\n\n**Duration:** 24 hours\n\nTarget a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spells ends.\n\n***Using a Higher-Level Spell Slot.*** You can target one additional Beast for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a morsel of food"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "ends",
+        "ends_on": "you_or_ally_damages_target"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true,
+        "filter": {
+          "creature_types": [
+            "beast"
+          ]
+        }
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/charmed",
+          "duration": {
+            "kind": "hours",
+            "amount": 24
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Enchantment (Bard, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a morsel of food)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spells ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can target one additional Beast for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/target/count"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed"
+  ]
+}

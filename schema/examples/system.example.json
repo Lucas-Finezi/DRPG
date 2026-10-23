@@ -1283,6 +1283,14 @@
           88
         ],
         "lot": "L15"
+      },
+      {
+        "id": "fall_rate_feet_per_round",
+        "description": "Rate of descent of a falling creature, in feet per round.",
+        "pages": [
+          130
+        ],
+        "lot": "L18"
       }
     ],
     "rolls": [
@@ -1909,6 +1917,46 @@
           88
         ],
         "lot": "L15"
+      },
+      {
+        "id": "sees_creature_casting_spell",
+        "description": "A creature the caster can see within range casts a spell with Verbal, Somatic or Material components.",
+        "pages": [
+          119
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "enters_or_ends_turn_in_area",
+        "description": "A creature enters the area or ends its turn there.",
+        "pages": [
+          138
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "targeted_by_attack_or_damaging_spell",
+        "description": "A creature targets the warded creature with an attack roll or a damaging spell.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "warded_creature_attacks_casts_or_damages",
+        "description": "The warded creature makes an attack roll, casts a spell, or deals damage.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "dons_armor",
+        "description": "The creature dons armor.",
+        "pages": [
+          146
+        ],
+        "lot": "L18"
       }
     ],
     "predicates": [
@@ -3173,6 +3221,123 @@
           88
         ],
         "lot": "L15"
+      },
+      {
+        "id": "attacker_can_see_target",
+        "description": "The attacker can see the target.",
+        "type": "predicate",
+        "pages": [
+          129
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "target_is_marked",
+        "description": "The target is the creature marked by this spell.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "marked_target_at_0_hp",
+        "description": "The creature marked by this spell has dropped to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "check_uses_ability",
+        "description": "The ability check uses this ability (param).",
+        "params": [
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "check_to_find_marked_target",
+        "description": "The check is made to find the marked creature.",
+        "type": "predicate",
+        "pages": [
+          141
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "attacker_creature_type_in",
+        "description": "The attacker's creature type is one of these (param).",
+        "params": [
+          "types"
+        ],
+        "type": "predicate",
+        "pages": [
+          156
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "source_creature_type_in",
+        "description": "The effect's source creature is of one of these types (param).",
+        "params": [
+          "types"
+        ],
+        "type": "predicate",
+        "pages": [
+          156
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "save_against_effect_of_types",
+        "description": "The save is against possession, Charmed or Frightened caused by a creature of these types (param).",
+        "params": [
+          "types"
+        ],
+        "type": "predicate",
+        "pages": [
+          156
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "damage_from_spell",
+        "description": "The damage comes from this spell (param).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          162
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "doesnt_sleep",
+        "description": "The creature doesn't sleep.",
+        "type": "predicate",
+        "pages": [
+          163
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "immune_to_condition",
+        "description": "The creature has Immunity to this condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          163
+        ],
+        "lot": "L18"
       }
     ],
     "frequencies": [
@@ -3621,6 +3786,30 @@
           73
         ],
         "lot": "L14"
+      },
+      {
+        "id": "detect_creature_types",
+        "description": "Sense the location of creatures of certain types within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "detect_magic",
+        "description": "Sense the presence of magical effects within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "detect_poison_and_disease",
+        "description": "Sense poisons, poisonous or venomous creatures, and magical contagions within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
       }
     ],
     "movement_modes": [
@@ -3961,6 +4150,30 @@
           165
         ],
         "lot": "L17"
+      },
+      {
+        "id": "move",
+        "description": "The creature can't move.",
+        "pages": [
+          117
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "end_prone_on_self",
+        "description": "The creature can't end the Prone condition on itself.",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "target_warded_creature",
+        "description": "The creature can't target the warded creature with this attack or spell.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
       }
     ],
     "conditions": [

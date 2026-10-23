@@ -1,0 +1,135 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/bless",
+  "kind": "spell",
+  "name": "Bless",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      113
+    ],
+    "section": "Spells/Spell Descriptions/Bless",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Enchantment (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a Holy Symbol worth 5+ GP)\n\n**Duration:** Concentration, up to 1 minute\n\nYou bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.\n\n***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a Holy Symbol worth 5+ GP",
+      "material_cost_gp": 5
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "d20_test",
+      "mode": "add",
+      "value": "1d4",
+      "target": {
+        "kind": "creature",
+        "count": {
+          "op": "add",
+          "args": [
+            3,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      },
+      "when": {
+        "any": [
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "attack_roll"
+            }
+          },
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "saving_throw"
+            }
+          }
+        ]
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Enchantment (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a Holy Symbol worth 5+ GP)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/target/count"
+      ]
+    }
+  ]
+}

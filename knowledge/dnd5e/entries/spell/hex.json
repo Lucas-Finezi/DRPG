@@ -1,0 +1,188 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/hex",
+  "kind": "spell",
+  "name": "Hex",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      140
+    ],
+    "section": "Spells/Spell Descriptions/Hex",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Enchantment (Warlock)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (the petrified eye of a newt)\n\n**Duration:** Concentration, up to 1 hour\n\nYou place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 Necrotic damage to the target whenever you hit it with an attack roll. Also, choose one ability when you cast the spell. The target has Disadvantage on ability checks made with the chosen ability.\n\nIf the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action on a later turn to curse a new creature.\n\n***Using a Higher-Level Spell Slot.*** Your Concentration can last longer with a spell slot of level 2 (up to 4 hours), 3–4 (up to 8 hours), or 5+ (24 hours).",
+  "facets": {
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "warlock"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 90
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "the petrified eye of a newt"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "longer_concentration",
+        "max_duration_hours": {
+          "scale": {
+            "by": "spell_slot_level",
+            "steps": [
+              {
+                "from": 1,
+                "value": 1
+              },
+              {
+                "from": 2,
+                "value": 4
+              },
+              {
+                "from": 3,
+                "value": 8
+              },
+              {
+                "from": 5,
+                "value": 24
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "pred": "target_is_marked"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d6",
+          "damage_type": "necrotic",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 90
+        },
+        "must_see": true
+      },
+      "when": {
+        "pred": "check_uses_ability",
+        "args": {
+          "ability": "chosen.ability"
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "requires": {
+        "pred": "marked_target_at_0_hp"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/hex",
+          "note": "Curse a new creature, on a later turn."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Enchantment (Warlock)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (the petrified eye of a newt)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 Necrotic damage to the target whenever you hit it with an attack roll. Also, choose one ability when you cast the spell. The target has Disadvantage on ability checks made with the chosen ability.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "If the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action on a later turn to curse a new creature.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** Your Concentration can last longer with a spell slot of level 2 (up to 4 hours), 3–4 (up to 8 hours), or 5+ (24 hours).",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/hex"
+  ]
+}

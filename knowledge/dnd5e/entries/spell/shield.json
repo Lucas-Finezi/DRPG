@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/shield",
+  "kind": "spell",
+  "name": "Shield",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      161,
+      162
+    ],
+    "section": "Spells/Spell Descriptions/Shield",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Abjuration (Sorcerer, Wizard)*\n\n**Casting Time:** Reaction, which you take when you are hit by an attack roll or targeted by the *Magic Missile* spell\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 round\n\nAn imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from *Magic Missile*.",
+  "facets": {
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Reaction, which you take when you are hit by an attack roll or targeted by the Magic Missile spell",
+      "cost": "reaction",
+      "trigger": "when you are hit by an attack roll or targeted by the Magic Missile spell",
+      "triggers": [
+        {
+          "event": "hit_by_attack_roll"
+        },
+        {
+          "event": "targeted_by_spell.magic-missile"
+        }
+      ]
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 round",
+      "kind": "rounds",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 5,
+      "target": {
+        "kind": "self"
+      },
+      "duration": {
+        "kind": "until_event",
+        "until": {
+          "event": "turn_start",
+          "whose": "self",
+          "which": "next"
+        }
+      },
+      "note": "Including against the triggering attack."
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "damage_types": [
+        "force"
+      ],
+      "when": {
+        "pred": "damage_from_spell",
+        "args": {
+          "spell": "magic-missile"
+        }
+      },
+      "duration": {
+        "kind": "until_event",
+        "until": {
+          "event": "turn_start",
+          "whose": "self",
+          "which": "next"
+        }
+      },
+      "note": "No damage from Magic Missile."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Abjuration (Sorcerer, Wizard)*\n\n**Casting Time:** Reaction, which you take when you are hit by an attack roll or targeted by the *Magic Missile* spell\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 round",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from *Magic Missile*.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/identify",
+  "kind": "spell",
+  "name": "Identify",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      142
+    ],
+    "section": "Spells/Spell Descriptions/Identify",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 1,
+  "text": "*Level 1 Divination (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (a pearl worth 100+ GP)\n\n**Duration:** Instantaneous\n\nYou touch an object throughout the spell’s casting. If the object is a magic item or some other magical object, you learn its properties and how to use them, whether it requires Attunement, and how many charges it has, if any. You learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, you learn that spell’s name.\n\nIf you instead touch a creature throughout the casting, you learn which ongoing spells, if any, are currently affecting it.",
+  "facets": {
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a pearl worth 100+ GP",
+      "material_cost_gp": 100
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "object",
+        "touch_throughout_casting": true,
+        "learns": [
+          "properties_and_use",
+          "attunement_required",
+          "charges",
+          "ongoing_spells",
+          "creating_spell"
+        ]
+      },
+      {
+        "id": "creature",
+        "learns": [
+          "ongoing_spells_affecting_it"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 1 Divination (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (a pearl worth 100+ GP)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch an object throughout the spell’s casting. If the object is a magic item or some other magical object, you learn its properties and how to use them, whether it requires Attunement, and how many charges it has, if any. You learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, you learn that spell’s name.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If you instead touch a creature throughout the casting, you learn which ongoing spells, if any, are currently affecting it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}
