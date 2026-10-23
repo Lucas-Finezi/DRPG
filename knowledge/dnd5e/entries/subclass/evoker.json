@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/evoker",
+  "kind": "subclass",
+  "name": "Evoker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      82
+    ],
+    "section": "Classes/Wizard/Wizard Subclass: Evoker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Wizard Subclass: Evoker\n\n*Create Explosive Elemental Effects*\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
+  "facets": {
+    "class": "wizard",
+    "feature_levels": [
+      3,
+      6,
+      10,
+      14
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/wizard",
+    "levels": {
+      "3": [
+        "dnd5e/feature/evoker-evocation-savant",
+        "dnd5e/feature/evoker-potent-cantrip"
+      ],
+      "6": [
+        "dnd5e/feature/evoker-sculpt-spells"
+      ],
+      "10": [
+        "dnd5e/feature/evoker-empowered-evocation"
+      ],
+      "14": [
+        "dnd5e/feature/evoker-overchannel"
+      ]
+    },
+    "tagline": "Create Explosive Elemental Effects"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/evoker-evocation-savant",
+        "dnd5e/feature/evoker-potent-cantrip",
+        "dnd5e/feature/evoker-sculpt-spells",
+        "dnd5e/feature/evoker-empowered-evocation",
+        "dnd5e/feature/evoker-overchannel"
+      ],
+      "note": "Each feature at the subclass level shown in data.levels."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Wizard Subclass: Evoker\n\n*Create Explosive Elemental Effects*",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Your studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/evoker-empowered-evocation",
+    "dnd5e/feature/evoker-evocation-savant",
+    "dnd5e/feature/evoker-overchannel",
+    "dnd5e/feature/evoker-potent-cantrip",
+    "dnd5e/feature/evoker-sculpt-spells"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/path-of-the-berserker",
+  "kind": "subclass",
+  "name": "Path of the Berserker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Subclass: Path of the Berserker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Barbarian Subclass: Path of the Berserker\n\n*Channel Rage into Violent Fury*\n\nBarbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
+  "facets": {
+    "class": "barbarian",
+    "feature_levels": [
+      3,
+      6,
+      10,
+      14
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/barbarian",
+    "levels": {
+      "3": [
+        "dnd5e/feature/path-of-the-berserker-frenzy"
+      ],
+      "6": [
+        "dnd5e/feature/path-of-the-berserker-mindless-rage"
+      ],
+      "10": [
+        "dnd5e/feature/path-of-the-berserker-retaliation"
+      ],
+      "14": [
+        "dnd5e/feature/path-of-the-berserker-intimidating-presence"
+      ]
+    },
+    "tagline": "Channel Rage into Violent Fury"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/path-of-the-berserker-frenzy",
+        "dnd5e/feature/path-of-the-berserker-mindless-rage",
+        "dnd5e/feature/path-of-the-berserker-retaliation",
+        "dnd5e/feature/path-of-the-berserker-intimidating-presence"
+      ],
+      "note": "Each feature at the subclass level shown in data.levels."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Barbarian Subclass: Path of the Berserker\n\n*Channel Rage into Violent Fury*",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Barbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/path-of-the-berserker-frenzy",
+    "dnd5e/feature/path-of-the-berserker-intimidating-presence",
+    "dnd5e/feature/path-of-the-berserker-mindless-rage",
+    "dnd5e/feature/path-of-the-berserker-retaliation"
+  ]
+}
