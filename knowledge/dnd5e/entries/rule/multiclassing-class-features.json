@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-class-features",
+  "kind": "rule",
+  "name": "Class Features",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Class Features",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "When you gain a new level in a class, you get its features for that level. A few features have additional rules when you’re multiclassing. Check the information about multiclassing included in each of your classes’ descriptions.\n\nSpecial rules apply to Extra Attack, Spellcasting, and features (such as Unarmored Defense) that give you alternative ways to calculate your Armor Class.",
+  "data": {
+    "rules": [
+      {
+        "id": "class_features",
+        "gain_features_of_new_class_level": true,
+        "check_each_class_multiclass_notes": true
+      },
+      {
+        "id": "special_rules",
+        "for": [
+          "dnd5e/rule/multiclassing-armor-class",
+          "dnd5e/rule/multiclassing-extra-attack",
+          "dnd5e/rule/multiclassing-spellcasting"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "When you gain a new level in a class, you get its features for that level. A few features have additional rules when you’re multiclassing. Check the information about multiclassing included in each of your classes’ descriptions.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Special rules apply to Extra Attack, Spellcasting, and features (such as Unarmored Defense) that give you alternative ways to calculate your Armor Class.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/multiclassing-armor-class",
+    "dnd5e/rule/multiclassing-extra-attack",
+    "dnd5e/rule/multiclassing-spellcasting"
+  ]
+}

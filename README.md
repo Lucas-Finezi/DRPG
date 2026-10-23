@@ -61,7 +61,13 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
 | 1 — Regras compartilhadas | L07 Recursos e descansos | concluído (descansos, Dados de Vida; 31/31) |
 | 1 — Regras compartilhadas | L08 Regras de equipamento | concluído (CA, treino em armadura, carga, moedas, criação; 43/43) |
 | 1 — Regras compartilhadas | L09 Regras de magia | concluído (espaços, componentes, concentração, áreas; 145/145) |
-| 2 — Catálogos de personagem | L10–L16 | pendente |
+| 2 — Catálogos de personagem | L10 Espécies | concluído (9 espécies + seções; 129/129) |
+| 2 — Catálogos de personagem | L11 Antecedentes | concluído (4 antecedentes + seções; 61/61) |
+| 2 — Catálogos de personagem | L12 Classes | concluído (12 classes com tabelas de progressão; 234/234) |
+| 2 — Catálogos de personagem | L13 Subclasses | concluído (12 subclasses; 42/42) |
+| 2 — Catálogos de personagem | L14 Features | concluído (303 features: 33 traços de espécie, 232 de classe/subclasse, 10 Metamagias, 28 Invocações; 1220/1220) |
+| 2 — Catálogos de personagem | L15 Talentos | concluído (17 talentos + seções e quadro; 94/94) |
+| 2 — Catálogos de personagem | L16 Multiclasse | concluído (regras e tabela Multiclass Spellcaster; 59/59) |
 | 3 — Magias | L17–L27 | pendente |
 | 4 — Equipamentos e itens | L28–L32 | pendente |
 | 5 — Criaturas e encontros | L33–L42 | pendente |

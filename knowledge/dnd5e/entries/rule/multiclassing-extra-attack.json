@@ -1,0 +1,59 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-extra-attack",
+  "kind": "rule",
+  "name": "Extra Attack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Class Features/Extra Attack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "If you gain the Extra Attack feature from more than one class, the features don’t stack. You can’t make more than two attacks with this feature unless you have a feature that says you can (such as the Fighter’s Two Extra Attacks feature).\n\nSimilarly, the Warlock’s Thirsting Blade invocation, which grants you the Extra Attack feature with your pact weapon, doesn’t give you additional attacks if you also have Extra Attack.",
+  "data": {
+    "rules": [
+      {
+        "id": "no_stacking",
+        "extra_attack_from_multiple_classes_stacks": false,
+        "max_attacks": 2,
+        "unless_feature_says": [
+          "dnd5e/feature/fighter-two-extra-attacks"
+        ]
+      },
+      {
+        "id": "thirsting_blade",
+        "feature": "dnd5e/feature/warlock-invocation-thirsting-blade",
+        "adds_attacks_with_extra_attack": false
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "If you gain the Extra Attack feature from more than one class, the features don’t stack. You can’t make more than two attacks with this feature unless you have a feature that says you can (such as the Fighter’s Two Extra Attacks feature).",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Similarly, the Warlock’s Thirsting Blade invocation, which grants you the Extra Attack feature with your pact weapon, doesn’t give you additional attacks if you also have Extra Attack.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/fighter-two-extra-attacks"
+  ]
+}

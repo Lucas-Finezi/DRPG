@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-prerequisites",
+  "kind": "rule",
+  "name": "Prerequisites",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      24,
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Prerequisites",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "To qualify for a new class, you must have a score of at least 13 in the primary ability of the new class and your current classes. For example, a Barbarian who decides to multiclass into the Druid class must have Strength and Wisdom scores of 13 or higher, since Strength is the primary ability for Barbarians and Wisdom is the primary ability for Druids.",
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisites",
+        "min_score": 13,
+        "abilities": "primary_ability_of_new_and_current_classes",
+        "primary_ability_from": [
+          "dnd5e/class/barbarian",
+          "dnd5e/class/bard",
+          "dnd5e/class/cleric",
+          "dnd5e/class/druid",
+          "dnd5e/class/fighter",
+          "dnd5e/class/monk",
+          "dnd5e/class/paladin",
+          "dnd5e/class/ranger",
+          "dnd5e/class/rogue",
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "To qualify for a new class, you must have a score of at least 13 in the primary ability of the new class and your current classes. For example, a Barbarian who decides to multiclass into the Druid class must have Strength and Wisdom scores of 13 or higher, since Strength is the primary ability for Barbarians and Wisdom is the primary ability for Druids.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/barbarian",
+    "dnd5e/class/bard",
+    "dnd5e/class/cleric",
+    "dnd5e/class/druid",
+    "dnd5e/class/fighter",
+    "dnd5e/class/monk",
+    "dnd5e/class/paladin",
+    "dnd5e/class/ranger",
+    "dnd5e/class/rogue",
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard"
+  ]
+}

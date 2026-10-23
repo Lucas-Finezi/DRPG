@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-experience-points",
+  "kind": "rule",
+  "name": "Experience Points",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Experience Points",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "The Experience Point cost to gain a level is based on your total character level, not your level in a particular class, as shown in the Character Advancement table in “Character Creation.” For example, if you are a level 6 Cleric / level 1 Fighter, you must gain enough XP to reach level 8 before you can take your second level as a Fighter or your seventh level as a Cleric.",
+  "data": {
+    "rules": [
+      {
+        "id": "xp",
+        "level_cost_based_on": "total_character_level"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Experience Point cost to gain a level is based on your total character level, not your level in a particular class,",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "as shown in the Character Advancement table in “Character Creation.” For example, if you are a level 6 Cleric / level 1 Fighter, you must gain enough XP to reach level 8 before you can take your second level as a Fighter or your seventh level as a Cleric.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/level-advancement"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/level-advancement"
+  ]
+}

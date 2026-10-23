@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-armor-class",
+  "kind": "rule",
+  "name": "Armor Class",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Class Features/Armor Class",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "If you have multiple ways to calculate your Armor Class, you can benefit from only one at a time. For example, a Monk/Sorcerer with a Monk’s \n\nUnarmored Defense feature and a Sorcerer’s Draconic Resilience feature must choose only one of those features as a way to calculate Armor Class.",
+  "data": {
+    "rules": [
+      {
+        "id": "one_ac_calculation",
+        "multiple_ac_calculations": "choose_one_at_a_time",
+        "example_features": [
+          "dnd5e/feature/monk-unarmored-defense",
+          "dnd5e/feature/draconic-sorcery-draconic-resilience"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "If you have multiple ways to calculate your Armor Class, you can benefit from only one at a time. For example, a Monk/Sorcerer with a Monk’s \n\nUnarmored Defense feature and a Sorcerer’s Draconic Resilience feature must choose only one of those features as a way to calculate Armor Class.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/draconic-sorcery-draconic-resilience",
+    "dnd5e/feature/monk-unarmored-defense"
+  ]
+}
