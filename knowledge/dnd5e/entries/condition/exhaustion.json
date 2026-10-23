@@ -1,0 +1,133 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/exhaustion",
+  "kind": "condition",
+  "name": "Exhaustion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Exhaustion [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Exhaustion condition, you experience the following effects.\n\n***Exhaustion Levels.*** This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.\n\n***D20 Tests Affected.*** When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.\n\n***Speed Reduced.*** Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.\n\n***Removing Exhaustion Levels.*** Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "levels",
+    "max_level": 6,
+    "rules": [
+      {
+        "id": "levels",
+        "stacking": "levels",
+        "gain_per_application": 1,
+        "death_at_level": 6
+      },
+      {
+        "id": "ends_at_zero",
+        "ends_when_level": 0
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "d20_test",
+      "mode": "add",
+      "value": {
+        "op": "mul",
+        "args": [
+          -2,
+          {
+            "var": "condition_level.exhaustion"
+          }
+        ]
+      }
+    },
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "add",
+      "value": {
+        "op": "mul",
+        "args": [
+          -5,
+          {
+            "var": "condition_level.exhaustion"
+          }
+        ]
+      },
+      "note": "Special speeds change by the same amount (Rules Glossary, Speed)."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/exhaustion"
+          ],
+          "levels": 1
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Exhaustion condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Exhaustion Levels.*** This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***D20 Tests Affected.*** When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Speed Reduced.*** Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Removing Exhaustion Levels.*** Finishing a Long Rest removes 1 of your Exhaustion levels.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "When your Exhaustion level reaches 0, the condition ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

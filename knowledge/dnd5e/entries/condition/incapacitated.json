@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/incapacitated",
+  "kind": "condition",
+  "name": "Incapacitated",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      184
+    ],
+    "section": "Rules Glossary/Rules Definitions/Incapacitated [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Incapacitated condition, you experience the following effects.\n\n***Inactive.*** You can’t take any action, Bonus Action, or Reaction.\n\n***No Concentration.*** Your Concentration is broken.\n\n***Speechless.*** You can’t speak.\n\n***Surprised.*** If you’re Incapacitated when you roll Initiative, you have Disadvantage on the roll.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "take_actions",
+        "take_bonus_actions",
+        "take_reactions"
+      ]
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "maintain_concentration"
+      ]
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "speak"
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "initiative"
+      ],
+      "direction": "own"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Incapacitated condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Inactive.*** You can’t take any action, Bonus Action, or Reaction.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***No Concentration.*** Your Concentration is broken.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Speechless.*** You can’t speak.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Surprised.*** If you’re Incapacitated when you roll Initiative, you have Disadvantage on the roll.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ]
+}

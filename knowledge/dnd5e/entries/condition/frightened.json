@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/frightened",
+  "kind": "condition",
+  "name": "Frightened",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Frightened [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Frightened condition, you experience the following effects.\n\n***Ability Checks and Attacks Affected.*** You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.\n\n***Can’t Approach.*** You can’t willingly move closer to the source of fear.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check",
+        "attack_roll"
+      ],
+      "direction": "own",
+      "when": {
+        "pred": "source_in_line_of_sight"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "move_closer_to_source"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Frightened condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Ability Checks and Attacks Affected.*** You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Can’t Approach.*** You can’t willingly move closer to the source of fear.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

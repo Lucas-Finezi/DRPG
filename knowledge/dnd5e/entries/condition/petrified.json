@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/petrified",
+  "kind": "condition",
+  "name": "Petrified",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186
+    ],
+    "section": "Rules Glossary/Rules Definitions/Petrified [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Petrified condition, you experience the following effects.\n\n***Turned to Inanimate Substance.*** You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.\n\n***Incapacitated.*** You have the Incapacitated condition.\n\n***Speed 0.*** Your Speed is 0 and can’t increase.\n\n***Attacks Affected.*** Attack rolls against you have Advantage.\n\n***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.\n\n***Resist Damage.*** You have Resistance to all damage.\n\n***Poison Immunity.*** You have Immunity to the Poisoned condition.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary",
+    "rules": [
+      {
+        "id": "inanimate",
+        "transformed_with": "nonmagical_worn_and_carried_objects",
+        "substance": "solid_inanimate_usually_stone"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "weight",
+      "mode": "multiply",
+      "value": 10
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "age"
+      ]
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/incapacitated",
+      "note": "Lasts while the parent condition lasts."
+    },
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "set",
+      "value": 0
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "increase_speed"
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against"
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "saving_throw.str",
+        "saving_throw.dex"
+      ],
+      "result": "fail"
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "force",
+        "lightning",
+        "necrotic",
+        "piercing",
+        "poison",
+        "psychic",
+        "radiant",
+        "slashing",
+        "thunder"
+      ]
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Petrified condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Turned to Inanimate Substance.*** You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Incapacitated.*** You have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Speed 0.*** Your Speed is 0 and can’t increase.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Attacks Affected.*** Attack rolls against you have Advantage.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    },
+    {
+      "text": "***Resist Damage.*** You have Resistance to all damage.",
+      "status": "structured",
+      "by": [
+        "/effects/7"
+      ]
+    },
+    {
+      "text": "***Poison Immunity.*** You have Immunity to the Poisoned condition.",
+      "status": "structured",
+      "by": [
+        "/effects/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated",
+    "dnd5e/condition/poisoned"
+  ]
+}

@@ -58,7 +58,7 @@ def main(lots):
         own = [n for n in nodes if owner[n.index] == lot]
         missing = []
         for n in own:
-            t = norm(n.text if n.type != "h" else n.text)
+            t = norm(n.text if n.type != "h" else re.sub(r" \[[^\]]+\]$", "", n.text))
             if not t or (n.type == "h" and n.level <= 2):
                 continue
             if t not in all_text:

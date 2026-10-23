@@ -140,6 +140,12 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
             ident_or_choice(n.get("ability"), "abilities", path)
             if "skill" in n:
                 ident_or_choice(n["skill"], "skills", path)
+        elif op == "restrict":
+            for r in n.get("restrictions", []):
+                chk("restrictions", r, path)
+        elif op == "auto_result":
+            for r in n.get("rolls", []):
+                chk("rolls", r, path)
         elif op == "sense":
             chk("senses", n.get("sense", ""), path)
         elif op == "speed":

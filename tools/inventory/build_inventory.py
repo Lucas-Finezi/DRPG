@@ -674,6 +674,8 @@ def spell_consistency(b):
         sp = spells_by_ref[m["spell_ref"]]
         if m["school"] != sp["facets"]["school"]:
             out.append({"subject": sp["name"], "ref": sp["ref"], "lot": "L27", "type": "school_mismatch",
+                        "resolution": "D-001: the description header is authoritative (school "
+                                      f"{sp['facets']['school']})",
                         "detail": f"school '{sp['facets']['school']}' in the description (p. {sp['page']}) "
                                   f"but '{m['school']}' in the {cls.title()} spell list (p. {m['page']})",
                         "pages": [sp["page"], m["page"]]})
@@ -682,11 +684,13 @@ def spell_consistency(b):
         listed = set(on_lists[ref])
         for cls in sorted(header - listed):
             out.append({"subject": sp["name"], "ref": ref, "lot": "L27", "type": "class_not_on_list",
+                        "resolution": f"D-001: enabled for {cls.title()} (the description header is authoritative)",
                         "detail": f"description header names {cls.title()} (p. {sp['page']}) but the spell "
                                   f"is absent from the {cls.title()} spell list",
                         "pages": [sp["page"]]})
         for cls in sorted(listed - header):
             out.append({"subject": sp["name"], "ref": ref, "lot": "L27", "type": "list_not_in_header",
+                        "resolution": "D-001: the description header is authoritative; needs review",
                         "detail": f"listed on the {cls.title()} spell list (p. {on_lists[ref][cls]['page']}) "
                                   f"but not named in the description header (p. {sp['page']})",
                         "pages": [sp["page"], on_lists[ref][cls]["page"]]})
@@ -859,7 +863,7 @@ def main():
                   "Divergências internas do SRD, confirmadas no texto bruto das duas ferramentas. "
                   "Não são corrigidas aqui: o lote dono registra a divergência e, se preciso, uma "
                   "decisão do mestre (`master_decision`).", ""]
-        lines += [f"- **{x['subject']}** ({x['lot']}): {x['detail']}" for x in inconsistencies]
+        lines += [f"- **{x['subject']}** ({x['lot']}): {x['detail']} → {x['resolution']}" for x in inconsistencies]
     if duplicates or unresolved:
         lines += ["", "## Pendências", ""]
         lines += [f"- Ref duplicado: `{r}`" for r in duplicates]

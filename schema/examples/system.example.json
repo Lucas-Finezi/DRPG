@@ -609,6 +609,18 @@
         "pages": [
           104
         ]
+      },
+      {
+        "id": "condition_level",
+        "description": "Current level of a leveled condition (Exhaustion).",
+        "params": [
+          "condition"
+        ],
+        "type": "number",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
       }
     ],
     "stats": [
@@ -713,6 +725,22 @@
         "pages": [
           162
         ]
+      },
+      {
+        "id": "d20_test",
+        "description": "Every D20 Test the creature makes.",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "weight",
+        "description": "The creature's weight.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
       }
     ],
     "rolls": [
@@ -860,6 +888,18 @@
         "pages": [
           161
         ]
+      },
+      {
+        "id": "condition_ended",
+        "description": "A condition ends on the creature (param: condition slug).",
+        "params": [
+          "condition"
+        ],
+        "type": "event",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
       }
     ],
     "predicates": [
@@ -919,6 +959,115 @@
         "pages": [
           181
         ]
+      },
+      {
+        "id": "requires_sight",
+        "description": "The ability check requires sight.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "requires_hearing",
+        "description": "The ability check requires hearing.",
+        "type": "predicate",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "roller_is_source",
+        "description": "The creature making the roll is the source of this effect (e.g. the charmer).",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_is_source",
+        "description": "The target of the roll is the source of this effect (e.g. the grappler).",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "social_interaction",
+        "description": "The ability check is made to interact socially with the affected creature.",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "source_in_line_of_sight",
+        "description": "The source of the effect is within the affected creature's line of sight.",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "within_feet",
+        "description": "A creature ('who': attacker, source...) is within 'feet' of the affected creature.",
+        "params": [
+          "who",
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "can_be_seen_by",
+        "description": "The roller ('who') can somehow see the affected creature.",
+        "params": [
+          "who"
+        ],
+        "type": "predicate",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "effect_requires_seen_target",
+        "description": "The effect requires its target to be seen.",
+        "type": "predicate",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "speed_is_zero",
+        "description": "The creature's Speed is 0.",
+        "type": "predicate",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "size_at_most_relative",
+        "description": "The affected creature is Tiny or 'steps' or more sizes smaller than the other creature.",
+        "params": [
+          "steps"
+        ],
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
       }
     ],
     "frequencies": [
@@ -1465,6 +1614,280 @@
         "pages": [
           22
         ]
+      }
+    ],
+    "restrictions": [
+      {
+        "id": "see",
+        "description": "The creature can't see.",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "hear",
+        "description": "The creature can't hear.",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "speak",
+        "description": "The creature can't speak.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_actions",
+        "description": "The creature can't take any action.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_bonus_actions",
+        "description": "The creature can't take any Bonus Action.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_reactions",
+        "description": "The creature can't take any Reaction.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "maintain_concentration",
+        "description": "The creature's Concentration is broken and can't be kept.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "increase_speed",
+        "description": "The creature's Speed can't increase.",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "move_closer_to_source",
+        "description": "The creature can't willingly move closer to the source of the effect.",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "attack_source",
+        "description": "The creature can't attack the source of the effect.",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_source_harmfully",
+        "description": "The creature can't target the source with damaging abilities or magical effects.",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "move_except_crawl",
+        "description": "The creature's only movement options are to crawl or to stand up.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "age",
+        "description": "The creature ceases aging.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "aware_of_surroundings",
+        "description": "The creature is unaware of its surroundings.",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "hold_items",
+        "description": "The creature drops whatever it's holding.",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "blinded",
+        "name": "Blinded",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/blinded",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "charmed",
+        "name": "Charmed",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/charmed",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "deafened",
+        "name": "Deafened",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/deafened",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "exhaustion",
+        "name": "Exhaustion",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/exhaustion",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "frightened",
+        "name": "Frightened",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/frightened",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "grappled",
+        "name": "Grappled",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/grappled",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "incapacitated",
+        "name": "Incapacitated",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/incapacitated",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "invisible",
+        "name": "Invisible",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/invisible",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "paralyzed",
+        "name": "Paralyzed",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/paralyzed",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "petrified",
+        "name": "Petrified",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/petrified",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "poisoned",
+        "name": "Poisoned",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/poisoned",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "prone",
+        "name": "Prone",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/prone",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "restrained",
+        "name": "Restrained",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/restrained",
+        "pages": [
+          187
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "stunned",
+        "name": "Stunned",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/stunned",
+        "pages": [
+          189
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "unconscious",
+        "name": "Unconscious",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/unconscious",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
       }
     ]
   },

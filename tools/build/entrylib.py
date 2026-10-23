@@ -323,3 +323,104 @@ def quote(fragment, rid=None, data=None):
     if data is not None:
         q["data"] = data
     return q
+
+
+# ---------------------------------------------------------------- declarative builder
+
+def build(kind, slug, name, nodes, lot, section_path, items, text=None, **kw):
+    """Build an entry from a coverage plan whose items carry their own representation.
+
+    items: list of (anchor, tag, payload). Consecutive items with the same anchor form one
+    segment. Tags:
+      "desc"  descriptive text, no payload
+      "rule"  payload = {"id": ..., ...mechanic} appended to data.rules
+      "fx"    payload = effect dict (or list of effects) appended to effects
+      "md"    payload = master decision dict (from md())
+      "ref"   payload = list of refs (shared rule)
+      "sys"   payload = list of "ref#pointer" or "/pointer" strings already in place
+      "table" payload = table dict appended to data.tables
+    The segment status is master_decision > structured > shared_rule > descriptive.
+    """
+    data = dict(kw.pop("data", {}) or {})
+    effects = list(kw.pop("effects", []) or [])
+    mds = list(kw.pop("master_decisions", []) or [])
+    segments = []  # [anchor, set_of_tags, by]
+    for anchor, tag, payload in items:
+        if not segments or segments[-1][0] != anchor:
+            segments.append([anchor, set(), []])
+        seg = segments[-1]
+        seg[1].add(tag)
+        if tag == "rule":
+            data.setdefault("rules", []).append(payload)
+            seg[2].append(f"/data/rules/{len(data['rules']) - 1}")
+        elif tag == "table":
+            data.setdefault("tables", []).append(payload)
+            seg[2].append(f"/data/tables/{len(data['tables']) - 1}")
+        elif tag == "fx":
+            for fx in payload if isinstance(payload, list) else [payload]:
+                effects.append(fx)
+                seg[2].append(f"/effects/{len(effects) - 1}")
+        elif tag == "md":
+            if payload["id"] not in [m["id"] for m in mds]:
+                mds.append(payload)
+            seg[2].append(f"md:{payload['id']}")
+        elif tag in ("ref", "sys"):
+            seg[2].extend(payload)
+        elif tag != "desc":
+            raise ValueError(f"unknown tag {tag}")
+    plan = []
+    for anchor, tags, by in segments:
+        if "md" in tags:
+            status = "master_decision"
+        elif tags & {"rule", "fx", "sys", "table"}:
+            status = "structured"
+        elif "ref" in tags:
+            status = "shared_rule"
+        else:
+            status = "descriptive"
+        seen = []
+        for b in by:
+            if b not in seen:
+                seen.append(b)
+        plan.append((anchor, status, seen or None))
+    return entry(kind, slug, name, nodes, lot, section_path, plan, data=data or None, effects=effects or None,
+                 master_decisions=mds or None, text=text, **kw)
+
+
+def extend_registries(additions, lot):
+    """Add registry names a lot needs to knowledge/<system>/system.json (idempotent)."""
+    path = KNOWLEDGE / SYSTEM / "system.json"
+    system = json.loads(path.read_text(encoding="utf-8"))
+    for reg, items in additions.items():
+        current = system["registries"].setdefault(reg, [])
+        ids = {i["id"] for i in current}
+        for item in items:
+            if item["id"] in ids:
+                continue
+            current.append({**item, "lot": lot})
+            ids.add(item["id"])
+    path.write_text(json.dumps(system, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return system
+
+
+def glossary(name, kind, lot, items, slug=None, **kw):
+    """Entry for a Rules Glossary term (kind tag in brackets in the heading when not 'rule')."""
+    inv = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entries.json").read_text(encoding="utf-8"))["entries"]
+    hit = [e for e in inv if e["name"] == name and e["kind"] == kind]
+    if len(hit) != 1:
+        raise KeyError(f"inventory: {name} ({kind}) -> {hit}")
+    e = hit[0]
+    tag = (e.get("facets") or {}).get("glossary_tag")
+    title = f"{name} [{tag}]" if tag else name
+    nodes = section(title, 4, e["page"])
+    return build(kind, slug or e["ref"].rsplit("/", 1)[1], name, nodes, lot,
+                 f"Rules Glossary/Rules Definitions/{title}", items,
+                 facets={"glossary": True, **({"glossary_tag": tag} if tag else {})}, **kw)
+
+
+def ref_of(name, kind=None):
+    inv = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entries.json").read_text(encoding="utf-8"))["entries"]
+    hit = [e["ref"] for e in inv if e["name"] == name and (kind is None or e["kind"] == kind)]
+    if len(hit) != 1:
+        raise KeyError(f"inventory ref for {name!r} ({kind}): {hit}")
+    return hit[0]
