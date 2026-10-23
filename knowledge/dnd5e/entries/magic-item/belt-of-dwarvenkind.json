@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/belt-of-dwarvenkind",
+  "kind": "magic-item",
+  "name": "Belt of Dwarvenkind",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      213
+    ],
+    "section": "Magic Items/Magic Items A–Z/Belt of Dwarvenkind",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare (Requires Attunement)*\n\nWhile wearing this belt, you gain the following benefits:\n\n**Dwarvish.** You know Dwarvish.\n\n**Friend of Dwarvenkind.** You have Advantage on Charisma (Persuasion) checks made to interact with dwarves and duergar.\n\n**Toughness.** Your Constitution increases by 2, to a maximum of 20.\n\nIn addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you can grow one, or a thicker beard if you already have one.\n\nIf you aren’t a dwarf or duergar, you gain the following additional benefits while wearing the belt:\n\n**Darkvision.** You have Darkvision with a range of 60 feet.\n\n**Resilience.** You have Resistance to Poison damage.\n\nYou also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "beard",
+        "chance_percent": 50,
+        "when": "each dawn"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "dwarvish"
+      ],
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "check_uses_skill",
+            "args": {
+              "skill": "persuasion"
+            }
+          },
+          {
+            "pred": "interacting_with",
+            "args": {
+              "creatures": [
+                "dwarves",
+                "duergar"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.con",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "sense",
+      "sense": "darkvision",
+      "range_feet": 60,
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "is_species",
+              "args": {
+                "species": [
+                  "dwarf",
+                  "duergar"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "poison"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "is_species",
+              "args": {
+                "species": [
+                  "dwarf",
+                  "duergar"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against_condition",
+            "args": {
+              "condition": "poisoned"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this belt, you gain the following benefits:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Dwarvish.** You know Dwarvish.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Friend of Dwarvenkind.** You have Advantage on Charisma (Persuasion) checks made to interact with dwarves and duergar.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Toughness.** Your Constitution increases by 2, to a maximum of 20.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "In addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you can grow one, or a thicker beard if you already have one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If you aren’t a dwarf or duergar, you gain the following additional benefits while wearing the belt:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Darkvision.** You have Darkvision with a range of 60 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "**Resilience.** You have Resistance to Poison damage.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/iron-flask",
+  "kind": "magic-item",
+  "name": "Iron Flask",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      228
+    ],
+    "section": "Magic Items/Magic Items A–Z/Iron Flask",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Legendary*\n\nWhile holding this brass-stoppered iron flask, you can take a Magic action to target a creature that you can see within 60 feet of yourself. If the flask is empty and the target is native to a plane of existence other than the one you’re on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has Advantage on the save. Once trapped, a creature remains in the flask until released. The flask can hold only one creature at a time. A creature trapped in the flask doesn’t age and doesn’t need to breathe, eat, or drink.\n\nYou can take a Magic action to remove the flask’s stopper and release the creature in the flask. The creature then obeys your commands for 1 hour, understanding those commands even if it doesn’t know the language in which the commands are given. If you issue no commands or give the creature a command that is likely to result in its death or imprisonment, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.\n\nAn *Identify* spell reveals if the flask contains a creature, but the only way to determine the type of creature is to open the flask. A newly discovered *Iron Flask* might already contain a creature chosen by the GM.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "prison",
+        "capacity": 1,
+        "no_aging": true,
+        "no_breath_food_drink": true
+      },
+      {
+        "id": "identify",
+        "reveals_occupied": "dnd5e/spell/identify",
+        "type_only_by_opening": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/iron-flask",
+              "note": "Trapped in the flask until released."
+            }
+          ],
+          "note": "Only if the flask is empty and the target is native to another plane; Advantage if trapped before."
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/iron-flask",
+          "duration": {
+            "kind": "hours",
+            "amount": 1
+          },
+          "note": "Released creature obeys your commands for 1 hour; defends itself against suicidal orders or none."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "flask_occupant",
+      "reason": "gm_judgment",
+      "prompt": "Does a newly found flask already contain a creature, and which?",
+      "source_text": "A newly discovered *Iron Flask* might already contain a creature chosen by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding this brass-stoppered iron flask, you can take a Magic action to target a creature that you can see within 60 feet of yourself. If the flask is empty and the target is native to a plane of existence other than the one you’re on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has Advantage on the save. Once trapped, a creature remains in the flask until released. The flask can hold only one creature at a time. A creature trapped in the flask doesn’t age and doesn’t need to breathe, eat, or drink.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can take a Magic action to remove the flask’s stopper and release the creature in the flask. The creature then obeys your commands for 1 hour, understanding those commands even if it doesn’t know the language in which the commands are given. If you issue no commands or give the creature a command that is likely to result in its death or imprisonment, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "An *Identify* spell reveals if the flask contains a creature, but the only way to determine the type of creature is to open the flask. A newly discovered *Iron Flask* might already contain a creature chosen by the GM.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/1",
+        "md:flask_occupant"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/iron-flask"
+  ]
+}

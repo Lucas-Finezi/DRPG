@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/consumable-items",
+  "kind": "rule",
+  "name": "Consumable Items",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      206
+    ],
+    "section": "Magic Items/Activating a Magic Item/Consumable Items",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "Some items are consumed—used up, in other words—when they are activated. A *Potion of Healing* must be swallowed, for example, while the writing vanishes from a scroll when it is read. Once used, a consumable item loses its magic.\n\n#### Spells Cast from Items\n\nSome magic items allow the user to cast a spell from the item. The spell is cast at the lowest possible spell and caster level, doesn’t expend any of the user’s spell slots, and requires no components unless the item’s description notes otherwise. The spell uses its normal casting time, range, and duration, and the user of the item must concentrate if the spell requires Concentration. Many items, such as Potions, bypass the casting of a spell and confer the spell’s effects with its usual duration. Certain items make exceptions to these rules, changing the casting time, duration, or other parts of a spell.\n\nA magic item may require the user to use their own spellcasting ability when casting a spell from the item. If the user has more than one spellcasting ability, the user chooses which one to use with the item. If the user doesn’t have a spellcasting ability, their spellcasting ability modifier is +0 for the item, and the user’s Proficiency Bonus applies.\n\n#### Charges\n\nSome magic items have charges that must be expended to activate their properties. The number of charges an item has remaining is revealed when the *Identify* spell is cast on it. A creature attuned to an item knows how many charges the item has and how many it regains.",
+  "data": {
+    "rules": [
+      {
+        "id": "consumed",
+        "loses_magic_after_use": true
+      },
+      {
+        "id": "spells_from_items",
+        "lowest_spell_and_caster_level": true,
+        "slot": "none",
+        "components": "none",
+        "normal_casting_time_range_duration": true,
+        "concentration_as_normal": true,
+        "potions_confer_effect": true
+      },
+      {
+        "id": "own_ability",
+        "multiple": "user chooses",
+        "none": {
+          "modifier": 0,
+          "add_proficiency_bonus": true
+        }
+      },
+      {
+        "id": "charges",
+        "identify_reveals_remaining": "dnd5e/spell/identify",
+        "attuned_knows": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Some items are consumed—used up, in other words—when they are activated. A *Potion of Healing* must be swallowed, for example, while the writing vanishes from a scroll when it is read. Once used, a consumable item loses its magic.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Spells Cast from Items\n\nSome magic items allow the user to cast a spell from the item. The spell is cast at the lowest possible spell and caster level, doesn’t expend any of the user’s spell slots, and requires no components unless the item’s description notes otherwise. The spell uses its normal casting time, range, and duration, and the user of the item must concentrate if the spell requires Concentration. Many items, such as Potions, bypass the casting of a spell and confer the spell’s effects with its usual duration. Certain items make exceptions to these rules, changing the casting time, duration, or other parts of a spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "A magic item may require the user to use their own spellcasting ability when casting a spell from the item. If the user has more than one spellcasting ability, the user chooses which one to use with the item. If the user doesn’t have a spellcasting ability, their spellcasting ability modifier is +0 for the item, and the user’s Proficiency Bonus applies.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Charges\n\nSome magic items have charges that must be expended to activate their properties. The number of charges an item has remaining is revealed when the *Identify* spell is cast on it. A creature attuned to an item knows how many charges the item has and how many it regains.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

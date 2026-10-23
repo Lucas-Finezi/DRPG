@@ -1,0 +1,248 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/cube-of-force",
+  "kind": "magic-item",
+  "name": "Cube of Force",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      216
+    ],
+    "section": "Magic Items/Magic Items A–Z/Cube of Force",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare (Requires Attunement)*\n\nThis cube is about an inch across. Each face has a distinct marking on it. You can press one of those faces, expend the number of charges required for it, and thereby cast the spell associated with it (save DC 17), as shown in the Cube of Force Faces table.\n\nThe cube starts with 10 charges, and it regains 1d6 expended charges daily at dawn.\n\n##### Cube of Force Faces\n\n| **Spell** | **Charge Cost** |\n| *Mage Armor* | 1 |\n| *Shield* | 1 |\n| *Tiny Hut* | 3 |\n| *Private Sanctum* | 4 |\n| *Resilient Sphere* | 4 |\n| *Wall of Force* | 5 |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "cube_of_force_faces",
+        "caption": "Cube of Force Faces",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Mage Armor",
+            "1"
+          ],
+          [
+            "Shield",
+            "1"
+          ],
+          [
+            "Tiny Hut",
+            "3"
+          ],
+          [
+            "Private Sanctum",
+            "4"
+          ],
+          [
+            "Resilient Sphere",
+            "4"
+          ],
+          [
+            "Wall of Force",
+            "5"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-armor",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/shield",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/tiny-hut",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/private-sanctum",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/resilient-sphere",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-force",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 10,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d6"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This cube is about an inch across. Each face has a distinct marking on it. You can press one of those faces, expend the number of charges required for it, and thereby cast the spell associated with it (save DC 17), as shown in the Cube of Force Faces table.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "The cube starts with 10 charges, and it regains 1d6 expended charges daily at dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    },
+    {
+      "text": "##### Cube of Force Faces\n\n| **Spell** | **Charge Cost** |\n| *Mage Armor* | 1 |\n| *Shield* | 1 |\n| *Tiny Hut* | 3 |\n| *Private Sanctum* | 4 |\n| *Resilient Sphere* | 4 |\n| *Wall of Force* | 5 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/mage-armor",
+    "dnd5e/spell/private-sanctum",
+    "dnd5e/spell/resilient-sphere",
+    "dnd5e/spell/shield",
+    "dnd5e/spell/tiny-hut",
+    "dnd5e/spell/wall-of-force"
+  ]
+}

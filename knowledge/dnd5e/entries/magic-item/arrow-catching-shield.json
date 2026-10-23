@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/arrow-catching-shield",
+  "kind": "magic-item",
+  "name": "Arrow-Catching Shield",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      211
+    ],
+    "section": "Magic Items/Magic Items A–Z/Arrow-Catching Shield",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Shield), Rare (Requires Attunement)*\n\nYou gain a +2 bonus to Armor Class against ranged attack rolls while you wield this Shield. This bonus is in addition to the Shield’s normal bonus to AC.\n\nWhenever an attacker makes a ranged attack roll against a target within 5 feet of you, you can take a Reaction to become the target of the attack instead.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Shield), Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Shield",
+        "refs": [
+          "dnd5e/armor/shield"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "all": [
+          {
+            "pred": "wielding_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is_ranged"
+          }
+        ]
+      },
+      "note": "In addition to the Shield's normal bonus."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "ranged_attack_against_creature_within_feet",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/arrow-catching-shield",
+          "note": "You become the target of the attack instead."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "within_feet",
+        "args": {
+          "feet": 5
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Shield), Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +2 bonus to Armor Class against ranged attack rolls while you wield this Shield. This bonus is in addition to the Shield’s normal bonus to AC.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Whenever an attacker makes a ranged attack roll against a target within 5 feet of you, you can take a Reaction to become the target of the attack instead.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/shield",
+    "dnd5e/magic-item/arrow-catching-shield"
+  ]
+}

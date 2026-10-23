@@ -1,0 +1,145 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/carpet-of-flying",
+  "kind": "magic-item",
+  "name": "Carpet of Flying",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      215
+    ],
+    "section": "Magic Items/Magic Items A–Z/Carpet of Flying",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Very Rare*\n\nYou can make this carpet hover and fly by taking a Magic action and using the carpet’s command word. It moves according to your directions if you are within 30 feet of it.\n\nFour sizes of *Carpet of Flying* exist. The GM chooses the size of a given carpet or determines it randomly by rolling on the following table. A carpet can carry up to twice the weight shown on the table, but its Fly Speed is halved if it carries more than its normal capacity.\n\n| **1d100** | **Size** | **Capacity** | **Fly Speed** |\n| 01–20 | 3 ft. × 5 ft. | 200 lb. | 80 feet |\n| 21–55 | 4 ft. × 6 ft. | 400 lb. | 60 feet |\n| 56–80 | 5 ft. × 7 ft. | 600 lb. | 40 feet |\n| 81–00 | 6 ft. × 9 ft. | 800 lb. | 30 feet |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "overload",
+        "max_multiplier": 2,
+        "over_capacity_fly_speed": 0.5
+      }
+    ],
+    "tables": [
+      {
+        "id": "carpet_of_flying",
+        "caption": "Carpet of Flying",
+        "columns": [
+          "1d100",
+          "Size",
+          "Capacity",
+          "Fly Speed"
+        ],
+        "rows": [
+          [
+            "01–20",
+            "3 ft. × 5 ft.",
+            "200 lb.",
+            "80 feet"
+          ],
+          [
+            "21–55",
+            "4 ft. × 6 ft.",
+            "400 lb.",
+            "60 feet"
+          ],
+          [
+            "56–80",
+            "5 ft. × 7 ft.",
+            "600 lb.",
+            "40 feet"
+          ],
+          [
+            "81–00",
+            "6 ft. × 9 ft.",
+            "800 lb.",
+            "30 feet"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "speed",
+          "movement": "fly",
+          "mode": "set",
+          "value": {
+            "var": "item_variant_fly_speed"
+          },
+          "hover": true
+        }
+      ],
+      "note": "Command word; moves at your direction while you are within 30 feet."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "carpet_size",
+      "reason": "gm_judgment",
+      "prompt": "Which size is this carpet? (choose or roll 1d100)",
+      "source_text": "The GM chooses the size of a given carpet or determines it randomly"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You can make this carpet hover and fly by taking a Magic action and using the carpet’s command word. It moves according to your directions if you are within 30 feet of it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Four sizes of *Carpet of Flying* exist. The GM chooses the size of a given carpet or determines it randomly by rolling on the following table. A carpet can carry up to twice the weight shown on the table, but its Fly Speed is halved if it carries more than its normal capacity.",
+      "status": "master_decision",
+      "by": [
+        "md:carpet_size",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "| **1d100** | **Size** | **Capacity** | **Fly Speed** |\n| 01–20 | 3 ft. × 5 ft. | 200 lb. | 80 feet |\n| 21–55 | 4 ft. × 6 ft. | 400 lb. | 60 feet |\n| 56–80 | 5 ft. × 7 ft. | 600 lb. | 40 feet |\n| 81–00 | 6 ft. × 9 ft. | 800 lb. | 30 feet |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

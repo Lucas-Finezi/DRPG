@@ -1,0 +1,54 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-category-rods",
+  "kind": "rule",
+  "name": "Rods (Magic Item Category)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      204
+    ],
+    "section": "Magic Items/Magic Item Categories/Rods",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "An item in the Rod category is a scepter usually made of metal, wood, or bone. A typical rod weighs 2 to 5 pounds.\n\nUnless its description notes otherwise, a rod can be used as an Arcane Focus.",
+  "data": {
+    "rules": [
+      {
+        "id": "rod",
+        "weight_lb": [
+          2,
+          5
+        ]
+      },
+      {
+        "id": "focus",
+        "arcane_focus": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An item in the Rod category is a scepter usually made of metal, wood, or bone. A typical rod weighs 2 to 5 pounds.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Unless its description notes otherwise, a rod can be used as an Arcane Focus.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

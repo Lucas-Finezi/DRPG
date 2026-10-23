@@ -1,0 +1,324 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-thunder-and-lightning",
+  "kind": "magic-item",
+  "name": "Staff of Thunder and Lightning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      247,
+      248
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Thunder and Lightning",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Very Rare (Requires Attunement)*\n\nThis staff can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. It also has the following additional properties. Once one of these properties is used, it can’t be used again until the next dawn.\n\n***Lightning.*** When you hit with a melee attack using the staff, you can cause the target to take an extra 2d6 Lightning damage (no action required).\n\n***Thunder.*** When you hit with a melee attack using the staff, you can cause the staff to emit a crack of thunder audible out to 300 feet (no action required). The target you hit must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn.\n\n***Thunder and Lightning.*** Immediately after you hit with a melee attack using the staff, you can take a Bonus Action to use the Lightning and Thunder properties (see above) at the same time. Doing so doesn’t expend the daily use of those properties, only the use of this one.\n\n***Lightning Strike.*** You can take a Magic action to cause a bolt of lightning to leap from the staff’s tip in a Line that is 5 feet wide and 120 feet long. Each creature in that Line makes a DC 17 Dexterity saving throw, taking 9d6 Lightning damage on a failed save or half as much damage on a successful one.\n\n***Thunderclap.*** You can take a Magic action to cause the staff to produce a thunderclap audible out to 600 feet. Every creature within a 60-foot Emanation originating from you makes a DC 17 Constitution saving throw. On a failed save, a creature takes 2d6 Thunder damage and has the Deafened condition for 1 minute. On a successful save, a creature takes half as much damage only.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "daily",
+        "each_property": "once per dawn"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": "lightning",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_uses_weapon",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is_melee"
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/stunned",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "self",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_uses_weapon",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is_melee"
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/staff-of-thunder-and-lightning",
+          "note": "Use Lightning and Thunder together without expending their daily uses."
+        }
+      ],
+      "cost": "bonus_action",
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_uses_weapon",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is_melee"
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "line",
+              "size_feet": 120,
+              "width_feet": 5,
+              "origin": "self"
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "9d6",
+              "damage_type": "lightning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 60,
+              "origin": "self"
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/deafened",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "half_on_success": true,
+          "note": "Audible to 600 feet; success: half damage only."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. It also has the following additional properties. Once one of these properties is used, it can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Lightning.*** When you hit with a melee attack using the staff, you can cause the target to take an extra 2d6 Lightning damage (no action required).",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Thunder.*** When you hit with a melee attack using the staff, you can cause the staff to emit a crack of thunder audible out to 300 feet (no action required). The target you hit must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Thunder and Lightning.*** Immediately after you hit with a melee attack using the staff, you can take a Bonus Action to use the Lightning and Thunder properties (see above) at the same time. Doing so doesn’t expend the daily use of those properties, only the use of this one.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Lightning Strike.*** You can take a Magic action to cause a bolt of lightning to leap from the staff’s tip in a Line that is 5 feet wide and 120 feet long. Each creature in that Line makes a DC 17 Dexterity saving throw, taking 9d6 Lightning damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Thunderclap.*** You can take a Magic action to cause the staff to produce a thunderclap audible out to 600 feet. Every creature within a 60-foot Emanation originating from you makes a DC 17 Constitution saving throw. On a failed save, a creature takes 2d6 Thunder damage and has the Deafened condition for 1 minute. On a successful save, a creature takes half as much damage only.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/stunned",
+    "dnd5e/magic-item/staff-of-thunder-and-lightning"
+  ]
+}

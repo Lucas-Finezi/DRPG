@@ -1,0 +1,107 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dwarven-plate",
+  "kind": "magic-item",
+  "name": "Dwarven Plate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      219
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dwarven Plate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Half Plate Armor or Plate Armor), Very Rare*\n\nWhile wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Half Plate Armor or Plate Armor), Very Rare",
+      "category": "armor",
+      "applies_to": {
+        "text": "Half Plate Armor or Plate Armor",
+        "refs": [
+          "dnd5e/armor/half-plate-armor",
+          "dnd5e/armor/plate-armor"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "moved_against_will_along_ground",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/dwarven-plate",
+          "note": "Reduce the distance moved by up to 10 feet."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Half Plate Armor or Plate Armor), Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/half-plate-armor",
+    "dnd5e/armor/plate-armor",
+    "dnd5e/magic-item/dwarven-plate"
+  ]
+}

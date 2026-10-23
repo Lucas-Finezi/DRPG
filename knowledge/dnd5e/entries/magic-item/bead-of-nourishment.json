@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/bead-of-nourishment",
+  "kind": "magic-item",
+  "name": "Bead of Nourishment",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      213
+    ],
+    "section": "Magic Items/Magic Items A–Z/Bead of Nourishment",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "*Wondrous Item, Common*\n\nThis flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "common"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Common",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "common"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "nourishment",
+        "equals": "dnd5e/gear/rations",
+        "days": 1
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Common*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This flavorless, gelatinous bead dissolves on your tongue and provides as much nourishment as 1 day of Rations.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

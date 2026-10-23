@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/shield-of-missile-attraction",
+  "kind": "magic-item",
+  "name": "Shield of Missile Attraction",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      243
+    ],
+    "section": "Magic Items/Magic Items A–Z/Shield of Missile Attraction",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Shield), Rare (Requires Attunement)*\n\nWhile holding this Shield, you have Resistance to damage from attacks made with Ranged weapons.\n\n***Curse.*** This Shield is cursed. Attuning to it curses you until you are targeted by a *Remove Curse* spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ranged weapon targets a creature within 10 feet of you, the curse causes you to become the target instead.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Shield), Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Shield",
+        "refs": [
+          "dnd5e/armor/shield"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "curse",
+        "ends_by": [
+          "dnd5e/spell/remove-curse"
+        ],
+        "removing_item_ends": false
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing",
+        "acid",
+        "cold",
+        "fire",
+        "force",
+        "lightning",
+        "necrotic",
+        "poison",
+        "psychic",
+        "radiant",
+        "thunder"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_with_ranged_weapon"
+          }
+        ]
+      },
+      "note": "Damage from attacks made with Ranged weapons."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "ranged_attack_against_creature_within_feet",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/shield-of-missile-attraction",
+          "note": "You become the target instead (within 10 feet)."
+        }
+      ],
+      "condition": {
+        "pred": "attuned_to_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Shield), Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding this Shield, you have Resistance to damage from attacks made with Ranged weapons.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Curse.*** This Shield is cursed. Attuning to it curses you until you are targeted by a *Remove Curse* spell or similar magic. Removing the Shield fails to end the curse on you. Whenever an attack with a Ranged weapon targets a creature within 10 feet of you, the curse causes you to become the target instead.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/cursed-items",
+        "/data/rules/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/shield",
+    "dnd5e/magic-item/shield-of-missile-attraction",
+    "dnd5e/rule/cursed-items",
+    "dnd5e/spell/remove-curse"
+  ]
+}

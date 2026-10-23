@@ -1,0 +1,160 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/frost-brand",
+  "kind": "magic-item",
+  "name": "Frost Brand",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      223
+    ],
+    "section": "Magic Items/Magic Items A–Z/Frost Brand",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, or Shortsword), Very Rare (Requires Attunement)*\n\nWhen you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage.\n\nIn freezing temperatures, the weapon sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.\n\nWhen you draw this weapon, you can extinguish all nonmagical flames within 30 feet of yourself. Once used, this property can’t be used again for 1 hour.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+        "refs": [
+          "dnd5e/weapon/glaive",
+          "dnd5e/weapon/greatsword",
+          "dnd5e/weapon/longsword",
+          "dnd5e/weapon/rapier",
+          "dnd5e/weapon/scimitar",
+          "dnd5e/weapon/shortsword"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "light",
+        "bright_feet": 10,
+        "dim_feet": 10,
+        "requires": "freezing_temperatures"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d6",
+          "damage_type": "cold",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "pred": "attack_uses_weapon",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "fire"
+      ],
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "draws_item",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/frost-brand",
+          "note": "Extinguish all nonmagical flames within 30 feet."
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "hour"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Glaive, Greatsword, Longsword, Rapier,* *Scimitar, or Shortsword), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "In freezing temperatures, the weapon sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you draw this weapon, you can extinguish all nonmagical flames within 30 feet of yourself. Once used, this property can’t be used again for 1 hour.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/frost-brand",
+    "dnd5e/weapon/glaive",
+    "dnd5e/weapon/greatsword",
+    "dnd5e/weapon/longsword",
+    "dnd5e/weapon/rapier",
+    "dnd5e/weapon/scimitar",
+    "dnd5e/weapon/shortsword"
+  ]
+}

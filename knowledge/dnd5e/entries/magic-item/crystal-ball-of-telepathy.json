@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/crystal-ball-of-telepathy",
+  "kind": "magic-item",
+  "name": "Crystal Ball of Telepathy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      216
+    ],
+    "section": "Magic Items/Magic Items A–Z/Crystal Ball of Telepathy",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Legendary (Requires Attunement)*\n\nWhile touching this crystal orb, you can cast *Scrying* (save DC 17) with it. In addition, you can communicate telepathically with creatures you can see within 30 feet of the spell’s sensor. You can also cast *Suggestion* (save DC 17) through the sensor on one of those creatures. You don’t need to concentrate on this *Suggestion* to maintain it during its duration, but it ends if *Scrying* ends. You can’t cast *Suggestion* in this way again until the next dawn.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/scrying",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "reference",
+      "rule": "dnd5e/rule/telepathy",
+      "note": "With creatures you can see within 30 feet of the sensor."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/suggestion",
+          "slot": "none",
+          "components": [],
+          "save_dc": 17,
+          "note": "No Concentration needed. Through the sensor; ends if Scrying ends."
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While touching this crystal orb, you can cast *Scrying* (save DC 17) with it. In addition, you can communicate telepathically with creatures you can see within 30 feet of the spell’s sensor. You can also cast *Suggestion* (save DC 17) through the sensor on one of those creatures. You don’t need to concentrate on this *Suggestion* to maintain it during its duration, but it ends if *Scrying* ends. You can’t cast *Suggestion* in this way again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/telepathy",
+    "dnd5e/spell/scrying",
+    "dnd5e/spell/suggestion"
+  ]
+}

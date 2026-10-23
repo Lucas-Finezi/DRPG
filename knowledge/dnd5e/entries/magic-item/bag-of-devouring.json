@@ -1,0 +1,116 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/bag-of-devouring",
+  "kind": "magic-item",
+  "name": "Bag of Devouring",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      212
+    ],
+    "section": "Magic Items/Magic Items A–Z/Bag of Devouring",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Very Rare*\n\nThis bag resembles a *Bag of Holding* but is a feeding orifice for a gigantic extradimensional creature. Turning the bag inside out closes the orifice.\n\nThe extradimensional creature attached to the bag can sense whatever is placed inside the bag. Animal or vegetable matter placed wholly in the bag is devoured and lost forever. When part of a living creature is placed in the bag, as happens when someone reaches inside it, there is a 50 percent chance that the creature is pulled inside the bag. A creature inside the bag can take an action to try to escape, doing so with a successful DC 15 Strength (Athletics) check. Another creature can take an action to reach into the bag to pull a creature out, doing so with a successful DC 20 Strength (Athletics) check, provided the puller isn’t pulled inside the bag first. Any creature that starts its turn inside the bag is devoured, its body destroyed.\n\nInanimate objects can be stored in the bag, which can hold a cubic foot of such material. However, once each day, the bag swallows any objects inside it and spits them out into another plane of existence. The GM determines the time and plane.\n\nIf the bag is pierced or torn, it is destroyed, and anything contained within it is transported to a random location on the Astral Plane.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "devour",
+        "animal_or_vegetable_matter": "devoured",
+        "pull_in_chance_percent": 50,
+        "escape": {
+          "cost": "action",
+          "check": "str.athletics",
+          "dc": 15
+        },
+        "pull_out": {
+          "cost": "action",
+          "check": "str.athletics",
+          "dc": 20
+        },
+        "starts_turn_inside": "devoured"
+      },
+      {
+        "id": "storage",
+        "cubic_feet": 1,
+        "daily": "objects_sent_to_another_plane"
+      },
+      {
+        "id": "destroyed",
+        "on": [
+          "pierced",
+          "torn"
+        ],
+        "contents_to": "astral_plane_random"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "devour_plane",
+      "reason": "gm_judgment",
+      "prompt": "When during the day, and to which plane, are the objects sent?",
+      "source_text": "The GM determines the time and plane."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This bag resembles a *Bag of Holding* but is a feeding orifice for a gigantic extradimensional creature. Turning the bag inside out closes the orifice.",
+      "status": "descriptive"
+    },
+    {
+      "text": "The extradimensional creature attached to the bag can sense whatever is placed inside the bag. Animal or vegetable matter placed wholly in the bag is devoured and lost forever. When part of a living creature is placed in the bag, as happens when someone reaches inside it, there is a 50 percent chance that the creature is pulled inside the bag. A creature inside the bag can take an action to try to escape, doing so with a successful DC 15 Strength (Athletics) check. Another creature can take an action to reach into the bag to pull a creature out, doing so with a successful DC 20 Strength (Athletics) check, provided the puller isn’t pulled inside the bag first. Any creature that starts its turn inside the bag is devoured, its body destroyed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Inanimate objects can be stored in the bag, which can hold a cubic foot of such material. However, once each day, the bag swallows any objects inside it and spits them out into another plane of existence. The GM determines the time and plane.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/1",
+        "md:devour_plane"
+      ]
+    },
+    {
+      "text": "If the bag is pierced or torn, it is destroyed, and anything contained within it is transported to a random location on the Astral Plane.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

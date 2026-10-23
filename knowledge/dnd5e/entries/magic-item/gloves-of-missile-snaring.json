@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/gloves-of-missile-snaring",
+  "kind": "magic-item",
+  "name": "Gloves of Missile Snaring",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      224
+    ],
+    "section": "Magic Items/Magic Items A–Z/Gloves of Missile Snaring",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon (Requires Attunement)*\n\nIf you’re hit by an attack roll made with a Ranged or Thrown weapon while wearing these gloves, you can take a Reaction to reduce the damage by 1d10 plus your Dexterity modifier if you have a free hand. If you reduce the damage to 0, you can catch the ammunition or weapon if it is small enough for you to hold in that hand.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hit_by_attack_roll"
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "damage_taken",
+          "mode": "add",
+          "value": {
+            "op": "neg",
+            "args": [
+              {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  {
+                    "var": "ability_mod.dex"
+                  }
+                ]
+              }
+            ]
+          },
+          "note": "If reduced to 0, catch the ammunition or weapon if small enough to hold."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "has_hand_free"
+          },
+          {
+            "pred": "attack_with_weapon_property",
+            "args": {
+              "property": [
+                "ranged",
+                "thrown"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "If you’re hit by an attack roll made with a Ranged or Thrown weapon while wearing these gloves, you can take a Reaction to reduce the damage by 1d10 plus your Dexterity modifier if you have a free hand. If you reduce the damage to 0, you can catch the ammunition or weapon if it is small enough for you to hold in that hand.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

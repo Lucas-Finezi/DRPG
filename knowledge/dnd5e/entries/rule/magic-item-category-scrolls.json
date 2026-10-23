@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-category-scrolls",
+  "kind": "rule",
+  "name": "Scrolls (Magic Item Category)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      205
+    ],
+    "section": "Magic Items/Magic Item Categories/Scrolls",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "An item in the Scroll category is a roll of paper or parchment, sometimes attached to wooden rods and typically kept safe in a tube of ivory, jade, leather, metal, or wood. The most prevalent scroll is the *Spell Scroll*, a spell stored in written form.\n\n***Using a Scroll.*** Scrolls are consumable items. Unleashing the magic in a scroll requires the user to read the scroll. When its magic has been invoked, the scroll can’t be used again. Its words fade, or it crumbles into dust.\n\nAny creature that can understand a written language can read a scroll and attempt to activate it unless its description notes otherwise.",
+  "data": {
+    "rules": [
+      {
+        "id": "use",
+        "consumable": true,
+        "read_to_activate": true
+      },
+      {
+        "id": "readers",
+        "requires": "understand a written language"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An item in the Scroll category is a roll of paper or parchment, sometimes attached to wooden rods and typically kept safe in a tube of ivory, jade, leather, metal, or wood. The most prevalent scroll is the *Spell Scroll*, a spell stored in written form.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Using a Scroll.*** Scrolls are consumable items. Unleashing the magic in a scroll requires the user to read the scroll. When its magic has been invoked, the scroll can’t be used again. Its words fade, or it crumbles into dust.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Any creature that can understand a written language can read a scroll and attempt to activate it unless its description notes otherwise.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

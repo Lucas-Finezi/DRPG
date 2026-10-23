@@ -1,0 +1,332 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-charming",
+  "kind": "magic-item",
+  "name": "Staff of Charming",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      245
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Charming",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Rare (Requires Attunement by a Bard, Cleric,* *Druid, Sorcerer, Warlock, or Wizard)*\n\nThis staff has 10 charges. While holding the staff, you can use any of its properties:\n\n**Cast Spell.** You can expend 1 of the staff’s charges to cast *Charm Person*, *Command*, or *Comprehend Languages* from it using your spell save DC.\n\n**Reflect Enchantment.** If you succeed on a saving throw against an Enchantment spell that targets only you, you can take a Reaction to expend 1 charge from the staff and turn the spell back on its caster as if you had cast the spell.\n\n**Resist Enchantment.** If you fail a saving throw against an Enchantment spell that targets only you, you can turn your failed save into a successful one. You can’t use this property of the staff again until the next dawn.\n\n***Regaining Charges.*** The staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles to dust and is destroyed.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Rare (Requires Attunement by a Bard, Cleric, Druid, Sorcerer, Warlock, or Wizard)",
+      "attunement": {
+        "required": true,
+        "by": "a Bard, Cleric, Druid, Sorcerer, Warlock, or Wizard",
+        "classes": [
+          "dnd5e/class/bard",
+          "dnd5e/class/cleric",
+          "dnd5e/class/druid",
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 10
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/charm-person",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/command",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/comprehend-languages",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "succeeds_saving_throw"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/staff-of-charming",
+          "note": "Turn the spell back on its caster as if you cast it."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "spell_school",
+            "args": {
+              "school": "enchantment"
+            }
+          },
+          {
+            "pred": "spell_targeted_only_you"
+          }
+        ]
+      },
+      "note": "Expend 1 charge."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "spell_school",
+            "args": {
+              "school": "enchantment"
+            }
+          },
+          {
+            "pred": "spell_targeted_only_you"
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d8",
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The item is destroyed."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Rare (Requires Attunement by a Bard, Cleric,* *Druid, Sorcerer, Warlock, or Wizard)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 10 charges. While holding the staff, you can use any of its properties:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Cast Spell.** You can expend 1 of the staff’s charges to cast *Charm Person*, *Command*, or *Comprehend Languages* from it using your spell save DC.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "**Reflect Enchantment.** If you succeed on a saving throw against an Enchantment spell that targets only you, you can take a Reaction to expend 1 charge from the staff and turn the spell back on its caster as if you had cast the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "**Resist Enchantment.** If you fail a saving throw against an Enchantment spell that targets only you, you can turn your failed save into a successful one. You can’t use this property of the staff again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles to dust and is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/6",
+        "/effects/7"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/bard",
+    "dnd5e/class/cleric",
+    "dnd5e/class/druid",
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard",
+    "dnd5e/magic-item/staff-of-charming",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/charm-person",
+    "dnd5e/spell/command",
+    "dnd5e/spell/comprehend-languages"
+  ]
+}

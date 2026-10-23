@@ -2091,6 +2091,118 @@
           90
         ],
         "lot": "L28"
+      },
+      {
+        "id": "item_bonus",
+        "description": "The +N of the item's variant (data.item.rarity[].bonus).",
+        "type": "number",
+        "pages": [
+          205
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_score",
+        "description": "Ability score granted by the item's variant (data.item.variants[].score).",
+        "type": "number",
+        "pages": [
+          213
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_fly_speed",
+        "description": "Fly Speed of the item's variant (its table).",
+        "type": "number",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "charges_spent",
+        "description": "Charges the user chooses to expend on this activation.",
+        "type": "number",
+        "pages": [
+          221
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "weapon_damage_type",
+        "description": "Damage type of the weapon used.",
+        "type": "identifier",
+        "pages": [
+          219
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_gems",
+        "description": "Number of gems remaining in the item.",
+        "type": "number",
+        "pages": [
+          225
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_spirits",
+        "description": "Spirits summoned by the item's variant (its table).",
+        "type": "number",
+        "pages": [
+          226
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_spheres_damage",
+        "description": "Lightning damage by the number of spheres created (Ring of Shooting Stars table).",
+        "type": "number",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "creatures_present",
+        "description": "Number of creatures present in the demiplane.",
+        "type": "number",
+        "pages": [
+          242
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "weapon_damage_max",
+        "description": "Maximum result of the weapon's damage dice.",
+        "type": "number",
+        "pages": [
+          248
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_ability_mod",
+        "description": "Ability modifier of a sentient item (param: ability).",
+        "type": "number",
+        "pages": [
+          207
+        ],
+        "params": [
+          "ability"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "shield_ac_bonus",
+        "description": "Armor Class bonus a wielded Shield grants (base 2 plus magic bonus).",
+        "type": "number",
+        "pages": [
+          92,
+          209
+        ],
+        "lot": "L31"
       }
     ],
     "stats": [
@@ -2652,6 +2764,38 @@
           137
         ],
         "lot": "L25"
+      },
+      {
+        "id": "armor_stealth_disadvantage",
+        "description": "The worn armor imposes Disadvantage on Dexterity (Stealth) checks (1) or not (0).",
+        "pages": [
+          231
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "armor_strength_requirement",
+        "description": "Strength score the worn armor requires (0 = none).",
+        "pages": [
+          231
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "breathe_any_environment",
+        "description": "The creature can breathe normally in any environment (1) or not (0).",
+        "pages": [
+          232
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_slot_cost",
+        "description": "Spell slots a casting expends (0 = cast without expending a slot).",
+        "pages": [
+          214
+        ],
+        "lot": "L31"
       }
     ],
     "rolls": [
@@ -3527,6 +3671,150 @@
           98
         ],
         "lot": "L30"
+      },
+      {
+        "id": "dawn",
+        "description": "The next dawn: magic items regain charges and daily properties.",
+        "type": "event",
+        "pages": [
+          206
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "unequips_item",
+        "description": "The creature stops wearing or wielding the item (param: item).",
+        "type": "event",
+        "pages": [
+          210
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hood_lowered",
+        "description": "The wearer pulls the item's hood down (no action required).",
+        "type": "event",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "deals_damage_with_item",
+        "description": "A creature takes damage from the item (param: item).",
+        "type": "event",
+        "pages": [
+          209
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "ranged_attack_against_creature_within_feet",
+        "description": "An attacker makes a ranged attack roll against a target within N feet of the creature (param: feet).",
+        "type": "event",
+        "pages": [
+          211
+        ],
+        "params": [
+          "feet"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "draws_item",
+        "description": "The creature draws the item (param: item).",
+        "type": "event",
+        "pages": [
+          223
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "moved_against_will_along_ground",
+        "description": "An effect moves the creature against its will along the ground.",
+        "type": "event",
+        "pages": [
+          219
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hour_elapsed",
+        "description": "An hour passes (end of each hour).",
+        "type": "event",
+        "pages": [
+          227
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "reads_item",
+        "description": "The creature attempts to read the item (param: item).",
+        "type": "event",
+        "pages": [
+          229
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "sees_reflection",
+        "description": "A creature sees its reflection in the item (param: item).",
+        "type": "event",
+        "pages": [
+          230
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "minutes_elapsed",
+        "description": "Every 10 minutes pass.",
+        "type": "event",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "succeeds_saving_throw",
+        "description": "The creature succeeds on a saving throw.",
+        "type": "event",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "targeted_by_attack_or_area",
+        "description": "The creature (or an ally within range) is targeted by an attack or saves against an area of effect.",
+        "type": "event",
+        "pages": [
+          243
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "expends_last_charge",
+        "description": "The item's last charge is expended.",
+        "type": "event",
+        "pages": [
+          206
+        ],
+        "lot": "L31"
       }
     ],
     "predicates": [
@@ -5269,6 +5557,448 @@
           100
         ],
         "lot": "L30"
+      },
+      {
+        "id": "attuned_to_item",
+        "description": "The creature is attuned to the item (param: item).",
+        "type": "predicate",
+        "pages": [
+          102
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "possesses_item",
+        "description": "The item is in the creature's possession (param: item).",
+        "type": "predicate",
+        "pages": [
+          213
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "within_feet_of_item",
+        "description": "The creature is within N feet of the item (params: feet, item).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "feet",
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "riding_item",
+        "description": "The creature rides the item, e.g. astride a broom (param: item).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "gripping_item",
+        "description": "The creature grips the item's edges, e.g. a cloak used to fly (param: item).",
+        "type": "predicate",
+        "pages": [
+          216
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "in_item_light",
+        "description": "The creature is within the light the item sheds (param: item).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "attack_is_ranged",
+        "description": "The attack roll is a ranged attack (weapon, spell or other).",
+        "type": "predicate",
+        "pages": [
+          211
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "class_is",
+        "description": "The creature has a level in one of these classes (param: classes).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "classes"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_level_is",
+        "description": "The spell being cast is of this level (param: level).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "level"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "is_species",
+        "description": "The creature is of one of these species or kinds (param: species).",
+        "type": "predicate",
+        "pages": [
+          213
+        ],
+        "params": [
+          "species"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "interacting_with",
+        "description": "The check is made to interact with these creatures (param: creatures).",
+        "type": "predicate",
+        "pages": [
+          213
+        ],
+        "params": [
+          "creatures"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "terrain_from",
+        "description": "The Difficult Terrain is created by these (param: source).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "source"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_for_movement",
+        "description": "The check is made to move in one of these modes, e.g. climb or swim (param: modes).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "modes"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_sense",
+        "description": "The creature has this sense (param: sense).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "sense"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "creature_has_tag",
+        "description": "The target has one of these creature tags, e.g. Demon (param: tags).",
+        "type": "predicate",
+        "pages": [
+          218
+        ],
+        "params": [
+          "tags"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "source_has_tag",
+        "description": "The effect's source has one of these creature tags (param: tags).",
+        "type": "predicate",
+        "pages": [
+          218
+        ],
+        "params": [
+          "tags"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "controls_item",
+        "description": "The creature controls the item (an Artifact such as a Dragon Orb) (param: item).",
+        "type": "predicate",
+        "pages": [
+          218
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "attuned_giant_item",
+        "description": "The creature wears and is attuned to a Belt of Giant Strength or Gauntlets of Ogre Power.",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "on_vessel",
+        "description": "The creature is on a boat or ship.",
+        "type": "predicate",
+        "pages": [
+          221
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "can_use_item",
+        "description": "The creature meets the item's requirements to use it (param: item).",
+        "type": "predicate",
+        "pages": [
+          229
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "failed_save_against_spell",
+        "description": "The damage results from failing a saving throw against a spell.",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hp_at_most",
+        "description": "The target has at most N Hit Points (param: hp).",
+        "type": "predicate",
+        "pages": [
+          229
+        ],
+        "params": [
+          "hp"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hp_below",
+        "description": "The target has fewer than N Hit Points (param: hp).",
+        "type": "predicate",
+        "pages": [
+          233
+        ],
+        "params": [
+          "hp"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_has_gem",
+        "description": "The item still has at least one gem of this type (param: gem).",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "params": [
+          "gem"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_orbiting",
+        "description": "The Ioun Stone orbits the creature's head (param: item).",
+        "type": "predicate",
+        "pages": [
+          227
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "save_against_spell_or_magic",
+        "description": "The saving throw is against a spell or other magical effect.",
+        "type": "predicate",
+        "pages": [
+          226
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "damage_from_falling",
+        "description": "The damage comes from a fall.",
+        "type": "predicate",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_marked_target",
+        "description": "The creature has a living sworn enemy or other marked target from the item.",
+        "type": "predicate",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_form_in",
+        "description": "The item is in one of these forms (param: forms).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "forms"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_is",
+        "description": "The item is of this variant or linked type (param: variant).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "variant"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "playing_item",
+        "description": "The creature is playing the instrument (param: item).",
+        "type": "predicate",
+        "pages": [
+          234
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_level_at_most",
+        "description": "The spell is of level N or lower (param: level).",
+        "type": "predicate",
+        "pages": [
+          239
+        ],
+        "params": [
+          "level"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_targeted_only_you",
+        "description": "The spell targets only the creature and creates no area of effect.",
+        "type": "predicate",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "attack_is_spell",
+        "description": "The attack roll is a spell attack.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "on_slippery_surface",
+        "description": "The creature is on a slippery surface, such as ice or oil.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "target_is_object",
+        "description": "The target is an object.",
+        "type": "predicate",
+        "pages": [
+          248
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "touching_item",
+        "description": "The creature touches the item (param: item).",
+        "type": "predicate",
+        "pages": [
+          243
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_to_control_item",
+        "description": "The check is made to control this item (param: item).",
+        "type": "predicate",
+        "pages": [
+          249
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_head",
+        "description": "The creature has at least one head.",
+        "type": "predicate",
+        "pages": [
+          250
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "took_damage_since_turn_start",
+        "description": "The creature took damage since the start of its last turn.",
+        "type": "predicate",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
       }
     ],
     "frequencies": [
@@ -5329,6 +6059,14 @@
           88
         ],
         "lot": "L15"
+      },
+      {
+        "id": "hour",
+        "description": "Can't be used again for 1 hour.",
+        "pages": [
+          218
+        ],
+        "lot": "L31"
       }
     ],
     "damage_types": [
@@ -5781,6 +6519,22 @@
           132
         ],
         "lot": "L23"
+      },
+      {
+        "id": "xray_vision",
+        "description": "X-ray vision: solid objects within range appear transparent.",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "telepathy",
+        "description": "Telepathic communication within a range.",
+        "pages": [
+          226
+        ],
+        "lot": "L31"
       }
     ],
     "movement_modes": [
@@ -6297,6 +7051,86 @@
           90
         ],
         "lot": "L28"
+      },
+      {
+        "id": "half_cover_against_spell_attacks",
+        "description": "Half Cover applies against your spell attack rolls.",
+        "pages": [
+          251
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "resistance_to_slashing_applies",
+        "description": "The target's Resistance to Slashing damage applies to this weapon's damage.",
+        "pages": [
+          250
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "cover_benefit_half_three_quarters",
+        "description": "Benefit from Half Cover or Three-Quarters Cover against the attack.",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "long_range_disadvantage",
+        "description": "Suffer Disadvantage due to long range.",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "read_thoughts_or_lie_detection_by_magic",
+        "description": "Be affected by magic that reads thoughts, detects lies, or reveals alignment or creature type.",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "actions_other_than_dash_or_escape",
+        "description": "Take actions other than Dash or trying to escape an effect that prevents movement (Dodge if it can't move).",
+        "pages": [
+          229
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "need_food_or_drink",
+        "description": "Need to eat or drink.",
+        "pages": [
+          228
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "end_attunement_voluntarily",
+        "description": "Voluntarily end Attunement to the item.",
+        "pages": [
+          218
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "speed_reduced_by_encumbrance_or_heavy_armor",
+        "description": "Speed reduced by carrying weight over capacity or wearing Heavy Armor.",
+        "pages": [
+          214
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "caught_in_webs",
+        "description": "Be caught in webs of any sort.",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
       }
     ],
     "conditions": [

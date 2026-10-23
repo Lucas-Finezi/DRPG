@@ -1,0 +1,169 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/iron-bands",
+  "kind": "magic-item",
+  "name": "Iron Bands",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      228
+    ],
+    "section": "Magic Items/Magic Items A–Z/Iron Bands",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare*\n\nThis rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can take a Magic action to throw the sphere at a Huge or smaller creature you can see within 60 feet of yourself. As the sphere moves through the air, it opens into a tangle of metal bands.\n\nMake a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your Proficiency Bonus. On a hit, the target has the Restrained condition until you take a Bonus Action to issue a command that releases it. Doing so or missing with the attack causes the bands to contract and become a sphere once more.\n\nA creature that can touch the bands, including the one Restrained, can take an action to make a DC 20 Strength (Athletics) check to break the iron bands. On a successful check, the item is destroyed, and the Restrained creature is freed. On a failed check, any further attempts made by that creature automatically fail until 24 hours have elapsed.\n\nOnce the bands are used, they can’t be used again until the next dawn.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "sphere",
+        "diameter_inches": 3,
+        "weight_lb": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true,
+            "filter": {
+              "sizes": [
+                "tiny",
+                "small",
+                "medium",
+                "large",
+                "huge"
+              ]
+            }
+          },
+          "on_hit": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "note": "Until you issue the release command as a Bonus Action.",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "bonus_action_taken"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "check",
+      "ability": "str",
+      "dc": 20,
+      "skill": "athletics",
+      "on_success": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/restrained"
+          ]
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry",
+          "note": "The bands are destroyed."
+        }
+      ],
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/iron-bands",
+          "note": "Further attempts by that creature fail for 24 hours."
+        }
+      ],
+      "note": "Takes an action."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can take a Magic action to throw the sphere at a Huge or smaller creature you can see within 60 feet of yourself. As the sphere moves through the air, it opens into a tangle of metal bands.\n\nMake a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your Proficiency Bonus. On a hit, the target has the Restrained condition until you take a Bonus Action to issue a command that releases it. Doing so or missing with the attack causes the bands to contract and become a sphere once more.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A creature that can touch the bands, including the one Restrained, can take an action to make a DC 20 Strength (Athletics) check to break the iron bands. On a successful check, the item is destroyed, and the Restrained creature is freed. On a failed check, any further attempts made by that creature automatically fail until 24 hours have elapsed.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Once the bands are used, they can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained",
+    "dnd5e/magic-item/iron-bands"
+  ]
+}

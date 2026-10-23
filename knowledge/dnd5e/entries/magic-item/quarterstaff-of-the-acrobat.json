@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/quarterstaff-of-the-acrobat",
+  "kind": "magic-item",
+  "name": "Quarterstaff of the Acrobat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      237
+    ],
+    "section": "Magic Items/Magic Items A–Z/Quarterstaff of the Acrobat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Quarterstaff), Very Rare (Requires Attunement)*\n\nYou have a +2 bonus to attack rolls and damage rolls made with this magic weapon.\n\nWhile holding this weapon, you can cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll Initiative, or you can extinguish the light as a Bonus Action.\n\nWhile holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for ease of storage) or a 10-foot pole, or reverting it a Quarterstaff; the weapon will elongate only as far as the surrounding space allows.\n\nIn certain forms, the weapon has the following additional properties.\n\n***Acrobatic Assist (Quarterstaff and 10-Foot Pole***\n\n***Forms Only).*** While holding this weapon, you have Advantage on Dexterity (Acrobatics) checks.\n\n***Attack Deflection (Quarterstaff Form Only).*** When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining a +5 bonus to your Armor Class against the triggering attack, potentially causing the attack to miss you. You can’t use this property again until you finish a Short or Long Rest.\n\n***Ranged Weapon (Quarterstaff Form Only).*** This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Quarterstaff), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Quarterstaff",
+        "refs": [
+          "dnd5e/weapon/quarterstaff"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "light",
+        "dim_feet": 10,
+        "on": [
+          "bonus_action",
+          "after_initiative"
+        ],
+        "off": "bonus_action",
+        "requires": "held"
+      },
+      {
+        "id": "forms",
+        "cost": "bonus_action",
+        "forms": [
+          "quarterstaff",
+          "rod_6_inches",
+          "pole_10_feet"
+        ],
+        "limited_by_space": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_form_in",
+            "args": {
+              "forms": [
+                "quarterstaff",
+                "pole_10_feet"
+              ]
+            }
+          },
+          {
+            "pred": "check_uses_skill",
+            "args": {
+              "skill": "acrobatics"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hit_by_attack_roll"
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "ac",
+          "mode": "add",
+          "value": 5,
+          "note": "Against the triggering attack."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "short_rest"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_form_in",
+            "args": {
+              "forms": [
+                "quarterstaff"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/weapon-property/thrown"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_form_in",
+            "args": {
+              "forms": [
+                "quarterstaff"
+              ]
+            }
+          }
+        ]
+      },
+      "note": "Normal range 30 feet, long range 120 feet; flies back to your hand after a ranged attack."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Quarterstaff), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You have a +2 bonus to attack rolls and damage rolls made with this magic weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "While holding this weapon, you can cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll Initiative, or you can extinguish the light as a Bonus Action.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for ease of storage) or a 10-foot pole, or reverting it a Quarterstaff; the weapon will elongate only as far as the surrounding space allows.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "In certain forms, the weapon has the following additional properties.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Acrobatic Assist (Quarterstaff and 10-Foot Pole***\n\n***Forms Only).*** While holding this weapon, you have Advantage on Dexterity (Acrobatics) checks.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Attack Deflection (Quarterstaff Form Only).*** When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining a +5 bonus to your Armor Class against the triggering attack, potentially causing the attack to miss you. You can’t use this property again until you finish a Short or Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Ranged Weapon (Quarterstaff Form Only).*** This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-property/thrown",
+    "dnd5e/weapon/quarterstaff"
+  ]
+}

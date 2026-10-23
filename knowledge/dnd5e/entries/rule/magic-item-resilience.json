@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-resilience",
+  "kind": "rule",
+  "name": "Magic Item Resilience",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      206
+    ],
+    "section": "Magic Items/Magic Item Resilience",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "A magic item is at least as durable as a nonmagical item of its kind. Most magic items, other than Potions and Scrolls, have Resistance to all damage.\n\nAn Artifact can be destroyed only in some special way. Otherwise, it is impervious to damage. Learning how to destroy an Artifact usually requires research or the completion of a quest.",
+  "data": {
+    "rules": [
+      {
+        "id": "resilience",
+        "at_least_nonmagical": true,
+        "resistance_all_damage": true,
+        "except": [
+          "potion",
+          "scroll"
+        ]
+      },
+      {
+        "id": "artifact",
+        "impervious_except_special_way": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "artifact_destruction",
+      "reason": "gm_judgment",
+      "prompt": "How can this Artifact be destroyed?",
+      "source_text": "Learning how to destroy an Artifact usually requires research or the completion of a quest."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A magic item is at least as durable as a nonmagical item of its kind. Most magic items, other than Potions and Scrolls, have Resistance to all damage.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "An Artifact can be destroyed only in some special way. Otherwise, it is impervious to damage. Learning how to destroy an Artifact usually requires research or the completion of a quest.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/1",
+        "md:artifact_destruction"
+      ]
+    }
+  ]
+}

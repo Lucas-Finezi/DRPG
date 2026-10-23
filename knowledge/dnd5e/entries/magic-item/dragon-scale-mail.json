@@ -1,0 +1,214 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dragon-scale-mail",
+  "kind": "magic-item",
+  "name": "Dragon Scale Mail",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      218,
+      219
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dragon Scale Mail",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Scale Mail), Very Rare (Requires Attunement)*\n\n*Dragon Scale Mail* is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them. Other times, hunters carefully preserve the hide of a dead dragon. In either case, *Dragon Scale Mail* is highly valued.\n\nWhile wearing this armor, you gain a +1 bonus to Armor Class, you have Advantage on saving throws against the breath weapons of Dragons, and you have Resistance to one damage type determined by the kind of dragon that provided the scales (see the accompanying table).\n\nAdditionally, you can focus your senses as a Magic action to discern the distance and direction to the closest dragon within 30 miles of yourself that is of the same type as the armor. This action can’t be used again until the next dawn.\n\n| **Dragon** | **Resistance** | **Dragon** | **Resistance** |\n| Black | Acid | Gold | Fire |\n| Blue | Lightning | Green | Poison |\n| Brass | Fire | Red | Fire |\n| Bronze | Lightning | Silver | Cold |\n| Copper | Acid | White | Cold |",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Scale Mail), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Scale Mail",
+        "refs": [
+          "dnd5e/armor/scale-mail"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "dragon_scale_mail",
+        "caption": "Dragon Scale Mail",
+        "columns": [
+          "Dragon",
+          "Resistance",
+          "Dragon",
+          "Resistance"
+        ],
+        "rows": [
+          [
+            "Black",
+            "Acid",
+            "Gold",
+            "Fire"
+          ],
+          [
+            "Blue",
+            "Lightning",
+            "Green",
+            "Poison"
+          ],
+          [
+            "Brass",
+            "Fire",
+            "Red",
+            "Fire"
+          ],
+          [
+            "Bronze",
+            "Lightning",
+            "Silver",
+            "Cold"
+          ],
+          [
+            "Copper",
+            "Acid",
+            "White",
+            "Cold"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against_effect_of_types",
+            "args": {
+              "effect": "breath_weapon",
+              "types": [
+                "dragon"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "var": "chosen.dragon_kind"
+        }
+      ],
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      },
+      "note": "Type from the table, by the dragon that provided the scales."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/dragon-scale-mail",
+          "note": "Learn distance and direction to the closest dragon of the armor's type within 30 miles."
+        }
+      ],
+      "requires": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Scale Mail), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "*Dragon Scale Mail* is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them. Other times, hunters carefully preserve the hide of a dead dragon. In either case, *Dragon Scale Mail* is highly valued.",
+      "status": "descriptive"
+    },
+    {
+      "text": "While wearing this armor, you gain a +1 bonus to Armor Class, you have Advantage on saving throws against the breath weapons of Dragons, and you have Resistance to one damage type determined by the kind of dragon that provided the scales (see the accompanying table).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "Additionally, you can focus your senses as a Magic action to discern the distance and direction to the closest dragon within 30 miles of yourself that is of the same type as the armor. This action can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Dragon** | **Resistance** | **Dragon** | **Resistance** |\n| Black | Acid | Gold | Fire |\n| Blue | Lightning | Green | Poison |\n| Brass | Fire | Red | Fire |\n| Bronze | Lightning | Silver | Cold |\n| Copper | Acid | White | Cold |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/scale-mail",
+    "dnd5e/magic-item/dragon-scale-mail"
+  ]
+}

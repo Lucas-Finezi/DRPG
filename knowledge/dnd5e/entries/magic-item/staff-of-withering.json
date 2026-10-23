@@ -1,0 +1,157 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-withering",
+  "kind": "magic-item",
+  "name": "Staff of Withering",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      248
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Withering",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Rare (Requires Attunement)*\n\nThis staff has 3 charges and regains 1d3 expended charges daily at dawn.\n\nThe staff can be wielded as a magic Quarterstaff. On a hit, it deals damage as a normal Quarterstaff, and you can expend 1 charge to deal an extra 2d10 Necrotic damage to the target and force it to make a DC 15 Constitution saving throw. On a failed save, the target has Disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "quarterstaff",
+        "functions_as": "dnd5e/weapon/quarterstaff"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "charges",
+          "amount": 1
+        },
+        {
+          "op": "damage",
+          "amount": "2d10",
+          "damage_type": "necrotic",
+          "target": {
+            "kind": "inherit"
+          }
+        },
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "roll_mode",
+              "mode": "disadvantage",
+              "rolls": [
+                "ability_check",
+                "saving_throw"
+              ],
+              "when": {
+                "any": [
+                  {
+                    "pred": "roll_uses_ability",
+                    "args": {
+                      "ability": "str"
+                    }
+                  },
+                  {
+                    "pred": "roll_uses_ability",
+                    "args": {
+                      "ability": "con"
+                    }
+                  }
+                ]
+              },
+              "duration": {
+                "kind": "hours",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      ],
+      "optional": true,
+      "condition": {
+        "pred": "attack_uses_weapon",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 3 charges and regains 1d3 expended charges daily at dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The staff can be wielded as a magic Quarterstaff. On a hit, it deals damage as a normal Quarterstaff, and you can expend 1 charge to deal an extra 2d10 Necrotic damage to the target and force it to make a DC 15 Constitution saving throw. On a failed save, the target has Disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

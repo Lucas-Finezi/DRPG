@@ -1,0 +1,141 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/armor-of-resistance",
+  "kind": "magic-item",
+  "name": "Armor of Resistance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      210
+    ],
+    "section": "Magic Items/Magic Items A–Z/Armor of Resistance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Armor (Any Light, Medium, or Heavy), Rare (Requires Attunement)*\n\nYou have Resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly by rolling on the following table.\n\n| **1d10** | **Damage Type** | **1d10** | **Damage Type** |\n| 1 | Acid | 6 | Necrotic |\n| 2 | Cold | 7 | Poison |\n| 3 | Fire | 8 | Psychic |\n| 4 | Force | 9 | Radiant |\n| 5 | Lightning | 10 | Thunder |",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Any Light, Medium, or Heavy), Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Any Light, Medium, or Heavy"
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "armor_of_resistance",
+        "caption": "Armor of Resistance",
+        "columns": [
+          "1d10",
+          "Damage Type",
+          "1d10",
+          "Damage Type"
+        ],
+        "rows": [
+          [
+            "1",
+            "Acid",
+            "6",
+            "Necrotic"
+          ],
+          [
+            "2",
+            "Cold",
+            "7",
+            "Poison"
+          ],
+          [
+            "3",
+            "Fire",
+            "8",
+            "Psychic"
+          ],
+          [
+            "4",
+            "Force",
+            "9",
+            "Radiant"
+          ],
+          [
+            "5",
+            "Lightning",
+            "10",
+            "Thunder"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "var": "chosen.resistance_type"
+        }
+      ],
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "resistance_type",
+      "reason": "gm_judgment",
+      "prompt": "Which damage type does the armor resist? (choose or roll 1d10)",
+      "source_text": "The GM chooses the type or determines it randomly by rolling on the following table."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Any Light, Medium, or Heavy), Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You have Resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly by rolling on the following table.",
+      "status": "master_decision",
+      "by": [
+        "md:resistance_type",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "| **1d10** | **Damage Type** | **1d10** | **Damage Type** |\n| 1 | Acid | 6 | Necrotic |\n| 2 | Cold | 7 | Poison |\n| 3 | Fire | 8 | Psychic |\n| 4 | Force | 9 | Radiant |\n| 5 | Lightning | 10 | Thunder |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

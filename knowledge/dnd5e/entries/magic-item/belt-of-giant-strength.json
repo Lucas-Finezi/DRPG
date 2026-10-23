@@ -1,0 +1,150 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/belt-of-giant-strength",
+  "kind": "magic-item",
+  "name": "Belt of Giant Strength",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      213
+    ],
+    "section": "Magic Items/Magic Items A–Z/Belt of Giant Strength",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rarity Varies (Requires Attunement)*\n\nWhile wearing this belt, your Strength changes to a score granted by the belt. The type of giant determines the score (see the table below). The item has no effect on you if your Strength without the belt is equal to or greater than the belt’s score.\n\n| **Belt** | **Str.** | **Rarity** |\n| *Belt of Giant Strength* (hill) | 21 | Rare |\n| *Belt of Giant Strength* (frost or stone) | 23 | Very Rare |\n| *Belt of Giant Strength* (fire) | 25 | Very Rare |\n| *Belt of Giant Strength* (cloud) | 27 | Legendary |\n| *Belt of Giant Strength* (storm) | 29 | Legendary |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "varies"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rarity Varies (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "varies"
+        }
+      ],
+      "variants": [
+        {
+          "variant": "(hill)",
+          "score": 21,
+          "rarity": "rare"
+        },
+        {
+          "variant": "(frost or stone)",
+          "score": 23,
+          "rarity": "very_rare"
+        },
+        {
+          "variant": "(fire)",
+          "score": 25,
+          "rarity": "very_rare"
+        },
+        {
+          "variant": "(cloud)",
+          "score": 27,
+          "rarity": "legendary"
+        },
+        {
+          "variant": "(storm)",
+          "score": 29,
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "belt_of_giant_strength",
+        "caption": "Belt of Giant Strength",
+        "columns": [
+          "Belt",
+          "Str.",
+          "Rarity"
+        ],
+        "rows": [
+          [
+            "Belt of Giant Strength (hill)",
+            "21",
+            "Rare"
+          ],
+          [
+            "Belt of Giant Strength (frost or stone)",
+            "23",
+            "Very Rare"
+          ],
+          [
+            "Belt of Giant Strength (fire)",
+            "25",
+            "Very Rare"
+          ],
+          [
+            "Belt of Giant Strength (cloud)",
+            "27",
+            "Legendary"
+          ],
+          [
+            "Belt of Giant Strength (storm)",
+            "29",
+            "Legendary"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_score.str",
+      "mode": "set",
+      "value": {
+        "var": "item_variant_score"
+      },
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      },
+      "note": "No effect if your Strength is already equal or greater (set never lowers)."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rarity Varies (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this belt, your Strength changes to a score granted by the belt. The type of giant determines the score (see the table below). The item has no effect on you if your Strength without the belt is equal to or greater than the belt’s score.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "| **Belt** | **Str.** | **Rarity** |\n| *Belt of Giant Strength* (hill) | 21 | Rare |\n| *Belt of Giant Strength* (frost or stone) | 23 | Very Rare |\n| *Belt of Giant Strength* (fire) | 25 | Very Rare |\n| *Belt of Giant Strength* (cloud) | 27 | Legendary |\n| *Belt of Giant Strength* (storm) | 29 | Legendary |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/shield-of-the-cavalier",
+  "kind": "magic-item",
+  "name": "Shield of the Cavalier",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      243
+    ],
+    "section": "Magic Items/Magic Items A–Z/Shield of the Cavalier",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Shield), Very Rare (Requires Attunement)*\n\nWhile holding this Shield, you have a +2 bonus to Armor Class. This bonus is in addition to the Shield’s normal bonus to AC.\n\nThe Shield has the following additional properties that you can use while holding it.\n\n***Forceful Bash*****.** When you take the Attack action, you can make one of the attack rolls using the Shield against a target within 5 feet of yourself. Apply your Proficiency Bonus and Strength modifier to the attack roll. On a hit, the Shield deals Force damage to the target equal to 2d6 + 2 plus your Strength modifier, and if the target is a creature, you can push it up to 10 feet directly away from yourself. If the creature is your size or smaller, you can also knock it down, giving it the Prone condition.\n\n***Protective Field.*** As a Reaction, when you or an ally you can see within 5 feet of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-foot Emanation originating from you. When the Emanation appears, any creatures or objects not fully contained within it are pushed into the nearest unoccupied spaces outside it. The attack or area of effect that triggered the Reaction has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration, up to 1 minute. Nothing can pass into or out of the Emanation. A creature or object inside the Emanation can’t be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anything outside it. Once this property is used, it can’t be used again until the next dawn.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Shield), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Shield",
+        "refs": [
+          "dnd5e/armor/shield"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      },
+      "note": "In addition to the Shield's normal bonus."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "attack_action_attack"
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": {
+            "op": "add",
+            "args": [
+              {
+                "var": "proficiency_bonus"
+              },
+              {
+                "var": "ability_mod.str"
+              }
+            ]
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  2,
+                  {
+                    "var": "ability_mod.str"
+                  }
+                ]
+              },
+              "damage_type": "force"
+            },
+            {
+              "op": "move",
+              "mode": "push",
+              "distance_feet": 10
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "note": "If the creature is your size or smaller (optional)."
+            }
+          ]
+        }
+      ],
+      "optional": true,
+      "condition": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      },
+      "note": "One attack roll of the Attack action, against a target within 5 feet."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "targeted_by_attack_or_area",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/shield-of-the-cavalier",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1,
+            "up_to": true,
+            "concentration": true
+          },
+          "note": "Immobile 5-foot Emanation; creatures outside pushed out; the triggering attack or area has no effect inside; nothing passes in or out."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "holds_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "feet": 5
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Shield), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding this Shield, you have a +2 bonus to Armor Class. This bonus is in addition to the Shield’s normal bonus to AC.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The Shield has the following additional properties that you can use while holding it.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Forceful Bash*****.** When you take the Attack action, you can make one of the attack rolls using the Shield against a target within 5 feet of yourself. Apply your Proficiency Bonus and Strength modifier to the attack roll. On a hit, the Shield deals Force damage to the target equal to 2d6 + 2 plus your Strength modifier, and if the target is a creature, you can push it up to 10 feet directly away from yourself. If the creature is your size or smaller, you can also knock it down, giving it the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Protective Field.*** As a Reaction, when you or an ally you can see within 5 feet of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-foot Emanation originating from you. When the Emanation appears, any creatures or objects not fully contained within it are pushed into the nearest unoccupied spaces outside it. The attack or area of effect that triggered the Reaction has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration, up to 1 minute. Nothing can pass into or out of the Emanation. A creature or object inside the Emanation can’t be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anything outside it. Once this property is used, it can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/shield",
+    "dnd5e/condition/prone",
+    "dnd5e/magic-item/shield-of-the-cavalier"
+  ]
+}

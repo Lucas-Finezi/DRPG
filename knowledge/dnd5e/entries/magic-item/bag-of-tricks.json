@@ -1,0 +1,807 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/bag-of-tricks",
+  "kind": "magic-item",
+  "name": "Bag of Tricks",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      212
+    ],
+    "section": "Magic Items/Magic Items A–Z/Bag of Tricks",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThis bag made from gray, rust, or tan cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.\n\nYou can take a Magic action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling on the table that corresponds to the bag’s color. See “Monsters” for the creature’s stat block. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.\n\nThe creature is Friendly to you and your allies, and it acts immediately after you on your Initiative count. You can take a Bonus Action to command how the creature moves and what action it takes on its next turn, such as attacking an enemy. In the absence of such orders, the creature acts in a fashion appropriate to its nature.\n\nOnce three fuzzy objects have been pulled from the bag, the bag can’t be used again until the next dawn.\n\n##### Gray Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Weasel | 5 | Panther |\n| 2 | Giant Rat | 6 | Giant Badger |\n| 3 | Badger | 7 | Dire Wolf |\n| 4 | Boar | 8 | Giant Elk |\n\n##### Rust Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Rat | 5 | Giant Goat |\n| 2 | Owl | 6 | Giant Boar |\n| 3 | Mastiff | 7 | Lion |\n| 4 | Goat | 8 | Brown Bear |\n\n##### Tan Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Jackal | 5 | Black Bear |\n| 2 | Ape | 6 | Giant Weasel |\n| 3 | Baboon | 7 | Giant Hyena |\n| 4 | Axe Beak | 8 | Tiger |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "command",
+        "attitude": "friendly",
+        "cost": "bonus_action",
+        "no_orders": "acts_per_nature"
+      }
+    ],
+    "tables": [
+      {
+        "id": "gray_bag_of_tricks",
+        "caption": "Gray Bag of Tricks",
+        "columns": [
+          "1d8",
+          "Creature",
+          "1d8",
+          "Creature"
+        ],
+        "rows": [
+          [
+            "1",
+            "Weasel",
+            "5",
+            "Panther"
+          ],
+          [
+            "2",
+            "Giant Rat",
+            "6",
+            "Giant Badger"
+          ],
+          [
+            "3",
+            "Badger",
+            "7",
+            "Dire Wolf"
+          ],
+          [
+            "4",
+            "Boar",
+            "8",
+            "Giant Elk"
+          ]
+        ]
+      },
+      {
+        "id": "rust_bag_of_tricks",
+        "caption": "Rust Bag of Tricks",
+        "columns": [
+          "1d8",
+          "Creature",
+          "1d8",
+          "Creature"
+        ],
+        "rows": [
+          [
+            "1",
+            "Rat",
+            "5",
+            "Giant Goat"
+          ],
+          [
+            "2",
+            "Owl",
+            "6",
+            "Giant Boar"
+          ],
+          [
+            "3",
+            "Mastiff",
+            "7",
+            "Lion"
+          ],
+          [
+            "4",
+            "Goat",
+            "8",
+            "Brown Bear"
+          ]
+        ]
+      },
+      {
+        "id": "tan_bag_of_tricks",
+        "caption": "Tan Bag of Tricks",
+        "columns": [
+          "1d8",
+          "Creature",
+          "1d8",
+          "Creature"
+        ],
+        "rows": [
+          [
+            "1",
+            "Jackal",
+            "5",
+            "Black Bear"
+          ],
+          [
+            "2",
+            "Ape",
+            "6",
+            "Giant Weasel"
+          ],
+          [
+            "3",
+            "Baboon",
+            "7",
+            "Giant Hyena"
+          ],
+          [
+            "4",
+            "Axe Beak",
+            "8",
+            "Tiger"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 3,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "creature",
+          "choose": 1,
+          "note": "Thrown up to 20 feet; roll 1d8 on the table of the bag's color.",
+          "options": [
+            {
+              "id": "gray_1",
+              "label": "Gray 1: Weasel",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/weasel",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_5",
+              "label": "Gray 5: Panther",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/panther",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_2",
+              "label": "Gray 2: Giant Rat",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-rat",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_6",
+              "label": "Gray 6: Giant Badger",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-badger",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_3",
+              "label": "Gray 3: Badger",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/badger",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_7",
+              "label": "Gray 7: Dire Wolf",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/dire-wolf",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_4",
+              "label": "Gray 4: Boar",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/boar",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "gray_8",
+              "label": "Gray 8: Giant Elk",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-elk",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_1",
+              "label": "Rust 1: Rat",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/rat",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_5",
+              "label": "Rust 5: Giant Goat",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-goat",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_2",
+              "label": "Rust 2: Owl",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/owl",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_6",
+              "label": "Rust 6: Giant Boar",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-boar",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_3",
+              "label": "Rust 3: Mastiff",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/mastiff",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_7",
+              "label": "Rust 7: Lion",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/lion",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_4",
+              "label": "Rust 4: Goat",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/goat",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rust_8",
+              "label": "Rust 8: Brown Bear",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/brown-bear",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_1",
+              "label": "Tan 1: Jackal",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/jackal",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_5",
+              "label": "Tan 5: Black Bear",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/black-bear",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_2",
+              "label": "Tan 2: Ape",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/ape",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_6",
+              "label": "Tan 6: Giant Weasel",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-weasel",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_3",
+              "label": "Tan 3: Baboon",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/baboon",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_7",
+              "label": "Tan 7: Giant Hyena",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/giant-hyena",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_4",
+              "label": "Tan 4: Axe Beak",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/axe-beak",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tan_8",
+              "label": "Tan 8: Tiger",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/tiger",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "dawn"
+                    },
+                    "ends_on": [
+                      {
+                        "event": "drops_to_0_hp"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This bag made from gray, rust, or tan cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.",
+      "status": "descriptive"
+    },
+    {
+      "text": "You can take a Magic action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling on the table that corresponds to the bag’s color. See “Monsters” for the creature’s stat block. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The creature is Friendly to you and your allies, and it acts immediately after you on your Initiative count. You can take a Bonus Action to command how the creature moves and what action it takes on its next turn, such as attacking an enemy. In the absence of such orders, the creature acts in a fashion appropriate to its nature.\n\nOnce three fuzzy objects have been pulled from the bag, the bag can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Gray Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Weasel | 5 | Panther |\n| 2 | Giant Rat | 6 | Giant Badger |\n| 3 | Badger | 7 | Dire Wolf |\n| 4 | Boar | 8 | Giant Elk |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Rust Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Rat | 5 | Giant Goat |\n| 2 | Owl | 6 | Giant Boar |\n| 3 | Mastiff | 7 | Lion |\n| 4 | Goat | 8 | Brown Bear |",
+      "status": "structured",
+      "by": [
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Tan Bag of Tricks\n\n| **1d8** | **Creature** | **1d8** | **Creature** |\n| 1 | Jackal | 5 | Black Bear |\n| 2 | Ape | 6 | Giant Weasel |\n| 3 | Baboon | 7 | Giant Hyena |\n| 4 | Axe Beak | 8 | Tiger |",
+      "status": "structured",
+      "by": [
+        "/data/tables/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/ape",
+    "dnd5e/creature/axe-beak",
+    "dnd5e/creature/baboon",
+    "dnd5e/creature/badger",
+    "dnd5e/creature/black-bear",
+    "dnd5e/creature/boar",
+    "dnd5e/creature/brown-bear",
+    "dnd5e/creature/dire-wolf",
+    "dnd5e/creature/giant-badger",
+    "dnd5e/creature/giant-boar",
+    "dnd5e/creature/giant-elk",
+    "dnd5e/creature/giant-goat",
+    "dnd5e/creature/giant-hyena",
+    "dnd5e/creature/giant-rat",
+    "dnd5e/creature/giant-weasel",
+    "dnd5e/creature/goat",
+    "dnd5e/creature/jackal",
+    "dnd5e/creature/lion",
+    "dnd5e/creature/mastiff",
+    "dnd5e/creature/owl",
+    "dnd5e/creature/panther",
+    "dnd5e/creature/rat",
+    "dnd5e/creature/tiger",
+    "dnd5e/creature/weasel"
+  ]
+}

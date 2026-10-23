@@ -1,0 +1,465 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sentient-magic-item-traits",
+  "kind": "rule",
+  "name": "Sentient Magic Item Traits",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      207,
+      208
+    ],
+    "section": "Magic Items/Sentient Magic Items/Sentient Magic Item Traits",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "When you make a sentient magic item, you create the item’s persona much as you would create an NPC, with these exceptions.\n\n#### Abilities\n\nA sentient magic item has Intelligence, Wisdom, and Charisma scores. Choose the item’s abilities, or determine them randomly as follows: roll 4d6 for each one, dropping the lowest roll and totaling the rest.\n\n#### Alignment\n\nA sentient magic item has an alignment. Its creator or nature might suggest an alignment. Otherwise, pick an alignment or roll on the Sentient Item’s Alignment table.\n\n#### Communication\n\nA sentient item communicates by sharing its emotions, broadcasting its thoughts telepathically, or speaking aloud. You can choose how it communicates or roll on the Sentient Item’s Communication table.\n\n#### Senses\n\nA sentient item can perceive its surroundings out to a limited range. You can choose its senses or roll on the Sentient Item’s Senses table.\n\n#### Special Purpose\n\nYou can give a sentient item an objective it pursues, perhaps to the exclusion of all else. As long as the wielder’s use of the item aligns with that special purpose, the item remains cooperative. Deviating from this course might cause conflict between the wielder and the item (see “Conflict” below). You can pick a special purpose or roll on the Sentient Item’s Special Purpose table.\n\n##### Sentient Item’s Alignment\n\n| **1d100** | **Alignment** | **1d100** | **Alignment** |\n| 01–15 | Lawful Good | 74–85 | Chaotic Neutral |\n| 16–35 | Neutral Good | 86–89 | Lawful Evil |\n| 36–50 | Chaotic Good | 90–96 | Neutral Evil |\n| 51–63 | Lawful Neutral | 97–00 | Chaotic Evil |\n| 64–73 | Neutral |\n\n##### Sentient Item’s Communication\n\n| **1d10** | **Communication** |\n| 1–6 | The item communicates by transmitting emotion to the creature carrying or wielding it. |\n| 7–9 | The item speaks one or more languages. |\n| 10 | The item speaks one or more languages. In addition, the item can communicate telepathically with any creature that carries or wields it. |\n\n##### Sentient Item’s Senses\n\n| **1d4** | **Senses** |\n| 1 | Hearing and standard vision out to 30 feet |\n| 2 | Hearing and standard vision out to 60 feet |\n| 3 | Hearing and standard vision out to 120 feet |\n| 4 | Hearing and Darkvision out to 120 feet |\n\n##### Sentient Item’s Special Purpose\n\n| **1d10** | **Special Purpose** |\n| 1 | **Aligned.** The item seeks to defeat or destroy those of a diametrically opposed alignment. Such an item is never Neutral. |\n| 2 | **Bane.** The item seeks to thwart or destroy creatures of a particular type, such as Constructs, Fiends, or Undead. |\n| 3 | **Creator Seeker.** The item seeks its creator and wants to understand why it was created. |\n| 4 | **Destiny Seeker.** The item believes it and its bearer have key roles to play in future events. |\n| **1d10** | **Special Purpose** |\n| 5 | **Destroyer.** The item craves destruction and goads its user to fight arbitrarily. |\n| 6 | **Glory Seeker.** The item seeks renown as the greatest magic item in the world by winning fame or notoriety for its user. |\n| 7 | **Lore Seeker.** The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy. |\n| 8 | **Protector.** The item seeks to defend a particular kind of creature, such as elves or werewolves. |\n| 9 | **Soulmate Seeker.** The item seeks another sentient magic item, perhaps one that is similar to itself. |\n| 10 | **Templar.** The item seeks to defend the servants and interests of a particular deity. |\n\n#### Conflict\n\nWhen the bearer of a sentient item acts in a manner opposed to the item’s alignment or purpose, conflict can arise. When such a conflict occurs, the item’s bearer makes a Charisma saving throw (DC 12 plus the item’s Charisma modifier). On a failed save, the item makes one or more of the following demands:\n\n**Chase My Dreams.** The item demands that its bearer pursue the item’s goals to the exclusion of all other goals.\n\n**Get Rid of It.** The item demands that its bearer dispose of anything the item finds repugnant.\n\n**It’s Time for a Change.** The item demands to be given to someone else.\n\n**Keep Me Close.** The item insists on being carried or worn at all times.\n\nIf its bearer refuses to comply with the item’s demands, the item can do any of the following:\n\n- Make it impossible for its bearer to attune to it.\n\n- Suppress one or more of its activated properties.\n\n- Attempt to take control of its bearer, whereupon the bearer makes a Charisma saving throw (DC 12 plus the item’s Charisma modifier). On a failed save, the bearer has the Charmed condition for 1d12 hours. While Charmed in this way, the bearer must try to follow the item’s commands. If the bearer takes damage, it repeats the save, ending the effect on a success. Whether or not the attempt to control its bearer succeeds, the item can’t use this power again until the next dawn.",
+  "data": {
+    "rules": [
+      {
+        "id": "persona",
+        "like_npc": true
+      },
+      {
+        "id": "abilities",
+        "scores": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "random": "4d6 drop lowest"
+      },
+      {
+        "id": "alignment",
+        "table": "sentient_items_alignment"
+      },
+      {
+        "id": "communication",
+        "table": "sentient_items_communication"
+      },
+      {
+        "id": "senses",
+        "table": "sentient_items_senses"
+      },
+      {
+        "id": "purpose",
+        "table": "sentient_items_special_purpose",
+        "deviation": "conflict"
+      }
+    ],
+    "tables": [
+      {
+        "id": "sentient_items_alignment",
+        "caption": "Sentient Item’s Alignment",
+        "columns": [
+          "1d100",
+          "Alignment",
+          "1d100",
+          "Alignment"
+        ],
+        "rows": [
+          [
+            "01–15",
+            "Lawful Good",
+            "74–85",
+            "Chaotic Neutral"
+          ],
+          [
+            "16–35",
+            "Neutral Good",
+            "86–89",
+            "Lawful Evil"
+          ],
+          [
+            "36–50",
+            "Chaotic Good",
+            "90–96",
+            "Neutral Evil"
+          ],
+          [
+            "51–63",
+            "Lawful Neutral",
+            "97–00",
+            "Chaotic Evil"
+          ],
+          [
+            "64–73",
+            "Neutral"
+          ]
+        ]
+      },
+      {
+        "id": "sentient_items_communication",
+        "caption": "Sentient Item’s Communication",
+        "columns": [
+          "1d10",
+          "Communication"
+        ],
+        "rows": [
+          [
+            "1–6",
+            "The item communicates by transmitting emotion to the creature carrying or wielding it."
+          ],
+          [
+            "7–9",
+            "The item speaks one or more languages."
+          ],
+          [
+            "10",
+            "The item speaks one or more languages. In addition, the item can communicate telepathically with any creature that carries or wields it."
+          ]
+        ]
+      },
+      {
+        "id": "sentient_items_senses",
+        "caption": "Sentient Item’s Senses",
+        "columns": [
+          "1d4",
+          "Senses"
+        ],
+        "rows": [
+          [
+            "1",
+            "Hearing and standard vision out to 30 feet"
+          ],
+          [
+            "2",
+            "Hearing and standard vision out to 60 feet"
+          ],
+          [
+            "3",
+            "Hearing and standard vision out to 120 feet"
+          ],
+          [
+            "4",
+            "Hearing and Darkvision out to 120 feet"
+          ]
+        ]
+      },
+      {
+        "id": "sentient_items_special_purpose",
+        "caption": "Sentient Item’s Special Purpose",
+        "columns": [
+          "1d10",
+          "Special Purpose"
+        ],
+        "rows": [
+          [
+            "1",
+            "Aligned. The item seeks to defeat or destroy those of a diametrically opposed alignment. Such an item is never Neutral."
+          ],
+          [
+            "2",
+            "Bane. The item seeks to thwart or destroy creatures of a particular type, such as Constructs, Fiends, or Undead."
+          ],
+          [
+            "3",
+            "Creator Seeker. The item seeks its creator and wants to understand why it was created."
+          ],
+          [
+            "4",
+            "Destiny Seeker. The item believes it and its bearer have key roles to play in future events."
+          ],
+          [
+            "5",
+            "Destroyer. The item craves destruction and goads its user to fight arbitrarily."
+          ],
+          [
+            "6",
+            "Glory Seeker. The item seeks renown as the greatest magic item in the world by winning fame or notoriety for its user."
+          ],
+          [
+            "7",
+            "Lore Seeker. The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy."
+          ],
+          [
+            "8",
+            "Protector. The item seeks to defend a particular kind of creature, such as elves or werewolves."
+          ],
+          [
+            "9",
+            "Soulmate Seeker. The item seeks another sentient magic item, perhaps one that is similar to itself."
+          ],
+          [
+            "10",
+            "Templar. The item seeks to defend the servants and interests of a particular deity."
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "cha",
+      "dc": {
+        "op": "add",
+        "args": [
+          12,
+          {
+            "var": "item_ability_mod.cha"
+          }
+        ]
+      },
+      "on_fail": [
+        {
+          "op": "choice",
+          "id": "demand",
+          "choose": 1,
+          "chooser": "gm",
+          "options": [
+            {
+              "id": "chase",
+              "label": "Chase My Dreams",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/sentient-magic-item-traits"
+                }
+              ]
+            },
+            {
+              "id": "get_rid",
+              "label": "Get Rid of It",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/sentient-magic-item-traits"
+                }
+              ]
+            },
+            {
+              "id": "change",
+              "label": "It’s Time for a Change",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/sentient-magic-item-traits"
+                }
+              ]
+            },
+            {
+              "id": "close",
+              "label": "Keep Me Close",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/sentient-magic-item-traits"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "refusal",
+      "choose": 1,
+      "chooser": "gm",
+      "options": [
+        {
+          "id": "no_attune",
+          "label": "Make attunement impossible",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/rule/sentient-magic-item-traits"
+            }
+          ]
+        },
+        {
+          "id": "suppress",
+          "label": "Suppress activated properties",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/rule/sentient-magic-item-traits"
+            }
+          ]
+        },
+        {
+          "id": "control",
+          "label": "Take control",
+          "effects": [
+            {
+              "op": "save",
+              "ability": "cha",
+              "dc": {
+                "op": "add",
+                "args": [
+                  12,
+                  {
+                    "var": "item_ability_mod.cha"
+                  }
+                ]
+              },
+              "on_fail": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/charmed",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": "1d12",
+                    "ends_on": [
+                      {
+                        "event": "damage_taken"
+                      }
+                    ]
+                  },
+                  "note": "Follows the item's commands; repeats the save when it takes damage. Once per dawn."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you make a sentient magic item, you create the item’s persona much as you would create an NPC, with these exceptions.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Abilities\n\nA sentient magic item has Intelligence, Wisdom, and Charisma scores. Choose the item’s abilities, or determine them randomly as follows: roll 4d6 for each one, dropping the lowest roll and totaling the rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Alignment\n\nA sentient magic item has an alignment. Its creator or nature might suggest an alignment. Otherwise, pick an alignment or roll on the Sentient Item’s Alignment table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Communication\n\nA sentient item communicates by sharing its emotions, broadcasting its thoughts telepathically, or speaking aloud. You can choose how it communicates or roll on the Sentient Item’s Communication table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### Senses\n\nA sentient item can perceive its surroundings out to a limited range. You can choose its senses or roll on the Sentient Item’s Senses table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "#### Special Purpose\n\nYou can give a sentient item an objective it pursues, perhaps to the exclusion of all else. As long as the wielder’s use of the item aligns with that special purpose, the item remains cooperative. Deviating from this course might cause conflict between the wielder and the item (see “Conflict” below). You can pick a special purpose or roll on the Sentient Item’s Special Purpose table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "##### Sentient Item’s Alignment\n\n| **1d100** | **Alignment** | **1d100** | **Alignment** |\n| 01–15 | Lawful Good | 74–85 | Chaotic Neutral |\n| 16–35 | Neutral Good | 86–89 | Lawful Evil |\n| 36–50 | Chaotic Good | 90–96 | Neutral Evil |\n| 51–63 | Lawful Neutral | 97–00 | Chaotic Evil |\n| 64–73 | Neutral |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Sentient Item’s Communication\n\n| **1d10** | **Communication** |\n| 1–6 | The item communicates by transmitting emotion to the creature carrying or wielding it. |\n| 7–9 | The item speaks one or more languages. |\n| 10 | The item speaks one or more languages. In addition, the item can communicate telepathically with any creature that carries or wields it. |",
+      "status": "structured",
+      "by": [
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Sentient Item’s Senses\n\n| **1d4** | **Senses** |\n| 1 | Hearing and standard vision out to 30 feet |\n| 2 | Hearing and standard vision out to 60 feet |\n| 3 | Hearing and standard vision out to 120 feet |\n| 4 | Hearing and Darkvision out to 120 feet |",
+      "status": "structured",
+      "by": [
+        "/data/tables/2"
+      ]
+    },
+    {
+      "text": "##### Sentient Item’s Special Purpose\n\n| **1d10** | **Special Purpose** |\n| 1 | **Aligned.** The item seeks to defeat or destroy those of a diametrically opposed alignment. Such an item is never Neutral. |\n| 2 | **Bane.** The item seeks to thwart or destroy creatures of a particular type, such as Constructs, Fiends, or Undead. |\n| 3 | **Creator Seeker.** The item seeks its creator and wants to understand why it was created. |\n| 4 | **Destiny Seeker.** The item believes it and its bearer have key roles to play in future events. |\n| **1d10** | **Special Purpose** |\n| 5 | **Destroyer.** The item craves destruction and goads its user to fight arbitrarily. |\n| 6 | **Glory Seeker.** The item seeks renown as the greatest magic item in the world by winning fame or notoriety for its user. |\n| 7 | **Lore Seeker.** The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy. |\n| 8 | **Protector.** The item seeks to defend a particular kind of creature, such as elves or werewolves. |\n| 9 | **Soulmate Seeker.** The item seeks another sentient magic item, perhaps one that is similar to itself. |\n| 10 | **Templar.** The item seeks to defend the servants and interests of a particular deity. |",
+      "status": "structured",
+      "by": [
+        "/data/tables/3"
+      ]
+    },
+    {
+      "text": "#### Conflict\n\nWhen the bearer of a sentient item acts in a manner opposed to the item’s alignment or purpose, conflict can arise. When such a conflict occurs, the item’s bearer makes a Charisma saving throw (DC 12 plus the item’s Charisma modifier). On a failed save, the item makes one or more of the following demands:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Chase My Dreams.** The item demands that its bearer pursue the item’s goals to the exclusion of all other goals.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Get Rid of It.** The item demands that its bearer dispose of anything the item finds repugnant.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**It’s Time for a Change.** The item demands to be given to someone else.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Keep Me Close.** The item insists on being carried or worn at all times.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If its bearer refuses to comply with the item’s demands, the item can do any of the following:",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "- Make it impossible for its bearer to attune to it.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "- Suppress one or more of its activated properties.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "- Attempt to take control of its bearer, whereupon the bearer makes a Charisma saving throw (DC 12 plus the item’s Charisma modifier). On a failed save, the bearer has the Charmed condition for 1d12 hours. While Charmed in this way, the bearer must try to follow the item’s commands. If the bearer takes damage, it repeats the save, ending the effect on a success. Whether or not the attempt to control its bearer succeeds, the item can’t use this power again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/rule/sentient-magic-item-traits"
+  ]
+}

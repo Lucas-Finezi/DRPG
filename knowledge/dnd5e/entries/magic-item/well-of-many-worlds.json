@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/well-of-many-worlds",
+  "kind": "magic-item",
+  "name": "Well of Many Worlds",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      253
+    ],
+    "section": "Magic Items/Magic Items A–Z/Well of Many Worlds",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Legendary*\n\nThis fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.\n\nYou can take a Magic action to unfold the *Well of Many Worlds* and place it on a solid surface, whereupon it forms a two-way, 6-foot-diameter, circular portal to another world or plane of existence. Each time the item opens a portal, the GM decides where it leads. The portal remains open until a creature within 5 feet of it takes a Magic action to close it by taking hold of the edges of the cloth and folding it up.\n\nOnce the *Well of Many Worlds* has opened a portal, it can’t do so again for 1d8 hours.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "cloth",
+        "unfolded_diameter_feet": 6
+      },
+      {
+        "id": "recharge",
+        "hours": "1d8"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/well-of-many-worlds",
+          "note": "Two-way, 6-foot portal to another world or plane; closed by a creature within 5 feet (Magic action)."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "well_destination",
+      "reason": "gm_judgment",
+      "prompt": "Where does this portal lead?",
+      "source_text": "Each time the item opens a portal, the GM decides where it leads."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can take a Magic action to unfold the *Well of Many Worlds* and place it on a solid surface, whereupon it forms a two-way, 6-foot-diameter, circular portal to another world or plane of existence. Each time the item opens a portal, the GM decides where it leads. The portal remains open until a creature within 5 feet of it takes a Magic action to close it by taking hold of the edges of the cloth and folding it up.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:well_destination"
+      ]
+    },
+    {
+      "text": "Once the *Well of Many Worlds* has opened a portal, it can’t do so again for 1d8 hours.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/well-of-many-worlds"
+  ]
+}

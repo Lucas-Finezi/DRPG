@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/sovereign-glue",
+  "kind": "magic-item",
+  "name": "Sovereign Glue",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      244
+    ],
+    "section": "Magic Items/Magic Items A–Z/Sovereign Glue",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "*Wondrous Item, Legendary*\n\nThis viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with *Oil of Slipperiness*. When found, a container contains 1d6 + 1 ounces.\n\nOne ounce of the glue can cover a 1-foot square surface. Applying an ounce of *Sovereign Glue* takes a Utilize action, and the applied glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of *Universal Solvent* or *Oil of Etherealness*, or with a *Wish* spell.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "storage",
+        "container_coated_with": "dnd5e/magic-item/oil-of-slipperiness",
+        "found_ounces": "1d6 + 1"
+      },
+      {
+        "id": "bond",
+        "coverage_sq_feet_per_ounce": 1,
+        "apply": "dnd5e/action/utilize",
+        "set_minutes": 1,
+        "broken_by": [
+          "dnd5e/magic-item/universal-solvent",
+          "dnd5e/magic-item/oil-of-etherealness",
+          "dnd5e/spell/wish"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with *Oil of Slipperiness*. When found, a container contains 1d6 + 1 ounces.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "One ounce of the glue can cover a 1-foot square surface. Applying an ounce of *Sovereign Glue* takes a Utilize action, and the applied glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of *Universal Solvent* or *Oil of Etherealness*, or with a *Wish* spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/oil-of-etherealness",
+    "dnd5e/magic-item/universal-solvent",
+    "dnd5e/spell/wish"
+  ]
+}

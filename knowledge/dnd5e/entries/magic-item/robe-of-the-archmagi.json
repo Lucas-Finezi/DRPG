@@ -1,0 +1,170 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/robe-of-the-archmagi",
+  "kind": "magic-item",
+  "name": "Robe of the Archmagi",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      240
+    ],
+    "section": "Magic Items/Magic Items A–Z/Robe of the Archmagi",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Legendary (Requires Attunement by a Sorcerer, Warlock, or Wizard)*\n\nThis elegant garment is made from exquisite cloth and adorned with runes.\n\nYou gain these benefits while wearing the robe.\n\n***Armor.*** If you aren’t wearing armor, your base Armor Class is 15 plus your Dexterity modifier.\n\n***Magic Resistance.*** You have Advantage on saving throws against spells and other magical effects.\n\n***War Mage.*** Your spell save DC and spell attack bonus each increase by 2.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary (Requires Attunement by a Sorcerer, Warlock, or Wizard)",
+      "attunement": {
+        "required": true,
+        "by": "a Sorcerer, Warlock, or Wizard",
+        "classes": [
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "base_ac",
+      "mode": "set",
+      "value": {
+        "op": "add",
+        "args": [
+          15,
+          {
+            "var": "ability_mod.dex"
+          }
+        ]
+      },
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "wearing_armor_any"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "wearing_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against_spell_or_magic"
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_save_dc",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_attack_bonus",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "wearing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary (Requires Attunement by a Sorcerer, Warlock, or Wizard)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This elegant garment is made from exquisite cloth and adorned with runes.",
+      "status": "descriptive"
+    },
+    {
+      "text": "You gain these benefits while wearing the robe.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Armor.*** If you aren’t wearing armor, your base Armor Class is 15 plus your Dexterity modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** You have Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***War Mage.*** Your spell save DC and spell attack bonus each increase by 2.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard"
+  ]
+}

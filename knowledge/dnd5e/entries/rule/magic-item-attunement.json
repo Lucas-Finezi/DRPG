@@ -1,0 +1,102 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-attunement",
+  "kind": "rule",
+  "name": "Attunement (Magic Items)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      102,
+      103
+    ],
+    "section": "Equipment/Magic Items/Attunement",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "Some magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. Without becoming attuned to an item that requires Attunement, you gain only its nonmagical benefits unless its description states otherwise. For example, a magic Shield that requires Attunement provides the benefits of a normal Shield if you aren’t attuned to it, but none of its magical properties.\n\n#### Attune during a Short Rest\n\nAttuning to an item requires you to spend a Short Rest focused on only that item while being in physical contact with it (this can’t be the same Short Rest used to learn the item’s properties). This focus can take the form of weapon practice (for a Weapon), meditation (for a Wand), or some other appropriate activity. If the Short Rest is interrupted, the Attunement attempt fails. Otherwise, at the end of the Short Rest, you’re attuned to the magic item and can access its full magical capabilities.\n\n#### No More Than Three Items\n\nYou can be attuned to no more than three magic items at a time. Any attempt to attune to a fourth item fails; you must end your Attunement to an item first. Additionally, you can’t attune to more than one copy of an item. For example, you can’t attune to more than one *Ring of Protection* at a time.\n\n#### Ending Attunement\n\nYour Attunement to an item ends if you no longer satisfy the prerequisites for Attunement, if the item has been more than 100 feet away for at least 24 hours, if you die, or if another creature attunes to the item. You can also voluntarily end Attunement by spending another Short Rest focused on the item unless the item is cursed.",
+  "data": {
+    "rules": [
+      {
+        "id": "unattuned",
+        "only_nonmagical_benefits": true
+      },
+      {
+        "id": "attune",
+        "rest": "dnd5e/rule/short-rest",
+        "focus_only_item": true,
+        "contact": true,
+        "not_same_rest_as_identify": true,
+        "interrupted": "fails"
+      },
+      {
+        "id": "limit",
+        "max": 3,
+        "fourth_fails": true,
+        "one_copy_per_item": true
+      },
+      {
+        "id": "ending",
+        "ends_on": [
+          "prerequisites_unmet",
+          "item_100_feet_away_24_hours",
+          "you_die",
+          "another_creature_attunes"
+        ],
+        "voluntary": {
+          "rest": "dnd5e/rule/short-rest",
+          "not_if_cursed": true
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "max_attuned_items",
+      "mode": "set",
+      "value": 3
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. Without becoming attuned to an item that requires Attunement, you gain only its nonmagical benefits unless its description states otherwise. For example, a magic Shield that requires Attunement provides the benefits of a normal Shield if you aren’t attuned to it, but none of its magical properties.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "dnd5e/rule/attunement"
+      ]
+    },
+    {
+      "text": "#### Attune during a Short Rest\n\nAttuning to an item requires you to spend a Short Rest focused on only that item while being in physical contact with it (this can’t be the same Short Rest used to learn the item’s properties). This focus can take the form of weapon practice (for a Weapon), meditation (for a Wand), or some other appropriate activity. If the Short Rest is interrupted, the Attunement attempt fails. Otherwise, at the end of the Short Rest, you’re attuned to the magic item and can access its full magical capabilities.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### No More Than Three Items\n\nYou can be attuned to no more than three magic items at a time. Any attempt to attune to a fourth item fails; you must end your Attunement to an item first. Additionally, you can’t attune to more than one copy of an item. For example, you can’t attune to more than one *Ring of Protection* at a time.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Ending Attunement\n\nYour Attunement to an item ends if you no longer satisfy the prerequisites for Attunement, if the item has been more than 100 feet away for at least 24 hours, if you die, or if another creature attunes to the item. You can also voluntarily end Attunement by spending another Short Rest focused on the item unless the item is cursed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/attunement"
+  ]
+}

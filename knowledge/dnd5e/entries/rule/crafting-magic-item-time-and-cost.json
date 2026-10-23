@@ -1,0 +1,161 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/crafting-magic-item-time-and-cost",
+  "kind": "rule",
+  "name": "Time and Cost (Magic Item Crafting)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      207
+    ],
+    "section": "Magic Items/Crafting Magic Items/Time and Cost",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "Crafting a magic item takes an amount of time and money based on the item’s rarity as shown in the Magic Item Crafting Time and Cost table.\n\n***Work per Day.*** For each day of crafting, you must work for 8 hours. If an item requires multiple days, those days needn’t be consecutive.\n\n***Assistants.*** Characters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants.\n\n***Raw Materials.*** The cost in the table represents the raw materials needed to make a magic item. The GM determines whether appropriate raw materials are available. In a city, there is a 75 percent chance that the materials are available, and in any other settlement, that chance is 25 percent. If materials aren’t available, you must wait at least 7 days before checking on the availability again.\n\nIf a magic item incorporates an item that has a purchase cost (such as a weapon or a suit of armor), you must also pay that entire cost or craft that item using the rules in “Equipment.” For example, to make *+1 Armor* (Plate Armor), you must pay 3,500 GP or pay 2,000 GP and craft the armor.\n\n##### Magic Item Crafting Time and Cost\n\n| **Item Rarity** | **Time\\*** | **Cost\\*** |\n| Common | 5 days | 50 GP |\n| Uncommon | 10 days | 200 GP |\n| Rare | 50 days | 2,000 GP |\n| Very Rare | 125 days | 20,000 GP |\n| Legendary | 250 days | 100,000 GP |\n\n\\*The time and cost are halved for a consumable item other than a *Spell Scroll*, whose crafting time and cost are given in “Equipment.”",
+  "data": {
+    "rules": [
+      {
+        "id": "by_rarity",
+        "table": "magic_item_crafting"
+      },
+      {
+        "id": "work_day",
+        "hours": 8,
+        "consecutive": false
+      },
+      {
+        "id": "assistants",
+        "time_divided_by_workers": true,
+        "max_assistants": 1
+      },
+      {
+        "id": "materials",
+        "city_chance_percent": 75,
+        "settlement_chance_percent": 25,
+        "retry_days": 7
+      },
+      {
+        "id": "base_item",
+        "pay_or_craft": "dnd5e/rule/crafting-nonmagical-items"
+      },
+      {
+        "id": "consumables",
+        "halved": true,
+        "except": "dnd5e/magic-item/spell-scroll"
+      }
+    ],
+    "tables": [
+      {
+        "id": "magic_item_crafting",
+        "caption": "Magic Item Crafting Time and Cost",
+        "columns": [
+          "Item Rarity",
+          "Time",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "Common",
+            "5 days",
+            "50 GP"
+          ],
+          [
+            "Uncommon",
+            "10 days",
+            "200 GP"
+          ],
+          [
+            "Rare",
+            "50 days",
+            "2,000 GP"
+          ],
+          [
+            "Very Rare",
+            "125 days",
+            "20,000 GP"
+          ],
+          [
+            "Legendary",
+            "250 days",
+            "100,000 GP"
+          ]
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "more_assistants",
+      "reason": "gm_judgment",
+      "prompt": "Allow more than one assistant?",
+      "source_text": "Normally, only one other character can assist you, but the GM might allow more assistants."
+    },
+    {
+      "id": "materials_available",
+      "reason": "gm_judgment",
+      "prompt": "Are the raw materials available?",
+      "source_text": "The GM determines whether appropriate raw materials are available."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Crafting a magic item takes an amount of time and money based on the item’s rarity as shown in the Magic Item Crafting Time and Cost table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Work per Day.*** For each day of crafting, you must work for 8 hours. If an item requires multiple days, those days needn’t be consecutive.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Assistants.*** Characters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/2",
+        "md:more_assistants"
+      ]
+    },
+    {
+      "text": "***Raw Materials.*** The cost in the table represents the raw materials needed to make a magic item. The GM determines whether appropriate raw materials are available. In a city, there is a 75 percent chance that the materials are available, and in any other settlement, that chance is 25 percent. If materials aren’t available, you must wait at least 7 days before checking on the availability again.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/3",
+        "md:materials_available"
+      ]
+    },
+    {
+      "text": "If a magic item incorporates an item that has a purchase cost (such as a weapon or a suit of armor), you must also pay that entire cost or craft that item using the rules in “Equipment.” For example, to make *+1 Armor* (Plate Armor), you must pay 3,500 GP or pay 2,000 GP and craft the armor.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "##### Magic Item Crafting Time and Cost\n\n| **Item Rarity** | **Time\\*** | **Cost\\*** |\n| Common | 5 days | 50 GP |\n| Uncommon | 10 days | 200 GP |\n| Rare | 50 days | 2,000 GP |\n| Very Rare | 125 days | 20,000 GP |\n| Legendary | 250 days | 100,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "\\*The time and cost are halved for a consumable item other than a *Spell Scroll*, whose crafting time and cost are given in “Equipment.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ]
+}

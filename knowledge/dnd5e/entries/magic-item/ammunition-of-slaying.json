@@ -1,0 +1,185 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ammunition-of-slaying",
+  "kind": "magic-item",
+  "name": "Ammunition of Slaying",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      209
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ammunition of Slaying",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Weapon (Any Ammunition), Very Rare*\n\nThis magic ammunition is meant to slay creatures of a particular type, which the GM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on a failed save or half as much extra damage on a successful one.\n\nAfter dealing its extra damage to a creature, the ammunition becomes nonmagical.\n\n| **1d100** | **Creature Type** | **1d100** | **Creature Type** |\n| 01–10 | Aberrations | 51–60 | Fey |\n| 11–15 | Beasts | 61–70 | Fiends |\n| 16–20 | Celestials | 71–75 | Giants |\n| 21–25 | Constructs | 76–80 | Monstrosities |\n| 26–35 | Dragons | 81–85 | Oozes |\n| 36–45 | Elementals | 86–90 | Plants |\n| 46–50 | Humanoids | 91–00 | Undead |",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Any Ammunition), Very Rare",
+      "category": "weapon",
+      "applies_to": {
+        "text": "Any Ammunition",
+        "refs": [
+          "dnd5e/gear/ammunition"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "single_use",
+        "nonmagical_after_extra_damage": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "ammunition_of_slaying",
+        "caption": "Ammunition of Slaying",
+        "columns": [
+          "1d100",
+          "Creature Type",
+          "1d100",
+          "Creature Type"
+        ],
+        "rows": [
+          [
+            "01–10",
+            "Aberrations",
+            "51–60",
+            "Fey"
+          ],
+          [
+            "11–15",
+            "Beasts",
+            "61–70",
+            "Fiends"
+          ],
+          [
+            "16–20",
+            "Celestials",
+            "71–75",
+            "Giants"
+          ],
+          [
+            "21–25",
+            "Constructs",
+            "76–80",
+            "Monstrosities"
+          ],
+          [
+            "26–35",
+            "Dragons",
+            "81–85",
+            "Oozes"
+          ],
+          [
+            "36–45",
+            "Elementals",
+            "86–90",
+            "Plants"
+          ],
+          [
+            "46–50",
+            "Humanoids",
+            "91–00",
+            "Undead"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "deals_damage_with_item"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "6d10",
+              "damage_type": "force"
+            }
+          ],
+          "half_on_success": true,
+          "note": "Extra damage; half as much on a success."
+        }
+      ],
+      "condition": {
+        "pred": "creature_type_chosen",
+        "args": {
+          "choice": "slaying_type"
+        }
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "slaying_type",
+      "reason": "gm_judgment",
+      "prompt": "Which creature type does this ammunition slay? (choose or roll on the table)",
+      "source_text": "which the GM chooses or determines randomly by rolling on the table below"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Any Ammunition), Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This magic ammunition is meant to slay creatures of a particular type, which the GM chooses or determines randomly by rolling on the table below. If a creature of that type takes damage from the ammunition, the creature makes a DC 17 Constitution saving throw, taking an extra 6d10 Force damage on a failed save or half as much extra damage on a successful one.",
+      "status": "master_decision",
+      "by": [
+        "md:slaying_type",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "After dealing its extra damage to a creature, the ammunition becomes nonmagical.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "| **1d100** | **Creature Type** | **1d100** | **Creature Type** |\n| 01–10 | Aberrations | 51–60 | Fey |\n| 11–15 | Beasts | 61–70 | Fiends |\n| 16–20 | Celestials | 71–75 | Giants |\n| 21–25 | Constructs | 76–80 | Monstrosities |\n| 26–35 | Dragons | 81–85 | Oozes |\n| 36–45 | Elementals | 86–90 | Plants |\n| 46–50 | Humanoids | 91–00 | Undead |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/gear/ammunition"
+  ]
+}

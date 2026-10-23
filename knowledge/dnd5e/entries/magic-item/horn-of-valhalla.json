@@ -1,0 +1,200 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/horn-of-valhalla",
+  "kind": "magic-item",
+  "name": "Horn of Valhalla",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Horn of Valhalla",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Rare (Silver or Brass), Very Rare* *(Bronze), or Legendary (Iron)* \n\nYou can take a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear in unoccupied spaces within 60 feet of you. Each spirit uses the **Berserker** stat block and returns to Ysgard after 1 hour or when it drops to 0 Hit Points. The spirits look like living, breathing warriors, and they have Immunity to the Charmed and Frightened conditions. Once you use the horn, it can’t be used again until 7 days have passed.\n\nFour types of *Horn of Valhalla* are known to exist, each made of a different metal. The horn’s type determines how many spirits it summons, as well as the requirement for its use. The GM chooses the horn’s type or determines it randomly by rolling on the following table.\n\nIf you blow the horn without meeting its requirement, the summoned spirits attack you. If you meet the requirement, they are Friendly to you and your allies and follow your commands.\n\n| **1d100** | **Horn Type** | **Spirits** | **Requirement** |\n| 01–40 | Silver | 2 | None |\n| 41–75 | Brass | 3 | Proficiency with all Simple weapons |\n| 76–90 | Bronze | 4 | Training with all Medium armor |\n| 91–00 | Iron | 5 | Proficiency with all Martial weapons |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare",
+      "very_rare",
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare (Silver or Brass), Very Rare (Bronze), or Legendary (Iron)",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare",
+          "variant": "Silver or Brass"
+        },
+        {
+          "rarity": "very_rare",
+          "variant": "Bronze"
+        },
+        {
+          "rarity": "legendary",
+          "variant": "Iron"
+        }
+      ],
+      "variants": [
+        {
+          "variant": "Silver",
+          "spirits": 2,
+          "requirement": "None"
+        },
+        {
+          "variant": "Brass",
+          "spirits": 3,
+          "requirement": "Proficiency with all Simple weapons"
+        },
+        {
+          "variant": "Bronze",
+          "spirits": 4,
+          "requirement": "Training with all Medium armor"
+        },
+        {
+          "variant": "Iron",
+          "spirits": 5,
+          "requirement": "Proficiency with all Martial weapons"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "recharge_days",
+        "days": 7
+      },
+      {
+        "id": "requirement",
+        "unmet": "spirits attack you",
+        "met": "Friendly, follow your commands"
+      }
+    ],
+    "tables": [
+      {
+        "id": "horn_of_valhalla",
+        "caption": "Horn of Valhalla",
+        "columns": [
+          "1d100",
+          "Horn Type",
+          "Spirits",
+          "Requirement"
+        ],
+        "rows": [
+          [
+            "01–40",
+            "Silver",
+            "2",
+            "None"
+          ],
+          [
+            "41–75",
+            "Brass",
+            "3",
+            "Proficiency with all Simple weapons"
+          ],
+          [
+            "76–90",
+            "Bronze",
+            "4",
+            "Training with all Medium armor"
+          ],
+          [
+            "91–00",
+            "Iron",
+            "5",
+            "Proficiency with all Martial weapons"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "summon",
+          "creature": "dnd5e/creature/berserker",
+          "count": {
+            "var": "item_variant_spirits"
+          },
+          "controller": "summoner",
+          "duration": {
+            "kind": "hours",
+            "amount": 1,
+            "ends_on": [
+              {
+                "event": "drops_to_0_hp"
+              }
+            ]
+          },
+          "note": "Warrior spirits from Ysgard within 60 feet; Immunity to Charmed and Frightened."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "horn_type",
+      "reason": "gm_judgment",
+      "prompt": "Which type of horn is this? (choose or roll 1d100)",
+      "source_text": "The GM chooses the horn’s type or determines it randomly by rolling on the following table."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare (Silver or Brass), Very Rare* *(Bronze), or Legendary (Iron)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You can take a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear in unoccupied spaces within 60 feet of you. Each spirit uses the **Berserker** stat block and returns to Ysgard after 1 hour or when it drops to 0 Hit Points. The spirits look like living, breathing warriors, and they have Immunity to the Charmed and Frightened conditions. Once you use the horn, it can’t be used again until 7 days have passed.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Four types of *Horn of Valhalla* are known to exist, each made of a different metal. The horn’s type determines how many spirits it summons, as well as the requirement for its use. The GM chooses the horn’s type or determines it randomly by rolling on the following table.",
+      "status": "master_decision",
+      "by": [
+        "md:horn_type"
+      ]
+    },
+    {
+      "text": "If you blow the horn without meeting its requirement, the summoned spirits attack you. If you meet the requirement, they are Friendly to you and your allies and follow your commands.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "| **1d100** | **Horn Type** | **Spirits** | **Requirement** |\n| 01–40 | Silver | 2 | None |\n| 41–75 | Brass | 3 | Proficiency with all Simple weapons |\n| 76–90 | Bronze | 4 | Training with all Medium armor |\n| 91–00 | Iron | 5 | Proficiency with all Martial weapons |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/berserker"
+  ]
+}

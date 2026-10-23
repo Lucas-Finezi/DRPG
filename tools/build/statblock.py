@@ -20,11 +20,15 @@ ABIL = ("Str", "Dex", "Con", "Int", "Wis", "Cha")
 SIZES = ("Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan")
 
 
-def nodes_of(title, page, level=None):
+def nodes_of(title, page, level=None, end_at_cr=False):
+    """Nodes of a stat block. `end_at_cr`: the block ends with its CR line (a stat block printed
+    inside another description, whose text goes on after it)."""
     i = find(title, level or 3, page)
     j = i + 1
     while j < len(NODES) and not (NODES[j].type == "h" and NODES[j].level <= 4 and not NODES[j].sidebar):
         j += 1
+        if end_at_cr and NODES[j - 1].text.startswith("**CR**"):
+            break
     return [n for n in NODES[i + 1:j] if not n.sidebar]
 
 
@@ -32,8 +36,8 @@ def _num(s):
     return int(s.replace("−", "-").replace("+", ""))
 
 
-def parse(title, page, level=None):
-    nodes = nodes_of(title, page, level)
+def parse(title, page, level=None, end_at_cr=False):
+    nodes = nodes_of(title, page, level, end_at_cr)
     data, section, lines = {}, None, []
     # rejoin wrapped labelled lines and wrapped ability names
     merged = []
@@ -56,6 +60,10 @@ def parse(title, page, level=None):
         if kind == "h5" and t in SECTIONS:
             section = slugify(t).replace("-", "_")
             data.setdefault(section, [])
+            continue
+        if kind == "t" and "**AC**" in t:  # "| **AC** 11 | **Initiative** +1 (11) |"
+            for label, val in re.findall(r"\*\*(AC|Initiative)\*\* ([^|]+)", t):
+                data[label.lower()] = {"text": val.strip()}
             continue
         if kind == "t":
             for a, score, mod, sv in re.findall(r"\*\*(Str|Dex|Con|Int|Wis|Cha)\*\*\s*\|?\s*(\d+)\s*\|\s*([+−-]\d+)\s*\|\s*([+−-]\d+)", t):
@@ -89,9 +97,9 @@ def parse_ability(name, text):
     return d
 
 
-def creature_entry(title, page, lot, path, slug=None, overrides=None, fx=None, level=None, **kw):
+def creature_entry(title, page, lot, path, slug=None, overrides=None, fx=None, level=None, end_at_cr=False, **kw):
     """Catalog entry for a stat block: every line is covered by the parsed data."""
-    data, nodes = parse(title, page, level)
+    data, nodes = parse(title, page, level, end_at_cr)
     for k, v in (overrides or {}).items():
         data[k] = {**data.get(k, {}), **v} if isinstance(v, dict) and isinstance(data.get(k), dict) else v
     items = [(None, "sys", ["/data/size", "/data/type", "/data/alignment"])]

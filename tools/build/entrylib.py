@@ -150,7 +150,17 @@ def render(nodes, heading_offset=None):
             # (a miniature sword worth" / "250+ GP)", "**Casting Time:** Action (Overgrowth) or" / "8 hours")
             header_wrap = (re.match(r"^\*\*[^*]+:\*\*", last)
                            and (last.count("(") > last.count(")") or re.search(r"\sor$", last)))
-            if parts and parts[-1][0] == "p" and (header_wrap or not TERMINAL.search(last)) and (
+            # a bold creature name cut by the line wrap ("... can become a **Giant**" / "**Goat** for up to")
+            bold_wrap = bool(re.search(r"\s\*\*[A-Z][a-z]+\*\*$", last) and re.match(r"^\*\*[A-Z][a-z]+\*\* [a-z]", text))
+            if bold_wrap:
+                parts[-1] = ("p", last + " " + text)
+                prev_node = n
+                continue
+            # a line wrap the extractor kept as a paragraph break: the line ends with a space and no
+            # closing punctuation ("... making the area Heavily " / "Obscured for creatures ...")
+            space_wrap = (prev_node is not None and prev_node.type == "p" and prev_node.text.endswith(" ")
+                          and re.search(r"[A-Za-z,]$", last) and re.match(r"^[A-Z][a-z]", text))
+            if parts and parts[-1][0] == "p" and (header_wrap or not TERMINAL.search(last)) and (space_wrap or 
                     re.match(r"^[a-z(]", text) or label_wrap or word_wrap or header_wrap
                     or (cut and re.search(r"[a-z,;]$", last)
                         and not re.match(r"^\*\*(Casting Time|Range|Components?|Duration):\*\*", last))):

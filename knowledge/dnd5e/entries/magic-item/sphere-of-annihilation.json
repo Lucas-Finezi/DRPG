@@ -1,0 +1,218 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/sphere-of-annihilation",
+  "kind": "magic-item",
+  "name": "Sphere of Annihilation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      244,
+      245
+    ],
+    "section": "Magic Items/Magic Items A–Z/Sphere of Annihilation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Legendary*\n\nThis 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.\n\nThe sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an Artifact is susceptible to damage from a *Sphere of Annihilation*, it passes through the sphere unscathed. Anything else that touches the sphere but isn’t wholly engulfed and obliterated by it takes 8d10 Force damage.\n\n***Controlling the Sphere.*** A *Sphere of Annihilation* is stationary until someone takes control of it. If you are within 60 feet of a sphere, you can take a Magic action to make a DC 25 Intelligence (Arcana) check. On a successful check, you control the sphere until the start of your next turn, and if it was under another creature’s control, that creature loses control of the sphere. On a failed check, the sphere moves 10 feet toward you in a straight line. \n\nWhile in control of the sphere, you can take a Bonus Action to cause it to move in one direction of your choice, up to a number of feet equal to 5 times your Intelligence modifier (minimum 5 feet). Any creature whose space the sphere enters must succeed on a DC 19 Dexterity saving throw or be touched by it, taking 8d10 Force damage. A creature reduced to 0 Hit Points by this damage is obliterated, leaving its possessions behind but no other physical remains.\n\n***Sphere Interactions.*** If the sphere comes into contact with a planar portal (such as that created by the *Gate* spell) or an extradimensional space (such as that within a *Portable Hole*), the GM determines randomly what happens using the following table.\n\n| **1d100** | **Result** |\n| 01–50 | The sphere is destroyed. |\n| 51–85 | The sphere moves through the portal or into the extradimensional space. |\n| 86–00 | A spatial rift sends the sphere and each creature and object within 180 feet of the sphere to a random plane of existence. |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "sphere",
+        "diameter_feet": 2
+      }
+    ],
+    "tables": [
+      {
+        "id": "sphere_of_annihilation",
+        "caption": "Sphere of Annihilation",
+        "columns": [
+          "1d100",
+          "Result"
+        ],
+        "rows": [
+          [
+            "01–50",
+            "The sphere is destroyed."
+          ],
+          [
+            "51–85",
+            "The sphere moves through the portal or into the extradimensional space."
+          ],
+          [
+            "86–00",
+            "A spatial rift sends the sphere and each creature and object within 180 feet of the sphere to a random plane of existence."
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "touches_effect",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "8d10",
+          "damage_type": "force"
+        }
+      ],
+      "note": "Obliterates matter that passes through it; Artifacts pass unscathed unless susceptible."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "check",
+          "ability": "int",
+          "dc": 25,
+          "skill": "arcana",
+          "on_success": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/sphere-of-annihilation",
+              "note": "You control it until the start of your next turn."
+            }
+          ],
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "pull",
+              "distance_feet": 10,
+              "note": "The sphere moves 10 feet toward you."
+            }
+          ]
+        }
+      ],
+      "requires": {
+        "pred": "within_feet_of_item",
+        "args": {
+          "feet": 60,
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 19,
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "8d10",
+              "damage_type": "force"
+            },
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/sphere-of-annihilation",
+              "note": "Reduced to 0 HP: obliterated, possessions left behind."
+            }
+          ],
+          "note": "Moves up to 5 × Intelligence modifier feet (min 5); each creature whose space it enters."
+        }
+      ],
+      "requires": {
+        "pred": "controls_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "sphere_interaction",
+      "reason": "not_automatable",
+      "prompt": "Roll 1d100 when the sphere contacts a portal or extradimensional space.",
+      "source_text": "the GM determines randomly what happens using the following table"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an Artifact is susceptible to damage from a *Sphere of Annihilation*, it passes through the sphere unscathed. Anything else that touches the sphere but isn’t wholly engulfed and obliterated by it takes 8d10 Force damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Controlling the Sphere.*** A *Sphere of Annihilation* is stationary until someone takes control of it. If you are within 60 feet of a sphere, you can take a Magic action to make a DC 25 Intelligence (Arcana) check. On a successful check, you control the sphere until the start of your next turn, and if it was under another creature’s control, that creature loses control of the sphere. On a failed check, the sphere moves 10 feet toward you in a straight line.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "While in control of the sphere, you can take a Bonus Action to cause it to move in one direction of your choice, up to a number of feet equal to 5 times your Intelligence modifier (minimum 5 feet). Any creature whose space the sphere enters must succeed on a DC 19 Dexterity saving throw or be touched by it, taking 8d10 Force damage. A creature reduced to 0 Hit Points by this damage is obliterated, leaving its possessions behind but no other physical remains.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Sphere Interactions.*** If the sphere comes into contact with a planar portal (such as that created by the *Gate* spell) or an extradimensional space (such as that within a *Portable Hole*), the GM determines randomly what happens using the following table.",
+      "status": "master_decision",
+      "by": [
+        "md:sphere_interaction"
+      ]
+    },
+    {
+      "text": "| **1d100** | **Result** |\n| 01–50 | The sphere is destroyed. |\n| 51–85 | The sphere moves through the portal or into the extradimensional space. |\n| 86–00 | A spatial rift sends the sphere and each creature and object within 180 feet of the sphere to a random plane of existence. |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/sphere-of-annihilation"
+  ]
+}

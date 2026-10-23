@@ -1,0 +1,482 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-the-woodlands",
+  "kind": "magic-item",
+  "name": "Staff of the Woodlands",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      247
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of the Woodlands",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Rare (Requires Attunement by a Druid)*\n\nThis staff has 6 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.\n\n***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n| **Spell** | **Charge** |\n\n**Cost**\n\n| *Animal Friendship* | 1 |\n| *Awaken* | 5 |\n| *Barkskin* | 2 |\n| *Locate Animals or Plants* | 2 |\n| *Pass without Trace* | 2 |\n| *Speak with Animals* | 1 |\n| *Speak with Plants* | 3 |\n| *Wall of Thorns* | 6 |\n\n***Tree Form.*** You can take a Magic action to plant one end of the staff in earth in an unoccupied space and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of Transmutation magic that can be discerned with the *Detect Magic* spell. While touching the tree and using a Magic action, you return the staff to its normal form. Any creature in the tree falls when the tree reverts to a staff.\n\n***Regaining Charges.*** The staff regains 1d6 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff loses its properties and becomes a nonmagical Quarterstaff.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Rare (Requires Attunement by a Druid)",
+      "attunement": {
+        "required": true,
+        "by": "a Druid",
+        "classes": [
+          "dnd5e/class/druid"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "staff_of_the_woodlands",
+        "caption": "Staff of the Woodlands",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Animal Friendship",
+            "1"
+          ],
+          [
+            "Awaken",
+            "5"
+          ],
+          [
+            "Barkskin",
+            "2"
+          ],
+          [
+            "Locate Animals or Plants",
+            "2"
+          ],
+          [
+            "Pass without Trace",
+            "2"
+          ],
+          [
+            "Speak with Animals",
+            "1"
+          ],
+          [
+            "Speak with Plants",
+            "3"
+          ],
+          [
+            "Wall of Thorns",
+            "6"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 6
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_attack_bonus",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/animal-friendship",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/awaken",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/barkskin",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/locate-animals-or-plants",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/pass-without-trace",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/speak-with-animals",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/speak-with-plants",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 6
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-thorns",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/staff-of-the-woodlands",
+          "note": "A 60-foot tree (5-foot trunk, 20-foot crown); faint Transmutation aura; touch + Magic action reverts it; creatures in it fall."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": "1d6"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/weapon/quarterstaff",
+                  "note": "Loses its properties; a nonmagical Quarterstaff."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Rare (Requires Attunement by a Druid)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 6 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11"
+      ]
+    },
+    {
+      "text": "| **Spell** | **Charge** |\n\n**Cost**\n\n| *Animal Friendship* | 1 |\n| *Awaken* | 5 |\n| *Barkskin* | 2 |\n| *Locate Animals or Plants* | 2 |\n| *Pass without Trace* | 2 |\n| *Speak with Animals* | 1 |\n| *Speak with Plants* | 3 |\n| *Wall of Thorns* | 6 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Tree Form.*** You can take a Magic action to plant one end of the staff in earth in an unoccupied space and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of Transmutation magic that can be discerned with the *Detect Magic* spell. While touching the tree and using a Magic action, you return the staff to its normal form. Any creature in the tree falls when the tree reverts to a staff.",
+      "status": "structured",
+      "by": [
+        "/effects/12"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 1d6 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff loses its properties and becomes a nonmagical Quarterstaff.",
+      "status": "structured",
+      "by": [
+        "/effects/13",
+        "/effects/14"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/druid",
+    "dnd5e/magic-item/staff-of-the-woodlands",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/animal-friendship",
+    "dnd5e/spell/awaken",
+    "dnd5e/spell/barkskin",
+    "dnd5e/spell/locate-animals-or-plants",
+    "dnd5e/spell/pass-without-trace",
+    "dnd5e/spell/speak-with-animals",
+    "dnd5e/spell/speak-with-plants",
+    "dnd5e/spell/wall-of-thorns",
+    "dnd5e/weapon/quarterstaff"
+  ]
+}

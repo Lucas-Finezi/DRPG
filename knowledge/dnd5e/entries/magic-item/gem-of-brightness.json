@@ -1,0 +1,221 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/gem-of-brightness",
+  "kind": "magic-item",
+  "name": "Gem of Brightness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      223
+    ],
+    "section": "Magic Items/Magic Items A–Z/Gem of Brightness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThis prism has 50 charges. While you are holding it, you can take a Magic action and use one of three command words to cause one of the following effects:\n\n**First Command Word.** The gem sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This effect doesn’t expend a charge. It lasts until you take a Bonus Action to repeat the command word or until you use another function of the gem.\n\n**Second Command Word.** You expend 1 charge and cause the gem to fire a brilliant beam of light at one creature you can see within 60 feet of yourself. The creature must succeed on a DC 15 Constitution saving throw or have the Blinded condition for 1 minute. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success.\n\n**Third Command Word.** You expend 5 charges and cause the gem to flare with intense light in a 30-foot Cone. Each creature in the Cone makes a saving throw as if struck by the beam created with the second command word.\n\nWhen all of the gem’s charges are expended, the gem becomes a nonmagical jewel worth 50 GP.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "spent",
+        "becomes": "nonmagical jewel",
+        "worth_gp": 50
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 50
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "choice",
+          "id": "command_word",
+          "choose": 1,
+          "options": [
+            {
+              "id": "first",
+              "label": "Light (no charge)",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/bright-light",
+                  "note": "Bright Light 30 feet, Dim Light 30 more; until repeated as a Bonus Action or another function is used."
+                }
+              ]
+            },
+            {
+              "id": "second",
+              "label": "Beam (1 charge)",
+              "effects": [
+                {
+                  "op": "spend",
+                  "resource": "charges",
+                  "amount": 1
+                },
+                {
+                  "op": "save",
+                  "ability": "con",
+                  "dc": 15,
+                  "target": {
+                    "kind": "creature",
+                    "range": {
+                      "kind": "distance",
+                      "feet": 60
+                    },
+                    "must_see": true
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/blinded",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ],
+                  "repeat": {
+                    "on": {
+                      "event": "turn_end",
+                      "whose": "target",
+                      "which": "each"
+                    },
+                    "ends": "effect_on_self"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "third",
+              "label": "Flare (5 charges)",
+              "effects": [
+                {
+                  "op": "spend",
+                  "resource": "charges",
+                  "amount": 5
+                },
+                {
+                  "op": "save",
+                  "ability": "con",
+                  "dc": 15,
+                  "target": {
+                    "kind": "area",
+                    "area": {
+                      "shape": "cone",
+                      "size_feet": 30,
+                      "origin": "self"
+                    }
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/blinded",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ],
+                  "repeat": {
+                    "on": {
+                      "event": "turn_end",
+                      "whose": "target",
+                      "which": "each"
+                    },
+                    "ends": "effect_on_self"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requires": {
+        "pred": "holds_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This prism has 50 charges. While you are holding it, you can take a Magic action and use one of three command words to cause one of the following effects:",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**First Command Word.** The gem sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This effect doesn’t expend a charge. It lasts until you take a Bonus Action to repeat the command word or until you use another function of the gem.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Second Command Word.** You expend 1 charge and cause the gem to fire a brilliant beam of light at one creature you can see within 60 feet of yourself. The creature must succeed on a DC 15 Constitution saving throw or have the Blinded condition for 1 minute. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Third Command Word.** You expend 5 charges and cause the gem to flare with intense light in a 30-foot Cone. Each creature in the Cone makes a saving throw as if struck by the beam created with the second command word.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "When all of the gem’s charges are expended, the gem becomes a nonmagical jewel worth 50 GP.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/rule/bright-light"
+  ]
+}

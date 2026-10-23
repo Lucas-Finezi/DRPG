@@ -1,0 +1,158 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dagger-of-venom",
+  "kind": "magic-item",
+  "name": "Dagger of Venom",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      216
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dagger of Venom",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Dagger), Rare*\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nYou can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can’t be used this way again until the next dawn.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Dagger), Rare",
+      "category": "weapon",
+      "applies_to": {
+        "text": "Dagger",
+        "refs": [
+          "dnd5e/weapon/dagger"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "hits_with_attack_roll"
+          },
+          "then": [
+            {
+              "op": "save",
+              "ability": "con",
+              "dc": 15,
+              "target": {
+                "kind": "inherit"
+              },
+              "on_fail": [
+                {
+                  "op": "damage",
+                  "amount": "2d10",
+                  "damage_type": "poison"
+                },
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/poisoned",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "duration": {
+            "kind": "minutes",
+            "amount": 1,
+            "ends_on": [
+              {
+                "event": "hits_with_attack_roll"
+              }
+            ]
+          },
+          "condition": {
+            "pred": "attack_uses_weapon",
+            "args": {
+              "item": "this"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Dagger), Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "You can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can’t be used this way again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/weapon/dagger"
+  ]
+}

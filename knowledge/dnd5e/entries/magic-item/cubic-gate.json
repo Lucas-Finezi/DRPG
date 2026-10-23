@@ -1,0 +1,152 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/cubic-gate",
+  "kind": "magic-item",
+  "name": "Cubic Gate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      216
+    ],
+    "section": "Magic Items/Magic Items A–Z/Cubic Gate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Legendary*\n\nThis cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the GM.\n\nThe cube has 3 charges and regains 1d3 expended charges daily at dawn. As a Magic action, you can expend 1 of the cube’s charges to cast one of the following spells using the cube.\n\n***Gate.*** Pressing one side of the cube, you cast *Gate*, opening a portal to the plane of existence keyed to that side.\n\n***Plane Shift.*** Pressing one side of the cube twice, you cast *Plane Shift*, transporting the targets to the plane of existence keyed to that side.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "cube",
+        "size_inches": 3,
+        "sides": 6,
+        "material_plane_side": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/gate",
+          "slot": "none",
+          "components": [],
+          "note": "Portal to the plane keyed to the pressed side."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [],
+          "note": "Pressing a side twice; to the plane keyed to that side."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "cube_planes",
+      "reason": "gm_judgment",
+      "prompt": "Which planes are the other five sides keyed to?",
+      "source_text": "The other sides are linked to planes determined by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the GM.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:cube_planes"
+      ]
+    },
+    {
+      "text": "The cube has 3 charges and regains 1d3 expended charges daily at dawn. As a Magic action, you can expend 1 of the cube’s charges to cast one of the following spells using the cube.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Gate.*** Pressing one side of the cube, you cast *Gate*, opening a portal to the plane of existence keyed to that side.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Plane Shift.*** Pressing one side of the cube twice, you cast *Plane Shift*, transporting the targets to the plane of existence keyed to that side.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/gate",
+    "dnd5e/spell/plane-shift"
+  ]
+}

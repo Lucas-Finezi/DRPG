@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ammunition-plus1-plus2-or-plus3",
+  "kind": "magic-item",
+  "name": "Ammunition, +1, +2, or +3",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      209
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ammunition, +1, +2, or +3",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Any Ammunition), Uncommon (+1), Rare (+2),* *or Very Rare (+3)* \n\nYou have a bonus to attack rolls and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.\n\nThis ammunition is typically found or sold in quantities of ten or twenty pieces. Ten pieces of this ammunition are equivalent in value to a potion of the same rarity.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "uncommon",
+      "rare",
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Any Ammunition), Uncommon (+1), Rare (+2), or Very Rare (+3)",
+      "category": "weapon",
+      "applies_to": {
+        "text": "Any Ammunition",
+        "refs": [
+          "dnd5e/gear/ammunition"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "uncommon",
+          "bonus": 1
+        },
+        {
+          "rarity": "rare",
+          "bonus": 2
+        },
+        {
+          "rarity": "very_rare",
+          "bonus": 3
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "single_use",
+        "nonmagical_after_hit": true
+      },
+      {
+        "id": "quantity",
+        "typical": [
+          10,
+          20
+        ],
+        "value": {
+          "pieces": 10,
+          "equals": "potion_of_same_rarity"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": {
+        "var": "item_bonus"
+      },
+      "when": {
+        "pred": "attack_uses_weapon",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": {
+        "var": "item_bonus"
+      },
+      "when": {
+        "pred": "attack_uses_weapon",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Any Ammunition), Uncommon (+1), Rare (+2),* *or Very Rare (+3)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You have a bonus to attack rolls and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Once it hits a target, the ammunition is no longer magical.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "This ammunition is typically found or sold in quantities of ten or twenty pieces. Ten pieces of this ammunition are equivalent in value to a potion of the same rarity.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/gear/ammunition"
+  ]
+}

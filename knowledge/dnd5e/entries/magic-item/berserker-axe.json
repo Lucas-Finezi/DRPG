@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/berserker-axe",
+  "kind": "magic-item",
+  "name": "Berserker Axe",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      213
+    ],
+    "section": "Magic Items/Magic Items A–Z/Berserker Axe",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Battleaxe, Greataxe, or Halberd), Rare* *(Requires Attunement)*\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your Hit Point maximum increases by 1 for each level you have attained.\n\n***Curse.*** This weapon is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the weapon, keeping it within reach at all times. You also have Disadvantage on attack rolls with weapons other than this one.\n\nWhenever another creature damages you while the weapon is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. This berserk state ends when you start your turn and there are no creatures within 60 feet of you that you can see or hear.\n\nWhile berserk, you regard the creature nearest to you that you can see or hear as your enemy. If there are multiple possible creatures, choose one at random. On each of your turns, you must move as close to the creature as possible and take the Attack action, targeting the creature. If you’re unable to get close enough to the creature to attack it with the weapon, your turn ends after you’ve used up all your available movement. If the creature dies or can no longer be seen or heard by you, the next nearest creature that you can see or hear becomes your new target.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Battleaxe, Greataxe, or Halberd), Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Battleaxe, Greataxe, or Halberd",
+        "refs": [
+          "dnd5e/weapon/battleaxe",
+          "dnd5e/weapon/greataxe",
+          "dnd5e/weapon/halberd"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "curse",
+        "unwilling_to_part": true
+      },
+      {
+        "id": "berserk_end",
+        "ends": "turn_start with no creature you can see or hear within 60 feet"
+      },
+      {
+        "id": "berserk",
+        "target": "nearest creature you can see or hear",
+        "ties": "random",
+        "each_turn": [
+          "move_closest",
+          "dnd5e/action/attack"
+        ],
+        "retarget": "next nearest"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "wielding_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "hp_max",
+      "mode": "add",
+      "value": {
+        "var": "level"
+      },
+      "when": {
+        "pred": "attuned_to_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "attuned_to_item",
+            "args": {
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "attack_uses_weapon",
+              "args": {
+                "item": "this"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "damage_taken",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 15,
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/berserker-axe",
+              "note": "You go berserk."
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "pred": "possesses_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Battleaxe, Greataxe, or Halberd), Rare* *(Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your Hit Point maximum increases by 1 for each level you have attained.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Curse.*** This weapon is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the weapon, keeping it within reach at all times. You also have Disadvantage on attack rolls with weapons other than this one.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/cursed-items",
+        "/effects/3",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Whenever another creature damages you while the weapon is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. This berserk state ends when you start your turn and there are no creatures within 60 feet of you that you can see or hear.",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "While berserk, you regard the creature nearest to you that you can see or hear as your enemy. If there are multiple possible creatures, choose one at random. On each of your turns, you must move as close to the creature as possible and take the Attack action, targeting the creature. If you’re unable to get close enough to the creature to attack it with the weapon, your turn ends after you’ve used up all your available movement. If the creature dies or can no longer be seen or heard by you, the next nearest creature that you can see or hear becomes your new target.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/attack",
+    "dnd5e/magic-item/berserker-axe",
+    "dnd5e/rule/cursed-items",
+    "dnd5e/weapon/battleaxe",
+    "dnd5e/weapon/greataxe",
+    "dnd5e/weapon/halberd"
+  ]
+}

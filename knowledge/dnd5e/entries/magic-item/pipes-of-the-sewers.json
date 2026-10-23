@@ -1,0 +1,181 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/pipes-of-the-sewers",
+  "kind": "magic-item",
+  "name": "Pipes of the Sewers",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      234
+    ],
+    "section": "Magic Items/Magic Items A–Z/Pipes of the Sewers",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Uncommon (Requires Attunement)*\n\nWhile these pipes are on your person, ordinary rats and giant rats are Indifferent toward you and won’t attack you unless you threaten or harm them.\n\nThe pipes have 3 charges and regain 1d3 expended charges daily at dawn. If you play the pipes as a Magic action, you can take a Bonus Action to expend 1 to 3 charges, calling forth one **Swarm of Rats** with each expended charge if enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren’t enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren’t under your control otherwise.\n\nWhenever a **Swarm of Rats** that isn’t under another creature’s control comes within 30 feet of you while you are playing the pipes, the swarm makes a DC 15 Wisdom saving throw. On a successful save, the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours. On a failed save, the swarm is swayed by the pipes’ music and becomes Friendly to you and your allies for as long as you continue to play the pipes each round as a Magic action. A Friendly swarm obeys your commands. If you issue no commands to a Friendly swarm, it defends itself but otherwise takes no actions. If a Friendly swarm starts its turn more than 30 feet away from you, your control over that swarm ends, and the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "rats",
+        "attitude": "indifferent",
+        "creatures": [
+          "dnd5e/creature/rat",
+          "dnd5e/creature/giant-rat"
+        ],
+        "unless": "threatened or harmed",
+        "while": "on your person"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "uses": {
+        "resource": "charges",
+        "amount": {
+          "var": "charges_spent"
+        }
+      },
+      "then": [
+        {
+          "op": "summon",
+          "creature": "dnd5e/creature/swarm-of-rats",
+          "count": {
+            "var": "charges_spent"
+          },
+          "controller": "none",
+          "note": "If enough rats are within half a mile (GM); otherwise the charge is wasted."
+        }
+      ],
+      "requires": {
+        "pred": "playing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "comes_within_feet_of_target",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 15,
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/pipes-of-the-sewers",
+              "note": "Friendly while you keep playing each round; obeys you; control ends if it starts its turn more than 30 feet away."
+            }
+          ],
+          "on_success": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/pipes-of-the-sewers",
+              "note": "Can't be swayed for 24 hours."
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "pred": "playing_item",
+        "args": {
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "enough_rats",
+      "reason": "gm_judgment",
+      "prompt": "Are enough rats within half a mile to form a swarm?",
+      "source_text": "if enough rats are within half a mile of you to be called in this fashion (as determined by the GM)"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While these pipes are on your person, ordinary rats and giant rats are Indifferent toward you and won’t attack you unless you threaten or harm them.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The pipes have 3 charges and regain 1d3 expended charges daily at dawn. If you play the pipes as a Magic action, you can take a Bonus Action to expend 1 to 3 charges, calling forth one **Swarm of Rats** with each expended charge if enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren’t enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren’t under your control otherwise.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "md:enough_rats"
+      ]
+    },
+    {
+      "text": "Whenever a **Swarm of Rats** that isn’t under another creature’s control comes within 30 feet of you while you are playing the pipes, the swarm makes a DC 15 Wisdom saving throw. On a successful save, the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours. On a failed save, the swarm is swayed by the pipes’ music and becomes Friendly to you and your allies for as long as you continue to play the pipes each round as a Magic action. A Friendly swarm obeys your commands. If you issue no commands to a Friendly swarm, it defends itself but otherwise takes no actions. If a Friendly swarm starts its turn more than 30 feet away from you, your control over that swarm ends, and the swarm behaves as it normally would and can’t be swayed by the pipes’ music for the next 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/giant-rat",
+    "dnd5e/creature/rat",
+    "dnd5e/creature/swarm-of-rats",
+    "dnd5e/magic-item/pipes-of-the-sewers"
+  ]
+}

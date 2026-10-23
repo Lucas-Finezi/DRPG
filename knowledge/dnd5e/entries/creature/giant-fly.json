@@ -1,0 +1,146 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/giant-fly",
+  "kind": "creature",
+  "name": "Giant Fly",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      222
+    ],
+    "section": "Magic Items/Magic Items A–Z/Figurine of Wondrous Power/Giant Fly",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "*Large Beast, Unaligned*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 19 (3d10 + 3)\n\n**Speed** 30 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |\n\n**Senses** Darkvision 60 ft., Passive Perception 10\n\n**Languages** None\n\n**CR** 0 (XP 0; PB +2)",
+  "facets": {
+    "group": "embedded",
+    "size": "Large",
+    "type": "Beast"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "ac": {
+      "text": "11"
+    },
+    "initiative": {
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "text": "19 (3d10 + 3)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft."
+    },
+    "senses": {
+      "text": "Darkvision 60 ft., Passive Perception 10"
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "text": "0 (XP 0; PB +2)"
+    },
+    "abilities": {
+      "str": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      }
+    }
+  },
+  "coverage": [
+    {
+      "text": "*Large Beast, Unaligned*\n\n|",
+      "status": "structured",
+      "by": [
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "**AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac"
+      ]
+    },
+    {
+      "text": "**HP** 19 (3d10 + 3)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft., Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 0; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    }
+  ]
+}

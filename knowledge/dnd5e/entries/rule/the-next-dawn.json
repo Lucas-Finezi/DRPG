@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/the-next-dawn",
+  "kind": "rule",
+  "name": "“The Next Dawn”",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      206
+    ],
+    "section": "Magic Items/“The Next Dawn”",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "Magic items often have charges or properties that recharge at the next dawn or some other specified time. If such an item is on a world or plane of existence where the specified event doesn’t occur, the GM determines when the item recharges.",
+  "data": {
+    "rules": [
+      {
+        "id": "recharge",
+        "at": "dawn"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "no_dawn",
+      "reason": "gm_judgment",
+      "prompt": "When does the item recharge where dawn doesn't occur?",
+      "source_text": "If such an item is on a world or plane of existence where the specified event doesn’t occur, the GM determines when the item recharges."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Magic items often have charges or properties that recharge at the next dawn or some other specified time. If such an item is on a world or plane of existence where the specified event doesn’t occur, the GM determines when the item recharges.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:no_dawn"
+      ]
+    }
+  ]
+}
