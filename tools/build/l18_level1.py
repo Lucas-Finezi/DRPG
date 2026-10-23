@@ -65,7 +65,7 @@ def entries():
         ("If you roll the same number", "rule", {"id": "leap", "on": "two_or_more_d8_same_number", "new_target_within_feet": 30,
                                                   "new_attack_and_damage_roll": True,
                                                   "max_leaps": {"op": "sub", "args": [SLOT, 1]}}),
-        (HL, "sys", ["/effects/0/on_hit/0/amount", "/data/rules/0"]),
+        (HL, "sys", ["/effects/0/on_hit/0/amount", "rule:leap"]),
         (HL, "rule", {"id": "leap_limits", "max_leaps": SLOT, "each_creature_targeted_once": True})]))
     E.append(S("Color Spray", [("^", "fx", save("con", cond("blinded", until_turn("turn_end", "source")),
                                                 target=area("cone", 15, "self")))]))
@@ -92,7 +92,7 @@ def entries():
         ("**Create Water.**", "rule", {"id": "create", "gallons": up(10, 1, 10), "or_rain_cube_feet": up(30, 1, 5),
                                       "rain_extinguishes_exposed_flames": True}),
         ("**Destroy Water.**", "rule", {"id": "destroy", "gallons": up(10, 1, 10), "or_fog_cube_feet": up(30, 1, 5)}),
-        (HL, "sys", ["/data/rules/1", "/data/rules/2"])]))
+        (HL, "sys", ["rule:create", "rule:destroy"])]))
     E.append(S("Cure Wounds", [
         ("^", "fx", heal({"op": "add", "args": [updice(2, 8, 1, 2), MOD]}, target=touch())),
         (HL, "sys", ["/effects/0/amount"])]))
@@ -192,7 +192,7 @@ def entries():
         ("^", "rule", {"id": "fog", "shape": "sphere", "radius_feet": up(20, 1, 20), "heavily_obscured": True,
                        "rule": "dnd5e/rule/heavily-obscured", "dispersed_by": "strong_wind",
                        "example": SP("gust-of-wind")}),
-        (HL, "sys", ["/data/rules/0"])]))
+        (HL, "sys", ["rule:fog"])]))
     E.append(S("Goodberry", [
         ("^", "rule", {"id": "berries", "count": 10}),
         ("^", "fx", {"op": "activation", "cost": "bonus_action", "note": "Any creature eats one berry.",

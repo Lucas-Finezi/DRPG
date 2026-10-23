@@ -317,6 +317,20 @@ def _fill(n, facets, data):
     return n
 
 
+def resolve_rule_refs(plan):
+    """'rule:<id>' in a sys payload -> the pointer of that rule in data.rules (by item order)."""
+    index = {}
+    for _, tag, payload in plan:
+        if tag == "rule":
+            index[payload["id"]] = len(index)
+    out = []
+    for anchor, tag, payload in plan:
+        if tag == "sys":
+            payload = [f"/data/rules/{index[p[5:]]}" if p.startswith("rule:") else p for p in payload]
+        out.append((anchor, tag, payload))
+    return out
+
+
 def SPELL(name, items, lot, extra_data=None, skip=(), **kw):
     """Build a spell entry: parsed header + coverage items for the description."""
     inv = INV[name]
@@ -340,8 +354,8 @@ def SPELL(name, items, lot, extra_data=None, skip=(), **kw):
         k += 1  # wrapped duration line (not seen in the SRD, kept for safety)
     first = nodes[k + 1].text[:50] if k + 1 < len(nodes) else None
     plan = [(None, "sys", ["/facets", "/data/casting_time", "/data/range", "/data/components", "/data/duration"])]
-    for anchor, tag, payload in items:
-        plan.append((first if anchor == "^" else anchor, tag, _fill(payload, facets, data)))
+    plan += [(first if anchor == "^" else anchor, tag, _fill(payload, facets, data)) for anchor, tag, payload in items]
+    plan = resolve_rule_refs(plan)
     e = build("spell", slugify(name), name, nodes, lot, f"Spells/Spell Descriptions/{name}", plan,
               facets=facets, data=data, **kw)
     return e
@@ -361,3 +375,29 @@ def write_all(entries, registry=None, lot=None):
     for e in entries:
         write_entry(e)
     print(f"wrote {len(entries)} entries")
+
+
+MOD = {"var": "spellcasting_mod"}
+MAGIC = {"cost": "action", "action": "dnd5e/action/magic"}
+STUDY = {"op": "check", "ability": "int", "skill": "investigation", "dc": DC,
+         "note": "A creature that takes the Study action; on a success it discerns the illusion."}
+BLOCKED = {"id": "blocked_by", "blocked_by": ["1_foot_stone_dirt_or_wood", "1_inch_metal", "thin_sheet_of_lead"]}
+DAMAGE_TYPES = ("acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic",
+                "radiant", "slashing", "thunder")
+
+
+def active(slug):
+    return {"pred": "effect_active", "args": {"effect": slug}}
+
+
+def all_but(*excluded):
+    return [t for t in DAMAGE_TYPES if t not in excluded]
+
+
+def extra_targets(level, base=1):
+    """'You can target one additional creature for each spell slot level above N'."""
+    return up(base, level)
+
+
+def S_for(lot):
+    return lambda name, items, **kw: SPELL(name, items, lot, **kw)

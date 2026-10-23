@@ -1,0 +1,135 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/wind-wall",
+  "kind": "spell",
+  "name": "Wind Wall",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      174
+    ],
+    "section": "Spells/Spell Descriptions/Wind Wall",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Evocation (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a fan and a feather)\n\n**Duration:** Concentration, up to 1 minute\n\nA wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration.\n\nWhen the wall appears, each creature in its area makes a Strength saving throw, taking 4d8 Bludgeoning damage on a failed save or half as much damage on a successful one.\n\nThe strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can’t pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and miss automatically. Boulders hurled by Giants or siege engines, and similar projectiles, are unaffected. Creatures in gaseous form can’t pass through it.",
+  "facets": {
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a fan and a feather"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "wall",
+        "length_feet": 50,
+        "height_feet": 15,
+        "thickness_feet": 1,
+        "continuous_path": true
+      },
+      {
+        "id": "effects",
+        "keeps_away_gases": true,
+        "blocks_small_flyers": true,
+        "ordinary_projectiles_miss": true,
+        "boulders_and_siege_unaffected": true,
+        "gaseous_form_blocked": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "str",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "line",
+          "size_feet": 50,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "4d8",
+          "damage_type": "bludgeoning"
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Evocation (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a fan and a feather)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the wall appears, each creature in its area makes a Strength saving throw, taking 4d8 Bludgeoning damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can’t pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and miss automatically. Boulders hurled by Giants or siege engines, and similar projectiles, are unaffected. Creatures in gaseous form can’t pass through it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

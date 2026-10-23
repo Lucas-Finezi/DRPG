@@ -1,0 +1,206 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/magic-circle",
+  "kind": "spell",
+  "name": "Magic Circle",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      145,
+      146
+    ],
+    "section": "Spells/Spell Descriptions/Magic Circle",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Abjuration (Cleric, Paladin, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, S, M (salt and powdered silver worth 100+ GP, which the spell consumes)\n\n**Duration:** 1 hour\n\nYou create a 10-foot-radius, 20-foot-tall Cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the Cylinder intersects with the floor or other surface.\n\nChoose one or more of the following types of creatures: Celestials, Elementals, Fey, Fiends, or Undead. The circle affects a creature of the chosen type in the following ways:\n\n- The creature can’t willingly enter the Cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.\n\n- The creature has Disadvantage on attack rolls against targets within the Cylinder.\n\n- Targets within the Cylinder can’t be possessed by or gain the Charmed or Frightened condition from the creature.\n\nEach time you cast this spell, you can cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the Cylinder and protecting targets outside it.\n\n***Using a Higher-Level Spell Slot.*** The duration increases by 1 hour for each spell slot level above 3.",
+  "facets": {
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "salt and powdered silver worth 100+ GP, which the spell consumes",
+      "material_cost_gp": 100,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "circle",
+        "shape": "cylinder",
+        "radius_feet": 10,
+        "height_feet": 20
+      },
+      {
+        "id": "types",
+        "choose_from": [
+          "celestial",
+          "elemental",
+          "fey",
+          "fiend",
+          "undead"
+        ]
+      },
+      {
+        "id": "reverse",
+        "optional": true,
+        "keeps_creature_inside": true
+      },
+      {
+        "id": "duration",
+        "hours": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                3
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "enter_area_nonmagically"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "note": "Teleportation or interplanar travel into it requires a successful Charisma save."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "when": {
+        "pred": "target_in_area"
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "note": "Also can't be possessed by the creature."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Abjuration (Cleric, Paladin, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, S, M (salt and powdered silver worth 100+ GP, which the spell consumes)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a 10-foot-radius, 20-foot-tall Cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the Cylinder intersects with the floor or other surface.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Choose one or more of the following types of creatures: Celestials, Elementals, Fey, Fiends, or Undead. The circle affects a creature of the chosen type in the following ways:",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "- The creature can’t willingly enter the Cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "- The creature has Disadvantage on attack rolls against targets within the Cylinder.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "- Targets within the Cylinder can’t be possessed by or gain the Charmed or Frightened condition from the creature.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "Each time you cast this spell, you can cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the Cylinder and protecting targets outside it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The duration increases by 1 hour for each spell slot level above 3.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened"
+  ]
+}

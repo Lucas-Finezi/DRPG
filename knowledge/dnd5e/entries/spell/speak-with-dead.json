@@ -1,0 +1,103 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/speak-with-dead",
+  "kind": "spell",
+  "name": "Speak with Dead",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      164
+    ],
+    "section": "Spells/Spell Descriptions/Speak with Dead",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 3,
+  "text": "*Level 3 Necromancy (Bard, Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 10 feet\n\n**Components:** V, S, M (burning incense)\n\n**Duration:** 10 minutes\n\nYou grant the semblance of life to a corpse of your choice within range, allowing it to answer questions you pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days.\n\nUntil the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy. This spell doesn’t return the creature’s soul to its body, only its animating spirit. Thus, the corpse can’t learn new information, doesn’t comprehend anything that has happened since it died, and can’t speculate about future events.",
+  "facets": {
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "burning incense"
+    },
+    "duration": {
+      "text": "10 minutes",
+      "kind": "minutes",
+      "amount": 10
+    },
+    "rules": [
+      {
+        "id": "corpse",
+        "requires_mouth": true,
+        "fails_if_undead_at_death": true,
+        "cooldown_days": 10
+      },
+      {
+        "id": "questions",
+        "max": 5,
+        "no_new_information": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "answers",
+      "reason": "narrative",
+      "prompt": "What does the corpse answer?",
+      "source_text": "The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Necromancy (Bard, Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 10 feet\n\n**Components:** V, S, M (burning incense)\n\n**Duration:** 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You grant the semblance of life to a corpse of your choice within range, allowing it to answer questions you pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy. This spell doesn’t return the creature’s soul to its body, only its animating spirit. Thus, the corpse can’t learn new information, doesn’t comprehend anything that has happened since it died, and can’t speculate about future events.",
+      "status": "master_decision",
+      "by": [
+        "md:answers",
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

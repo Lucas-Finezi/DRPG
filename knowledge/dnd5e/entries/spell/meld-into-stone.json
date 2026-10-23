@@ -1,0 +1,166 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/meld-into-stone",
+  "kind": "spell",
+  "name": "Meld into Stone",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      148
+    ],
+    "section": "Spells/Spell Descriptions/Meld into Stone",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Transmutation (Cleric, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 8 hours\n\nYou step into a stone object or surface large enough to fully contain your body, merging yourself and your equipment with the stone for the duration. You must touch the stone to do so. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.\n\nWhile merged with the stone, you can’t see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with Disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use 5 feet of movement to leave the stone where you entered it, which ends the spell. You otherwise can’t move.\n\nMinor physical damage to the stone doesn’t harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 Force damage to you. The stone’s complete destruction (or transmutation into a different substance) expels you and deals 50 Force damage to you. If expelled, you move into an unoccupied space closest to where you first entered and have the Prone condition.",
+  "facets": {
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    },
+    "rules": [
+      {
+        "id": "meld",
+        "must_touch_stone": true,
+        "includes_equipment": true,
+        "undetectable_nonmagically": true
+      },
+      {
+        "id": "merged",
+        "can_cast_on_self": true,
+        "exit_movement_feet": 5,
+        "otherwise_cannot_move": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check.wis"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      },
+      "note": "Wisdom (Perception) checks to hear outside sounds; can't see outside."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "stone_partially_destroyed"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "6d6",
+          "damage_type": "force",
+          "target": {
+            "kind": "self"
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone",
+          "target": {
+            "kind": "self"
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "stone_destroyed"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": 50,
+          "damage_type": "force",
+          "target": {
+            "kind": "self"
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone",
+          "target": {
+            "kind": "self"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Transmutation (Cleric, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You step into a stone object or surface large enough to fully contain your body, merging yourself and your equipment with the stone for the duration. You must touch the stone to do so. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While merged with the stone, you can’t see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with Disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use 5 feet of movement to leave the stone where you entered it, which ends the spell. You otherwise can’t move.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Minor physical damage to the stone doesn’t harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 Force damage to you. The stone’s complete destruction (or transmutation into a different substance) expels you and deals 50 Force damage to you. If expelled, you move into an unoccupied space closest to where you first entered and have the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

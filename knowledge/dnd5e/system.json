@@ -2568,6 +2568,22 @@
           164
         ],
         "lot": "L19"
+      },
+      {
+        "id": "healing_dice",
+        "description": "How healing dice are resolved for the creature (0 = maximum possible).",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "water_walk",
+        "description": "The creature can move across liquid surfaces as solid ground.",
+        "pages": [
+          172
+        ],
+        "lot": "L20"
       }
     ],
     "rolls": [
@@ -3266,6 +3282,54 @@
           174
         ],
         "lot": "L19"
+      },
+      {
+        "id": "damaged_by_source_attack_or_spell",
+        "description": "The source deals damage to the target with an attack roll or a spell.",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "moves_on_turn",
+        "description": "The creature moves on its turn.",
+        "pages": [
+          118
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "creature_within_feet_of_effect",
+        "description": "The effect moves within range of a creature, or a creature enters or ends its turn within range of it.",
+        "pages": [
+          118
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "effect_ends",
+        "description": "The effect ends.",
+        "pages": [
+          138
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "stone_partially_destroyed",
+        "description": "The stone is partially destroyed or changes shape so the creature no longer fits.",
+        "pages": [
+          148
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "stone_destroyed",
+        "description": "The stone is destroyed or transmuted into a different substance.",
+        "pages": [
+          148
+        ],
+        "lot": "L20"
       }
     ],
     "predicates": [
@@ -4698,6 +4762,45 @@
           174
         ],
         "lot": "L19"
+      },
+      {
+        "id": "attack_targets_source",
+        "description": "The attack targets the source.",
+        "type": "predicate",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "within_feet_of_effect",
+        "description": "The creature is within N feet (param) of the effect.",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          118
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "has_line_of_sight_to_source",
+        "description": "The creature has line of sight to the source.",
+        "type": "predicate",
+        "pages": [
+          130
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "target_in_area",
+        "description": "The attack's target is within the spell's area.",
+        "type": "predicate",
+        "pages": [
+          146
+        ],
+        "lot": "L20"
       }
     ],
     "frequencies": [
@@ -5582,6 +5685,30 @@
           174
         ],
         "lot": "L19"
+      },
+      {
+        "id": "attack",
+        "description": "The creature can't attack.",
+        "pages": [
+          134
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "enter_area_nonmagically",
+        "description": "The creature can't willingly enter the area by nonmagical means.",
+        "pages": [
+          146
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "action_and_bonus_action_same_turn",
+        "description": "The creature can take either an action or a Bonus Action on its turn, not both.",
+        "pages": [
+          163
+        ],
+        "lot": "L20"
       }
     ],
     "conditions": [
