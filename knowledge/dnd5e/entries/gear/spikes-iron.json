@@ -1,0 +1,55 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/spikes-iron",
+  "kind": "gear",
+  "name": "Spikes, Iron",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      100
+    ],
+    "section": "Equipment/Adventuring Gear/Spikes, Iron",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike.",
+  "facets": {
+    "cost_cp": 100
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "gp",
+      "cp": 100
+    },
+    "weight_lb": 5,
+    "rules": [
+      {
+        "id": "spikes",
+        "bundle": 10,
+        "hammer": "dnd5e/action/utilize",
+        "uses": [
+          "jam_door",
+          "anchor_rope_or_chain"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

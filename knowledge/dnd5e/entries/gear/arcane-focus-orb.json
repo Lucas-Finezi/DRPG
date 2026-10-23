@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/arcane-focus-orb",
+  "kind": "gear",
+  "name": "Arcane Focus: Orb",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      96
+    ],
+    "section": "Equipment/Adventuring Gear/Arcane Focus/Orb",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| Orb | 3 lb. | 20 GP |",
+  "facets": {
+    "cost_cp": 2000
+  },
+  "data": {
+    "form": "Orb",
+    "weight_lb": 3,
+    "cost": {
+      "amount": 20,
+      "unit": "gp",
+      "cp": 2000
+    },
+    "parent": "dnd5e/gear/arcane-focus"
+  },
+  "coverage": [
+    {
+      "text": "| Orb | 3 lb. | 20 GP |",
+      "status": "structured",
+      "by": [
+        "/data/form",
+        "/data/weight_lb",
+        "/data/cost",
+        "/data/parent"
+      ]
+    }
+  ]
+}

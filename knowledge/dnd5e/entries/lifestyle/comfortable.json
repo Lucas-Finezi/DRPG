@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/lifestyle/comfortable",
+  "kind": "lifestyle",
+  "name": "Comfortable",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Lifestyle Expenses/Comfortable (2 GP per Day)",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "You spend modestly for your necessities and enjoy a few luxuries.",
+  "facets": {
+    "cost_cp_per_day": 200
+  },
+  "data": {
+    "cost": {
+      "amount": 2,
+      "unit": "gp",
+      "cp": 200
+    },
+    "per": "day"
+  },
+  "coverage": [
+    {
+      "text": "You spend modestly for your necessities and enjoy a few luxuries.",
+      "status": "structured",
+      "by": [
+        "/data/cost"
+      ]
+    }
+  ]
+}

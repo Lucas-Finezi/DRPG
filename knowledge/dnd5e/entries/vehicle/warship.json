@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/vehicle/warship",
+  "kind": "vehicle",
+  "name": "Warship",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Mounts and Vehicles/Large Vehicles/Warship",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| Warship | 2½ mph | 60 | 60 | 200 | 15 | 500 | 20 | 25,000 GP |",
+  "facets": {
+    "cost_cp": 2500000
+  },
+  "data": {
+    "speed_mph": 2.5,
+    "crew": 60,
+    "passengers": 60,
+    "cargo_tons": 200,
+    "ac": 15,
+    "hp": 500,
+    "damage_threshold": 20,
+    "cost": {
+      "amount": 25000,
+      "unit": "gp",
+      "cp": 2500000
+    }
+  },
+  "coverage": [
+    {
+      "text": "| Warship | 2½ mph | 60 | 60 | 200 | 15 | 500 | 20 | 25,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/speed_mph",
+        "/data/crew",
+        "/data/passengers",
+        "/data/cargo_tons",
+        "/data/ac",
+        "/data/hp",
+        "/data/damage_threshold",
+        "/data/cost",
+        "dnd5e/rule/damage-threshold"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-threshold"
+  ]
+}

@@ -139,6 +139,7 @@ def render(nodes, heading_offset=None):
                           and re.match(r"^[A-Z][a-z]*\b(?!\.)", text)
                           and (re.search(r"[,(]$", last) or re.search(r"\s([A-Z][a-z]+|\d+)$", last)
                                or (re.search(r"category:$", last) and re.match(r"^[A-Z][a-z]+, ", text))
+                               or (re.search(r"\s[a-z]+$", last) and re.match(r"^\d+ [a-z]", text))
                                or re.search(r"\s(a|an|the|of|in|by|to|and|or|either|with|for|on|at|as|your|its|have)$", last)))
             # any paragraph that stops on a function word ("... equal to your" / "Charisma modifier")
             word_wrap = ((re.search(r"\s(a|an|the|of|in|by|to|and|or|with|for|on|at|as|your|its|their)$", last)

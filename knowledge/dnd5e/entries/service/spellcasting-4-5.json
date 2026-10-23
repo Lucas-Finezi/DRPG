@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/service/spellcasting-4-5",
+  "kind": "service",
+  "name": "Spellcasting: 4–5",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      102
+    ],
+    "section": "Equipment/Spellcasting/4–5",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| 4–5 | Town or city only | 2,000 GP |",
+  "facets": {
+    "cost_cp": 200000
+  },
+  "data": {
+    "spell_level": "4–5",
+    "availability": "Town or city only",
+    "cost": {
+      "amount": 2000,
+      "unit": "gp",
+      "cp": 200000
+    }
+  },
+  "coverage": [
+    {
+      "text": "| 4–5 | Town or city only | 2,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/spell_level",
+        "/data/availability",
+        "/data/cost"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/lock",
+  "kind": "gear",
+  "name": "Lock",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98
+    ],
+    "section": "Equipment/Adventuring Gear/Lock",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Lock comes with a key. Without the key, a creature can use Thieves’ Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+  "facets": {
+    "cost_cp": 1000
+  },
+  "data": {
+    "cost": {
+      "amount": 10,
+      "unit": "gp",
+      "cp": 1000
+    },
+    "weight_lb": 1,
+    "rules": [
+      {
+        "id": "lock",
+        "key": true,
+        "pick": {
+          "tool": "dnd5e/tool/thieves-tools",
+          "ability": "dex",
+          "skill": "sleight_of_hand",
+          "dc": 15
+        }
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Lock comes with a key. Without the key, a creature can use Thieves’ Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

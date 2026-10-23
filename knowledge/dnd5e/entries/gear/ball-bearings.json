@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/ball-bearings",
+  "kind": "gear",
+  "name": "Ball Bearings",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      96
+    ],
+    "section": "Equipment/Adventuring Gear/Ball Bearings",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-foot-square area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings.",
+  "facets": {
+    "cost_cp": 100
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "gp",
+      "cp": 100
+    },
+    "weight_lb": 2,
+    "rules": [
+      {
+        "id": "recover",
+        "minutes": 10
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "enters_or_starts_turn_in_area"
+          },
+          "frequency": {
+            "count": 1,
+            "per": "turn"
+          },
+          "then": [
+            {
+              "op": "save",
+              "ability": "dex",
+              "dc": 10,
+              "target": {
+                "kind": "inherit"
+              },
+              "on_fail": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/prone"
+                }
+              ]
+            }
+          ],
+          "note": "10-foot-square area within 10 feet; a creature entering it for the first time on a turn."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-foot-square area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

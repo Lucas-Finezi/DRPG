@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/waterskin",
+  "kind": "gear",
+  "name": "Waterskin",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      100
+    ],
+    "section": "Equipment/Adventuring Gear/Waterskin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Waterskin holds up to 4 pints. If you don’t drink sufficient water, you risk dehydration (see “Rules Glossary”).",
+  "facets": {
+    "cost_cp": 20
+  },
+  "data": {
+    "cost": {
+      "amount": 2,
+      "unit": "sp",
+      "cp": 20
+    },
+    "weight_lb": {
+      "text": "5 lb. (full)"
+    }
+  },
+  "coverage": [
+    {
+      "text": "A Waterskin holds up to 4 pints. If you don’t drink sufficient water, you risk dehydration (see “Rules Glossary”).",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "dnd5e/hazard/dehydration"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/dehydration"
+  ]
+}

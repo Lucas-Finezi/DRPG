@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/priests-pack",
+  "kind": "gear",
+  "name": "Priest’s Pack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Priest’s Pack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Priest’s Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
+  "facets": {
+    "cost_cp": 3300
+  },
+  "data": {
+    "cost": {
+      "amount": 33,
+      "unit": "gp",
+      "cp": 3300
+    },
+    "weight_lb": 29,
+    "contents": [
+      "Backpack",
+      "Blanket",
+      "Holy Water",
+      "Lamp",
+      "7 days of Rations",
+      "Robe",
+      "Tinderbox"
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Priest’s Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/contents"
+      ]
+    }
+  ]
+}

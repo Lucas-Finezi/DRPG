@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/holy-symbol",
+  "kind": "gear",
+  "name": "Holy Symbol",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      97
+    ],
+    "section": "Equipment/Adventuring Gear/Holy Symbol",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.\n\nThe table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.\n\n##### Holy Symbols\n\n| **Symbol** | **Weight** | **Cost** |\n| Amulet (worn or held) | 1 lb. | 5 GP |\n| Emblem (borne on fabric or a Shield) | — | 5 GP |\n| Reliquary (held) | 2 lb. | 5 GP |",
+  "data": {
+    "cost": {
+      "text": "Varies"
+    },
+    "weight_lb": {
+      "text": "Varies"
+    },
+    "forms": [
+      {
+        "form": "Amulet (worn or held)",
+        "weight_lb": 1,
+        "cost": {
+          "amount": 5,
+          "unit": "gp",
+          "cp": 500
+        }
+      },
+      {
+        "form": "Emblem (borne on fabric or a Shield)",
+        "weight_lb": null,
+        "cost": {
+          "amount": 5,
+          "unit": "gp",
+          "cp": 500
+        }
+      },
+      {
+        "form": "Reliquary (held)",
+        "weight_lb": 2,
+        "cost": {
+          "amount": 5,
+          "unit": "gp",
+          "cp": 500
+        }
+      }
+    ],
+    "rules": [
+      {
+        "id": "spellcasting_focus",
+        "classes": [
+          "dnd5e/class/cleric",
+          "dnd5e/class/paladin"
+        ],
+        "rule": "dnd5e/rule/spellcasting-focus"
+      },
+      {
+        "id": "carry",
+        "held_worn_or_borne": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "holy_symbols",
+        "caption": "Holy Symbols",
+        "columns": [
+          "Symbol",
+          "Weight",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "Amulet (worn or held)",
+            "1 lb.",
+            "5 GP"
+          ],
+          [
+            "Emblem (borne on fabric or a Shield)",
+            "—",
+            "5 GP"
+          ],
+          [
+            "Reliquary (held)",
+            "2 lb.",
+            "5 GP"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "##### Holy Symbols\n\n| **Symbol** | **Weight** | **Cost** |\n| Amulet (worn or held) | 1 lb. | 5 GP |\n| Emblem (borne on fabric or a Shield) | — | 5 GP |\n| Reliquary (held) | 2 lb. | 5 GP |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/cleric",
+    "dnd5e/class/paladin",
+    "dnd5e/rule/spellcasting-focus"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/tool/gaming-set",
+  "kind": "tool",
+  "name": "Gaming Set",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      94
+    ],
+    "section": "Equipment/Tools/Other Tools/Gaming Set",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| **Ability:** Wisdom | **Weight:** — |\n\n**Utilize:** Discern whether someone is cheating (DC 10), or win the game (DC 20)\n\n**Variants:** Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)",
+  "facets": {
+    "category": "other-tools",
+    "ability": "wis",
+    "cost_cp": 0
+  },
+  "data": {
+    "ability": "wis",
+    "weight_lb": null,
+    "utilize": [
+      {
+        "task": "Discern whether someone is cheating",
+        "dc": 10
+      },
+      {
+        "task": "win the game",
+        "dc": 20
+      }
+    ],
+    "variants": [
+      "Dice (1 SP)",
+      "dragonchess (1 GP)",
+      "playing cards (5 SP)",
+      "three-dragon ante (1 GP)"
+    ],
+    "cost": {
+      "text": "Varies"
+    },
+    "category": "Other Tools"
+  },
+  "coverage": [
+    {
+      "text": "| **Ability:** Wisdom | **Weight:** — |",
+      "status": "structured",
+      "by": [
+        "/data/ability",
+        "/data/weight_lb",
+        "/data/cost"
+      ]
+    },
+    {
+      "text": "**Utilize:** Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+      "status": "structured",
+      "by": [
+        "/data/utilize",
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "**Variants:** Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)",
+      "status": "structured",
+      "by": [
+        "/data/variants"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize"
+  ]
+}

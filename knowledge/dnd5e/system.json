@@ -3511,6 +3511,22 @@
           155
         ],
         "lot": "L26"
+      },
+      {
+        "id": "steps_on_trap",
+        "description": "A creature steps on the trap's pressure plate.",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "takes_fire_damage",
+        "description": "The creature takes Fire damage.",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
       }
     ],
     "predicates": [
@@ -5139,6 +5155,120 @@
           92
         ],
         "lot": "L29"
+      },
+      {
+        "id": "save_against_hazard",
+        "description": "The saving throw is against this hazard (param).",
+        "params": [
+          "hazard"
+        ],
+        "type": "predicate",
+        "pages": [
+          96
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "consulting_accurate_source",
+        "description": "The creature consults an accurate source about the topic or place.",
+        "type": "predicate",
+        "pages": [
+          96
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "impersonating_costume_subject",
+        "description": "The check is made to impersonate the person or type the Costume represents.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "leverage_applies",
+        "description": "The Crowbar's leverage can be applied to the Strength check.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "appraising_detailed_item",
+        "description": "The check is made to appraise or inspect a highly detailed item.",
+        "type": "predicate",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "influencing_indifferent_humanoid_within_feet",
+        "description": "The check influences an Indifferent Humanoid within N feet (param).",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_for_jump",
+        "description": "The check is part of a High or Long Jump.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "breaking_down_door",
+        "description": "The check is made to break down a door.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "helped_by_other_character",
+        "description": "Another character helps with the ram.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_uses_proficient_tool",
+        "description": "The ability check uses a tool the creature is proficient with.",
+        "type": "predicate",
+        "pages": [
+          93
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_uses_proficient_skill",
+        "description": "The ability check also uses a skill the creature is proficient in.",
+        "type": "predicate",
+        "pages": [
+          93
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_to_remain_mounted",
+        "description": "The ability check is made to remain mounted.",
+        "type": "predicate",
+        "pages": [
+          100
+        ],
+        "lot": "L30"
       }
     ],
     "frequencies": [

@@ -1,0 +1,472 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/adventuring-gear",
+  "kind": "rule",
+  "name": "Adventuring Gear",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      94,
+      95
+    ],
+    "section": "Equipment/Adventuring Gear",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "The Adventuring Gear table in this section includes gear that adventurers often find useful. These items are described here in alphabetical order, with an item’s price appearing after its name.\n\n##### Adventuring Gear\n\n| **Item** | **Weight** | **Cost** |\n| Acid | 1 lb. | 25 GP |\n| Alchemist’s Fire | 1 lb. | 50 GP |\n| Ammunition | Varies | Varies |\n| Antitoxin | — | 50 GP |\n| Arcane Focus | Varies | Varies |\n| Backpack | 5 lb. | 2 GP |\n| Ball Bearings | 2 lb. | 1 GP |\n| Barrel | 70 lb. | 2 GP |\n| Basket | 2 lb. | 4 SP |\n| Bedroll | 7 lb. | 1 GP |\n| Bell | — | 1 GP |\n| Blanket | 3 lb. | 5 SP |\n| Block and Tackle | 5 lb. | 1 GP |\n| Book | 5 lb. | 25 GP |\n| Bottle, Glass | 2 lb. | 2 GP |\n| Bucket | 2 lb. | 5 CP |\n| Burglar’s Pack | 42 lb. | 16 GP |\n| Caltrops | 2 lb. | 1 GP |\n| Candle | — | 1 CP |\n| Case, Crossbow Bolt | 1 lb. | 1 GP |\n| Case, Map or Scroll | 1 lb. | 1 GP |\n| Chain | 10 lb. | 5 GP |\n| Chest | 25 lb. | 5 GP |\n| Climber’s Kit | 12 lb. | 25 GP |\n| Clothes, Fine | 6 lb. | 15 GP |\n| Clothes, Traveler’s | 4 lb. | 2 GP |\n| Component Pouch | 2 lb. | 25 GP |\n| Costume | 4 lb. | 5 GP |\n| Crowbar | 5 lb. | 2 GP |\n| Diplomat’s Pack | 39 lb. | 39 GP |\n| Druidic Focus | Varies | Varies |\n| Dungeoneer’s Pack | 55 lb. | 12 GP |\n| Entertainer’s Pack | 58½ lb. | 40 GP |\n| Explorer’s Pack | 55 lb. | 10 GP |\n| Flask | 1 lb. | 2 CP |\n| Grappling Hook | 4 lb. | 2 GP |\n| Healer’s Kit | 3 lb. | 5 GP |\n| Holy Symbol | Varies | Varies |\n| Holy Water | 1 lb. | 25 GP |\n| Hunting Trap | 25 lb. | 5 GP |\n| Ink | — | 10 GP |\n| **Item** | **Weight** | **Cost** |\n| Ink Pen | — | 2 CP |\n| Jug | 4 lb. | 2 CP |\n| Ladder | 25 lb. | 1 SP |\n| Lamp | 1 lb. | 5 SP |\n| Lantern, Bullseye | 2 lb. | 10 GP |\n| Lantern, Hooded | 2 lb. | 5 GP |\n| Lock | 1 lb. | 10 GP |\n| Magnifying Glass | — | 100 GP |\n| Manacles | 6 lb. | 2 GP |\n| Map | — | 1 GP |\n| Mirror | 1/2 lb. | 5 GP |\n| Net | 3 lb. | 1 GP |\n| Oil | 1 lb. | 1 SP |\n| Paper | — | 2 SP |\n| Parchment | — | 1 SP |\n| Perfume | — | 5 GP |\n| Poison, Basic | — | 100 GP |\n| Pole | 7 lb. | 5 CP |\n| Pot, Iron | 10 lb. | 2 GP |\n| *Potion of Healing* | 1/2 lb. | 50 GP |\n| Pouch | 1 lb. | 5 SP |\n| Priest’s Pack | 29 lb. | 33 GP |\n| Quiver | 1 lb. | 1 GP |\n| Ram, Portable | 35 lb. | 4 GP |\n| Rations | 2 lb. | 5 SP |\n| Robe | 4 lb. | 1 GP |\n| Rope | 5 lb. | 1 GP |\n| Sack | 1/2 lb. | 1 CP |\n| Scholar’s Pack | 22 lb. | 40 GP |\n| Shovel | 5 lb. | 2 GP |\n| Signal Whistle | — | 5 CP |\n| *Spell Scroll* (Cantrip) | — | 30 GP |\n| *Spell Scroll* (Level 1) | — | 50 GP |\n| Spikes, Iron | 5 lb. | 1 GP |\n| Spyglass | 1 lb. | 1,000 GP |\n| String | — | 1 SP |\n| Tent | 20 lb. | 2 GP |\n| Tinderbox | 1 lb. | 5 SP |\n| Torch | 1 lb. | 1 CP |\n| Vial | — | 1 GP |\n| Waterskin | 5 lb. (full) | 2 SP |",
+  "data": {
+    "rules": [
+      {
+        "id": "order",
+        "alphabetical": true,
+        "price_after_name": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "adventuring_gear",
+        "caption": "Adventuring Gear",
+        "columns": [
+          "Item",
+          "Weight",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "Acid",
+            "1 lb.",
+            "25 GP"
+          ],
+          [
+            "Alchemist’s Fire",
+            "1 lb.",
+            "50 GP"
+          ],
+          [
+            "Ammunition",
+            "Varies",
+            "Varies"
+          ],
+          [
+            "Antitoxin",
+            "—",
+            "50 GP"
+          ],
+          [
+            "Arcane Focus",
+            "Varies",
+            "Varies"
+          ],
+          [
+            "Backpack",
+            "5 lb.",
+            "2 GP"
+          ],
+          [
+            "Ball Bearings",
+            "2 lb.",
+            "1 GP"
+          ],
+          [
+            "Barrel",
+            "70 lb.",
+            "2 GP"
+          ],
+          [
+            "Basket",
+            "2 lb.",
+            "4 SP"
+          ],
+          [
+            "Bedroll",
+            "7 lb.",
+            "1 GP"
+          ],
+          [
+            "Bell",
+            "—",
+            "1 GP"
+          ],
+          [
+            "Blanket",
+            "3 lb.",
+            "5 SP"
+          ],
+          [
+            "Block and Tackle",
+            "5 lb.",
+            "1 GP"
+          ],
+          [
+            "Book",
+            "5 lb.",
+            "25 GP"
+          ],
+          [
+            "Bottle, Glass",
+            "2 lb.",
+            "2 GP"
+          ],
+          [
+            "Bucket",
+            "2 lb.",
+            "5 CP"
+          ],
+          [
+            "Burglar’s Pack",
+            "42 lb.",
+            "16 GP"
+          ],
+          [
+            "Caltrops",
+            "2 lb.",
+            "1 GP"
+          ],
+          [
+            "Candle",
+            "—",
+            "1 CP"
+          ],
+          [
+            "Case, Crossbow Bolt",
+            "1 lb.",
+            "1 GP"
+          ],
+          [
+            "Case, Map or Scroll",
+            "1 lb.",
+            "1 GP"
+          ],
+          [
+            "Chain",
+            "10 lb.",
+            "5 GP"
+          ],
+          [
+            "Chest",
+            "25 lb.",
+            "5 GP"
+          ],
+          [
+            "Climber’s Kit",
+            "12 lb.",
+            "25 GP"
+          ],
+          [
+            "Clothes, Fine",
+            "6 lb.",
+            "15 GP"
+          ],
+          [
+            "Clothes, Traveler’s",
+            "4 lb.",
+            "2 GP"
+          ],
+          [
+            "Component Pouch",
+            "2 lb.",
+            "25 GP"
+          ],
+          [
+            "Costume",
+            "4 lb.",
+            "5 GP"
+          ],
+          [
+            "Crowbar",
+            "5 lb.",
+            "2 GP"
+          ],
+          [
+            "Diplomat’s Pack",
+            "39 lb.",
+            "39 GP"
+          ],
+          [
+            "Druidic Focus",
+            "Varies",
+            "Varies"
+          ],
+          [
+            "Dungeoneer’s Pack",
+            "55 lb.",
+            "12 GP"
+          ],
+          [
+            "Entertainer’s Pack",
+            "58½ lb.",
+            "40 GP"
+          ],
+          [
+            "Explorer’s Pack",
+            "55 lb.",
+            "10 GP"
+          ],
+          [
+            "Flask",
+            "1 lb.",
+            "2 CP"
+          ],
+          [
+            "Grappling Hook",
+            "4 lb.",
+            "2 GP"
+          ],
+          [
+            "Healer’s Kit",
+            "3 lb.",
+            "5 GP"
+          ],
+          [
+            "Holy Symbol",
+            "Varies",
+            "Varies"
+          ],
+          [
+            "Holy Water",
+            "1 lb.",
+            "25 GP"
+          ],
+          [
+            "Hunting Trap",
+            "25 lb.",
+            "5 GP"
+          ],
+          [
+            "Ink",
+            "—",
+            "10 GP"
+          ],
+          [
+            "Ink Pen",
+            "—",
+            "2 CP"
+          ],
+          [
+            "Jug",
+            "4 lb.",
+            "2 CP"
+          ],
+          [
+            "Ladder",
+            "25 lb.",
+            "1 SP"
+          ],
+          [
+            "Lamp",
+            "1 lb.",
+            "5 SP"
+          ],
+          [
+            "Lantern, Bullseye",
+            "2 lb.",
+            "10 GP"
+          ],
+          [
+            "Lantern, Hooded",
+            "2 lb.",
+            "5 GP"
+          ],
+          [
+            "Lock",
+            "1 lb.",
+            "10 GP"
+          ],
+          [
+            "Magnifying Glass",
+            "—",
+            "100 GP"
+          ],
+          [
+            "Manacles",
+            "6 lb.",
+            "2 GP"
+          ],
+          [
+            "Map",
+            "—",
+            "1 GP"
+          ],
+          [
+            "Mirror",
+            "1/2 lb.",
+            "5 GP"
+          ],
+          [
+            "Net",
+            "3 lb.",
+            "1 GP"
+          ],
+          [
+            "Oil",
+            "1 lb.",
+            "1 SP"
+          ],
+          [
+            "Paper",
+            "—",
+            "2 SP"
+          ],
+          [
+            "Parchment",
+            "—",
+            "1 SP"
+          ],
+          [
+            "Perfume",
+            "—",
+            "5 GP"
+          ],
+          [
+            "Poison, Basic",
+            "—",
+            "100 GP"
+          ],
+          [
+            "Pole",
+            "7 lb.",
+            "5 CP"
+          ],
+          [
+            "Pot, Iron",
+            "10 lb.",
+            "2 GP"
+          ],
+          [
+            "Potion of Healing",
+            "1/2 lb.",
+            "50 GP"
+          ],
+          [
+            "Pouch",
+            "1 lb.",
+            "5 SP"
+          ],
+          [
+            "Priest’s Pack",
+            "29 lb.",
+            "33 GP"
+          ],
+          [
+            "Quiver",
+            "1 lb.",
+            "1 GP"
+          ],
+          [
+            "Ram, Portable",
+            "35 lb.",
+            "4 GP"
+          ],
+          [
+            "Rations",
+            "2 lb.",
+            "5 SP"
+          ],
+          [
+            "Robe",
+            "4 lb.",
+            "1 GP"
+          ],
+          [
+            "Rope",
+            "5 lb.",
+            "1 GP"
+          ],
+          [
+            "Sack",
+            "1/2 lb.",
+            "1 CP"
+          ],
+          [
+            "Scholar’s Pack",
+            "22 lb.",
+            "40 GP"
+          ],
+          [
+            "Shovel",
+            "5 lb.",
+            "2 GP"
+          ],
+          [
+            "Signal Whistle",
+            "—",
+            "5 CP"
+          ],
+          [
+            "Spell Scroll (Cantrip)",
+            "—",
+            "30 GP"
+          ],
+          [
+            "Spell Scroll (Level 1)",
+            "—",
+            "50 GP"
+          ],
+          [
+            "Spikes, Iron",
+            "5 lb.",
+            "1 GP"
+          ],
+          [
+            "Spyglass",
+            "1 lb.",
+            "1,000 GP"
+          ],
+          [
+            "String",
+            "—",
+            "1 SP"
+          ],
+          [
+            "Tent",
+            "20 lb.",
+            "2 GP"
+          ],
+          [
+            "Tinderbox",
+            "1 lb.",
+            "5 SP"
+          ],
+          [
+            "Torch",
+            "1 lb.",
+            "1 CP"
+          ],
+          [
+            "Vial",
+            "—",
+            "1 GP"
+          ],
+          [
+            "Waterskin",
+            "5 lb. (full)",
+            "2 SP"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Adventuring Gear table in this section includes gear that adventurers often find useful. These items are described here in alphabetical order, with an item’s price appearing after its name.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Adventuring Gear\n\n| **Item** | **Weight** | **Cost** |\n| Acid | 1 lb. | 25 GP |\n| Alchemist’s Fire | 1 lb. | 50 GP |\n| Ammunition | Varies | Varies |\n| Antitoxin | — | 50 GP |\n| Arcane Focus | Varies | Varies |\n| Backpack | 5 lb. | 2 GP |\n| Ball Bearings | 2 lb. | 1 GP |\n| Barrel | 70 lb. | 2 GP |\n| Basket | 2 lb. | 4 SP |\n| Bedroll | 7 lb. | 1 GP |\n| Bell | — | 1 GP |\n| Blanket | 3 lb. | 5 SP |\n| Block and Tackle | 5 lb. | 1 GP |\n| Book | 5 lb. | 25 GP |\n| Bottle, Glass | 2 lb. | 2 GP |\n| Bucket | 2 lb. | 5 CP |\n| Burglar’s Pack | 42 lb. | 16 GP |\n| Caltrops | 2 lb. | 1 GP |\n| Candle | — | 1 CP |\n| Case, Crossbow Bolt | 1 lb. | 1 GP |\n| Case, Map or Scroll | 1 lb. | 1 GP |\n| Chain | 10 lb. | 5 GP |\n| Chest | 25 lb. | 5 GP |\n| Climber’s Kit | 12 lb. | 25 GP |\n| Clothes, Fine | 6 lb. | 15 GP |\n| Clothes, Traveler’s | 4 lb. | 2 GP |\n| Component Pouch | 2 lb. | 25 GP |\n| Costume | 4 lb. | 5 GP |\n| Crowbar | 5 lb. | 2 GP |\n| Diplomat’s Pack | 39 lb. | 39 GP |\n| Druidic Focus | Varies | Varies |\n| Dungeoneer’s Pack | 55 lb. | 12 GP |\n| Entertainer’s Pack | 58½ lb. | 40 GP |\n| Explorer’s Pack | 55 lb. | 10 GP |\n| Flask | 1 lb. | 2 CP |\n| Grappling Hook | 4 lb. | 2 GP |\n| Healer’s Kit | 3 lb. | 5 GP |\n| Holy Symbol | Varies | Varies |\n| Holy Water | 1 lb. | 25 GP |\n| Hunting Trap | 25 lb. | 5 GP |\n| Ink | — | 10 GP |\n| **Item** | **Weight** | **Cost** |\n| Ink Pen | — | 2 CP |\n| Jug | 4 lb. | 2 CP |\n| Ladder | 25 lb. | 1 SP |\n| Lamp | 1 lb. | 5 SP |\n| Lantern, Bullseye | 2 lb. | 10 GP |\n| Lantern, Hooded | 2 lb. | 5 GP |\n| Lock | 1 lb. | 10 GP |\n| Magnifying Glass | — | 100 GP |\n| Manacles | 6 lb. | 2 GP |\n| Map | — | 1 GP |\n| Mirror | 1/2 lb. | 5 GP |\n| Net | 3 lb. | 1 GP |\n| Oil | 1 lb. | 1 SP |\n| Paper | — | 2 SP |\n| Parchment | — | 1 SP |\n| Perfume | — | 5 GP |\n| Poison, Basic | — | 100 GP |\n| Pole | 7 lb. | 5 CP |\n| Pot, Iron | 10 lb. | 2 GP |\n| *Potion of Healing* | 1/2 lb. | 50 GP |\n| Pouch | 1 lb. | 5 SP |\n| Priest’s Pack | 29 lb. | 33 GP |\n| Quiver | 1 lb. | 1 GP |\n| Ram, Portable | 35 lb. | 4 GP |\n| Rations | 2 lb. | 5 SP |\n| Robe | 4 lb. | 1 GP |\n| Rope | 5 lb. | 1 GP |\n| Sack | 1/2 lb. | 1 CP |\n| Scholar’s Pack | 22 lb. | 40 GP |\n| Shovel | 5 lb. | 2 GP |\n| Signal Whistle | — | 5 CP |\n| *Spell Scroll* (Cantrip) | — | 30 GP |\n| *Spell Scroll* (Level 1) | — | 50 GP |\n| Spikes, Iron | 5 lb. | 1 GP |\n| Spyglass | 1 lb. | 1,000 GP |\n| String | — | 1 SP |\n| Tent | 20 lb. | 2 GP |\n| Tinderbox | 1 lb. | 5 SP |\n| Torch | 1 lb. | 1 CP |\n| Vial | — | 1 GP |\n| Waterskin | 5 lb. (full) | 2 SP |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

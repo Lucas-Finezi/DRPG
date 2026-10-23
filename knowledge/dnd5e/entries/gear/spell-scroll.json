@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/spell-scroll",
+  "kind": "gear",
+  "name": "Spell Scroll",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Spell Scroll",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.\n\nIf the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.",
+  "data": {
+    "cost": {
+      "by_spell_level": [
+        {
+          "level": 0,
+          "amount": 30,
+          "unit": "gp",
+          "cp": 3000
+        },
+        {
+          "level": 1,
+          "amount": 50,
+          "unit": "gp",
+          "cp": 5000
+        }
+      ]
+    },
+    "weight_lb": null,
+    "rules": [
+      {
+        "id": "scroll",
+        "levels": [
+          0,
+          1
+        ],
+        "cast_if_on_class_list": true,
+        "normal_casting_time": true,
+        "material_components": false
+      },
+      {
+        "id": "numbers",
+        "save_dc": 13,
+        "attack_bonus": 5,
+        "disintegrates_after_casting": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A *Spell Scroll* (Cantrip) or *Spell Scroll* (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0",
+        "dnd5e/magic-item/spell-scroll"
+      ]
+    },
+    {
+      "text": "If the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/spell-scroll"
+  ]
+}

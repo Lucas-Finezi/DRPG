@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/tools",
+  "kind": "rule",
+  "name": "Tools",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      93
+    ],
+    "section": "Equipment/Tools",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A tool helps you make specialized ability checks, craft certain items, or both. A tool’s description includes the tool’s cost and weight, as well as the following entries:\n\n**Ability.** This entry lists the ability to use when making an ability check with the tool.\n\n**Utilize.** This entry lists things you can do with the tool when you take the Utilize action. You can do one of those things each time you take the action. This entry also provides the DC for the action.\n\n**Craft.** This entry lists what, if anything, you can craft with the tool. For crafting rules, see “Crafting Nonmagical Items,” “Brewing Potions of Healing,” and “Scribing Spell Scrolls” later in “Equipment.”\n\n**Variants.** This entry appears if the tool has variants, which are listed. Each requires a separate proficiency.",
+  "data": {
+    "rules": [
+      {
+        "id": "tools",
+        "entries": [
+          "ability",
+          "utilize",
+          "craft",
+          "variants"
+        ]
+      },
+      {
+        "id": "variants",
+        "separate_proficiency_each": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A tool helps you make specialized ability checks, craft certain items, or both. A tool’s description includes the tool’s cost and weight, as well as the following entries:\n\n**Ability.** This entry lists the ability to use when making an ability check with the tool.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Utilize.** This entry lists things you can do with the tool when you take the Utilize action. You can do one of those things each time you take the action. This entry also provides the DC for the action.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "**Craft.** This entry lists what, if anything, you can craft with the tool. For crafting rules, see “Crafting Nonmagical Items,” “Brewing Potions of Healing,” and “Scribing Spell Scrolls” later in “Equipment.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/crafting-nonmagical-items",
+        "dnd5e/rule/brewing-potions-of-healing",
+        "dnd5e/rule/scribing-spell-scrolls"
+      ]
+    },
+    {
+      "text": "**Variants.** This entry appears if the tool has variants, which are listed. Each requires a separate proficiency.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize",
+    "dnd5e/rule/brewing-potions-of-healing",
+    "dnd5e/rule/crafting-nonmagical-items",
+    "dnd5e/rule/scribing-spell-scrolls"
+  ]
+}

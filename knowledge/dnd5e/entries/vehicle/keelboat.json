@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/vehicle/keelboat",
+  "kind": "vehicle",
+  "name": "Keelboat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Mounts and Vehicles/Large Vehicles/Keelboat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| Keelboat | 1 mph | 1 | 6 | 1/2 | 15 | 100 | 10 | 3,000 GP |",
+  "facets": {
+    "cost_cp": 300000
+  },
+  "data": {
+    "speed_mph": 1,
+    "crew": 1,
+    "passengers": 6,
+    "cargo_tons": 0.5,
+    "ac": 15,
+    "hp": 100,
+    "damage_threshold": 10,
+    "cost": {
+      "amount": 3000,
+      "unit": "gp",
+      "cp": 300000
+    }
+  },
+  "coverage": [
+    {
+      "text": "| Keelboat | 1 mph | 1 | 6 | 1/2 | 15 | 100 | 10 | 3,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/speed_mph",
+        "/data/crew",
+        "/data/passengers",
+        "/data/cargo_tons",
+        "/data/ac",
+        "/data/hp",
+        "/data/damage_threshold",
+        "/data/cost",
+        "dnd5e/rule/damage-threshold"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-threshold"
+  ]
+}

@@ -66,8 +66,10 @@ def main(lots):
         own = [n for n in nodes if owner[n.index] == lot]
         missing = []
         for n in own:
-            # headings: a "[Tag]" suffix and a "Level N: " prefix (kept in the entry's facets) are not text
-            t = norm(n.text if n.type != "h" else re.sub(r"^Level \d+: | \[[^\]]+\]$", "", n.text))
+            # headings: a "[Tag]" suffix, a "Level N: " prefix (kept in the entry's facets) and a
+            # " (25 GP)" price suffix (kept in the entry's data.cost) are not text
+            t = norm(n.text if n.type != "h" else
+                     re.sub(r"^Level \d+: | \[[^\]]+\]$| \((?:[^()]*[\d,]+ [GSCEP]P|Varies|Free)(?: per Day)?\)$", "", n.text))
             if not t or (n.type == "h" and n.level <= 2):
                 continue
             nxt = nodes[n.index + 1] if n.index + 1 < len(nodes) else None

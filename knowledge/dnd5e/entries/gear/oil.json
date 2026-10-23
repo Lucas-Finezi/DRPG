@@ -1,0 +1,178 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/oil",
+  "kind": "gear",
+  "name": "Oil",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98,
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Oil",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.\n\n***Dousing a Creature or an Object.*** When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.\n\n***Dousing a Space.*** You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.\n\n***Fuel.*** Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn’t need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours.",
+  "facets": {
+    "cost_cp": 10
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "sp",
+      "cp": 10
+    },
+    "weight_lb": 1,
+    "rules": [
+      {
+        "id": "uses",
+        "options": [
+          "douse_creature_or_object",
+          "douse_space",
+          "fuel"
+        ]
+      },
+      {
+        "id": "fuel",
+        "hours_per_flask": 6,
+        "for": [
+          "dnd5e/gear/lamp",
+          "dnd5e/gear/lantern-bullseye",
+          "dnd5e/gear/lantern-hooded"
+        ],
+        "extinguish": "dnd5e/action/utilize"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "takes_attack_action"
+      },
+      "optional": true,
+      "note": "Replace one attack with throwing the Oil flask; target within 20 feet you can see.",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature_or_object",
+            "range": {
+              "kind": "distance",
+              "feet": 20
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "takes_fire_damage"
+              },
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              },
+              "then": [
+                {
+                  "op": "damage",
+                  "amount": 5,
+                  "damage_type": "fire"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "enters_or_ends_turn_in_area"
+          },
+          "frequency": {
+            "count": 1,
+            "per": "turn"
+          },
+          "duration": {
+            "kind": "rounds",
+            "amount": 2
+          },
+          "then": [
+            {
+              "op": "damage",
+              "amount": 5,
+              "damage_type": "fire",
+              "target": {
+                "kind": "inherit"
+              }
+            }
+          ],
+          "note": "5-foot square within 5 feet, once lit."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Dousing a Creature or an Object.*** When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Dousing a Space.*** You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Fuel.*** Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn’t need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/gear/lamp",
+    "dnd5e/gear/lantern-bullseye",
+    "dnd5e/gear/lantern-hooded"
+  ]
+}

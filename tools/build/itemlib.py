@@ -52,7 +52,7 @@ def table_rows(caption, page=None, level=5):
         if n.type == "t":
             if n.text.startswith("| **"):
                 continue
-            out.append((group, n))
+            out.append((group if n.indented else None, n))
         elif n.type == "p" and re.match(r"^\*[^*].*\*$", n.text):
             group = n.text.strip("*")
         else:

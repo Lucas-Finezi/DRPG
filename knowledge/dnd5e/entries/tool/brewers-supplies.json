@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/tool/brewers-supplies",
+  "kind": "tool",
+  "name": "Brewer’s Supplies",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      93
+    ],
+    "section": "Equipment/Tools/Artisan’s Tools/Brewer’s Supplies",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| **Ability:** Intelligence | **Weight:** 9 lb. |\n\n**Utilize:** Detect poisoned drink (DC 15), or identify alcohol (DC 10)\n\n**Craft:** Antitoxin",
+  "facets": {
+    "category": "artisans-tools",
+    "ability": "int",
+    "cost_cp": 2000
+  },
+  "data": {
+    "ability": "int",
+    "weight_lb": 9,
+    "utilize": [
+      {
+        "task": "Detect poisoned drink",
+        "dc": 15
+      },
+      {
+        "task": "identify alcohol",
+        "dc": 10
+      }
+    ],
+    "craft": [
+      "Antitoxin"
+    ],
+    "cost": {
+      "amount": 20,
+      "unit": "gp",
+      "cp": 2000
+    },
+    "category": "Artisan’s Tools"
+  },
+  "coverage": [
+    {
+      "text": "| **Ability:** Intelligence | **Weight:** 9 lb. |",
+      "status": "structured",
+      "by": [
+        "/data/ability",
+        "/data/weight_lb",
+        "/data/cost"
+      ]
+    },
+    {
+      "text": "**Utilize:** Detect poisoned drink (DC 15), or identify alcohol (DC 10)",
+      "status": "structured",
+      "by": [
+        "/data/utilize",
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "**Craft:** Antitoxin",
+      "status": "structured",
+      "by": [
+        "/data/craft"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize"
+  ]
+}
