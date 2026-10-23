@@ -1,0 +1,415 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/vampire-spawn",
+  "kind": "creature",
+  "name": "Vampire Spawn",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      334,
+      335
+    ],
+    "section": "Monsters A–Z/Vampires/Vampire Spawn",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Undead, Neutral Evil*\n\n| **AC** 16 | **Initiative** +3 (13) |\n\n**HP** 90 (12d8 + 36)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 16 | +3 | +6 | **Con** 16 | +3 | +3 |\n| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +3 | **Cha** 12 | +1 | +1 |\n\n**Skills** Perception +3, Stealth +6\n\n**Resistances** Necrotic\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** Common plus one other language\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Spider Climb.*** The vampire can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n***Vampire Weakness.*** The vampire has these weaknesses:\n\n**Forbiddance.** The vampire can’t enter a residence without an invitation from an occupant.\n\n**Running Water.** The vampire takes 20 Acid damage if it ends its turn in running water.\n\n**Stake to the Heart.** The vampire is destroyed if a weapon that deals Piercing damage is driven into the vampire’s heart while the vampire has the Incapacitated condition.\n\n**Sunlight.** The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.\n\n##### Actions\n\n***Multiattack.*** The vampire makes two Claw attacks and uses Bite.\n\n***Claw.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 8 (2d4 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two claws.\n\n***Bite.*** *Constitution Saving Throw:* DC 14, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. *Failure:* 5 (1d4 + 3) Piercing damage plus 10 (3d6) Necrotic damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount.\n\n##### Bonus Actions\n\n***Deathless Agility.*** The vampire takes the Dash or Disengage action.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium or Small Undead, Neutral Evil",
+    "ac": {
+      "value": 16,
+      "text": "16"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 90,
+      "formula": {
+        "op": "add",
+        "args": [
+          "12d8",
+          36
+        ]
+      },
+      "text": "90 (12d8 + 36)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 6
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 3
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "stealth": 6,
+      "text": "Perception +3, Stealth +6"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic"
+      ],
+      "text": "Necrotic"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "text": "The vampire can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Vampire Weakness",
+        "text": "The vampire has these weaknesses:\n\n**Forbiddance.** The vampire can’t enter a residence without an invitation from an occupant.\n\n**Running Water.** The vampire takes 20 Acid damage if it ends its turn in running water.\n\n**Stake to the Heart.** The vampire is destroyed if a weapon that deals Piercing damage is driven into the vampire’s heart while the vampire has the Incapacitated condition.\n\n**Sunlight.** The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The vampire makes two Claw attacks and uses Bite."
+      },
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 8 (2d4 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two claws."
+      },
+      {
+        "name": "Bite",
+        "text": "*Constitution Saving Throw:* DC 14, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. *Failure:* 5 (1d4 + 3) Piercing damage plus 10 (3d6) Necrotic damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Deathless Agility",
+        "text": "The vampire takes the Dash or Disengage action."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Claw",
+            "count": 2
+          }
+        ],
+        "text": "The vampire makes two Claw attacks and uses Bite."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 13
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 14,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_vampire_weakness",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Vampire Weakness as written.",
+      "source_text": "The vampire has these weaknesses: Forbiddance. The vampire can’t enter a residence without an invitation from an occupant. Running Water. The vampire takes 20 Acid damage if it ends its turn in running water. Stake to the Heart. The vampire is destroyed if a weapon that deals Piercing damage is driven into the vampire’s heart while the vampire has the Incapacitated condition. Sunlight. The vampire"
+    },
+    {
+      "id": "actions_bite_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bite as written.",
+      "source_text": "5 (1d4 + 3) Piercing damage plus 10 (3d6) Necrotic damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount."
+    },
+    {
+      "id": "bonus_actions_deathless_agility",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Deathless Agility as written.",
+      "source_text": "The vampire takes the Dash or Disengage action."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Undead, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 16 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 90 (12d8 + 36)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 16 | +3 | +6 | **Con** 16 | +3 | +3 |\n| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +3 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3, Stealth +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** The vampire can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Vampire Weakness.*** The vampire has these weaknesses:\n\n**Forbiddance.** The vampire can’t enter a residence without an invitation from an occupant.\n\n**Running Water.** The vampire takes 20 Acid damage if it ends its turn in running water.\n\n**Stake to the Heart.** The vampire is destroyed if a weapon that deals Piercing damage is driven into the vampire’s heart while the vampire has the Incapacitated condition.\n\n**Sunlight.** The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_vampire_weakness"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The vampire makes two Claw attacks and uses Bite.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 8 (2d4 + 3) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two claws.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Constitution Saving Throw:* DC 14, one creature within 5 feet that is willing or that has the Grappled, Incapacitated, or Restrained condition. *Failure:* 5 (1d4 + 3) Piercing damage plus 10 (3d6) Necrotic damage. The target’s Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains Hit Points equal to that amount.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_bite_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Deathless Agility.*** The vampire takes the Dash or Disengage action.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_deathless_agility"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled"
+  ]
+}

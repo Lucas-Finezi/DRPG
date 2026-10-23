@@ -1,0 +1,408 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/will-o-wisp",
+  "kind": "creature",
+  "name": "Will-o’-Wisp",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      341,
+      342
+    ],
+    "section": "Monsters A–Z/Will-o’-Wisp/Will-o’-Wisp",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Tiny Undead, Chaotic Evil*\n\n| **AC** 19 | **Initiative** +9 (19) |\n\n**HP** 27 (11d4)\n\n**Speed** 5 ft., Fly 50 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 1 | −5 | −5 | **Dex** 28 | +9 | +9 | **Con** 10 | +0 | +0 |\n| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 11 | +0 | +0 |\n\n**Resistances** Acid, Bludgeoning, Cold, Fire, Necrotic, Piercing, Slashing\n\n**Immunities** Lightning, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 120 ft.; Passive Perception 12\n\n**Languages** Common plus one other language\n\n**CR** 2 (XP 450; PB +2)\n\n##### Traits\n\n***Ephemeral.*** The wisp can’t wear or carry anything.\n\n***Illumination.*** The wisp sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\n***Incorporeal Movement.*** The wisp can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n##### Actions\n\n***Shock.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 11 (2d8 + 2) Lightning damage.\n\n##### Bonus Actions\n\n***Consume Life.*** *Constitution Saving Throw:* DC 10, one living creature the wisp can see within 5 feet that has 0 Hit Points. *Failure:* The target dies, and the wisp regains 10 (3d6) Hit Points.\n\n***Vanish.*** The wisp and its light have the Invisible condition until the wisp’s Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life.",
+  "facets": {
+    "group": "monster",
+    "size": "Tiny",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "type_line": "Tiny Undead, Chaotic Evil",
+    "ac": {
+      "value": 19,
+      "text": "19"
+    },
+    "initiative": {
+      "modifier": 9,
+      "score": 19,
+      "text": "+9 (19)"
+    },
+    "hp": {
+      "average": 27,
+      "formula": "11d4",
+      "text": "27 (11d4)"
+    },
+    "speed": {
+      "text": "5 ft., Fly 50 ft. (hover)",
+      "walk": 5,
+      "fly": 50,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "dex": {
+        "score": 28,
+        "mod": 9,
+        "save": 9
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "necrotic",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Acid, Bludgeoning, Cold, Fire, Necrotic, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Lightning, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 12",
+      "darkvision": 120,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Ephemeral",
+        "text": "The wisp can’t wear or carry anything."
+      },
+      {
+        "name": "Illumination",
+        "text": "The wisp sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet."
+      },
+      {
+        "name": "Incorporeal Movement",
+        "text": "The wisp can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shock",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 11 (2d8 + 2) Lightning damage."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Consume Life",
+        "text": "*Constitution Saving Throw:* DC 10, one living creature the wisp can see within 5 feet that has 0 Hit Points. *Failure:* The target dies, and the wisp regains 10 (3d6) Hit Points."
+      },
+      {
+        "name": "Vanish",
+        "text": "The wisp and its light have the Invisible condition until the wisp’s Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life."
+      }
+    ],
+    "rules": [
+      {
+        "id": "light",
+        "bright_feet": 20,
+        "dim_feet": 20,
+        "rules": [
+          "dnd5e/rule/bright-light",
+          "dnd5e/rule/dim-light"
+        ]
+      },
+      {
+        "id": "incorporeal_movement",
+        "through_creatures_and_objects": true,
+        "difficult_terrain": true,
+        "ends_turn_inside": {
+          "damage": "1d10",
+          "damage_type": "force"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Shock",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  2
+                ]
+              },
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Consume Life",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one living creature the wisp can see within 5 feet that has 0 Hit Points"
+          }
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_ephemeral",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Ephemeral as written.",
+      "source_text": "The wisp can’t wear or carry anything."
+    },
+    {
+      "id": "bonus_actions_consume_life_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Consume Life as written.",
+      "source_text": "The target dies, and the wisp regains 10 (3d6) Hit Points."
+    },
+    {
+      "id": "bonus_actions_vanish",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Vanish as written.",
+      "source_text": "The wisp and its light have the Invisible condition until the wisp’s Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Undead, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 19 | **Initiative** +9 (19) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 27 (11d4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Fly 50 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 1 | −5 | −5 | **Dex** 28 | +9 | +9 | **Con** 10 | +0 | +0 |\n| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 11 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Bludgeoning, Cold, Fire, Necrotic, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning, Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Ephemeral.*** The wisp can’t wear or carry anything.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_ephemeral"
+      ]
+    },
+    {
+      "text": "***Illumination.*** The wisp sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Incorporeal Movement.*** The wisp can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Shock.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 11 (2d8 + 2) Lightning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Consume Life.*** *Constitution Saving Throw:* DC 10, one living creature the wisp can see within 5 feet that has 0 Hit Points. *Failure:* The target dies, and the wisp regains 10 (3d6) Hit Points.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/1",
+        "md:bonus_actions_consume_life_rider"
+      ]
+    },
+    {
+      "text": "***Vanish.*** The wisp and its light have the Invisible condition until the wisp’s Concentration ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/1",
+        "md:bonus_actions_vanish"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

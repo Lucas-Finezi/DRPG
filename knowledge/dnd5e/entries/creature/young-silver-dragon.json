@@ -1,0 +1,294 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/young-silver-dragon",
+  "kind": "creature",
+  "name": "Young Silver Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      324
+    ],
+    "section": "Monsters A–Z/Silver Dragons/Young Silver Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Large Dragon (Metallic), Lawful Good*\n\n| **AC** 18 | **Initiative** +4 (14) |\n\n**HP** 168 (16d10 + 80)\n\n**Speed** 40 ft., Fly 80 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 10 | +0 | +4 | **Con** 21 | +5 | +5 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +4 | **Cha** 19 | +4 | +4 |\n\n**Skills** History +6, Perception +8, Stealth +4\n\n**Immunities** Cold\n\n**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 18\n\n**Languages** Common, Draconic\n\n**CR** 9 (XP 5,000; PB +4)\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Paralyzing Breath.\n\n***Rend.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage.\n\n***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *Failure:* 49 (11d8) Cold damage. *Success:* Half damage.\n\n***Paralyzing Breath.*** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Good",
+    "cr": "9"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Good",
+    "tags": [
+      "Metallic"
+    ],
+    "type_line": "Large Dragon (Metallic), Lawful Good",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 168,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d10",
+          80
+        ]
+      },
+      "text": "168 (16d10 + 80)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 80 ft.",
+      "walk": 40,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "score": 23,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 4
+      },
+      "con": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 4
+      },
+      "cha": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      }
+    },
+    "skills": {
+      "history": 6,
+      "perception": 8,
+      "stealth": 4,
+      "text": "History +6, Perception +8, Stealth +4"
+    },
+    "immunities": {
+      "damage_types": [
+        "cold"
+      ],
+      "conditions": [],
+      "text": "Cold"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 18",
+      "blindsight": 30,
+      "darkvision": 120,
+      "passive_perception": 18
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "9",
+      "xp": 5000,
+      "proficiency_bonus": 4,
+      "text": "9 (XP 5,000; PB +4)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Paralyzing Breath."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage.\n\n***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *Failure:* 49 (11d8) Cold damage. *Success:* Half damage."
+      },
+      {
+        "name": "Paralyzing Breath",
+        "text": "*Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Paralyzing Breath."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  6
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_paralyzing_breath",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Paralyzing Breath as written.",
+      "source_text": "Constitution Saving Throw: DC 17, each creature in a 30-foot Cone. First Failure: The target has the Incapacitated condition until the end of its next turn, when it repeats the save. Second Failure: The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon (Metallic), Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 168 (16d10 + 80)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 80 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 10 | +0 | +4 | **Con** 21 | +5 | +5 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +4 | **Cha** 19 | +4 | +4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** History +6, Perception +8, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Cold",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 18",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 9 (XP 5,000; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Paralyzing Breath.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Slashing damage.\n\n***Cold Breath (Recharge 5–6)*****.** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *Failure:* 49 (11d8) Cold damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Paralyzing Breath.*** *Constitution Saving Throw:* DC 17, each creature in a 30-foot Cone. *First Failure:* The target has the Incapacitated condition until the end of its next turn, when it repeats the save. *Second Failure:* The target has the Paralyzed condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "md:actions_paralyzing_breath"
+      ]
+    }
+  ]
+}

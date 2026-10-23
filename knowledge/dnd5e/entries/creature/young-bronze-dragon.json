@@ -1,0 +1,350 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/young-bronze-dragon",
+  "kind": "creature",
+  "name": "Young Bronze Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      270
+    ],
+    "section": "Monsters A–Z/Bronze Dragons/Young Bronze Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 2,
+  "text": "*Large Dragon (Metallic), Lawful Good*\n\n| **AC** 17 | **Initiative** +3 (13) |\n\n**HP** 142 (15d10 + 60)\n\n**Speed** 40 ft., Fly 80 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +3 | **Con** 19 | +4 | +4 |\n| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +4 | **Cha** 17 | +3 | +3 |\n\n**Skills** Insight +4, Perception +7, Stealth +3\n\n**Immunities** Lightning\n\n**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 17\n\n**Languages** Common, Draconic\n\n**CR** 8 (XP 3,900; PB +3)\n\n##### Traits\n\n***Amphibious.*** The dragon can breathe air and water.\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Repulsion Breath.\n\n***Rend.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage.\n\n***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 15, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 49 (9d10) Lightning damage. *Success:* Half damage.\n\n***Repulsion Breath.*** *Strength Saving Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 40 feet straight away from the dragon and has the Prone condition.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Good",
+    "cr": "8"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Good",
+    "tags": [
+      "Metallic"
+    ],
+    "type_line": "Large Dragon (Metallic), Lawful Good",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 142,
+      "formula": {
+        "op": "add",
+        "args": [
+          "15d10",
+          60
+        ]
+      },
+      "text": "142 (15d10 + 60)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 80 ft., Swim 40 ft.",
+      "walk": 40,
+      "fly": 80,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 3
+      },
+      "con": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 4
+      },
+      "cha": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "insight": 4,
+      "perception": 7,
+      "stealth": 3,
+      "text": "Insight +4, Perception +7, Stealth +3"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning"
+      ],
+      "conditions": [],
+      "text": "Lightning"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 17",
+      "blindsight": 30,
+      "darkvision": 120,
+      "passive_perception": 17
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "8",
+      "xp": 3900,
+      "proficiency_bonus": 3,
+      "text": "8 (XP 3,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The dragon can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Repulsion Breath."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage.\n\n***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 15, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 49 (9d10) Lightning damage. *Success:* Half damage."
+      },
+      {
+        "name": "Repulsion Breath",
+        "text": "*Strength Saving Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 40 feet straight away from the dragon and has the Prone condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Repulsion Breath."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Repulsion Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "text": "each creature in a 30-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            },
+            {
+              "op": "move",
+              "mode": "push",
+              "distance_feet": 40
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon (Metallic), Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 142 (15d10 + 60)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 80 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +3 | **Con** 19 | +4 | +4 |\n| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +4 | **Cha** 17 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Insight +4, Perception +7, Stealth +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 17",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 8 (XP 3,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The dragon can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Repulsion Breath.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage.\n\n***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 15, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 49 (9d10) Lightning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Repulsion Breath.*** *Strength Saving Throw:* DC 15, each creature in a 30-foot Cone. *Failure:* The target is pushed up to 40 feet straight away from the dragon and has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

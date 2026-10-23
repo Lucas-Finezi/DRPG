@@ -1,0 +1,364 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/young-copper-dragon",
+  "kind": "creature",
+  "name": "Young Copper Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      276
+    ],
+    "section": "Monsters A–Z/Copper Dragons/Young Copper Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Large Dragon (Metallic), Chaotic Good*\n\n| **AC** 17 | **Initiative** +4 (14) |\n\n**HP** 119 (14d10 + 42)\n\n**Speed** 40 ft., Climb 40 ft., Fly 80 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 12 | +1 | +4 | **Con** 17 | +3 | +3 |\n| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +4 | **Cha** 15 | +2 | +2 |\n\n**Skills** Deception +5, Perception +7, Stealth +4\n\n**Immunities** Acid\n\n**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 17\n\n**Languages** Common, Draconic\n\n**CR** 7 (XP 2,900; PB +3)\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath.\n\n***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 15 (2d10 + 4) Slashing damage.\n\n***Acid Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 14, each creature in a 40-foot-long, 5-foot-wide Line. *Failure:* 40 (9d8) Acid damage. *Success:* Half damage.\n\n***Slowing Breath.*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* The target can’t take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Chaotic Good",
+    "cr": "7"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Chaotic Good",
+    "tags": [
+      "Metallic"
+    ],
+    "type_line": "Large Dragon (Metallic), Chaotic Good",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 119,
+      "formula": {
+        "op": "add",
+        "args": [
+          "14d10",
+          42
+        ]
+      },
+      "text": "119 (14d10 + 42)"
+    },
+    "speed": {
+      "text": "40 ft., Climb 40 ft., Fly 80 ft.",
+      "walk": 40,
+      "climb": 40,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 4
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 4
+      },
+      "cha": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "deception": 5,
+      "perception": 7,
+      "stealth": 4,
+      "text": "Deception +5, Perception +7, Stealth +4"
+    },
+    "immunities": {
+      "damage_types": [
+        "acid"
+      ],
+      "conditions": [],
+      "text": "Acid"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 17",
+      "blindsight": 30,
+      "darkvision": 120,
+      "passive_perception": 17
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "7",
+      "xp": 2900,
+      "proficiency_bonus": 3,
+      "text": "7 (XP 2,900; PB +3)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +7, reach 10 ft. *Hit:* 15 (2d10 + 4) Slashing damage."
+      },
+      {
+        "name": "Acid Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 14, each creature in a 40-foot-long, 5-foot-wide Line. *Failure:* 40 (9d8) Acid damage. *Success:* Half damage."
+      },
+      {
+        "name": "Slowing Breath",
+        "text": "*Constitution Saving Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* The target can’t take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Acid Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 14,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "line",
+              "size_feet": 40,
+              "width_feet": 5,
+              "origin": "self"
+            },
+            "text": "each creature in a 40-foot-long, 5-foot-wide Line"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "9d8",
+              "damage_type": "acid"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slowing Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 14,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "text": "each creature in a 30-foot Cone"
+          }
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_slowing_breath_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Slowing Breath as written.",
+      "source_text": "The target can’t take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon (Metallic), Chaotic Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 119 (14d10 + 42)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Climb 40 ft., Fly 80 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 12 | +1 | +4 | **Con** 17 | +3 | +3 |\n| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +4 | **Cha** 15 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +5, Perception +7, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Acid",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 17",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 7 (XP 2,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Slowing Breath.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 15 (2d10 + 4) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Acid Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 14, each creature in a 40-foot-long, 5-foot-wide Line. *Failure:* 40 (9d8) Acid damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Slowing Breath.*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot Cone. *Failure:* The target can’t take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/2",
+        "md:actions_slowing_breath_rider"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/wereboar",
+  "kind": "creature",
+  "name": "Wereboar",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      338
+    ],
+    "section": "Monsters A–Z/Wereboar/Wereboar",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Monstrosity (Lycanthrope), Neutral Evil*\n\n| **AC** 15 | **Initiative** +2 (12) |\n\n**HP** 97 (15d8 + 30)\n\n**Speed** 30 ft., 40 ft. (boar form only)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 8 | −1 | −1 |\n\n**Skills** Perception +2\n\n**Gear** Javelins (6)\n\n**Senses** Passive Perception 12\n\n**Languages** Common (can’t speak in boar form)\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Actions\n\n***Multiattack.*** The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack.\n\n***Gore (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Wereboar** under the GM’s control and has 10 Hit Points. *Success:* The target is immune to this wereboar’s curse for 24 hours.\n\n***Javelin (Humanoid or Hybrid Form Only).*** *Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 30/120 ft. *Hit:* 13 (3d6 + 3) Piercing damage.\n\n***Tusk (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.\n\n##### Bonus Actions\n\n***Shape-Shift.*** The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Monstrosity",
+    "alignment": "Neutral Evil",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Monstrosity",
+    "alignment": "Neutral Evil",
+    "tags": [
+      "Lycanthrope"
+    ],
+    "type_line": "Medium or Small Monstrosity (Lycanthrope), Neutral Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 97,
+      "formula": {
+        "op": "add",
+        "args": [
+          "15d8",
+          30
+        ]
+      },
+      "text": "97 (15d8 + 30)"
+    },
+    "speed": {
+      "text": "30 ft., 40 ft. (boar form only)",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "text": "Perception +2"
+    },
+    "gear": {
+      "text": "Javelins (6)"
+    },
+    "senses": {
+      "text": "Passive Perception 12",
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common (can’t speak in boar form)"
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack."
+      },
+      {
+        "name": "Gore",
+        "qualifiers": [
+          "Boar or Hybrid Form Only"
+        ],
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Wereboar** under the GM’s control and has 10 Hit Points. *Success:* The target is immune to this wereboar’s curse for 24 hours."
+      },
+      {
+        "name": "Javelin",
+        "qualifiers": [
+          "Humanoid or Hybrid Form Only"
+        ],
+        "text": "*Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 30/120 ft. *Hit:* 13 (3d6 + 3) Piercing damage."
+      },
+      {
+        "name": "Tusk",
+        "qualifiers": [
+          "Boar or Hybrid Form Only"
+        ],
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shape-Shift",
+        "text": "The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Gore",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Javelin",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tusk",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_gore_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Gore as written.",
+      "source_text": "12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a Wereboar under the GM’s control and has 10 Hit Points. Success: The target is immune to this wereboar’s curse for 24 hours."
+    },
+    {
+      "id": "actions_tusk_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Tusk as written.",
+      "source_text": "10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition."
+    },
+    {
+      "id": "bonus_actions_shape_shift",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Shape-Shift as written.",
+      "source_text": "The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Monstrosity (Lycanthrope), Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 97 (15d8 + 30)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., 40 ft. (boar form only)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 8 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Javelins (6)",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common (can’t speak in boar form)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Gore (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a **Wereboar** under the GM’s control and has 10 Hit Points. *Success:* The target is immune to this wereboar’s curse for 24 hours.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_gore_rider"
+      ]
+    },
+    {
+      "text": "***Javelin (Humanoid or Hybrid Form Only).*** *Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 30/120 ft. *Hit:* 13 (3d6 + 3) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Tusk (Boar or Hybrid Form Only).*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 (2d6) Piercing damage and has the Prone condition.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/2",
+        "md:actions_tusk_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Shape-Shift.*** The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn’t transformed.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_shape_shift"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

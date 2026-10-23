@@ -1,0 +1,447 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/wight",
+  "kind": "creature",
+  "name": "Wight",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      341
+    ],
+    "section": "Monsters A–Z/Wight/Wight",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Medium Undead, Neutral Evil*\n\n| **AC** 14 | **Initiative** +4 (14) |\n\n**HP** 82 (11d8 + 33)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +3 |\n| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 15 | +2 | +2 |\n\n**Skills** Perception +3, Stealth +4\n\n**Resistances** Necrotic\n\n**Immunities** Poison; Exhaustion, Poisoned\n\n**Gear** Studded Leather Armor\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** Common plus one other language\n\n**CR** 3 (XP 700; PB +2)\n\n##### Traits\n\n***Sunlight Sensitivity.*** While in sunlight, the wight has Disadvantage on ability checks and attack rolls.\n\n##### Actions\n\n***Multiattack.*** The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain.\n\n***Necrotic Sword.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage plus 4 (1d8) Necrotic damage.\n\n***Necrotic Bow.*** *Ranged Attack Roll:* +4, range 150/600 ft. *Hit:* 6 (1d8 + 2) Piercing damage plus 4 (1d8) Necrotic damage.\n\n***Life Drain.*** *Constitution Saving Throw:* DC 13, one creature within 5 feet. *Failure:* 6 (1d8 + 2) Necrotic damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken. \n\nA Humanoid slain by this attack rises 24 hours later as a **Zombie** under the wight’s control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "cr": "3"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium Undead, Neutral Evil",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 82,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d8",
+          33
+        ]
+      },
+      "text": "82 (11d8 + 33)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "stealth": 4,
+      "text": "Perception +3, Stealth +4"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic"
+      ],
+      "text": "Necrotic"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Exhaustion, Poisoned"
+    },
+    "gear": {
+      "text": "Studded Leather Armor"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "3",
+      "xp": 700,
+      "proficiency_bonus": 2,
+      "text": "3 (XP 700; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Sunlight Sensitivity",
+        "text": "While in sunlight, the wight has Disadvantage on ability checks and attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain."
+      },
+      {
+        "name": "Necrotic Sword",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage plus 4 (1d8) Necrotic damage."
+      },
+      {
+        "name": "Necrotic Bow",
+        "text": "*Ranged Attack Roll:* +4, range 150/600 ft. *Hit:* 6 (1d8 + 2) Piercing damage plus 4 (1d8) Necrotic damage."
+      },
+      {
+        "name": "Life Drain",
+        "text": "*Constitution Saving Throw:* DC 13, one creature within 5 feet. *Failure:* 6 (1d8 + 2) Necrotic damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken. \n\nA Humanoid slain by this attack rises 24 hours later as a **Zombie** under the wight’s control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll",
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "in_sunlight"
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "attack_roll"
+                }
+              },
+              {
+                "pred": "check_uses_skill",
+                "args": {
+                  "skill": "perception"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Attack rolls and Wisdom (Perception) checks while in sunlight."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Necrotic Sword",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  2
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d8",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Necrotic Bow",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d8",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Life Drain",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 13,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one creature within 5 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  2
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_life_drain_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Life Drain as written.",
+      "source_text": "6 (1d8 + 2) Necrotic damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken. A Humanoid slain by this attack rises 24 hours later as a Zombie under the wight’s control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Undead, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 82 (11d8 + 33)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +3 |\n| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 15 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Exhaustion, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Gear** Studded Leather Armor",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (XP 700; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Sunlight Sensitivity.*** While in sunlight, the wight has Disadvantage on ability checks and attack rolls.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Necrotic Sword.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 6 (1d8 + 2) Slashing damage plus 4 (1d8) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Necrotic Bow.*** *Ranged Attack Roll:* +4, range 150/600 ft. *Hit:* 6 (1d8 + 2) Piercing damage plus 4 (1d8) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Life Drain.*** *Constitution Saving Throw:* DC 13, one creature within 5 feet. *Failure:* 6 (1d8 + 2) Necrotic damage, and the target’s Hit Point maximum decreases by an amount equal to the damage taken. \n\nA Humanoid slain by this attack rises 24 hours later as a **Zombie** under the wight’s control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/3",
+        "md:actions_life_drain_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/poisoned"
+  ]
+}

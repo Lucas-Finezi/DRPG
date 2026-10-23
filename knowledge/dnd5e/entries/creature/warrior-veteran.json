@@ -1,0 +1,339 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/warrior-veteran",
+  "kind": "creature",
+  "name": "Warrior Veteran",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      337
+    ],
+    "section": "Monsters A–Z/Warriors/Warrior Veteran",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 2,
+  "text": "*Medium or Small Humanoid, Neutral*\n\n| **AC** 17 | **Initiative** +3 (13) |\n\n**HP** 65 (10d8 + 20)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |\n\n**Skills** Athletics +5, Perception +2\n\n**Gear** Greatsword, Heavy Crossbow, Splint Armor\n\n**Senses** Passive Perception 12\n\n**Languages** Common plus one other language\n\n**CR** 3 (XP 700; PB +2)\n\n##### Actions\n\n***Multiattack.*** The warrior makes two Greatsword or Heavy Crossbow attacks.\n\n***Greatsword.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage.\n\n***Heavy Crossbow.*** *Ranged Attack Roll:* +3, range 100/400 ft. *Hit:* 12 (2d10 + 1) Piercing damage.\n\n##### Reactions\n\n***Parry.*** *Trigger:* The warrior is hit by a melee attack roll while holding a weapon. *Response:* The warrior adds 2 to its AC against that attack, possibly causing it to miss.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "cr": "3"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "type_line": "Medium or Small Humanoid, Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 65,
+      "formula": {
+        "op": "add",
+        "args": [
+          "10d8",
+          20
+        ]
+      },
+      "text": "65 (10d8 + 20)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "athletics": 5,
+      "perception": 2,
+      "text": "Athletics +5, Perception +2"
+    },
+    "gear": {
+      "text": "Greatsword, Heavy Crossbow, Splint Armor"
+    },
+    "senses": {
+      "text": "Passive Perception 12",
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "3",
+      "xp": 700,
+      "proficiency_bonus": 2,
+      "text": "3 (XP 700; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The warrior makes two Greatsword or Heavy Crossbow attacks."
+      },
+      {
+        "name": "Greatsword",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage."
+      },
+      {
+        "name": "Heavy Crossbow",
+        "text": "*Ranged Attack Roll:* +3, range 100/400 ft. *Hit:* 12 (2d10 + 1) Piercing damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Parry",
+        "text": "*Trigger:* The warrior is hit by a melee attack roll while holding a weapon. *Response:* The warrior adds 2 to its AC against that attack, possibly causing it to miss."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Greatsword",
+            "count": 2
+          }
+        ],
+        "text": "The warrior makes two Greatsword or Heavy Crossbow attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Greatsword",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Heavy Crossbow",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  1
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "ac",
+          "mode": "add",
+          "value": 2,
+          "note": "Against the triggering attack."
+        }
+      ],
+      "note": "Trigger: The warrior is hit by a melee attack roll while holding a weapon."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 65 (10d8 + 20)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Athletics +5, Perception +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Greatsword, Heavy Crossbow, Splint Armor",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (XP 700; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The warrior makes two Greatsword or Heavy Crossbow attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Greatsword.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 10 (2d6 + 3) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Heavy Crossbow.*** *Ranged Attack Roll:* +3, range 100/400 ft. *Hit:* 12 (2d10 + 1) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Parry.*** *Trigger:* The warrior is hit by a melee attack roll while holding a weapon. *Response:* The warrior adds 2 to its AC against that attack, possibly causing it to miss.",
+      "status": "structured",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2"
+      ]
+    }
+  ]
+}
