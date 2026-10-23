@@ -27,8 +27,11 @@ import pymupdf
 FOOTER_Y = 735          # every page carries "N  System Reference Document 5.2.1" below this
 ROW_TOL = 2.5          # baseline tolerance (pt) for cells of the same table row
 INDENT = 4.0           # first-cell indentation (pt) that marks a sub-item row
+ROW_GAP = 14.0         # max vertical distance (pt) from a row to the wrapped line of one of its cells
+CELL_MAX_WIDTH = 160.0 # a table cell line is narrower than a text column
 CELL_GAP = 6.0          # horizontal gap (pt) between spans that marks a table cell boundary
 BODY_FONTS = ("Cambria", "Optima", "ScalaSans")
+DEHY = None             # set in main(); used to rejoin hyphenated words inside folded table cells
 INVISIBLE = {"­": "", "​": ""}
 
 # Line-end breaks reviewed by hand in dehyphenation_log.json where the vocabulary heuristic
@@ -60,14 +63,20 @@ def span_style(span):
 
 
 def split_cells(spans):
-    """Split x-sorted spans into cells wherever the horizontal gap exceeds CELL_GAP."""
+    """Split x-sorted spans into cells wherever the horizontal gap exceeds CELL_GAP.
+
+    Whitespace-only spans do not count as content: a wide space span between two cells
+    ("Barbarian" + " " + "Battle") must not bridge the gap.
+    """
     cells, cur, prev_x1 = [], [], None
     for s in spans:
-        if prev_x1 is not None and s["bbox"][0] - prev_x1 > CELL_GAP and "".join(x["text"] for x in cur).strip():
+        if s["text"].strip() and prev_x1 is not None and s["bbox"][0] - prev_x1 > CELL_GAP \
+                and "".join(x["text"] for x in cur).strip():
             cells.append(cur)
             cur = []
         cur.append(s)
-        prev_x1 = s["bbox"][2]
+        if s["text"].strip():
+            prev_x1 = s["bbox"][2]
     cells.append(cur)
     return [c for c in cells if "".join(s["text"] for s in c).strip()]
 
@@ -78,12 +87,14 @@ def merge_rows(raw_lines):
     for l in raw_lines:
         if (rows and abs(rows[-1]["y"] - l["y"]) < ROW_TOL
                 and all(l["x0"] >= r[1] - 1 or l["x1"] <= r[0] + 1 for r in rows[-1]["xr"])):
-            rows[-1]["spans"].extend(l["spans"])
+            rows[-1]["parts"].append((l["x0"], l["spans"]))
             rows[-1]["xr"].append((l["x0"], l["x1"]))
         else:
-            rows.append({"y": l["y"], "spans": list(l["spans"]), "xr": [(l["x0"], l["x1"])]})
+            rows.append({"y": l["y"], "parts": [(l["x0"], l["spans"])], "xr": [(l["x0"], l["x1"])]})
     for r in rows:
-        r["spans"].sort(key=lambda s: s["bbox"][0])
+        # order the merged line segments left to right; spans keep their order inside a
+        # segment (a folded multi-line cell starts every line at the same x)
+        r["spans"] = [s for _, spans in sorted(r["parts"], key=lambda p: p[0]) for s in spans]
     return rows
 
 
@@ -109,12 +120,40 @@ def merge_split_rows(raw_blocks):
         if prev and len(lines) <= 3 and not any(is_prose(l) for l in lines):
             for l in lines:
                 t = next((p for p in prev if abs(p["y"] - l["y"]) < ROW_TOL and p["x1"] < l["x0"]
-                          and not is_prose(p) and len(split_cells(p["spans"])) >= 2), None)
+                          and not is_prose(p)), None)
                 targets.append(t)
-        if targets and all(targets):
+        # the block's first line must continue a table row (2+ cells); later lines are the
+        # wrapped second lines of multi-line cells and join the lines sharing their baseline
+        if targets and all(targets) and len(split_cells(targets[0]["spans"])) >= 2:
             for l, t in zip(lines, targets):
                 t["spans"] = t["spans"] + l["spans"]
                 t["x1"] = max(t["x1"], l["x1"])
+            continue
+        # a one-line cell vertically centred beside a multi-line cell ("Bard, Cleric, Druid," /
+        # "Monk, Rogue, or Warlock" | "5 + Con. modifier"): fold the multi-line cell into one
+        # line and append the centred cell to it
+        plines = sorted(prev, key=lambda x: x["y"]) if prev else []
+        if (prev and len(lines) == 1 and 2 <= len(prev) <= 3 and not is_prose(lines[0])
+                and not (is_header_block(prev) and is_header_block(lines))
+                and all(x["x1"] - x["x0"] < CELL_MAX_WIDTH for x in prev + lines)
+                and not any(is_prose(p) for p in prev)
+                and all(p["x1"] < lines[0]["x0"] for p in prev)
+                and plines[0]["y"] - ROW_TOL < lines[0]["y"] < plines[-1]["y"] - ROW_TOL
+                and all(len(split_cells(p["spans"])) == 1 for p in prev)):
+            spans = [dict(x) for x in plines[0]["spans"]]
+            for p in plines[1:]:
+                nxt = [dict(x) for x in p["spans"]]
+                left = "".join(x["text"] for x in spans)
+                m = re.search(r"([A-Za-z’']+)-$", left.rstrip())
+                n = re.match(r"([a-z][A-Za-z’']*)", nxt[0]["text"].lstrip())
+                if m and n and DEHY is not None and DEHY.decide(m.group(1), n.group(1)) == "join":
+                    spans[-1]["text"] = spans[-1]["text"].rstrip()[:-1]
+                    nxt[0]["text"] = nxt[0]["text"].lstrip()
+                elif not left.endswith((" ", "-")):
+                    nxt[0]["text"] = " " + nxt[0]["text"].lstrip()
+                spans += nxt
+            out[-1] = [{"y": plines[0]["y"], "x0": min(p["x0"] for p in prev), "x1": lines[0]["x1"],
+                        "spans": spans + lines[0]["spans"]}]
             continue
         out.append(lines)
     return out
@@ -235,6 +274,11 @@ class Dehyphenator:
         self.vocab = vocab
         self.log = []
 
+    def decide(self, a, b):
+        joined, hyph = (a + b).lower(), f"{a}-{b}".lower()
+        cj, ch = self.vocab.get(joined, 0), self.vocab.get(hyph, 0)
+        return "keep_hyphen" if ch > cj or hyph in KEEP_HYPHEN else "join"
+
     def join(self, left, right, page):
         """Join two text fragments that were split at a line end."""
         if re.search(r"\d-\**\s*$", left):  # 10-foot, 100-foot: numeric compounds keep the hyphen
@@ -318,16 +362,19 @@ def page_markdown(blocks, pno, dehy):
                 first = True
                 continue
             xs = [c[0]["bbox"][0] for c in cells]
-            if not first and paras and paras[-1][0] == "table":
+            y = min(sp["bbox"][1] for c in cells for sp in c)
+            if paras and paras[-1][0] == "table" and (not first or 0 < y - paras[-1][3] < ROW_GAP):
                 prev_cells, prev_xs = paras[-1][1], paras[-1][2]
                 slots = [next((k for k in range(1, len(prev_xs)) if abs(prev_xs[k] - x) < 3), None) for x in xs]
                 if all(k is not None for k in slots):
-                    # wrapped text of non-first cells of the previous row
+                    # wrapped text of non-first cells of the previous row (same block, or the
+                    # next block when it sits right below the row)
                     for k, c in zip(slots, cells):
                         prev_cells[k] = dehy.join(prev_cells[k], render_spans(c, escape_pipes=True).strip(), pno)
+                    paras[-1] = (*paras[-1][:3], y)
                     continue
             if len(cells) > 1:
-                paras.append(("table", [render_spans(c, escape_pipes=True).strip() for c in cells], xs))
+                paras.append(("table", [render_spans(c, escape_pipes=True).strip() for c in cells], xs, y))
                 first = False
                 continue
             text = render_spans(cells[0])
@@ -409,6 +456,8 @@ def main(pdf_path, out_dir):
     n = doc.page_count
     vocab = build_vocab(doc)
     dehy = Dehyphenator(vocab)
+    global DEHY
+    DEHY = dehy
 
     md_parts = [
         "<!-- Generated by tools/extract/extract_srd.py from source/SRD_CC_v5.2.1.pdf. Do not edit by hand. -->",

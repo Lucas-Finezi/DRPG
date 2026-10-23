@@ -171,6 +171,29 @@ GLOSSARY_TAG = {  # bracket tag -> (kind, lot)
     "Attitude": ("attitude", "L05"),
 }
 
+# Level-5 sidebars that hold rules (not table captions, not stat-block sections).
+SIDEBAR_LOTS = {
+    "Exceptions Supersede General Rules": "L02",
+    "Round Down": "L02",
+    "Heroic Inspiration": "L05",
+    "Marching Order": "L41",
+    "Playing on a Grid": "L04",
+    "Unseen Attackers and Targets": "L04",
+    "Resting": "L07",
+    "Knocking Out a Creature": "L04",
+    "Unaligned Creatures": "L02",
+    "Bonus Feats at Level 20": "L15",
+    "Breaking Your Oath": "L12",
+    "Expanding and Replacing a Spellbook": "L12",
+    "Selling Equipment": "L08",
+    "Improvised Weapons": "L28",
+    "Casting in Armor": "L09",
+    "Identifying an Ongoing Spell": "L09",
+    "Magic Item Rules": "L31",
+    "Running a Monster": "L33",
+}
+STAT_BLOCK_SECTIONS = {"Traits", "Actions", "Bonus Actions", "Reactions", "Legendary Actions"}
+
 SIZES = ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"]
 RARITIES = ["Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Artifact"]
 ITEM_CATEGORIES = ["Armor", "Potion", "Ring", "Rod", "Scroll", "Staff", "Wand", "Weapon", "Wondrous Item"]
@@ -670,6 +693,21 @@ def spell_consistency(b):
     return out
 
 
+def build_sidebars(nodes):
+    """Level-5 headings followed by prose: rule sidebars that need an owning lot."""
+    out = []
+    for i, n in enumerate(nodes):
+        if n.type != "h" or n.level != 5 or n.text in STAT_BLOCK_SECTIONS:
+            continue
+        follow = [m for m in nodes[i + 1:i + 3]]
+        if not follow or follow[0].type != "p" or re.match(r"^\*[^*].*\*$|^\*\*[^*]+\*\*$", follow[0].text):
+            continue  # table caption (followed by an italic group label or a bold header fragment)
+        if n.text not in SIDEBAR_LOTS:
+            raise KeyError(f"sidebar without lot: {n.text} p{n.page}")
+        out.append({"title": n.text, "page": n.page, "lot": SIDEBAR_LOTS[n.text]})
+    return out
+
+
 # ---------------------------------------------------------------- tables
 
 def build_tables(nodes, outline_lot):
@@ -778,6 +816,7 @@ def main():
                      "expected_by_kind": dict(sorted(collections.Counter(
                          x["kind"] for x in b.entries if x["lot"] == lot).items())),
                      "sections": [o["path"] for o in outline if o["lot"] == lot and o["level"] <= 3],
+                     "sidebars": [x["title"] for x in build_sidebars(nodes) if x["lot"] == lot],
                      "tables": sum(1 for t in tables if t["lot"] == lot and t["type"] == "data")})
     if "L27" in counts_lot:
         next(x for x in lots if x["lot"] == "L27")["expected_memberships"] = len(b.memberships)
@@ -786,8 +825,10 @@ def main():
         (OUT / name).write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     dump("source.json", source)
+    sidebars = build_sidebars(nodes)
     dump("outline.json", {"chapters": [{"title": c["title"], "page_start": c["page_start"],
-                                        "page_end": c["page_end"]} for c in chapters], "sections": outline})
+                                        "page_end": c["page_end"]} for c in chapters], "sections": outline,
+                          "sidebars": sidebars})
     dump("tables.json", {"count": len(tables),
                          "by_type": dict(collections.Counter(t["type"] for t in tables)), "tables": tables})
     dump("entries.json", {"count": len(b.entries), "by_kind": dict(sorted(counts_kind.items())),
@@ -802,7 +843,8 @@ def main():
              "Não editar à mão.", "",
              f"- Fonte: `{source['file']}` — SHA-256 `{source['sha256']}` — {source['pages']} páginas",
              f"- Licença: {source['license']['id']} (atribuição em `source.json`)",
-             f"- Seções mapeadas (níveis 1–4): {len(outline)} — tabelas: {len(tables)}",
+             f"- Seções mapeadas (níveis 1–4): {len(outline)} — quadros laterais com regras: "
+             f"{len(build_sidebars(nodes))} — tabelas: {len(tables)}",
              f"- Entradas esperadas: **{len(b.entries)}** — vínculos de listas de magia: {len(b.memberships)}",
              f"- Refs duplicados: {len(duplicates)} — nomes de magia em listas sem magia correspondente: "
              f"{len(unresolved)}", "", "## Capítulos", "", "| Capítulo | Páginas |", "|---|---|"]

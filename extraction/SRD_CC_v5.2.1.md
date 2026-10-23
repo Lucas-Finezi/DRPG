@@ -602,9 +602,7 @@ Monsters are the main perils characters face, but other dangers await. “Rules 
 
 Burning Dehydration
 
-Falling Malnutrition
-
-Suffocation
+| Falling Malnutrition | Suffocation |
 
 ### Travel
 
@@ -786,9 +784,7 @@ A target can benefit from cover only when an attack or other effect originates o
 ##### Cover
 
 | **Degree** | **Benefit to Target** | **Offered By …** |
-| Half | +2 bonus to AC and Dexterity saving throws |
-
-Another creature or an object that covers at least half of the target
+| Half | +2 bonus to AC and Dexterity saving throws | Another creature or an object that covers at least half of the target |
 
 Three- Quarters
 
@@ -796,9 +792,7 @@ Three- Quarters
 
 An object that covers at least three-quarters of the target
 
-| Total | Can’t be targeted directly |
-
-An object that covers the whole target
+| Total | Can’t be targeted directly | An object that covers the whole target |
 
 ### Ranged Attacks
 
@@ -1037,17 +1031,12 @@ Choose a class, and write it on your character sheet. The Class Overview table s
 ##### Class Overview
 
 | **Class** | **Likes ...** | **Primary Ability** | **Complexity** |
-| Barbarian Battle | Strength | Average |
+| Barbarian | Battle | Strength | Average |
 | Bard | Performing | Charisma | High |
 | Cleric | Gods | Wisdom | Average |
 | Druid | Nature | Wisdom | High |
 | Fighter | Weapons | Strength or Dexterity | Low |
-| Monk | Unarmed combat |
-
-Dexterity and Wisdom
-
-High
-
+| Monk | Unarmed combat | Dexterity and Wisdom | High |
 | Paladin | Defense | Strength and Charisma | Average |
 | Ranger | Survival | Dexterity and Wisdom | Average |
 | **Class** | **Likes ...** | **Primary Ability** | **Complexity** |
@@ -1085,9 +1074,7 @@ The background you choose influences step 3, when you determine your character�
 | **Ability** | **Background** |
 | Strength | Soldier |
 | Dexterity | Soldier |
-
-Constitution Soldier
-
+| Constitution | Soldier |
 | Intelligence | Acolyte |
 
 <!-- page 20 -->
@@ -1313,11 +1300,7 @@ Include all modifiers that apply to your Wisdom (Perception) checks. For example
 | **Class** | **Hit Point Maximum** |
 | Barbarian | 12 + Con. modifier |
 | Fighter, Paladin, or Ranger | 10 + Con. modifier |
-
-Bard, Cleric, Druid, Monk, Rogue, or Warlock
-
-8 + Con. modifier
-
+| Bard, Cleric, Druid, Monk, Rogue, or Warlock | 8 + Con. modifier |
 | Sorcerer or Wizard | 6 + Con. modifier |
 
 The character sheet includes room to note your current Hit Points when you take damage, as well as any Temporary Hit Points you might gain. There’s also space to track Death Saving Throws.
@@ -1399,11 +1382,7 @@ When you gain a level, follow these steps:
 | **Class** | **Hit Points per Level** |
 | Barbarian | 7 + Con. modifier |
 | Fighter, Paladin, or Ranger | 6 + Con. modifier |
-
-Bard, Cleric, Druid, Monk, Rogue, or Warlock
-
-5 + Con. modifier
-
+| Bard, Cleric, Druid, Monk, Rogue, or Warlock | 5 + Con. modifier |
 | Sorcerer or Wizard | 4 + Con. modifier |
 
 **3: Record New Class Features.** Look at your class features table in “Classes,” and note the features you gain at your new level in that class. Make any choices offered by a new feature.
@@ -1689,17 +1668,9 @@ When you make your character, you can roll once on the Trinkets table to gain a 
 
 | **Primary Ability** | Strength |
 | **Hit Point Die** | D12 per Barbarian level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Strength and Constitution
-
+| **Saving Throw Proficiencies** | Strength and Constitution |
 | **Skill Proficiencies** | *Choose 2:* Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival |
-
-**Weapon Proficiencies** Simple and Martial weapons
-
+| **Weapon Proficiencies** | Simple and Martial weapons |
 | **Armor Training** | Light and Medium armor and Shields |
 | **Starting Equipment** | *Choose A or B:* (A) Greataxe, 4 Handaxes, Explorer’s Pack, and 15 GP; or (B) 75 GP |
 
@@ -1902,17 +1873,9 @@ Once you use this feature, you can’t use it again until you finish a Long Rest
 
 | **Primary Ability** | Charisma |
 | **Hit Point Die** | D8 per Bard level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Dexterity and Charisma
-
+| **Saving Throw Proficiencies** | Dexterity and Charisma |
 | **Skill Proficiencies** | *Choose any 3 skills* (see “Playing the Game”) |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Tool Proficiencies** | *Choose 3 Musical Instruments* (see “Equipment”) |
 | **Armor Training** | Light armor |
 | **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP |
@@ -2263,17 +2226,9 @@ When you make an ability check or attack roll and fail, you can expend one use o
 
 | **Primary Ability** | Wisdom |
 | **Hit Point Die** | D8 per Cleric level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Wisdom and Charisma
-
+| **Saving Throw Proficiencies** | Wisdom and Charisma |
 | **Skill Proficiencies** | *Choose 2:* History, Insight, Medicine, Persuasion, or Religion |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Armor Training** | Light and Medium armor and Shields |
 | **Starting Equipment** | *Choose A or B:* (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest’s Pack, and 7 GP; or (B) 110 GP |
 
@@ -2619,17 +2574,9 @@ When you would normally roll one or more dice to restore Hit Points to a creatur
 
 | **Primary Ability** | Wisdom |
 | **Hit Point Die** | D8 per Druid level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Intelligence and Wisdom
-
+| **Saving Throw Proficiencies** | Intelligence and Wisdom |
 | **Skill Proficiencies** | *Choose 2:* Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, or Survival |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Tool Proficiencies** | Herbalism Kit |
 | **Armor Training** | Light armor and Shields |
 | **Starting Equipment** | *Choose A or B:* (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer’s Pack, Herbalism Kit, and 9 GP; or (B) 50 GP |
@@ -3071,17 +3018,9 @@ As a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet
 
 | **Primary Ability** | Strength or Dexterity |
 | **Hit Point Die** | D10 per Fighter level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Strength and Constitution
-
+| **Saving Throw Proficiencies** | Strength and Constitution |
 | **Skill Proficiencies** | *Choose 2:* Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival |
-
-**Weapon Proficiencies** Simple and Martial weapons
-
+| **Weapon Proficiencies** | Simple and Martial weapons |
 | **Armor Training** | Light, Medium, and Heavy armor and Shields |
 | **Starting Equipment** | *Choose A*, *B*, *or C:* (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer’s Pack, and 4 GP; (B) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Dungeoneer’s Pack, and 11 GP; or (C) 155 GP |
 
@@ -3246,19 +3185,9 @@ You attain the pinnacle of resilience in battle, giving you these benefits.
 
 | **Primary Ability** | Dexterity and Wisdom |
 | **Hit Point Die** | D8 per Monk level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Strength and Dexterity
-
+| **Saving Throw Proficiencies** | Strength and Dexterity |
 | **Skill Proficiencies** | *Choose 2:* Acrobatics, Athletics, History, Insight, Religion, or Stealth |
-
-**Weapon Proficiencies** Simple weapons and Martial
-
-weapons that have the Light property
-
+| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Light property |
 | **Tool Proficiencies** | *Choose one type of Artisan’s Tools or Musical Instrument* (see “Equipment”) |
 | **Armor Training** | None |
 | **Starting Equipment** | *Choose A or B:* (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP |
@@ -3484,17 +3413,9 @@ You can have only one creature under the effect of this feature at a time. You c
 
 | **Primary Ability** | Strength and Charisma |
 | **Hit Point Die** | D10 per Paladin level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Wisdom and Charisma
-
+| **Saving Throw Proficiencies** | Wisdom and Charisma |
 | **Skill Proficiencies** | *Choose 2:* Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion |
-
-**Weapon Proficiencies** Simple and Martial weapons
-
+| **Weapon Proficiencies** | Simple and Martial weapons |
 | **Armor Training** | Light, Medium, and Heavy armor and Shields |
 | **Starting Equipment** | *Choose A or B:* (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP |
 
@@ -3789,17 +3710,9 @@ As a Bonus Action, you can imbue your Aura of Protection with holy power, granti
 
 | **Primary Ability** | Dexterity and Wisdom |
 | **Hit Point Die** | D10 per Ranger level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Strength and Dexterity
-
+| **Saving Throw Proficiencies** | Strength and Dexterity |
 | **Skill Proficiencies** | *Choose 3:* Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, or Survival |
-
-**Weapon Proficiencies** Simple and Martial weapons
-
+| **Weapon Proficiencies** | Simple and Martial weapons |
 | **Armor Training** | Light and Medium armor and Shields |
 | **Starting Equipment** | *Choose A or B:* (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus (sprig of mistletoe), Explorer’s Pack, and 7 GP; or (B) 150 GP |
 
@@ -4069,19 +3982,9 @@ When you take damage, you can take a Reaction to give yourself Resistance to tha
 
 | **Primary Ability** | Dexterity |
 | **Hit Point Die** | D8 per Rogue level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Dexterity and Intelligence
-
+| **Saving Throw Proficiencies** | Dexterity and Intelligence |
 | **Skill Proficiencies** | *Choose 4:* Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth |
-
-**Weapon Proficiencies** Simple weapons and Martial
-
-weapons that have the Finesse or Light property
-
+| **Weapon Proficiencies** | Simple weapons and Martial weapons that have the Finesse or Light property |
 | **Tool Proficiencies** | Thieves’ Tools |
 | **Armor Training** | Light armor |
 | **Starting Equipment** | *Choose A or B:* (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP |
@@ -4284,17 +4187,9 @@ You are adept at laying ambushes and quickly escaping danger. You can take two t
 
 | **Primary Ability** | Charisma |
 | **Hit Point Die** | D6 per Sorcerer level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Constitution and Charisma
-
+| **Saving Throw Proficiencies** | Constitution and Charisma |
 | **Skill Proficiencies** | *Choose 2:* Arcana, Deception, Insight, Intimidation, Persuasion, or Religion |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Armor Training** | None |
 | **Starting Equipment** | *Choose A or B:* (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP |
 
@@ -4755,17 +4650,9 @@ Whenever you start casting the spell, you can modify it so that it doesn’t req
 
 | **Primary Ability** | Charisma |
 | **Hit Point Die** | D8 per Warlock level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Wisdom and Charisma
-
+| **Saving Throw Proficiencies** | Wisdom and Charisma |
 | **Skill Proficiencies** | *Choose 2:* Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Armor Training** | Light armor |
 | **Starting Equipment** | *Choose A or B:* (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP |
 
@@ -5269,17 +5156,9 @@ Once you use this feature, you can’t use it again until you finish a Long Rest
 
 | **Primary Ability** | Intelligence |
 | **Hit Point Die** | D6 per Wizard level |
-
-**Saving Throw**
-
-**Proficiencies**
-
-Intelligence and Wisdom
-
+| **Saving Throw Proficiencies** | Intelligence and Wisdom |
 | **Skill Proficiencies** | *Choose 2:* Arcana, History, Insight, Investigation, Medicine, Nature, or Religion |
-
-**Weapon Proficiencies** Simple weapons
-
+| **Weapon Proficiencies** | Simple weapons |
 | **Armor Training** | None |
 | **Starting Equipment** | *Choose A or B:* (A) 2 Daggers, Arcane Focus (Quarterstaff), Robe, Spellbook, Scholar’s Pack, and 5 GP; or (B) 55 GP |
 
@@ -8031,8 +7910,8 @@ As you cast the spell, choose whether it creates antipathy or sympathy, and targ
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 10 +0 +0 | **Con** 10 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 3 | −4 −4 | **Cha** 1 | −5 | −5 |
+| **Str** 16 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 10 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Poison, Psychic; Charmed, Exhaustion,
 
@@ -10222,8 +10101,8 @@ Dice [d10s] equal to the spell’s level)
 **Speed** 60 ft., Fly 60 ft. (requires level 4+ spell)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 12 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Senses** Passive Perception 11
 
@@ -10658,8 +10537,8 @@ The creature is an ally to you and your allies. In combat, the creature shares y
 **Speed** 40 ft., Climb 40 ft., Fly 40 ft. (Wasp only)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 4 | −3 | −3 | **Wis** 14 +2 | +2 | **Cha** 3 | −4 −4 |
+| **Str** 17 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 4 | −3 | −3 | **Wis** 14 | +2 | +2 | **Cha** 3 | −4 | −4 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 12
 
@@ -13681,8 +13560,8 @@ The creature is an ally to you and your allies. In combat, the creature shares y
 **Speed** 30 ft., Fly 60 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 17 +3 | +3 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +2 | **Cha** 14 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 17 | +3 | +3 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 14 | +2 | +2 |
 
 **Resistances** Acid, Cold, Fire, Lightning, Poison
 
@@ -13850,10 +13729,7 @@ The destination you choose must be known to you, and it must be on the same plan
 | Linked object | — | — | — | 01–00 |
 | Very familiar | 01–05 | 06–13 | 14–24 | 25–00 |
 | Seen casually | 01–33 | 34–43 | 44–53 | 54–00 |
-
-Viewed once or described
-
-| 01–43 | 44–53 | 54–73 | 74–00 |
+| Viewed once or described | 01–43 | 44–53 | 54–73 | 74–00 |
 | False destination | 01–50 | 51–00 | — | — |
 
 ***Familiarity.*** Here are the meanings of the terms in the table’s Familiarity column:
@@ -14548,9 +14424,7 @@ section that points to other entries in the glossary, to other parts of this doc
 | **CG** | Chaotic Good |
 | **Cha.** | Charisma |
 | **CN** | Chaotic Neutral |
-
-**Con.** Constitution
-
+| **Con.** | Constitution |
 | **CP** | Copper Piece(s) |
 | **CR** | Challenge Rating |
 | **DC** | Difficulty Class |
@@ -14567,11 +14441,7 @@ section that points to other entries in the glossary, to other parts of this doc
 | **N** | Neutral |
 | **NE** | Neutral Evil |
 | **NG** | Neutral Good |
-
-**NPC** Nonplayer
-
-character
-
+| **NPC** | Nonplayer character |
 | **PB** | Proficiency Bonus |
 | **PP** | Platinum Piece(s) |
 | **R** | Ritual |
@@ -16008,18 +15878,9 @@ The Sample Mental Stress Effects table provides a few examples of such effects, 
 
 | **Save** | **Psychic** |
 | **Example** | **DC** | **Damage** |
-
-A character ingests a hallucinogenic substance that distorts the character’s perception of reality.
-
-| 10 | 1d6 |
-
-A character touches a fiendish idol that tears at the character’s mind, threatening to shatter it.
-
-| 15 | 3d6 |
-
-A magical trap flings a character into the Far Realm until the end of that character’s next turn.
-
-| 20 | 9d6 |
+| A character ingests a hallucinogenic substance that distorts the character’s perception of reality. | 10 | 1d6 |
+| A character touches a fiendish idol that tears at the character’s mind, threatening to shatter it. | 15 | 3d6 |
+| A magical trap flings a character into the Far Realm until the end of that character’s next turn. | 20 | 9d6 |
 
 #### Prolonged Effects
 
@@ -16939,14 +16800,8 @@ You have Resistance to one type of damage while you wear this armor. The GM choo
 
 Each extended claw makes the following melee attack: +8 to hit, reach 5 ft. *Hit:* The target has the Grappled condition (escape DC 15).
 
-| 6 | The apparatus walks or swims forward provided its legs are extended. |
-
-The apparatus walks or swims backward provided its legs are extended.
-
-| 7 | The apparatus turns 90 degrees counterclockwise provided its legs are extended. |
-
-The apparatus turns 90 degrees clockwise provided its legs are extended.
-
+| 6 | The apparatus walks or swims forward provided its legs are extended. | The apparatus walks or swims backward provided its legs are extended. |
+| 7 | The apparatus turns 90 degrees counterclockwise provided its legs are extended. | The apparatus turns 90 degrees clockwise provided its legs are extended. |
 | 8 | Eyelike fixtures emit Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. | The light turns off. |
 | 9 | The apparatus sinks up to 20 feet if it’s in liquid. | The apparatus rises up to 20 feet if it’s in liquid. |
 | 10 | The rear hatch unseals and opens. | The rear hatch closes and seals. |
@@ -17110,10 +16965,7 @@ While wearing this belt, your Strength changes to a score granted by the belt. T
 
 | **Belt** | **Str.** | **Rarity** |
 | *Belt of Giant Strength* (hill) | 21 | Rare |
-
-*Belt of Giant Strength* (frost or stone)
-
-| 23 | Very Rare |
+| *Belt of Giant Strength* (frost or stone) | 23 | Very Rare |
 | *Belt of Giant Strength* (fire) | 25 | Very Rare |
 | *Belt of Giant Strength* (cloud) | 27 | Legendary |
 | *Belt of Giant Strength* (storm) | 29 | Legendary |
@@ -17750,8 +17602,8 @@ The creature exists for a duration specific to each figurine. At the end of the 
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 13 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 14 | +2 | +2 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Senses** Darkvision 60 ft., Passive Perception 10
 
@@ -18395,8 +18247,8 @@ Each card’s effect is described below.
 **Speed** 60 ft., Fly 60 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 16 +3 | +3 | **Con** 16 +3 | +3 |
-| **Int** 16 +3 | +3 | **Wis** 16 +3 | +3 | **Cha** 16 +3 | +3 |
+| **Str** 16 +3 | +3 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |
+| **Int** | 16 +3 | +3 | **Wis** 16 | +3 | +3 | **Cha** 16 | +3 | +3 |
 
 **Immunities** Necrotic, Poison; Charmed, Exhaustion,
 
@@ -18636,10 +18488,7 @@ This potion’s transparent liquid has floating in it a sliver of light resembli
 
 | **Potion** | **Str.** | **Rarity** |
 | *Potion of Giant Strength* (hill) | 21 | Uncommon |
-
-*Potion of Giant Strength* (frost or stone)
-
-| 23 | Rare |
+| *Potion of Giant Strength* (frost or stone) | 23 | Rare |
 | *Potion of Giant Strength* (fire) | 25 | Rare |
 | *Potion of Giant Strength* (cloud) | 27 | Very Rare |
 | *Potion of Giant Strength* (storm) | 29 | Legendary |
@@ -18664,18 +18513,9 @@ Whatever its potency, the potion’s red liquid glimmers when agitated.
 
 | **Potion** | **HP Regained** | **Rarity** |
 | *Potion of Healing* | 2d4 + 2 | Common |
-
-*Potion of Healing* (greater)
-
-| 4d4 + 4 | Uncommon |
-
-*Potion of Healing* (superior)
-
-| 8d4 + 8 | Rare |
-
-*Potion of Healing* (supreme)
-
-| 10d4 + 20 | Very Rare |
+| *Potion of Healing* (greater) | 4d4 + 4 | Uncommon |
+| *Potion of Healing* (superior) | 8d4 + 8 | Rare |
+| *Potion of Healing* (supreme) | 10d4 + 20 | Very Rare |
 
 #### Potion of Heroism
 
@@ -20255,8 +20095,8 @@ can use the stat block part once. At the start of each of the monster’s turns,
 **Speed** 10 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 9 | −1 | +3 | **Con** 15 +2 | +6 |
-| **Int** 18 +4 | +8 | **Wis** 15 +2 | +6 | **Cha** 18 +4 | +4 |
+| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | +3 | **Con** 15 | +2 | +6 |
+| **Int** | 18 | +4 | +8 | **Wis** 15 | +2 | +6 | **Cha** 18 | +4 | +4 |
 
 **Skills** History +12, Perception +10
 
@@ -20315,8 +20155,8 @@ The target repeats the save whenever it takes damage as well as after every 24 h
 **Speed** 10 ft., Fly 90 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 20 +5 | +5 | **Con** 14 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 14 | +2 | +2 | **Dex** 20 | +5 | +5 | **Con** 14 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Resistances** Bludgeoning, Lightning, Piercing, Slashing
 
@@ -20357,8 +20197,8 @@ Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 25 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 11 +0 +0 | **Con** 13 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 3 | −4 −4 | **Cha** 1 | −5 | −5 |
+| **Str** 14 | +2 | +2 | **Dex** 11 | +0 | +0 | **Con** 13 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Poison, Psychic; Charmed, Deafened,
 
@@ -20387,8 +20227,8 @@ Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 **Speed** 5 ft., Fly 50 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 15 +2 | +4 | **Con** 11 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 5 | −3 | −3 | **Cha** 1 | −5 | −5 |
+| **Str** 12 | +1 | +1 | **Dex** 15 | +2 | +4 | **Con** 11 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 5 | −3 | −3 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Poison, Psychic; Charmed, Deafened,
 
@@ -20415,8 +20255,8 @@ Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 **Speed** 10 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 14 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 3 | −4 −4 | **Cha** 1 | −5 | −5 |
+| **Str** 17 | +3 | +3 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Poison, Psychic; Charmed, Deafened,
 
@@ -20447,8 +20287,8 @@ While grappling the target, the rug can’t take this action, the rug halves the
 **Speed** 30 ft., Burrow 10 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 11 +0 +0 | **Con** 14 +2 | +2 |
-| **Int** 1 | −5 | −5 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 17 | +3 | +3 | **Dex** 11 | +0 | +0 | **Con** 14 | +2 | +2 |
+| **Int** | 1 | −5 | −5 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Darkvision 60 ft., Tremorsense 60 ft.;
 
@@ -20483,8 +20323,8 @@ Passive Perception 11
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 18 +4 | +7 | **Con** 14 +2 | +2 |
-| **Int** 16 +3 | +6 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 11 | +0 | +0 | **Dex** 18 | +4 | +7 | **Con** 14 | +2 | +2 |
+| **Int** | 16 | +3 | +6 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Acrobatics +7, Perception +6, Stealth +10
 
@@ -20527,8 +20367,8 @@ Passive Perception 11
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 8 | −1 | −1 | **Con** 11 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** | 3 | −4 | −4 | **Dex** 8 | −1 | −1 | **Con** 11 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Vulnerabilities** Fire
 
@@ -20555,8 +20395,8 @@ Passive Perception 11
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 15 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 19 | +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 15 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Vulnerabilities** Fire
 
@@ -20585,8 +20425,8 @@ Passive Perception 11
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 14 | +2 | +2 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 10
 
@@ -20613,8 +20453,8 @@ Passive Perception 11
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 15 +2 | +4 |
-| **Int** 12 +1 | +1 | **Wis** 13 +1 | +1 | **Cha** 10 +0 +0 |
+| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +4 |
+| **Int** | 12 | +1 | +1 | **Wis** 13 | +1 | +1 | **Cha** 10 | +0 | +0 |
 
 **Immunities** Fire, Poison; Poisoned
 
@@ -20647,8 +20487,8 @@ Passive Perception 11
 **Speed** 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 26 +8 | +8 | **Dex** 15 +2 | +2 | **Con** 22 +6 | +12 |
-| **Int** 20 +5 | +5 | **Wis** 16 +3 | +9 | **Cha** 22 +6 | +6 |
+| **Str** 26 | +8 | +8 | **Dex** 15 | +2 | +2 | **Con** 22 | +6 | +12 |
+| **Int** | 20 | +5 | +5 | **Wis** 16 | +3 | +9 | **Cha** 22 | +6 | +6 |
 
 **Skills** Perception +9
 
@@ -20697,8 +20537,8 @@ Passive Perception 11
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 11 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Gear** Leather Armor, Light Crossbow, Scimitar
 
@@ -20727,8 +20567,8 @@ Passive Perception 11
 <!-- page 262 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +4 | **Dex** 16 +3 | +5 | **Con** 14 +2 | +2 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +2 | **Cha** 14 +2 | +2 |
+| **Str** 15 | +2 | +4 | **Dex** 16 | +3 | +5 | **Con** 14 | +2 | +2 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 14 | +2 | +2 |
 
 **Skills** Athletics +4, Deception +4
 
@@ -20765,8 +20605,8 @@ Passive Perception 11
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +6 | **Dex** 17 +3 | +3 | **Con** 18 +4 | +7 |
-| **Int** 12 +1 | +1 | **Wis** 14 +2 | +5 | **Cha** 14 +2 | +5 |
+| **Str** 16 | +3 | +6 | **Dex** 17 | +3 | +3 | **Con** 18 | +4 | +7 |
+| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +5 | **Cha** 14 | +2 | +5 |
 
 **Skills** Deception +5, Insight +5, Perception +8
 
@@ -20813,8 +20653,8 @@ Darkness); Passive Perception 18
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 8 | −1 | −1 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 8 | −1 | −1 | **Cha** 7 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 8 | −1 | −1 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 8 | −1 | −1 | **Cha** 7 | −2 | −2 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 9
 
@@ -20843,8 +20683,8 @@ Darkness); Passive Perception 18
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +5 | **Dex** 15 +2 | +2 | **Con** 15 +2 | +4 |
-| **Int** 9 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 14 +2 | +4 |
+| **Str** 16 | +3 | +5 | **Dex** 15 | +2 | +2 | **Con** 15 | +2 | +4 |
+| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 14 | +2 | +4 |
 
 **Resistances** Cold
 
@@ -20885,8 +20725,8 @@ Darkness); Passive Perception 10
 **Speed** 50 ft., Climb 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 16 +3 | +3 | **Con** 18 +4 | +4 |
-| **Int** 7 | −2 | −2 | **Wis** 14 +2 | +2 | **Cha** 12 +1 | +1 |
+| **Str** 23 | +6 | +6 | **Dex** 16 | +3 | +3 | **Con** 18 | +4 | +4 |
+| **Int** | 7 | −2 | −2 | **Wis** 14 | +2 | +2 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +6, Stealth +7
 
@@ -20927,8 +20767,8 @@ If the behir takes 30 damage or more on a single turn from the swallowed creatur
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 17 +3 | +3 |
-| **Int** 9 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 9 | −1 | −1 |
+| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 17 | +3 | +3 |
+| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |
 
 **Gear** Greataxe, Hide Armor
 
@@ -20961,8 +20801,8 @@ If the behir takes 30 damage or more on a single turn from the swallowed creatur
 <!-- page 264 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +4 | **Con** 13 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +2 | **Cha** 13 +1 | +1 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +4 | **Con** 13 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +2 | **Cha** 13 | +1 | +1 |
 
 **Skills** Perception +4, Stealth +4
 
@@ -20999,8 +20839,8 @@ Passive Perception 14
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +5 | **Con** 17 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +3 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +5 | **Con** 17 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +3 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +6, Stealth +5
 
@@ -21037,8 +20877,8 @@ Passive Perception 16
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 14 +2 | +7 | **Con** 21 +5 | +5 |
-| **Int** 14 +2 | +2 | **Wis** 13 +1 | +6 | **Cha** 19 +4 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 14 | +2 | +7 | **Con** 21 | +5 | +5 |
+| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +6 | **Cha** 19 | +4 | +4 |
 
 **Skills** Perception +11, Stealth +7
 
@@ -21095,8 +20935,8 @@ Passive Perception 21
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 14 +2 | +9 | **Con** 25 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +9 | **Cha** 22 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 14 | +2 | +9 | **Con** 25 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +9 | **Cha** 22 | +6 | +6 |
 
 **Skills** Perception +16, Stealth +9
 
@@ -21155,8 +20995,8 @@ Passive Perception 26
 **Speed** 20 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 5 | −3 | −3 | **Con** 16 +3 | +3 |
-| **Int** 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
+| **Str** 16 | +3 | +3 | **Dex** 5 | −3 | −3 | **Con** 16 | +3 | +3 |
+| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Acid, Cold, Lightning, Slashing; Charmed,
 
@@ -21203,8 +21043,8 @@ Points are divided evenly between the new puddings (round down).
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 17 +3 | +3 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 13 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** 12 | +1 | +1 | **Dex** 17 | +3 | +3 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +5, Stealth +5
 
@@ -21237,8 +21077,8 @@ can’t speak them
 **Speed** 30 ft., Burrow 15 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 10 +0 +2 | **Con** 15 +2 | +2 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +2 | **Cha** 15 +2 | +2 |
+| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +2 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -21271,8 +21111,8 @@ Passive Perception 14
 **Speed** 40 ft., Burrow 20 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 10 +0 +4 | **Con** 19 +4 | +4 |
-| **Int** 14 +2 | +2 | **Wis** 13 +1 | +5 | **Cha** 17 +3 | +3 |
+| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +4 | **Con** 19 | +4 | +4 |
+| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +5 | **Cha** 17 | +3 | +3 |
 
 **Skills** Perception +9, Stealth +4
 
@@ -21305,8 +21145,8 @@ Passive Perception 19
 **Speed** 40 ft., Burrow 30 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 25 +7 | +7 | **Dex** 10 +0 +5 | **Con** 23 +6 | +6 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +7 | **Cha** 20 +5 | +5 |
+| **Str** 25 | +7 | +7 | **Dex** 10 | +0 | +5 | **Con** 23 | +6 | +6 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +7 | **Cha** 20 | +5 | +5 |
 
 **Skills** Perception +12, Stealth +5
 
@@ -21363,8 +21203,8 @@ wide Line. *Failure:* 60 (11d10) Lightning damage. *Success:* Half damage.
 **Speed** 40 ft., Burrow 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 29 +9 | +9 | **Dex** 10 +0 +7 | **Con** 27 +8 | +8 |
-| **Int** 18 +4 | +4 | **Wis** 17 +3 | +10 | **Cha** 25 +7 | +7 |
+| **Str** 29 | +9 | +9 | **Dex** 10 | +0 | +7 | **Con** 27 | +8 | +8 |
+| **Int** | 18 | +4 | +4 | **Wis** 17 | +3 | +10 | **Cha** 25 | +7 | +7 |
 
 **Skills** Perception +17, Stealth +7
 
@@ -21421,8 +21261,8 @@ Passive Perception 27
 **Speed** 40 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +8 | **Dex** 16 +3 | +3 | **Con** 18 +4 | +4 |
-| **Int** 13 +1 | +5 | **Wis** 14 +2 | +6 | **Cha** 16 +3 | +7 |
+| **Str** 18 | +4 | +8 | **Dex** 16 | +3 | +3 | **Con** 18 | +4 | +4 |
+| **Int** | 13 | +1 | +5 | **Wis** 14 | +2 | +6 | **Cha** 16 | +3 | +7 |
 
 **Skills** Deception +7, Insight +6
 
@@ -21469,8 +21309,8 @@ damage, and the target has the Poisoned condition until the start of the devil�
 **Speed** 30 ft., Burrow 15 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 10 +0 +2 | **Con** 13 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +2 | **Cha** 13 +1 | +1 |
+| **Str** 15 | +2 | +2 | **Dex** 10 | +0 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +2 | **Cha** 13 | +1 | +1 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -21503,8 +21343,8 @@ Passive Perception 14
 **Speed** 40 ft., Burrow 20 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +3 | **Con** 17 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +3 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +3 | **Con** 17 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +3 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +6, Persuasion +5, Stealth +3
 
@@ -21539,8 +21379,8 @@ Passive Perception 16
 **Speed** 40 ft., Burrow 30 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 10 +0 +5 | **Con** 21 +5 | +5 |
-| **Int** 14 +2 | +2 | **Wis** 13 +1 | +6 | **Cha** 17 +3 | +3 |
+| **Str** 23 | +6 | +6 | **Dex** 10 | +0 | +5 | **Con** 21 | +5 | +5 |
+| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +6 | **Cha** 17 | +3 | +3 |
 
 **Skills** History +7, Perception +11, Persuasion +8, Stealth +5
 
@@ -21599,8 +21439,8 @@ Passive Perception 21
 **Speed** 40 ft., Burrow 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 10 +0 +6 | **Con** 25 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +8 | **Cha** 22 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 10 | +0 | +6 | **Con** 25 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +8 | **Cha** 22 | +6 | +6 |
 
 **Skills** History +9, Perception +14, Persuasion +12, Stealth
 
@@ -21661,8 +21501,8 @@ Passive Perception 24
 **Speed** 30 ft., Fly 60 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 10 +0 +2 | **Con** 15 +2 | +2 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +2 | **Cha** 15 +2 | +2 |
+| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +2 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -21703,8 +21543,8 @@ Passive Perception 14
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 10 +0 +3 | **Con** 19 +4 | +4 |
-| **Int** 14 +2 | +2 | **Wis** 13 +1 | +4 | **Cha** 17 +3 | +3 |
+| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +3 | **Con** 19 | +4 | +4 |
+| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +4 | **Cha** 17 | +3 | +3 |
 
 **Skills** Insight +4, Perception +7, Stealth +3
 
@@ -21743,8 +21583,8 @@ Passive Perception 17
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 25 +7 | +7 | **Dex** 10 +0 +5 | **Con** 23 +6 | +6 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +7 | **Cha** 20 +5 | +5 |
+| **Str** 25 | +7 | +7 | **Dex** 10 | +0 | +5 | **Con** 23 | +6 | +6 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +7 | **Cha** 20 | +5 | +5 |
 
 **Skills** Insight +7, Perception +12, Stealth +5
 
@@ -21807,8 +21647,8 @@ Thunder damage, and the target has the Deafened condition until the end of its n
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 29 +9 | +9 | **Dex** 10 +0 +7 | **Con** 27 +8 | +8 |
-| **Int** 18 +4 | +4 | **Wis** 17 +3 | +10 | **Cha** 25 +7 | +7 |
+| **Str** 29 | +9 | +9 | **Dex** 10 | +0 | +7 | **Con** 27 | +8 | +8 |
+| **Int** | 18 | +4 | +4 | **Wis** 17 | +3 | +10 | **Cha** 25 | +7 | +7 |
 
 **Skills** Insight +10, Perception +17, Stealth +7
 
@@ -21869,8 +21709,8 @@ Passive Perception 27
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +4 |
-| **Int** 11 +0 +0 | **Wis** 12 +1 | +3 | **Cha** 11 +0 +0 |
+| **Str** 17 | +3 | +3 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +4 |
+| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +3 | **Cha** 11 | +0 | +0 |
 
 **Skills** Stealth +6, Survival +3
 
@@ -21911,8 +21751,8 @@ Passive Perception 27
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 8 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 9 | −1 | −1 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 9 | −1 | −1 |
 
 **Skills** Stealth +6, Survival +2
 
@@ -21947,8 +21787,8 @@ Passive Perception 27
 **Speed** 40 ft., Burrow 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 11 +0 +0 | **Con** 21 +5 | +5 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +4 | **Dex** 11 | +0 | +0 | **Con** 21 | +5 | +5 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +6
 
@@ -21987,8 +21827,8 @@ the target has the Prone condition. *Success:* Half damage, and the target is pu
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 9 | −1 | −1 | **Wis** 13 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 9 | −1 | −1 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Athletics +6, Perception +3
 
@@ -22027,8 +21867,8 @@ the target has the Prone condition. *Success:* Half damage, and the target is pu
 <!-- page 273 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 18 +4 | +7 |
-| **Int** 11 +0 +0 | **Wis** 12 +1 | +4 | **Cha** 14 +2 | +2 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 18 | +4 | +7 |
+| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 14 | +2 | +2 |
 
 **Resistances** Bludgeoning, Cold, Piercing, Slashing
 
@@ -22073,8 +21913,8 @@ Darkness); Passive Perception 11
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 11 +0 +0 | **Con** 19 +4 | +4 |
-| **Int** 3 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 10 +0 +0 |
+| **Str** 19 | +4 | +4 | **Dex** 11 | +0 | +0 | **Con** 19 | +4 | +4 |
+| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +8
 
@@ -22109,8 +21949,8 @@ Darkness); Passive Perception 11
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 5 | −3 | −3 | **Wis** 11 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 5 | −3 | −3 | **Wis** 11 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +4
 
@@ -22151,8 +21991,8 @@ Darkness); Passive Perception 11
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 18 +4 | +4 |
-| **Int** 3 | −4 −4 | **Wis** 8 | −1 | −1 | **Cha** 1 | −5 | −5 |
+| **Str** 20 | +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 18 | +4 | +4 |
+| **Int** | 3 | −4 | −4 | **Wis** 8 | −1 | −1 | **Cha** 1 | −5 | −5 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -22199,8 +22039,8 @@ Frightened, Paralyzed, Petrified, Poisoned
 **Speed** 10 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 15 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 13 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 7 | −2 | −2 |
+| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 7 | −2 | −2 |
 
 **Skills** Stealth +5
 
@@ -22247,8 +22087,8 @@ The cloaker can detach itself by spending 5 feet of movement. The target or a cr
 **Speed** 40 ft., Fly 20 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 10 +0 +0 | **Con** 22 +6 | +10 |
-| **Int** 12 +1 | +1 | **Wis** 16 +3 | +7 | **Cha** 16 +3 | +3 |
+| **Str** 27 | +8 | +8 | **Dex** 10 | +0 | +0 | **Con** 22 | +6 | +10 |
+| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +7 | **Cha** 16 | +3 | +3 |
 
 **Skills** Insight +7, Perception +11
 
@@ -22289,8 +22129,8 @@ The cloaker can detach itself by spending 5 feet of movement. The target or a cr
 **Speed** 20 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** | 6 | −2 | −2 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Immunities** Petrified
 
@@ -22317,8 +22157,8 @@ The cloaker can detach itself by spending 5 feet of movement. The target or a cr
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 10 +0 +0 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** 10 | +0 | +0 | **Dex** 10 | +0 | +0 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Gear** Club
 
@@ -22349,8 +22189,8 @@ The cloaker can detach itself by spending 5 feet of movement. The target or a cr
 **Speed** 30 ft., Climb 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +3 | **Con** 13 +1 | +1 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +2 | **Cha** 13 +1 | +1 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 13 | +1 | +1 |
 
 **Skills** Perception +4, Stealth +3
 
@@ -22385,8 +22225,8 @@ Passive Perception 14
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 12 +1 | +4 | **Con** 17 +3 | +3 |
-| **Int** 16 +3 | +3 | **Wis** 13 +1 | +4 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 12 | +1 | +4 | **Con** 17 | +3 | +3 |
+| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +4 | **Cha** 15 | +2 | +2 |
 
 **Skills** Deception +5, Perception +7, Stealth +4
 
@@ -22421,8 +22261,8 @@ Passive Perception 17
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 12 +1 | +6 | **Con** 21 +5 | +5 |
-| **Int** 18 +4 | +4 | **Wis** 15 +2 | +7 | **Cha** 18 +4 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 12 | +1 | +6 | **Con** 21 | +5 | +5 |
+| **Int** | 18 | +4 | +4 | **Wis** 15 | +2 | +7 | **Cha** 18 | +4 | +4 |
 
 **Skills** Deception +9, Perception +12, Stealth +6
 
@@ -22481,8 +22321,8 @@ Passive Perception 22
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 12 +1 | +8 | **Con** 25 +7 | +7 |
-| **Int** 20 +5 | +5 | **Wis** 17 +3 | +10 | **Cha** 22 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 12 | +1 | +8 | **Con** 25 | +7 | +7 |
+| **Int** | 20 | +5 | +5 | **Wis** 17 | +3 | +10 | **Cha** 22 | +6 | +6 |
 
 **Skills** Deception +13, Perception +17, Stealth +8
 
@@ -22541,8 +22381,8 @@ Passive Perception 27
 **Speed** 30 ft., Fly 90 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 20 +5 | +5 | **Con** 17 +3 | +5 |
-| **Int** 18 +4 | +4 | **Wis** 20 +5 | +7 | **Cha** 18 +4 | +4 |
+| **Str** 16 | +3 | +3 | **Dex** 20 | +5 | +5 | **Con** 17 | +3 | +5 |
+| **Int** | 18 | +4 | +4 | **Wis** 20 | +5 | +7 | **Cha** 18 | +4 | +4 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -22593,8 +22433,8 @@ and no Concentration or Temporary Hit Points required to maintain the spell)
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 14 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -22629,8 +22469,8 @@ Frightened, Grappled, Incapacitated, Paralyzed, Petrified, Poisoned, Prone, Rest
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 12 +1 | +1 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +2 | **Cha** 10 +0 +0 |
+| **Str** | 11 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +2 | **Cha** 10 | +0 | +0 |
 
 **Skills** Deception +2, Religion +2
 
@@ -22657,8 +22497,8 @@ Frightened, Grappled, Incapacitated, Paralyzed, Petrified, Poisoned, Prone, Rest
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +4 | **Cha** 13 +1 | +1 |
+| **Str** | 11 | +0 | +0 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +4 | **Cha** 13 | +1 | +1 |
 
 **Skills** Deception +3, Persuasion +3, Religion +2
 
@@ -22701,8 +22541,8 @@ Frightened, Grappled, Incapacitated, Paralyzed, Petrified, Poisoned, Prone, Rest
 <!-- page 279 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Stealth +3
 
@@ -22735,8 +22575,8 @@ A creature can take an action to try to detach the darkmantle from itself, doing
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 3 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 3 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -22769,8 +22609,8 @@ Stunned, Unconscious
 **Speed** 30 ft., Fly 90 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 18 +4 | +4 | **Con** 18 +4 | +4 |
-| **Int** 17 +3 | +3 | **Wis** 20 +5 | +9 | **Cha** 20 +5 | +9 |
+| **Str** 18 | +4 | +4 | **Dex** 18 | +4 | +4 | **Con** 18 | +4 | +4 |
+| **Int** | 17 | +3 | +3 | **Wis** 20 | +5 | +9 | **Cha** 20 | +5 | +9 |
 
 **Skills** Insight +9, Perception +9
 
@@ -22823,8 +22663,8 @@ Humanoid form only, no Temporary Hit Points gained from the spell, and no Concen
 **Speed** 30 ft., Fly 90 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 15 +2 | +6 | **Con** 22 +6 | +6 |
-| **Int** 15 +2 | +2 | **Wis** 16 +3 | +7 | **Cha** 20 +5 | +5 |
+| **Str** 21 | +5 | +5 | **Dex** 15 | +2 | +6 | **Con** 22 | +6 | +6 |
+| **Int** | 15 | +2 | +2 | **Wis** 16 | +3 | +7 | **Cha** 20 | +5 | +5 |
 
 **Immunities** Lightning, Thunder
 
@@ -22877,8 +22717,8 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 18 +4 | +4 | **Con** 14 +2 | +2 |
-| **Int** 11 +0 +0 | **Wis** 12 +1 | +1 | **Cha** 14 +2 | +2 |
+| **Str** | 11 | +0 | +0 | **Dex** 18 | +4 | +4 | **Con** 14 | +2 | +2 |
+| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 14 | +2 | +2 |
 
 **Skills** Deception +6, Insight +3
 
@@ -22919,8 +22759,8 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 **Speed** 20 ft., Swim 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 25 +7 | +7 | **Dex** 10 +0 +0 | **Con** 20 +5 | +11 |
-| **Int** 10 +0 +0 | **Wis** 12 +1 | +7 | **Cha** 12 +1 | +1 |
+| **Str** 25 | +7 | +7 | **Dex** 10 | +0 | +0 | **Con** 20 | +5 | +11 |
+| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +7 | **Cha** 12 | +1 | +1 |
 
 **Resistances** Fire
 
@@ -22957,8 +22797,8 @@ damage. At the end of each of its turns, the target repeats the save, ending the
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 11 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 5 | −3 | −3 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 −4 |
+| **Str** 12 | +1 | +1 | **Dex** 11 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 5 | −3 | −3 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 | −4 |
 
 **Resistances** Cold, Fire, Lightning
 
@@ -22991,8 +22831,8 @@ creatures that understand Abyssal)
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 19 +4 | +4 | **Con** 18 +4 | +4 |
-| **Int** 13 +1 | +1 | **Wis** 16 +3 | +3 | **Cha** 12 +1 | +1 |
+| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 18 | +4 | +4 |
+| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +6, Stealth +10
 
@@ -23037,8 +22877,8 @@ creatures that understand Abyssal)
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 12 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 12 +1 | +1 | **Wis** 16 +3 | +3 | **Cha** 11 +0 +0 |
+| **Str** 10 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 11 | +0 | +0 |
 
 **Skills** Medicine +5, Nature +3, Perception +5
 
@@ -23079,8 +22919,8 @@ creatures that understand Abyssal)
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 12 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 14 +2 | +2 | **Wis** 15 +2 | +2 | **Cha** 18 +4 | +4 |
+| **Str** 10 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 14 | +2 | +2 | **Wis** 15 | +2 | +2 | **Cha** 18 | +4 | +4 |
 
 **Skills** Perception +4, Stealth +5
 
@@ -23129,8 +22969,8 @@ hours; ends early if the dryad casts the spell again), *Druidcraft*
 **Speed** 30 ft., Burrow 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 20 +5 | +5 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 20 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 20 | +5 | +5 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Vulnerabilities** Thunder
 
@@ -23175,8 +23015,8 @@ Passive Perception 10
 **Speed** 40 ft., Fly 60 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 12 +1 | +1 | **Con** 24 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +6 | **Cha** 19 +4 | +8 |
+| **Str** 22 | +6 | +6 | **Dex** 12 | +1 | +1 | **Con** 24 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +6 | **Cha** 19 | +4 | +8 |
 
 **Immunities** Fire
 
@@ -23221,8 +23061,8 @@ Passive Perception 10
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 16 +3 | +7 | **Con** 18 +4 | +8 |
-| **Int** 14 +2 | +2 | **Wis** 14 +2 | +2 | **Cha** 18 +4 | +8 |
+| **Str** 18 | +4 | +4 | **Dex** 16 | +3 | +7 | **Con** 18 | +4 | +8 |
+| **Int** | 14 | +2 | +2 | **Wis** 14 | +2 | +2 | **Cha** 18 | +4 | +8 |
 
 **Skills** Perception +6, Persuasion +8
 
@@ -23271,8 +23111,8 @@ Passive Perception 10
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 15 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 7 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 14 | +2 | +2 | **Dex** 15 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 7 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +3, Stealth +4, Survival +3
 
@@ -23315,8 +23155,8 @@ Passive Perception 10
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 17 +3 | +3 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 21 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +4
 
@@ -23353,8 +23193,8 @@ Stunned, Unconscious
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 17 +3 | +3 | **Con** 16 +3 | +3 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 10 | +0 | +0 | **Dex** 17 | +3 | +3 | **Con** 16 | +3 | +3 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -23399,8 +23239,8 @@ Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 25 +7 | +7 | **Dex** 9 | −1 | +3 | **Con** 23 +6 | +10 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +2 | **Cha** 13 +1 | +5 |
+| **Str** 25 | +7 | +7 | **Dex** 9 | −1 | +3 | **Con** 23 | +6 | +10 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 13 | +1 | +5 |
 
 **Skills** Athletics +11, Perception +6
 
@@ -23433,8 +23273,8 @@ Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 9 | −1 | −1 | **Con** 18 +4 | +4 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +4 | **Dex** 9 | −1 | −1 | **Con** 18 | +4 | +4 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Immunities** Lightning, Poison; Charmed, Exhaustion,
 
@@ -23483,8 +23323,8 @@ The golem’s creator, if within 60 feet of the berserk golem, can try to calm i
 <!-- page 286 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 21 +5 | +8 |
-| **Int** 9 | −1 | −1 | **Wis** 10 +0 +3 | **Cha** 12 +1 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 21 | +5 | +8 |
+| **Int** | 9 | −1 | −1 | **Wis** 10 | +0 | +3 | **Cha** 12 | +1 | +4 |
 
 **Skills** Athletics +9, Perception +3
 
@@ -23521,8 +23361,8 @@ The golem’s creator, if within 60 feet of the berserk golem, can try to calm i
 **Speed** 5 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 1 | −5 | −5 | **Dex** 1 | −5 | −5 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 3 | −4 −4 | **Cha** 1 | −5 | −5 |
+| **Str** | 1 | −5 | −5 | **Dex** 1 | −5 | −5 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Blinded, Charmed, Deafened, Frightened
 
@@ -23547,8 +23387,8 @@ The golem’s creator, if within 60 feet of the berserk golem, can try to calm i
 **Speed** 5 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 1 | −5 | −5 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 3 | −4 −4 | **Cha** 1 | −5 | −5 |
+| **Str** | 3 | −4 | −4 | **Dex** 1 | −5 | −5 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Blinded, Charmed, Deafened, Frightened
 
@@ -23577,8 +23417,8 @@ The golem’s creator, if within 60 feet of the berserk golem, can try to calm i
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 11 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 6 | −2 | −2 | **Wis** 11 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 11 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 6 | −2 | −2 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Skills** Stealth +4
 
@@ -23615,8 +23455,8 @@ The golem’s creator, if within 60 feet of the berserk golem, can try to calm i
 <!-- page 287 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 3 | −4 −4 | **Con** 20 +5 | +5 |
-| **Int** 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
+| **Str** 14 | +2 | +2 | **Dex** 3 | −4 | −4 | **Con** 20 | +5 | +5 |
+| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Acid; Blinded, Charmed, Deafened,
 
@@ -23657,8 +23497,8 @@ As an action, a creature within 5 feet of the cube can pull a creature or an obj
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 17 +3 | +3 | **Con** 10 +0 +0 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +2 | **Cha** 8 | −1 | −1 |
+| **Str** 16 | +3 | +3 | **Dex** 17 | +3 | +3 | **Con** 10 | +0 | +0 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +2 | **Cha** 8 | −1 | −1 |
 
 **Resistances** Necrotic
 
@@ -23693,8 +23533,8 @@ As an action, a creature within 5 feet of the cube can pull a creature or an obj
 **Speed** 5 ft., Fly 40 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 13 +1 | +1 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 12 +1 | +1 | **Cha** 17 +3 | +3 |
+| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 17 | +3 | +3 |
 
 **Resistances** Acid, Bludgeoning, Cold, Fire, Lightning,
 
@@ -23747,8 +23587,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 7 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 13 | +1 | +1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Immunities** Poison; Charmed, Exhaustion, Poisoned
 
@@ -23779,8 +23619,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 20 ft., Swim 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 8 | −1 | −1 | **Con** 16 +3 | +3 |
-| **Int** 3 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 10 | +0 | +0 | **Dex** 8 | −1 | −1 | **Con** 16 | +3 | +3 |
+| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Immunities** Prone
 
@@ -23823,8 +23663,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +9 | **Dex** 15 +2 | +2 | **Con** 21 +5 | +9 |
-| **Int** 19 +4 | +4 | **Wis** 17 +3 | +7 | **Cha** 16 +3 | +7 |
+| **Str** 20 | +5 | +9 | **Dex** 15 | +2 | +2 | **Con** 21 | +5 | +9 |
+| **Int** | 19 | +4 | +4 | **Wis** 17 | +3 | +7 | **Cha** 16 | +3 | +7 |
 
 **Skills** Deception +7, Perception +7
 
@@ -23871,8 +23711,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +7 | **Dex** 15 +2 | +5 | **Con** 16 +3 | +6 |
-| **Int** 10 +0 +0 | **Wis** 12 +1 | +4 | **Cha** 15 +2 | +2 |
+| **Str** 18 | +4 | +7 | **Dex** 15 | +2 | +5 | **Con** 16 | +3 | +6 |
+| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 15 | +2 | +2 |
 
 **Skills** Athletics +10, Performance +5
 
@@ -23909,8 +23749,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 12 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 14 | +2 | +2 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 10
 
@@ -23943,8 +23783,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 8 | −1 | −1 | **Cha** 8 | −1 | −1 |
+| **Str** | 8 | −1 | −1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 8 | −1 | −1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Stealth +6
 
@@ -23975,8 +23815,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 8 | −1 | −1 | **Cha** 8 | −1 | −1 |
+| **Str** | 8 | −1 | −1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 8 | −1 | −1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Stealth +6
 
@@ -24009,8 +23849,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 8 | −1 | −1 | **Cha** 10 +0 +0 |
+| **Str** 10 | +0 | +0 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 8 | −1 | −1 | **Cha** 10 | +0 | +0 |
 
 **Skills** Stealth +6
 
@@ -24051,8 +23891,8 @@ The possession lasts until the body drops to 0 Hit Points or the ghost leaves as
 **Speed** 30 ft., Fly 60 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +4 | **Con** 17 +3 | +3 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +2 | **Cha** 16 +3 | +3 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +4 | **Con** 17 | +3 | +3 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 16 | +3 | +3 |
 
 **Skills** Perception +4, Stealth +4
 
@@ -24093,8 +23933,8 @@ Passive Perception 14
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 14 +2 | +6 | **Con** 21 +5 | +5 |
-| **Int** 16 +3 | +3 | **Wis** 13 +1 | +5 | **Cha** 20 +5 | +5 |
+| **Str** 23 | +6 | +6 | **Dex** 14 | +2 | +6 | **Con** 21 | +5 | +5 |
+| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +5 | **Cha** 20 | +5 | +5 |
 
 **Skills** Insight +5, Perception +9, Persuasion +9, Stealth +6
 
@@ -24133,8 +23973,8 @@ Passive Perception 19
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 14 +2 | +8 | **Con** 25 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +8 | **Cha** 24 +7 | +7 |
+| **Str** 27 | +8 | +8 | **Dex** 14 | +2 | +8 | **Con** 25 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +8 | **Cha** 24 | +7 | +7 |
 
 **Skills** Insight +8, Perception +14, Persuasion +13, Stealth
 
@@ -24197,8 +24037,8 @@ Passive Perception 24
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 30 +10 +10 | **Dex** 14 +2 | +9 | **Con** 29 +9 | +9 |
-| **Int** 18 +4 | +4 | **Wis** 17 +3 | +10 | **Cha** 28 +9 | +9 |
+| **Str** 30 | +10 +10 | **Dex** 14 | +2 | +9 | **Con** 29 | +9 | +9 |
+| **Int** | 18 | +4 | +4 | **Wis** 17 | +3 | +10 | **Cha** 28 | +9 | +9 |
 
 **Skills** Insight +10, Perception +17, Persuasion +16, Stealth
 
@@ -24263,8 +24103,8 @@ Charisma as the spellcasting ability (spell save DC 24, +16 to hit with spell at
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 11 +0 +0 | **Con** 18 +4 | +4 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 20 | +5 | +5 | **Dex** 11 | +0 | +0 | **Con** 18 | +4 | +4 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +7
 
@@ -24301,8 +24141,8 @@ Charisma as the spellcasting ability (spell save DC 24, +16 to hit with spell at
 **Speed** 10 ft., Climb 10 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 +3 | +3 |
-| **Int** 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 2 | −4 −4 |
+| **Str** 12 | +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 | +3 | +3 |
+| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 2 | −4 | −4 |
 
 **Skills** Stealth +2
 
@@ -24343,8 +24183,8 @@ The ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round.
 **Speed** 30 ft., Fly 60 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +3 | **Con** 13 +1 | +1 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +2 | **Cha** 13 +1 | +1 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 13 | +1 | +1 |
 
 **Skills** Perception +4, Stealth +3
 
@@ -24381,8 +24221,8 @@ Passive Perception 14
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 12 +1 | +4 | **Con** 17 +3 | +3 |
-| **Int** 16 +3 | +3 | **Wis** 13 +1 | +4 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 12 | +1 | +4 | **Con** 17 | +3 | +3 |
+| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +4 | **Cha** 15 | +2 | +2 |
 
 **Skills** Deception +5, Perception +7, Stealth +4
 
@@ -24421,8 +24261,8 @@ Passive Perception 17
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 12 +1 | +6 | **Con** 21 +5 | +5 |
-| **Int** 18 +4 | +4 | **Wis** 15 +2 | +7 | **Cha** 18 +4 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 12 | +1 | +6 | **Con** 21 | +5 | +5 |
+| **Int** | 18 | +4 | +4 | **Wis** 15 | +2 | +7 | **Cha** 18 | +4 | +4 |
 
 **Skills** Deception +9, Perception +12, Persuasion +9,
 
@@ -24479,8 +24319,8 @@ Passive Perception 22
 **Speed** 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 12 +1 | +8 | **Con** 25 +7 | +7 |
-| **Int** 20 +5 | +5 | **Wis** 17 +3 | +10 | **Cha** 22 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 12 | +1 | +8 | **Con** 25 | +7 | +7 |
+| **Int** | 20 | +5 | +5 | **Wis** 17 | +3 | +10 | **Cha** 22 | +6 | +6 |
 
 **Skills** Deception +13, Perception +17, Persuasion +13,
 
@@ -24541,8 +24381,8 @@ Passive Perception 27
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 12 +1 | +1 | **Con** 16 +3 | +3 |
-| **Int** 13 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 14 +2 | +2 |
+| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 16 | +3 | +3 |
+| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 14 | +2 | +2 |
 
 **Skills** Arcana +5, Deception +4, Perception +4, Stealth +3
 
@@ -24585,8 +24425,8 @@ as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 5 | −3 | −3 |
+| **Str** 14 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 5 | −3 | −3 |
 
 **Skills** Stealth +4
 
@@ -24617,8 +24457,8 @@ as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 **Speed** 30 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +5
 
@@ -24649,8 +24489,8 @@ as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 9 | −1 | −1 | **Wis** 8 | −1 | −1 | **Cha** 6 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 9 | −1 | −1 | **Wis** 8 | −1 | −1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Athletics +5, Perception +3, Stealth +5
 
@@ -24677,8 +24517,8 @@ as the spellcasting ability (spell save DC 12, +4 to hit with spell attacks):
 **Speed** 40 ft., Climb 40 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 18 +4 | +8 | **Con** 16 +3 | +7 |
-| **Int** 16 +3 | +7 | **Wis** 19 +4 | +8 | **Cha** 18 +4 | +8 |
+| **Str** 19 | +4 | +4 | **Dex** 18 | +4 | +8 | **Con** 16 | +3 | +7 |
+| **Int** | 16 | +3 | +7 | **Wis** 19 | +4 | +8 | **Cha** 18 | +4 | +8 |
 
 **Skills** Arcana +11, History +11, Religion +11
 
@@ -24723,8 +24563,8 @@ Restrained
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** 13 | +1 | +1 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +2
 
@@ -24751,8 +24591,8 @@ Restrained
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 13 +1 | +1 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 13 | +1 | +1 |
 
 **Skills** Athletics +6, Perception +4
 
@@ -24787,8 +24627,8 @@ Restrained
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +5 | **Con** 16 +3 | +3 |
-| **Int** 10 +0 +0 | **Wis** 15 +2 | +5 | **Cha** 14 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +5 | **Con** 16 | +3 | +3 |
+| **Int** | 10 | +0 | +0 | **Wis** 15 | +2 | +5 | **Cha** 14 | +2 | +2 |
 
 **Skills** Athletics +7, Perception +5, Stealth +5
 
@@ -24833,8 +24673,8 @@ Passive Perception 15
 **Speed** 20 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 13 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 7 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 13 +1 | +1 |
+| **Str** 12 | +1 | +1 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 13 | +1 | +1 |
 
 **Senses** Passive Perception 10
 
@@ -24861,8 +24701,8 @@ Passive Perception 15
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -24901,8 +24741,8 @@ Passive Perception 15
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +7 | **Dex** 17 +3 | +3 | **Con** 20 +5 | +8 |
-| **Int** 5 | −3 | −3 | **Wis** 12 +1 | +4 | **Cha** 13 +1 | +1 |
+| **Str** 19 | +4 | +7 | **Dex** 17 | +3 | +3 | **Con** 20 | +5 | +8 |
+| **Int** | 5 | −3 | −3 | **Wis** 12 | +1 | +4 | **Cha** 13 | +1 | +1 |
 
 **Resistances** Cold, Fire, Lightning
 
@@ -24945,8 +24785,8 @@ Passive Perception 15
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 19 +4 | +4 |
-| **Int** 5 | −3 | −3 | **Wis** 9 | −1 | −1 | **Cha** 6 | −2 | −2 |
+| **Str** 21 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 19 | +4 | +4 |
+| **Int** | 5 | −3 | −3 | **Wis** 9 | −1 | −1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +2
 
@@ -24977,8 +24817,8 @@ Passive Perception 15
 **Speed** 40 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +5
 
@@ -25011,8 +24851,8 @@ Passive Perception 15
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 9 | −1 | −1 |
+| **Str** 13 | +1 | +1 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 9 | −1 | −1 |
 
 **Gear** Half Plate Armor, Longbow, Longsword, Shield
 
@@ -25045,8 +24885,8 @@ Passive Perception 15
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 12 +1 | +1 | **Wis** 10 +0 +0 | **Cha** 13 +1 | +1 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 12 | +1 | +1 | **Wis** 10 | +0 | +0 | **Cha** 13 | +1 | +1 |
 
 **Gear** Greatsword, Half Plate Armor, Longbow
 
@@ -25081,8 +24921,8 @@ Passive Perception 15
 **Speed** 20 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 4 | −3 | −3 | **Dex** 15 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +2 | **Cha** 7 | −2 | +0 |
+| **Str** | 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +2 | **Cha** 7 | −2 | +0 |
 
 **Immunities** Poison; Charmed, Poisoned
 
@@ -25115,8 +24955,8 @@ but can’t speak
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +10 | **Dex** 17 +3 | +7 | **Con** 21 +5 | +5 |
-| **Int** 12 +1 | +1 | **Wis** 16 +3 | +7 | **Cha** 18 +4 | +8 |
+| **Str** 22 | +6 | +10 | **Dex** 17 | +3 | +7 | **Con** 21 | +5 | +5 |
+| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +7 | **Cha** 18 | +4 | +8 |
 
 **Resistances** Cold
 
@@ -25161,8 +25001,8 @@ Darkness); Passive Perception 13
 **Speed** 40 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 12 +1 | +1 | **Con** 20 +5 | +5 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 20 | +5 | +5 | **Dex** 12 | +1 | +1 | **Con** 20 | +5 | +5 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +6
 
@@ -25203,8 +25043,8 @@ Stunned, Unconscious
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 14 +2 | +7 | **Con** 18 +4 | +9 |
-| **Int** 18 +4 | +4 | **Wis** 15 +2 | +7 | **Cha** 18 +4 | +9 |
+| **Str** 21 | +5 | +5 | **Dex** 14 | +2 | +7 | **Con** 18 | +4 | +9 |
+| **Int** | 18 | +4 | +4 | **Wis** 15 | +2 | +7 | **Cha** 18 | +4 | +9 |
 
 **Skills** Insight +7, Perception +7, Persuasion +9
 
@@ -25247,8 +25087,8 @@ Stunned, Unconscious
 <!-- page 301 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 17 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 11 +0 +0 | **Wis** 12 +1 | +1 | **Cha** 14 +2 | +2 |
+| **Str** | 6 | −2 | −2 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 14 | +2 | +2 |
 
 **Skills** Deception +4, Insight +3, Stealth +5
 
@@ -25289,8 +25129,8 @@ Darkness); Passive Perception 11
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 17 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 15 +2 | +2 | **Wis** 12 +1 | +1 | **Cha** 20 +5 | +5 |
+| **Str** | 8 | −1 | −1 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 20 | +5 | +5 |
 
 **Skills** Deception +9, Insight +5, Perception +5, Persuasion
 
@@ -25337,8 +25177,8 @@ Darkness); Passive Perception 11
 **Speed** 50 ft., Fly 50 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 19 +4 | +4 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 15 +2 | +2 | **Cha** 11 +0 +0 |
+| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 15 | +2 | +2 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +8, Stealth +10
 
@@ -25385,8 +25225,8 @@ takes 7 (2d6) Thunder damage at the start of each of the stalker’s turns.
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 24 +7 | +7 | **Dex** 9 | −1 | −1 | **Con** 20 +5 | +5 |
-| **Int** 3 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 1 | −5 | −5 |
+| **Str** 24 | +7 | +7 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |
+| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Fire, Poison, Psychic; Charmed, Exhaustion,
 
@@ -25431,8 +25271,8 @@ languages but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 11 +0 +0 | **Con** 14 +2 | +4 |
-| **Int** 11 +0 +0 | **Wis** 11 +0 +2 | **Cha** 15 +2 | +2 |
+| **Str** 16 | +3 | +3 | **Dex** 11 | +0 | +0 | **Con** 14 | +2 | +4 |
+| **Int** 11 | +0 | +0 | **Wis** 11 | +0 | +2 | **Cha** 15 | +2 | +2 |
 
 **Immunities** Frightened
 
@@ -25469,8 +25309,8 @@ languages but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 15 +2 | +2 | **Con** 9 | −1 | −1 |
-| **Int** 8 | −1 | −1 | **Wis** 7 | −2 | −2 | **Cha** 8 | −1 | −1 |
+| **Str** | 7 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 9 | −1 | −1 |
+| **Int** | 8 | −1 | −1 | **Wis** 7 | −2 | −2 | **Cha** 8 | −1 | −1 |
 
 **Gear** Daggers (3)
 
@@ -25505,8 +25345,8 @@ languages but can’t speak
 **Speed** 30 ft., Swim 120 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 30 +10 +17 | **Dex** 11 +0 +7 | **Con** 26 +8 | +15 |
-| **Int** 22 +6 | +6 | **Wis** 18 +4 | +11 | **Cha** 20 +5 | +5 |
+| **Str** 30 | +10 +17 | **Dex** 11 | +0 | +7 | **Con** 26 | +8 | +15 |
+| **Int** | 22 | +6 | +6 | **Wis** 18 | +4 | +11 | **Cha** 20 | +5 | +5 |
 
 **Skills** History +13, Perception +11
 
@@ -25567,8 +25407,8 @@ turn from a creature inside it, the kraken must succeed on a DC 25 Constitution 
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 14 +2 | +2 | **Wis** 15 +2 | +2 | **Cha** 16 +3 | +3 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 14 | +2 | +2 | **Wis** 15 | +2 | +2 | **Cha** 16 | +3 | +3 |
 
 **Skills** Deception +7, Insight +4, Stealth +5
 
@@ -25613,8 +25453,8 @@ biped), *Minor Illusion*
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 5 | −3 | −3 | **Con** 11 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 11 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 10 | +0 | +0 | **Dex** 5 | −3 | −3 | **Con** 11 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 11 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Resistances** Cold
 
@@ -25649,8 +25489,8 @@ Darkness); Passive Perception 10
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 16 +3 | +10 | **Con** 16 +3 | +10 |
-| **Int** 21 +5 | +12 | **Wis** 14 +2 | +9 | **Cha** 16 +3 | +3 |
+| **Str** | 11 | +0 | +0 | **Dex** 16 | +3 | +10 | **Con** 16 | +3 | +10 |
+| **Int** | 21 | +5 | +12 | **Wis** 14 | +2 | +9 | **Cha** 16 | +3 | +3 |
 
 **Skills** Arcana +19, History +12, Insight +9, Perception +9
 
@@ -25721,8 +25561,8 @@ Frightened, Paralyzed, Poisoned
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 9 | −1 | −1 | **Dex** 14 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 17 +3 | +6 | **Wis** 12 +1 | +4 | **Cha** 11 +0 +0 |
+| **Str** | 9 | −1 | −1 | **Dex** 14 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 17 | +3 | +6 | **Wis** 12 | +1 | +4 | **Cha** 11 | +0 | +0 |
 
 **Skills** Arcana +6, History +6, Perception +4
 
@@ -25769,8 +25609,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 20 +5 | +9 | **Wis** 15 +2 | +6 | **Cha** 16 +3 | +3 |
+| **Str** 10 | +0 | +0 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 20 | +5 | +9 | **Wis** 15 | +2 | +6 | **Cha** 16 | +3 | +3 |
 
 **Skills** Arcana +13, History +9, Perception +6
 
@@ -25825,8 +25665,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 15 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 8 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 7 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Immunities** Fire
 
@@ -25863,8 +25703,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft., Fly 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 16 +3 | +3 | **Con** 17 +3 | +3 |
-| **Int** 7 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 16 | +3 | +3 | **Con** 17 | +3 | +3 |
+| **Int** | 7 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 11
 
@@ -25893,8 +25733,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +9 | **Dex** 20 +5 | +5 | **Con** 20 +5 | +10 |
-| **Int** 18 +4 | +4 | **Wis** 16 +3 | +8 | **Cha** 20 +5 | +10 |
+| **Str** 18 | +4 | +9 | **Dex** 20 | +5 | +5 | **Con** 20 | +5 | +10 |
+| **Int** | 18 | +4 | +4 | **Wis** 16 | +3 | +8 | **Cha** 20 | +5 | +10 |
 
 **Skills** Perception +8
 
@@ -25945,8 +25785,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 17 +3 | +3 | **Con** 16 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 13 +1 | +4 | **Cha** 15 +2 | +2 |
+| **Str** 10 | +0 | +0 | **Dex** 17 | +3 | +3 | **Con** 16 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 13 | +1 | +4 | **Cha** 15 | +2 | +2 |
 
 **Skills** Deception +5, Perception +4, Stealth +6
 
@@ -25985,8 +25825,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 14 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 9 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 5 | −3 | −3 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +2, Stealth +4
 
@@ -26023,8 +25863,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 13 +1 | +1 | **Con** 10 +0 +0 |
-| **Int** 9 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 12 +1 | +1 |
+| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |
+| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +2, Stealth +3
 
@@ -26061,8 +25901,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 12 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 7 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 8 | −1 | −1 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Stealth +3
 
@@ -26099,8 +25939,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 30 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 11 +0 +0 | **Con** 10 +0 +0 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +0 | **Cha** 12 +1 | +1 |
+| **Str** | 5 | −3 | −3 | **Dex** 11 | +0 | +0 | **Con** 10 | +0 | +0 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 12 | +1 | +1 |
 
 **Skills** Stealth +2
 
@@ -26137,8 +25977,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 10 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 13 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 11 +0 +0 | **Wis** 14 +2 | +2 | **Cha** 12 +1 | +1 |
+| **Str** 10 | +0 | +0 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 11 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 12 | +1 | +1 |
 
 **Senses** Passive Perception 12
 
@@ -26167,8 +26007,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 10 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 15 +2 | +2 |
-| **Int** 8 | −1 | −1 | **Wis** 10 +0 +0 | **Cha** 9 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 8 | −1 | −1 | **Wis** 10 | +0 | +0 | **Cha** 9 | −1 | −1 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 10
 
@@ -26203,8 +26043,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 5 | −3 | −3 | **Wis** 13 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 5 | −3 | −3 | **Wis** 13 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Stealth +5
 
@@ -26245,8 +26085,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 11 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 6 | −2 | −2 | **Wis** 16 +3 | +3 | **Cha** 9 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 11 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 6 | −2 | −2 | **Wis** 16 | +3 | +3 | **Cha** 9 | −1 | −1 |
 
 **Skills** Perception +7, Survival +7
 
@@ -26275,8 +26115,8 @@ AC), *Mage Hand*, *Prestidigitation*
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 8 | −1 | −1 | **Con** 15 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 12 +1 | +3 | **Cha** 12 +1 | +1 |
+| **Str** 16 | +3 | +3 | **Dex** 8 | −1 | −1 | **Con** 15 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 12 | +1 | +3 | **Cha** 12 | +1 | +1 |
 
 **Vulnerabilities** Fire
 
@@ -26309,8 +26149,8 @@ Frightened, Paralyzed, Poisoned
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 10 +0 +0 | **Con** 17 +3 | +3 |
-| **Int** 11 +0 +5 | **Wis** 19 +4 | +9 | **Cha** 16 +3 | +3 |
+| **Str** 18 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |
+| **Int** | 11 | +0 | +5 | **Wis** 19 | +4 | +9 | **Cha** 16 | +3 | +3 |
 
 **Skills** History +5, Perception +9, Religion +5
 
@@ -26379,8 +26219,8 @@ Frightened, Paralyzed, Poisoned
 **Speed** 20 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 10 +0 +0 | **Con** 22 +6 | +11 |
-| **Int** 19 +4 | +9 | **Wis** 12 +1 | +6 | **Cha** 15 +2 | +7 |
+| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +0 | **Con** 22 | +6 | +11 |
+| **Int** | 19 | +4 | +9 | **Wis** 12 | +1 | +6 | **Cha** 15 | +2 | +7 |
 
 **Resistances** Cold, Fire, Lightning
 
@@ -26431,8 +26271,8 @@ The target is immune to this nalfeshnee’s Horror Nimbus for 24 hours.
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 16 +3 | +3 | **Wis** 14 +2 | +2 | **Cha** 16 +3 | +3 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 16 | +3 | +3 | **Wis** 14 | +2 | +2 | **Cha** 16 | +3 | +3 |
 
 **Skills** Deception +6, Insight +5, Perception +5, Stealth +5
 
@@ -26491,8 +26331,8 @@ If the target takes damage from the *Dream* spell, the target’s Hit Point maxi
 **Speed** 60 ft., Fly 90 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 10 +0 +0 | **Wis** 13 +1 | +1 | **Cha** 15 +2 | +2 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 15 | +2 | +2 |
 
 **Immunities** Fire
 
@@ -26531,8 +26371,8 @@ but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 12 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 12 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 16 +3 | +3 |
+| **Str** | 11 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 16 | +3 | +3 |
 
 **Skills** Deception +5, Insight +4, Persuasion +5
 
@@ -26565,8 +26405,8 @@ but can’t speak
 **Speed** 20 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 6 | −2 | −2 | **Con** 14 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
+| **Str** 15 | +2 | +2 | **Dex** 6 | −2 | −2 | **Con** 14 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |
 
 **Resistances** Acid
 
@@ -26607,8 +26447,8 @@ Exhaustion, Frightened, Grappled, Prone, Restrained
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 +3 | +3 |
-| **Int** 5 | −3 | −3 | **Wis** 7 | −2 | −2 | **Cha** 7 | −2 | −2 |
+| **Str** 19 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 | +3 | +3 |
+| **Int** | 5 | −3 | −3 | **Wis** 7 | −2 | −2 | **Cha** 7 | −2 | −2 |
 
 **Gear** Greatclub, Javelins (3)
 
@@ -26637,8 +26477,8 @@ Exhaustion, Frightened, Grappled, Prone, Restrained
 **Speed** 30 ft., Fly 30 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 11 +0 +3 | **Con** 16 +3 | +6 |
-| **Int** 14 +2 | +2 | **Wis** 12 +1 | +4 | **Cha** 15 +2 | +5 |
+| **Str** 19 | +4 | +4 | **Dex** 11 | +0 | +3 | **Con** 16 | +3 | +6 |
+| **Int** | 14 | +2 | +2 | **Wis** 12 | +1 | +4 | **Cha** 15 | +2 | +5 |
 
 **Skills** Arcana +5, Deception +8, Perception +4
 
@@ -26687,8 +26527,8 @@ Exhaustion, Frightened, Grappled, Prone, Restrained
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 11 +0 +0 | **Con** 19 +4 | +7 |
-| **Int** 6 | −2 | −2 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 11 | +0 | +0 | **Con** 19 | +4 | +7 |
+| **Int** | 6 | −2 | −2 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Darkvision 120 ft.; Passive Perception 11
 
@@ -26721,8 +26561,8 @@ receiving creature to respond telepathically)
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 12 +1 | +1 | **Con** 17 +3 | +3 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 20 | +5 | +5 | **Dex** 12 | +1 | +1 | **Con** 17 | +3 | +3 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -26751,8 +26591,8 @@ receiving creature to respond telepathically)
 **Speed** 60 ft., Fly 90 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +4 | **Con** 16 +3 | +5 |
-| **Int** 10 +0 +0 | **Wis** 15 +2 | +4 | **Cha** 13 +1 | +3 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +4 | **Con** 16 | +3 | +5 |
+| **Int** | 10 | +0 | +0 | **Wis** 15 | +2 | +4 | **Cha** 13 | +1 | +3 |
 
 **Skills** Perception +6
 
@@ -26783,8 +26623,8 @@ Sylvan but can’t speak
 <!-- page 314 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 16 +3 | +3 | **Con** 12 +1 | +1 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 16 | +3 | +3 | **Con** 12 | +1 | +1 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Skills** Stealth +7
 
@@ -26825,8 +26665,8 @@ Sylvan but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 16 +3 | +5 | **Con** 12 +1 | +1 |
-| **Int** 8 | −1 | −1 | **Wis** 12 +1 | +1 | **Cha** 14 +2 | +4 |
+| **Str** 10 | +0 | +0 | **Dex** 16 | +3 | +5 | **Con** 12 | +1 | +1 |
+| **Int** | 8 | −1 | −1 | **Wis** 12 | +1 | +1 | **Cha** 14 | +2 | +4 |
 
 **Gear** Daggers (6), Leather Armor
 
@@ -26855,8 +26695,8 @@ Sylvan but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +3 | **Dex** 18 +4 | +7 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +5 | **Cha** 17 +3 | +6 |
+| **Str** 10 | +0 | +3 | **Dex** 18 | +4 | +7 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +5 | **Cha** 17 | +3 | +6 |
 
 **Skills** Acrobatics +7, Perception +5
 
@@ -26899,8 +26739,8 @@ Sylvan but can’t speak
 <!-- page 315 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 26 +8 | +8 | **Dex** 14 +2 | +8 | **Con** 24 +7 | +7 |
-| **Int** 22 +6 | +6 | **Wis** 18 +4 | +10 | **Cha** 24 +7 | +7 |
+| **Str** 26 | +8 | +8 | **Dex** 14 | +2 | +8 | **Con** 24 | +7 | +7 |
+| **Int** | 22 | +6 | +6 | **Wis** 18 | +4 | +10 | **Cha** 24 | +7 | +7 |
 
 **Skills** Perception +10, Persuasion +19
 
@@ -26949,8 +26789,8 @@ Sylvan but can’t speak
 **Speed** 40 ft., Fly 120 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 24 +7 | +12 | **Dex** 20 +5 | +5 | **Con** 24 +7 | +12 |
-| **Int** 19 +4 | +4 | **Wis** 22 +6 | +11 | **Cha** 25 +7 | +12 |
+| **Str** 24 | +7 | +12 | **Dex** 20 | +5 | +5 | **Con** 24 | +7 | +12 |
+| **Int** | 19 | +4 | +4 | **Wis** 22 | +6 | +11 | **Cha** 25 | +7 | +12 |
 
 **Skills** Perception +11
 
@@ -27005,8 +26845,8 @@ Sylvan but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 10 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +2 | **Cha** 11 +0 +0 |
+| **Str** 14 | +2 | +2 | **Dex** 10 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +2 | **Cha** 11 | +0 | +0 |
 
 **Skills** Medicine +4, Religion +2
 
@@ -27043,8 +26883,8 @@ Sylvan but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 10 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 13 +1 | +1 | **Wis** 16 +3 | +3 | **Cha** 13 +1 | +1 |
+| **Str** 16 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 13 | +1 | +1 |
 
 **Skills** Medicine +7, Perception +5, Religion +5
 
@@ -27087,8 +26927,8 @@ Sylvan but can’t speak
 **Speed** 15 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 15 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 12 +1 | +1 | **Cha** 10 +0 +0 |
+| **Str** | 6 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -27129,8 +26969,8 @@ speak
 <!-- page 317 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 28 +9 | +9 | **Dex** 7 | −2 | −2 | **Con** 22 +6 | +11 |
-| **Int** 1 | −5 | −5 | **Wis** 8 | −1 | +4 | **Cha** 4 | −3 | −3 |
+| **Str** 28 | +9 | +9 | **Dex** 7 | −2 | −2 | **Con** 22 | +6 | +11 |
+| **Int** | 1 | −5 | −5 | **Wis** 8 | −1 | +4 | **Cha** 4 | −3 | −3 |
 
 **Senses** Blindsight 30 ft., Tremorsense 60 ft.;
 
@@ -27171,8 +27011,8 @@ If the worm takes 30 damage or more on a single turn from a creature inside it, 
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 17 +3 | +3 | **Con** 10 +0 +0 |
-| **Int** 7 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** | 5 | −3 | −3 | **Dex** 17 | +3 | +3 | **Con** 10 | +0 | +0 |
+| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Stealth +5
 
@@ -27213,8 +27053,8 @@ If the worm takes 30 damage or more on a single turn from a creature inside it, 
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 17 +3 | +3 | **Con** 18 +4 | +4 |
-| **Int** 13 +1 | +1 | **Wis** 16 +3 | +3 | **Cha** 20 +5 | +5 |
+| **Str** 14 | +2 | +2 | **Dex** 17 | +3 | +3 | **Con** 18 | +4 | +4 |
+| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 20 | +5 | +5 |
 
 **Skills** Deception +10, Insight +8, Perception +8
 
@@ -27267,8 +27107,8 @@ creatures under the effect of a *Bless* spell
 **Speed** 30 ft., Climb 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +2 | **Con** 17 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +2 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +2 | **Con** 17 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +2 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -27301,8 +27141,8 @@ Passive Perception 14
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 10 +0 +4 | **Con** 21 +5 | +5 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +4 | **Cha** 19 +4 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 10 | +0 | +4 | **Con** 21 | +5 | +5 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +4 | **Cha** 19 | +4 | +4 |
 
 **Skills** Perception +8, Stealth +4
 
@@ -27335,8 +27175,8 @@ Passive Perception 18
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 10 +0 +6 | **Con** 25 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 13 +1 | +7 | **Cha** 23 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 10 | +0 | +6 | **Con** 25 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +7 | **Cha** 23 | +6 | +6 |
 
 **Skills** Perception +13, Stealth +6
 
@@ -27393,8 +27233,8 @@ Passive Perception 23
 **Speed** 40 ft., Climb 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 30 +10 +10 | **Dex** 10 +0 +7 | **Con** 29 +9 | +9 |
-| **Int** 18 +4 | +4 | **Wis** 15 +2 | +9 | **Cha** 27 +8 | +8 |
+| **Str** 30 | +10 +10 | **Dex** 10 | +0 | +7 | **Con** 29 | +9 | +9 |
+| **Int** | 18 | +4 | +4 | **Wis** 15 | +2 | +9 | **Cha** 27 | +8 | +8 |
 
 **Skills** Perception +16, Stealth +7
 
@@ -27451,8 +27291,8 @@ Passive Perception 26
 **Speed** 40 ft., Burrow 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 24 +7 | +7 | **Dex** 13 +1 | +1 | **Con** 21 +5 | +5 |
-| **Int** 4 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 24 | +7 | +7 | **Dex** 13 | +1 | +1 | **Con** 21 | +5 | +5 |
+| **Int** | 4 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Immunities** Cold, Fire
 
@@ -27495,8 +27335,8 @@ If the remorhaz takes 30 damage or more on a single turn from a creature inside 
 **Speed** 20 ft., Fly 120 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 28 +9 | +9 | **Dex** 10 +0 +4 | **Con** 20 +5 | +5 |
-| **Int** 3 | −4 −4 | **Wis** 10 +0 +4 | **Cha** 9 | −1 | −1 |
+| **Str** 28 | +9 | +9 | **Dex** 10 | +0 | +4 | **Con** 20 | +5 | +5 |
+| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +4 | **Cha** 9 | −1 | −1 |
 
 **Skills** Perception +8
 
@@ -27531,8 +27371,8 @@ If the remorhaz takes 30 damage or more on a single turn from a creature inside 
 **Speed** 10 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 17 +3 | +3 |
-| **Int** 7 | −2 | −2 | **Wis** 16 +3 | +3 | **Cha** 6 | −2 | −2 |
+| **Str** 18 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |
+| **Int** | 7 | −2 | −2 | **Wis** 16 | +3 | +3 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +6, Stealth +5
 
@@ -27571,8 +27411,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 12 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 13 | +1 | +1 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 11
 
@@ -27613,8 +27453,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 30 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 11 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 12 +1 | +1 | **Wis** 13 +1 | +1 | **Cha** 9 | −1 | −1 |
+| **Str** 13 | +1 | +1 | **Dex** 11 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 12 | +1 | +1 | **Wis** 13 | +1 | +1 | **Cha** 9 | −1 | −1 |
 
 **Skills** Perception +5
 
@@ -27657,8 +27497,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 15 +2 | +2 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +0 | **Cha** 12 +1 | +1 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 12 | +1 | +1 |
 
 **Vulnerabilities** Cold
 
@@ -27695,8 +27535,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 16 +3 | +3 | **Con** 11 +0 +0 |
-| **Int** 12 +1 | +1 | **Wis** 10 +0 +0 | **Cha** 14 +2 | +2 |
+| **Str** 12 | +1 | +1 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |
+| **Int** | 12 | +1 | +1 | **Wis** 10 | +0 | +0 | **Cha** 14 | +2 | +2 |
 
 **Skills** Perception +2, Performance +6, Stealth +5
 
@@ -27731,8 +27571,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 11 +0 +0 | **Wis** 13 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** | 11 | +0 | +0 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 11 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Nature +4, Perception +5, Stealth +6, Survival +5
 
@@ -27765,8 +27605,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 30 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 16 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 12 +1 | +1 | **Cha** 13 +1 | +1 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 16 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 12 | +1 | +1 | **Cha** 13 | +1 | +1 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 11
 
@@ -27803,8 +27643,8 @@ The tentacle can be damaged, freeing a creature it has Grappled when destroyed (
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 14 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 6 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Skills** Stealth +6
 
@@ -27853,8 +27693,8 @@ Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 30 ft., Swim 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 +3 | +3 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 18 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 | +3 | +3 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Stealth +3
 
@@ -27893,8 +27733,8 @@ Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 18 +4 | +4 |
-| **Int** 7 | −2 | −2 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 18 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 18 | +4 | +4 |
+| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Immunities** Poison; Charmed, Exhaustion, Frightened,
 
@@ -27943,8 +27783,8 @@ but can’t speak
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +2 | **Con** 17 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 11 +0 +2 | **Cha** 15 +2 | +2 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +2 | **Con** 17 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +2 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -27979,8 +27819,8 @@ Passive Perception 14
 **Speed** 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 10 +0 +4 | **Con** 21 +5 | +5 |
-| **Int** 14 +2 | +2 | **Wis** 11 +0 +4 | **Cha** 19 +4 | +4 |
+| **Str** 23 | +6 | +6 | **Dex** 10 | +0 | +4 | **Con** 21 | +5 | +5 |
+| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +4 | **Cha** 19 | +4 | +4 |
 
 **Skills** History +6, Perception +8, Stealth +4
 
@@ -28015,8 +27855,8 @@ Passive Perception 18
 **Speed** 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 27 +8 | +8 | **Dex** 10 +0 +5 | **Con** 25 +7 | +7 |
-| **Int** 16 +3 | +3 | **Wis** 13 +1 | +6 | **Cha** 22 +6 | +6 |
+| **Str** 27 | +8 | +8 | **Dex** 10 | +0 | +5 | **Con** 25 | +7 | +7 |
+| **Int** | 16 | +3 | +3 | **Wis** 13 | +1 | +6 | **Cha** 22 | +6 | +6 |
 
 **Skills** History +8, Perception +11, Stealth +5
 
@@ -28075,8 +27915,8 @@ Passive Perception 21
 **Speed** 40 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 30 +10 +10 | **Dex** 10 +0 +7 | **Con** 29 +9 | +9 |
-| **Int** 18 +4 | +4 | **Wis** 15 +2 | +9 | **Cha** 26 +8 | +8 |
+| **Str** 30 | +10 +10 | **Dex** 10 | +0 | +7 | **Con** 29 | +9 | +9 |
+| **Int** | 18 | +4 | +4 | **Wis** 15 | +2 | +9 | **Cha** 26 | +8 | +8 |
 
 **Skills** History +11, Perception +16, Stealth +7
 
@@ -28135,8 +27975,8 @@ version), *Shapechange* (Beast or Humanoid form only, no Temporary Hit Points ga
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 16 +3 | +3 | **Con** 15 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
+| **Str** 10 | +0 | +0 | **Dex** 16 | +3 | +3 | **Con** 15 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
 
 **Vulnerabilities** Bludgeoning
 
@@ -28171,8 +28011,8 @@ but can’t speak
 **Speed** 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 12 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
+| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
 
 **Vulnerabilities** Bludgeoning
 
@@ -28199,8 +28039,8 @@ but can’t speak
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 11 +0 +0 | **Con** 15 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
+| **Str** 18 | +4 | +4 | **Dex** 11 | +0 | +0 | **Con** 15 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 8 | −1 | −1 | **Cha** 5 | −3 | −3 |
 
 **Vulnerabilities** Bludgeoning
 
@@ -28231,8 +28071,8 @@ but can’t speak
 **Speed** 50 ft., Fly 150 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 26 +8 | +8 | **Dex** 22 +6 | +6 | **Con** 26 +8 | +8 |
-| **Int** 25 +7 | +7 | **Wis** 25 +7 | +7 | **Cha** 30 +10 +10 |
+| **Str** 26 | +8 | +8 | **Dex** 22 | +6 | +6 | **Con** 26 | +8 | +8 |
+| **Int** | 25 | +7 | +7 | **Wis** 25 | +7 | +7 | **Cha** 30 | +10 +10 |
 
 **Skills** Perception +14
 
@@ -28297,8 +28137,8 @@ Frightened, Poisoned
 **Speed** 30 ft., Fly 50 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 1 | −5 | −5 | **Dex** 14 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 11 +0 +0 |
+| **Str** | 1 | −5 | −5 | **Dex** 14 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 11 | +0 | +0 |
 
 **Resistances** Acid, Bludgeoning, Cold, Fire, Lightning,
 
@@ -28339,8 +28179,8 @@ but can’t speak
 **Speed** 20 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 17 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 15 +2 | +2 | **Wis** 12 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** | 6 | −2 | −2 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Arcana +4, Religion +4, Stealth +5
 
@@ -28375,8 +28215,8 @@ but can’t speak
 **Speed** 40 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 18 +4 | +4 | **Wis** 18 +4 | +4 | **Cha** 18 +4 | +4 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 18 | +4 | +4 | **Wis** 18 | +4 | +4 | **Cha** 18 | +4 | +4 |
 
 **Skills** Arcana +12, History +12, Perception +8,
 
@@ -28433,8 +28273,8 @@ Religion +12
 **Speed** 40 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 10 +0 +6 | **Con** 20 +5 | +11 |
-| **Int** 16 +3 | +9 | **Wis** 23 +6 | +12 | **Cha** 18 +4 | +4 |
+| **Str** 22 | +6 | +6 | **Dex** 10 | +0 | +6 | **Con** 20 | +5 | +11 |
+| **Int** | 16 | +3 | +9 | **Wis** 23 | +6 | +12 | **Cha** 18 | +4 | +4 |
 
 **Skills** Arcana +9, Perception +12, Religion +15
 
@@ -28503,8 +28343,8 @@ enemy in a 500-foot Emanation originating from the sphinx. *Failure:* 44 (8d10) 
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 17 +3 | +6 | **Con** 14 +2 | +5 |
-| **Int** 16 +3 | +3 | **Wis** 15 +2 | +5 | **Cha** 16 +3 | +6 |
+| **Str** 18 | +4 | +4 | **Dex** 17 | +3 | +6 | **Con** 14 | +2 | +5 |
+| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +5 | **Cha** 16 | +3 | +6 |
 
 **Immunities** Poison; Charmed, Poisoned
 
@@ -28545,8 +28385,8 @@ enemy in a 500-foot Emanation originating from the sphinx. *Failure:* 44 (8d10) 
 **Speed** 10 ft., Fly 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 18 +4 | +4 | **Con** 10 +0 +0 |
-| **Int** 14 +2 | +2 | **Wis** 13 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** | 3 | −4 | −4 | **Dex** 18 | +4 | +4 | **Con** 10 | +0 | +0 |
+| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +3, Stealth +8
 
@@ -28579,8 +28419,8 @@ enemy in a 500-foot Emanation originating from the sphinx. *Failure:* 44 (8d10) 
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 12 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 16 +3 | +3 |
+| **Str** 10 | +0 | +0 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 16 | +3 | +3 |
 
 **Skills** Deception +5, Insight +4, Investigation +5,
 
@@ -28619,8 +28459,8 @@ Perception +6, Sleight of Hand +4, Stealth +6
 <!-- page 330 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 4 | −3 | −3 | **Dex** 16 +3 | +3 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 8 | −1 | −1 | **Cha** 6 | −2 | −2 |
+| **Str** | 4 | −3 | −3 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 8 | −1 | −1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 9
 
@@ -28647,8 +28487,8 @@ The stirge can detach itself by spending 5 feet of its movement. The target or a
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 15 +2 | +5 | **Con** 20 +5 | +8 |
-| **Int** 10 +0 +0 | **Wis** 12 +1 | +4 | **Cha** 9 | −1 | −1 |
+| **Str** 23 | +6 | +6 | **Dex** 15 | +2 | +5 | **Con** 20 | +5 | +8 |
+| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +4 | **Cha** 9 | −1 | −1 |
 
 **Skills** Athletics +12, Perception +4, Stealth +5
 
@@ -28683,8 +28523,8 @@ The stirge can detach itself by spending 5 feet of its movement. The target or a
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 20 +5 | +5 |
-| **Int** 3 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 1 | −5 | −5 |
+| **Str** 22 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |
+| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |
 
 **Immunities** Poison, Psychic; Charmed, Exhaustion,
 
@@ -28729,8 +28569,8 @@ languages but can’t speak
 **Speed** 50 ft., Fly 25 ft. (hover), Swim 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 29 +9 | +14 | **Dex** 14 +2 | +2 | **Con** 20 +5 | +10 |
-| **Int** 16 +3 | +3 | **Wis** 20 +5 | +10 | **Cha** 18 +4 | +9 |
+| **Str** 29 | +9 | +14 | **Dex** 14 | +2 | +2 | **Con** 20 | +5 | +10 |
+| **Int** | 16 | +3 | +3 | **Wis** 20 | +5 | +10 | **Cha** 18 | +4 | +9 |
 
 **Skills** Arcana +8, Athletics +14, History +8, Perception +10
 
@@ -28781,8 +28621,8 @@ Passive Perception 20
 **Speed** 30 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 17 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 15 +2 | +2 | **Wis** 12 +1 | +1 | **Cha** 20 +5 | +5 |
+| **Str** | 8 | −1 | −1 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 20 | +5 | +5 |
 
 **Skills** Deception +9, Insight +5, Perception +5, Persuasion
 
@@ -28827,8 +28667,8 @@ Passive Perception 20
 **Speed** 60 ft., Burrow 40 ft., Climb 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 30 +10 +10 | **Dex** 11 +0 +9 | **Con** 30 +10 +10 |
-| **Int** 3 | −4 +5 | **Wis** 11 +0 +9 | **Cha** 11 +0 +9 |
+| **Str** 30 | +10 +10 | **Dex** 11 | +0 | +9 | **Con** 30 | +10 +10 |
+| **Int** | 3 | −4 | +5 | **Wis** 11 | +0 | +9 | **Cha** 11 | +0 | +9 |
 
 **Skills** Perception +9
 
@@ -28897,8 +28737,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +0 | **Cha** 11 +0 +0 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 11 | +0 | +0 |
 
 **Gear** Heavy Crossbow, Leather Armor, Mace
 
@@ -28929,8 +28769,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +5 | **Dex** 14 +2 | +2 | **Con** 16 +3 | +5 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +0 | **Cha** 11 +0 +2 |
+| **Str** 17 | +3 | +5 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +5 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 11 | +0 | +2 |
 
 **Gear** Chain Mail, Heavy Crossbow, Warhammer
 
@@ -28967,8 +28807,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 8 | −1 | −1 | **Con** 21 +5 | +5 |
-| **Int** 12 +1 | +1 | **Wis** 16 +3 | +3 | **Cha** 12 +1 | +1 |
+| **Str** 23 | +6 | +6 | **Dex** 8 | −1 | −1 | **Con** 21 | +5 | +5 |
+| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 12 | +1 | +1 |
 
 **Vulnerabilities** Fire
 
@@ -29007,8 +28847,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 13 +1 | +1 | **Con** 20 +5 | +5 |
-| **Int** 7 | −2 | −2 | **Wis** 9 | −1 | −1 | **Cha** 7 | −2 | −2 |
+| **Str** 18 | +4 | +4 | **Dex** 13 | +1 | +1 | **Con** 20 | +5 | +5 |
+| **Int** | 7 | −2 | −2 | **Wis** 9 | −1 | −1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -29045,8 +28885,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 12 +1 | +1 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 1 | −5 | −5 |
+| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 1 | −5 | −5 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 9
 
@@ -29079,8 +28919,8 @@ If the tarrasque takes 60 damage or more on a single turn from a creature inside
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 15 +2 | +2 |
-| **Int** 11 +0 +0 | **Wis** 17 +3 | +3 | **Cha** 16 +3 | +3 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 11 | +0 | +0 | **Wis** 17 | +3 | +3 | **Cha** 16 | +3 | +3 |
 
 **Immunities** Poison; Charmed, Paralyzed, Poisoned
 
@@ -29137,8 +28977,8 @@ The unicorn can’t take this action again until the start of its next turn.
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 16 +3 | +5 | **Con** 15 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 10 +0 +2 | **Cha** 14 +2 | +2 |
+| **Str** 17 | +3 | +3 | **Dex** 16 | +3 | +5 | **Con** 15 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +2 | **Cha** 14 | +2 | +2 |
 
 **Skills** Perception +4, Persuasion +4, Stealth +7
 
@@ -29181,8 +29021,8 @@ The unicorn can’t take this action again until the start of its next turn.
 <!-- page 335 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 16 +3 | +6 | **Con** 16 +3 | +3 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +3 | **Cha** 12 +1 | +1 |
+| **Str** 16 | +3 | +3 | **Dex** 16 | +3 | +6 | **Con** 16 | +3 | +3 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +3 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +3, Stealth +6
 
@@ -29237,8 +29077,8 @@ starts its turn in sunlight. While in sunlight, it has Disadvantage on attack ro
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 18 +4 | +9 | **Con** 18 +4 | +9 |
-| **Int** 17 +3 | +3 | **Wis** 15 +2 | +7 | **Cha** 18 +4 | +9 |
+| **Str** 18 | +4 | +4 | **Dex** 18 | +4 | +9 | **Con** 18 | +4 | +9 |
+| **Int** | 17 | +3 | +3 | **Wis** 15 | +2 | +7 | **Cha** 18 | +4 | +9 |
 
 **Skills** Perception +7, Stealth +9
 
@@ -29321,8 +29161,8 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 **Speed** 40 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 15 +2 | +5 | **Con** 18 +4 | +4 |
-| **Int** 8 | −1 | −1 | **Wis** 13 +1 | +4 | **Cha** 8 | −1 | +2 |
+| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +5 | **Con** 18 | +4 | +4 |
+| **Int** | 8 | −1 | −1 | **Wis** 13 | +1 | +4 | **Cha** 8 | −1 | +2 |
 
 **Resistances** Cold, Fire, Lightning
 
@@ -29363,8 +29203,8 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 11 +0 +0 | **Con** 11 +0 +0 |
-| **Int** 8 | −1 | −1 | **Wis** 11 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 13 | +1 | +1 | **Dex** 11 | +0 | +0 | **Con** 11 | +0 | +0 |
+| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Gear** Chain Shirt, Spear
 
@@ -29395,8 +29235,8 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Athletics +5, Perception +2
 
@@ -29433,8 +29273,8 @@ While in mist form, the vampire can’t take any actions, speak, or manipulate o
 **Speed** 30 ft., Swim 90 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 18 +4 | +4 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 18 | +4 | +4 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Resistances** Acid, Fire
 
@@ -29477,8 +29317,8 @@ Petrified, Poisoned, Prone, Restrained, Unconscious
 form only)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +0 | **Con** 17 +3 | +3 |
-| **Int** 11 +0 +0 | **Wis** 12 +1 | +1 | **Cha** 12 +1 | +1 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |
+| **Int** | 11 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +7
 
@@ -29521,8 +29361,8 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 **Speed** 30 ft., 40 ft. (boar form only)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 10 +0 +0 | **Con** 15 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 15 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +2
 
@@ -29561,8 +29401,8 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 16 +3 | +3 | **Con** 12 +1 | +1 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 10 | +0 | +0 | **Dex** 16 | +3 | +3 | **Con** 12 | +1 | +1 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +4, Stealth +5
 
@@ -29603,8 +29443,8 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 **Speed** 30 ft., 40 ft. (tiger form only)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 10 +0 +0 | **Wis** 13 +1 | +1 | **Cha** 11 +0 +0 |
+| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -29645,8 +29485,8 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 **Speed** 30 ft., 40 ft. (wolf form only)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 10 +0 +0 | **Wis** 11 +0 +0 | **Cha** 10 +0 +0 |
+| **Str** 16 | +3 | +3 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 10 | +0 | +0 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +4, Stealth +4
 
@@ -29691,8 +29531,8 @@ control and has 10 Hit Points. *Success:* The target is immune to this werebear�
 <!-- page 340 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 10 +0 +2 | **Con** 14 +2 | +2 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +2 | **Cha** 11 +0 +0 |
+| **Str** 14 | +2 | +2 | **Dex** 10 | +0 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +2 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +4, Stealth +2
 
@@ -29729,8 +29569,8 @@ Passive Perception 14
 **Speed** 40 ft., Burrow 20 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 10 +0 +3 | **Con** 18 +4 | +4 |
-| **Int** 6 | −2 | 2 | **Wis** 11 +0 +3 | **Cha** 12 +1 | +1 |
+| **Str** 18 | +4 | +4 | **Dex** 10 | +0 | +3 | **Con** 18 | +4 | +4 |
+| **Int** | 6 | −2 | 2 | **Wis** 11 | +0 | +3 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +6, Stealth +3
 
@@ -29767,8 +29607,8 @@ Passive Perception 16
 **Speed** 40 ft., Burrow 30 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 10 +0 +5 | **Con** 22 +6 | +6 |
-| **Int** 8 | −1 | −1 | **Wis** 12 +1 | +6 | **Cha** 12 +1 | +1 |
+| **Str** 22 | +6 | +6 | **Dex** 10 | +0 | +5 | **Con** 22 | +6 | +6 |
+| **Int** | 8 | −1 | −1 | **Wis** 12 | +1 | +6 | **Cha** 12 | +1 | +1 |
 
 **Skills** Perception +11, Stealth +5
 
@@ -29819,8 +29659,8 @@ Passive Perception 21
 **Speed** 40 ft., Burrow 40 ft., Fly 80 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 26 +8 | +8 | **Dex** 10 +0 +6 | **Con** 26 +8 | +8 |
-| **Int** 10 +0 +0 | **Wis** 13 +1 | +7 | **Cha** 18 +4 | +4 |
+| **Str** 26 | +8 | +8 | **Dex** 10 | +0 | +6 | **Con** 26 | +8 | +8 |
+| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +7 | **Cha** 18 | +4 | +4 |
 
 **Skills** Perception +13, Stealth +6
 
@@ -29871,8 +29711,8 @@ Passive Perception 23
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 10 +0 +0 | **Wis** 13 +1 | +1 | **Cha** 15 +2 | +2 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 15 | +2 | +2 |
 
 **Skills** Perception +3, Stealth +4
 
@@ -29919,8 +29759,8 @@ A Humanoid slain by this attack rises 24 hours later as a **Zombie** under the w
 <!-- page 342 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 1 | −5 | −5 | **Dex** 28 +9 | +9 | **Con** 10 +0 +0 |
-| **Int** 13 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 11 +0 +0 |
+| **Str** | 1 | −5 | −5 | **Dex** 28 | +9 | +9 | **Con** 10 | +0 | +0 |
+| **Int** | 13 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 11 | +0 | +0 |
 
 **Resistances** Acid, Bludgeoning, Cold, Fire, Necrotic,
 
@@ -29967,8 +29807,8 @@ Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 13 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 7 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 18 | +4 | +4 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 7 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +5, Stealth +5
 
@@ -30003,8 +29843,8 @@ Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 7 | −2 | −2 | **Wis** 11 +0 +0 | **Cha** 8 | −1 | −1 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 7 | −2 | −2 | **Wis** 11 | +0 | +0 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +4
 
@@ -30031,8 +29871,8 @@ Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 5 ft., Fly 60 ft. (hover)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 16 +3 | +3 | **Con** 16 +3 | +3 |
-| **Int** 12 +1 | +1 | **Wis** 14 +2 | +2 | **Cha** 15 +2 | +2 |
+| **Str** | 6 | −2 | −2 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |
+| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 15 | +2 | +2 |
 
 **Resistances** Acid, Bludgeoning, Cold, Fire, Piercing,
 
@@ -30075,8 +29915,8 @@ Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 30 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 10 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 5 | −3 | −3 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 5 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +4
 
@@ -30107,8 +29947,8 @@ Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 **Speed** 20 ft., Burrow 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 10 +0 +0 | **Con** 22 +6 | +6 |
-| **Int** 11 +0 +0 | **Wis** 10 +0 +0 | **Cha** 11 +0 +0 |
+| **Str** 17 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 22 | +6 | +6 |
+| **Int** | 11 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 11 | +0 | +0 |
 
 **Skills** Perception +6, Stealth +6
 
@@ -30153,8 +29993,8 @@ Passive Perception 16
 **Speed** 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 +3 | +3 |
-| **Int** 3 | −4 −4 | **Wis** 6 | −2 | +0 | **Cha** 5 | −3 | −3 |
+| **Str** 13 | +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 | +3 | +3 |
+| **Int** | 3 | −4 | −4 | **Wis** 6 | −2 | +0 | **Cha** 5 | −3 | −3 |
 
 **Immunities** Poison; Exhaustion, Poisoned
 
@@ -30187,8 +30027,8 @@ but can’t speak
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 18 +4 | +4 |
-| **Int** 3 | −4 −4 | **Wis** 6 | −2 | +0 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 18 | +4 | +4 |
+| **Int** | 3 | −4 | −4 | **Wis** 6 | −2 | +0 | **Cha** 5 | −3 | −3 |
 
 **Immunities** Poison; Exhaustion, Poisoned
 
@@ -30221,8 +30061,8 @@ speak
 **Speed** 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 13 +1 | +1 | **Con** 17 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +4 | **Dex** 13 | +1 | +1 | **Con** 17 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +5
 
@@ -30251,8 +30091,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +6 | **Dex** 11 +0 +0 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 19 | +4 | +6 | **Dex** 11 | +0 | +0 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 11
 
@@ -30277,8 +30117,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 6 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 6 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Athletics +5, Perception +3
 
@@ -30309,8 +30149,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 <!-- page 345 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 16 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 4 | −3 | −3 | **Wis** 14 +2 | +2 | **Cha** 6 | −2 | −2 |
+| **Str** 18 | +4 | +4 | **Dex** 16 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 4 | −3 | −3 | **Wis** 14 | +2 | +2 | **Cha** 6 | −2 | −2 |
 
 **Skills** Stealth +5
 
@@ -30341,8 +30181,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 14 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 4 | −3 | −3 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** | 8 | −1 | −1 | **Dex** 14 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 4 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Passive Perception 11
 
@@ -30369,8 +30209,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 20 ft., Burrow 5 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 11 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 10 | +0 | +0 | **Dex** 11 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -30397,8 +30237,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 5 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 15 +2 | +2 | **Con** 8 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 4 | −3 | −3 |
+| **Str** | 2 | −4 | −4 | **Dex** 15 | +2 | +2 | **Con** 8 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |
 
 **Senses** Blindsight 60 ft.; Passive Perception 11
 
@@ -30421,8 +30261,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Climb 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -30449,8 +30289,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 14 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 5 | −3 | −3 |
+| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +6
 
@@ -30481,8 +30321,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 11 +0 +0 | **Con** 14 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 9 | −1 | −1 | **Cha** 5 | −3 | −3 |
+| **Str** 13 | +1 | +1 | **Dex** 11 | +0 | +0 | **Con** 14 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 9 | −1 | −1 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 9
 
@@ -30509,8 +30349,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 12 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +3
 
@@ -30539,8 +30379,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 8 | −1 | −1 | **Con** 17 +3 | +5 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 15 | +2 | +2 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +5 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 10
 
@@ -30563,8 +30403,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 15 +2 | +4 | **Con** 10 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** | 3 | −4 | −4 | **Dex** 15 | +2 | +4 | **Con** 10 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +3, Stealth +4
 
@@ -30593,8 +30433,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Skills** Perception +2, Stealth +4
 
@@ -30623,8 +30463,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 20 ft., Swim 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 11 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 2 | −4 −4 |
+| **Str** | 6 | −2 | −2 | **Dex** 11 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 2 | −4 | −4 |
 
 **Skills** Stealth +2
 
@@ -30653,8 +30493,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 20 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 10 +0 +0 | **Con** 13 +1 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 15 | +2 | +2 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Stealth +2
 
@@ -30683,8 +30523,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 16 +3 | +3 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 5 | −3 | −3 |
+| **Str** | 11 | +0 | +0 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +4
 
@@ -30713,8 +30553,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 15 +2 | +2 | **Con** 15 +2 | +2 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -30745,8 +30585,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 <!-- page 348 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 10 +0 +0 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 18 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Senses** Passive Perception 10
 
@@ -30769,8 +30609,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 15 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 7 | −2 | −2 |
+| **Str** | 6 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +6
 
@@ -30795,8 +30635,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 17 +3 | +3 |
-| **Int** 3 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 22 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 17 | +3 | +3 |
+| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Senses** Passive Perception 10
 
@@ -30825,8 +30665,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 10 +0 +0 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 10 | +0 | +0 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +2
 
@@ -30851,8 +30691,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Fly 60 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 4 | −3 | −3 | **Dex** 15 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** | 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Senses** Blindsight 10 ft.; Passive Perception 11
 
@@ -30879,8 +30719,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 20 ft., Swim 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 1 | −5 | −5 | **Dex** 13 +1 | +1 | **Con** 8 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 −4 |
+| **Str** | 1 | −5 | −5 | **Dex** 13 | +1 | +1 | **Con** 8 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 | −4 |
 
 **Skills** Perception +1, Stealth +3
 
@@ -30913,8 +30753,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 14 +2 | +2 | **Con** 18 +4 | +4 |
-| **Int** 5 | −3 | −3 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 23 | +6 | +6 | **Dex** 14 | +2 | +2 | **Con** 18 | +4 | +4 |
+| **Int** | 5 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Athletics +9, Perception +4, Survival +4
 
@@ -30947,8 +30787,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Burrow 10 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 10 +0 +0 | **Con** 17 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 13 | +1 | +1 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -30975,8 +30815,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 16 +3 | +3 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Blindsight 120 ft.; Passive Perception 11
 
@@ -30999,8 +30839,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +5 | **Dex** 10 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 7 | −2 | −2 | **Cha** 5 | −3 | −3 |
+| **Str** 17 | +3 | +5 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 7 | −2 | −2 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 8
 
@@ -31029,8 +30869,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 <!-- page 350 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 3 | −4 −4 |
+| **Str** 5 | −3 | −3 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 3 | −4 | −4 |
 
 **Senses** Blindsight 30 ft.; Passive Perception 8
 
@@ -31053,8 +30893,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Skills** Perception +2
 
@@ -31083,8 +30923,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 13 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 3 | −4 −4 |
+| **Str** 13 | +1 | +1 | **Dex** 13 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 3 | −4 | −4 |
 
 **Skills** Stealth +3
 
@@ -31113,8 +30953,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 30 ft., Swim 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 17 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 17 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Skills** Stealth +5
 
@@ -31147,8 +30987,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 10 ft., Fly 80 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 17 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 8 | −1 | −1 | **Wis** 14 +2 | +2 | **Cha** 10 +0 +0 |
+| **Str** 16 | +3 | +3 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 8 | −1 | −1 | **Wis** 14 | +2 | +2 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +6
 
@@ -31181,8 +31021,8 @@ Prone condition, and the allosaurus can make one Bite attack against it.
 **Speed** 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +6 | **Dex** 18 +4 | +6 | **Con** 14 +2 | +2 |
-| **Int** 7 | −2 | −2 | **Wis** 14 +2 | +2 | **Cha** 10 +0 +0 |
+| **Str** 19 | +4 | +6 | **Dex** 18 | +4 | +6 | **Con** 14 | +2 | +2 |
+| **Int** | 7 | −2 | −2 | **Wis** 14 | +2 | +2 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +4
 
@@ -31211,8 +31051,8 @@ Sylvan but can’t speak them
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 10 +0 +0 | **Con** 12 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 3 | −4 −4 |
+| **Str** | 8 | −1 | −1 | **Dex** 10 | +0 | +0 | **Con** 12 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 3 | −4 | −4 |
 
 **Resistances** Fire
 
@@ -31241,8 +31081,8 @@ Sylvan but can’t speak them
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 13 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 12 | +1 | +1 | **Dex** 13 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Skills** Perception +2, Stealth +4
 
@@ -31277,8 +31117,8 @@ At the end of the frog’s next turn, the swallowed target takes 5 (2d4) Acid da
 **Speed** 40 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +5 | **Dex** 13 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 17 | +3 | +5 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +3
 
@@ -31305,8 +31145,8 @@ At the end of the frog’s next turn, the swallowed target takes 5 (2d4) Acid da
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 14 +2 | +2 | **Con** 14 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +3
 
@@ -31335,8 +31175,8 @@ At the end of the frog’s next turn, the swallowed target takes 5 (2d4) Acid da
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +3 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 10
 
@@ -31363,8 +31203,8 @@ At the end of the frog’s next turn, the swallowed target takes 5 (2d4) Acid da
 **Speed** 10 ft., Swim 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 5 | −3 | −3 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 17 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 5 | −3 | −3 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +4, Stealth +5
 
@@ -31397,8 +31237,8 @@ At the end of the frog’s next turn, the swallowed target takes 5 (2d4) Acid da
 **Speed** 5 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 15 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 10 +0 +0 | **Wis** 14 +2 | +4 | **Cha** 10 +0 +0 |
+| **Str** 13 | +1 | +1 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 10 | +0 | +0 | **Wis** 14 | +2 | +4 | **Cha** 10 | +0 | +0 |
 
 **Skills** Perception +6, Stealth +6
 
@@ -31439,8 +31279,8 @@ Sylvan but can’t speak them
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 16 +3 | +5 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** | 7 | −2 | −2 | **Dex** 16 | +3 | +5 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +2
 
@@ -31469,8 +31309,8 @@ Sylvan but can’t speak them
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 15 +2 | +2 |
-| **Int** 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 3 | −4 −4 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 15 | +2 | +2 |
+| **Int** | 1 | −5 | −5 | **Wis** 9 | −1 | −1 | **Cha** 3 | −4 | −4 |
 
 **Senses** Blindsight 60 ft.; Passive Perception 9
 
@@ -31497,8 +31337,8 @@ Sylvan but can’t speak them
 **Speed** 5 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 12 +1 | +1 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 15 | +2 | +2 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 11
 
@@ -31529,8 +31369,8 @@ Sylvan but can’t speak them
 **Speed** 5 ft., Swim 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 23 +6 | +6 | **Dex** 11 +0 +0 | **Con** 21 +5 | +5 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 23 | +6 | +6 | **Dex** 11 | +0 | +0 | **Con** 21 | +5 | +5 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -31563,8 +31403,8 @@ Sylvan but can’t speak them
 <!-- page 354 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 16 +3 | +3 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 14 | +2 | +2 | **Dex** 16 | +3 | +3 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +4, Stealth +7
 
@@ -31597,8 +31437,8 @@ Sylvan but can’t speak them
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 13 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 15 | +2 | +2 | **Dex** 13 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 10
 
@@ -31631,8 +31471,8 @@ toad can have only one target swallowed at a time, and it can’t use Bite while
 **Speed** 40 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 18 +4 | +4 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 10 | +0 | +0 | **Dex** 18 | +4 | +4 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Skills** Perception +2
 
@@ -31657,8 +31497,8 @@ toad can have only one target swallowed at a time, and it can’t use Bite while
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +2 | **Dex** 10 +0 +0 | **Con** 16 +3 | +3 |
-| **Int** 6 | −2 | −2 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 15 | +2 | +2 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |
+| **Int** | 6 | −2 | −2 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +3
 
@@ -31691,8 +31531,8 @@ toad can have only one target swallowed at a time, and it can’t use Bite while
 <!-- page 355 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 10 +0 +0 | **Dex** 14 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** 10 | +0 | +0 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Senses** Passive Perception 10
 
@@ -31719,8 +31559,8 @@ toad can have only one target swallowed at a time, and it can’t use Bite while
 **Speed** 40 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 17 +3 | +3 | **Con** 10 +0 +0 |
-| **Int** 4 | −3 | −3 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** | 11 | +0 | +0 | **Dex** 17 | +3 | +3 | **Con** 10 | +0 | +0 |
+| **Int** | 4 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Acrobatics +5, Perception +3, Stealth +5
 
@@ -31745,8 +31585,8 @@ toad can have only one target swallowed at a time, and it can’t use Bite while
 **Speed** 40 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 16 +3 | +3 | **Con** 13 +1 | +1 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 4 | −3 | −3 |
+| **Str** 12 | +1 | +1 | **Dex** 16 | +3 | +3 | **Con** 13 | +1 | +1 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +3, Stealth +7
 
@@ -31777,8 +31617,8 @@ Passive Perception 13
 **Speed** 40 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +2 | **Dex** 10 +0 +0 | **Con** 11 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** | 11 | +0 | +2 | **Dex** 10 | +0 | +0 | **Con** 11 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +2
 
@@ -31803,8 +31643,8 @@ Passive Perception 13
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 16 +3 | +3 | **Con** 8 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 6 | −2 | −2 |
+| **Str** | 5 | −3 | −3 | **Dex** 16 | +3 | +3 | **Con** 8 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +6
 
@@ -31829,8 +31669,8 @@ Passive Perception 13
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +7 | **Dex** 7 | −2 | −2 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 4 | −3 | −3 |
+| **Str** 21 | +5 | +7 | **Dex** 7 | −2 | −2 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -31863,8 +31703,8 @@ Passive Perception 13
 **Speed** 5 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 15 +2 | +2 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 18 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 15 | +2 | +2 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +2
 
@@ -31893,8 +31733,8 @@ Passive Perception 13
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 11 +0 +0 | **Dex** 13 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** | 11 | +0 | +0 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -31923,8 +31763,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 15 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** | 8 | −1 | −1 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -31949,8 +31789,8 @@ Passive Perception 13
 **Speed** 5 ft., Swim 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 19 +4 | +4 | **Dex** 14 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +3, Stealth +4
 
@@ -31979,8 +31819,8 @@ Passive Perception 13
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 15 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +3, Stealth +4
 
@@ -32017,8 +31857,8 @@ Passive Perception 13
 **Speed** 20 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 11 +0 +0 | **Con** 10 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 −4 |
+| **Str** | 2 | −4 | −4 | **Dex** 11 | +0 | +0 | **Con** 10 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 3 | −4 | −4 |
 
 **Senses** Darkvision 30 ft.; Passive Perception 9
 
@@ -32045,8 +31885,8 @@ Passive Perception 13
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 24 +7 | +10 | **Dex** 9 | −1 | −1 | **Con** 21 +5 | +8 |
-| **Int** 3 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 6 | −2 | −2 |
+| **Str** 24 | +7 | +10 | **Dex** 9 | −1 | −1 | **Con** 21 | +5 | +8 |
+| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 6 | −2 | −2 |
 
 **Senses** Passive Perception 10
 
@@ -32075,8 +31915,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +3 | **Cha** 7 | −2 | −2 |
+| **Str** 13 | +1 | +1 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +3 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -32101,8 +31941,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +4 | **Dex** 10 +0 +0 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 14 | +2 | +4 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 10
 
@@ -32131,8 +31971,8 @@ Passive Perception 13
 <!-- page 358 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 4 | −3 | −3 | **Dex** 15 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +2, Stealth +6
 
@@ -32167,8 +32007,8 @@ Passive Perception 13
 **Speed** 5 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 13 +1 | +1 | **Con** 8 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 8 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +5
 
@@ -32197,8 +32037,8 @@ Passive Perception 13
 **Speed** 50 ft., Climb 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 16 +3 | +3 | **Con** 10 +0 +0 |
-| **Int** 3 | −4 −4 | **Wis** 14 +2 | +2 | **Cha** 7 | −2 | −2 |
+| **Str** 14 | +2 | +2 | **Dex** 16 | +3 | +3 | **Con** 10 | +0 | +0 |
+| **Int** | 3 | −4 | −4 | **Wis** 14 | +2 | +2 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +4, Stealth +7
 
@@ -32227,8 +32067,8 @@ Passive Perception 13
 **Speed** 5 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 16 +3 | +3 | **Con** 9 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 −4 |
+| **Str** | 2 | −4 | −4 | **Dex** 16 | +3 | +3 | **Con** 9 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 | −4 |
 
 **Senses** Darkvision 60 ft.; Passive Perception 8
 
@@ -32255,8 +32095,8 @@ Passive Perception 13
 **Speed** 20 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 15 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 5 | −3 | −3 |
+| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +3, Stealth +4
 
@@ -32287,8 +32127,8 @@ Passive Perception 13
 **Speed** 40 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 20 +5 | +5 | **Dex** 14 +2 | +2 | **Con** 16 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 13 +1 | +1 | **Cha** 7 | −2 | −2 |
+| **Str** 20 | +5 | +5 | **Dex** 14 | +2 | +2 | **Con** 16 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 7 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +4
 
@@ -32317,8 +32157,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 15 +2 | +4 | **Dex** 10 +0 +0 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 15 | +2 | +4 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Senses** Passive Perception 10
 
@@ -32341,8 +32181,8 @@ Passive Perception 13
 **Speed** 10 ft., Fly 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 12 +1 | +1 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 9 | −1 | −1 | **Cha** 5 | −3 | −3 |
+| **Str** 12 | +1 | +1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 9 | −1 | −1 | **Cha** 5 | −3 | −3 |
 
 **Skills** Perception +1
 
@@ -32371,8 +32211,8 @@ Passive Perception 13
 **Speed** 20 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 11 +0 +0 | **Con** 9 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** | 2 | −4 | −4 | **Dex** 11 | +0 | +0 | **Con** 9 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +2
 
@@ -32401,8 +32241,8 @@ Passive Perception 13
 **Speed** 10 ft., Fly 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 14 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 5 | −3 | −3 | **Wis** 13 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** | 2 | −4 | −4 | **Dex** 14 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** 5 | −3 | −3 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +3
 
@@ -32433,8 +32273,8 @@ Passive Perception 13
 **Speed** 5 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 15 +2 | +2 | **Con** 13 +1 | +1 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 4 | −3 | −3 |
+| **Str** 14 | +2 | +2 | **Dex** 15 | +2 | +2 | **Con** 13 | +1 | +1 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +2
 
@@ -32465,8 +32305,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 21 +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 15 +2 | +2 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 21 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 15 | +2 | +2 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Senses** Passive Perception 11
 
@@ -32489,8 +32329,8 @@ Passive Perception 13
 **Speed** 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 16 +3 | +3 | **Dex** 13 +1 | +1 | **Con** 12 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 7 | −2 | −2 |
+| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |
 
 **Senses** Passive Perception 10
 
@@ -32513,8 +32353,8 @@ Passive Perception 13
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +6 | **Dex** 17 +3 | +5 | **Con** 15 +2 | +2 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 18 | +4 | +6 | **Dex** 17 | +3 | +5 | **Con** 15 | +2 | +2 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +5, Stealth +7
 
@@ -32551,8 +32391,8 @@ action.
 **Speed** 10 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 11 +0 +0 | **Con** 8 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 2 | −4 −4 |
+| **Str** | 2 | −4 | −4 | **Dex** 11 | +0 | +0 | **Con** 8 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 8 | −1 | −1 | **Cha** 2 | −4 | −4 |
 
 **Senses** Blindsight 10 ft.; Passive Perception 9
 
@@ -32577,8 +32417,8 @@ action.
 **Speed** 5 ft., Swim 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 1 | −5 | −5 | **Dex** 12 +1 | +1 | **Con** 8 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 2 | −4 −4 |
+| **Str** | 1 | −5 | −5 | **Dex** 12 | +1 | +1 | **Con** 8 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 2 | −4 | −4 |
 
 **Skills** Perception +2, Stealth +5
 
@@ -32607,8 +32447,8 @@ action.
 **Speed** 20 ft., Climb 20 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 14 +2 | +2 | **Con** 8 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 2 | −4 −4 |
+| **Str** | 2 | −4 | −4 | **Dex** 14 | +2 | +2 | **Con** 8 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 2 | −4 | −4 |
 
 **Skills** Stealth +4
 
@@ -32639,8 +32479,8 @@ action.
 **Speed** 5 ft., Fly 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 5 | −3 | −3 | **Dex** 15 +2 | +2 | **Con** 10 +0 +0 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 4 | −3 | −3 |
+| **Str** 5 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -32673,8 +32513,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 20 ft., Climb or Fly 20 ft. (GM’s choice)
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 13 +1 | +1 | **Con** 14 +2 | +2 |
-| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 1 | −5 | −5 |
+| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |
+| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 1 | −5 | −5 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -32711,8 +32551,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 5 ft., Swim 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 13 +1 | +1 | **Dex** 16 +3 | +3 | **Con** 9 | −1 | −1 |
-| **Int** 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 −4 |
+| **Str** 13 | +1 | +1 | **Dex** 16 | +3 | +3 | **Con** 9 | −1 | −1 |
+| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 | −4 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -32747,8 +32587,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 9 | −1 | −1 | **Dex** 11 +0 +2 | **Con** 9 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** | 9 | −1 | −1 | **Dex** 11 | +0 | +2 | **Con** 9 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -32781,8 +32621,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 10 ft., Fly 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 6 | −2 | −2 | **Dex** 14 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 5 | −3 | −3 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** 5 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +5
 
@@ -32819,8 +32659,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 8 | −1 | −1 | **Dex** 18 +4 | +4 | **Con** 11 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** | 8 | −1 | −1 | **Dex** 18 | +4 | +4 | **Con** 11 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Resistances** Bludgeoning, Piercing, Slashing
 
@@ -32855,8 +32695,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 17 +3 | +3 | **Dex** 16 +3 | +3 | **Con** 14 +2 | +2 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 8 | −1 | −1 |
+| **Str** 17 | +3 | +3 | **Dex** 16 | +3 | +3 | **Con** 14 | +2 | +2 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 8 | −1 | −1 |
 
 **Skills** Perception +3, Stealth +7
 
@@ -32885,8 +32725,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 22 +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 17 +3 | +3 |
-| **Int** 2 | −4 −4 | **Wis** 11 +0 +0 | **Cha** 5 | −3 | −3 |
+| **Str** 22 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 17 | +3 | +3 |
+| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 5 | −3 | −3 |
 
 **Senses** Passive Perception 10
 
@@ -32911,8 +32751,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 50 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 25 +7 | +10 | **Dex** 10 +0 +0 | **Con** 19 +4 | +4 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +4 | **Cha** 9 | −1 | −1 |
+| **Str** 25 | +7 | +10 | **Dex** 10 | +0 | +0 | **Con** 19 | +4 | +4 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +4 | **Cha** 9 | −1 | −1 |
 
 **Skills** Perception +4
 
@@ -32941,8 +32781,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 30 ft., Swim 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 2 | −4 −4 | **Dex** 15 +2 | +2 | **Con** 11 +0 +0 |
-| **Int** 1 | −5 | −5 | **Wis** 10 +0 +0 | **Cha** 3 | −4 −4 |
+| **Str** | 2 | −4 | −4 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |
+| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |
 
 **Senses** Blindsight 10 ft.; Passive Perception 10
 
@@ -32967,8 +32807,8 @@ Petrified, Prone, Restrained, Stunned
 <!-- page 364 -->
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 7 | −2 | −2 | **Dex** 10 +0 +0 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 4 | −3 | −3 |
+| **Str** | 7 | −2 | −2 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |
 
 **Skills** Perception +3
 
@@ -32997,8 +32837,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 60 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 18 +4 | +4 | **Dex** 12 +1 | +1 | **Con** 13 +1 | +1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +3 | **Cha** 7 | −2 | −2 |
+| **Str** 18 | +4 | +4 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +3 | **Cha** 7 | −2 | −2 |
 
 **Senses** Passive Perception 11
 
@@ -33021,8 +32861,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 30 ft., Climb 30 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 3 | −4 −4 | **Dex** 16 +3 | +3 | **Con** 8 | −1 | −1 |
-| **Int** 2 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 3 | −4 −4 |
+| **Str** | 3 | −4 | −4 | **Dex** 16 | +3 | +3 | **Con** 8 | −1 | −1 |
+| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 3 | −4 | −4 |
 
 **Skills** Acrobatics +5, Perception +3, Stealth +5
 
@@ -33047,8 +32887,8 @@ Petrified, Prone, Restrained, Stunned
 **Speed** 40 ft.
 
 | MOD SAVE | MOD SAVE | MOD SAVE |
-| **Str** 14 +2 | +2 | **Dex** 15 +2 | +2 | **Con** 12 +1 | +1 |
-| **Int** 3 | −4 −4 | **Wis** 12 +1 | +1 | **Cha** 6 | −2 | −2 |
+| **Str** 14 | +2 | +2 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |
+| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 6 | −2 | −2 |
 
 **Skills** Perception +5, Stealth +4
 

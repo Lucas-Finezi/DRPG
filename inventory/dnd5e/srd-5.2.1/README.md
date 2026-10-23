@@ -4,7 +4,7 @@ Gerado por `tools/inventory/build_inventory.py` a partir de `extraction/SRD_CC_v
 
 - Fonte: `source/SRD_CC_v5.2.1.pdf` — SHA-256 `8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87` — 364 páginas
 - Licença: CC-BY-4.0 (atribuição em `source.json`)
-- Seções mapeadas (níveis 1–4): 2184 — tabelas: 973
+- Seções mapeadas (níveis 1–4): 2184 — quadros laterais com regras: 18 — tabelas: 933
 - Entradas esperadas: **1747** — vínculos de listas de magia: 939
 - Refs duplicados: 0 — nomes de magia em listas sem magia correspondente: 0
 
@@ -71,17 +71,17 @@ Gerado por `tools/inventory/build_inventory.py` a partir de `extraction/SRD_CC_v
 |---|---|---|---|---|
 | L00 | 0 — Fundações | Inventário da fonte | 0 | 0 |
 | L01 | 0 — Fundações | Contrato base | 0 | 0 |
-| L02 | 0 — Fundações | Sistema D&D 5e | 27 | 29 |
+| L02 | 0 — Fundações | Sistema D&D 5e | 27 | 23 |
 | L03 | 1 — Regras compartilhadas | Condições | 16 | 0 |
 | L04 | 1 — Regras compartilhadas | Regras de combate | 44 | 5 |
 | L05 | 1 — Regras compartilhadas | Testes e proficiências | 16 | 5 |
 | L06 | 1 — Regras compartilhadas | Dano, cura e resistências | 20 | 0 |
 | L07 | 1 — Regras compartilhadas | Recursos e descansos | 3 | 0 |
 | L08 | 1 — Regras compartilhadas | Regras de equipamento | 5 | 1 |
-| L09 | 1 — Regras compartilhadas | Regras de magia | 13 | 19 |
+| L09 | 1 — Regras compartilhadas | Regras de magia | 13 | 18 |
 | L10 | 2 — Catálogos de personagem | Espécies | 9 | 3 |
 | L11 | 2 — Catálogos de personagem | Antecedentes | 4 | 1 |
-| L12 | 2 — Catálogos de personagem | Classes | 12 | 129 |
+| L12 | 2 — Catálogos de personagem | Classes | 12 | 105 |
 | L13 | 2 — Catálogos de personagem | Subclasses | 12 | 0 |
 | L14 | 2 — Catálogos de personagem | Features e progressões | 303 | 0 |
 | L15 | 2 — Catálogos de personagem | Talentos | 17 | 0 |
@@ -100,7 +100,7 @@ Gerado por `tools/inventory/build_inventory.py` a partir de `extraction/SRD_CC_v
 | L28 | 4 — Equipamentos e itens | Armas | 56 | 1 |
 | L29 | 4 — Equipamentos e itens | Armaduras e escudos | 13 | 1 |
 | L30 | 4 — Equipamentos e itens | Equipamento de aventura | 178 | 37 |
-| L31 | 4 — Equipamentos e itens | Itens mágicos | 235 | 64 |
+| L31 | 4 — Equipamentos e itens | Itens mágicos | 235 | 57 |
 | L32 | 4 — Equipamentos e itens | Poções, pergaminhos e consumíveis | 39 | 1 |
 | L33 | 5 — Criaturas e encontros | Bestiário A–C | 79 | 3 |
 | L34 | 5 — Criaturas e encontros | Bestiário D–F | 28 | 0 |
@@ -110,7 +110,7 @@ Gerado por `tools/inventory/build_inventory.py` a partir de `extraction/SRD_CC_v
 | L38 | 5 — Criaturas e encontros | Bestiário P–R | 28 | 0 |
 | L39 | 5 — Criaturas e encontros | Bestiário S–T | 45 | 0 |
 | L40 | 5 — Criaturas e encontros | Bestiário U–Z | 39 | 0 |
-| L41 | 5 — Criaturas e encontros | Regras de exploração e encontros | 36 | 11 |
+| L41 | 5 — Criaturas e encontros | Regras de exploração e encontros | 36 | 9 |
 | L42 | 5 — Criaturas e encontros | Encontros de combate | 0 | 1 |
 | L43 | 6 — Integração e auditoria | Grafo de referências | 0 | 0 |
 | L44 | 6 — Integração e auditoria | Manifest global | 0 | 0 |
