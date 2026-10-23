@@ -1,0 +1,357 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ochre-jelly",
+  "kind": "creature",
+  "name": "Ochre Jelly",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      312
+    ],
+    "section": "Monsters A–Z/Ochre Jelly/Ochre Jelly",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Large Ooze, Unaligned*\n\n| **AC** 8 | **Initiative** −2 (8) |\n\n**HP** 52 (7d10 + 14)\n\n**Speed** 20 ft., Climb 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 6 | −2 | −2 | **Con** 14 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |\n\n**Resistances** Acid\n\n**Immunities** Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained\n\n**Senses** Blindsight 60 ft.; Passive Perception 8\n\n**Languages** None\n\n**CR** 2 (XP 450; PB +2)\n\n##### Traits\n\n***Amorphous.*** The jelly can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Spider Climb.*** The jelly can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n##### Actions\n\n***Pseudopod.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 12 (3d6 + 2) Acid damage.\n\n##### Reactions\n\n***Split.*** *Trigger:* While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The jelly splits into two new **Ochre Jellies**. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly’s Hit Points are divided evenly between the new jellies (round down).",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "type_line": "Large Ooze, Unaligned",
+    "ac": {
+      "value": 8,
+      "text": "8"
+    },
+    "initiative": {
+      "modifier": -2,
+      "score": 8,
+      "text": "−2 (8)"
+    },
+    "hp": {
+      "average": 52,
+      "formula": {
+        "op": "add",
+        "args": [
+          "7d10",
+          14
+        ]
+      },
+      "text": "52 (7d10 + 14)"
+    },
+    "speed": {
+      "text": "20 ft., Climb 20 ft.",
+      "walk": 20,
+      "climb": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "acid"
+      ],
+      "text": "Acid"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning",
+        "slashing"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained"
+      ],
+      "text": "Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft.; Passive Perception 8",
+      "blindsight": 60,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amorphous",
+        "text": "The jelly can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Spider Climb",
+        "text": "The jelly can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Pseudopod",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 12 (3d6 + 2) Acid damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Split",
+        "text": "*Trigger:* While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The jelly splits into two new **Ochre Jellies**. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly’s Hit Points are divided evenly between the new jellies (round down)."
+      }
+    ],
+    "rules": [
+      {
+        "id": "amorphous",
+        "squeeze_inch": 1,
+        "no_extra_movement": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pseudopod",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  2
+                ]
+              },
+              "damage_type": "acid"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "reactions_split_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Split as written.",
+      "source_text": ": The jelly splits into two new Ochre Jellies. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly’s Hit Points are divided evenly between the new jellies (round down)."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Ooze, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 8 | **Initiative** −2 (8) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 52 (7d10 + 14)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Climb 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 6 | −2 | −2 | **Con** 14 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amorphous.*** The jelly can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** The jelly can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Pseudopod.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 12 (3d6 + 2) Acid damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Split.*** *Trigger:* While the jelly is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The jelly splits into two new **Ochre Jellies**. Each new jelly is one size smaller than the original jelly and acts on its Initiative. The original jelly’s Hit Points are divided evenly between the new jellies (round down).",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2",
+        "md:reactions_split_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/rule/reaction"
+  ]
+}

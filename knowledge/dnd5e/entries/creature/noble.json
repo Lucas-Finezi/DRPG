@@ -1,0 +1,272 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/noble",
+  "kind": "creature",
+  "name": "Noble",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      312
+    ],
+    "section": "Monsters A–Z/Noble/Noble",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 2,
+  "text": "*Medium or Small Humanoid, Neutral*\n\n| **AC** 15 | **Initiative** +1 (11) |\n\n**HP** 9 (2d8)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 11 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |\n| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 16 | +3 | +3 |\n\n**Skills** Deception +5, Insight +4, Persuasion +5\n\n**Gear** Breastplate, Rapier\n\n**Senses** Passive Perception 12\n\n**Languages** Common plus two other languages\n\n**CR** 1/8 (XP 25; PB +2)\n\n##### Actions\n\n***Rapier.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage.\n\n##### Reactions\n\n***Parry.*** *Trigger:* The noble is hit by a melee attack roll while holding a weapon. *Response:* The noble adds 2 to its AC against that attack, possibly causing it to miss.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "cr": "1/8"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "type_line": "Medium or Small Humanoid, Neutral",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 9,
+      "formula": "2d8",
+      "text": "9 (2d8)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "deception": 5,
+      "insight": 4,
+      "persuasion": 5,
+      "text": "Deception +5, Insight +4, Persuasion +5"
+    },
+    "gear": {
+      "text": "Breastplate, Rapier"
+    },
+    "senses": {
+      "text": "Passive Perception 12",
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common plus two other languages"
+    },
+    "cr": {
+      "value": "1/8",
+      "xp": 25,
+      "proficiency_bonus": 2,
+      "text": "1/8 (XP 25; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Rapier",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Parry",
+        "text": "*Trigger:* The noble is hit by a melee attack roll while holding a weapon. *Response:* The noble adds 2 to its AC against that attack, possibly causing it to miss."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rapier",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  1
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "ac",
+          "mode": "add",
+          "value": 2,
+          "note": "Against the triggering attack."
+        }
+      ],
+      "note": "Trigger: The noble is hit by a melee attack roll while holding a weapon."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 9 (2d8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 11 | +0 | +0 | **Dex** 12 | +1 | +1 | **Con** 11 | +0 | +0 |\n| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 16 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +5, Insight +4, Persuasion +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Breastplate, Rapier",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus two other languages",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/8 (XP 25; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Rapier.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Parry.*** *Trigger:* The noble is hit by a melee attack roll while holding a weapon. *Response:* The noble adds 2 to its AC against that attack, possibly causing it to miss.",
+      "status": "structured",
+      "by": [
+        "/data/reactions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

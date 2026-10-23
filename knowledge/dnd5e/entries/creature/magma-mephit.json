@@ -1,0 +1,358 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/magma-mephit",
+  "kind": "creature",
+  "name": "Magma Mephit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      307
+    ],
+    "section": "Monsters A–Z/Mephits/Magma Mephit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 2,
+  "text": "*Small Elemental, Neutral Evil*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 18 (4d6 + 4)\n\n**Speed** 30 ft., Fly 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 8 | −1 | −1 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |\n\n**Skills** Stealth +3\n\n**Vulnerabilities** Cold\n\n**Immunities** Fire, Poison; Exhaustion, Poisoned\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Primordial (Ignan, Terran)\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Death Burst.*** The mephit explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.\n\n##### Actions\n\n***Claw.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 3 (1d6) Fire damage.\n\n***Fire Breath (Recharge 6).*** *Dexterity Saving Throw:* DC 11, each creature in a 15-foot Cone. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "type_line": "Small Elemental, Neutral Evil",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 18,
+      "formula": {
+        "op": "add",
+        "args": [
+          "4d6",
+          4
+        ]
+      },
+      "text": "18 (4d6 + 4)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 30 ft.",
+      "walk": 30,
+      "fly": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "stealth": 3,
+      "text": "Stealth +3"
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Exhaustion, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Ignan, Terran)"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Death Burst",
+        "text": "The mephit explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 3 (1d6) Fire damage."
+      },
+      {
+        "name": "Fire Breath",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 11, each creature in a 15-foot Cone. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": 11,
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 5,
+          "origin": "self"
+        },
+        "text": "each creature in a 5-foot Emanation originating from the mephit"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": "fire"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  1
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Fire Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 11,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 15,
+              "origin": "self"
+            },
+            "text": "each creature in a 15-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "fire"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 6–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Elemental, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 18 (4d6 + 4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 8 | −1 | −1 | **Dex** 12 | +1 | +1 | **Con** 12 | +1 | +1 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Cold",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Exhaustion, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan, Terran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Death Burst.*** The mephit explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 3 (1d6) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Fire Breath (Recharge 6).*** *Dexterity Saving Throw:* DC 11, each creature in a 15-foot Cone. *Failure:* 7 (2d6) Fire damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/poisoned"
+  ]
+}
