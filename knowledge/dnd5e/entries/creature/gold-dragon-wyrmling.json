@@ -1,0 +1,349 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/gold-dragon-wyrmling",
+  "kind": "creature",
+  "name": "Gold Dragon Wyrmling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      290,
+      291
+    ],
+    "section": "Monsters A–Z/Gold Dragons/Gold Dragon Wyrmling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Medium Dragon (Metallic), Lawful Good*\n\n| **AC** 17 | **Initiative** +4 (14) |\n\n**HP** 60 (8d8 + 24)\n\n**Speed** 30 ft., Fly 60 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +4 | **Con** 17 | +3 | +3 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 16 | +3 | +3 |\n\n**Skills** Perception +4, Stealth +4\n\n**Immunities** Fire\n\n**Senses** Blindsight 10 ft., Darkvision 60 ft.;\n\nPassive Perception 14\n\n**Languages** Draconic\n\n**CR** 3 (700 XP; PB +2)\n\n##### Traits\n\n***Amphibious.*** The dragon can breathe air and water.\n\n##### Actions\n\n***Multiattack.*** The dragon makes two Rend attacks.\n\n***Rend.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (1d10 + 4) Slashing damage.\n\n***Fire Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 13, each creature in a 15-foot Cone. *Failure:* 22 (4d10) Fire damage. *Success:* Half damage.\n\n***Weakening Breath.*** *Strength Saving Throw:* DC 13, each creature that isn’t currently affected by this breath in a 15-foot Cone. *Failure:* The target has Disadvantage on Strength-based D20 Tests and subtracts 2 (1d4) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Dragon",
+    "alignment": "Lawful Good"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Dragon",
+    "alignment": "Lawful Good",
+    "tags": [
+      "Metallic"
+    ],
+    "type_line": "Medium Dragon (Metallic), Lawful Good",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 60,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d8",
+          24
+        ]
+      },
+      "text": "60 (8d8 + 24)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft., Swim 30 ft.",
+      "walk": 30,
+      "fly": 60,
+      "swim": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 4
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 2
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "perception": 4,
+      "stealth": 4,
+      "text": "Perception +4, Stealth +4"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire"
+      ],
+      "conditions": [],
+      "text": "Fire"
+    },
+    "senses": {
+      "text": "Blindsight 10 ft., Darkvision 60 ft.; Passive Perception 14",
+      "blindsight": 10,
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Draconic"
+    },
+    "cr": {
+      "text": "3 (700 XP; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The dragon can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes two Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (1d10 + 4) Slashing damage.\n\n***Fire Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 13, each creature in a 15-foot Cone. *Failure:* 22 (4d10) Fire damage. *Success:* Half damage."
+      },
+      {
+        "name": "Weakening Breath",
+        "text": "*Strength Saving Throw:* DC 13, each creature that isn’t currently affected by this breath in a 15-foot Cone. *Failure:* The target has Disadvantage on Strength-based D20 Tests and subtracts 2 (1d4) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 2
+          }
+        ],
+        "text": "The dragon makes two Rend attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Weakening Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 13,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 15,
+              "origin": "self"
+            },
+            "text": "each creature that isn’t currently affected by this breath in a 15-foot Cone"
+          },
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_weakening_breath_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Weakening Breath as written.",
+      "source_text": "The target has Disadvantage on Strength-based D20 Tests and subtracts 2 (1d4) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Dragon (Metallic), Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 60 (8d8 + 24)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +4 | **Con** 17 | +3 | +3 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 16 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +4, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 10 ft., Darkvision 60 ft.;\n\nPassive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (700 XP; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The dragon can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes two Rend attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 9 (1d10 + 4) Slashing damage.\n\n***Fire Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 13, each creature in a 15-foot Cone. *Failure:* 22 (4d10) Fire damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Weakening Breath.*** *Strength Saving Throw:* DC 13, each creature that isn’t currently affected by this breath in a 15-foot Cone. *Failure:* The target has Disadvantage on Strength-based D20 Tests and subtracts 2 (1d4) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_weakening_breath_rider"
+      ]
+    }
+  ]
+}

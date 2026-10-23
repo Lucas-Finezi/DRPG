@@ -1,0 +1,272 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/giant-eagle",
+  "kind": "creature",
+  "name": "Giant Eagle",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      350,
+      351
+    ],
+    "section": "Animals/Giant Eagle",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Large Celestial, Neutral Good*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 26 (4d10 + 4)\n\n**Speed** 10 ft., Fly 80 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 14 | +2 | +2 | **Cha** 10 | +0 | +0 |\n\n**Skills** Perception +6\n\n**Resistances** Necrotic, Radiant\n\n**Senses** Passive Perception 16\n\n**Languages** Celestial; understands Common and Primordial (Auran) but can’t speak them\n\n**CR** 1 (XP 200; PB +2)\n\n##### Actions\n\n***Multiattack.*** The eagle makes two Rend attacks.\n\n***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 3 (1d6) Radiant damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Neutral Good",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Neutral Good",
+    "type_line": "Large Celestial, Neutral Good",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 26,
+      "formula": {
+        "op": "add",
+        "args": [
+          "4d10",
+          4
+        ]
+      },
+      "text": "26 (4d10 + 4)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 80 ft.",
+      "walk": 10,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "text": "Perception +6"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic",
+        "radiant"
+      ],
+      "text": "Necrotic, Radiant"
+    },
+    "senses": {
+      "text": "Passive Perception 16",
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "Celestial; understands Common and Primordial (Auran) but can’t speak them"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The eagle makes two Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 3 (1d6) Radiant damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 2
+          }
+        ],
+        "text": "The eagle makes two Rend attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "radiant"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Celestial, Neutral Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 26 (4d10 + 4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 80 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 14 | +2 | +2 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic, Radiant",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Celestial; understands Common and Primordial (Auran) but can’t speak them",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The eagle makes two Rend attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage plus 3 (1d6) Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    }
+  ]
+}

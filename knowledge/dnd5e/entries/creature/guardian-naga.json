@@ -1,0 +1,529 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/guardian-naga",
+  "kind": "creature",
+  "name": "Guardian Naga",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      296
+    ],
+    "section": "Monsters A–Z/Guardian Naga/Guardian Naga",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Large Celestial, Lawful Good*\n\n| **AC** 18 | **Initiative** +4 (14) |\n\n**HP** 136 (16d10 + 48)\n\n**Speed** 40 ft., Climb 40 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 18 | +4 | +8 | **Con** 16 | +3 | +7 |\n| **Int** | 16 | +3 | +7 | **Wis** 19 | +4 | +8 | **Cha** 18 | +4 | +8 |\n\n**Skills** Arcana +11, History +11, Religion +11\n\n**Immunities** Poison; Charmed, Paralyzed, Poisoned, Restrained\n\n**Senses** Darkvision 60 ft.; Passive Perception 14\n\n**Languages** Celestial, Common\n\n**CR** 10 (XP 5,900; PB +4)\n\n##### Traits\n\n***Celestial Restoration.*** If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless *Dispel Evil and Good* is cast on its remains.\n\n##### Actions\n\n***Multiattack.*** The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle.\n\n***Bite.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 17 (2d12 + 4) Piercing damage plus 22 (4d10) Poison damage.\n\n***Poisonous Spittle.*** *Constitution Saving Throw:* DC 16, one creature the naga can see within 60 feet. *Failure:* 31 (7d8) Poison damage, and the target has the Blinded condition until the start of the naga’s next turn. *Success:* Half damage only.\n\n***Spellcasting.*** The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Thaumaturgy*\n\n**1/Day Each:** *Clairvoyance*, *Cure Wounds* (level 6 version), *Flame Strike* (level 6 version), *Geas*, *True Seeing*",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "cr": "10"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "type_line": "Large Celestial, Lawful Good",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 136,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d10",
+          48
+        ]
+      },
+      "text": "136 (16d10 + 48)"
+    },
+    "speed": {
+      "text": "40 ft., Climb 40 ft., Swim 40 ft.",
+      "walk": 40,
+      "climb": 40,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 18,
+        "mod": 4,
+        "save": 8
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      },
+      "int": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      },
+      "wis": {
+        "score": 19,
+        "mod": 4,
+        "save": 8
+      },
+      "cha": {
+        "score": 18,
+        "mod": 4,
+        "save": 8
+      }
+    },
+    "skills": {
+      "arcana": 11,
+      "history": 11,
+      "religion": 11,
+      "text": "Arcana +11, History +11, Religion +11"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/restrained"
+      ],
+      "text": "Poison; Charmed, Paralyzed, Poisoned, Restrained"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 14",
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Celestial, Common"
+    },
+    "cr": {
+      "value": "10",
+      "xp": 5900,
+      "proficiency_bonus": 4,
+      "text": "10 (XP 5,900; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Celestial Restoration",
+        "text": "If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless *Dispel Evil and Good* is cast on its remains."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 17 (2d12 + 4) Piercing damage plus 22 (4d10) Poison damage."
+      },
+      {
+        "name": "Poisonous Spittle",
+        "text": "*Constitution Saving Throw:* DC 16, one creature the naga can see within 60 feet. *Failure:* 31 (7d8) Poison damage, and the target has the Blinded condition until the start of the naga’s next turn. *Success:* Half damage only."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Thaumaturgy*\n\n**1/Day Each:** *Clairvoyance*, *Cure Wounds* (level 6 version), *Flame Strike* (level 6 version), *Geas*, *True Seeing*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 2
+          }
+        ],
+        "text": "The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16): At Will: Thaumaturgy 1/Day Each: Clairvoyance, Cure Wounds (level 6 version), Flame Strike (level 6 version), Geas, True Seeing",
+        "ability": "wis",
+        "save_dc": 16,
+        "no_material_components": false,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/thaumaturgy",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/clairvoyance",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/cure-wounds",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/flame-strike",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/geas",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/true-seeing",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "cast_spell",
+      "spell": "dnd5e/spell/dispel-evil-and-good",
+      "slot": "none"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d12",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "4d10",
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Poisonous Spittle",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 16,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "text": "one creature the naga can see within 60 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "7d8",
+              "damage_type": "poison"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/thaumaturgy",
+          "slot": "none",
+          "save_dc": 16
+        }
+      ],
+      "name": "Thaumaturgy"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/clairvoyance",
+          "slot": "none",
+          "save_dc": 16
+        }
+      ],
+      "name": "Clairvoyance",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/cure-wounds",
+          "slot": "none",
+          "level": 6,
+          "save_dc": 16
+        }
+      ],
+      "name": "Cure Wounds",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/flame-strike",
+          "slot": "none",
+          "level": 6,
+          "save_dc": 16
+        }
+      ],
+      "name": "Flame Strike",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/geas",
+          "slot": "none",
+          "save_dc": 16
+        }
+      ],
+      "name": "Geas",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/true-seeing",
+          "slot": "none",
+          "save_dc": 16
+        }
+      ],
+      "name": "True Seeing",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Celestial, Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 136 (16d10 + 48)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Climb 40 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 18 | +4 | +8 | **Con** 16 | +3 | +7 |\n| **Int** | 16 | +3 | +7 | **Wis** 19 | +4 | +8 | **Cha** 18 | +4 | +8 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Arcana +11, History +11, Religion +11",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Charmed, Paralyzed, Poisoned, Restrained",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Celestial, Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 10 (XP 5,900; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Celestial Restoration.*** If the naga dies, it returns to life in 1d6 days and regains all its Hit Points unless *Dispel Evil and Good* is cast on its remains.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The naga makes two Bite attacks. It can replace any attack with a use of Poisonous Spittle.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 17 (2d12 + 4) Piercing damage plus 22 (4d10) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Poisonous Spittle.*** *Constitution Saving Throw:* DC 16, one creature the naga can see within 60 feet. *Failure:* 31 (7d8) Poison damage, and the target has the Blinded condition until the start of the naga’s next turn. *Success:* Half damage only.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The naga casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Thaumaturgy*\n\n**1/Day Each:** *Clairvoyance*, *Cure Wounds* (level 6 version), *Flame Strike* (level 6 version), *Geas*, *True Seeing*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/restrained",
+    "dnd5e/spell/clairvoyance",
+    "dnd5e/spell/cure-wounds",
+    "dnd5e/spell/dispel-evil-and-good",
+    "dnd5e/spell/flame-strike",
+    "dnd5e/spell/geas",
+    "dnd5e/spell/thaumaturgy",
+    "dnd5e/spell/true-seeing"
+  ]
+}
