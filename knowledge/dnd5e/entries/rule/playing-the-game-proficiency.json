@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/playing-the-game-proficiency",
+  "kind": "rule",
+  "name": "Proficiency",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      8
+    ],
+    "section": "Playing the Game/Proficiency",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 1,
+  "text": "Characters and monsters are good at various things. Some are skilled with many weapons, while others can use only a few. Some are better at understanding people’s motives, and others are better at unlocking the secrets of the multiverse. All creatures have a Proficiency Bonus, which reflects the impact that training has on the creature’s capabilities. A character’s Proficiency Bonus increases as the character gains levels (described in “Character Creation”). A monster’s Proficiency Bonus is based on its Challenge Rating (see “Rules Glossary”). The Proficiency Bonus table shows how the bonus is determined.\n\nThis bonus is applied to a D20 Test when the creature has proficiency in a skill, in a saving throw, or with an item that the creature uses to make the D20 Test. The bonus is also used for spell attacks and for calculating the DC of saving throws for spells.\n\n##### Proficiency Bonus\n\n| **Level or CR** | **Bonus** |\n| Up to 4 | +2 |\n| 5–8 | +3 |\n| 9–12 | +4 |\n| 13–16 | +5 |\n| **Level or CR** | **Bonus** |\n| 17–20 | +6 |\n| 21–24 | +7 |\n| 25–28 | +8 |\n| 29–30 | +9 |",
+  "data": {
+    "rules": [
+      {
+        "id": "applies_to",
+        "d20_tests_with_proficiency": true,
+        "spell_attacks": true,
+        "spell_save_dc": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Characters and monsters are good at various things. Some are skilled with many weapons, while others can use only a few. Some are better at understanding people’s motives, and others are better at unlocking the secrets of the multiverse. All creatures have a Proficiency Bonus, which reflects the impact that training has on the creature’s capabilities. A character’s Proficiency Bonus increases as the character gains levels (described in “Character Creation”). A monster’s Proficiency Bonus is based on its Challenge Rating (see “Rules Glossary”). The Proficiency Bonus table shows how the bonus is determined.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/proficiency_bonus/by_level",
+        "dnd5e/system/dnd5e#/proficiency_bonus/by_challenge_rating"
+      ]
+    },
+    {
+      "text": "This bonus is applied to a D20 Test when the creature has proficiency in a skill, in a saving throw, or with an item that the creature uses to make the D20 Test. The bonus is also used for spell attacks and for calculating the DC of saving throws for spells.\n\n##### Proficiency Bonus\n\n| **Level or CR** | **Bonus** |\n| Up to 4 | +2 |\n| 5–8 | +3 |\n| 9–12 | +4 |\n| 13–16 | +5 |\n| **Level or CR** | **Bonus** |\n| 17–20 | +6 |\n| 21–24 | +7 |\n| 25–28 | +8 |\n| 29–30 | +9 |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

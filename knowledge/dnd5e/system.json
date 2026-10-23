@@ -2135,6 +2135,15 @@
         "pages": [
           23
         ]
+      },
+      {
+        "id": "any_die",
+        "description": "Any die the creature rolls.",
+        "pages": [
+          8,
+          183
+        ],
+        "lot": "L05"
       }
     ],
     "events": [
@@ -2298,6 +2307,16 @@
           16
         ],
         "lot": "L04"
+      },
+      {
+        "id": "die_rolled",
+        "description": "Immediately after the creature rolls a die.",
+        "type": "event",
+        "pages": [
+          8,
+          183
+        ],
+        "lot": "L05"
       }
     ],
     "predicates": [
@@ -2599,6 +2618,49 @@
           15
         ],
         "lot": "L04"
+      },
+      {
+        "id": "lacks_ability_score",
+        "description": "The creature lacks the ability score the roll uses.",
+        "type": "predicate",
+        "pages": [
+          187
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_proficiency",
+        "description": "The creature has proficiency with the skill, tool, save or weapon used (param).",
+        "params": [
+          "item"
+        ],
+        "type": "predicate",
+        "pages": [
+          8
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_expertise",
+        "description": "The creature has Expertise in the skill used.",
+        "params": [
+          "skill"
+        ],
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "influence_check",
+        "description": "The ability check is made to influence the creature.",
+        "type": "predicate",
+        "pages": [
+          182,
+          183
+        ],
+        "lot": "L05"
       }
     ],
     "frequencies": [
@@ -3419,6 +3481,38 @@
           191
         ],
         "lot": "L03"
+      }
+    ],
+    "attitudes": [
+      {
+        "id": "friendly",
+        "name": "Friendly",
+        "description": "Views you favorably.",
+        "ref": "dnd5e/attitude/friendly",
+        "pages": [
+          182
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "indifferent",
+        "name": "Indifferent",
+        "description": "No desire to help or hinder; the default attitude of a monster.",
+        "ref": "dnd5e/attitude/indifferent",
+        "pages": [
+          184
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "hostile",
+        "name": "Hostile",
+        "description": "Views you unfavorably.",
+        "ref": "dnd5e/attitude/hostile",
+        "pages": [
+          183
+        ],
+        "lot": "L05"
       }
     ]
   },

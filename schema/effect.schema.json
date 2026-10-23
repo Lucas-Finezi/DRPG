@@ -29,6 +29,7 @@
         "save",
         "attack",
         "check",
+        "reroll",
         "move",
         "grant",
         "cast_spell",
@@ -1100,6 +1101,44 @@
               "against"
             ],
             "default": "own"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "reroll"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "rolls",
+          "keep"
+        ],
+        "properties": {
+          "rolls": {
+            "description": "Registered roll kinds (or 'any_die') that may be rerolled.",
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "minItems": 1
+          },
+          "dice": {
+            "description": "How many dice are rerolled (default 1).",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "keep": {
+            "enum": [
+              "new",
+              "higher",
+              "lower",
+              "choice"
+            ],
+            "description": "Which result is used after the reroll."
           }
         }
       }

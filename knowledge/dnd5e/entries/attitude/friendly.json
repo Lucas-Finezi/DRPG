@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/attitude/friendly",
+  "kind": "attitude",
+  "name": "Friendly",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Friendly [Attitude]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 2,
+  "text": "A Friendly creature views you favorably. You have Advantage on an ability check to influence a Friendly creature. *See also* “Influence.”",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Attitude"
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "direction": "against",
+      "when": {
+        "pred": "influence_check"
+      },
+      "note": "Checks to influence this creature."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A Friendly creature views you favorably. You have Advantage on an ability check to influence a Friendly creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "*See also* “Influence.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/action/influence"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/influence"
+  ]
+}

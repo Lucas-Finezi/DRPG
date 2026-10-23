@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/heroic-inspiration",
+  "kind": "rule",
+  "name": "Heroic Inspiration",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      183
+    ],
+    "section": "Rules Glossary/Rules Definitions/Heroic Inspiration",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 2,
+  "text": "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.\n\nIf you gain Heroic Inspiration but already have it, it’s lost unless you give it to a player character who lacks it.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "only_one",
+        "max": 1,
+        "on_gain_when_full": "give_to_pc_without_it_or_lose"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "heroic_inspiration",
+      "name": "Heroic Inspiration",
+      "max": 1
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "die_rolled"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "heroic_inspiration",
+          "amount": 1
+        },
+        {
+          "op": "reroll",
+          "rolls": [
+            "any_die"
+          ],
+          "keep": "new"
+        }
+      ],
+      "note": "Player characters only."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "If you gain Heroic Inspiration but already have it, it’s lost unless you give it to a player character who lacks it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

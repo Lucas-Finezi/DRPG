@@ -143,6 +143,9 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
         elif op == "restrict":
             for r in n.get("restrictions", []):
                 chk("restrictions", r, path)
+        elif op == "reroll":
+            for r in n.get("rolls", []):
+                chk("rolls", r, path)
         elif op == "auto_result":
             for r in n.get("rolls", []):
                 chk("rolls", r, path)

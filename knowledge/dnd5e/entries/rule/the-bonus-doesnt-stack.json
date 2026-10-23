@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/the-bonus-doesnt-stack",
+  "kind": "rule",
+  "name": "The Bonus Doesn’t Stack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      8
+    ],
+    "section": "Playing the Game/Proficiency/The Bonus Doesn’t Stack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 0,
+  "text": "Your Proficiency Bonus can’t be added to a die roll or another number more than once. For example, if a rule allows you to make a Charisma (Deception or Persuasion) check, you add your Proficiency Bonus if you’re proficient in either skill, but you don’t add it twice if you’re proficient in both skills.\n\nOccasionally, a Proficiency Bonus might be multiplied or divided (doubled or halved, for example) before being added. For example, the Expertise feature (see “Rules Glossary”) doubles the Proficiency Bonus for certain ability checks. Whenever the bonus is used, it can be multiplied only once and divided only once.",
+  "coverage": [
+    {
+      "text": "Your Proficiency Bonus can’t be added to a die roll or another number more than once. For example, if a rule allows you to make a Charisma (Deception or Persuasion) check, you add your Proficiency Bonus if you’re proficient in either skill, but you don’t add it twice if you’re proficient in both skills.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/proficiency_bonus/rules/0"
+      ]
+    },
+    {
+      "text": "Occasionally, a Proficiency Bonus might be multiplied or divided (doubled or halved, for example) before being added. For example, the Expertise feature (see “Rules Glossary”) doubles the Proficiency Bonus for certain ability checks. Whenever the bonus is used, it can be multiplied only once and divided only once.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/proficiency_bonus/rules/1",
+        "dnd5e/rule/expertise"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/expertise",
+    "dnd5e/system/dnd5e"
+  ]
+}

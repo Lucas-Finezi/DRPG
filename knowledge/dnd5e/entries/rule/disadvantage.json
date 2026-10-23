@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/disadvantage",
+  "kind": "rule",
+  "name": "Disadvantage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Disadvantage",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 1,
+  "text": "If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other. *See also* “Playing the Game” (“D20 Tests”).",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/7",
+        "dnd5e/system/dnd5e#/core_die/rules/8",
+        "dnd5e/system/dnd5e#/core_die/rules/9"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“D20 Tests”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/d20-tests"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/d20-tests",
+    "dnd5e/system/dnd5e"
+  ]
+}

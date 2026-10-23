@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/d20-test",
+  "kind": "rule",
+  "name": "D20 Test",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      180
+    ],
+    "section": "Rules Glossary/Rules Definitions/D20 Test",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The GM determines whether a D20 Test is warranted in a given circumstance. *See also* “Playing the Game” (“D20 Tests”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "affects_all_three",
+        "rolls": [
+          "ability_check",
+          "attack_roll",
+          "saving_throw"
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "test_warranted",
+      "reason": "gm_judgment",
+      "prompt": "Is a D20 Test warranted here?",
+      "source_text": "The GM determines whether a D20 Test is warranted in a given circumstance.",
+      "pages": [
+        180
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/0"
+      ]
+    },
+    {
+      "text": "If something in the game affects D20 Tests, it affects all three of these rolls.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The GM determines whether a D20 Test is warranted in a given circumstance.",
+      "status": "master_decision",
+      "by": [
+        "md:test_warranted"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“D20 Tests”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/d20-tests"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/d20-tests",
+    "dnd5e/system/dnd5e"
+  ]
+}

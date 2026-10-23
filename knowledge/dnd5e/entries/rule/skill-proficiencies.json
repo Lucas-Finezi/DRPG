@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/skill-proficiencies",
+  "kind": "rule",
+  "name": "Skill Proficiencies",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      8,
+      9,
+      10
+    ],
+    "section": "Playing the Game/Proficiency/Skill Proficiencies",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "Most ability checks involve using a skill, which represents a category of things creatures try to do with an ability check. The descriptions of the actions you take (see “Actions” later in “Playing the Game”) specify which skill applies if you make an ability check for that action, and many other rules note when a skill is relevant. The GM has the ultimate say on whether a skill is relevant in a situation.\n\nIf a creature is proficient in a skill, the creature applies its Proficiency Bonus to ability checks involving that skill. Without proficiency in a skill, a creature can still make ability checks involving that skill but doesn’t add its Proficiency Bonus. For example, if a character tries to climb a cliff, the GM might ask for a Strength (Athletics) check. If the character has Athletics proficiency, the character adds their Proficiency Bonus to the Strength check. If the character lacks that proficiency, they make the check without adding their Proficiency Bonus.\n\n#### Skill List\n\nThe skills are shown on the Skills table, which notes example uses for each skill proficiency as well as the ability check the skill most often applies to.\n\n#### Determining Skills\n\nA character’s starting skill proficiencies are determined at character creation, and a monster’s skill proficiencies appear in its stat block.\n\n##### Skills\n\n| **Skill** | **Ability** | **Example Uses** |\n| Acrobatics | Dexterity | Stay on your feet in a tricky situation, or perform an acrobatic stunt. |\n| Animal Handling | Wisdom | Calm or train an animal, or get an animal to behave in a certain way. |\n| Arcana | Intelligence | Recall lore about spells, magic items, and the planes of existence. |\n| Athletics | Strength | Jump farther than normal, stay afloat in rough water, or break something. |\n| Deception | Charisma | Tell a convincing lie, or wear a disguise convincingly. |\n| History | Intelligence | Recall lore about historical events, people, nations, and cultures. |\n| Insight | Wisdom | Discern a person’s mood and intentions. |\n| Intimidation | Charisma | Awe or threaten someone into doing what you want. |\n| Investigation | Intelligence | Find obscure information in books, or deduce how something works. |\n| Medicine | Wisdom | Diagnose an illness, or determine what killed the recently slain. |\n| Nature | Intelligence | Recall lore about terrain, plants, animals, and weather. |\n| Perception | Wisdom | Using a combination of senses, notice something that’s easy to miss. |\n| Performance | Charisma | Act, tell a story, perform music, or dance. |\n| Persuasion | Charisma | Honestly and graciously convince someone of something. |\n| Religion | Intelligence | Recall lore about gods, religious rituals, and holy symbols. |\n| Sleight of Hand | Dexterity | Pick a pocket, conceal a handheld object, or perform legerdemain. |\n| Stealth | Dexterity | Escape notice by moving quietly and hiding behind things. |\n| Survival | Wisdom | Follow tracks, forage, find a trail, or avoid natural hazards. |\n| **Action** | **Summary** |\n| Disengage | Your movement doesn’t provoke Opportunity Attacks for the rest of the turn. |\n| Dodge | Until the start of your next turn, attack rolls against you have Disadvantage, and you make Dexterity saving throws with Advantage. You lose this benefit if you have the Incapacitated condition or if your Speed is 0. |\n| Help | Help another creature’s ability check or attack roll, or administer first aid. |\n| Hide | Make a Dexterity (Stealth) check. |\n| Influence | Make a Charisma (Deception, Intimidation, Performance, or Persuasion) or Wisdom (Animal Handling) check to alter a creature’s attitude. |\n| Magic | Cast a spell, use a magic item, or use a magical feature. |\n| Ready | Prepare to take an action in response to a trigger you define. |\n| Search | Make a Wisdom (Insight, Medicine, Perception, or Survival) check. |\n| Study | Make an Intelligence (Arcana, History, Investigation, Nature, or Religion) check. |\n| Utilize | Use a nonmagical object. |",
+  "data": {
+    "rules": [
+      {
+        "id": "skill_proficiency",
+        "adds": "proficiency_bonus",
+        "without": "no_bonus_but_may_check"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "skill_relevant",
+      "reason": "gm_judgment",
+      "prompt": "Is this skill relevant to the check?",
+      "source_text": "The GM has the ultimate say on whether a skill is relevant in a situation.",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Most ability checks involve using a skill, which represents a category of things creatures try to do with an ability check. The descriptions of the actions you take (see “Actions” later in “Playing the Game”) specify which skill applies if you make an ability check for that action, and many other rules note when a skill is relevant.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/actions"
+      ]
+    },
+    {
+      "text": "The GM has the ultimate say on whether a skill is relevant in a situation.",
+      "status": "master_decision",
+      "by": [
+        "md:skill_relevant"
+      ]
+    },
+    {
+      "text": "If a creature is proficient in a skill, the creature applies its Proficiency Bonus to ability checks involving that skill. Without proficiency in a skill, a creature can still make ability checks involving that skill but doesn’t add its Proficiency Bonus. For example, if a character tries to climb a cliff, the GM might ask for a Strength (Athletics) check. If the character has Athletics proficiency, the character adds their Proficiency Bonus to the Strength check. If the character lacks that proficiency, they make the check without adding their Proficiency Bonus.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Skill List\n\nThe skills are shown on the Skills table, which notes example uses for each skill proficiency as well as the ability check the skill most often applies to.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/skills"
+      ]
+    },
+    {
+      "text": "#### Determining Skills\n\nA character’s starting skill proficiencies are determined at character creation, and a monster’s skill proficiencies appear in its stat block.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/create-your-character",
+        "dnd5e/rule/stat-block"
+      ]
+    },
+    {
+      "text": "##### Skills\n\n| **Skill** | **Ability** | **Example Uses** |\n| Acrobatics | Dexterity | Stay on your feet in a tricky situation, or perform an acrobatic stunt. |\n| Animal Handling | Wisdom | Calm or train an animal, or get an animal to behave in a certain way. |\n| Arcana | Intelligence | Recall lore about spells, magic items, and the planes of existence. |\n| Athletics | Strength | Jump farther than normal, stay afloat in rough water, or break something. |\n| Deception | Charisma | Tell a convincing lie, or wear a disguise convincingly. |\n| History | Intelligence | Recall lore about historical events, people, nations, and cultures. |\n| Insight | Wisdom | Discern a person’s mood and intentions. |\n| Intimidation | Charisma | Awe or threaten someone into doing what you want. |\n| Investigation | Intelligence | Find obscure information in books, or deduce how something works. |\n| Medicine | Wisdom | Diagnose an illness, or determine what killed the recently slain. |\n| Nature | Intelligence | Recall lore about terrain, plants, animals, and weather. |\n| Perception | Wisdom | Using a combination of senses, notice something that’s easy to miss. |\n| Performance | Charisma | Act, tell a story, perform music, or dance. |\n| Persuasion | Charisma | Honestly and graciously convince someone of something. |\n| Religion | Intelligence | Recall lore about gods, religious rituals, and holy symbols. |\n| Sleight of Hand | Dexterity | Pick a pocket, conceal a handheld object, or perform legerdemain. |\n| Stealth | Dexterity | Escape notice by moving quietly and hiding behind things. |\n| Survival | Wisdom | Follow tracks, forage, find a trail, or avoid natural hazards. |\n| **Action** | **Summary** |\n| Disengage | Your movement doesn’t provoke Opportunity Attacks for the rest of the turn. |\n| Dodge | Until the start of your next turn, attack rolls against you have Disadvantage, and you make Dexterity saving throws with Advantage. You lose this benefit if you have the Incapacitated condition or if your Speed is 0. |\n| Help | Help another creature’s ability check or attack roll, or administer first aid. |\n| Hide | Make a Dexterity (Stealth) check. |\n| Influence | Make a Charisma (Deception, Intimidation, Performance, or Persuasion) or Wisdom (Animal Handling) check to alter a creature’s attitude. |\n| Magic | Cast a spell, use a magic item, or use a magical feature. |\n| Ready | Prepare to take an action in response to a trigger you define. |\n| Search | Make a Wisdom (Insight, Medicine, Perception, or Survival) check. |\n| Study | Make an Intelligence (Arcana, History, Investigation, Nature, or Religion) check. |\n| Utilize | Use a nonmagical object. |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/skills"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/actions",
+    "dnd5e/rule/create-your-character",
+    "dnd5e/rule/stat-block",
+    "dnd5e/system/dnd5e"
+  ]
+}

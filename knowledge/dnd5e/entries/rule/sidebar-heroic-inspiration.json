@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-heroic-inspiration",
+  "kind": "rule",
+  "name": "Heroic Inspiration",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      8
+    ],
+    "section": "Playing the Game/D20 Tests",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "Sometimes the GM or a rule gives you Heroic Inspiration. If you have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.\n\n***Only One at a Time.*** You can never have more than one instance of Heroic Inspiration. If something gives you Heroic Inspiration and you already have it, you can give it to a player character in your group who lacks it.\n\n***Gaining Heroic Inspiration.*** Your GM can give you Heroic Inspiration for a variety of reasons. Typically, GMs award it when you do something particularly heroic, in character, or entertaining. It’s a reward for making the game more fun for everyone playing.\n\nOther rules might allow your character to gain Heroic Inspiration independent of the GM’s decision. For example, Human characters start each day with Heroic Inspiration.",
+  "facets": {
+    "sidebar": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "only_one",
+        "max": 1,
+        "on_gain_when_full": "may_give_to_pc_without_it"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "award_inspiration",
+      "reason": "gm_judgment",
+      "prompt": "Award Heroic Inspiration?",
+      "source_text": "Your GM can give you Heroic Inspiration for a variety of reasons.",
+      "pages": [
+        8
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Sometimes the GM or a rule gives you Heroic Inspiration. If you have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/heroic-inspiration"
+      ]
+    },
+    {
+      "text": "***Only One at a Time.*** You can never have more than one instance of Heroic Inspiration. If something gives you Heroic Inspiration and you already have it, you can give it to a player character in your group who lacks it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Gaining Heroic Inspiration.*** Your GM can give you Heroic Inspiration for a variety of reasons. Typically, GMs award it when you do something particularly heroic, in character, or entertaining. It’s a reward for making the game more fun for everyone playing.",
+      "status": "master_decision",
+      "by": [
+        "md:award_inspiration"
+      ]
+    },
+    {
+      "text": "Other rules might allow your character to gain Heroic Inspiration independent of the GM’s decision. For example, Human characters start each day with Heroic Inspiration.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/species/human"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/heroic-inspiration",
+    "dnd5e/species/human"
+  ]
+}

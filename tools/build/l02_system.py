@@ -560,7 +560,7 @@ SEE_ALSO_SECTIONS = {  # "See also" targets that are chapter sections, by the ru
     "Level Advancement": "dnd5e/rule/level-advancement",
     "Playing the Game (Combat)": "dnd5e/rule/combat",
     "Gameplay Toolbox (Combat Encounters)": "dnd5e/rule/combat-encounters",
-    "Playing the Game (Proficiency)": "dnd5e/rule/proficiency",
+    "Playing the Game (Proficiency)": "dnd5e/rule/playing-the-game-proficiency",
     "Playing the Game (Actions)": "dnd5e/rule/actions",
     "Monsters": "dnd5e/rule/monsters",
 }
