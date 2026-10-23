@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/combat-encounters",
+  "kind": "rule",
+  "name": "Combat Encounters",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      202
+    ],
+    "section": "Gameplay Toolbox/Combat Encounters",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L42"
+  },
+  "tier": 3,
+  "text": "The following features can make a combat encounter more interesting or challenging:\n\n**Changes in Elevation.** Terrain features that provide a change of elevation (such as stacks of empty crates, ledges, and balconies) reward clever positioning and encourage characters to jump, climb, fly, or teleport.\n\n**Defensive Positions.** Enemies in hard-to-reach locations or defensive positions force characters who normally attack at range to move around.\n\n**Mixed Monster Groups.** When different types of monsters work together, they can combine their abilities—just like characters with different classes and origins. A diverse force is more powerful.\n\n**Reasons to Move.** Use features that encourage characters and their enemies to move around, such as chandeliers, kegs of gunpowder or oil, and rolling stone traps.",
+  "master_decisions": [
+    {
+      "id": "encounter_features",
+      "reason": "narrative",
+      "prompt": "Which features make this encounter more interesting?",
+      "source_text": "The following features can make a combat encounter more interesting or challenging:"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The following features can make a combat encounter more interesting or challenging:",
+      "status": "master_decision",
+      "by": [
+        "md:encounter_features"
+      ]
+    },
+    {
+      "text": "**Changes in Elevation.** Terrain features that provide a change of elevation (such as stacks of empty crates, ledges, and balconies) reward clever positioning and encourage characters to jump, climb, fly, or teleport.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Defensive Positions.** Enemies in hard-to-reach locations or defensive positions force characters who normally attack at range to move around.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Mixed Monster Groups.** When different types of monsters work together, they can combine their abilities—just like characters with different classes and origins. A diverse force is more powerful.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Reasons to Move.** Use features that encourage characters and their enemies to move around, such as chandeliers, kegs of gunpowder or oil, and rolling stone traps.",
+      "status": "descriptive"
+    }
+  ]
+}

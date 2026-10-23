@@ -1,0 +1,263 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/combat-encounter-difficulty",
+  "kind": "rule",
+  "name": "Combat Encounter Difficulty",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      202,
+      203
+    ],
+    "section": "Gameplay Toolbox/Combat Encounters/Combat Encounter Difficulty",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L42"
+  },
+  "tier": 2,
+  "text": "Use the following guidelines to create a combat encounter of a desired level of difficulty.\n\n#### Step 1: Choose a Difficulty\n\nThree categories describe the range of encounter difficulty:\n\n**Low Difficulty.** An encounter of low difficulty is likely to have one or two scary moments for the players, but their characters should emerge victorious with no casualties. One or more of them might need to use healing resources, however. As a rough guideline, a single monster generally presents a low-difficulty challenge for a party of four characters whose level equals the monster’s Challenge Rating.\n\n**Moderate Difficulty.** Absent healing and other resources, an encounter of moderate difficulty could go badly for the adventurers. Weaker characters might get taken out of the fight, and there’s a slim chance that one or more characters might die.\n\n**High Difficulty.** A high-difficulty encounter could be lethal for one or more characters. To survive it, the characters will need smart tactics, quick thinking, and maybe even a little luck.\n\n#### Step 2: Determine Your XP Budget\n\nUsing the XP Budget per Character table, cross-reference the party’s level with the desired encounter difficulty. Multiply the number in the table by the number of characters in the party to get your XP budget for the encounter.\n\n##### XP Budget per Character\n\n**——— Encounter Difficulty ———**\n\n**Party’s**\n\n| **Level** | **Low** | **Moderate** | **High** |\n| 1 | 50 | 75 | 100 |\n| 2 | 100 | 150 | 200 |\n| 3 | 150 | 225 | 400 |\n| 4 | 250 | 375 | 500 |\n| 5 | 500 | 750 | 1,100 |\n| 6 | 600 | 1,000 | 1,400 |\n| 7 | 750 | 1,300 | 1,700 |\n| 8 | 1,000 | 1,700 | 2,100 |\n| 9 | 1,300 | 2,000 | 2,600 |\n| 10 | 1,600 | 2,300 | 3,100 |\n| 11 | 1,900 | 2,900 | 4,100 |\n| 12 | 2,200 | 3,700 | 4,700 |\n| 13 | 2,600 | 4,200 | 5,400 |\n| 14 | 2,900 | 4,900 | 6,200 |\n| 15 | 3,300 | 5,400 | 7,800 |\n| 16 | 3,800 | 6,100 | 9,800 |\n| 17 | 4,500 | 7,200 | 11,700 |\n| 18 | 5,000 | 8,700 | 14,200 |\n| 19 | 5,500 | 10,700 | 17,200 |\n| 20 | 6,400 | 13,200 | 22,000 |\n\n#### Step 3: Spend Your Budget\n\nEvery creature has an XP value in its stat block. When you add a creature to your combat encounter, deduct its XP from your XP budget to determine how many XP you have left to spend. Spend as much of your XP budget as you can without going over. It’s OK if you have a few unspent XP left over. Examples are given below:\n\n**Example 1.** A low-difficulty encounter for four level\n\n1 characters has an XP budget of 50 × 4, for a total of 200 XP. With that, you could build any of the following encounters:\n\n**•** 1 **Bugbear Warrior** (200 XP)\n\n**•** 2 **Giant Wasps** (100 XP each), for 200 XP total\n\n**•** 6 **Giant Rats** (25 XP each), for 150 XP total\n\n**Example 2.** A moderate-difficulty encounter for five level 3 characters has an XP budget of 225 × 5, for a total of 1,125 XP. With that, you could build either of these encounters:\n\n**•** 2 **Druids** (450 XP each) and 9 **Stirges** (25 XP each), for 1,125 XP total\n\n**•** 1 **Wight** (700 XP), 1 **Warhorse Skeleton** (100 XP), and 6 **Skeletons** (50 XP each), for 1,100 XP total **Example 3.** A high-difficulty encounter for six level\n\n15 characters has an XP budget of 7,800 × 6, for a total of 46,800 XP. With that, you could build this encounter:\n\n**•** 2 **Adult Red Dragons** (18,000 XP each) and 2 **Fire Giants** (5,000 XP each), for 46,000 XP total",
+  "data": {
+    "rules": [
+      {
+        "id": "steps",
+        "order": [
+          "choose_difficulty",
+          "determine_xp_budget",
+          "spend_budget"
+        ]
+      },
+      {
+        "id": "difficulties",
+        "values": [
+          "low",
+          "moderate",
+          "high"
+        ]
+      },
+      {
+        "id": "low",
+        "benchmark": "one monster with CR equal to the level of a party of four"
+      },
+      {
+        "id": "xp_budget",
+        "formula": "table[party_level][difficulty] × characters"
+      },
+      {
+        "id": "spend",
+        "deduct_creature_xp": true,
+        "not_over_budget": true,
+        "leftover_ok": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "xp_budget_per_character",
+        "caption": "XP Budget per Character",
+        "columns": [
+          "Party’s Level",
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "rows": [
+          [
+            "1",
+            "50",
+            "75",
+            "100"
+          ],
+          [
+            "2",
+            "100",
+            "150",
+            "200"
+          ],
+          [
+            "3",
+            "150",
+            "225",
+            "400"
+          ],
+          [
+            "4",
+            "250",
+            "375",
+            "500"
+          ],
+          [
+            "5",
+            "500",
+            "750",
+            "1,100"
+          ],
+          [
+            "6",
+            "600",
+            "1,000",
+            "1,400"
+          ],
+          [
+            "7",
+            "750",
+            "1,300",
+            "1,700"
+          ],
+          [
+            "8",
+            "1,000",
+            "1,700",
+            "2,100"
+          ],
+          [
+            "9",
+            "1,300",
+            "2,000",
+            "2,600"
+          ],
+          [
+            "10",
+            "1,600",
+            "2,300",
+            "3,100"
+          ],
+          [
+            "11",
+            "1,900",
+            "2,900",
+            "4,100"
+          ],
+          [
+            "12",
+            "2,200",
+            "3,700",
+            "4,700"
+          ],
+          [
+            "13",
+            "2,600",
+            "4,200",
+            "5,400"
+          ],
+          [
+            "14",
+            "2,900",
+            "4,900",
+            "6,200"
+          ],
+          [
+            "15",
+            "3,300",
+            "5,400",
+            "7,800"
+          ],
+          [
+            "16",
+            "3,800",
+            "6,100",
+            "9,800"
+          ],
+          [
+            "17",
+            "4,500",
+            "7,200",
+            "11,700"
+          ],
+          [
+            "18",
+            "5,000",
+            "8,700",
+            "14,200"
+          ],
+          [
+            "19",
+            "5,500",
+            "10,700",
+            "17,200"
+          ],
+          [
+            "20",
+            "6,400",
+            "13,200",
+            "22,000"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "reference",
+      "rule": "dnd5e/rule/combat-encounter-difficulty",
+      "note": "XP budget = XP Budget per Character (party level, difficulty) × number of characters."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Use the following guidelines to create a combat encounter of a desired level of difficulty.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Step 1: Choose a Difficulty\n\nThree categories describe the range of encounter difficulty:",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Low Difficulty.** An encounter of low difficulty is likely to have one or two scary moments for the players, but their characters should emerge victorious with no casualties. One or more of them might need to use healing resources, however. As a rough guideline, a single monster generally presents a low-difficulty challenge for a party of four characters whose level equals the monster’s Challenge Rating.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Moderate Difficulty.** Absent healing and other resources, an encounter of moderate difficulty could go badly for the adventurers. Weaker characters might get taken out of the fight, and there’s a slim chance that one or more characters might die.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**High Difficulty.** A high-difficulty encounter could be lethal for one or more characters. To survive it, the characters will need smart tactics, quick thinking, and maybe even a little luck.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Step 2: Determine Your XP Budget\n\nUsing the XP Budget per Character table, cross-reference the party’s level with the desired encounter difficulty. Multiply the number in the table by the number of characters in the party to get your XP budget for the encounter.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### XP Budget per Character\n\n**——— Encounter Difficulty ———**\n\n**Party’s**\n\n| **Level** | **Low** | **Moderate** | **High** |\n| 1 | 50 | 75 | 100 |\n| 2 | 100 | 150 | 200 |\n| 3 | 150 | 225 | 400 |\n| 4 | 250 | 375 | 500 |\n| 5 | 500 | 750 | 1,100 |\n| 6 | 600 | 1,000 | 1,400 |\n| 7 | 750 | 1,300 | 1,700 |\n| 8 | 1,000 | 1,700 | 2,100 |\n| 9 | 1,300 | 2,000 | 2,600 |\n| 10 | 1,600 | 2,300 | 3,100 |\n| 11 | 1,900 | 2,900 | 4,100 |\n| 12 | 2,200 | 3,700 | 4,700 |\n| 13 | 2,600 | 4,200 | 5,400 |\n| 14 | 2,900 | 4,900 | 6,200 |\n| 15 | 3,300 | 5,400 | 7,800 |\n| 16 | 3,800 | 6,100 | 9,800 |\n| 17 | 4,500 | 7,200 | 11,700 |\n| 18 | 5,000 | 8,700 | 14,200 |\n| 19 | 5,500 | 10,700 | 17,200 |\n| 20 | 6,400 | 13,200 | 22,000 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "#### Step 3: Spend Your Budget\n\nEvery creature has an XP value in its stat block. When you add a creature to your combat encounter, deduct its XP from your XP budget to determine how many XP you have left to spend. Spend as much of your XP budget as you can without going over. It’s OK if you have a few unspent XP left over. Examples are given below:",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "**Example 1.** A low-difficulty encounter for four level\n\n1 characters has an XP budget of 50 × 4, for a total of 200 XP. With that, you could build any of the following encounters:\n\n**•** 1 **Bugbear Warrior** (200 XP)\n\n**•** 2 **Giant Wasps** (100 XP each), for 200 XP total\n\n**•** 6 **Giant Rats** (25 XP each), for 150 XP total",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Example 2.** A moderate-difficulty encounter for five level 3 characters has an XP budget of 225 × 5, for a total of 1,125 XP. With that, you could build either of these encounters:\n\n**•** 2 **Druids** (450 XP each) and 9 **Stirges** (25 XP each), for 1,125 XP total\n\n**•** 1 **Wight** (700 XP), 1 **Warhorse Skeleton** (100 XP), and 6 **Skeletons** (50 XP each), for 1,100 XP total **Example 3.** A high-difficulty encounter for six level\n\n15 characters has an XP budget of 7,800 × 6, for a total of 46,800 XP. With that, you could build this encounter:\n\n**•** 2 **Adult Red Dragons** (18,000 XP each) and 2 **Fire Giants** (5,000 XP each), for 46,000 XP total",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/combat-encounter-difficulty"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/encounter-troubleshooting",
+  "kind": "rule",
+  "name": "Troubleshooting (Combat Encounters)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      203
+    ],
+    "section": "Gameplay Toolbox/Combat Encounters/Troubleshooting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L42"
+  },
+  "tier": 3,
+  "text": "When creating and running combat encounters, keep the following in mind.\n\n#### Many Creatures\n\nThe more creatures in an encounter, the higher the risk that a lucky streak on their part could deal more damage to the characters than you expect. If your encounter includes more than two creatures per character, include fragile creatures that can be defeated quickly. This guideline is especially important for characters of level 1 or 2.\n\n#### Adjustments\n\nA player’s absence might warrant removing creatures from an encounter to keep it at the intended difficulty. Also, die rolls and other factors can result in an encounter being easier or harder than intended. You can adjust an encounter on the fly, such as by having creatures flee (making the encounter easier) or adding reinforcements (making the encounter harder).\n\n#### CR 0 Creatures\n\nCreatures that have a CR of 0, particularly ones that are worth 0 XP, should be used sparingly. If you want to include many CR 0 critters in an encounter, use swarms instead.\n\n#### Number of Stat Blocks\n\nThe best combat encounters often pair one kind of creature with another, such as fire giants paired with hell hounds. Be mindful of the number of stat blocks you need to run the encounter. Referencing more than two or three stat blocks for a single encounter can be daunting, particularly if the creatures are complex.\n\n#### Powerful Creatures\n\nIf your combat encounter includes a creature whose CR is higher than the party’s level, be aware that such a creature might deal enough damage with a single action to take out one or more characters. For example, an **Ogre** (CR 2) can kill a level 1 Wizard with a single blow.\n\n#### Unusual Features\n\nIf a monster has a feature that lower-level characters can’t easily overcome, consider not adding that monster to an encounter for characters whose level is lower than the monster’s Challenge Rating.",
+  "data": {
+    "rules": [
+      {
+        "id": "many_creatures",
+        "over_two_per_character": "include fragile creatures"
+      },
+      {
+        "id": "cr0",
+        "use_sparingly": true,
+        "many": "use swarms"
+      },
+      {
+        "id": "stat_blocks",
+        "recommended_max": 3
+      },
+      {
+        "id": "powerful",
+        "cr_above_party_level": "can kill with one action"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "adjust_encounter",
+      "reason": "gm_judgment",
+      "prompt": "Adjust the encounter on the fly (flee or reinforcements)?",
+      "source_text": "You can adjust an encounter on the fly, such as by having creatures flee (making the encounter easier) or adding reinforcements (making the encounter harder)."
+    },
+    {
+      "id": "unusual_features",
+      "reason": "gm_judgment",
+      "prompt": "Leave out a monster whose features low-level characters can't overcome?",
+      "source_text": "consider not adding that monster to an encounter for characters whose level is lower than the monster’s Challenge Rating"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When creating and running combat encounters, keep the following in mind.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Many Creatures\n\nThe more creatures in an encounter, the higher the risk that a lucky streak on their part could deal more damage to the characters than you expect. If your encounter includes more than two creatures per character, include fragile creatures that can be defeated quickly. This guideline is especially important for characters of level 1 or 2.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Adjustments\n\nA player’s absence might warrant removing creatures from an encounter to keep it at the intended difficulty. Also, die rolls and other factors can result in an encounter being easier or harder than intended. You can adjust an encounter on the fly, such as by having creatures flee (making the encounter easier) or adding reinforcements (making the encounter harder).",
+      "status": "master_decision",
+      "by": [
+        "md:adjust_encounter"
+      ]
+    },
+    {
+      "text": "#### CR 0 Creatures\n\nCreatures that have a CR of 0, particularly ones that are worth 0 XP, should be used sparingly. If you want to include many CR 0 critters in an encounter, use swarms instead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Number of Stat Blocks\n\nThe best combat encounters often pair one kind of creature with another, such as fire giants paired with hell hounds. Be mindful of the number of stat blocks you need to run the encounter. Referencing more than two or three stat blocks for a single encounter can be daunting, particularly if the creatures are complex.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Powerful Creatures\n\nIf your combat encounter includes a creature whose CR is higher than the party’s level, be aware that such a creature might deal enough damage with a single action to take out one or more characters. For example, an **Ogre** (CR 2) can kill a level 1 Wizard with a single blow.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### Unusual Features\n\nIf a monster has a feature that lower-level characters can’t easily overcome, consider not adding that monster to an encounter for characters whose level is lower than the monster’s Challenge Rating.",
+      "status": "master_decision",
+      "by": [
+        "md:unusual_features"
+      ]
+    }
+  ]
+}
