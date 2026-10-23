@@ -2255,6 +2255,33 @@
           255
         ],
         "lot": "L33"
+      },
+      {
+        "id": "travel_hours_over_8",
+        "description": "Hours of travel beyond 8 today.",
+        "type": "number",
+        "pages": [
+          192
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "hours_exposed",
+        "description": "Hours of exposure so far (first hour = 1).",
+        "type": "number",
+        "pages": [
+          195
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "sense_range",
+        "description": "Range in feet of the special sense given in the creature's stat block or feature.",
+        "type": "number",
+        "pages": [
+          177
+        ],
+        "lot": "L41"
       }
     ],
     "stats": [
@@ -6117,6 +6144,45 @@
           256
         ],
         "lot": "L33"
+      },
+      {
+        "id": "in_lightly_obscured_area",
+        "description": "The thing the creature tries to see is in a Lightly Obscured area.",
+        "type": "predicate",
+        "pages": [
+          11
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "travel_hours_over",
+        "description": "The group has traveled more than N hours today (param: hours).",
+        "params": [
+          "hours"
+        ],
+        "type": "predicate",
+        "pages": [
+          192
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "save_against_contagion",
+        "description": "The saving throw is made to fight off a magical contagion.",
+        "type": "predicate",
+        "pages": [
+          194
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "minutes_exceed_con_score",
+        "description": "Minutes spent in frigid water exceed the creature's Constitution score.",
+        "type": "predicate",
+        "pages": [
+          195
+        ],
+        "lot": "L41"
       }
     ],
     "frequencies": [

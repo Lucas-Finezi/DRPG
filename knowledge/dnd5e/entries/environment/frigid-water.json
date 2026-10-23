@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/environment/frigid-water",
+  "kind": "environment",
+  "name": "Frigid Water",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      195
+    ],
+    "section": "Gameplay Toolbox/Environmental Effects/Frigid Water",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "A creature can be immersed in frigid water for a number of minutes equal to its Constitution score before suffering any ill effects. Each additional minute spent in frigid water requires the creature to succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level. Creatures with Resistance or Immunity to Cold damage automatically succeed on the save, as do creatures that are naturally adapted to living in ice-cold water.",
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "minutes_elapsed",
+        "which": "each"
+      },
+      "condition": {
+        "pred": "minutes_exceed_con_score"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/exhaustion",
+              "params": {
+                "levels": 1
+              }
+            }
+          ],
+          "note": "Each minute beyond Constitution score minutes; Resistance/Immunity to Cold or adapted: automatic success."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature can be immersed in frigid water for a number of minutes equal to its Constitution score before suffering any ill effects. Each additional minute spent in frigid water requires the creature to succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level. Creatures with Resistance or Immunity to Cold damage automatically succeed on the save, as do creatures that are naturally adapted to living in ice-cold water.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

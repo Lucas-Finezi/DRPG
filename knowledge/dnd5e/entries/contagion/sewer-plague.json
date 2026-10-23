@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/contagion/sewer-plague",
+  "kind": "contagion",
+  "name": "Sewer Plague",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      194
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Magical Contagions/Sewer Plague",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "*Magical Contagion*\n\nFouled potions and alchemical waste can give rise to Sewer Plague, which incubates in sewers and refuse heaps and is sometimes transmitted by creatures that dwell in such areas, including otyughs and rats. Any Humanoid that is wounded by a creature that carries the contagion or that comes into contact with contaminated filth or offal must succeed on a DC 11 Constitution saving throw or become infected with Sewer Plague. A creature suffers the following effects 1d4 days after infection:\n\n**Fatigue.** The creature gains 1 Exhaustion level.\n\n**Weakness.** While the creature has any Exhaustion levels, it regains only half the normal number of Hit Points from spending Hit Point Dice.\n\n**Restlessness.** While the creature has any Exhaustion levels, finishing a Long Rest neither restores lost Hit Points nor reduces the creature’s Exhaustion level.\n\n***Fighting the Contagion.*** Daily at dawn, an infected creature makes a DC 11 Constitution saving throw. On a failed save, the creature gains 1 Exhaustion level as its fatigue worsens. On a successful save, the creature’s Exhaustion level decreases by 1. If the creature’s Exhaustion level is reduced to 0, the contagion ends on the creature.",
+  "facets": {
+    "type": "magical_contagion"
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 11,
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/contagion/sewer-plague",
+          "note": "Infected; effects 1d4 days later."
+        }
+      ],
+      "target": {
+        "kind": "creature",
+        "filter": {
+          "creature_types": [
+            "humanoid"
+          ]
+        }
+      },
+      "note": "Wounded by a carrier or contact with contaminated filth."
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/exhaustion",
+      "params": {
+        "levels": 1
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "healing_dice",
+      "mode": "multiply",
+      "value": 0.5,
+      "when": {
+        "all": [
+          {
+            "pred": "has_condition",
+            "args": {
+              "condition": "exhaustion"
+            }
+          },
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "hit_point_die"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "benefit_from_rest"
+      ],
+      "when": {
+        "pred": "has_condition",
+        "args": {
+          "condition": "exhaustion"
+        }
+      },
+      "note": "A Long Rest restores no Hit Points and doesn't reduce Exhaustion."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 11,
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/exhaustion",
+              "params": {
+                "levels": 1
+              }
+            }
+          ],
+          "on_success": [
+            {
+              "op": "remove_condition",
+              "conditions": [
+                "dnd5e/condition/exhaustion"
+              ],
+              "levels": 1
+            }
+          ]
+        }
+      ],
+      "note": "Ends when Exhaustion reaches 0."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Magical Contagion*",
+      "status": "structured",
+      "by": [
+        "/facets"
+      ]
+    },
+    {
+      "text": "Fouled potions and alchemical waste can give rise to Sewer Plague, which incubates in sewers and refuse heaps and is sometimes transmitted by creatures that dwell in such areas, including otyughs and rats. Any Humanoid that is wounded by a creature that carries the contagion or that comes into contact with contaminated filth or offal must succeed on a DC 11 Constitution saving throw or become infected with Sewer Plague. A creature suffers the following effects 1d4 days after infection:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Fatigue.** The creature gains 1 Exhaustion level.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Weakness.** While the creature has any Exhaustion levels, it regains only half the normal number of Hit Points from spending Hit Point Dice.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "**Restlessness.** While the creature has any Exhaustion levels, finishing a Long Rest neither restores lost Hit Points nor reduces the creature’s Exhaustion level.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Fighting the Contagion.*** Daily at dawn, an infected creature makes a DC 11 Constitution saving throw. On a failed save, the creature gains 1 Exhaustion level as its fatigue worsens. On a successful save, the creature’s Exhaustion level decreases by 1. If the creature’s Exhaustion level is reduced to 0, the contagion ends on the creature.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/contagion/sewer-plague"
+  ]
+}

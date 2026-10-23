@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/contagion/sight-rot",
+  "kind": "contagion",
+  "name": "Sight Rot",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      194
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Magical Contagions/Sight Rot",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "*Magical Contagion*\n\nAny Beast or Humanoid that drinks water tainted by Sight Rot must succeed on a DC 15 Constitution saving throw or have the Blinded condition until the contagion ends.\n\n***Fighting the Contagion.*** Magic such as a *Heal* or *Lesser Restoration* spell ends the contagion immediately. A character who is proficient with an Herbalism Kit can use it to create one dose of nonmagical ointment, which takes 1 hour. When applied to the eyes of a creature suffering from Sight Rot, the ointment suppresses the contagion on that creature for 24 hours. If the contagion is suppressed in this way for a total of 72 hours (requiring three doses and applications of the ointment), the contagion ends on the creature. \n\n***Spreading the Contagion.*** Any Humanoid that makes skin contact with a creature infected with Sight Rot must succeed on a DC 15 Constitution saving throw or also become infected with the contagion. On a successful save, the Humanoid can’t catch the contagion from that particular infected creature for the next 24 hours.",
+  "facets": {
+    "type": "magical_contagion"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cure",
+        "spells": [
+          "dnd5e/spell/heal",
+          "dnd5e/spell/lesser-restoration"
+        ],
+        "ointment": {
+          "tool": "dnd5e/tool/herbalism-kit",
+          "hours": 1,
+          "suppress_hours": 24,
+          "total_hours_to_cure": 72,
+          "doses": 3
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 15,
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/blinded",
+          "note": "Until the contagion ends."
+        }
+      ],
+      "target": {
+        "kind": "creature",
+        "filter": {
+          "creature_types": [
+            "beast",
+            "humanoid"
+          ]
+        }
+      },
+      "note": "Drinks tainted water."
+    },
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 15,
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/contagion/sight-rot",
+          "note": "Infected."
+        }
+      ],
+      "target": {
+        "kind": "creature",
+        "filter": {
+          "creature_types": [
+            "humanoid"
+          ]
+        }
+      },
+      "note": "Skin contact with an infected creature; on a success immune to that carrier for 24 hours."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Magical Contagion*",
+      "status": "structured",
+      "by": [
+        "/facets"
+      ]
+    },
+    {
+      "text": "Any Beast or Humanoid that drinks water tainted by Sight Rot must succeed on a DC 15 Constitution saving throw or have the Blinded condition until the contagion ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Fighting the Contagion.*** Magic such as a *Heal* or *Lesser Restoration* spell ends the contagion immediately. A character who is proficient with an Herbalism Kit can use it to create one dose of nonmagical ointment, which takes 1 hour. When applied to the eyes of a creature suffering from Sight Rot, the ointment suppresses the contagion on that creature for 24 hours. If the contagion is suppressed in this way for a total of 72 hours (requiring three doses and applications of the ointment), the contagion ends on the creature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spreading the Contagion.*** Any Humanoid that makes skin contact with a creature infected with Sight Rot must succeed on a DC 15 Constitution saving throw or also become infected with the contagion. On a successful save, the Humanoid can’t catch the contagion from that particular infected creature for the next 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/contagion/sight-rot",
+    "dnd5e/spell/heal",
+    "dnd5e/spell/lesser-restoration"
+  ]
+}

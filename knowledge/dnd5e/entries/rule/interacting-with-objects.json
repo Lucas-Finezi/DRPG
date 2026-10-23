@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/interacting-with-objects",
+  "kind": "rule",
+  "name": "Interacting with Objects",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      11,
+      12
+    ],
+    "section": "Playing the Game/Exploration/Interacting with Objects",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "Interacting with objects is often simple to resolve. The player tells the GM that their character is doing something, such as moving a lever or opening a door, and the GM describes what happens. Sometimes, however, rules govern what you can do with an object, as detailed in the following sections.\n\n#### What Is an Object?\n\nFor the purpose of the rules, an object is a discrete, inanimate item like a window, door, sword, book, table, chair, or stone. It isn’t a building or a vehicle, which are composed of many objects.\n\n#### Time-Limited Object Interactions\n\nWhen time is short, such as in combat, interactions with objects are limited: one free interaction per turn. That interaction must occur during a creature’s movement or action. Any additional interactions require the Utilize action, as explained in “Combat” later in “Playing the Game.”\n\n#### Finding Hidden Objects\n\nWhen your character searches for hidden things, such as a secret door or a trap, the GM typically asks you to make a Wisdom (Perception) check, provided you describe the character searching in the hidden object’s vicinity. On a success, you find the object, other important details, or both.\n\nIf you describe your character searching nowhere near a hidden object, a Wisdom (Perception) check won’t reveal the object, no matter the check’s total.\n\n#### Carrying Objects\n\nYou can usually carry your gear and treasure without worrying about the weight of those objects. If you try to haul an unusually heavy object or a massive number of lighter objects, the GM might require you to abide by the rules for carrying capacity in “Rules Glossary.”\n\n#### Breaking Objects\n\nAs an action, you can automatically break or otherwise destroy a fragile, nonmagical object, such as a glass container or a piece of paper. If you try to damage something more resilient, the GM might use the rules on breaking objects in “Rules Glossary.”",
+  "data": {
+    "rules": [
+      {
+        "id": "object",
+        "discrete_inanimate": true,
+        "excludes": [
+          "building",
+          "vehicle"
+        ]
+      },
+      {
+        "id": "time_limited",
+        "free_per_turn": 1,
+        "extra": "dnd5e/action/utilize"
+      },
+      {
+        "id": "break_fragile",
+        "cost": "action",
+        "automatic": true,
+        "fragile_nonmagical": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "check",
+      "ability": "wis",
+      "skill": "perception",
+      "note": "Searching in the hidden object's vicinity; searching elsewhere never reveals it."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "object_outcome",
+      "reason": "narrative",
+      "prompt": "What happens when the character interacts with the object?",
+      "source_text": "the GM describes what happens"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Interacting with objects is often simple to resolve. The player tells the GM that their character is doing something, such as moving a lever or opening a door, and the GM describes what happens. Sometimes, however, rules govern what you can do with an object, as detailed in the following sections.",
+      "status": "master_decision",
+      "by": [
+        "md:object_outcome"
+      ]
+    },
+    {
+      "text": "#### What Is an Object?\n\nFor the purpose of the rules, an object is a discrete, inanimate item like a window, door, sword, book, table, chair, or stone. It isn’t a building or a vehicle, which are composed of many objects.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Time-Limited Object Interactions\n\nWhen time is short, such as in combat, interactions with objects are limited: one free interaction per turn. That interaction must occur during a creature’s movement or action. Any additional interactions require the Utilize action, as explained in “Combat” later in “Playing the Game.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Finding Hidden Objects\n\nWhen your character searches for hidden things, such as a secret door or a trap, the GM typically asks you to make a Wisdom (Perception) check, provided you describe the character searching in the hidden object’s vicinity. On a success, you find the object, other important details, or both.\n\nIf you describe your character searching nowhere near a hidden object, a Wisdom (Perception) check won’t reveal the object, no matter the check’s total.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Carrying Objects\n\nYou can usually carry your gear and treasure without worrying about the weight of those objects. If you try to haul an unusually heavy object or a massive number of lighter objects, the GM might require you to abide by the rules for carrying capacity in “Rules Glossary.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/carrying-capacity"
+      ]
+    },
+    {
+      "text": "#### Breaking Objects\n\nAs an action, you can automatically break or otherwise destroy a fragile, nonmagical object, such as a glass container or a piece of paper. If you try to damage something more resilient, the GM might use the rules on breaking objects in “Rules Glossary.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/breaking-objects"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/breaking-objects",
+    "dnd5e/rule/carrying-capacity"
+  ]
+}

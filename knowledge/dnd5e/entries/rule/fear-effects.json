@@ -1,0 +1,134 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/fear-effects",
+  "kind": "rule",
+  "name": "Fear Effects",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      196
+    ],
+    "section": "Gameplay Toolbox/Fear and Mental Stress/Fear Effects",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "Whenever the characters encounter something that is supernaturally frightful, use the Frightened condition as the baseline effect. Fear effects typically require a Wisdom saving throw, with a save DC based on how terrifying the situation is. The Sample Fear DCs table provides some examples.\n\n##### Sample Fear DCs\n\n| **Example** | **Save DC** |\n\nWhen the characters open a sarcophagus, a harmless yet terrifying apparition appears. \n\n10\n\nA character triggers a magical trap that creates an illusory manifestation of that character’s worst fears, visible only to that character. \n\n15\n\nA portal to the Abyss opens, revealing a nightmarish realm of torment and slaughter.\n\n20\n\nTypically, a Frightened creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. \n\nAt your discretion, a Frightened creature might be subject to other effects as long as the Frightened condition lasts. Consider these examples:\n\n- The Frightened creature must take the Dash action on each of its turns and uses its movement to get farther away from the source of its fear.\n\n- Attack rolls against the Frightened creature have Advantage.\n\n- The Frightened creature can do only one of the following on each of its turns: move, take an action, or take a Bonus Action.",
+  "data": {
+    "tables": [
+      {
+        "id": "sample_fear_dcs",
+        "caption": "Sample Fear DCs",
+        "columns": [
+          "Example",
+          "Save DC"
+        ],
+        "rows": [
+          [
+            "When the characters open a sarcophagus, a harmless yet terrifying apparition appears.",
+            "10"
+          ],
+          [
+            "A character triggers a magical trap that creates an illusory manifestation of that character’s worst fears, visible only to that character.",
+            "15"
+          ],
+          [
+            "A portal to the Abyss opens, revealing a nightmarish realm of torment and slaughter.",
+            "20"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "chosen.fear_dc"
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/frightened"
+        }
+      ],
+      "repeat": {
+        "on": {
+          "event": "turn_end",
+          "whose": "target",
+          "which": "each"
+        },
+        "ends": "effect_on_self"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "fear_dc",
+      "reason": "gm_judgment",
+      "prompt": "How terrifying is the situation (save DC)?",
+      "source_text": "with a save DC based on how terrifying the situation is"
+    },
+    {
+      "id": "fear_extra",
+      "reason": "gm_judgment",
+      "prompt": "Apply an extra fear effect while Frightened?",
+      "source_text": "At your discretion, a Frightened creature might be subject to other effects as long as the Frightened condition lasts.",
+      "options": [
+        {
+          "id": "dash",
+          "label": "Dash away from the source each turn"
+        },
+        {
+          "id": "exposed",
+          "label": "Attack rolls against it have Advantage"
+        },
+        {
+          "id": "limited",
+          "label": "Only one of move, action or Bonus Action each turn"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Whenever the characters encounter something that is supernaturally frightful, use the Frightened condition as the baseline effect. Fear effects typically require a Wisdom saving throw, with a save DC based on how terrifying the situation is. The Sample Fear DCs table provides some examples.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:fear_dc"
+      ]
+    },
+    {
+      "text": "##### Sample Fear DCs\n\n| **Example** | **Save DC** |\n\nWhen the characters open a sarcophagus, a harmless yet terrifying apparition appears. \n\n10\n\nA character triggers a magical trap that creates an illusory manifestation of that character’s worst fears, visible only to that character. \n\n15\n\nA portal to the Abyss opens, revealing a nightmarish realm of torment and slaughter.\n\n20",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "Typically, a Frightened creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "At your discretion, a Frightened creature might be subject to other effects as long as the Frightened condition lasts. Consider these examples:\n\n- The Frightened creature must take the Dash action on each of its turns and uses its movement to get farther away from the source of its fear.\n\n- Attack rolls against the Frightened creature have Advantage.\n\n- The Frightened creature can do only one of the following on each of its turns: move, take an action, or take a Bonus Action.",
+      "status": "master_decision",
+      "by": [
+        "md:fear_extra"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/trap/falling-net",
+  "kind": "trap",
+  "name": "Falling Net",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      199
+    ],
+    "section": "Gameplay Toolbox/Traps/Example Traps/Falling Net",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "*Nuisance Trap (Levels 1–4)*\n\n**Trigger:** A creature crosses a trip wire\n\n**Duration:** Instantaneous\n\nA falling net trap uses a trip wire to release a weighted, 10-foot-square Net suspended from the ceiling. The trip wire is 3 inches off the ground and stretches between two columns or trees. \n\nThe first creature that crosses the trip wire causes the Net to fall on it. The target must succeed on a DC 10 Dexterity saving throw or have the Restrained condition until it escapes. The target succeeds automatically if it’s Huge or larger. A creature can take an action to make a DC 10 Strength (Athletics) check, freeing itself or another creature within its reach from the Net on a successful check. \n\n***Detect and Disarm.*** As a Search action, a creature can examine the trapped area and make a DC 11 Wisdom (Perception) check, detecting the trip wire and the suspended Net on a successful check. Once detected, the trip wire can be easily cut or avoided (no ability check required).\n\n***Destroy the Net.*** Reducing the Net to 0 Hit Points frees any creature trapped in it (see “Adventuring Gear” for the Net’s statistics).\n\n***Set the Trap.*** A creature that has Thieves’ Tools and all the trap’s components (including a Net) can try to set a falling net trap, doing so with a successful DC 13 Dexterity (Sleight of Hand) check. Each attempt to set this trap takes 10 minutes.\n\n***At Higher Levels.*** You can scale the trap for higher levels by increasing the weight of the Net, which increases the save DC and the DC of the Strength (Athletics) check as follows: DC 12 at levels 5–10, DC 14 at levels 11–16, or DC 16 at levels 17–20.",
+  "facets": {
+    "severity": [
+      "nuisance"
+    ],
+    "min_level": 1
+  },
+  "data": {
+    "severity": [
+      {
+        "severity": "nuisance",
+        "levels": [
+          1,
+          4
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "trigger",
+        "text": "A creature crosses a trip wire"
+      },
+      {
+        "id": "duration",
+        "text": "Instantaneous"
+      },
+      {
+        "id": "net",
+        "square_feet": 10,
+        "trip_wire_inches": 3,
+        "item": "dnd5e/gear/net"
+      },
+      {
+        "id": "higher_levels",
+        "dc_by_levels": {
+          "5-10": 12,
+          "11-16": 14,
+          "17-20": 16
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": 10,
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/restrained"
+        }
+      ],
+      "note": "Huge or larger succeed automatically; an action and a DC 10 Strength (Athletics) check frees a creature within reach."
+    },
+    {
+      "op": "check",
+      "ability": "wis",
+      "skill": "perception",
+      "dc": 11,
+      "note": "Search action."
+    },
+    {
+      "op": "check",
+      "ability": "dex",
+      "skill": "sleight_of_hand",
+      "dc": 13,
+      "note": "Needs Thieves' Tools and the components; 10 minutes per attempt."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Nuisance Trap (Levels 1–4)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/severity"
+      ]
+    },
+    {
+      "text": "**Trigger:** A creature crosses a trip wire",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "A falling net trap uses a trip wire to release a weighted, 10-foot-square Net suspended from the ceiling. The trip wire is 3 inches off the ground and stretches between two columns or trees.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The first creature that crosses the trip wire causes the Net to fall on it. The target must succeed on a DC 10 Dexterity saving throw or have the Restrained condition until it escapes. The target succeeds automatically if it’s Huge or larger. A creature can take an action to make a DC 10 Strength (Athletics) check, freeing itself or another creature within its reach from the Net on a successful check.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Detect and Disarm.*** As a Search action, a creature can examine the trapped area and make a DC 11 Wisdom (Perception) check, detecting the trip wire and the suspended Net on a successful check. Once detected, the trip wire can be easily cut or avoided (no ability check required).",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Destroy the Net.*** Reducing the Net to 0 Hit Points frees any creature trapped in it (see “Adventuring Gear” for the Net’s statistics).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/gear/net"
+      ]
+    },
+    {
+      "text": "***Set the Trap.*** A creature that has Thieves’ Tools and all the trap’s components (including a Net) can try to set a falling net trap, doing so with a successful DC 13 Dexterity (Sleight of Hand) check. Each attempt to set this trap takes 10 minutes.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***At Higher Levels.*** You can scale the trap for higher levels by increasing the weight of the Net, which increases the save DC and the DC of the Strength (Athletics) check as follows: DC 12 at levels 5–10, DC 14 at levels 11–16, or DC 16 at levels 17–20.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained",
+    "dnd5e/gear/net"
+  ]
+}

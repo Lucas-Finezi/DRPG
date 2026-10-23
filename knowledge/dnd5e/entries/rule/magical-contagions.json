@@ -1,0 +1,75 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magical-contagions",
+  "kind": "rule",
+  "name": "Magical Contagions",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      194
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Magical Contagions",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "Alchemists, potion brewers, and areas of wild magic are credited with creating the first magical contagions. An outbreak of such a contagion can form the basis of an adventure as characters search for a cure and try to stop the contagion’s spread.\n\n#### Rest and Recuperation\n\nIf a creature infected with a magical contagion spends 3 days recuperating—engaging in no activities that would interrupt a Long Rest—the creature makes a DC 15 Constitution saving throw at the end of the recuperation period. On a successful save, the creature has Advantage on saving throws to fight off the magical contagion for the next 24 hours.\n\n#### Example Contagions\n\nThe following examples show how magical contagions can work. Feel free to alter the saving throw DCs, effects, and other characteristics of these contagions to suit your campaign.",
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 15,
+      "on_success": [
+        {
+          "op": "roll_mode",
+          "mode": "advantage",
+          "rolls": [
+            "saving_throw"
+          ],
+          "when": {
+            "pred": "save_against_contagion"
+          },
+          "duration": {
+            "kind": "hours",
+            "amount": 24
+          }
+        }
+      ],
+      "note": "After 3 days of recuperation (no activity that would interrupt a Long Rest)."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "alter_contagion",
+      "reason": "gm_judgment",
+      "prompt": "Alter this contagion's DCs or effects?",
+      "source_text": "Feel free to alter the saving throw DCs, effects, and other characteristics of these contagions to suit your campaign."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Alchemists, potion brewers, and areas of wild magic are credited with creating the first magical contagions. An outbreak of such a contagion can form the basis of an adventure as characters search for a cure and try to stop the contagion’s spread.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Rest and Recuperation\n\nIf a creature infected with a magical contagion spends 3 days recuperating—engaging in no activities that would interrupt a Long Rest—the creature makes a DC 15 Constitution saving throw at the end of the recuperation period. On a successful save, the creature has Advantage on saving throws to fight off the magical contagion for the next 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Example Contagions\n\nThe following examples show how magical contagions can work. Feel free to alter the saving throw DCs, effects, and other characteristics of these contagions to suit your campaign.",
+      "status": "master_decision",
+      "by": [
+        "md:alter_contagion"
+      ]
+    }
+  ]
+}

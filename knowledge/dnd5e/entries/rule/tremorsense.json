@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/tremorsense",
+  "kind": "rule",
+  "name": "Tremorsense",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      190
+    ],
+    "section": "Rules Glossary/Rules Definitions/Tremorsense",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.\n\nTremorsense can’t detect creatures or objects in the air, and it doesn’t count as a form of sight.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "tremorsense",
+        "same_surface_or_liquid": true
+      },
+      {
+        "id": "limits",
+        "not_in_air": true,
+        "not_sight": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "tremorsense",
+      "range_feet": {
+        "var": "sense_range"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Tremorsense can’t detect creatures or objects in the air, and it doesn’t count as a form of sight.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/dim-light",
+  "kind": "rule",
+  "name": "Dim Light",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Dim Light",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 1,
+  "text": "An area with Dim Light is Lightly Obscured. *See also* “Lightly Obscured” and “Playing the Game” (“Exploration”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "dim_light",
+        "obscurement": "dnd5e/rule/lightly-obscured"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An area with Dim Light is Lightly Obscured.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Lightly Obscured” and “Playing the Game” (“Exploration”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/vision-and-light"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/vision-and-light"
+  ]
+}

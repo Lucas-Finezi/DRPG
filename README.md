@@ -84,7 +84,10 @@ python3 -I tools/build/run_all.py          # inventário, todos os lotes em orde
 | 4 — Equipamentos e itens | L30 Equipamento de aventura | concluído (192 entradas: ferramentas, equipamento, montarias, veículos, serviços, estilos de vida; 623/623) |
 | 4 — Equipamentos e itens | L31 Itens mágicos | concluído (233 itens, 2 criaturas embutidas, regras de itens mágicos; 1687/1687) |
 | 4 — Equipamentos e itens | L32 Poções, pergaminhos e venenos | concluído (25 itens, 14 venenos, regras de preparo e veneno; 211/211) |
-| 5 — Criaturas e encontros | L33–L42 | pendente |
+| 5 — Criaturas e encontros | L33 Regras de bloco + criaturas A–C | concluído (79 criaturas, regras de bloco, Running a Monster; 1865/1865) |
+| 5 — Criaturas e encontros | L34–L40 Criaturas D–Z | concluído (251 criaturas; efeitos automáticos de ataque, salvaguarda, reação, conjuração e traços; o restante como decisão do mestre — relatórios em inventory/dnd5e/srd-5.2.1/reports) |
+| 5 — Criaturas e encontros | L41 Exploração e perigos | concluído (11 termos do glossário, 5 maldições, 3 contágios, 9 ambientes, 8 armadilhas, regras; 320/320) |
+| 5 — Criaturas e encontros | L42 Encontros de combate | concluído (dificuldade, orçamento de XP, solução de problemas; 66/66) |
 | 6 — Integração e auditoria | L43–L46 | pendente |
 
 ## Licença do conteúdo

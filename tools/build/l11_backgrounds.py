@@ -94,7 +94,8 @@ def entries():
     E += [background(n) for n in BACKGROUNDS]
 
     path = "Gameplay Toolbox/Creating a Background"
-    nodes = section("Creating a Background", 2, skip_tables=("Travel Terrain",))
+    # the Travel Terrain table and its footnote are printed here by the column flow; both belong to L41
+    nodes = [n for n in section("Creating a Background", 2, skip_tables=("Travel Terrain",)) if not n.text.startswith("\\*Appropriate equipment")]
     E.append(build("rule", "creating-a-background", "Creating a Background", nodes, LOT, path, [
         (None, "md", md("custom_background", "Create or customize a background for this campaign?",
                         "Creating a unique background or customizing an existing one can reflect the particular theme "

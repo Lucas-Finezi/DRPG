@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/environment/extreme-cold",
+  "kind": "environment",
+  "name": "Extreme Cold",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      195
+    ],
+    "section": "Gameplay Toolbox/Environmental Effects/Extreme Cold",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "When the temperature is 0 degrees Fahrenheit or lower, a creature exposed to the extreme cold must succeed on a DC 10 Constitution saving throw at the end of each hour or gain 1 Exhaustion level. Creatures that have Resistance or Immunity to Cold damage automatically succeed on the save.",
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hour_elapsed",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/exhaustion",
+              "params": {
+                "levels": 1
+              }
+            }
+          ],
+          "note": "Resistance or Immunity to Cold: automatic success."
+        }
+      ],
+      "note": "0 °F or lower, exposed."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When the temperature is 0 degrees Fahrenheit or lower, a creature exposed to the extreme cold must succeed on a DC 10 Constitution saving throw at the end of each hour or gain 1 Exhaustion level. Creatures that have Resistance or Immunity to Cold damage automatically succeed on the save.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

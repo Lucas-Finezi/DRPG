@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/curse/bestow-curse",
+  "kind": "curse",
+  "name": "Bestow Curse",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      193
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Curses/Bestow Curse",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 1,
+  "text": "The simplest curses are created by the *Bestow Curse* spell. The effects of such curses are limited and can be ended by the *Remove Curse* spell.\n\n*Bestow Curse* provides useful benchmarks for gauging the potency of other curses. A curse that lasts for 1 minute equates to a level 3 spell, while one that lasts until dispelled equates to a level 9 spell.",
+  "data": {
+    "rules": [
+      {
+        "id": "benchmark",
+        "one_minute": "level 3 spell",
+        "until_dispelled": "level 9 spell"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The simplest curses are created by the *Bestow Curse* spell. The effects of such curses are limited and can be ended by the *Remove Curse* spell.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/spell/bestow-curse",
+        "dnd5e/spell/remove-curse"
+      ]
+    },
+    {
+      "text": "*Bestow Curse* provides useful benchmarks for gauging the potency of other curses. A curse that lasts for 1 minute equates to a level 3 spell, while one that lasts until dispelled equates to a level 9 spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/bestow-curse",
+    "dnd5e/spell/remove-curse"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/curse/narrative-curses",
+  "kind": "curse",
+  "name": "Narrative Curses",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      193
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Curses/Narrative Curses",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "A curse might manifest during an adventure when a creature’s violation of a taboo warrants supernatural punishment, such as breaking a vow, defiling a tomb, or murdering an innocent. Such a curse can have any effects you design, or it might be a customized version of another type of curse discussed in this section.\n\nA creature affected by such a curse should know why they’re being punished and be able to learn how to end their curse, likely by symbolically righting the wrong they committed. How a spell like *Remove Curse* affects a curse that’s part of your adventure is up to you—the spell might merely suppress the effects of the curse for a time. Regardless, narrative curses should feel like rare, potent magic rooted in the lore of your campaign.",
+  "data": {
+    "rules": [
+      {
+        "id": "knowable",
+        "knows_why": true,
+        "can_learn_cure": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "narrative_curse",
+      "reason": "narrative",
+      "prompt": "What effects does this narrative curse have?",
+      "source_text": "Such a curse can have any effects you design"
+    },
+    {
+      "id": "remove_curse_narrative",
+      "reason": "gm_judgment",
+      "prompt": "How does Remove Curse affect this curse?",
+      "source_text": "How a spell like *Remove Curse* affects a curse that’s part of your adventure is up to you"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A curse might manifest during an adventure when a creature’s violation of a taboo warrants supernatural punishment, such as breaking a vow, defiling a tomb, or murdering an innocent. Such a curse can have any effects you design, or it might be a customized version of another type of curse discussed in this section.",
+      "status": "master_decision",
+      "by": [
+        "md:narrative_curse"
+      ]
+    },
+    {
+      "text": "A creature affected by such a curse should know why they’re being punished and be able to learn how to end their curse, likely by symbolically righting the wrong they committed. How a spell like *Remove Curse* affects a curse that’s part of your adventure is up to you—the spell might merely suppress the effects of the curse for a time. Regardless, narrative curses should feel like rare, potent magic rooted in the lore of your campaign.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:remove_curse_narrative"
+      ]
+    }
+  ]
+}
