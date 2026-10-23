@@ -2055,6 +2055,15 @@
           84
         ],
         "lot": "L14"
+      },
+      {
+        "id": "form_hp",
+        "description": "Hit Points of the form a creature transformed into.",
+        "type": "number",
+        "pages": [
+          153
+        ],
+        "lot": "L21"
       }
     ],
     "stats": [
@@ -2584,6 +2593,14 @@
           172
         ],
         "lot": "L20"
+      },
+      {
+        "id": "ignores_difficult_terrain",
+        "description": "The creature's movement is unaffected by Difficult Terrain.",
+        "pages": [
+          134
+        ],
+        "lot": "L21"
       }
     ],
     "rolls": [
@@ -3330,6 +3347,49 @@
           148
         ],
         "lot": "L20"
+      },
+      {
+        "id": "would_drop_to_0_hp",
+        "description": "The creature would drop to 0 Hit Points.",
+        "pages": [
+          122
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "instant_death_effect",
+        "description": "The creature is subjected to an effect that would kill it instantly without dealing damage.",
+        "pages": [
+          122
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "teleport_destination_occupied",
+        "description": "A teleporting creature would arrive in an occupied or filled space.",
+        "pages": [
+          124
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "hit_by_melee_attack_within_feet",
+        "description": "A creature within N feet (param) hits the creature with a melee attack roll.",
+        "params": [
+          "feet"
+        ],
+        "pages": [
+          133
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "enters_or_ends_turn_near_wall",
+        "description": "A creature ends its turn near the damaging side of the wall or inside it, or enters it.",
+        "pages": [
+          172
+        ],
+        "lot": "L21"
       }
     ],
     "predicates": [
@@ -4801,6 +4861,15 @@
           146
         ],
         "lot": "L20"
+      },
+      {
+        "id": "cr_at_most_target",
+        "description": "The form's Challenge Rating is at most the target's (or its level).",
+        "type": "predicate",
+        "pages": [
+          153
+        ],
+        "lot": "L21"
       }
     ],
     "frequencies": [
@@ -5709,6 +5778,22 @@
           163
         ],
         "lot": "L20"
+      },
+      {
+        "id": "hp_max_reduced",
+        "description": "The creature's Hit Point maximum can't be reduced.",
+        "pages": [
+          111
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "speed_reduced_by_magic",
+        "description": "Spells and other magical effects can't reduce the creature's Speed.",
+        "pages": [
+          134
+        ],
+        "lot": "L21"
       }
     ],
     "conditions": [

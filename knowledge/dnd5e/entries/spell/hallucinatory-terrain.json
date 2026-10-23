@@ -1,0 +1,113 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/hallucinatory-terrain",
+  "kind": "spell",
+  "name": "Hallucinatory Terrain",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      139
+    ],
+    "section": "Spells/Spell Descriptions/Hallucinatory Terrain",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Illusion (Bard, Druid, Warlock, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 300 feet\n\n**Components:** V, S, M (a mushroom)\n\n**Duration:** 24 hours\n\nYou make natural terrain in a 150-foot Cube in range look, sound, and smell like another sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed.\n\nThe tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to notice the illusion. If the difference isn’t obvious by touch, a creature examining the illusion can take the Study action to make an Intelligence (Investigation) check against your spell save DC to disbelieve it. If a creature discerns that the terrain is illusory, the creature sees a vague image superimposed on the real terrain.",
+  "facets": {
+    "level": 4,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes",
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 300
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a mushroom"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "illusion",
+        "cube_feet": 150,
+        "senses": [
+          "sight",
+          "sound",
+          "smell"
+        ],
+        "natural_terrain_only": true,
+        "structures_equipment_creatures_unchanged": true
+      },
+      {
+        "id": "touch",
+        "tactile_unchanged": true,
+        "discerned": "vague_image_superimposed"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "check",
+      "ability": "int",
+      "skill": "investigation",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "note": "A creature that takes the Study action; on a success it discerns the illusion."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Illusion (Bard, Druid, Warlock, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 300 feet\n\n**Components:** V, S, M (a mushroom)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You make natural terrain in a 150-foot Cube in range look, sound, and smell like another sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to notice the illusion. If the difference isn’t obvious by touch, a creature examining the illusion can take the Study action to make an Intelligence (Investigation) check against your spell save DC to disbelieve it. If a creature discerns that the terrain is illusory, the creature sees a vague image superimposed on the real terrain.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

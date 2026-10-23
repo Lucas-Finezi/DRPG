@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/divination",
+  "kind": "spell",
+  "name": "Divination",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      125
+    ],
+    "section": "Spells/Spell Descriptions/Divination",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 3,
+  "text": "*Level 4 Divination (Cleric, Druid, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (incense worth 25+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nThis spell puts you in contact with a god or a god’s servants. You ask one question about a specific goal, event, or activity to occur within 7 days. The GM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn’t account for circumstances that might change the answer, such as the casting of other spells.\n\nIf you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+  "facets": {
+    "level": 4,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "incense worth 25+ GP, which the spell consumes",
+      "material_cost_gp": 25,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "question",
+        "count": 1,
+        "within_days": 7,
+        "ignores_changing_circumstances": true
+      },
+      {
+        "id": "repeat_casting",
+        "no_answer_chance_percent": {
+          "op": "mul",
+          "args": [
+            25,
+            {
+              "var": "uses_since_rest.divination"
+            }
+          ]
+        },
+        "reset_on": "long_rest_finished"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "divination_answer",
+      "reason": "narrative",
+      "prompt": "What truthful reply does the GM give?",
+      "source_text": "The GM offers a truthful reply, which might be a short phrase or cryptic rhyme."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Divination (Cleric, Druid, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (incense worth 25+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell puts you in contact with a god or a god’s servants. You ask one question about a specific goal, event, or activity to occur within 7 days. The GM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn’t account for circumstances that might change the answer, such as the casting of other spells.",
+      "status": "master_decision",
+      "by": [
+        "md:divination_answer",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

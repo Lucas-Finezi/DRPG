@@ -1,0 +1,150 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/giant-insect",
+  "kind": "spell",
+  "name": "Giant Insect",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      135,
+      136
+    ],
+    "section": "Spells/Spell Descriptions/Giant Insect",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Conjuration (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the **Giant Insect** stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.\n\n***Using a Higher-Level Spell Slot.*** Use the spell slot’s level for the spell’s level in the stat block.",
+  "facets": {
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "ally",
+        "obeys_verbal_commands": true,
+        "idle": "dnd5e/action/dodge"
+      },
+      {
+        "id": "stat_block_level",
+        "spell_level_in_stat_block": {
+          "var": "spell_slot_level"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "insect",
+      "choose": 1,
+      "options": [
+        {
+          "id": "centipede",
+          "label": "Centipede",
+          "effects": [
+            {
+              "op": "summon",
+              "creature": "dnd5e/creature/giant-insect",
+              "controller": "summoner",
+              "initiative": "after_summoner"
+            }
+          ]
+        },
+        {
+          "id": "spider",
+          "label": "Spider",
+          "effects": [
+            {
+              "op": "summon",
+              "creature": "dnd5e/creature/giant-insect",
+              "controller": "summoner",
+              "initiative": "after_summoner"
+            }
+          ]
+        },
+        {
+          "id": "wasp",
+          "label": "Wasp",
+          "effects": [
+            {
+              "op": "summon",
+              "creature": "dnd5e/creature/giant-insect",
+              "controller": "summoner",
+              "initiative": "after_summoner"
+            }
+          ]
+        }
+      ],
+      "note": "Disappears at 0 Hit Points or when the spell ends."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Conjuration (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the **Giant Insect** stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don’t issue any, it takes the Dodge action and uses its movement to avoid danger.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** Use the spell slot’s level for the spell’s level in the stat block.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/giant-insect"
+  ]
+}
