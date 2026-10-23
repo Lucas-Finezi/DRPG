@@ -1,0 +1,371 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/rust-monster",
+  "kind": "creature",
+  "name": "Rust Monster",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      320,
+      321
+    ],
+    "section": "Monsters A–Z/Rust Monster/Rust Monster",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Medium Monstrosity, Unaligned*\n\n| **AC** 14 | **Initiative** +1 (11) |\n\n**HP** 33 (6d8 + 6)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |\n\n**Senses** Darkvision 60 ft.; Passive Perception 11\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Iron Scent.*** The rust monster can pinpoint the location of ferrous metal within 30 feet of itself.\n\n##### Actions\n\n***Multiattack.*** The rust monster makes one Bite attack and uses Antennae twice.\n\n***Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage.\n\n***Antennae.*** The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. *Dexterity Saving Throw:* DC 11, the creature with the object. *Failure:* The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the armor or weapon.\n\n***Destroy Metal.*** The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object.\n\n##### Reactions\n\n***Reflexive Antennae.*** *Trigger:* An attack roll hits the rust monster. *Response:* The rust monster uses Antennae.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "type_line": "Medium Monstrosity, Unaligned",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 33,
+      "formula": {
+        "op": "add",
+        "args": [
+          "6d8",
+          6
+        ]
+      },
+      "text": "33 (6d8 + 6)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 11",
+      "darkvision": 60,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Iron Scent",
+        "text": "The rust monster can pinpoint the location of ferrous metal within 30 feet of itself."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The rust monster makes one Bite attack and uses Antennae twice."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage."
+      },
+      {
+        "name": "Antennae",
+        "text": "The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. *Dexterity Saving Throw:* DC 11, the creature with the object. *Failure:* The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the armor or weapon."
+      },
+      {
+        "name": "Destroy Metal",
+        "text": "The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Reflexive Antennae",
+        "text": "*Trigger:* An attack roll hits the rust monster. *Response:* The rust monster uses Antennae."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 1
+          }
+        ],
+        "text": "The rust monster makes one Bite attack and uses Antennae twice."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  1
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Antennae",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 11,
+          "target": {
+            "kind": "creature",
+            "text": "the creature with the object"
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: An attack roll hits the rust monster."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_iron_scent",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Iron Scent as written.",
+      "source_text": "The rust monster can pinpoint the location of ferrous metal within 30 feet of itself."
+    },
+    {
+      "id": "actions_antennae_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Antennae as written.",
+      "source_text": "The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the Mending spell on the armor or weapon."
+    },
+    {
+      "id": "actions_destroy_metal",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Destroy Metal as written.",
+      "source_text": "The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object."
+    },
+    {
+      "id": "reactions_reflexive_antennae_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Reflexive Antennae as written.",
+      "source_text": ": The rust monster uses Antennae."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Monstrosity, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 33 (6d8 + 6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 12 | +1 | +1 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Iron Scent.*** The rust monster can pinpoint the location of ferrous metal within 30 feet of itself.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_iron_scent"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The rust monster makes one Bite attack and uses Antennae twice.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 5 (1d8 + 1) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Antennae.*** The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. *Dexterity Saving Throw:* DC 11, the creature with the object. *Failure:* The object takes a −1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the armor or weapon.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/1",
+        "md:actions_antennae_rider"
+      ]
+    },
+    {
+      "text": "***Destroy Metal.*** The rust monster touches a nonmagical metal object within 5 feet of itself that isn’t being worn or carried. The touch destroys a 1-foot Cube of the object.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "md:actions_destroy_metal"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Reflexive Antennae.*** *Trigger:* An attack roll hits the rust monster. *Response:* The rust monster uses Antennae.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2",
+        "md:reactions_reflexive_antennae_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/reaction"
+  ]
+}

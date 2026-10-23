@@ -1,0 +1,240 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/piranha",
+  "kind": "creature",
+  "name": "Piranha",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      358
+    ],
+    "section": "Animals/Piranha",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 2,
+  "text": "*Tiny Beast, Unaligned*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 1 (1d4 − 1)\n\n**Speed** 5 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 2 | −4 | −4 | **Dex** 16 | +3 | +3 | **Con** 9 | −1 | −1 |\n| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 | −4 |\n\n**Senses** Darkvision 60 ft.; Passive Perception 8\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Water Breathing.*** The piranha can breathe only underwater.\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +5 (with Advantage if the target doesn’t have all its Hit Points), reach 5 ft. *Hit:* 1 Piercing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Tiny Beast, Unaligned",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 1,
+      "formula": {
+        "op": "sub",
+        "args": [
+          "1d4",
+          1
+        ]
+      },
+      "text": "1 (1d4 − 1)"
+    },
+    "speed": {
+      "text": "5 ft., Swim 40 ft.",
+      "walk": 5,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      }
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 8",
+      "darkvision": 60,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Water Breathing",
+        "text": "The piranha can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +5 (with Advantage if the target doesn’t have all its Hit Points), reach 5 ft. *Hit:* 1 Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": 1,
+              "damage_type": "piercing"
+            }
+          ],
+          "note": "Attack: with Advantage if the target doesn’t have all its Hit Points."
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 1 (1d4 − 1)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 2 | −4 | −4 | **Dex** 16 | +3 | +3 | **Con** 9 | −1 | −1 |\n| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 2 | −4 | −4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Water Breathing.*** The piranha can breathe only underwater.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +5 (with Advantage if the target doesn’t have all its Hit Points), reach 5 ft. *Hit:* 1 Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

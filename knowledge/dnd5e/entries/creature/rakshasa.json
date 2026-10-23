@@ -1,0 +1,649 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/rakshasa",
+  "kind": "creature",
+  "name": "Rakshasa",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      317,
+      318
+    ],
+    "section": "Monsters A–Z/Rakshasa/Rakshasa",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Medium Fiend, Lawful Evil*\n\n| **AC** 17 | **Initiative** +8 (18) |\n\n**HP** 221 (26d8 + 104)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 17 | +3 | +3 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 20 | +5 | +5 |\n\n**Skills** Deception +10, Insight +8, Perception +8\n\n**Vulnerabilities** Piercing damage from weapons wielded by creatures under the effect of a *Bless* spell\n\n**Immunities** Charmed, Frightened\n\n**Senses** Truesight 60 ft.; Passive Perception 18\n\n**Languages** Common, Infernal\n\n**CR** 13 (XP 10,000; PB +5)\n\n##### Traits\n\n***Greater Magic Resistance.*** The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa’s permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment.\n\n***Fiendish Restoration.*** If the rakshasa dies outside the Nine Hells, its body turns to ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.\n\n##### Actions\n\n***Multiattack.*** The rakshasa makes three Cursed Touch attacks.\n\n***Cursed Touch.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.\n\n***Baleful Command (Recharge 5–6).*** *Wisdom Saving Throw:* DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn.\n\n***Spellcasting.*** The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Disguise Self*,\n\n*Mage Hand*, *Minor Illusion*\n\n**1/Day Each:** *Fly*, *Invisibility*, *Major Image*, *Plane Shift*",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "cr": "13"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "type_line": "Medium Fiend, Lawful Evil",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 8,
+      "score": 18,
+      "text": "+8 (18)"
+    },
+    "hp": {
+      "average": 221,
+      "formula": {
+        "op": "add",
+        "args": [
+          "26d8",
+          104
+        ]
+      },
+      "text": "221 (26d8 + 104)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "cha": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      }
+    },
+    "skills": {
+      "deception": 10,
+      "insight": 8,
+      "perception": 8,
+      "text": "Deception +10, Insight +8, Perception +8"
+    },
+    "vulnerabilities": {
+      "damage_types": [],
+      "text": "Piercing damage from weapons wielded by creatures under the effect of a Bless spell"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened"
+      ],
+      "text": "Charmed, Frightened"
+    },
+    "senses": {
+      "text": "Truesight 60 ft.; Passive Perception 18",
+      "truesight": 60,
+      "passive_perception": 18
+    },
+    "languages": {
+      "text": "Common, Infernal"
+    },
+    "cr": {
+      "value": "13",
+      "xp": 10000,
+      "proficiency_bonus": 5,
+      "text": "13 (XP 10,000; PB +5)"
+    },
+    "traits": [
+      {
+        "name": "Greater Magic Resistance",
+        "text": "The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa’s permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment."
+      },
+      {
+        "name": "Fiendish Restoration",
+        "text": "If the rakshasa dies outside the Nine Hells, its body turns to ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The rakshasa makes three Cursed Touch attacks."
+      },
+      {
+        "name": "Cursed Touch",
+        "text": "*Melee Attack Roll:* +10, reach 5 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest."
+      },
+      {
+        "name": "Baleful Command",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Wisdom Saving Throw:* DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Disguise Self*,\n\n*Mage Hand*, *Minor Illusion*\n\n**1/Day Each:** *Fly*, *Invisibility*, *Major Image*, *Plane Shift*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Nine Hells",
+        "revives_in": "Nine Hells",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Cursed Touch",
+            "count": 3
+          }
+        ],
+        "text": "The rakshasa makes three Cursed Touch attacks."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18): At Will: Detect Magic, Detect Thoughts, Disguise Self, Mage Hand, Minor Illusion 1/Day Each: Fly, Invisibility, Major Image, Plane Shift",
+        "ability": "cha",
+        "save_dc": 18,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/detect-thoughts",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/disguise-self",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/mage-hand",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/minor-illusion",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/fly",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/invisibility",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/major-image",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/plane-shift",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Cursed Touch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d12",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Baleful Command",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 18,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "text": "each enemy in a 30-foot Emanation originating from the rakshasa"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "8d6",
+              "damage_type": "psychic"
+            }
+          ]
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-thoughts",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Detect Thoughts"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/disguise-self",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Disguise Self"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Mage Hand"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/minor-illusion",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Minor Illusion"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fly",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Fly",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Invisibility",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/major-image",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Major Image",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 18
+        }
+      ],
+      "name": "Plane Shift",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_greater_magic_resistance",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Greater Magic Resistance as written.",
+      "source_text": "The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa’s permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment."
+    },
+    {
+      "id": "actions_cursed_touch_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Cursed Touch as written.",
+      "source_text": "12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest."
+    },
+    {
+      "id": "actions_baleful_command_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Baleful Command as written.",
+      "source_text": "28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fiend, Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +8 (18) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 221 (26d8 + 104)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 17 | +3 | +3 | **Con** 18 | +4 | +4 |\n| **Int** | 13 | +1 | +1 | **Wis** 16 | +3 | +3 | **Cha** 20 | +5 | +5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +10, Insight +8, Perception +8",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Piercing damage from weapons wielded by creatures under the effect of a *Bless* spell",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Charmed, Frightened",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 60 ft.; Passive Perception 18",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Infernal",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 13 (XP 10,000; PB +5)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Greater Magic Resistance.*** The rakshasa automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the rakshasa’s permission, no spell can observe the rakshasa remotely or detect its thoughts, creature type, or alignment.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_greater_magic_resistance"
+      ]
+    },
+    {
+      "text": "***Fiendish Restoration.*** If the rakshasa dies outside the Nine Hells, its body turns to ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The rakshasa makes three Cursed Touch attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Cursed Touch.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 19 (3d12) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_cursed_touch_rider"
+      ]
+    },
+    {
+      "text": "***Baleful Command (Recharge 5–6).*** *Wisdom Saving Throw:* DC 18, each enemy in a 30-foot Emanation originating from the rakshasa. *Failure:* 28 (8d6) Psychic damage, and the target has the Frightened and Incapacitated conditions until the start of the rakshasa’s next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/1",
+        "md:actions_baleful_command_rider"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The rakshasa casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 18):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Disguise Self*,\n\n*Mage Hand*, *Minor Illusion*\n\n**1/Day Each:** *Fly*, *Invisibility*, *Major Image*, *Plane Shift*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/2",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/detect-thoughts",
+    "dnd5e/spell/disguise-self",
+    "dnd5e/spell/fly",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/major-image",
+    "dnd5e/spell/minor-illusion",
+    "dnd5e/spell/plane-shift"
+  ]
+}
