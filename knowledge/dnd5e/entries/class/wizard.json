@@ -41,6 +41,48 @@
       "Starting Equipment": "Choose A or B: (A) 2 Daggers, Arcane Focus (Quarterstaff), Robe, Spellbook, Scholar’s Pack, and 5 GP; or (B) 55 GP"
     },
     "hit_die": "d6",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          6,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d6",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            4,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -592,6 +634,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -599,9 +642,34 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/wizard",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Daggers",
+                  "quantity": 2,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Arcane Focus (Quarterstaff)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/arcane-focus"
+                },
+                {
+                  "name": "Robe",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/robe"
+                },
+                {
+                  "name": "Spellbook",
+                  "quantity": 1
+                },
+                {
+                  "name": "Scholar’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/scholars-pack"
+                }
+              ],
+              "gp": 5
             }
           ]
         },
@@ -610,9 +678,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/wizard",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 55
             }
           ]
         }
@@ -668,7 +735,6 @@
     }
   ],
   "refs": [
-    "dnd5e/class/wizard",
     "dnd5e/feature/wizard-ability-score-improvement",
     "dnd5e/feature/wizard-arcane-recovery",
     "dnd5e/feature/wizard-epic-boon",

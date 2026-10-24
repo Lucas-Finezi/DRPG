@@ -97,7 +97,13 @@
               "event": "turn_end",
               "whose": "source",
               "which": "next"
-            }
+            },
+            "ends_on": [
+              {
+                "event": "targeted_by_attack_roll",
+                "whose": "target"
+              }
+            ]
           },
           "note": "Only the next attack roll against it."
         }

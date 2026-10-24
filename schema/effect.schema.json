@@ -481,6 +481,12 @@
           "level": {
             "description": "Slot level for spell slots.",
             "$ref": "urn:drpg:schema:expression"
+          },
+          "max_level": {
+            "description": "For spell slots restored by combined level: highest slot level that may be restored.",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
           }
         }
       }
@@ -572,6 +578,14 @@
           },
           "on_critical": {
             "$ref": "#/$defs/effects"
+          },
+          "ability_modifier_to_damage": {
+            "description": "Whether the attack's ability modifier is added to its damage: 'add' (default for weapon attacks), 'none', or 'negative_only' (extra attacks such as Cleave or the Light property).",
+            "enum": [
+              "add",
+              "none",
+              "negative_only"
+            ]
           }
         }
       }
@@ -662,9 +676,6 @@
         }
       },
       "then": {
-        "required": [
-          "refs"
-        ],
         "properties": {
           "refs": {
             "type": "array",
@@ -674,10 +685,85 @@
             "minItems": 1
           },
           "choose": {
-            "description": "Grant only this many of 'refs', chosen by the player.",
+            "description": "Grant only this many of 'refs' (or of the spells in the listed spell lists, see 'filter'), chosen by the player; with an 'id', the choice is readable as {'var': 'chosen.<id>'}.",
             "$ref": "urn:drpg:schema:expression"
+          },
+          "items": {
+            "description": "Equipment granted (starting equipment, packages): items with quantities; 'ref' when the item has an entry.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "quantity"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "ref": {
+                  "$ref": "urn:drpg:schema:common#/$defs/ref"
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "anyOf": [
+                {
+                  "required": [
+                    "ref"
+                  ]
+                },
+                {
+                  "required": [
+                    "name"
+                  ]
+                }
+              ]
+            }
+          },
+          "gp": {
+            "description": "Gold Pieces granted.",
+            "type": "number",
+            "minimum": 0
+          },
+          "filter": {
+            "description": "For refs that are spell lists: which spells may be chosen.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "spell_level": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9
+              },
+              "school": {
+                "type": "string"
+              }
+            }
           }
-        }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "refs"
+            ]
+          },
+          {
+            "required": [
+              "items"
+            ]
+          },
+          {
+            "required": [
+              "gp"
+            ]
+          }
+        ]
       }
     },
     {
@@ -694,7 +780,25 @@
         ],
         "properties": {
           "spell": {
-            "$ref": "urn:drpg:schema:common#/$defs/ref"
+            "description": "The spell, or the spell chosen earlier ({'var': 'chosen.<grant id>'}).",
+            "anyOf": [
+              {
+                "$ref": "urn:drpg:schema:common#/$defs/ref"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "var"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "var": {
+                    "type": "string",
+                    "pattern": "^chosen\\."
+                  }
+                }
+              }
+            ]
           },
           "level": {
             "$ref": "urn:drpg:schema:expression"

@@ -624,6 +624,15 @@
           "lot": {
             "description": "Lot that declared the name.",
             "$ref": "urn:drpg:schema:common#/$defs/lot"
+          },
+          "formula": {
+            "description": "How the engine computes this value or default (copied from the rule that states it).",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "formula_source": {
+            "description": "JSON pointer (in system.json) of the rule the formula comes from.",
+            "type": "string",
+            "pattern": "^#/"
           }
         }
       }

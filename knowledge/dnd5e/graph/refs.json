@@ -3,9 +3,9 @@
  "document": "srd-5.2.1",
  "summary": {
   "entries": 1952,
-  "edges": 4117,
+  "edges": 4144,
   "unresolved": 0,
-  "unreferenced": 883,
+  "unreferenced": 869,
   "by_kind": {
    "action": 12,
    "area": 6,
@@ -471,8 +471,6 @@
     "dnd5e/gear/holy-symbol",
     "dnd5e/gear/parchment",
     "dnd5e/gear/robe",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/calligraphers-supplies"
    ],
    "in": [
@@ -488,8 +486,6 @@
     "dnd5e/gear/clothes-travelers",
     "dnd5e/gear/crowbar",
     "dnd5e/gear/pouch",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/thieves-tools",
     "dnd5e/weapon/dagger"
    ],
@@ -506,8 +502,6 @@
     "dnd5e/gear/book",
     "dnd5e/gear/parchment",
     "dnd5e/gear/robe",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/calligraphers-supplies",
     "dnd5e/weapon/quarterstaff"
    ],
@@ -525,8 +519,6 @@
     "dnd5e/gear/clothes-travelers",
     "dnd5e/gear/healers-kit",
     "dnd5e/gear/quiver",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/gaming-set",
     "dnd5e/weapon/shortbow",
     "dnd5e/weapon/spear"
@@ -595,6 +587,7 @@
     "dnd5e/feature/bard-words-of-creation",
     "dnd5e/gear/entertainers-pack",
     "dnd5e/rule/multiclassing",
+    "dnd5e/tool/musical-instrument",
     "dnd5e/weapon/dagger"
    ],
    "in": [
@@ -764,6 +757,24 @@
     "dnd5e/feature/monk-uncanny-metabolism",
     "dnd5e/gear/explorers-pack",
     "dnd5e/rule/multiclassing",
+    "dnd5e/tool/alchemists-supplies",
+    "dnd5e/tool/brewers-supplies",
+    "dnd5e/tool/calligraphers-supplies",
+    "dnd5e/tool/carpenters-tools",
+    "dnd5e/tool/cartographers-tools",
+    "dnd5e/tool/cobblers-tools",
+    "dnd5e/tool/cooks-utensils",
+    "dnd5e/tool/glassblowers-tools",
+    "dnd5e/tool/jewelers-tools",
+    "dnd5e/tool/leatherworkers-tools",
+    "dnd5e/tool/masons-tools",
+    "dnd5e/tool/musical-instrument",
+    "dnd5e/tool/painters-supplies",
+    "dnd5e/tool/potters-tools",
+    "dnd5e/tool/smiths-tools",
+    "dnd5e/tool/tinkers-tools",
+    "dnd5e/tool/weavers-tools",
+    "dnd5e/tool/woodcarvers-tools",
     "dnd5e/weapon/dagger",
     "dnd5e/weapon/spear"
    ],
@@ -6461,7 +6472,15 @@
    "ref": "dnd5e/feature/elf-elven-lineage",
    "kind": "feature",
    "out": [
-    "dnd5e/species/elf"
+    "dnd5e/spell/dancing-lights",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/druidcraft",
+    "dnd5e/spell/faerie-fire",
+    "dnd5e/spell/longstrider",
+    "dnd5e/spell/misty-step",
+    "dnd5e/spell/pass-without-trace",
+    "dnd5e/spell/prestidigitation"
    ],
    "in": [
     "dnd5e/species/elf"
@@ -8006,7 +8025,15 @@
    "ref": "dnd5e/feature/tiefling-fiendish-legacy",
    "kind": "feature",
    "out": [
-    "dnd5e/species/tiefling"
+    "dnd5e/spell/chill-touch",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/false-life",
+    "dnd5e/spell/fire-bolt",
+    "dnd5e/spell/hellish-rebuke",
+    "dnd5e/spell/hold-person",
+    "dnd5e/spell/poison-spray",
+    "dnd5e/spell/ray-of-enfeeblement",
+    "dnd5e/spell/ray-of-sickness"
    ],
    "in": [
     "dnd5e/species/tiefling"
@@ -12200,12 +12227,7 @@
     "dnd5e/background/sage",
     "dnd5e/background/soldier"
    ],
-   "in": [
-    "dnd5e/background/acolyte",
-    "dnd5e/background/criminal",
-    "dnd5e/background/sage",
-    "dnd5e/background/soldier"
-   ]
+   "in": []
   },
   {
    "ref": "dnd5e/rule/character-creation-step-1-choose-class",
@@ -12351,12 +12373,7 @@
    "out": [
     "dnd5e/system/dnd5e"
    ],
-   "in": [
-    "dnd5e/background/acolyte",
-    "dnd5e/background/criminal",
-    "dnd5e/background/sage",
-    "dnd5e/background/soldier"
-   ]
+   "in": []
   },
   {
    "ref": "dnd5e/rule/combat",
@@ -15181,7 +15198,6 @@
     "dnd5e/feature/elf-trance"
    ],
    "in": [
-    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/rule/character-creation-step-2-character-origin",
     "dnd5e/spell/reincarnate"
    ]
@@ -15262,7 +15278,6 @@
     "dnd5e/feature/tiefling-otherworldly-presence"
    ],
    "in": [
-    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/rule/character-creation-step-2-character-origin",
     "dnd5e/spell/reincarnate"
    ]
@@ -16869,6 +16884,7 @@
    "kind": "spell",
    "out": [],
    "in": [
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/warlock",
     "dnd5e/spell-list/wizard"
@@ -17265,6 +17281,7 @@
    "in": [
     "dnd5e/creature/green-hag",
     "dnd5e/feature/bard-spellcasting",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/magic-item/ring-of-shooting-stars",
     "dnd5e/spell-list/bard",
     "dnd5e/spell-list/sorcerer",
@@ -17282,6 +17299,8 @@
     "dnd5e/creature/drider",
     "dnd5e/creature/glabrezu",
     "dnd5e/creature/oni",
+    "dnd5e/feature/elf-elven-lineage",
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/warlock",
     "dnd5e/spell-list/wizard"
@@ -17404,6 +17423,7 @@
     "dnd5e/creature/sphinx-of-valor",
     "dnd5e/creature/spirit-naga",
     "dnd5e/creature/storm-giant",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/feature/sorcerer-spellcasting",
     "dnd5e/feature/wizard-spellcasting",
     "dnd5e/magic-item/dragon-orb",
@@ -17666,6 +17686,7 @@
     "dnd5e/creature/dryad",
     "dnd5e/creature/unicorn",
     "dnd5e/feature/druid-spellcasting",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/spell-list/druid"
    ]
   },
@@ -17825,6 +17846,7 @@
    "in": [
     "dnd5e/creature/drider",
     "dnd5e/feature/druid-spellcasting",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/magic-item/ring-of-shooting-stars",
     "dnd5e/spell-list/bard",
     "dnd5e/spell-list/druid"
@@ -17843,6 +17865,7 @@
    "kind": "spell",
    "out": [],
    "in": [
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/feature/warlock-invocation-fiendish-vigor",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/wizard"
@@ -17965,6 +17988,7 @@
    ],
    "in": [
     "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/circle-of-the-land-spells-arid-land",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/wizard"
@@ -18502,6 +18526,7 @@
    "kind": "spell",
    "out": [],
    "in": [
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/warlock"
    ]
   },
@@ -18581,6 +18606,7 @@
     "dnd5e/creature/cultist-fanatic",
     "dnd5e/creature/spirit-naga",
     "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/magic-item/wand-of-binding",
     "dnd5e/spell-list/bard",
     "dnd5e/spell-list/circle-of-the-land-spells-polar-land",
@@ -18950,6 +18976,7 @@
    "out": [],
    "in": [
     "dnd5e/creature/druid",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/spell-list/bard",
     "dnd5e/spell-list/druid",
     "dnd5e/spell-list/ranger",
@@ -19271,6 +19298,7 @@
     "dnd5e/creature/cloud-giant",
     "dnd5e/creature/mage",
     "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/spell-list/circle-of-the-land-spells-temperate-land",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/warlock",
@@ -19331,6 +19359,7 @@
    "in": [
     "dnd5e/creature/dryad",
     "dnd5e/creature/unicorn",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/magic-item/staff-of-the-woodlands",
     "dnd5e/spell-list/druid",
     "dnd5e/spell-list/ranger"
@@ -19432,6 +19461,7 @@
    "kind": "spell",
    "out": [],
    "in": [
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/druid",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/warlock",
@@ -19521,6 +19551,7 @@
     "dnd5e/creature/lich",
     "dnd5e/creature/mage",
     "dnd5e/creature/sphinx-of-lore",
+    "dnd5e/feature/elf-elven-lineage",
     "dnd5e/feature/gnome-gnomish-lineage",
     "dnd5e/feature/sorcerer-spellcasting",
     "dnd5e/feature/warlock-pact-magic",
@@ -19672,6 +19703,7 @@
    "kind": "spell",
    "out": [],
    "in": [
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/magic-item/staff-of-power",
     "dnd5e/spell-list/warlock",
     "dnd5e/spell-list/wizard"
@@ -19698,6 +19730,7 @@
    "in": [
     "dnd5e/creature/green-hag",
     "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/feature/tiefling-fiendish-legacy",
     "dnd5e/spell-list/circle-of-the-land-spells-tropical-land",
     "dnd5e/spell-list/sorcerer",
     "dnd5e/spell-list/wizard"
@@ -21035,7 +21068,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/brewers-supplies",
@@ -21043,7 +21078,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/calligraphers-supplies",
@@ -21054,6 +21091,7 @@
    "in": [
     "dnd5e/background/acolyte",
     "dnd5e/background/sage",
+    "dnd5e/class/monk",
     "dnd5e/rule/prerequisites-for-the-scribe"
    ]
   },
@@ -21063,7 +21101,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/cartographers-tools",
@@ -21071,7 +21111,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/cobblers-tools",
@@ -21079,7 +21121,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/cooks-utensils",
@@ -21087,7 +21131,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/disguise-kit",
@@ -21121,7 +21167,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/herbalism-kit",
@@ -21139,7 +21187,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/leatherworkers-tools",
@@ -21147,7 +21197,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/masons-tools",
@@ -21155,7 +21207,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/musical-instrument",
@@ -21164,6 +21218,8 @@
     "dnd5e/action/utilize"
    ],
    "in": [
+    "dnd5e/class/bard",
+    "dnd5e/class/monk",
     "dnd5e/feature/bard-spellcasting"
    ]
   },
@@ -21181,7 +21237,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/poisoners-kit",
@@ -21197,7 +21255,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/smiths-tools",
@@ -21205,7 +21265,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/thieves-tools",
@@ -21225,7 +21287,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/weavers-tools",
@@ -21233,7 +21297,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/tool/woodcarvers-tools",
@@ -21241,7 +21307,9 @@
    "out": [
     "dnd5e/action/utilize"
    ],
-   "in": []
+   "in": [
+    "dnd5e/class/monk"
+   ]
   },
   {
    "ref": "dnd5e/trap/collapsing-roof",

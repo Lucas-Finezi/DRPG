@@ -45,6 +45,7 @@
   "effects": [
     {
       "op": "choice",
+      "id": "legacy",
       "choose": 1,
       "options": [
         {
@@ -52,9 +53,43 @@
           "label": "Abyssal",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Abyssal: level 1 benefit from the Fiendish Legacies table."
+              "op": "defense",
+              "kind": "resistance",
+              "damage_types": [
+                "poison"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/poison-spray"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/ray-of-sickness"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/hold-person"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         },
@@ -63,9 +98,43 @@
           "label": "Chthonic",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Chthonic: level 1 benefit from the Fiendish Legacies table."
+              "op": "defense",
+              "kind": "resistance",
+              "damage_types": [
+                "necrotic"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/chill-touch"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/false-life"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/ray-of-enfeeblement"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         },
@@ -74,52 +143,74 @@
           "label": "Infernal",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Infernal: level 1 benefit from the Fiendish Legacies table."
+              "op": "defense",
+              "kind": "resistance",
+              "damage_types": [
+                "fire"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/fire-bolt"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/hellish-rebuke"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/darkness"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         }
-      ]
+      ],
+      "note": "Fiendish Legacies table (data.tables of dnd5e/species/tiefling)."
     },
     {
       "op": "choice",
+      "id": "spellcasting_ability",
       "choose": 1,
       "options": [
         {
           "id": "int",
           "label": "INT",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Spellcasting ability for this legacy: int."
-            }
-          ]
+          "value": "int",
+          "effects": []
         },
         {
           "id": "wis",
           "label": "WIS",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Spellcasting ability for this legacy: wis."
-            }
-          ]
+          "value": "wis",
+          "effects": []
         },
         {
           "id": "cha",
           "label": "CHA",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/tiefling",
-              "note": "Spellcasting ability for this legacy: cha."
-            }
-          ]
+          "value": "cha",
+          "effects": []
         }
-      ]
+      ],
+      "note": "Spellcasting ability for the spells of this legacy."
     }
   ],
   "coverage": [
@@ -146,6 +237,14 @@
     }
   ],
   "refs": [
-    "dnd5e/species/tiefling"
+    "dnd5e/spell/chill-touch",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/false-life",
+    "dnd5e/spell/fire-bolt",
+    "dnd5e/spell/hellish-rebuke",
+    "dnd5e/spell/hold-person",
+    "dnd5e/spell/poison-spray",
+    "dnd5e/spell/ray-of-enfeeblement",
+    "dnd5e/spell/ray-of-sickness"
   ]
 }

@@ -6,6 +6,7 @@
      L02 writes system.json first, later lots add the registry names they need
   3. L01 examples (they embed an excerpt of the final system.json)
   4. validate.py, selftest.py, coverage.py, refs.py
+  5. engine contract report and engine tests (behaviour scenarios, goblin simulation: no gaps)
 
 Usage: python3 -I tools/build/run_all.py [--extract]   (--extract also re-extracts the PDF)
 """
@@ -37,6 +38,9 @@ def main():
     run(*PY, "tools/validate/selftest.py")
     run(*PY, "tools/validate/coverage.py")
     run(*PY, "tools/validate/refs.py")
+    run(*PY, "tools/validate/engine_contract.py")
+    run(*PY, "-m", "unittest", "discover", "-s", "tests/behaviour")
+    run(*PY, "-m", "unittest", "discover", "-s", "tests/engine")
 
 
 if __name__ == "__main__":

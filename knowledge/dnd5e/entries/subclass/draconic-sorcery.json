@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/draconic-sorcery-draconic-resilience",
-        "dnd5e/feature/draconic-sorcery-draconic-spells",
-        "dnd5e/feature/draconic-sorcery-elemental-affinity",
-        "dnd5e/feature/draconic-sorcery-dragon-wings",
+        "dnd5e/feature/draconic-sorcery-draconic-spells"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Sorcerer level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/draconic-sorcery-elemental-affinity"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Sorcerer level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/draconic-sorcery-dragon-wings"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Sorcerer level 14."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/draconic-sorcery-dragon-companion"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 18
+        }
+      },
+      "note": "Subclass feature at Sorcerer level 18."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Sorcerer Subclass: Draconic Sorcery\n\n*Breathe the Magic of Dragons*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

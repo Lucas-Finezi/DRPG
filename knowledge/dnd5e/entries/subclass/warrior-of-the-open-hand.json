@@ -51,12 +51,58 @@
     {
       "op": "grant",
       "refs": [
-        "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
-        "dnd5e/feature/warrior-of-the-open-hand-wholeness-of-body",
-        "dnd5e/feature/warrior-of-the-open-hand-fleet-step",
+        "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "monk",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Monk level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/warrior-of-the-open-hand-wholeness-of-body"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "monk",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Monk level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/warrior-of-the-open-hand-fleet-step"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "monk",
+          "level": 11
+        }
+      },
+      "note": "Subclass feature at Monk level 11."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/warrior-of-the-open-hand-quivering-palm"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "monk",
+          "level": 17
+        }
+      },
+      "note": "Subclass feature at Monk level 17."
     }
   ],
   "coverage": [
@@ -64,7 +110,10 @@
       "text": "### Monk Subclass: Warrior of the Open Hand\n\n*Master Unarmed Combat Techniques*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

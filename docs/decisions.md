@@ -58,3 +58,33 @@ Aplicada por: `tools/build/vocabulary.py` (aliases e definições canônicas), n
 cada entrada e do `system.json`. O validador passa a recusar argumentos de predicado fora
 dos `params` declarados e parâmetros pontuados (`x.y`) em nomes sem parâmetros. O self-test
 ganhou 2 casos negativos.
+
+## D-005 — Contrato de execução entre o catálogo e o motor
+
+**Decisão (24/10/2026, a partir da simulação `docs/simulacao-goblins.md`):** toda mecânica que
+o motor precisa executar fica em campo estruturado; a nota (`note`) só esclarece. Quando um
+dado não cabia no vocabulário, o vocabulário foi estendido, sem conteúdo externo ao SRD:
+
+| Regra do contrato | Onde |
+|---|---|
+| Fórmulas derivadas ficam no registro: `registries.<nome>.formula` (+ `formula_source`) copiadas de `levels.rules` (CD de magia, bônus de ataque mágico, CA base) | `vocabulary.link_formulas`, `system.schema.json` |
+| Ganho de PV é expressão na classe: `data.hit_points {level_1, per_level {roll, fixed}}`, a partir das duas tabelas de PV por classe e de "Gaining a Level" | `l12_classes.py` |
+| Equipamento concedido é `grant {items, gp}` (classes e antecedentes); `grant` aceita `items`, `gp` e `filter {spell_level, school}` para listas de magias | `effect.schema.json`, `l11`, `l12`, `l15` |
+| Alternativas são `choice`, nunca efeitos lado a lado (Golpe Desarmado, Nimble Escape, Cunning Action, aumento de atributos do antecedente, linhagens de elfo e legados de tiefling) | `l04`, `monsterlib`, `l11`, `l14_species_traits` |
+| Subclasse concede cada característica com `when: level_at_least {class, level}` | `l13_subclasses.py` |
+| Uma `activation` com `duration` torna a própria entrada ativa (`effect_active`) por essa duração (Fúria) | `l14_barbarian.py` |
+| Condição implícita sem `duration` dura até ser removida; a que termina junto com a condição-mãe declara `while: has_condition` (Incapacitated em Paralyzed, Petrified, Stunned e Unconscious) | `l03_conditions.py` |
+| Cair a 0 PV: Unconscious com `while: hp_is {zero}` | `l06_damage.py` |
+| Efeito sem `duration` dentro de um gatilho vale só para a chamada que o disparou (ex.: Deflect Attacks reduz o dano daquele ataque) | motor |
+| Momento de um teste repetido é um `trigger` com evento, e o fim antecipado é `ends_on` (Sleep: 2ª salvaguarda no fim do próximo turno; o efeito acaba com dano) | `l18_level1.py` |
+| "Só a próxima jogada contra o alvo" é `ends_on: targeted_by_attack_roll` (consumido pela jogada); "só para quem aplicou" é `when: roller_is_source` (Guiding Bolt, Vex) | `l18`, `l28` |
+| Ataque extra sem modificador de atributo no dano: `attack.ability_modifier_to_damage: negative_only` (Cleave, propriedade Light) | `l28_weapons.py` |
+| Limite de nível na recuperação de espaços: `restore.max_level` (Arcane Recovery, Natural Recovery) | `l14_wizard.py`, `l14_druid.py` |
+| `cast_spell.spell` pode ser a magia escolhida antes (`{"var": "chosen.<id>"}`), como em Magic Initiate | `effect.schema.json`, `l15_feats.py` |
+| Argumento de item é o slug do catálogo (`holy-symbol`) | `l14_cleric.py` |
+
+Novos nomes: o predicado `roller_is_source` e o evento `targeted_by_attack_roll`.
+
+Verificação: `tests/engine/test_goblin_simulation.py` (10 sementes: zero `DATA_GAP` e zero
+`ENGINE_GAP`) e `tools/validate/engine_contract.py`, que confronta o uso no catálogo inteiro
+com o que o protótipo executa. Ambos rodam em `run_all.py`.

@@ -57,11 +57,27 @@
           "effects": [
             {
               "op": "grant",
+              "id": "cantrips",
               "refs": [
                 "dnd5e/spell-list/cleric"
               ],
               "choose": 2,
+              "filter": {
+                "spell_level": 0
+              },
               "note": "Two cantrips."
+            },
+            {
+              "op": "grant",
+              "id": "level_1_spell",
+              "refs": [
+                "dnd5e/spell-list/cleric"
+              ],
+              "choose": 1,
+              "filter": {
+                "spell_level": 1
+              },
+              "note": "One level 1 spell from the chosen list; always prepared."
             }
           ]
         },
@@ -72,11 +88,27 @@
           "effects": [
             {
               "op": "grant",
+              "id": "cantrips",
               "refs": [
                 "dnd5e/spell-list/druid"
               ],
               "choose": 2,
+              "filter": {
+                "spell_level": 0
+              },
               "note": "Two cantrips."
+            },
+            {
+              "op": "grant",
+              "id": "level_1_spell",
+              "refs": [
+                "dnd5e/spell-list/druid"
+              ],
+              "choose": 1,
+              "filter": {
+                "spell_level": 1
+              },
+              "note": "One level 1 spell from the chosen list; always prepared."
             }
           ]
         },
@@ -87,11 +119,27 @@
           "effects": [
             {
               "op": "grant",
+              "id": "cantrips",
               "refs": [
                 "dnd5e/spell-list/wizard"
               ],
               "choose": 2,
+              "filter": {
+                "spell_level": 0
+              },
               "note": "Two cantrips."
+            },
+            {
+              "op": "grant",
+              "id": "level_1_spell",
+              "refs": [
+                "dnd5e/spell-list/wizard"
+              ],
+              "choose": 1,
+              "filter": {
+                "spell_level": 1
+              },
+              "note": "One level 1 spell from the chosen list; always prepared."
             }
           ]
         }
@@ -123,16 +171,6 @@
       ]
     },
     {
-      "op": "grant",
-      "refs": [
-        "dnd5e/spell-list/cleric",
-        "dnd5e/spell-list/druid",
-        "dnd5e/spell-list/wizard"
-      ],
-      "choose": 1,
-      "note": "One level 1 spell from the chosen list; always prepared."
-    },
-    {
       "op": "activation",
       "cost": "none",
       "frequency": {
@@ -142,7 +180,9 @@
       "then": [
         {
           "op": "cast_spell",
-          "spell": "dnd5e/feat/magic-initiate",
+          "spell": {
+            "var": "chosen.level_1_spell"
+          },
           "slot": "none",
           "ability": {
             "var": "chosen.spellcasting_ability"
@@ -172,8 +212,10 @@
       "text": "***Level 1 Spell.*** Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.",
       "status": "structured",
       "by": [
-        "/effects/2",
-        "/effects/3"
+        "/effects/0/options/0/effects/1",
+        "/effects/0/options/1/effects/1",
+        "/effects/0/options/2/effects/1",
+        "/effects/2"
       ]
     },
     {
@@ -192,7 +234,6 @@
     }
   ],
   "refs": [
-    "dnd5e/feat/magic-initiate",
     "dnd5e/spell-list/cleric",
     "dnd5e/spell-list/druid",
     "dnd5e/spell-list/wizard"

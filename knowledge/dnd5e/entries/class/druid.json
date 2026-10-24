@@ -42,6 +42,48 @@
       "Starting Equipment": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer’s Pack, Herbalism Kit, and 9 GP; or (B) 50 GP"
     },
     "hit_die": "d8",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          8,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d8",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -632,7 +674,10 @@
     {
       "op": "proficiency",
       "category": "tool",
-      "note": "Herbalism Kit"
+      "note": "Herbalism Kit",
+      "items": [
+        "dnd5e/tool/herbalism-kit"
+      ]
     },
     {
       "op": "proficiency",
@@ -644,6 +689,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -651,9 +697,40 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/druid",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Leather Armor",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/leather-armor"
+                },
+                {
+                  "name": "Shield",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/shield"
+                },
+                {
+                  "name": "Sickle",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/sickle"
+                },
+                {
+                  "name": "Druidic Focus (Quarterstaff)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/druidic-focus"
+                },
+                {
+                  "name": "Explorer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/explorers-pack"
+                },
+                {
+                  "name": "Herbalism Kit",
+                  "quantity": 1,
+                  "ref": "dnd5e/tool/herbalism-kit"
+                }
+              ],
+              "gp": 9
             }
           ]
         },
@@ -662,9 +739,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/druid",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 50
             }
           ]
         }
@@ -724,7 +800,6 @@
   "refs": [
     "dnd5e/armor/leather-armor",
     "dnd5e/armor/shield",
-    "dnd5e/class/druid",
     "dnd5e/feature/druid-ability-score-improvement",
     "dnd5e/feature/druid-archdruid",
     "dnd5e/feature/druid-beast-spells",

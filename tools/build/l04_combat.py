@@ -403,26 +403,33 @@ def glossary_rules():
                                  ("*See also*", "ref", [ref_of("Swimming"), ref_of("Speed", "rule")])]))
     E.append(rule("Target", [(None, "rule", {"id": "target", "selected_by": ["attack_roll", "forced_saving_throw",
                                                                             "selected_for_effect"]})]))
+    # The three options are one choice (D-005): the attack uses the attack's ability (Str by
+    # default, rule/attack-rolls), so features that change it (Martial Arts) apply.
+    us_dc = {"op": "add", "args": [8, {"var": "ability_mod.str"}, {"var": "proficiency_bonus"}]}
+    us_choice = {"op": "choice", "id": "unarmed_strike", "choose": 1, "options": [
+        {"id": "damage", "label": "Damage", "effects": [
+            {"op": "attack", "attack_type": "melee",
+             "bonus": {"op": "add", "args": [{"var": "attack_ability_mod"}, {"var": "proficiency_bonus"}]},
+             "on_hit": [{"op": "damage", "amount": {"op": "add", "args": [1, {"var": "attack_ability_mod"}]},
+                         "damage_type": "bludgeoning"}]}]},
+        {"id": "grapple", "label": "Grapple", "effects": [
+            {"op": "save", "ability": {"choose_from": ["str", "dex"], "chooser": "target"}, "dc": us_dc,
+             "on_fail": [{"op": "apply_condition", "condition": C("grappled"), "params": {"escape_dc": us_dc}}]}]},
+        {"id": "shove", "label": "Shove", "effects": [
+            {"op": "save", "ability": {"choose_from": ["str", "dex"], "chooser": "target"}, "dc": us_dc,
+             "on_fail": [{"op": "choice", "choose": 1, "options": [
+                 {"id": "push", "label": "Push 5 feet", "effects": [{"op": "move", "mode": "push",
+                                                                      "distance_feet": 5}]},
+                 {"id": "prone", "label": "Prone", "effects": [{"op": "apply_condition",
+                                                                "condition": C("prone")}]}]}]}]}]}
     E.append(rule("Unarmed Strike", [
         (None, "rule", {"id": "unarmed_strike", "range_feet": 5, "options": ["damage", "grapple", "shove"]}),
-        ("***Damage.***", "fx", {"op": "attack", "attack_type": "melee",
-                                 "bonus": {"op": "add", "args": [{"var": "ability_mod.str"}, {"var": "proficiency_bonus"}]},
-                                 "on_hit": [{"op": "damage", "amount": {"op": "add", "args": [1, {"var": "ability_mod.str"}]},
-                                             "damage_type": "bludgeoning"}]}),
-        ("***Grapple.***", "fx", {"op": "save", "ability": {"choose_from": ["str", "dex"], "chooser": "target"},
-                                  "dc": {"op": "add", "args": [8, {"var": "ability_mod.str"}, {"var": "proficiency_bonus"}]},
-                                  "on_fail": [{"op": "apply_condition", "condition": C("grappled"),
-                                               "params": {"escape_dc": {"op": "add", "args": [8, {"var": "ability_mod.str"},
-                                                                                             {"var": "proficiency_bonus"}]}}}]}),
+        (None, "fx", us_choice),
+        ("***Damage.***", "sys", ["/effects/0/options/0"]),
+        ("***Grapple.***", "sys", ["/effects/0/options/1"]),
         ("***Grapple.***", "rule", {"id": "grapple_requirements", "max_target_size_steps_larger": 1,
                                     "requires_free_hand": True}),
-        ("***Shove.***", "fx", {"op": "save", "ability": {"choose_from": ["str", "dex"], "chooser": "target"},
-                                "dc": {"op": "add", "args": [8, {"var": "ability_mod.str"}, {"var": "proficiency_bonus"}]},
-                                "on_fail": [{"op": "choice", "choose": 1, "options": [
-                                    {"id": "push", "label": "Push 5 feet", "effects": [{"op": "move", "mode": "push",
-                                                                                         "distance_feet": 5}]},
-                                    {"id": "prone", "label": "Prone", "effects": [{"op": "apply_condition",
-                                                                                   "condition": C("prone")}]}]}]}),
+        ("***Shove.***", "sys", ["/effects/0/options/2"]),
         ("***Shove.***", "rule", {"id": "shove_requirements", "max_target_size_steps_larger": 1})]))
     E.append(rule("Unoccupied Space", [(None, "rule", {"id": "unoccupied", "no_creatures": True,
                                                        "not_completely_filled_by_objects": True})]))

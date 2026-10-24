@@ -248,6 +248,23 @@ def normalize(obj):
     return out
 
 
+def link_formulas(system):
+    """Registry names whose value a rule states as a formula carry it (D-005).
+
+    The engine then has one lookup path: registries.<name>.formula. The rule in
+    levels.rules stays the source (formula_source points to it).
+    """
+    for i, r in enumerate(system.get("levels", {}).get("rules", [])):
+        f = (r.get("data") or {}).get("formula")
+        if not f:
+            continue
+        for name in ("variables", "stats"):
+            for v in system["registries"].get(name, []):
+                if v["id"] == r["id"]:
+                    v["formula"], v["formula_source"] = f, f"#/levels/rules/{i}"
+    return system
+
+
 def normalize_registries(registries):
     """Drop alias names from the registries and declare the canonical ones (pages merged)."""
     reg = copy.deepcopy(registries)

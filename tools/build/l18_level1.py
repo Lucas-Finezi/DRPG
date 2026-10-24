@@ -207,7 +207,9 @@ def entries():
     E.append(S("Guiding Bolt", [
         ("^", "fx", attack("ranged_spell", [dmg(updice(4, 6, 1), "radiant"),
                                             {"op": "roll_mode", "mode": "advantage", "rolls": ["attack_roll"],
-                                             "direction": "against", "duration": until_turn("turn_end", "source"),
+                                             "direction": "against",
+                                             "duration": {**until_turn("turn_end", "source"),
+                                                          "ends_on": [{"event": "targeted_by_attack_roll", "whose": "target"}]},
                                              "note": "Only the next attack roll against it."}], target=creatures())),
         (HL, "sys", ["/effects/0/on_hit/0/amount"])]))
     E.append(S("Healing Word", [
@@ -335,10 +337,16 @@ def entries():
         ("Physical interaction with the image", "rule", {"id": "physical_interaction", "reveals_illusion": True}),
         ("Physical interaction with the image", "fx", STUDY),
         ("Physical interaction with the image", "ref", ["dnd5e/rule/illusions"])]))
+    WAKE = {"event": "damage_taken", "whose": "target"}  # the spell ends on a target that takes damage
     E.append(S("Sleep", [
-        ("^", "fx", save("wis", [cond("incapacitated", until_turn("turn_end", "target")),
-                                 save("wis", cond("unconscious"), target=INHERIT, note="Repeated at the end of its next turn.")],
-                         target=area("sphere", 5))),
+        ("^", "fx", save("wis", [
+            cond("incapacitated", {**until_turn("turn_end", "target"), "ends_on": [WAKE]}),
+            {"op": "trigger", "event": {"event": "turn_end", "whose": "target", "which": "next"}, "target": INHERIT,
+             "duration": {**until_turn("turn_end", "target"), "ends_on": [WAKE]},
+             "then": [save("wis", cond("unconscious", {"kind": "minutes", "amount": 1, "concentration": True, "up_to": True,
+                                                       "ends_on": [WAKE]}), target=INHERIT)],
+             "note": "Repeated at the end of its next turn."}],
+            target=area("sphere", 5))),
         ("^", "rule", {"id": "wake", "ends_on": ["takes_damage", "shaken_awake_by_action_within_5_feet"]}),
         ("Creatures that don’t sleep", "fx", {"op": "auto_result", "rolls": ["saving_throw"], "result": "success",
                                               "when": {"any": [{"pred": "doesnt_sleep"},

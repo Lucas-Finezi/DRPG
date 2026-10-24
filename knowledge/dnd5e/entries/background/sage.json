@@ -94,6 +94,145 @@
   },
   "effects": [
     {
+      "op": "choice",
+      "id": "ability_scores",
+      "choose": 1,
+      "options": [
+        {
+          "id": "con_2_int_1",
+          "label": "+2 CON, +1 INT",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.int",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "con_2_wis_1",
+          "label": "+2 CON, +1 WIS",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.wis",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "int_2_con_1",
+          "label": "+2 INT, +1 CON",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.int",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "int_2_wis_1",
+          "label": "+2 INT, +1 WIS",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.int",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.wis",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "wis_2_con_1",
+          "label": "+2 WIS, +1 CON",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.wis",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "wis_2_int_1",
+          "label": "+2 WIS, +1 INT",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.wis",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.int",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "all_1",
+          "label": "+1 to all three",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.int",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.wis",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "op": "grant",
       "refs": [
         "dnd5e/feat/magic-initiate"
@@ -117,6 +256,7 @@
     },
     {
       "op": "choice",
+      "id": "equipment",
       "choose": 1,
       "options": [
         {
@@ -124,9 +264,32 @@
           "label": "Package (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/rule/character-backgrounds",
-              "note": "Gain the package in data.equipment.a."
+              "op": "grant",
+              "items": [
+                {
+                  "ref": "dnd5e/weapon/quarterstaff",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/tool/calligraphers-supplies",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/gear/book",
+                  "quantity": 1,
+                  "note": "history"
+                },
+                {
+                  "ref": "dnd5e/gear/parchment",
+                  "quantity": 8,
+                  "note": "sheets"
+                },
+                {
+                  "ref": "dnd5e/gear/robe",
+                  "quantity": 1
+                }
+              ],
+              "gp": 8
             }
           ]
         },
@@ -135,9 +298,8 @@
           "label": "50 GP",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/rule/coins",
-              "note": "Gain 50 GP."
+              "op": "grant",
+              "gp": 50
             }
           ]
         }
@@ -149,35 +311,36 @@
       "text": "**Ability Scores:** Constitution, Intelligence, Wisdom",
       "status": "structured",
       "by": [
-        "/data/rules/0"
+        "/data/rules/0",
+        "/effects/0"
       ]
     },
     {
       "text": "**Feat:** Magic Initiate (Wizard) (see “Feats”)",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/1"
       ]
     },
     {
       "text": "**Skill Proficiencies:** Arcana and History",
       "status": "structured",
       "by": [
-        "/effects/1"
+        "/effects/2"
       ]
     },
     {
       "text": "**Tool Proficiency:** Calligrapher’s Supplies",
       "status": "structured",
       "by": [
-        "/effects/2"
+        "/effects/3"
       ]
     },
     {
       "text": "**Equipment:** *Choose A or B:* (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
       "status": "structured",
       "by": [
-        "/effects/3"
+        "/effects/4"
       ]
     }
   ],
@@ -186,8 +349,6 @@
     "dnd5e/gear/book",
     "dnd5e/gear/parchment",
     "dnd5e/gear/robe",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/calligraphers-supplies",
     "dnd5e/weapon/quarterstaff"
   ]

@@ -57,13 +57,72 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/champion-improved-critical",
-        "dnd5e/feature/champion-remarkable-athlete",
-        "dnd5e/feature/champion-additional-fighting-style",
-        "dnd5e/feature/champion-heroic-warrior",
-        "dnd5e/feature/champion-superior-critical",
+        "dnd5e/feature/champion-remarkable-athlete"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Fighter level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-additional-fighting-style"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 7
+        }
+      },
+      "note": "Subclass feature at Fighter level 7."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-heroic-warrior"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Fighter level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-superior-critical"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 15
+        }
+      },
+      "note": "Subclass feature at Fighter level 15."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/champion-survivor"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 18
+        }
+      },
+      "note": "Subclass feature at Fighter level 18."
     }
   ],
   "coverage": [
@@ -71,7 +130,11 @@
       "text": "### Fighter Subclass: Champion\n\n*Pursue Physical Excellence in Combat*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
       ]
     },
     {

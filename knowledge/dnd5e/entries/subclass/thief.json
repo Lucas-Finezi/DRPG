@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/thief-fast-hands",
-        "dnd5e/feature/thief-second-story-work",
-        "dnd5e/feature/thief-supreme-sneak",
-        "dnd5e/feature/thief-use-magic-device",
+        "dnd5e/feature/thief-second-story-work"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Rogue level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-supreme-sneak"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 9
+        }
+      },
+      "note": "Subclass feature at Rogue level 9."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-use-magic-device"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 13
+        }
+      },
+      "note": "Subclass feature at Rogue level 13."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/thief-thiefs-reflexes"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 17
+        }
+      },
+      "note": "Subclass feature at Rogue level 17."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Rogue Subclass: Thief\n\n*Hunt for Treasure as a Classic Adventurer*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

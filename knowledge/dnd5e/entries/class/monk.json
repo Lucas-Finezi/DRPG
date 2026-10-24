@@ -44,6 +44,48 @@
       "Starting Equipment": "Choose A or B: (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP"
     },
     "hit_die": "d8",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          8,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d8",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -469,10 +511,32 @@
     {
       "op": "proficiency",
       "category": "tool",
-      "note": "Choose one type of Artisan’s Tools or Musical Instrument (see “Equipment”)"
+      "note": "Choose one type of Artisan’s Tools or Musical Instrument (see “Equipment”)",
+      "choose": 1,
+      "from": [
+        "dnd5e/tool/alchemists-supplies",
+        "dnd5e/tool/brewers-supplies",
+        "dnd5e/tool/calligraphers-supplies",
+        "dnd5e/tool/carpenters-tools",
+        "dnd5e/tool/cartographers-tools",
+        "dnd5e/tool/cobblers-tools",
+        "dnd5e/tool/cooks-utensils",
+        "dnd5e/tool/glassblowers-tools",
+        "dnd5e/tool/jewelers-tools",
+        "dnd5e/tool/leatherworkers-tools",
+        "dnd5e/tool/masons-tools",
+        "dnd5e/tool/painters-supplies",
+        "dnd5e/tool/potters-tools",
+        "dnd5e/tool/smiths-tools",
+        "dnd5e/tool/tinkers-tools",
+        "dnd5e/tool/weavers-tools",
+        "dnd5e/tool/woodcarvers-tools",
+        "dnd5e/tool/musical-instrument"
+      ]
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -480,9 +544,29 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/monk",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Spear",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/spear"
+                },
+                {
+                  "name": "Daggers",
+                  "quantity": 5,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Artisan’s Tools or Musical Instrument chosen for the tool proficiency above",
+                  "quantity": 1
+                },
+                {
+                  "name": "Explorer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/explorers-pack"
+                }
+              ],
+              "gp": 11
             }
           ]
         },
@@ -491,9 +575,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/monk",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 50
             }
           ]
         }
@@ -550,7 +633,6 @@
     }
   ],
   "refs": [
-    "dnd5e/class/monk",
     "dnd5e/feature/monk-ability-score-improvement",
     "dnd5e/feature/monk-acrobatic-movement",
     "dnd5e/feature/monk-body-and-mind",
@@ -575,6 +657,24 @@
     "dnd5e/feature/monk-uncanny-metabolism",
     "dnd5e/gear/explorers-pack",
     "dnd5e/rule/multiclassing",
+    "dnd5e/tool/alchemists-supplies",
+    "dnd5e/tool/brewers-supplies",
+    "dnd5e/tool/calligraphers-supplies",
+    "dnd5e/tool/carpenters-tools",
+    "dnd5e/tool/cartographers-tools",
+    "dnd5e/tool/cobblers-tools",
+    "dnd5e/tool/cooks-utensils",
+    "dnd5e/tool/glassblowers-tools",
+    "dnd5e/tool/jewelers-tools",
+    "dnd5e/tool/leatherworkers-tools",
+    "dnd5e/tool/masons-tools",
+    "dnd5e/tool/musical-instrument",
+    "dnd5e/tool/painters-supplies",
+    "dnd5e/tool/potters-tools",
+    "dnd5e/tool/smiths-tools",
+    "dnd5e/tool/tinkers-tools",
+    "dnd5e/tool/weavers-tools",
+    "dnd5e/tool/woodcarvers-tools",
     "dnd5e/weapon/dagger",
     "dnd5e/weapon/spear"
   ]

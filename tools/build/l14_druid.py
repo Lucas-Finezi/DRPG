@@ -188,7 +188,7 @@ def entries():
         ("In addition, when you finish a Short Rest", "fx", {
             "op": "trigger", "event": SHORT, "optional": True, "frequency": {"count": 1, "per": "long_rest"},
             "then": [{"op": "restore", "resource": "spell_slot", "amount": {"op": "div", "round": "up", "args": [
-                {"var": "class_level.druid"}, 2]}, "note": "Combined slot levels; none of level 6+."}]})], sub=S))
+                {"var": "class_level.druid"}, 2]}, "max_level": 5, "note": "Combined slot levels; none of level 6+."}]})], sub=S))
     ward = rows("Nature’s Ward")
     E.append(CF(D, "Nature’s Ward", 10, [
         (None, "fx", [{"op": "defense", "kind": "immunity", "conditions": [C("poisoned")]},

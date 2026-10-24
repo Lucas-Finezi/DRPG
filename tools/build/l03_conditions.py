@@ -74,8 +74,10 @@ def speed_zero():
             {"op": "restrict", "restrictions": ["increase_speed"]}]
 
 
-def incapacitated():
+def incapacitated(parent):
+    """Implied Incapacitated: lasts while the parent condition lasts (D-005)."""
     return {"op": "apply_condition", "condition": C("incapacitated"),
+            "duration": {"kind": "while", "while": {"pred": "has_condition", "args": {"condition": parent}}},
             "note": "Lasts while the parent condition lasts."}
 
 
@@ -176,7 +178,7 @@ def entries():
              "when": {"not": {"pred": "can_be_seen_by", "args": {"who": "target"}}}}])]))
     E.append(cond("Paralyzed", [
         (None, "desc", None),
-        ("***Incapacitated.***", "fx", incapacitated()),
+        ("***Incapacitated.***", "fx", incapacitated("paralyzed")),
         ("***Speed 0.***", "fx", speed_zero()),
         ("***Saving Throws Affected.***", "fx", auto_fail_str_dex()),
         ("***Attacks Affected.***", "fx", against("advantage")),
@@ -189,7 +191,7 @@ def entries():
         ("***Turned to Inanimate Substance.***", "fx", [{"op": "modifier", "stat": "weight", "mode": "multiply",
                                                          "value": 10},
                                                         {"op": "restrict", "restrictions": ["age"]}]),
-        ("***Incapacitated.***", "fx", incapacitated()),
+        ("***Incapacitated.***", "fx", incapacitated("petrified")),
         ("***Speed 0.***", "fx", speed_zero()),
         ("***Attacks Affected.***", "fx", against("advantage")),
         ("***Saving Throws Affected.***", "fx", auto_fail_str_dex()),
@@ -217,12 +219,12 @@ def entries():
         ("***Saving Throws Affected.***", "fx", own("disadvantage", ("saving_throw.dex",)))]))
     E.append(cond("Stunned", [
         (None, "desc", None),
-        ("***Incapacitated.***", "fx", incapacitated()),
+        ("***Incapacitated.***", "fx", incapacitated("stunned")),
         ("***Saving Throws Affected.***", "fx", auto_fail_str_dex()),
         ("***Attacks Affected.***", "fx", against("advantage"))]))
     E.append(cond("Unconscious", [
         (None, "desc", None),
-        ("***Inert.***", "fx", [incapacitated(),
+        ("***Inert.***", "fx", [incapacitated("unconscious"),
                                 {"op": "apply_condition", "condition": C("prone"),
                                  "note": "Prone does not end with this condition: you remain Prone."},
                                 {"op": "restrict", "restrictions": ["hold_items"]}]),

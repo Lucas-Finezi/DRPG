@@ -101,6 +101,145 @@
   },
   "effects": [
     {
+      "op": "choice",
+      "id": "ability_scores",
+      "choose": 1,
+      "options": [
+        {
+          "id": "str_2_dex_1",
+          "label": "+2 STR, +1 DEX",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "str_2_con_1",
+          "label": "+2 STR, +1 CON",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "dex_2_str_1",
+          "label": "+2 DEX, +1 STR",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "dex_2_con_1",
+          "label": "+2 DEX, +1 CON",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "con_2_str_1",
+          "label": "+2 CON, +1 STR",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "con_2_dex_1",
+          "label": "+2 CON, +1 DEX",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "all_1",
+          "label": "+1 to all three",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "ability_score.str",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.dex",
+              "mode": "add",
+              "value": 1
+            },
+            {
+              "op": "modifier",
+              "stat": "ability_score.con",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "op": "grant",
       "refs": [
         "dnd5e/feat/savage-attacker"
@@ -125,6 +264,7 @@
     },
     {
       "op": "choice",
+      "id": "equipment",
       "choose": 1,
       "options": [
         {
@@ -132,9 +272,40 @@
           "label": "Package (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/rule/character-backgrounds",
-              "note": "Gain the package in data.equipment.a."
+              "op": "grant",
+              "items": [
+                {
+                  "ref": "dnd5e/weapon/spear",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/weapon/shortbow",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/gear/ammunition-arrows",
+                  "quantity": 20,
+                  "note": "arrows"
+                },
+                {
+                  "ref": "dnd5e/tool/gaming-set",
+                  "quantity": 1,
+                  "note": "same as the tool proficiency"
+                },
+                {
+                  "ref": "dnd5e/gear/healers-kit",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/gear/quiver",
+                  "quantity": 1
+                },
+                {
+                  "ref": "dnd5e/gear/clothes-travelers",
+                  "quantity": 1
+                }
+              ],
+              "gp": 14
             }
           ]
         },
@@ -143,9 +314,8 @@
           "label": "50 GP",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/rule/coins",
-              "note": "Gain 50 GP."
+              "op": "grant",
+              "gp": 50
             }
           ]
         }
@@ -157,35 +327,36 @@
       "text": "**Ability Scores:** Strength, Dexterity, Constitution",
       "status": "structured",
       "by": [
-        "/data/rules/0"
+        "/data/rules/0",
+        "/effects/0"
       ]
     },
     {
       "text": "**Feat:** Savage Attacker (see “Feats”)",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/1"
       ]
     },
     {
       "text": "**Skill Proficiencies:** Athletics and Intimidation",
       "status": "structured",
       "by": [
-        "/effects/1"
+        "/effects/2"
       ]
     },
     {
       "text": "**Tool Proficiency:** *Choose one kind of Gaming Set* (see “Equipment”)",
       "status": "structured",
       "by": [
-        "/effects/2"
+        "/effects/3"
       ]
     },
     {
       "text": "**Equipment:** *Choose A or B:* (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
       "status": "structured",
       "by": [
-        "/effects/3"
+        "/effects/4"
       ]
     }
   ],
@@ -195,8 +366,6 @@
     "dnd5e/gear/clothes-travelers",
     "dnd5e/gear/healers-kit",
     "dnd5e/gear/quiver",
-    "dnd5e/rule/character-backgrounds",
-    "dnd5e/rule/coins",
     "dnd5e/tool/gaming-set",
     "dnd5e/weapon/shortbow",
     "dnd5e/weapon/spear"

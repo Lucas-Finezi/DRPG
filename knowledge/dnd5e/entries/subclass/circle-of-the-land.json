@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
-        "dnd5e/feature/circle-of-the-land-lands-aid",
-        "dnd5e/feature/circle-of-the-land-natural-recovery",
-        "dnd5e/feature/circle-of-the-land-natures-ward",
+        "dnd5e/feature/circle-of-the-land-lands-aid"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "druid",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Druid level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/circle-of-the-land-natural-recovery"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "druid",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Druid level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/circle-of-the-land-natures-ward"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "druid",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Druid level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/circle-of-the-land-natures-sanctuary"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "druid",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Druid level 14."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Druid Subclass: Circle of the Land\n\n*Celebrate Connection to the Natural World*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

@@ -405,6 +405,15 @@ def _fixed(fx=None, rule=None):
     return lambda text, cr: ([] if fx is None else (fx if isinstance(fx, list) else [fx]), [] if rule is None else [rule])
 
 
+def one_of_actions(*actions, name=None, note=None):
+    """A Bonus Action that takes one of several actions: a choice, not a sequence (D-005)."""
+    fx = {"op": "activation", "name": name, "cost": "bonus_action", "then": [{"op": "choice", "id": "action", "choose": 1, "options": [
+        {"id": a, "label": a.title(), "effects": [{"op": "reference", "rule": f"dnd5e/action/{a}"}]} for a in actions]}]}
+    if note:
+        fx["note"] = note
+    return fx
+
+
 TRAITS = {
     "Amphibious": _fixed({"op": "modifier", "stat": "breathe_underwater", "mode": "set", "value": 1, "note": "Breathes air and water."}),
     "Water Breathing": _fixed({"op": "modifier", "stat": "breathe_underwater", "mode": "set", "value": 1}),
@@ -420,12 +429,8 @@ TRAITS = {
                                     "then": [{"op": "auto_result", "rolls": ["saving_throw"], "result": "success"}]}),
     "Flyby": _fixed({"op": "restrict", "restrictions": ["provoke_opportunity_attack_when_flying_out_of_reach"], "target": {"kind": "self"},
                      "note": "Doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."}),
-    "Nimble Escape": _fixed({"op": "activation", "cost": "bonus_action", "then": [{"op": "reference", "rule": "dnd5e/action/disengage"},
-                                                                                    {"op": "reference", "rule": "dnd5e/action/hide"}],
-                             "note": "Takes the Disengage or Hide action."}),
-    "Cunning Action": _fixed({"op": "activation", "cost": "bonus_action", "then": [{"op": "reference", "rule": "dnd5e/action/dash"},
-                                                                                     {"op": "reference", "rule": "dnd5e/action/disengage"},
-                                                                                     {"op": "reference", "rule": "dnd5e/action/hide"}]}),
+    "Nimble Escape": _fixed(one_of_actions("disengage", "hide", name="Nimble Escape", note="Takes the Disengage or Hide action.")),
+    "Cunning Action": _fixed(one_of_actions("dash", "disengage", "hide", name="Cunning Action", note="Takes the Dash, Disengage, or Hide action.")),
     "Immutable Form": _fixed({"op": "restrict", "restrictions": ["shape_changed"], "note": "Can't shape-shift."}),
     "Siege Monster": _fixed({"op": "modifier", "stat": "damage_roll", "mode": "multiply", "value": 2, "when": {"pred": "target_is_object"},
                              "note": "Double damage to objects and structures."}),

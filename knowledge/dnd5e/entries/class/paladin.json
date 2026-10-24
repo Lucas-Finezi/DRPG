@@ -42,6 +42,48 @@
       "Starting Equipment": "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP"
     },
     "hit_die": "d10",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d10",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            6,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -547,6 +589,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -554,9 +597,40 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/paladin",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Chain Mail",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/chain-mail"
+                },
+                {
+                  "name": "Shield",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/shield"
+                },
+                {
+                  "name": "Longsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/longsword"
+                },
+                {
+                  "name": "Javelins",
+                  "quantity": 6,
+                  "ref": "dnd5e/weapon/javelin"
+                },
+                {
+                  "name": "Holy Symbol",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/holy-symbol"
+                },
+                {
+                  "name": "Priest’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/priests-pack"
+                }
+              ],
+              "gp": 9
             }
           ]
         },
@@ -565,9 +639,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/paladin",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 150
             }
           ]
         }
@@ -626,7 +699,6 @@
   "refs": [
     "dnd5e/armor/chain-mail",
     "dnd5e/armor/shield",
-    "dnd5e/class/paladin",
     "dnd5e/feature/paladin-ability-score-improvement",
     "dnd5e/feature/paladin-abjure-foes",
     "dnd5e/feature/paladin-aura-expansion",

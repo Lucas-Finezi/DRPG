@@ -66,11 +66,20 @@ def lineage_spells(prefix, table_species, choose_label):
             "always_prepared": True, "free_casting": {"count": 1, "recovery": "long_rest_finished"},
             "may_use_slots": True}),
         ("Intelligence, Wisdom, or Charisma is your spellcasting ability", "fx", {
-            "op": "choice", "choose": 1, "options": [
-                {"id": a, "label": a.upper(), "effects": [{"op": "reference", "rule": f"dnd5e/species/{table_species}",
-                                                            "note": f"Spellcasting ability for this {choose_label}: {a}."}]}
-                for a in ("int", "wis", "cha")]}),
+            "op": "choice", "id": "spellcasting_ability", "choose": 1, "options": [
+                {"id": a, "label": a.upper(), "value": a, "effects": []} for a in ("int", "wis", "cha")],
+            "note": f"Spellcasting ability for the spells of this {choose_label}."}),
     ]
+
+
+def at_level(level, spell):
+    return {"op": "grant", "refs": [S(spell)], "when": {"pred": "level_at_least", "args": {"level": level}},
+            "note": f"Character level {level}: always prepared."}
+
+
+def lineage_option(id_, label, level_1, spell_3, spell_5):
+    """One row of a lineage/legacy table as effects (D-005): Level 1 benefit, then the level 3 and 5 spells."""
+    return {"id": id_, "label": label, "effects": [*level_1, at_level(3, spell_3), at_level(5, spell_5)]}
 
 
 def entries():
@@ -137,10 +146,17 @@ def entries():
     # Elf
     E.append(darkvision("Elf", 60))
     E.append(T("Elf", "Elven Lineage", [
-        (None, "fx", {"op": "choice", "choose": 1, "options": [
-            {"id": l, "label": n, "effects": [{"op": "reference", "rule": "dnd5e/species/elf",
-                                               "note": f"{n}: level 1 benefit from the Elven Lineages table."}]}
-            for l, n in (("drow", "Drow"), ("high_elf", "High Elf"), ("wood_elf", "Wood Elf"))]}),
+        (None, "fx", {"op": "choice", "id": "lineage", "choose": 1, "options": [
+            lineage_option("drow", "Drow", [
+                {"op": "sense", "sense": "darkvision", "range_feet": 120, "note": "Darkvision range increases to 120 feet."},
+                {"op": "grant", "refs": [S("dancing-lights")]}], "faerie-fire", "darkness"),
+            lineage_option("high_elf", "High Elf", [
+                {"op": "grant", "refs": [S("prestidigitation")],
+                 "note": "After a Long Rest it can be replaced by another Wizard cantrip."}], "detect-magic", "misty-step"),
+            lineage_option("wood_elf", "Wood Elf", [
+                {"op": "speed", "movement": "walk", "mode": "set", "value": 35},
+                {"op": "grant", "refs": [S("druidcraft")]}], "longstrider", "pass-without-trace")],
+            "note": "Elven Lineages table (data.tables of dnd5e/species/elf)."}),
         *lineage_spells("elf", "elf", "lineage")]))
     E.append(T("Elf", "Fey Ancestry", [(None, "fx", {"op": "roll_mode", "mode": "advantage", "rolls": ["saving_throw"],
                                                     "when": {"pred": "save_against_condition",
@@ -241,7 +257,7 @@ def entries():
     # Human
     E.append(T("Human", "Resourceful", [(None, "fx", {"op": "trigger", "event": LONG, "then": [
         {"op": "restore", "resource": "heroic_inspiration", "amount": 1}]})]))
-    E.append(T("Human", "Skillful", [(None, "fx", {"op": "proficiency", "category": "skill", "choose": 1,
+    E.append(T("Human", "Skillful", [(None, "fx", {"op": "proficiency", "category": "skill", "choose": 1, "from": ["any"],
                                                   "note": "Any skill."})]))
     E.append(T("Human", "Versatile", [(None, "fx", {"op": "grant", "refs": ["dnd5e/feat/alert", "dnd5e/feat/magic-initiate",
                                                                            "dnd5e/feat/savage-attacker", "dnd5e/feat/skilled"],
@@ -262,10 +278,13 @@ def entries():
     # Tiefling
     E.append(darkvision("Tiefling", 60))
     E.append(T("Tiefling", "Fiendish Legacy", [
-        (None, "fx", {"op": "choice", "choose": 1, "options": [
-            {"id": l.lower(), "label": l, "effects": [{"op": "reference", "rule": "dnd5e/species/tiefling",
-                                                       "note": f"{l}: level 1 benefit from the Fiendish Legacies table."}]}
-            for l in ("Abyssal", "Chthonic", "Infernal")]}),
+        (None, "fx", {"op": "choice", "id": "legacy", "choose": 1, "options": [
+            lineage_option(l.lower(), l, [{"op": "defense", "kind": "resistance", "damage_types": [dmg]},
+                                          {"op": "grant", "refs": [S(cantrip)]}], s3, s5)
+            for l, dmg, cantrip, s3, s5 in (("Abyssal", "poison", "poison-spray", "ray-of-sickness", "hold-person"),
+                                            ("Chthonic", "necrotic", "chill-touch", "false-life", "ray-of-enfeeblement"),
+                                            ("Infernal", "fire", "fire-bolt", "hellish-rebuke", "darkness"))],
+            "note": "Fiendish Legacies table (data.tables of dnd5e/species/tiefling)."}),
         *lineage_spells("tiefling", "tiefling", "legacy")]))
     E.append(T("Tiefling", "Otherworldly Presence", [(None, "fx", {
         "op": "grant", "refs": [S("thaumaturgy")], "note": "Uses the Fiendish Legacy spellcasting ability."})]))

@@ -50,6 +50,15 @@
     {
       "op": "apply_condition",
       "condition": "dnd5e/condition/incapacitated",
+      "duration": {
+        "kind": "while",
+        "while": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "petrified"
+          }
+        }
+      },
       "note": "Lasts while the parent condition lasts."
     },
     {

@@ -5,6 +5,12 @@ Varredura de 24/10/2026 (`tools/validate/quality_scan.py`; resultado completo em
 vocabulário, cobertura 17.306/17.306, refs, auditoria) passam. Os itens abaixo são o que
 elas ainda não pegam.
 
+**Atualização (simulação dos goblins, D-005):**
+- O encontro de 4 personagens contra 6 goblins, com subida ao nível 3, aplica 100% das
+  chamadas a partir dos dados (`docs/simulacao-goblins.md`).
+- Itens resolvidos: 3, 9 e o trecho de classes do 5.
+- Nova seção E: o contrato do motor de produção.
+
 ## A. Bloqueiam o uso pelo motor
 
 1. **Vocabulário de `data.rules` aberto.** Há 1.920 regras estruturadas em 1.051 entradas,
@@ -14,7 +20,8 @@ elas ainda não pegam.
 2. **Sem schema de tipo para 30 de 31 tipos.** Só `spell` tem `schema/kinds/*.schema.json`.
    Faltam, por exemplo, creature (336), magic-item (258), feature (303), rule (318), weapon,
    armor e gear. Correção: escrever os schemas e validar os `data`.
-3. **Argumentos de predicado não conferidos.** São 52 chamadas em 12 padrões cujos argumentos
+3. ~~**Argumentos de predicado não conferidos.**~~ **Resolvido (D-004):** 0 divergências, e o
+   validador recusa novas. São 52 chamadas em 12 padrões cujos argumentos
    não batem com os `params` do registro:
    - `deals_damage_type` com `type` em vez de `damage_type` (16);
    - `ally_within_feet_of_target` com `not_incapacitated` não declarado (18);
@@ -32,7 +39,9 @@ elas ainda não pegam.
 
 ## B. Mecânica fora de campos executáveis
 
-5. **170 efeitos `reference` apontando para a própria entrada**, com o comportamento só na
+5. **170 → 144 efeitos `reference` apontando para a própria entrada.** O equipamento das
+   classes virou `grant`, e a Fúria virou `activation.duration`. Restam magic-item 77,
+   spell 48, rule 8, feature 7 e contagion/curse 4. Situação original: 170 efeitos, com o comportamento só na
    nota: magic-item 77, spell 48, class 25, feature 8, rule 8 e contagion/curse 4. Exemplos:
    classes com "Gain data.starting_equipment[0]", que deveria ser `grant`; `mounted-combat`
    com nota vazia.
@@ -50,11 +59,14 @@ elas ainda não pegam.
 
 ## C. Decisões suas
 
-9. Escola de Flaming Sphere: Conjuration (D-001 estendido) ou Evocation.
-10. D-002 (camada pt-BR): ainda não iniciada.
-11. Espaço não separável: 352 ocorrências no texto, como no PDF. Normalizar ou manter literal?
-12. 28 nomes registrados e nunca usados (4 predicados, 5 variáveis, 5 eventos e 9 stats).
-    Remover ou manter para o motor?
+9. ~~Escola de Flaming Sphere~~ **Decidido (D-003):** Evocation.
+10. D-002 (camada pt-BR): **adiada**.
+11. Espaço não separável (U+00A0): 352 ocorrências no texto, herdadas do PDF (ex.: "2d8 +
+    5", "10 feet"). É invisível e os parsers já o tratam como espaço. Normalizar para
+    espaço comum ou manter literal?
+12. 23 nomes registrados e nunca usados nas entradas (4 predicados, 5 variáveis, 5 eventos
+    e 9 stats). O motor usa `level_gained`, `regains_hit_points` e `round_end`, que devem
+    ficar. Os demais: remover ou manter?
 13. Revisar os ~120 nomes novos de vocabulário (L31 e bestiário) e os quase-sinônimos, por
     exemplo `hp_at_most`/`hp_below`, `attack_is_ranged`/`attack_with_ranged_weapon` e
     `save_against_spell`/`save_against_spell_or_magic`.
@@ -66,3 +78,28 @@ elas ainda não pegam.
 15. 4 listas de palavras em colunas impressas como linhas soltas: ações, áreas, condições e
     tipos de criatura.
 16. Marcação quebrada "*Enlarge/**Reduce*" na Wand of Wonder (2 vezes).
+
+## E. Contrato do motor de produção (`tools/validate/engine_contract.py`)
+
+Relatório completo em `reports/engine_contract.json`. Não bloqueia os dados; é a lista do
+que o motor definitivo precisa executar além do que o protótipo já faz.
+
+17. **Entradas com efeitos executáveis pelo protótipo:** 869 de 1.391. Faltam as ops:
+    - `cast_spell` (154 entradas);
+    - `summon` (23);
+    - `transform` (5);
+    - `sense` (35), que exige um modelo de visão.
+18. **Predicados e variáveis sem implementação no protótipo:**
+    - 111 de 145 predicados, por exemplo `target_size_at_most` (42), `creature_is` (25) e
+      `in_light` (8);
+    - 29 de 44 variáveis.
+19. **Campos ainda não lidos pelo protótipo:**
+    - `activation.frequency` (104);
+    - `apply_condition.params` (50);
+    - `save.repeat` (31);
+    - `defense.conditions` (17);
+    - os campos de `summon` e `transform`.
+20. **351 notas com palavras de regra** (*only*, *next*, *until*, *half*, *at the end*…). Nos
+    caminhos da simulação, 5 de 18 notas escondiam mecânica: Sleep, Guiding Bolt, Vex,
+    Cleave e Arcane Recovery, todas já corrigidas. Revisar as 351 com o mesmo critério
+    (D-005).

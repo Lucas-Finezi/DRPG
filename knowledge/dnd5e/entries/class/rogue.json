@@ -43,6 +43,48 @@
       "Starting Equipment": "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP"
     },
     "hit_die": "d8",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          8,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d8",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -448,7 +490,10 @@
     {
       "op": "proficiency",
       "category": "tool",
-      "note": "Thieves’ Tools"
+      "note": "Thieves’ Tools",
+      "items": [
+        "dnd5e/tool/thieves-tools"
+      ]
     },
     {
       "op": "proficiency",
@@ -459,6 +504,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -466,9 +512,50 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/rogue",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Leather Armor",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/leather-armor"
+                },
+                {
+                  "name": "Daggers",
+                  "quantity": 2,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Shortsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/shortsword"
+                },
+                {
+                  "name": "Shortbow",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/shortbow"
+                },
+                {
+                  "name": "Arrows",
+                  "quantity": 20,
+                  "ref": "dnd5e/gear/ammunition-arrows"
+                },
+                {
+                  "name": "Quiver",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/quiver"
+                },
+                {
+                  "name": "Thieves’ Tools",
+                  "quantity": 1,
+                  "ref": "dnd5e/tool/thieves-tools"
+                },
+                {
+                  "name": "Burglar’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/burglars-pack"
+                }
+              ],
+              "gp": 8
             }
           ]
         },
@@ -477,9 +564,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/rogue",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 100
             }
           ]
         }
@@ -538,7 +624,6 @@
   ],
   "refs": [
     "dnd5e/armor/leather-armor",
-    "dnd5e/class/rogue",
     "dnd5e/feature/rogue-ability-score-improvement",
     "dnd5e/feature/rogue-cunning-action",
     "dnd5e/feature/rogue-cunning-strike",

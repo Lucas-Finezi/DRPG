@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/hunter-hunters-lore",
-        "dnd5e/feature/hunter-hunters-prey",
-        "dnd5e/feature/hunter-defensive-tactics",
-        "dnd5e/feature/hunter-superior-hunters-prey",
+        "dnd5e/feature/hunter-hunters-prey"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "ranger",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Ranger level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/hunter-defensive-tactics"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "ranger",
+          "level": 7
+        }
+      },
+      "note": "Subclass feature at Ranger level 7."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/hunter-superior-hunters-prey"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "ranger",
+          "level": 11
+        }
+      },
+      "note": "Subclass feature at Ranger level 11."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/hunter-superior-hunters-defense"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "ranger",
+          "level": 15
+        }
+      },
+      "note": "Subclass feature at Ranger level 15."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Ranger Subclass: Hunter\n\n*Protect Nature and People from Destruction*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/fiend-patron-dark-ones-blessing",
-        "dnd5e/feature/fiend-patron-fiend-spells",
-        "dnd5e/feature/fiend-patron-dark-ones-own-luck",
-        "dnd5e/feature/fiend-patron-fiendish-resilience",
+        "dnd5e/feature/fiend-patron-fiend-spells"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Warlock level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-dark-ones-own-luck"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Warlock level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-fiendish-resilience"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Warlock level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/fiend-patron-hurl-through-hell"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Warlock level 14."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Warlock Subclass: Fiend Patron\n\n*Make a Deal with the Lower Planes*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

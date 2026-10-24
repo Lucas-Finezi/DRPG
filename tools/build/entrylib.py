@@ -431,7 +431,7 @@ def build(kind, slug, name, nodes, lot, section_path, items, text=None, **kw):
 
 def extend_registries(additions, lot):
     """Add registry names a lot needs to knowledge/<system>/system.json (idempotent)."""
-    from vocabulary import ALIASES, EVENT_ALIASES, normalize, normalize_registries
+    from vocabulary import ALIASES, EVENT_ALIASES, link_formulas, normalize, normalize_registries
     path = KNOWLEDGE / SYSTEM / "system.json"
     system = json.loads(path.read_text(encoding="utf-8"))
     additions = {reg: [i for i in items if not ((reg == "predicates" and i["id"] in ALIASES) or
@@ -447,6 +447,7 @@ def extend_registries(additions, lot):
             ids.add(item["id"])
     system = {k: (normalize(v) if k != "registries" else v) for k, v in system.items()}
     system["registries"] = normalize_registries(system["registries"])
+    link_formulas(system)
     path.write_text(json.dumps(system, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return system
 

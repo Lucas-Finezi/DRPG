@@ -49,11 +49,44 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/college-of-lore-bonus-proficiencies",
-        "dnd5e/feature/college-of-lore-cutting-words",
-        "dnd5e/feature/college-of-lore-magical-discoveries",
+        "dnd5e/feature/college-of-lore-cutting-words"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "bard",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Bard level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/college-of-lore-magical-discoveries"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "bard",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Bard level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/college-of-lore-peerless-skill"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "bard",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Bard level 14."
     }
   ],
   "coverage": [
@@ -61,7 +94,9 @@
       "text": "### Bard Subclass: College of Lore\n\n*Plumb the Depths of Magical Knowledge*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
       ]
     },
     {

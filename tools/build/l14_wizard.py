@@ -36,7 +36,7 @@ def entries():
         (None, "fx", {"op": "trigger", "event": SHORT, "optional": True, "frequency": {"count": 1, "per": "long_rest"},
                       "then": [{"op": "restore", "resource": "spell_slot", "amount": {
                           "op": "div", "round": "up", "args": [{"var": "class_level.wizard"}, 2]},
-                          "note": "Combined slot levels; none of level 6 or higher."}]}),
+                          "max_level": 5, "note": "Combined slot levels; none of level 6 or higher."}]}),
         ("Once you use this feature", "sys", ["/effects/0"])]))
     E.append(CF(W, "Scholar", 2, [(None, "fx", {
         "op": "proficiency", "category": "skill", "expertise": True, "choose": 1,

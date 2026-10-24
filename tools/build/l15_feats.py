@@ -54,15 +54,17 @@ def benefits():
             ("***Two Cantrips.***", "fx", [
                 {"op": "choice", "id": "spell_list", "choose": 1, "options": [
                     {"id": c, "label": c.title(), "value": f"dnd5e/spell-list/{c}", "effects": [
-                        {"op": "grant", "refs": [f"dnd5e/spell-list/{c}"], "choose": 2, "note": "Two cantrips."}]}
+                        {"op": "grant", "id": "cantrips", "refs": [f"dnd5e/spell-list/{c}"], "choose": 2,
+                         "filter": {"spell_level": 0}, "note": "Two cantrips."},
+                        {"op": "grant", "id": "level_1_spell", "refs": [f"dnd5e/spell-list/{c}"], "choose": 1,
+                         "filter": {"spell_level": 1}, "note": "One level 1 spell from the chosen list; always prepared."}]}
                     for c in ("cleric", "druid", "wizard")]},
                 {"op": "choice", "id": "spellcasting_ability", "choose": 1, "options": [
                     {"id": a, "label": a.upper(), "value": a, "effects": []} for a in ("int", "wis", "cha")]}]),
+            ("***Level 1 Spell.***", "sys", [f"/effects/0/options/{k}/effects/1" for k in range(3)]),
             ("***Level 1 Spell.***", "fx", [
-                {"op": "grant", "refs": ["dnd5e/spell-list/cleric", "dnd5e/spell-list/druid", "dnd5e/spell-list/wizard"],
-                 "choose": 1, "note": "One level 1 spell from the chosen list; always prepared."},
                 {"op": "activation", "cost": "none", "frequency": {"count": 1, "per": "long_rest"},
-                 "then": [{"op": "cast_spell", "spell": "dnd5e/feat/magic-initiate", "slot": "none",
+                 "then": [{"op": "cast_spell", "spell": {"var": "chosen.level_1_spell"}, "slot": "none",
                            "ability": {"var": "chosen.spellcasting_ability"}}],
                  "note": "The chosen level 1 spell; it can also be cast with any spell slots you have."}]),
             ("***Spell Change.***", "rule", {"id": "spell_change", "on": "level_gained", "count": 1, "same_level": True,

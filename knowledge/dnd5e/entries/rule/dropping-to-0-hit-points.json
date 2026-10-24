@@ -97,6 +97,15 @@
         {
           "op": "apply_condition",
           "condition": "dnd5e/condition/unconscious",
+          "duration": {
+            "kind": "while",
+            "while": {
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
+            }
+          },
           "note": "Until the creature regains any Hit Points."
         }
       ]

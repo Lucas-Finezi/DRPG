@@ -3,7 +3,7 @@
 - Inventário: 1747 entradas esperadas; catálogo: 1951 entradas (204 entradas de seção/regra além do inventário).
 - Faltando: 0; lote errado: 0; duplicadas: 0.
 - Cobertura da fonte: 17306 nós em 41 lotes, 0 sem cobertura.
-- Grafo de refs: 1952 nós, 4117 arestas, 0 não resolvidas, 883 sem referência de entrada.
+- Grafo de refs: 1952 nós, 4144 arestas, 0 não resolvidas, 869 sem referência de entrada.
 - Decisões do mestre por motivo: ambiguous_source 2, gm_judgment 125, narrative 27, not_automatable 349, player_choice_open 4.
 - Inconsistências da fonte registradas no inventário: 8.
 

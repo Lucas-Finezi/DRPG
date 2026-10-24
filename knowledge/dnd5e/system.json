@@ -1870,7 +1870,20 @@
         "type": "number",
         "pages": [
           23
-        ]
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            8,
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/9"
       },
       {
         "id": "spell_attack_bonus",
@@ -1878,7 +1891,19 @@
         "type": "number",
         "pages": [
           23
-        ]
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/10"
       },
       {
         "id": "spell_slot_level",
@@ -2361,21 +2386,56 @@
         "description": "10 + Wisdom (Perception) check modifier.",
         "pages": [
           22
-        ]
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "check_mod.wis.perception"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/8"
       },
       {
         "id": "spell_save_dc",
         "description": "Spell save DC.",
         "pages": [
           23
-        ]
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            8,
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/9"
       },
       {
         "id": "spell_attack_bonus",
         "description": "Spell attack bonus.",
         "pages": [
           23
-        ]
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/10"
       },
       {
         "id": "damage_taken",
@@ -2441,7 +2501,17 @@
         "pages": [
           29
         ],
-        "lot": "L14"
+        "lot": "L14",
+        "formula": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "ability_mod.dex"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/7"
       },
       {
         "id": "attacks_per_attack_action",
@@ -3713,6 +3783,16 @@
           155
         ],
         "lot": "L26"
+      },
+      {
+        "id": "targeted_by_attack_roll",
+        "description": "An attack roll is made against the creature (an effect ending on it is used up by that roll).",
+        "type": "event",
+        "pages": [
+          90,
+          110
+        ],
+        "lot": "L28"
       },
       {
         "id": "steps_on_trap",

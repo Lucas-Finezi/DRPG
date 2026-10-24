@@ -41,6 +41,48 @@
       "Starting Equipment": "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest’s Pack, and 7 GP; or (B) 110 GP"
     },
     "hit_die": "d8",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          8,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d8",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -616,6 +658,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -623,9 +666,35 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/cleric",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Chain Shirt",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/chain-shirt"
+                },
+                {
+                  "name": "Shield",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/shield"
+                },
+                {
+                  "name": "Mace",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/mace"
+                },
+                {
+                  "name": "Holy Symbol",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/holy-symbol"
+                },
+                {
+                  "name": "Priest’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/priests-pack"
+                }
+              ],
+              "gp": 7
             }
           ]
         },
@@ -634,9 +703,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/cleric",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 110
             }
           ]
         }
@@ -695,7 +763,6 @@
   "refs": [
     "dnd5e/armor/chain-shirt",
     "dnd5e/armor/shield",
-    "dnd5e/class/cleric",
     "dnd5e/feature/cleric-ability-score-improvement",
     "dnd5e/feature/cleric-blessed-strikes",
     "dnd5e/feature/cleric-channel-divinity",

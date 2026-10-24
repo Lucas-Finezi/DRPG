@@ -46,6 +46,7 @@
   "effects": [
     {
       "op": "choice",
+      "id": "lineage",
       "choose": 1,
       "options": [
         {
@@ -53,9 +54,42 @@
           "label": "Drow",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "Drow: level 1 benefit from the Elven Lineages table."
+              "op": "sense",
+              "sense": "darkvision",
+              "range_feet": 120,
+              "note": "Darkvision range increases to 120 feet."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/dancing-lights"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/faerie-fire"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/darkness"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         },
@@ -64,9 +98,37 @@
           "label": "High Elf",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "High Elf: level 1 benefit from the Elven Lineages table."
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/prestidigitation"
+              ],
+              "note": "After a Long Rest it can be replaced by another Wizard cantrip."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/detect-magic"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/misty-step"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         },
@@ -75,52 +137,73 @@
           "label": "Wood Elf",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "Wood Elf: level 1 benefit from the Elven Lineages table."
+              "op": "speed",
+              "movement": "walk",
+              "mode": "set",
+              "value": 35
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/druidcraft"
+              ]
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/longstrider"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 3
+                }
+              },
+              "note": "Character level 3: always prepared."
+            },
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/pass-without-trace"
+              ],
+              "when": {
+                "pred": "level_at_least",
+                "args": {
+                  "level": 5
+                }
+              },
+              "note": "Character level 5: always prepared."
             }
           ]
         }
-      ]
+      ],
+      "note": "Elven Lineages table (data.tables of dnd5e/species/elf)."
     },
     {
       "op": "choice",
+      "id": "spellcasting_ability",
       "choose": 1,
       "options": [
         {
           "id": "int",
           "label": "INT",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "Spellcasting ability for this lineage: int."
-            }
-          ]
+          "value": "int",
+          "effects": []
         },
         {
           "id": "wis",
           "label": "WIS",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "Spellcasting ability for this lineage: wis."
-            }
-          ]
+          "value": "wis",
+          "effects": []
         },
         {
           "id": "cha",
           "label": "CHA",
-          "effects": [
-            {
-              "op": "reference",
-              "rule": "dnd5e/species/elf",
-              "note": "Spellcasting ability for this lineage: cha."
-            }
-          ]
+          "value": "cha",
+          "effects": []
         }
-      ]
+      ],
+      "note": "Spellcasting ability for the spells of this lineage."
     }
   ],
   "coverage": [
@@ -147,6 +230,14 @@
     }
   ],
   "refs": [
-    "dnd5e/species/elf"
+    "dnd5e/spell/dancing-lights",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/druidcraft",
+    "dnd5e/spell/faerie-fire",
+    "dnd5e/spell/longstrider",
+    "dnd5e/spell/misty-step",
+    "dnd5e/spell/pass-without-trace",
+    "dnd5e/spell/prestidigitation"
   ]
 }

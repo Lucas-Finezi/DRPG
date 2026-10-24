@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/evoker-evocation-savant",
-        "dnd5e/feature/evoker-potent-cantrip",
-        "dnd5e/feature/evoker-sculpt-spells",
-        "dnd5e/feature/evoker-empowered-evocation",
+        "dnd5e/feature/evoker-potent-cantrip"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "wizard",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Wizard level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/evoker-sculpt-spells"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "wizard",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Wizard level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/evoker-empowered-evocation"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "wizard",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Wizard level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/evoker-overchannel"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "wizard",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Wizard level 14."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Wizard Subclass: Evoker\n\n*Create Explosive Elemental Effects*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

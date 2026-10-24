@@ -190,21 +190,48 @@
     },
     {
       "op": "activation",
+      "name": "Cunning Action",
       "cost": "bonus_action",
       "then": [
         {
-          "op": "reference",
-          "rule": "dnd5e/action/dash"
-        },
-        {
-          "op": "reference",
-          "rule": "dnd5e/action/disengage"
-        },
-        {
-          "op": "reference",
-          "rule": "dnd5e/action/hide"
+          "op": "choice",
+          "id": "action",
+          "choose": 1,
+          "options": [
+            {
+              "id": "dash",
+              "label": "Dash",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/dash"
+                }
+              ]
+            },
+            {
+              "id": "disengage",
+              "label": "Disengage",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/disengage"
+                }
+              ]
+            },
+            {
+              "id": "hide",
+              "label": "Hide",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/hide"
+                }
+              ]
+            }
+          ]
         }
-      ]
+      ],
+      "note": "Takes the Dash, Disengage, or Hide action."
     }
   ],
   "coverage": [

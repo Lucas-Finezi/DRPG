@@ -45,8 +45,11 @@ def entries():
         by_level = {}
         for lv, name, ref in sorted(feats):
             by_level.setdefault(str(lv), []).append(ref)
-        items = [(None, "fx", {"op": "grant", "refs": [r for lv in sorted(by_level, key=int) for r in by_level[lv]],
-                               "note": "Each feature at the subclass level shown in data.levels."})]
+        cls_id = cls.lower()
+        items = [(None, "fx", [{"op": "grant", "refs": by_level[lv],
+                                "when": {"pred": "level_at_least", "args": {"class": cls_id, "level": int(lv)}},
+                                "note": f"Subclass feature at {cls} level {lv}."}
+                               for lv in sorted(by_level, key=int)])]
         tagline = re.search(r"^\*([^*]+)\*$", text, flags=re.M)
         first_para = re.search(r"^(?!#|\*)(.{20,40})", text, flags=re.M)
         items.append((first_para.group(1), "desc", None))

@@ -35,14 +35,27 @@
           "rolls": [
             "attack_roll"
           ],
+          "direction": "against",
+          "target": {
+            "kind": "inherit"
+          },
+          "when": {
+            "pred": "roller_is_source"
+          },
           "note": "Your next attack roll against that creature; only if damage was dealt.",
           "duration": {
             "kind": "until_event",
             "until": {
               "event": "turn_end",
-              "whose": "self",
+              "whose": "source",
               "which": "next"
-            }
+            },
+            "ends_on": [
+              {
+                "event": "targeted_by_attack_roll",
+                "whose": "target"
+              }
+            ]
           }
         }
       ]

@@ -51,11 +51,44 @@
       "refs": [
         "dnd5e/feature/life-domain-disciple-of-life",
         "dnd5e/feature/life-domain-life-domain-spells",
-        "dnd5e/feature/life-domain-preserve-life",
-        "dnd5e/feature/life-domain-blessed-healer",
+        "dnd5e/feature/life-domain-preserve-life"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "cleric",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Cleric level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/life-domain-blessed-healer"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "cleric",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Cleric level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/life-domain-supreme-healing"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "cleric",
+          "level": 17
+        }
+      },
+      "note": "Subclass feature at Cleric level 17."
     }
   ],
   "coverage": [
@@ -63,7 +96,9 @@
       "text": "### Cleric Subclass: Life Domain\n\n*Soothe the Hurts of the World*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
       ]
     },
     {

@@ -131,6 +131,56 @@ def core_traits(cls):
     return rows, traits
 
 
+def hp_table(caption):
+    """Rows of a 'Class | Hit Points' table (Level 1 / Fixed Hit Points by Class): {class: base}."""
+    k = next(i for i, n in enumerate(NODES) if n.type == "h" and n.text == caption)
+    out = {}
+    for n in NODES[k + 1:]:
+        if n.type == "h":
+            break
+        if n.type != "t" or n.text.startswith("| **"):
+            continue
+        base = int(re.match(r"(\d+) \+ Con\. modifier", n.cells[1]).group(1))
+        for name in re.split(r", or |, | or ", n.cells[0]):
+            out[name.strip()] = base
+    return out
+
+
+def hit_points(cls, die):
+    """Hit point gains as expressions (D-005), from the two class tables and 'Gaining a Level'."""
+    con = {"var": "ability_mod.con"}
+    first, fixed = hp_table("Level 1 Hit Points by Class")[cls], hp_table("Fixed Hit Points by Class")[cls]
+    return {"level_1": {"op": "add", "args": [first, con]},
+            "per_level": {"roll": {"op": "max", "args": [1, {"op": "add", "args": [f"1{die}", con]}]},
+                          "fixed": {"op": "add", "args": [fixed, con]}},
+            "sources": ["dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+                        "dnd5e/rule/level-advancement#/data/tables/0", "system.json#/levels/rules/1"]}
+
+
+TOOL_KINDS = {"Artisan’s Tools": "artisans-tools", "Musical Instrument": "other-tools"}
+
+
+def tool_effect(text):
+    """Tool proficiency of a class as items or a choice among tool entries (D-005)."""
+    inv = {e["name"]: e for e in INV if e["kind"] == "tool"}
+    fx = {"op": "proficiency", "category": "tool", "note": text}
+    m = re.match(r"Choose (\w+) (?:type of )?(.+?)(?: \(see .*\))?$", text)
+    if m:
+        n = {"one": 1, "3": 3, "three": 3}.get(m.group(1), None) or int(m.group(1))
+        pool = []
+        for kind in re.split(r" or ", m.group(2)):
+            kind = kind.rstrip("s") if kind.endswith("Instruments") else kind
+            if kind == "Artisan’s Tools":
+                pool += sorted(e["ref"] for e in INV if e["kind"] == "tool"
+                               and (e.get("facets") or {}).get("category") == "Artisan’s Tools")
+            elif kind.startswith("Musical Instrument"):
+                pool.append(inv["Musical Instrument"]["ref"])
+        fx.update({"choose": n, "from": pool})
+    elif text in inv:
+        fx["items"] = [inv[text]["ref"]]
+    return fx
+
+
 def weapon_effect(text):
     fx = {"op": "proficiency", "category": "weapon"}
     if text == "Simple and Martial weapons":
@@ -190,13 +240,14 @@ def class_entry(cls):
               **({"from": traits["skills"]["from"]} if traits["skills"]["from"] != "any" else {"note": "Any skills."})},
              weapon_effect(traits["weapons"])]
     if "tools" in traits:
-        profs.append({"op": "proficiency", "category": "tool", "note": traits["tools"]})
+        profs.append(tool_effect(traits["tools"]))
     arm = armor_effect(traits["armor_training"])
     if arm:
         profs.append(arm)
-    equip = {"op": "choice", "choose": 1, "options": [
+    equip = {"op": "choice", "id": "starting_equipment", "choose": 1, "options": [
         {"id": o["id"], "label": f"Option ({o['id'].upper()})",
-         "effects": [{"op": "reference", "rule": f"dnd5e/class/{slug}", "note": f"Gain data.starting_equipment[{k}]."}]}
+         "effects": [{"op": "grant", "items": o["items"], "gp": o["gp"]} if o["items"] else
+                     {"op": "grant", "gp": o["gp"]}]}
         for k, o in enumerate(traits["starting_equipment"])]}
     items = [
         (f"##### Core {cls} Traits", "rule", {"id": "core_traits", **{k: v for k, v in traits.items()
@@ -212,7 +263,8 @@ def class_entry(cls):
     ]
     items = [it for it in items if it[0] is None or it[0] in text]
     items.sort(key=lambda it: text.find(it[0]))
-    data = {"core_traits": rows, "hit_die": traits["hit_die"], "starting_equipment": traits["starting_equipment"],
+    data = {"core_traits": rows, "hit_die": traits["hit_die"], "hit_points": hit_points(cls, traits["hit_die"]),
+            "starting_equipment": traits["starting_equipment"],
             "features_table": {"id": f"{slug}_features", "caption": f"{cls} Features", "columns": cols},
             "levels": levels, "subclass": sub_ref}
     unresolved = [i["name"] for o in traits["starting_equipment"] for i in o["items"] if "ref" not in i]

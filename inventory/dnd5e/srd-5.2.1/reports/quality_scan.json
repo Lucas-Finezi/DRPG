@@ -41,23 +41,14 @@
  },
  "placeholders": {
   "count_by_kind": {
-   "class": 25,
    "contagion": 3,
    "curse": 1,
-   "feature": 8,
+   "feature": 7,
    "magic-item": 77,
    "rule": 8,
    "spell": 48
   },
   "examples": {
-   "class": [
-    "dnd5e/class/barbarian/effects/4/options/0/effects/0: Gain data.starting_equipment[0].",
-    "dnd5e/class/barbarian/effects/4/options/1/effects/0: Gain data.starting_equipment[1].",
-    "dnd5e/class/bard/effects/5/options/0/effects/0: Gain data.starting_equipment[0].",
-    "dnd5e/class/bard/effects/5/options/1/effects/0: Gain data.starting_equipment[1].",
-    "dnd5e/class/cleric/effects/4/options/0/effects/0: Gain data.starting_equipment[0].",
-    "dnd5e/class/cleric/effects/4/options/1/effects/0: Gain data.starting_equipment[1]."
-   ],
    "contagion": [
     "dnd5e/contagion/cackle-fever/effects/3/then/0/on_fail/0: Infected.",
     "dnd5e/contagion/sewer-plague/effects/0/on_fail/0: Infected; effects 1d4 days later.",
@@ -67,12 +58,12 @@
     "dnd5e/curse/environmental-curses/effects/0/on_fail/0: Possessed: on a 1 on a D20 Test the entity takes control; DC 15 Charisma save at the end o"
    ],
    "feature": [
-    "dnd5e/feature/barbarian-rage/effects/0/then/0: Rage becomes active (see the effects below while active).",
     "dnd5e/feature/draconic-sorcery-dragon-wings/effects/1/then/0: Restore your use of it.",
     "dnd5e/feature/oath-of-devotion-holy-nimbus/effects/0/then/0: Benefits below; end at will (no action).",
     "dnd5e/feature/oath-of-devotion-holy-nimbus/effects/1/then/0: Regain the use; requires a level 5 spell slot.",
     "dnd5e/feature/warlock-invocation-pact-of-the-blade/effects/0/then/0/options/0/effects/0: Weapon of your choice, in your hand.",
-    "dnd5e/feature/warlock-invocation-pact-of-the-blade/effects/0/then/0/options/1/effects/0: Not if someone else is attuned to it or another Warlock is bonded with it."
+    "dnd5e/feature/warlock-invocation-pact-of-the-blade/effects/0/then/0/options/1/effects/0: Not if someone else is attuned to it or another Warlock is bonded with it.",
+    "dnd5e/feature/warlock-invocation-pact-of-the-tome/effects/0/then/0: Conjure the Book of Shadows; it disappears if you conjure another or die."
    ],
    "magic-item": [
     "dnd5e/magic-item/apparatus-of-the-crab/effects/0/on_success/0: Finds the hidden catch.",
@@ -105,7 +96,7 @@
    "contagion": 2,
    "creature": 14,
    "environment": 2,
-   "feature": 6,
+   "feature": 8,
    "gear": 12,
    "magic-item": 95,
    "poison": 2,
@@ -131,11 +122,11 @@
     "dnd5e/environment/extreme-heat/effects/0/then/0 [save]: DC 5 the first hour, +1 each additional hour; Disadvantage in Medium or Heavy armor; Resistance or I"
    ],
    "feature": [
+    "dnd5e/feature/barbarian-rage/effects/0 [activation]: Rage becomes active for its duration (D-005): the effects below apply while it is active; data.rules",
     "dnd5e/feature/circle-of-the-land-natures-sanctuary/effects/1/then/0 [move]: The Cube, to ground within 120 feet of you.",
+    "dnd5e/feature/elf-elven-lineage/effects/0/options/0/effects/0 [sense]: Darkvision range increases to 120 feet.",
     "dnd5e/feature/evoker-overchannel/effects/1 [damage]: 2d12 per slot level on the second use, +1d12 per level on each later use; ignores Resistance and Imm",
-    "dnd5e/feature/hunter-hunters-prey/effects/0/options/1/effects/0/then/0 [attack]: Same weapon; a different creature within 5 feet of the original target, within the weapon's range, n",
-    "dnd5e/feature/monk-deflect-attacks/effects/1/then/0 [save]: A creature within 5 feet (melee attack) or 60 feet not behind Total Cover (ranged attack).",
-    "dnd5e/feature/sorcerer-metamagic-extended-spell/effects/0/then/1 [modifier]: Maximum duration 24 hours."
+    "dnd5e/feature/hunter-hunters-prey/effects/0/options/1/effects/0/then/0 [attack]: Same weapon; a different creature within 5 feet of the original target, within the weapon's range, n"
    ],
    "gear": [
     "dnd5e/gear/acid/effects/0 [trigger]: Replace one attack with throwing the Acid; target within 20 feet you can see.",
@@ -224,8 +215,8 @@
    "variables": 55,
    "stats": 72,
    "rolls": 9,
-   "events": 108,
-   "predicates": 221,
+   "events": 107,
+   "predicates": 153,
    "frequencies": 9,
    "damage_types": 13,
    "sizes": 6,
@@ -280,39 +271,8 @@
    "stats": 9,
    "restrictions": 0
   },
-  "bad_args": [
-   "dnd5e/action/dodge/effects/0/then/0/when/all/0: can_see args ['target'] vs params []",
-   "dnd5e/contagion/cackle-fever/effects/1/condition/all/1/not: deals_damage_type args ['type'] vs params ['damage_type']",
-   "dnd5e/creature/baboon/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/blood-hawk/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/dire-wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/giant-rat/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/giant-vulture/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/hell-hound/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/hobgoblin-warrior/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/hyena/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/kobold-warrior/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/lion/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/reef-shark/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/tough-boss/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/tough/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/vulture/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/warrior-infantry/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/werewolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/winter-wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/creature/wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
-   "dnd5e/environment/deep-water/effects/0/condition/not: has_speed args ['mode'] vs params ['movement_mode']",
-   "dnd5e/feature/bard-bardic-inspiration/effects/0/target/filter/predicate/all/1/any/0: can_see args ['who'] vs params []",
-   "dnd5e/feature/college-of-lore-cutting-words/effects/0/condition/all/0: can_see args ['who'] vs params []",
-   "dnd5e/feature/draconic-sorcery-elemental-affinity/effects/2/when: deals_damage_type args ['type'] vs params ['damage_type']",
-   "dnd5e/feature/fiend-patron-hurl-through-hell/effects/0/then/1/on_fail/0/when/not: creature_type args ['type'] vs params ['creature_type']",
-   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/0: deals_damage_type args ['type'] vs params ['damage_type']",
-   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/1: deals_damage_type args ['type'] vs params ['damage_type']",
-   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/2: deals_damage_type args ['type'] vs params ['damage_type']",
-   "dnd5e/feature/rogue-uncanny-dodge/effects/0/condition: can_see args ['who'] vs params []",
-   "dnd5e/feature/sorcerer-metamagic-transmuted-spell/effects/0/condition/any/0: deals_damage_type args ['type'] vs params ['damage_type']"
-  ],
-  "bad_args_count": 52
+  "bad_args": [],
+  "bad_args_count": 0
  },
  "spells": {
   "count": 2,
@@ -441,12 +401,10 @@
   "dnd5e/rule/using-magic-items"
  ],
  "inconsistencies": [
+  "dnd5e/spell/flaming-sphere:  school 'Conjuration' in the description header (p. 132) but 'Evocation' in the D",
   "dnd5e/spell-list/bard:  Phantasmal Force: its description header names Bard but the printed Bard spell l",
-  "dnd5e/spell-list/druid:  Flaming Sphere: school 'Evocation' in the Druid spell list but 'Conjuration' in ",
-  "dnd5e/spell-list/sorcerer:  Flaming Sphere: school 'Evocation' in the Sorcerer spell list but 'Conjuration' ",
   "dnd5e/spell-list/sorcerer:  Mind Spike: its description header names Sorcerer but the printed Sorcerer spell",
   "dnd5e/spell-list/sorcerer:  Phantasmal Force: its description header names Sorcerer but the printed Sorcerer",
-  "dnd5e/spell-list/wizard:  Flaming Sphere: school 'Evocation' in the Wizard spell list but 'Conjuration' in",
   "dnd5e/spell-list/wizard:  Phantasmal Force: its description header names Wizard but the printed Wizard spe"
  ]
 }

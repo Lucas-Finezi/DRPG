@@ -53,12 +53,58 @@
       "op": "grant",
       "refs": [
         "dnd5e/feature/oath-of-devotion-oath-of-devotion-spells",
-        "dnd5e/feature/oath-of-devotion-sacred-weapon",
-        "dnd5e/feature/oath-of-devotion-aura-of-devotion",
-        "dnd5e/feature/oath-of-devotion-smite-of-protection",
+        "dnd5e/feature/oath-of-devotion-sacred-weapon"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Paladin level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-aura-of-devotion"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 7
+        }
+      },
+      "note": "Subclass feature at Paladin level 7."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-smite-of-protection"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 15
+        }
+      },
+      "note": "Subclass feature at Paladin level 15."
+    },
+    {
+      "op": "grant",
+      "refs": [
         "dnd5e/feature/oath-of-devotion-holy-nimbus"
       ],
-      "note": "Each feature at the subclass level shown in data.levels."
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 20
+        }
+      },
+      "note": "Subclass feature at Paladin level 20."
     }
   ],
   "coverage": [
@@ -66,7 +112,10 @@
       "text": "### Paladin Subclass: Oath of Devotion\n\n*Uphold the Ideals of Justice and Order*",
       "status": "structured",
       "by": [
-        "/effects/0"
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
       ]
     },
     {

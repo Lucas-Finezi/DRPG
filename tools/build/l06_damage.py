@@ -207,6 +207,8 @@ def sections():
         ("#### Falling Unconscious", "fx", {"op": "trigger", "event": {"event": "drops_to_0_hp"},
                                             "condition": {"not": {"pred": "is_monster"}},
                                             "then": [{"op": "apply_condition", "condition": C("unconscious"),
+                                                      "duration": {"kind": "while", "while": {
+                                                          "pred": "hp_is", "args": {"zero": True}}},
                                                       "note": "Until the creature regains any Hit Points."}]}),
         ("#### Death Saving Throws", "rule", {"id": "death_saves", "when": "turn_start_at_0_hp", "ability": None,
                                               "roll": "1d20", "success_at_least": 10}),

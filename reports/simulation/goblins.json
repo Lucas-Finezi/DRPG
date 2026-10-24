@@ -1,0 +1,6422 @@
+{
+ "seed_story": {
+  "seed": 2026,
+  "party_level_2": {
+   "Wizard": {
+    "level": 2,
+    "classes": {
+     "wizard": 2
+    },
+    "subclasses": {},
+    "scores": {
+     "str": 8,
+     "dex": 12,
+     "con": 14,
+     "int": 17,
+     "wis": 14,
+     "cha": 10
+    },
+    "hp_max": 14,
+    "ac": 14,
+    "speed": 30,
+    "proficiency_bonus": 2,
+    "slots": {
+     "1": 3
+    },
+    "resources": {
+     "heroic_inspiration": 1
+    },
+    "cantrips": [
+     "prestidigitation",
+     "light",
+     "minor-illusion",
+     "fire-bolt",
+     "ray-of-frost",
+     "mage-hand"
+    ],
+    "prepared": [
+     "magic-missile",
+     "shield",
+     "sleep",
+     "mage-armor",
+     "thunderwave"
+    ],
+    "always_prepared": [
+     "false-life"
+    ],
+    "spellbook": [
+     "magic-missile",
+     "shield",
+     "sleep",
+     "thunderwave",
+     "mage-armor",
+     "detect-magic",
+     "feather-fall",
+     "burning-hands"
+    ],
+    "features": [
+     "elf-darkvision",
+     "elf-elven-lineage",
+     "elf-fey-ancestry",
+     "elf-keen-senses",
+     "elf-trance",
+     "magic-initiate",
+     "wizard-spellcasting",
+     "wizard-ritual-adept",
+     "wizard-arcane-recovery",
+     "wizard-scholar"
+    ],
+    "skills": [
+     "arcana",
+     "history",
+     "insight",
+     "investigation",
+     "perception"
+    ],
+    "expertise": [
+     "arcana"
+    ]
+   },
+   "Cleric": {
+    "level": 2,
+    "classes": {
+     "cleric": 2
+    },
+    "subclasses": {},
+    "scores": {
+     "str": 14,
+     "dex": 8,
+     "con": 13,
+     "int": 10,
+     "wis": 17,
+     "cha": 13
+    },
+    "hp_max": 17,
+    "ac": 14,
+    "speed": 30,
+    "proficiency_bonus": 2,
+    "slots": {
+     "1": 3
+    },
+    "resources": {
+     "stonecunning": 2,
+     "heroic_inspiration": 1,
+     "channel_divinity": 2
+    },
+    "cantrips": [
+     "light",
+     "resistance",
+     "sacred-flame",
+     "guidance",
+     "thaumaturgy",
+     "spare-the-dying"
+    ],
+    "prepared": [
+     "bless",
+     "healing-word",
+     "guiding-bolt",
+     "cure-wounds",
+     "shield-of-faith"
+    ],
+    "always_prepared": [
+     "sanctuary"
+    ],
+    "spellbook": [],
+    "features": [
+     "dwarf-darkvision",
+     "dwarf-dwarven-resilience",
+     "dwarf-dwarven-toughness",
+     "dwarf-stonecunning",
+     "magic-initiate",
+     "cleric-spellcasting",
+     "cleric-divine-order",
+     "cleric-channel-divinity"
+    ],
+    "skills": [
+     "insight",
+     "medicine",
+     "persuasion",
+     "religion"
+    ],
+    "expertise": []
+   },
+   "Barbarian": {
+    "level": 2,
+    "classes": {
+     "barbarian": 2
+    },
+    "subclasses": {},
+    "scores": {
+     "str": 17,
+     "dex": 13,
+     "con": 15,
+     "int": 10,
+     "wis": 12,
+     "cha": 8
+    },
+    "hp_max": 23,
+    "ac": 13,
+    "speed": 35,
+    "proficiency_bonus": 2,
+    "slots": {},
+    "resources": {
+     "giant_ancestry": 2,
+     "large_form": 1,
+     "rage": 2,
+     "heroic_inspiration": 1,
+     "healers_kit": 10
+    },
+    "cantrips": [],
+    "prepared": [],
+    "always_prepared": [],
+    "spellbook": [],
+    "features": [
+     "goliath-giant-ancestry",
+     "goliath-large-form",
+     "goliath-powerful-build",
+     "savage-attacker",
+     "barbarian-rage",
+     "barbarian-unarmored-defense",
+     "barbarian-weapon-mastery",
+     "barbarian-danger-sense",
+     "barbarian-reckless-attack"
+    ],
+    "skills": [
+     "athletics",
+     "intimidation",
+     "perception",
+     "survival"
+    ],
+    "expertise": []
+   },
+   "Monk": {
+    "level": 2,
+    "classes": {
+     "monk": 2
+    },
+    "subclasses": {},
+    "scores": {
+     "str": 12,
+     "dex": 17,
+     "con": 14,
+     "int": 10,
+     "wis": 14,
+     "cha": 8
+    },
+    "hp_max": 17,
+    "ac": 15,
+    "speed": 40,
+    "proficiency_bonus": 2,
+    "slots": {},
+    "resources": {
+     "heroic_inspiration": 1,
+     "focus_points": 2
+    },
+    "cantrips": [],
+    "prepared": [],
+    "always_prepared": [],
+    "spellbook": [],
+    "features": [
+     "human-resourceful",
+     "human-skillful",
+     "human-versatile",
+     "skilled",
+     "alert",
+     "monk-martial-arts",
+     "monk-unarmored-defense",
+     "monk-monks-focus",
+     "monk-unarmored-movement",
+     "monk-uncanny-metabolism"
+    ],
+    "skills": [
+     "acrobatics",
+     "athletics",
+     "history",
+     "insight",
+     "perception",
+     "religion",
+     "sleight_of_hand",
+     "stealth"
+    ],
+    "expertise": []
+   }
+  },
+  "combat_1": {
+   "rounds": 3,
+   "party_won": true,
+   "party": {
+    "Wizard": {
+     "hp": 11,
+     "hp_max": 14,
+     "dead": false,
+     "drops": 0,
+     "slots": {
+      "1": 0
+     },
+     "resources": {
+      "heroic_inspiration": 1
+     }
+    },
+    "Cleric": {
+     "hp": 17,
+     "hp_max": 17,
+     "dead": false,
+     "drops": 0,
+     "slots": {
+      "1": 1
+     },
+     "resources": {
+      "stonecunning": 2,
+      "heroic_inspiration": 1,
+      "channel_divinity": 2
+     }
+    },
+    "Barbarian": {
+     "hp": 23,
+     "hp_max": 23,
+     "dead": false,
+     "drops": 0,
+     "slots": {},
+     "resources": {
+      "giant_ancestry": 0,
+      "large_form": 1,
+      "rage": 1,
+      "heroic_inspiration": 1,
+      "healers_kit": 10
+     }
+    },
+    "Monk": {
+     "hp": 11,
+     "hp_max": 17,
+     "dead": false,
+     "drops": 0,
+     "slots": {},
+     "resources": {
+      "heroic_inspiration": 1,
+      "focus_points": 0
+     }
+    }
+   },
+   "foes_down": 6
+  },
+  "xp": {
+   "encounter_xp": 300,
+   "each": 75,
+   "total_each": 375,
+   "needed_for_3": 900
+  },
+  "party_level_3": {
+   "Wizard": {
+    "level": 3,
+    "classes": {
+     "wizard": 3
+    },
+    "subclasses": {
+     "wizard": "evoker"
+    },
+    "scores": {
+     "str": 8,
+     "dex": 12,
+     "con": 14,
+     "int": 17,
+     "wis": 14,
+     "cha": 10
+    },
+    "hp_max": 20,
+    "ac": 14,
+    "speed": 30,
+    "proficiency_bonus": 2,
+    "slots": {
+     "1": 4,
+     "2": 2
+    },
+    "resources": {
+     "heroic_inspiration": 1
+    },
+    "cantrips": [
+     "prestidigitation",
+     "light",
+     "minor-illusion",
+     "fire-bolt",
+     "ray-of-frost",
+     "mage-hand"
+    ],
+    "prepared": [
+     "magic-missile",
+     "shield",
+     "sleep",
+     "mage-armor",
+     "thunderwave",
+     "scorching-ray"
+    ],
+    "always_prepared": [
+     "false-life",
+     "detect-magic"
+    ],
+    "spellbook": [
+     "magic-missile",
+     "shield",
+     "sleep",
+     "thunderwave",
+     "mage-armor",
+     "detect-magic",
+     "feather-fall",
+     "burning-hands",
+     "shatter",
+     "misty-step",
+     "scorching-ray",
+     "flaming-sphere"
+    ],
+    "features": [
+     "elf-darkvision",
+     "elf-elven-lineage",
+     "elf-fey-ancestry",
+     "elf-keen-senses",
+     "elf-trance",
+     "magic-initiate",
+     "wizard-spellcasting",
+     "wizard-ritual-adept",
+     "wizard-arcane-recovery",
+     "wizard-scholar",
+     "wizard-wizard-subclass",
+     "evoker-evocation-savant",
+     "evoker-potent-cantrip"
+    ],
+    "skills": [
+     "arcana",
+     "history",
+     "insight",
+     "investigation",
+     "perception"
+    ],
+    "expertise": [
+     "arcana"
+    ]
+   },
+   "Cleric": {
+    "level": 3,
+    "classes": {
+     "cleric": 3
+    },
+    "subclasses": {
+     "cleric": "life-domain"
+    },
+    "scores": {
+     "str": 14,
+     "dex": 8,
+     "con": 13,
+     "int": 10,
+     "wis": 17,
+     "cha": 13
+    },
+    "hp_max": 24,
+    "ac": 14,
+    "speed": 30,
+    "proficiency_bonus": 2,
+    "slots": {
+     "1": 4,
+     "2": 2
+    },
+    "resources": {
+     "stonecunning": 2,
+     "heroic_inspiration": 1,
+     "channel_divinity": 2
+    },
+    "cantrips": [
+     "light",
+     "resistance",
+     "sacred-flame",
+     "guidance",
+     "thaumaturgy",
+     "spare-the-dying"
+    ],
+    "prepared": [
+     "healing-word",
+     "guiding-bolt",
+     "shield-of-faith",
+     "spiritual-weapon",
+     "command",
+     "bane"
+    ],
+    "always_prepared": [
+     "sanctuary",
+     "aid",
+     "bless",
+     "cure-wounds",
+     "lesser-restoration"
+    ],
+    "spellbook": [],
+    "features": [
+     "dwarf-darkvision",
+     "dwarf-dwarven-resilience",
+     "dwarf-dwarven-toughness",
+     "dwarf-stonecunning",
+     "magic-initiate",
+     "cleric-spellcasting",
+     "cleric-divine-order",
+     "cleric-channel-divinity",
+     "cleric-cleric-subclass",
+     "life-domain-disciple-of-life",
+     "life-domain-life-domain-spells",
+     "life-domain-preserve-life"
+    ],
+    "skills": [
+     "insight",
+     "medicine",
+     "persuasion",
+     "religion"
+    ],
+    "expertise": []
+   },
+   "Barbarian": {
+    "level": 3,
+    "classes": {
+     "barbarian": 3
+    },
+    "subclasses": {
+     "barbarian": "path-of-the-berserker"
+    },
+    "scores": {
+     "str": 17,
+     "dex": 13,
+     "con": 15,
+     "int": 10,
+     "wis": 12,
+     "cha": 8
+    },
+    "hp_max": 32,
+    "ac": 13,
+    "speed": 35,
+    "proficiency_bonus": 2,
+    "slots": {},
+    "resources": {
+     "giant_ancestry": 2,
+     "large_form": 1,
+     "rage": 3,
+     "heroic_inspiration": 1,
+     "healers_kit": 10
+    },
+    "cantrips": [],
+    "prepared": [],
+    "always_prepared": [],
+    "spellbook": [],
+    "features": [
+     "goliath-giant-ancestry",
+     "goliath-large-form",
+     "goliath-powerful-build",
+     "savage-attacker",
+     "barbarian-rage",
+     "barbarian-unarmored-defense",
+     "barbarian-weapon-mastery",
+     "barbarian-danger-sense",
+     "barbarian-reckless-attack",
+     "barbarian-barbarian-subclass",
+     "path-of-the-berserker-frenzy",
+     "barbarian-primal-knowledge"
+    ],
+    "skills": [
+     "athletics",
+     "intimidation",
+     "nature",
+     "perception",
+     "survival"
+    ],
+    "expertise": []
+   },
+   "Monk": {
+    "level": 3,
+    "classes": {
+     "monk": 3
+    },
+    "subclasses": {
+     "monk": "warrior-of-the-open-hand"
+    },
+    "scores": {
+     "str": 12,
+     "dex": 17,
+     "con": 14,
+     "int": 10,
+     "wis": 14,
+     "cha": 8
+    },
+    "hp_max": 24,
+    "ac": 15,
+    "speed": 40,
+    "proficiency_bonus": 2,
+    "slots": {},
+    "resources": {
+     "heroic_inspiration": 1,
+     "focus_points": 3
+    },
+    "cantrips": [],
+    "prepared": [],
+    "always_prepared": [],
+    "spellbook": [],
+    "features": [
+     "human-resourceful",
+     "human-skillful",
+     "human-versatile",
+     "skilled",
+     "alert",
+     "monk-martial-arts",
+     "monk-unarmored-defense",
+     "monk-monks-focus",
+     "monk-unarmored-movement",
+     "monk-uncanny-metabolism",
+     "monk-deflect-attacks",
+     "monk-monk-subclass",
+     "warrior-of-the-open-hand-open-hand-technique"
+    ],
+    "skills": [
+     "acrobatics",
+     "athletics",
+     "history",
+     "insight",
+     "perception",
+     "religion",
+     "sleight_of_hand",
+     "stealth"
+    ],
+    "expertise": []
+   }
+  },
+  "combat_2": {
+   "rounds": 4,
+   "party_won": true,
+   "party": {
+    "Wizard": {
+     "hp": 17,
+     "hp_max": 20,
+     "dead": false,
+     "drops": 1,
+     "slots": {
+      "1": 0,
+      "2": 0
+     },
+     "resources": {
+      "heroic_inspiration": 1
+     }
+    },
+    "Cleric": {
+     "hp": 17,
+     "hp_max": 24,
+     "dead": false,
+     "drops": 0,
+     "slots": {
+      "1": 1,
+      "2": 2
+     },
+     "resources": {
+      "stonecunning": 2,
+      "heroic_inspiration": 1,
+      "channel_divinity": 1
+     }
+    },
+    "Barbarian": {
+     "hp": 32,
+     "hp_max": 32,
+     "dead": false,
+     "drops": 0,
+     "slots": {},
+     "resources": {
+      "giant_ancestry": 0,
+      "large_form": 1,
+      "rage": 2,
+      "heroic_inspiration": 1,
+      "healers_kit": 10
+     }
+    },
+    "Monk": {
+     "hp": 24,
+     "hp_max": 24,
+     "dead": false,
+     "drops": 0,
+     "slots": {},
+     "resources": {
+      "heroic_inspiration": 1,
+      "focus_points": 1
+     }
+    }
+   },
+   "foes_down": 6
+  },
+  "narrative": [
+   "[1-build-level-2] Wizard created: wizard 1, elf, sage; HP 8",
+   "[1-build-level-2] Wizard reaches wizard 2: +6 HP (max 14), slots {'1': [3, 3]}, prepared ['magic-missile', 'shield', 'sleep', 'mage-armor', 'thunderwave']",
+   "[1-build-level-2] Cleric created: cleric 1, dwarf, acolyte; HP 10",
+   "[1-build-level-2] Cleric reaches cleric 2: +6 HP (max 17), slots {'1': [3, 3]}, prepared ['bless', 'healing-word', 'guiding-bolt', 'cure-wounds', 'shield-of-faith']",
+   "[1-build-level-2] Barbarian created: barbarian 1, goliath, soldier; HP 14",
+   "[1-build-level-2] Barbarian reaches barbarian 2: +9 HP (max 23), slots {}, prepared []",
+   "[1-build-level-2] Monk created: monk 1, human, criminal; HP 10",
+   "[1-build-level-2] Monk reaches monk 2: +7 HP (max 17), slots {}, prepared []",
+   "[1-build-level-2] Wizard casts Mage Armor (slot 1)",
+   "[2-combat-level-2] initiative: Monk(23), Barbarian(21), Wizard(18), Goblin 1(6), Goblin 2(6), Goblin 3(6), Goblin 4(6), Goblin 5(6), Goblin 6(6), Cleric(3)",
+   "[2-combat-level-2] --- round 1",
+   "[2-combat-level-2] Barbarian uses Rage",
+   "[2-combat-level-2] Barbarian attacks Goblin 1 (advantage): 19+5=24 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 1 takes 13 fire (0/10)",
+   "[2-combat-level-2] Goblin 1 dies",
+   "[2-combat-level-2] Wizard casts Sleep (slot 1)",
+   "[2-combat-level-2] Goblin 2 save WIS 18 vs DC 13: success",
+   "[2-combat-level-2] Goblin 3 save WIS 7 vs DC 13: fail",
+   "[2-combat-level-2] Goblin 3 gains Incapacitated",
+   "[2-combat-level-2] Goblin 2 uses Scimitar",
+   "[2-combat-level-2] Goblin 2 attacks Monk (normal): 20+4=24 vs AC 15 -> CRIT",
+   "[2-combat-level-2] Monk takes 6 slashing (11/17)",
+   "[2-combat-level-2] Goblin 3 cannot act",
+   "[2-combat-level-2] Goblin 3 save WIS 3 vs DC 13: fail",
+   "[2-combat-level-2] Goblin 3 gains Unconscious",
+   "[2-combat-level-2] Goblin 3 gains Prone",
+   "[2-combat-level-2] Goblin 3: Incapacitated ends",
+   "[2-combat-level-2] Goblin 4 uses Shortbow",
+   "[2-combat-level-2] Goblin 4 attacks Wizard (normal): 1+4=5 vs AC 14 -> miss",
+   "[2-combat-level-2] Goblin 5 uses Shortbow",
+   "[2-combat-level-2] Wizard casts Shield (slot 1)",
+   "[2-combat-level-2] Goblin 5 attacks Wizard (normal): 11+4=15 vs AC 19 -> miss",
+   "[2-combat-level-2] Goblin 6 uses Shortbow",
+   "[2-combat-level-2] Goblin 6 attacks Wizard (normal): 13+4=17 vs AC 19 -> miss",
+   "[2-combat-level-2] Cleric casts Bless (slot 1)",
+   "[2-combat-level-2] --- round 2",
+   "[2-combat-level-2] Monk attacks Goblin 2 (normal): 12+9=21 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 2 takes 9 piercing (1/10)",
+   "[2-combat-level-2] Monk uses Flurry of Blows",
+   "[2-combat-level-2] Monk attacks Goblin 2 (normal): 17+6=23 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 2 takes 2 bludgeoning (0/10)",
+   "[2-combat-level-2] Goblin 2 dies",
+   "[2-combat-level-2] Barbarian attacks Goblin 3 (advantage): 18+8=26 vs AC 15 -> CRIT",
+   "[2-combat-level-2] Goblin 3 takes 18 fire (0/10)",
+   "[2-combat-level-2] Goblin 3: Unconscious ends (took damage)",
+   "[2-combat-level-2] Goblin 3 dies",
+   "[2-combat-level-2] Wizard casts Fire Bolt",
+   "[2-combat-level-2] Wizard attacks Goblin 4 (normal): 5+8=13 vs AC 15 -> miss",
+   "[2-combat-level-2] Goblin 4 uses Shortbow",
+   "[2-combat-level-2] Wizard casts Shield (slot 1)",
+   "[2-combat-level-2] Goblin 4 attacks Wizard (normal): 12+4=16 vs AC 19 -> miss",
+   "[2-combat-level-2] Goblin 5 uses Shortbow",
+   "[2-combat-level-2] Goblin 5 attacks Wizard (normal): 15+4=19 vs AC 19 -> hit",
+   "[2-combat-level-2] Wizard takes 3 piercing (11/14)",
+   "[2-combat-level-2] Wizard save CON 19 vs DC 10: success",
+   "[2-combat-level-2] Goblin 6 uses Shortbow",
+   "[2-combat-level-2] Goblin 6 attacks Wizard (normal): 4+4=8 vs AC 19 -> miss",
+   "[2-combat-level-2] Cleric casts Guiding Bolt (slot 1)",
+   "[2-combat-level-2] Cleric attacks Goblin 4 (normal): 17+5=22 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 4 takes 16 radiant (0/10)",
+   "[2-combat-level-2] Goblin 4 dies",
+   "[2-combat-level-2] --- round 3",
+   "[2-combat-level-2] Monk attacks Goblin 5 (normal): 14+9=23 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 5 takes 8 piercing (2/10)",
+   "[2-combat-level-2] Monk uses Flurry of Blows",
+   "[2-combat-level-2] Monk attacks Goblin 5 (normal): 17+5=22 vs AC 15 -> hit",
+   "[2-combat-level-2] Goblin 5 takes 2 bludgeoning (0/10)",
+   "[2-combat-level-2] Goblin 5 dies",
+   "[2-combat-level-2] Barbarian attacks Goblin 6 (advantage): 5+6=11 vs AC 15 -> miss",
+   "[2-combat-level-2] Wizard casts Fire Bolt",
+   "[2-combat-level-2] Wizard attacks Goblin 6 (advantage): 20+9=29 vs AC 15 -> CRIT",
+   "[2-combat-level-2] Goblin 6 takes 11 fire (0/10)",
+   "[2-combat-level-2] Goblin 6 dies",
+   "[4-level-3] Wizard reaches wizard 3: +6 HP (max 20), slots {'1': [2, 4], '2': [2, 2]}, prepared ['magic-missile', 'shield', 'sleep', 'mage-armor', 'thunderwave', 'scorching-ray']",
+   "[4-level-3] Cleric reaches cleric 3: +6 HP (max 24), slots {'1': [2, 4], '2': [2, 2]}, prepared ['healing-word', 'guiding-bolt', 'shield-of-faith', 'spiritual-weapon', 'command', 'bane']",
+   "[4-level-3] Barbarian reaches barbarian 3: +9 HP (max 32), slots {}, prepared []",
+   "[4-level-3] Monk reaches monk 3: +7 HP (max 24), slots {}, prepared []",
+   "[4-level-3] Wizard casts Mage Armor (slot 1)",
+   "[5-combat-level-3] initiative: Barbarian(19), Cleric(17), Wizard(16), Monk(15), Goblin B1(10), Goblin B2(10), Goblin B3(10), Goblin B4(10), Goblin B5(10), Goblin B6(10)",
+   "[5-combat-level-3] --- round 1",
+   "[5-combat-level-3] Barbarian uses Rage",
+   "[5-combat-level-3] Barbarian attacks Goblin B1 (advantage): 17+5=22 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B1 takes 12 fire (0/10)",
+   "[5-combat-level-3] Goblin B1 dies",
+   "[5-combat-level-3] Cleric casts Bless (slot 1)",
+   "[5-combat-level-3] Wizard casts Sleep (slot 1)",
+   "[5-combat-level-3] Goblin B2 save WIS 13 vs DC 13: success",
+   "[5-combat-level-3] Goblin B3 save WIS 9 vs DC 13: fail",
+   "[5-combat-level-3] Goblin B3 gains Incapacitated",
+   "[5-combat-level-3] Goblin B2 uses Scimitar",
+   "[5-combat-level-3] Goblin B2 attacks Monk (normal): 1+4=5 vs AC 15 -> miss",
+   "[5-combat-level-3] Goblin B3 cannot act",
+   "[5-combat-level-3] Goblin B3 save WIS 4 vs DC 13: fail",
+   "[5-combat-level-3] Goblin B3 gains Unconscious",
+   "[5-combat-level-3] Goblin B3 gains Prone",
+   "[5-combat-level-3] Goblin B3: Incapacitated ends",
+   "[5-combat-level-3] Goblin B4 uses Shortbow",
+   "[5-combat-level-3] Goblin B4 attacks Wizard (normal): 15+4=19 vs AC 14 -> hit",
+   "[5-combat-level-3] Wizard takes 6 piercing (14/20)",
+   "[5-combat-level-3] Wizard save CON 17 vs DC 10: success",
+   "[5-combat-level-3] Goblin B5 uses Shortbow",
+   "[5-combat-level-3] Goblin B5 attacks Wizard (normal): 16+4=20 vs AC 14 -> hit",
+   "[5-combat-level-3] Wizard takes 7 piercing (7/20)",
+   "[5-combat-level-3] Wizard save CON 19 vs DC 10: success",
+   "[5-combat-level-3] Goblin B6 uses Shortbow",
+   "[5-combat-level-3] Wizard casts Shield (slot 1)",
+   "[5-combat-level-3] Goblin B6 attacks Wizard (normal): 10+4=14 vs AC 19 -> miss",
+   "[5-combat-level-3] --- round 2",
+   "[5-combat-level-3] Barbarian attacks Goblin B2 (advantage): 15+9=24 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B2 takes 14 fire (0/10)",
+   "[5-combat-level-3] Goblin B2 dies",
+   "[5-combat-level-3] Cleric casts Guiding Bolt (slot 1)",
+   "[5-combat-level-3] Cleric attacks Goblin B3 (normal): 9+5=14 vs AC 15 -> miss",
+   "[5-combat-level-3] Wizard casts Scorching Ray (slot 2)",
+   "[5-combat-level-3] Wizard attacks Goblin B3 (normal): 6+9=15 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B3 takes 7 fire (3/10)",
+   "[5-combat-level-3] Goblin B3: Unconscious ends (took damage)",
+   "[5-combat-level-3] Wizard attacks Goblin B3 (disadvantage): 9+8=17 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B3 takes 3 fire (0/10)",
+   "[5-combat-level-3] Goblin B3 dies",
+   "[5-combat-level-3] Monk attacks Goblin B4 (normal): 14+9=23 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B4 takes 4 piercing (6/10)",
+   "[5-combat-level-3] Monk uses Flurry of Blows",
+   "[5-combat-level-3] Monk attacks Goblin B4 (normal): 3+7=10 vs AC 15 -> miss",
+   "[5-combat-level-3] Monk attacks Goblin B4 (normal): 19+4=23 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B4 save DEX 22 vs DC 12: success",
+   "[5-combat-level-3] Goblin B4 takes 2 bludgeoning (4/10)",
+   "[5-combat-level-3] Goblin B4 uses Nimble Escape",
+   "[5-combat-level-3] Goblin B4 uses Shortbow",
+   "[5-combat-level-3] Goblin B4 attacks Wizard (normal): 8+4=12 vs AC 14 -> miss",
+   "[5-combat-level-3] Goblin B5 uses Nimble Escape",
+   "[5-combat-level-3] Goblin B5 uses Shortbow",
+   "[5-combat-level-3] Goblin B5 attacks Wizard (normal): 20+4=24 vs AC 14 -> CRIT",
+   "[5-combat-level-3] Wizard takes 10 piercing (0/20)",
+   "[5-combat-level-3] Wizard save CON 15 vs DC 10: success",
+   "[5-combat-level-3] Wizard gains Unconscious",
+   "[5-combat-level-3] Wizard gains Incapacitated",
+   "[5-combat-level-3] Wizard gains Prone",
+   "[5-combat-level-3] Wizard loses concentration on Sleep",
+   "[5-combat-level-3] Goblin B6 uses Nimble Escape",
+   "[5-combat-level-3] Goblin B6 uses Shortbow",
+   "[5-combat-level-3] Goblin B6 attacks Cleric (normal): 11+4=15 vs AC 14 -> hit",
+   "[5-combat-level-3] Cleric takes 7 piercing (17/24)",
+   "[5-combat-level-3] Cleric save CON 17 vs DC 10: success",
+   "[5-combat-level-3] --- round 3",
+   "[5-combat-level-3] Barbarian attacks Goblin B4 (advantage): 18+9=27 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B4 takes 12 slashing (0/10)",
+   "[5-combat-level-3] Goblin B4 dies",
+   "[5-combat-level-3] Cleric casts Healing Word (slot 1)",
+   "[5-combat-level-3] Wizard is no longer Unconscious",
+   "[5-combat-level-3] Wizard is no longer Incapacitated",
+   "[5-combat-level-3] Wizard regains 7 HP (7/20)",
+   "[5-combat-level-3] Wizard regains 3 HP (10/20)",
+   "[5-combat-level-3] Cleric uses Divine Spark",
+   "[5-combat-level-3] Wizard regains 10 HP (20/20)",
+   "[5-combat-level-3] Wizard uses Right yourself",
+   "[5-combat-level-3] Wizard casts Scorching Ray (slot 2)",
+   "[5-combat-level-3] Wizard attacks Goblin B5 (normal): 6+8=14 vs AC 15 -> miss",
+   "[5-combat-level-3] Wizard attacks Goblin B5 (normal): 17+9=26 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B5 takes 7 fire (3/10)",
+   "[5-combat-level-3] Wizard attacks Goblin B5 (normal): 7+6=13 vs AC 15 -> miss",
+   "[5-combat-level-3] Monk attacks Goblin B5 (normal): 4+6=10 vs AC 15 -> miss",
+   "[5-combat-level-3] Monk uses Flurry of Blows",
+   "[5-combat-level-3] Monk attacks Goblin B5 (normal): 2+6=8 vs AC 15 -> miss",
+   "[5-combat-level-3] Monk attacks Goblin B5 (normal): 1+7=8 vs AC 15 -> miss",
+   "[5-combat-level-3] Goblin B5 uses Nimble Escape",
+   "[5-combat-level-3] Goblin B5 uses Shortbow",
+   "[5-combat-level-3] Wizard casts Shield (slot 1)",
+   "[5-combat-level-3] Goblin B5 attacks Wizard (normal): 11+4=15 vs AC 19 -> miss",
+   "[5-combat-level-3] Goblin B6 uses Nimble Escape",
+   "[5-combat-level-3] Goblin B6 uses Shortbow",
+   "[5-combat-level-3] Goblin B6 attacks Wizard (normal): 15+4=19 vs AC 19 -> hit",
+   "[5-combat-level-3] Wizard takes 3 piercing (17/20)",
+   "[5-combat-level-3] --- round 4",
+   "[5-combat-level-3] Barbarian attacks Goblin B5 (advantage): 16+7=23 vs AC 15 -> hit",
+   "[5-combat-level-3] Goblin B5 takes 12 slashing (0/10)",
+   "[5-combat-level-3] Goblin B5 dies",
+   "[5-combat-level-3] Cleric casts Sacred Flame",
+   "[5-combat-level-3] Goblin B6 save DEX 19 vs DC 13: success",
+   "[5-combat-level-3] Wizard casts Fire Bolt",
+   "[5-combat-level-3] Wizard attacks Goblin B6 (normal): 20+9=29 vs AC 15 -> CRIT",
+   "[5-combat-level-3] Goblin B6 takes 14 fire (0/10)",
+   "[5-combat-level-3] Goblin B6 dies"
+  ]
+ },
+ "batch": {
+  "runs": 200,
+  "combat_1_wins": 200,
+  "combat_2_wins": 200,
+  "rounds_1": 4.76,
+  "rounds_2": 3.69,
+  "deaths": 2,
+  "pc_dropped_1": 162,
+  "pc_dropped_2": 24
+ },
+ "totals": {
+  "OK": 343215,
+  "DATA_GAP": 0,
+  "ENGINE_GAP": 0,
+  "GM": 201
+ },
+ "calls": [
+  {
+   "kind": "action_economy",
+   "name": "movement",
+   "ref": "system.json#action_economy",
+   "status": "OK",
+   "detail": null,
+   "count": 3977,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "fixed per level",
+   "count": 401,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "fixed per level",
+   "count": 402,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "fixed per level",
+   "count": 402,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.hit_points",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "fixed per level",
+   "count": 402,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "level 3",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "level 3",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "level 3",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "class.levels.features",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "level 3",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "creature.stat_block",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": null,
+   "count": 2412,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "levels.advancement",
+   "ref": "system.json#levels",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "proficiency_bonus.by_level",
+   "ref": "system.json",
+   "status": "OK",
+   "detail": null,
+   "count": 1607,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "species.speed",
+   "ref": "dnd5e/species/elf",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "species.speed",
+   "ref": "dnd5e/species/dwarf",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "species.speed",
+   "ref": "dnd5e/species/goliath",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "data",
+   "name": "species.speed",
+   "ref": "dnd5e/species/human",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "activation",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "entry becomes active",
+   "count": 454,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "ends_on.damage_taken",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": null,
+   "count": 260,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "ends_on.damage_taken",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 239,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "ends_on.damage_taken",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": null,
+   "count": 239,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "ends_on.targeted_by_attack_roll",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 17,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "ends_on.targeted_by_attack_roll",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": null,
+   "count": 28,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "scoped_to_call",
+   "ref": "dnd5e/feature/monk-deflect-attacks",
+   "status": "OK",
+   "detail": "modifier",
+   "count": 115,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "while",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": null,
+   "count": 183,
+   "phases": [
+    "2-combat-level-2",
+    "3-xp-rest",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "duration",
+   "name": "while",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": null,
+   "count": 186,
+   "phases": [
+    "2-combat-level-2",
+    "3-xp-rest",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "attack_roll_made",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": null,
+   "count": 1520,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "cantrip_misses_or_saved",
+   "ref": "dnd5e/feature/evoker-potent-cantrip",
+   "status": "OK",
+   "detail": null,
+   "count": 8,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "concentration_effect_started",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 905,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "damage_taken",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 786,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "dies",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 2412,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "drops_to_0_hp",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": null,
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hit_by_attack_roll",
+   "ref": "dnd5e/feature/monk-deflect-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 115,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": null,
+   "count": 800,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/feat/savage-attacker",
+   "status": "OK",
+   "detail": null,
+   "count": 1332,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": null,
+   "count": 463,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": null,
+   "count": 583,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": null,
+   "count": 416,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "hits_with_attack_roll",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": null,
+   "count": 505,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "long_rest_finished",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "long_rest_finished",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "long_rest_finished",
+   "ref": "dnd5e/feature/human-resourceful",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "short_rest_finished",
+   "ref": "dnd5e/feature/wizard-arcane-recovery",
+   "status": "OK",
+   "detail": null,
+   "count": 200,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "spell_restores_hp",
+   "ref": "dnd5e/feature/life-domain-disciple-of-life",
+   "status": "OK",
+   "detail": null,
+   "count": 114,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "event",
+   "name": "turn_end",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 722,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "frequency",
+   "name": "long_rest",
+   "ref": "dnd5e/feature/wizard-arcane-recovery",
+   "status": "OK",
+   "detail": null,
+   "count": 200,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "frequency",
+   "name": "turn",
+   "ref": "dnd5e/feat/savage-attacker",
+   "status": "OK",
+   "detail": null,
+   "count": 1332,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "frequency",
+   "name": "turn",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": null,
+   "count": 583,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "frequency",
+   "name": "turn",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": null,
+   "count": 505,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "item",
+   "name": "Artisan’s Tools or Musical Instrument chosen for the tool proficiency above",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "no catalog entry (kept by name)",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "item",
+   "name": "Spellbook",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "no catalog entry (kept by name)",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "apply_condition",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": "Until the creature regains any Hit Points.",
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "attack",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": "structured as 'ability_modifier_to_damage'",
+   "count": 505,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "attack",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": "Against a creature within 5 feet of the force.",
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "damage",
+   "ref": "dnd5e/weapon/handaxe",
+   "status": "OK",
+   "detail": "Plus the attack's ability modifier.",
+   "count": 463,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "damage",
+   "ref": "dnd5e/weapon/spear",
+   "status": "OK",
+   "detail": "Plus the attack's ability modifier.",
+   "count": 751,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "damage",
+   "ref": "dnd5e/weapon/greataxe",
+   "status": "OK",
+   "detail": "Plus the attack's ability modifier.",
+   "count": 869,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "damage",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": "First target you hit on your turn; same type as the weapon or Unarmed Strike.",
+   "count": 583,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "damage",
+   "ref": "dnd5e/feature/evoker-potent-cantrip",
+   "status": "OK",
+   "detail": "Half the cantrip's damage (if any) and no additional effect.",
+   "count": 8,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "defense",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "No damage from Magic Missile.",
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "heal",
+   "ref": "dnd5e/feature/life-domain-disciple-of-life",
+   "status": "OK",
+   "detail": "On the turn you cast the spell.",
+   "count": 114,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "modifier",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "Including against the triggering attack.",
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "repeat",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": "One target or several; separate attack roll per ray.",
+   "count": 357,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "repeat",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": "Darts strike simultaneously; one creature or several.",
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "reroll",
+   "ref": "dnd5e/feat/savage-attacker",
+   "status": "OK",
+   "detail": "Roll the weapon's damage dice twice and use either roll.",
+   "count": 1332,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "restore",
+   "ref": "dnd5e/feature/wizard-arcane-recovery",
+   "status": "OK",
+   "detail": "structured as 'max_level'",
+   "count": 200,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "roll_mode",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": "structured as 'when'",
+   "count": 463,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "roll_mode",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "structured as 'duration.ends_on'",
+   "count": 199,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "note",
+   "name": "trigger",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": "Repeated at the end of its next turn.",
+   "count": 961,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "Rage",
+   "count": 454,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/action/attack",
+   "status": "OK",
+   "detail": "Attack",
+   "count": 2566,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "Scimitar",
+   "count": 790,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "Shortbow",
+   "count": 3759,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "Flurry of Blows",
+   "count": 757,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "Nimble Escape",
+   "count": 673,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": "Divine Spark",
+   "count": 322,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": "Right yourself",
+   "count": 272,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/rule/short-rest",
+   "status": "OK",
+   "detail": "Spend a Hit Point Die",
+   "count": 225,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "activation",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": "Bonus Unarmed Strike",
+   "count": 186,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": "incapacitated",
+   "count": 956,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": "unconscious",
+   "count": 440,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "prone",
+   "count": 594,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": "unconscious",
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "incapacitated",
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "apply_condition",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": "prone",
+   "count": 131,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/weapon/handaxe",
+   "status": "OK",
+   "detail": "melee_weapon",
+   "count": 540,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "melee",
+   "count": 790,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "ranged",
+   "count": 3759,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/weapon/spear",
+   "status": "OK",
+   "detail": "melee_weapon",
+   "count": 1046,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": "melee",
+   "count": 1608,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/weapon/greataxe",
+   "status": "OK",
+   "detail": "melee_weapon",
+   "count": 980,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": "ranged_spell",
+   "count": 576,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "ranged_spell",
+   "count": 374,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": "ranged_spell",
+   "count": 798,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": "melee_weapon",
+   "count": 505,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": "melee_spell",
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "attack.ability_modifier_to_damage",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": "negative_only",
+   "count": 505,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "auto_result",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "attack_roll.melee -> critical_hit",
+   "count": 207,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "auto_result",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "saving_throw.dex -> fail",
+   "count": 21,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "auto_result",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": "attack_roll.ranged -> miss",
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/mage-armor",
+   "status": "OK",
+   "detail": null,
+   "count": 401,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 502,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": null,
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 576,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 374,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 357,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/healing-word",
+   "status": "OK",
+   "detail": null,
+   "count": 340,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 346,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "cast",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "starting_equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/elf-elven-lineage",
+   "status": "OK",
+   "detail": "lineage",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/elf-elven-lineage",
+   "status": "OK",
+   "detail": "spellcasting_ability",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "ability_scores",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feat/magic-initiate",
+   "status": "OK",
+   "detail": "spell_list",
+   "count": 402,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feat/magic-initiate",
+   "status": "OK",
+   "detail": "spellcasting_ability",
+   "count": 402,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "starting_equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "ability_scores",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/cleric-divine-order",
+   "status": "OK",
+   "detail": "divine_order",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "starting_equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": "1",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "ability_scores",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "starting_equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feat/skilled",
+   "status": "OK",
+   "detail": "skilled",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "ability_scores",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "patient_defense",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "step_of_the_wind",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": "unarmed_strike",
+   "count": 1700,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": "technique",
+   "count": 416,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "action",
+   "count": 673,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "choice",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": "divine_spark_mode",
+   "count": 322,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": "fire",
+   "count": 800,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "slashing",
+   "count": 406,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/weapon/spear",
+   "status": "OK",
+   "detail": "piercing",
+   "count": 751,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": "bludgeoning",
+   "count": 963,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "piercing",
+   "count": 1250,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "radiant",
+   "count": 199,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": "fire",
+   "count": 398,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": "fire",
+   "count": 499,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": "slashing",
+   "count": 333,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/weapon/handaxe",
+   "status": "OK",
+   "detail": "slashing",
+   "count": 189,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/weapon/greataxe",
+   "status": "OK",
+   "detail": "slashing",
+   "count": 320,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": "radiant",
+   "count": 153,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": "force",
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/feature/evoker-potent-cantrip",
+   "status": "OK",
+   "detail": "fire",
+   "count": 8,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "damage",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": "force",
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "defense",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "defense",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "resistance slashing",
+   "count": 31,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "defense",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "resistance piercing",
+   "count": 2,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "end_effect",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": "concentration",
+   "count": 3516,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/species/elf",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/elf-elven-lineage",
+   "status": "OK",
+   "detail": null,
+   "count": 401,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feat/magic-initiate",
+   "status": "OK",
+   "detail": "spells",
+   "count": 804,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/species/dwarf",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/species/goliath",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/species/human",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/human-versatile",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "equipment",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/wizard-wizard-subclass",
+   "status": "OK",
+   "detail": null,
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/evoker",
+   "status": "OK",
+   "detail": "subclass chosen",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/evoker",
+   "status": "OK",
+   "detail": "subclass features by level",
+   "count": 400,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/evoker",
+   "status": "OK",
+   "detail": null,
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/cleric-cleric-subclass",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/life-domain",
+   "status": "OK",
+   "detail": "subclass chosen",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/life-domain",
+   "status": "OK",
+   "detail": "subclass features by level",
+   "count": 402,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/life-domain-life-domain-spells",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/life-domain",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/barbarian-barbarian-subclass",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/path-of-the-berserker",
+   "status": "OK",
+   "detail": "subclass chosen",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/path-of-the-berserker",
+   "status": "OK",
+   "detail": "subclass features by level",
+   "count": 402,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/path-of-the-berserker",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/feature/monk-monk-subclass",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/warrior-of-the-open-hand",
+   "status": "OK",
+   "detail": "subclass chosen",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/warrior-of-the-open-hand",
+   "status": "OK",
+   "detail": "subclass features by level",
+   "count": 402,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "grant",
+   "ref": "dnd5e/subclass/warrior-of-the-open-hand",
+   "status": "OK",
+   "detail": null,
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "heal",
+   "ref": "dnd5e/spell/healing-word",
+   "status": "OK",
+   "detail": null,
+   "count": 340,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "heal",
+   "ref": "dnd5e/feature/life-domain-disciple-of-life",
+   "status": "OK",
+   "detail": null,
+   "count": 114,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "heal",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": null,
+   "count": 322,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "ability_score.int",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "ability_score.con",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "ability_score.wis",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "ability_score.cha",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/cleric-divine-order",
+   "status": "OK",
+   "detail": "cantrips_known",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/dwarf-dwarven-toughness",
+   "status": "OK",
+   "detail": "hp_max",
+   "count": 4041,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "3-xp-rest",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "ability_score.str",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "ability_score.con",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "ability_score.dex",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "ability_score.con",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/mage-armor",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 401,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/mage-armor",
+   "status": "OK",
+   "detail": "base_ac",
+   "count": 6711,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/armor/chain-shirt",
+   "status": "OK",
+   "detail": "base_ac",
+   "count": 595,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/armor/shield",
+   "status": "OK",
+   "detail": "ac",
+   "count": 595,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/barbarian-unarmored-defense",
+   "status": "OK",
+   "detail": "base_ac",
+   "count": 499,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/monk-unarmored-defense",
+   "status": "OK",
+   "detail": "base_ac",
+   "count": 1473,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feat/alert",
+   "status": "OK",
+   "detail": "initiative",
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "damage_roll",
+   "count": 1642,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "ac",
+   "count": 1405,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 1205,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": "attack_ability",
+   "count": 1046,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": "d20_test",
+   "count": 6382,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": "weapon_damage_die",
+   "count": 751,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/action/disengage",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 673,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/monk-deflect-attacks",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 115,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "modifier",
+   "ref": "dnd5e/feature/monk-deflect-attacks",
+   "status": "OK",
+   "detail": "damage_taken",
+   "count": 115,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "saving_throw",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": "weapon",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/feature/elf-keen-senses",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/sage",
+   "status": "OK",
+   "detail": "tool",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/feature/wizard-scholar",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "saving_throw",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "weapon",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": "armor",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/acolyte",
+   "status": "OK",
+   "detail": "tool",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "saving_throw",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "weapon",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": "armor",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/soldier",
+   "status": "OK",
+   "detail": "tool",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "saving_throw",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "weapon",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": "tool",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/feature/human-skillful",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/feat/skilled",
+   "status": "OK",
+   "detail": "skill",
+   "count": 603,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/background/criminal",
+   "status": "OK",
+   "detail": "tool",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "proficiency",
+   "ref": "dnd5e/feature/barbarian-primal-knowledge",
+   "status": "OK",
+   "detail": "skill",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "reference",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "dnd5e/rule/unarmed-strike",
+   "count": 1514,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "reference",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "dnd5e/action/disengage",
+   "count": 673,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "reference",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": "dnd5e/rule/unarmed-strike",
+   "count": 186,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "remove_condition",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": "dnd5e/condition/prone",
+   "count": 272,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "repeat",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": null,
+   "count": 757,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "repeat",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 357,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "repeat",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "reroll",
+   "ref": "dnd5e/feat/savage-attacker",
+   "status": "OK",
+   "detail": "damage_roll",
+   "count": 1332,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/rule/heroic-inspiration",
+   "status": "OK",
+   "detail": "heroic_inspiration",
+   "count": 2411,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/dwarf-stonecunning",
+   "status": "OK",
+   "detail": "stonecunning",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": "channel_divinity",
+   "count": 402,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": "giant_ancestry",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/goliath-large-form",
+   "status": "OK",
+   "detail": "large_form",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "rage",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/gear/healers-kit",
+   "status": "OK",
+   "detail": "healers_kit",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "resource",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "focus_points",
+   "count": 402,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restore",
+   "ref": "dnd5e/feature/wizard-arcane-recovery",
+   "status": "OK",
+   "detail": "spell_slot",
+   "count": 200,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restore",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "spell_slot",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restore",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": "spell_slot",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restore",
+   "ref": "dnd5e/feature/human-resourceful",
+   "status": "OK",
+   "detail": "heroic_inspiration",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restrict",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": "take_actions",
+   "count": 718,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "restrict",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": "speak",
+   "count": 1,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 3040,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": "advantage on attack_roll.melee",
+   "count": 1829,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "advantage on attack_roll.melee",
+   "count": 250,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": "advantage on attack_roll.melee",
+   "count": 632,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": "advantage on attack_roll.ranged",
+   "count": 217,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": "advantage on attack_roll.ranged",
+   "count": 122,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": "disadvantage on attack_roll.ranged",
+   "count": 469,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 189,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "temporary",
+   "count": 17,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "advantage on attack_roll.melee",
+   "count": 15,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": "advantage on attack_roll.melee",
+   "count": 6,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": "disadvantage on attack_roll.melee",
+   "count": 68,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": "disadvantage on attack_roll.ranged",
+   "count": 3,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": "disadvantage on initiative",
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "roll_mode",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "advantage on attack_roll.ranged",
+   "count": 2,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "save",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 2251,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "save",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 786,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "save",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": null,
+   "count": 416,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "save",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 346,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "speed",
+   "ref": "dnd5e/feature/monk-unarmored-movement",
+   "status": "OK",
+   "detail": null,
+   "count": 2122,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "speed",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": null,
+   "count": 384,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "spend",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": "giant_ancestry",
+   "count": 800,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "op",
+   "name": "trigger",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": "installed: turn_end",
+   "count": 961,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": null,
+   "count": 1642,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feat/savage-attacker",
+   "status": "OK",
+   "detail": null,
+   "count": 1675,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": null,
+   "count": 3723,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/weapon-mastery/cleave",
+   "status": "OK",
+   "detail": null,
+   "count": 1212,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": null,
+   "count": 722,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": null,
+   "count": 706,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "attack_is",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": null,
+   "count": 114,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "beyond_long_range",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 7853,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "beyond_normal_range",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 5506,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "concentrating",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 6157,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "deals_damage_type",
+   "ref": "dnd5e/feature/monk-deflect-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 450,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "doesnt_sleep",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 1529,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "effect_active",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": null,
+   "count": 1676,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "effect_active",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": null,
+   "count": 1444,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "first_attack_this_turn",
+   "ref": "dnd5e/feature/barbarian-reckless-attack",
+   "status": "OK",
+   "detail": null,
+   "count": 2025,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "has_condition",
+   "ref": "dnd5e/feat/alert",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "has_condition",
+   "ref": "dnd5e/condition/incapacitated",
+   "status": "OK",
+   "detail": null,
+   "count": 186,
+   "phases": [
+    "2-combat-level-2",
+    "3-xp-rest",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "has_condition",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 3,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "hp_is",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": null,
+   "count": 183,
+   "phases": [
+    "2-combat-level-2",
+    "3-xp-rest",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "immune_to_condition",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 1529,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": null,
+   "count": 535,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": null,
+   "count": 218,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 182,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 162,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 276,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": null,
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": null,
+   "count": 187,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+   "status": "OK",
+   "detail": null,
+   "count": 319,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/weapon/handaxe",
+   "status": "OK",
+   "detail": null,
+   "count": 152,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/weapon/spear",
+   "status": "OK",
+   "detail": null,
+   "count": 242,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/weapon/greataxe",
+   "status": "OK",
+   "detail": null,
+   "count": 284,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 38,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/feature/evoker-potent-cantrip",
+   "status": "OK",
+   "detail": null,
+   "count": 2,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "is_monster",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "item_state",
+   "ref": "dnd5e/armor/chain-shirt",
+   "status": "OK",
+   "detail": null,
+   "count": 595,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "item_state",
+   "ref": "dnd5e/armor/shield",
+   "status": "OK",
+   "detail": null,
+   "count": 595,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "item_state",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": null,
+   "count": 322,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/feature/elf-elven-lineage",
+   "status": "OK",
+   "detail": null,
+   "count": 1204,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/subclass/evoker",
+   "status": "OK",
+   "detail": null,
+   "count": 2400,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/subclass/life-domain",
+   "status": "OK",
+   "detail": null,
+   "count": 1809,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/feature/life-domain-life-domain-spells",
+   "status": "OK",
+   "detail": null,
+   "count": 1608,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/subclass/path-of-the-berserker",
+   "status": "OK",
+   "detail": null,
+   "count": 2412,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "level_at_least",
+   "ref": "dnd5e/subclass/warrior-of-the-open-hand",
+   "status": "OK",
+   "detail": null,
+   "count": 2412,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "only_monk_weapons_or_unarmed",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": null,
+   "count": 2946,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "roll_is",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": null,
+   "count": 7434,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "roller_is_source",
+   "ref": "dnd5e/weapon-mastery/vex",
+   "status": "OK",
+   "detail": null,
+   "count": 40,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "save_against",
+   "ref": "dnd5e/feature/elf-fey-ancestry",
+   "status": "OK",
+   "detail": null,
+   "count": 732,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "save_against",
+   "ref": "dnd5e/feature/dwarf-dwarven-resilience",
+   "status": "OK",
+   "detail": null,
+   "count": 54,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "speed_is_zero",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": null,
+   "count": 362,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "spell_cast_with_slot",
+   "ref": "dnd5e/feature/life-domain-disciple-of-life",
+   "status": "OK",
+   "detail": null,
+   "count": 114,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "using_shield",
+   "ref": "dnd5e/feature/monk-unarmored-defense",
+   "status": "OK",
+   "detail": null,
+   "count": 1473,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "using_shield",
+   "ref": "dnd5e/feature/monk-unarmored-movement",
+   "status": "OK",
+   "detail": null,
+   "count": 2122,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "using_shield",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": null,
+   "count": 2946,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": null,
+   "count": 454,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor_any",
+   "ref": "dnd5e/spell/mage-armor",
+   "status": "OK",
+   "detail": null,
+   "count": 6711,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor_any",
+   "ref": "dnd5e/feature/barbarian-unarmored-defense",
+   "status": "OK",
+   "detail": null,
+   "count": 499,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor_any",
+   "ref": "dnd5e/feature/monk-unarmored-defense",
+   "status": "OK",
+   "detail": null,
+   "count": 1473,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor_any",
+   "ref": "dnd5e/feature/monk-unarmored-movement",
+   "status": "OK",
+   "detail": null,
+   "count": 2122,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "wearing_armor_any",
+   "ref": "dnd5e/feature/monk-martial-arts",
+   "status": "OK",
+   "detail": null,
+   "count": 2946,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "within_feet",
+   "ref": "dnd5e/rule/ranged-attacks",
+   "status": "OK",
+   "detail": null,
+   "count": 5506,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "within_feet",
+   "ref": "dnd5e/condition/prone",
+   "status": "OK",
+   "detail": null,
+   "count": 2218,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "pred",
+   "name": "within_feet",
+   "ref": "dnd5e/condition/unconscious",
+   "status": "OK",
+   "detail": null,
+   "count": 290,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/mage-armor",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 401,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 502,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/shield",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 586,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 374,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 357,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/healing-word",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 340,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": "level 2",
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "resource",
+   "name": "spell_slot",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": "level 1",
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "channel_divinity",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": "short_rest_finished",
+   "count": 201,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "channel_divinity",
+   "ref": "dnd5e/feature/cleric-channel-divinity",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "focus_points",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "short_rest_finished",
+   "count": 201,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "focus_points",
+   "ref": "dnd5e/feature/monk-monks-focus",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "giant_ancestry",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "large_form",
+   "ref": "dnd5e/feature/goliath-large-form",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "rage",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "short_rest_finished",
+   "count": 201,
+   "phases": [
+    "3-xp-rest"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "rage",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "resource.recovery",
+   "name": "stonecunning",
+   "ref": "dnd5e/feature/dwarf-stonecunning",
+   "status": "OK",
+   "detail": "long_rest_finished",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "barbarian-rage#duration",
+   "ref": "dnd5e/feature/barbarian-rage",
+   "status": "OK",
+   "detail": null,
+   "count": 1573,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "critical-hits#critical_damage",
+   "ref": "dnd5e/rule/critical-hits",
+   "status": "OK",
+   "detail": null,
+   "count": 815,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "damage-rolls#ability_modifier",
+   "ref": "dnd5e/rule/damage-rolls",
+   "status": "OK",
+   "detail": "add",
+   "count": 2302,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "damage-rolls#ability_modifier",
+   "ref": "dnd5e/rule/damage-rolls",
+   "status": "OK",
+   "detail": "negative_only",
+   "count": 91,
+   "phases": [
+    "5-combat-level-3",
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "dropping-to-0-hit-points",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": null,
+   "count": 2599,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "dropping-to-0-hit-points#death_saves",
+   "ref": "dnd5e/rule/dropping-to-0-hit-points",
+   "status": "OK",
+   "detail": null,
+   "count": 118,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "evocation-savant#free_spells",
+   "ref": "dnd5e/feature/evoker-evocation-savant",
+   "status": "OK",
+   "detail": "scorching-ray, flaming-sphere",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "initiative.groups",
+   "ref": "system.json#initiative",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "level-advancement#procedure",
+   "ref": "dnd5e/rule/level-advancement",
+   "status": "OK",
+   "detail": "choose_class, adjust_hit_points_and_hit_dice, record_new_class_features, adjust_proficiency_bonus, adjust_ability_modifiers",
+   "count": 1607,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "levels.rules#melee_attack_bonus",
+   "ref": "system.json#levels.rules",
+   "status": "OK",
+   "detail": null,
+   "count": 2566,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#cantrips",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "3 known",
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#cantrips",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": "4 known",
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "4 prepared",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "5 prepared",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": "4 prepared",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": "5 prepared",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "6 prepared",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#prepared_spells",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": "6 prepared",
+   "count": 201,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spell_slots",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spell_slots",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spellbook",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "6 spells",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spellbook",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "8 spells",
+   "count": 201,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spellbook",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": "10 spells",
+   "count": 200,
+   "phases": [
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spellcasting_ability",
+   "ref": "dnd5e/feature/wizard-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "rule",
+   "name": "spellcasting#spellcasting_ability",
+   "ref": "dnd5e/feature/cleric-spellcasting",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "stat",
+   "name": "ac",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "stat block AC",
+   "count": 10498,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "stat",
+   "name": "base_ac",
+   "ref": "system.json#registries.stats",
+   "status": "OK",
+   "detail": "default formula",
+   "count": 9278,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "stat",
+   "name": "initiative",
+   "ref": "dnd5e/creature/goblin-warrior",
+   "status": "OK",
+   "detail": "stat block modifier",
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "barbarian_features[Rage Damage]",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": null,
+   "count": 1975,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "barbarian_features[Rages]",
+   "ref": "dnd5e/class/barbarian",
+   "status": "OK",
+   "detail": null,
+   "count": 1005,
+   "phases": [
+    "1-build-level-2",
+    "3-xp-rest",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[1]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[2]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[3]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[4]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[5]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[6]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[7]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[8]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[9]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[Cantrips]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[Channel Divinity]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 804,
+   "phases": [
+    "1-build-level-2",
+    "3-xp-rest",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "cleric_features[Prepared Spells]",
+   "ref": "dnd5e/class/cleric",
+   "status": "OK",
+   "detail": null,
+   "count": 603,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "monk_features[Focus Points]",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": null,
+   "count": 804,
+   "phases": [
+    "1-build-level-2",
+    "3-xp-rest",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "monk_features[Martial Arts]",
+   "ref": "dnd5e/class/monk",
+   "status": "OK",
+   "detail": null,
+   "count": 751,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "standard_array_by_class",
+   "ref": "dnd5e/rule/character-creation-step-3-ability-scores",
+   "status": "OK",
+   "detail": null,
+   "count": 804,
+   "phases": [
+    "1-build-level-2"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[1]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[2]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[3]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[4]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[5]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[6]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[7]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[8]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[9]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[Cantrips]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "table",
+   "name": "wizard_features[Prepared Spells]",
+   "ref": "dnd5e/class/wizard",
+   "status": "OK",
+   "detail": null,
+   "count": 602,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "attack_ability_mod",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": null,
+   "count": 2571,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "damage_amount",
+   "ref": "dnd5e/rule/concentration",
+   "status": "OK",
+   "detail": null,
+   "count": 786,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "damage_amount",
+   "ref": "dnd5e/feature/evoker-potent-cantrip",
+   "status": "OK",
+   "detail": null,
+   "count": 8,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "level",
+   "ref": "dnd5e/feature/dwarf-dwarven-toughness",
+   "status": "OK",
+   "detail": null,
+   "count": 4041,
+   "phases": [
+    "1-build-level-2",
+    "2-combat-level-2",
+    "3-xp-rest",
+    "4-level-3",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "level",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 575,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "level",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 346,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/feature/dwarf-stonecunning",
+   "status": "OK",
+   "detail": null,
+   "count": 804,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/feature/goliath-giant-ancestry",
+   "status": "OK",
+   "detail": null,
+   "count": 804,
+   "phases": [
+    "1-build-level-2",
+    "4-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/feat/alert",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 2251,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/rule/unarmed-strike",
+   "status": "OK",
+   "detail": null,
+   "count": 1608,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 575,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 374,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 798,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/feature/warrior-of-the-open-hand-open-hand-technique",
+   "status": "OK",
+   "detail": null,
+   "count": 416,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 346,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "proficiency_bonus",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_attack_bonus",
+   "ref": "system.json#registries.variables",
+   "status": "OK",
+   "detail": null,
+   "count": 1748,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_save_dc",
+   "ref": "system.json#registries.variables",
+   "status": "OK",
+   "detail": null,
+   "count": 2597,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/bless",
+   "status": "OK",
+   "detail": null,
+   "count": 402,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 199,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 357,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/healing-word",
+   "status": "OK",
+   "detail": null,
+   "count": 340,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/feature/life-domain-disciple-of-life",
+   "status": "OK",
+   "detail": null,
+   "count": 114,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spell_slot_level",
+   "ref": "dnd5e/spell/magic-missile",
+   "status": "OK",
+   "detail": null,
+   "count": 1,
+   "phases": [
+    "2-combat-level-2"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/sleep",
+   "status": "OK",
+   "detail": null,
+   "count": 2251,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/fire-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 575,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/guiding-bolt",
+   "status": "OK",
+   "detail": null,
+   "count": 374,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/scorching-ray",
+   "status": "OK",
+   "detail": null,
+   "count": 798,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/healing-word",
+   "status": "OK",
+   "detail": null,
+   "count": 340,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/sacred-flame",
+   "status": "OK",
+   "detail": null,
+   "count": 346,
+   "phases": [
+    "2-combat-level-2",
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "var",
+   "name": "spellcasting_mod",
+   "ref": "dnd5e/spell/spiritual-weapon",
+   "status": "OK",
+   "detail": null,
+   "count": 2,
+   "phases": [
+    "5-combat-level-3"
+   ]
+  },
+  {
+   "kind": "procedure",
+   "name": "level_3_by_xp",
+   "ref": "system.json#levels",
+   "status": "GM",
+   "detail": "375 XP < 900: level 3 granted by GM decision (exercise premise)",
+   "count": 201,
+   "phases": [
+    "3-xp-rest"
+   ]
+  }
+ ],
+ "per_phase": {
+  "1-build-level-2": {
+   "OK": 242,
+   "DATA_GAP": 0,
+   "ENGINE_GAP": 0,
+   "GM": 0
+  },
+  "2-combat-level-2": {
+   "OK": 403,
+   "DATA_GAP": 0,
+   "ENGINE_GAP": 0,
+   "GM": 0
+  },
+  "3-xp-rest": {
+   "OK": 13,
+   "DATA_GAP": 0,
+   "ENGINE_GAP": 0,
+   "GM": 1
+  },
+  "4-level-3": {
+   "OK": 189,
+   "DATA_GAP": 0,
+   "ENGINE_GAP": 0,
+   "GM": 0
+  },
+  "5-combat-level-3": {
+   "OK": 655,
+   "DATA_GAP": 0,
+   "ENGINE_GAP": 0,
+   "GM": 0
+  }
+ }
+}

@@ -244,7 +244,8 @@ def build_system():
         "registries": registries(),
         "abbreviations": abbr,
     }
-    return system
+    from vocabulary import link_formulas
+    return link_formulas(system)
 
 
 def eval_fraction(s):

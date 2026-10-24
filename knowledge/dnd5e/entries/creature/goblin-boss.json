@@ -195,15 +195,35 @@
     },
     {
       "op": "activation",
+      "name": "Nimble Escape",
       "cost": "bonus_action",
       "then": [
         {
-          "op": "reference",
-          "rule": "dnd5e/action/disengage"
-        },
-        {
-          "op": "reference",
-          "rule": "dnd5e/action/hide"
+          "op": "choice",
+          "id": "action",
+          "choose": 1,
+          "options": [
+            {
+              "id": "disengage",
+              "label": "Disengage",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/disengage"
+                }
+              ]
+            },
+            {
+              "id": "hide",
+              "label": "Hide",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/hide"
+                }
+              ]
+            }
+          ]
         }
       ],
       "note": "Takes the Disengage or Hide action."

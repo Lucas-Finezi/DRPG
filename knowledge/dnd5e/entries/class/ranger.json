@@ -43,6 +43,48 @@
       "Starting Equipment": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus (sprig of mistletoe), Explorer’s Pack, and 7 GP; or (B) 150 GP"
     },
     "hit_die": "d10",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d10",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            6,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -563,6 +605,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -570,9 +613,50 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/ranger",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Studded Leather Armor",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/studded-leather-armor"
+                },
+                {
+                  "name": "Scimitar",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/scimitar"
+                },
+                {
+                  "name": "Shortsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/shortsword"
+                },
+                {
+                  "name": "Longbow",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/longbow"
+                },
+                {
+                  "name": "Arrows",
+                  "quantity": 20,
+                  "ref": "dnd5e/gear/ammunition-arrows"
+                },
+                {
+                  "name": "Quiver",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/quiver"
+                },
+                {
+                  "name": "Druidic Focus (sprig of mistletoe)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/druidic-focus-sprig-of-mistletoe"
+                },
+                {
+                  "name": "Explorer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/explorers-pack"
+                }
+              ],
+              "gp": 7
             }
           ]
         },
@@ -581,9 +665,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/ranger",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 150
             }
           ]
         }
@@ -641,7 +724,6 @@
   ],
   "refs": [
     "dnd5e/armor/studded-leather-armor",
-    "dnd5e/class/ranger",
     "dnd5e/feature/ranger-ability-score-improvement",
     "dnd5e/feature/ranger-deft-explorer",
     "dnd5e/feature/ranger-epic-boon",

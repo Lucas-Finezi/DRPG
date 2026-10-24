@@ -62,13 +62,13 @@
         "resource": "rage",
         "amount": 1
       },
-      "then": [
-        {
-          "op": "reference",
-          "rule": "dnd5e/feature/barbarian-rage",
-          "note": "Rage becomes active (see the effects below while active)."
-        }
-      ]
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "up_to": true
+      },
+      "then": [],
+      "note": "Rage becomes active for its duration (D-005): the effects below apply while it is active; data.rules 'duration' says when it ends early or is extended."
     },
     {
       "op": "resource",
@@ -226,7 +226,6 @@
   ],
   "refs": [
     "dnd5e/class/barbarian",
-    "dnd5e/condition/incapacitated",
-    "dnd5e/feature/barbarian-rage"
+    "dnd5e/condition/incapacitated"
   ]
 }

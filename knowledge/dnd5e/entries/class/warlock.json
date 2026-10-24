@@ -42,6 +42,48 @@
       "Starting Equipment": "Choose A or B: (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP"
     },
     "hit_die": "d8",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          8,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d8",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            5,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -493,6 +535,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -500,9 +543,40 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/warlock",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Leather Armor",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/leather-armor"
+                },
+                {
+                  "name": "Sickle",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/sickle"
+                },
+                {
+                  "name": "Daggers",
+                  "quantity": 2,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Arcane Focus (orb)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/arcane-focus-orb"
+                },
+                {
+                  "name": "Book (occult lore)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/book"
+                },
+                {
+                  "name": "Scholar’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/scholars-pack"
+                }
+              ],
+              "gp": 15
             }
           ]
         },
@@ -511,9 +585,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/warlock",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 100
             }
           ]
         }
@@ -571,7 +644,6 @@
   ],
   "refs": [
     "dnd5e/armor/leather-armor",
-    "dnd5e/class/warlock",
     "dnd5e/feature/warlock-ability-score-improvement",
     "dnd5e/feature/warlock-contact-patron",
     "dnd5e/feature/warlock-eldritch-invocations",

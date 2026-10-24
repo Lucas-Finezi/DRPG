@@ -41,6 +41,16 @@ BACKGROUNDS = {
 }
 
 
+def ability_choice(abilities):
+    """The background's ability increase as one choice the engine can offer (D-005):
+    +2 to one listed ability and +1 to another, or +1 to all three (each score max 20)."""
+    up = lambda a, n: {"op": "modifier", "stat": f"ability_score.{a}", "mode": "add", "value": n}  # noqa: E731
+    options = [{"id": f"{a}_2_{b}_1", "label": f"+2 {a.upper()}, +1 {b.upper()}", "effects": [up(a, 2), up(b, 1)]}
+               for a in abilities for b in abilities if a != b]
+    options.append({"id": "all_1", "label": "+1 to all three", "effects": [up(a, 1) for a in abilities]})
+    return {"op": "choice", "id": "ability_scores", "choose": 1, "options": options}
+
+
 def background(name):
     b = BACKGROUNDS[name]
     package = [{"ref": r, "quantity": q, **({"note": n} if n else {})} for r, q, n in b["equipment_a"]]
@@ -51,11 +61,9 @@ def background(name):
     tool_fx = ({"op": "proficiency", "category": "tool", "items": [tool]} if isinstance(tool, str) else
                {"op": "proficiency", "category": "tool", "choose": 1, "from": [tool["choose_from_category"]],
                 "note": "One kind of Gaming Set."})
-    equip = {"op": "choice", "choose": 1, "options": [
-        {"id": "a", "label": "Package (A)", "effects": [{"op": "reference", "rule": "dnd5e/rule/character-backgrounds",
-                                                          "note": "Gain the package in data.equipment.a."}]},
-        {"id": "b", "label": "50 GP", "effects": [{"op": "reference", "rule": "dnd5e/rule/coins",
-                                                   "note": "Gain 50 GP."}]}]}
+    equip = {"op": "choice", "id": "equipment", "choose": 1, "options": [
+        {"id": "a", "label": "Package (A)", "effects": [{"op": "grant", "items": package, "gp": b["gp_a"]}]},
+        {"id": "b", "label": "50 GP", "effects": [{"op": "grant", "gp": 50}]}]}
     data = {"ability_scores": b["abilities"], "feat": b["feat"], "skills": b["skills"], "tool": tool,
             "equipment": {"a": {"items": package, "gp": b["gp_a"]}, "b": {"gp": 50}}}
     if "feat_param" in b:
@@ -63,6 +71,7 @@ def background(name):
     items = [
         (None, "rule", {"id": "ability_scores", "abilities": b["abilities"],
                         "increase": "plus_2_and_plus_1_or_plus_1_to_all_three", "max_score": 20}),
+        (None, "fx", ability_choice(b["abilities"])),
         ("**Feat:**", "fx", feat),
         ("**Skill Proficiencies:**", "fx", {"op": "proficiency", "category": "skill", "items": b["skills"]}),
         ("**Tool Proficiency:**", "fx", tool_fx),

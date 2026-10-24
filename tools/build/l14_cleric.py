@@ -38,7 +38,7 @@ def entries():
         ("***Thaumaturge.***", "sys", ["/effects/0/options/1"])]))
     spark = {"op": "activation", "name": "Divine Spark", "cost": "action", "action": "dnd5e/action/magic",
              "uses": {"resource": "channel_divinity", "amount": 1},
-             "requires": {"pred": "holds_item", "args": {"item": "holy_symbol"}},
+             "requires": {"pred": "holds_item", "args": {"item": "holy-symbol"}},
              "target": {"kind": "creature", "range": {"kind": "distance", "feet": 30}, "must_see": True,
                         "filter": {"predicate": {"not": {"pred": "target_is_source"}}}},
              "then": [{"op": "choice", "id": "divine_spark_mode", "choose": 1, "options": [
@@ -52,7 +52,7 @@ def entries():
                           "damage_type": {"choose_from": ["necrotic", "radiant"]}}]}]}]}]}
     turn = {"op": "activation", "name": "Turn Undead", "cost": "action", "action": "dnd5e/action/magic",
             "uses": {"resource": "channel_divinity", "amount": 1},
-            "requires": {"pred": "holds_item", "args": {"item": "holy_symbol"}},
+            "requires": {"pred": "holds_item", "args": {"item": "holy-symbol"}},
             "then": [{"op": "save", "ability": "wis", "dc": DC,
                       "target": {"kind": "area", "area": {"shape": "emanation", "size_feet": 30, "origin": "self"},
                                  "filter": {"creature_types": ["undead"], "predicate": {"pred": "chosen_by_source"}}},
@@ -139,7 +139,7 @@ def entries():
     E.append(CF(K, "Preserve Life", 3, [(None, "fx", {
         "op": "activation", "name": "Preserve Life", "cost": "action", "action": "dnd5e/action/magic",
         "uses": {"resource": "channel_divinity", "amount": 1},
-        "requires": {"pred": "holds_item", "args": {"item": "holy_symbol"}},
+        "requires": {"pred": "holds_item", "args": {"item": "holy-symbol"}},
         "then": [{"op": "heal", "amount": {"op": "mul", "args": [5, {"var": "class_level.cleric"}]},
                   "target": {"kind": "area", "area": {"shape": "emanation", "size_feet": 30, "origin": "self"},
                              "filter": {"predicate": {"all": [{"pred": "bloodied"}, {"pred": "chosen_by_source"}]}}},

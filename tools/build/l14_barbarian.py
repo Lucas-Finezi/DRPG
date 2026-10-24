@@ -22,8 +22,10 @@ def entries():
         (None, "fx", {"op": "activation", "id": "enter_rage", "name": "Rage", "cost": "bonus_action",
                       "requires": {"not": {"pred": "wearing_armor", "args": {"category": "heavy"}}},
                       "uses": {"resource": "rage", "amount": 1},
-                      "then": [{"op": "reference", "rule": "dnd5e/feature/barbarian-rage",
-                                "note": "Rage becomes active (see the effects below while active)."}]}),
+                      "duration": {"kind": "minutes", "amount": 10, "up_to": True},
+                      "then": [],
+                      "note": "Rage becomes active for its duration (D-005): the effects below apply while it is "
+                              "active; data.rules 'duration' says when it ends early or is extended."}),
         ("You can enter your Rage the number of times", "fx", {
             "op": "resource", "resource": "rage", "name": "Rage", "max": col(B, "Rages"),
             "recovery": [{"on": {"event": "short_rest_finished"}, "amount": 1}, {"on": LONG, "amount": "all"}]}),

@@ -98,7 +98,7 @@ def property_entries():
     E.append(H("Light", "weapon-property", [(None, "fx", {
         "op": "trigger", "event": {"event": "takes_attack_action"}, "condition": {"pred": "attack_with_light_weapon"},
         "then": [{"op": "activation", "cost": "bonus_action", "then": [{"op": "attack", "attack_type": "melee_weapon",
-                                                                        "note": "With a different Light weapon; no ability modifier to damage unless negative."}]}]})]))
+                                                                        "ability_modifier_to_damage": "negative_only", "note": "With a different Light weapon; no ability modifier to damage unless negative."}]}]})]))
     E.append(H("Loading", "weapon-property", [(None, "rule", {"id": "loading", "max_ammunition_per_action_bonus_or_reaction": 1})]))
     E.append(H("Range", "weapon-property", [
         (None, "rule", {"id": "range", "normal_and_long_feet": True}),
@@ -120,7 +120,7 @@ def mastery_entries():
     hit = lambda then, cond=None, **kw: {"op": "trigger", "event": {"event": "hits_with_attack_roll"}, "optional": True,  # noqa: E731
                                          **({"condition": cond} if cond else {}), "then": then, **kw}
     E.append(H("Cleave", "weapon-mastery", [(None, "fx", hit(
-        [{"op": "attack", "attack_type": "melee_weapon", "note": "A second creature within 5 feet of the first and within your reach; no ability modifier to damage unless negative."}],
+        [{"op": "attack", "attack_type": "melee_weapon", "ability_modifier_to_damage": "negative_only", "note": "A second creature within 5 feet of the first and within your reach; no ability modifier to damage unless negative."}],
         {"pred": "attack_with_melee_weapon"}, frequency={"count": 1, "per": "turn"}))]))
     E.append(H("Graze", "weapon-mastery", [(None, "fx", {
         "op": "trigger", "event": {"event": "misses_with_attack_roll"}, "optional": True,
@@ -140,8 +140,11 @@ def mastery_entries():
                                                                "dc": {"op": "add", "args": [8, {"var": "attack_ability_mod"}, {"var": "proficiency_bonus"}]},
                                                                "on_fail": [{"op": "apply_condition", "condition": C("prone")}]}]))]))
     E.append(H("Vex", "weapon-mastery", [(None, "fx", hit([{"op": "roll_mode", "mode": "advantage", "rolls": ["attack_roll"],
+                                                            "direction": "against", "target": INHERIT,
+                                                            "when": {"pred": "roller_is_source"},
                                                             "note": "Your next attack roll against that creature; only if damage was dealt.",
-                                                            "duration": {"kind": "until_event", "until": {"event": "turn_end", "whose": "self", "which": "next"}}}]))]))
+                                                            "duration": {"kind": "until_event", "until": {"event": "turn_end", "whose": "source", "which": "next"},
+                                                                         "ends_on": [{"event": "targeted_by_attack_roll", "whose": "target"}]}}]))]))
     return E
 
 
@@ -180,7 +183,9 @@ REGISTRY = {
     "restrictions": [{"id": "attack_beyond_long_range", "description": "The creature can't attack a target beyond the weapon's long range.", "pages": [90]}],
     "predicates": [
         {"id": "ability_score_below", "description": "The creature's ability score (param) is below a value (param).", "params": ["ability", "score"], "type": "predicate", "pages": [89]},
-        {"id": "attack_with_light_weapon", "description": "The attack uses a Light weapon.", "type": "predicate", "pages": [89]}],
+        {"id": "attack_with_light_weapon", "description": "The attack uses a Light weapon.", "type": "predicate", "pages": [89]},
+        {"id": "roller_is_source", "description": "The creature making the roll is the source of this effect (e.g. the attacker who applied Vex).", "type": "predicate", "pages": [90]}],
+    "events": [{"id": "targeted_by_attack_roll", "description": "An attack roll is made against the creature (an effect ending on it is used up by that roll).", "type": "event", "pages": [90, 110]}],
 }
 
 if __name__ == "__main__":

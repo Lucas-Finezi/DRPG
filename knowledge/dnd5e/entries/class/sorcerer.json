@@ -42,6 +42,48 @@
       "Starting Equipment": "Choose A or B: (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP"
     },
     "hit_die": "d6",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          6,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d6",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            4,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
     "starting_equipment": [
       {
         "id": "a",
@@ -615,6 +657,7 @@
     },
     {
       "op": "choice",
+      "id": "starting_equipment",
       "choose": 1,
       "options": [
         {
@@ -622,9 +665,30 @@
           "label": "Option (A)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/sorcerer",
-              "note": "Gain data.starting_equipment[0]."
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Spear",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/spear"
+                },
+                {
+                  "name": "Daggers",
+                  "quantity": 2,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Arcane Focus (crystal)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/arcane-focus-crystal"
+                },
+                {
+                  "name": "Dungeoneer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/dungeoneers-pack"
+                }
+              ],
+              "gp": 28
             }
           ]
         },
@@ -633,9 +697,8 @@
           "label": "Option (B)",
           "effects": [
             {
-              "op": "reference",
-              "rule": "dnd5e/class/sorcerer",
-              "note": "Gain data.starting_equipment[1]."
+              "op": "grant",
+              "gp": 50
             }
           ]
         }
@@ -691,7 +754,6 @@
     }
   ],
   "refs": [
-    "dnd5e/class/sorcerer",
     "dnd5e/feature/sorcerer-ability-score-improvement",
     "dnd5e/feature/sorcerer-arcane-apotheosis",
     "dnd5e/feature/sorcerer-epic-boon",

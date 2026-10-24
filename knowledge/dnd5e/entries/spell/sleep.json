@@ -91,28 +91,67 @@
               "event": "turn_end",
               "whose": "target",
               "which": "next"
-            }
+            },
+            "ends_on": [
+              {
+                "event": "damage_taken",
+                "whose": "target"
+              }
+            ]
           }
         },
         {
-          "op": "save",
-          "ability": "wis",
-          "dc": {
-            "var": "spell_save_dc"
+          "op": "trigger",
+          "event": {
+            "event": "turn_end",
+            "whose": "target",
+            "which": "next"
           },
           "target": {
             "kind": "inherit"
           },
-          "on_fail": [
-            {
-              "op": "apply_condition",
-              "condition": "dnd5e/condition/unconscious",
-              "duration": {
-                "kind": "minutes",
-                "amount": 1,
-                "concentration": true,
-                "up_to": true
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "next"
+            },
+            "ends_on": [
+              {
+                "event": "damage_taken",
+                "whose": "target"
               }
+            ]
+          },
+          "then": [
+            {
+              "op": "save",
+              "ability": "wis",
+              "dc": {
+                "var": "spell_save_dc"
+              },
+              "target": {
+                "kind": "inherit"
+              },
+              "on_fail": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/unconscious",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true,
+                    "ends_on": [
+                      {
+                        "event": "damage_taken",
+                        "whose": "target"
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           ],
           "note": "Repeated at the end of its next turn."
