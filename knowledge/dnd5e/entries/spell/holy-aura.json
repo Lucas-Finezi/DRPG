@@ -102,11 +102,15 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_is_melee"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
           },
           {
-            "pred": "attacker_creature_type_in",
+            "pred": "creature_is",
             "args": {
+              "who": "attacker",
               "types": [
                 "fiend",
                 "undead"

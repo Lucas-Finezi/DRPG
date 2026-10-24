@@ -120,7 +120,10 @@
         "kind": "until_dispelled"
       },
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       },
       "note": "Creatures of the chosen types."
     },
@@ -145,7 +148,10 @@
         "kind": "until_dispelled"
       },
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       }
     },
     {
@@ -157,14 +163,20 @@
         "kind": "until_dispelled"
       },
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       }
     },
     {
       "op": "apply_condition",
       "condition": "dnd5e/condition/frightened",
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       },
       "note": "While in the area.",
       "duration": {
@@ -183,7 +195,10 @@
         "kind": "until_dispelled"
       },
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       }
     },
     {
@@ -198,7 +213,10 @@
         "kind": "until_dispelled"
       },
       "when": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       }
     }
   ],

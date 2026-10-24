@@ -28,7 +28,10 @@
       {
         "id": "bloodied",
         "when": {
-          "pred": "bloodied"
+          "pred": "hp_is",
+          "args": {
+            "bloodied": true
+          }
         },
         "threshold": "hp_at_most_half_of_max"
       }

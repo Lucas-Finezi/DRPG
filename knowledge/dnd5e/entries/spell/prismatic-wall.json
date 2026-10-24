@@ -135,7 +135,10 @@
         "amount": 10
       },
       "condition": {
-        "pred": "can_see_effect"
+        "pred": "can_see",
+        "args": {
+          "target": "effect"
+        }
       },
       "then": [
         {

@@ -64,14 +64,18 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "at_zero_hp"
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
             }
           }
         ]

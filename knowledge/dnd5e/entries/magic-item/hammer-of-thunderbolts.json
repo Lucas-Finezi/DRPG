@@ -55,8 +55,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -67,8 +68,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -169,8 +171,9 @@
       "condition": {
         "all": [
           {
-            "pred": "attuned_to_item",
+            "pred": "item_state",
             "args": {
+              "state": "attuned",
               "item": "this"
             }
           },
@@ -178,13 +181,14 @@
             "pred": "attuned_giant_item"
           },
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "giant"
@@ -202,8 +206,9 @@
       "when": {
         "all": [
           {
-            "pred": "attuned_to_item",
+            "pred": "item_state",
             "args": {
+              "state": "attuned",
               "item": "this"
             }
           },

@@ -49,8 +49,9 @@
         "detected_or_viewed_by_magic"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },

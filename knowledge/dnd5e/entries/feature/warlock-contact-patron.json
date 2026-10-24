@@ -56,8 +56,9 @@
       ],
       "result": "success",
       "when": {
-        "pred": "save_against_spell",
+        "pred": "save_against",
         "args": {
+          "source": "spell",
           "spell": "contact-other-plane"
         }
       },

@@ -38,7 +38,10 @@
         "var": "proficiency_bonus"
       },
       "when": {
-        "pred": "check_uses_proficient_tool"
+        "pred": "check_uses",
+        "args": {
+          "proficient": "tool"
+        }
       }
     },
     {
@@ -50,10 +53,16 @@
       "when": {
         "all": [
           {
-            "pred": "check_uses_proficient_tool"
+            "pred": "check_uses",
+            "args": {
+              "proficient": "tool"
+            }
           },
           {
-            "pred": "check_uses_proficient_skill"
+            "pred": "check_uses",
+            "args": {
+              "proficient": "skill"
+            }
           }
         ]
       }

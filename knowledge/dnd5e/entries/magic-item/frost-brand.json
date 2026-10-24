@@ -77,8 +77,9 @@
         }
       ],
       "condition": {
-        "pred": "attack_uses_weapon",
+        "pred": "attack_is",
         "args": {
+          "via": "weapon",
           "item": "this"
         }
       }
@@ -90,8 +91,9 @@
         "fire"
       ],
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }

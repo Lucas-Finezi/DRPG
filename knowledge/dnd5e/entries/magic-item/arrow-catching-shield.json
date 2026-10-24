@@ -56,13 +56,17 @@
       "when": {
         "all": [
           {
-            "pred": "wielding_item",
+            "pred": "item_state",
             "args": {
+              "state": "wielded",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_ranged"
+            "pred": "attack_is",
+            "args": {
+              "range": "ranged"
+            }
           }
         ]
       },

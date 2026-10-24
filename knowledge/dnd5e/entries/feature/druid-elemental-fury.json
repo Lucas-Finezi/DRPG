@@ -43,8 +43,9 @@
                 "var": "ability_mod.wis"
               },
               "when": {
-                "pred": "cantrip_of_class",
+                "pred": "spell_of_class",
                 "args": {
+                  "cantrip": true,
                   "class": "druid"
                 }
               }
@@ -69,10 +70,16 @@
                   {
                     "any": [
                       {
-                        "pred": "attack_uses_weapon"
+                        "pred": "attack_is",
+                        "args": {
+                          "via": "weapon"
+                        }
                       },
                       {
-                        "pred": "wild_shape_form_attack"
+                        "pred": "attack_is",
+                        "args": {
+                          "attack_kind": "wild_shape_form"
+                        }
                       }
                     ]
                   }

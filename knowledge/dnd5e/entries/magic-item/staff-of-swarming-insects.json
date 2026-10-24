@@ -105,8 +105,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -134,8 +135,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -163,8 +165,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }

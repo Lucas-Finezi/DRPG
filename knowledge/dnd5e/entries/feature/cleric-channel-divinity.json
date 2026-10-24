@@ -110,8 +110,9 @@
         "amount": 1
       },
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "holy_symbol"
         }
       },
@@ -256,8 +257,9 @@
         "amount": 1
       },
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "holy_symbol"
         }
       },

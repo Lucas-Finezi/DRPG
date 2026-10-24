@@ -63,8 +63,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -78,13 +79,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_condition",
+            "pred": "save_against",
             "args": {
               "condition": "poisoned"
             }

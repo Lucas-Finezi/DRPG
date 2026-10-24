@@ -56,8 +56,9 @@
         "dwarvish"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -71,13 +72,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "persuasion"
             }
@@ -100,8 +102,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },
@@ -114,14 +117,15 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "is_species",
+              "pred": "creature_is",
               "args": {
                 "species": [
                   "dwarf",
@@ -142,14 +146,15 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "is_species",
+              "pred": "creature_is",
               "args": {
                 "species": [
                   "dwarf",
@@ -170,13 +175,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_condition",
+            "pred": "save_against",
             "args": {
               "condition": "poisoned"
             }

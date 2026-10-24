@@ -45,8 +45,9 @@
       },
       "optional": true,
       "condition": {
-        "pred": "cantrip_of_class",
+        "pred": "spell_of_class",
         "args": {
+          "cantrip": true,
           "class": "cleric"
         }
       },

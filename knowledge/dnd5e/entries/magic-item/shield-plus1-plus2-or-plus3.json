@@ -64,8 +64,9 @@
         "var": "item_bonus"
       },
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       },

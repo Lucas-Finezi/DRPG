@@ -49,8 +49,9 @@
         "poison"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -62,8 +63,9 @@
         "dnd5e/condition/poisoned"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

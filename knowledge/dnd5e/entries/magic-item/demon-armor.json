@@ -60,8 +60,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -73,8 +74,9 @@
         "abyssal"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -87,13 +89,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       },
@@ -107,13 +113,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       }
@@ -126,13 +136,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       }
@@ -146,13 +160,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "creature_has_tag",
+            "pred": "creature_is",
             "args": {
               "tags": [
                 "demon"
@@ -171,14 +186,16 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "source_has_tag",
+            "pred": "creature_is",
             "args": {
+              "who": "source",
               "tags": [
                 "demon"
               ]

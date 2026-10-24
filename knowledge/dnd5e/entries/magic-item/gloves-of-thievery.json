@@ -53,13 +53,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "sleight_of_hand"
             }

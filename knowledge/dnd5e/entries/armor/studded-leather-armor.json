@@ -55,8 +55,9 @@
         ]
       },
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "studded-leather-armor"
         }
       }

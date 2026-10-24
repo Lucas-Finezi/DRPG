@@ -132,7 +132,10 @@
       },
       "condition": {
         "not": {
-          "pred": "at_zero_hp"
+          "pred": "hp_is",
+          "args": {
+            "zero": true
+          }
         }
       },
       "then": [

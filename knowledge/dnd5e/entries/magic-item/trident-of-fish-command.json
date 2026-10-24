@@ -81,8 +81,9 @@
         }
       ],
       "requires": {
-        "pred": "possesses_item",
+        "pred": "item_state",
         "args": {
+          "state": "possessed",
           "item": "this"
         }
       }

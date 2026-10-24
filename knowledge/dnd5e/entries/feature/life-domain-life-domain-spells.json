@@ -79,7 +79,7 @@
         "dnd5e/spell/lesser-restoration"
       ],
       "when": {
-        "pred": "class_level_at_least",
+        "pred": "level_at_least",
         "args": {
           "class": "cleric",
           "level": 3
@@ -94,7 +94,7 @@
         "dnd5e/spell/revivify"
       ],
       "when": {
-        "pred": "class_level_at_least",
+        "pred": "level_at_least",
         "args": {
           "class": "cleric",
           "level": 5
@@ -109,7 +109,7 @@
         "dnd5e/spell/death-ward"
       ],
       "when": {
-        "pred": "class_level_at_least",
+        "pred": "level_at_least",
         "args": {
           "class": "cleric",
           "level": 7
@@ -124,7 +124,7 @@
         "dnd5e/spell/mass-cure-wounds"
       ],
       "when": {
-        "pred": "class_level_at_least",
+        "pred": "level_at_least",
         "args": {
           "class": "cleric",
           "level": 9

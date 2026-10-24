@@ -33,10 +33,13 @@
       "when": {
         "all": [
           {
-            "pred": "in_lightly_obscured_area"
+            "pred": "obscured",
+            "args": {
+              "degree": "light"
+            }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "perception"
             }

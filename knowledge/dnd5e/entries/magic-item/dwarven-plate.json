@@ -52,8 +52,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -74,8 +75,9 @@
       "cost": "reaction",
       "optional": true,
       "condition": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

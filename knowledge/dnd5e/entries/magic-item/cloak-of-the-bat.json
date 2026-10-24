@@ -51,13 +51,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "stealth"
             }
@@ -73,24 +74,32 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "any": [
               {
-                "pred": "in_dim_light"
+                "pred": "in_light",
+                "args": {
+                  "level": "dim"
+                }
               },
               {
-                "pred": "in_darkness"
+                "pred": "in_light",
+                "args": {
+                  "level": "darkness"
+                }
               }
             ]
           },
           {
-            "pred": "gripping_item",
+            "pred": "item_state",
             "args": {
+              "state": "gripping",
               "item": "this"
             }
           }
@@ -120,18 +129,25 @@
       "requires": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "any": [
               {
-                "pred": "in_dim_light"
+                "pred": "in_light",
+                "args": {
+                  "level": "dim"
+                }
               },
               {
-                "pred": "in_darkness"
+                "pred": "in_light",
+                "args": {
+                  "level": "darkness"
+                }
               }
             ]
           }

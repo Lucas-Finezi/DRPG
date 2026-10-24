@@ -54,8 +54,9 @@
       "mode": "set",
       "value": 20,
       "when": {
-        "pred": "attuned_to_item",
+        "pred": "item_state",
         "args": {
+          "state": "attuned",
           "item": "this"
         }
       },
@@ -77,8 +78,9 @@
         }
       ],
       "condition": {
-        "pred": "attack_uses_weapon",
+        "pred": "attack_is",
         "args": {
+          "via": "weapon",
           "item": "this"
         }
       }
@@ -101,8 +103,9 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },

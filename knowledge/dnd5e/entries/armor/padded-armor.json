@@ -56,8 +56,9 @@
         ]
       },
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "padded-armor"
         }
       }
@@ -71,13 +72,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "padded-armor"
             }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "stealth"
             }

@@ -54,8 +54,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       },
@@ -111,8 +112,9 @@
       ],
       "optional": true,
       "condition": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       },
@@ -147,8 +149,9 @@
       "condition": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },

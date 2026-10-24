@@ -46,8 +46,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "shield"
         }
       }

@@ -33,7 +33,10 @@
             "saving_throw"
           ],
           "when": {
-            "pred": "save_against_contagion"
+            "pred": "save_against",
+            "args": {
+              "source": "contagion"
+            }
           },
           "duration": {
             "kind": "hours",

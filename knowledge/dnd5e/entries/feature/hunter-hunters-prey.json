@@ -55,10 +55,16 @@
               "condition": {
                 "all": [
                   {
-                    "pred": "attack_uses_weapon"
+                    "pred": "attack_is",
+                    "args": {
+                      "via": "weapon"
+                    }
                   },
                   {
-                    "pred": "target_missing_hit_points"
+                    "pred": "hp_is",
+                    "args": {
+                      "missing_any": true
+                    }
                   }
                 ]
               },
@@ -97,7 +103,10 @@
                     "pred": "own_turn"
                   },
                   {
-                    "pred": "attack_uses_weapon"
+                    "pred": "attack_is",
+                    "args": {
+                      "via": "weapon"
+                    }
                   }
                 ]
               },

@@ -57,8 +57,11 @@
         "attack_roll.ranged"
       ],
       "when": {
-        "pred": "enemy_within_feet_sees",
+        "pred": "within_feet",
         "args": {
+          "who": "enemy",
+          "sees": true,
+          "not_incapacitated": true,
           "feet": 5
         }
       }

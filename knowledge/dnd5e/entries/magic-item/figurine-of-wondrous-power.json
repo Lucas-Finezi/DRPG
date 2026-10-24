@@ -198,8 +198,9 @@
         }
       ],
       "condition": {
-        "pred": "riding_item",
+        "pred": "item_state",
         "args": {
+          "state": "ridden",
           "item": "this"
         }
       }

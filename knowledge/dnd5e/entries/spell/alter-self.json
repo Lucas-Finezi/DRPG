@@ -115,7 +115,10 @@
               "mode": "set",
               "value": "1d6",
               "when": {
-                "pred": "attack_is_unarmed_strike"
+                "pred": "attack_is",
+                "args": {
+                  "via": "unarmed_strike"
+                }
               },
               "duration": {
                 "kind": "hours",
@@ -133,7 +136,10 @@
                 "var": "spellcasting_mod"
               },
               "when": {
-                "pred": "attack_is_unarmed_strike"
+                "pred": "attack_is",
+                "args": {
+                  "via": "unarmed_strike"
+                }
               },
               "duration": {
                 "kind": "hours",

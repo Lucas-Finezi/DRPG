@@ -102,8 +102,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -114,8 +115,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -126,8 +128,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -152,8 +155,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -178,8 +182,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -204,8 +209,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -230,8 +236,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -256,8 +263,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -282,8 +290,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -308,8 +317,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -334,8 +344,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }

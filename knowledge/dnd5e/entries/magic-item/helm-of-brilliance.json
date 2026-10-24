@@ -82,8 +82,9 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -94,7 +95,7 @@
             }
           },
           {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "undead"
@@ -132,8 +133,9 @@
             }
           ],
           "condition": {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "blazing_weapon"
             }
           }
@@ -142,8 +144,9 @@
       "requires": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -166,8 +169,9 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -195,8 +199,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -216,8 +221,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -237,8 +243,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -258,8 +265,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -328,15 +336,16 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "pred": "deals_damage_type",
             "args": {
-              "type": "fire"
+              "damage_type": "fire"
             }
           },
           {

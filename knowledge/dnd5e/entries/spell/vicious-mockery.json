@@ -65,8 +65,9 @@
           "predicate": {
             "any": [
               {
-                "pred": "can_be_seen_by",
+                "pred": "can_see",
                 "args": {
+                  "target": "self",
                   "who": "source"
                 }
               },

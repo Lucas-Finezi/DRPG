@@ -80,14 +80,15 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "creature_type_in",
+              "pred": "creature_is",
               "args": {
                 "types": [
                   "construct",

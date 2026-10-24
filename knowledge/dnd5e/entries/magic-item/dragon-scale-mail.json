@@ -99,8 +99,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -114,13 +115,14 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_effect_of_types",
+            "pred": "save_against",
             "args": {
               "effect": "breath_weapon",
               "types": [
@@ -140,8 +142,9 @@
         }
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },
@@ -163,8 +166,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

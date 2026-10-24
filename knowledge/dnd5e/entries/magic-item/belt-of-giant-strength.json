@@ -115,8 +115,9 @@
         "var": "item_variant_score"
       },
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },

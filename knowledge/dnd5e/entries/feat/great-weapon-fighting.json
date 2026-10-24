@@ -45,7 +45,11 @@
       "when": {
         "all": [
           {
-            "pred": "attack_with_melee_weapon"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee",
+              "via": "weapon"
+            }
           },
           {
             "pred": "wielded_two_handed"
@@ -53,14 +57,16 @@
           {
             "any": [
               {
-                "pred": "attack_with_weapon_property",
+                "pred": "attack_is",
                 "args": {
+                  "via": "weapon",
                   "property": "two-handed"
                 }
               },
               {
-                "pred": "attack_with_weapon_property",
+                "pred": "attack_is",
                 "args": {
+                  "via": "weapon",
                   "property": "versatile"
                 }
               }

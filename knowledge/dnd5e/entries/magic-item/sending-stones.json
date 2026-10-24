@@ -64,8 +64,9 @@
         }
       ],
       "requires": {
-        "pred": "touching_item",
+        "pred": "item_state",
         "args": {
+          "state": "touching",
           "item": "this"
         }
       }

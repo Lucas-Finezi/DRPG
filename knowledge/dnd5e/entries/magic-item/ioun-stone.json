@@ -95,8 +95,9 @@
       "cost": "reaction",
       "optional": true,
       "condition": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       }
@@ -107,8 +108,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -124,8 +126,9 @@
       "when": {
         "all": [
           {
-            "pred": "item_orbiting",
+            "pred": "item_state",
             "args": {
+              "state": "orbiting",
               "item": "this"
             }
           },
@@ -138,7 +141,7 @@
                 }
               },
               {
-                "pred": "check_uses_skill",
+                "pred": "check_uses",
                 "args": {
                   "skill": "perception"
                 }
@@ -154,8 +157,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -177,8 +181,9 @@
       "cost": "reaction",
       "optional": true,
       "condition": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       }
@@ -189,8 +194,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -202,8 +208,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -215,8 +222,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -228,8 +236,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       }
@@ -240,8 +249,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       }
@@ -261,14 +271,18 @@
       "condition": {
         "all": [
           {
-            "pred": "item_orbiting",
+            "pred": "item_state",
             "args": {
+              "state": "orbiting",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "at_zero_hp"
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
             }
           }
         ]
@@ -285,8 +299,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },
@@ -298,8 +313,9 @@
         "need_food_or_drink"
       ],
       "when": {
-        "pred": "item_orbiting",
+        "pred": "item_state",
         "args": {
+          "state": "orbiting",
           "item": "this"
         }
       },

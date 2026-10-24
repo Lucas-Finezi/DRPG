@@ -64,8 +64,9 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
@@ -78,7 +79,7 @@
                 }
               },
               {
-                "pred": "check_uses_skill",
+                "pred": "check_uses",
                 "args": {
                   "skill": "perception"
                 }
@@ -101,8 +102,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -120,8 +122,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -139,8 +142,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -158,8 +162,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }

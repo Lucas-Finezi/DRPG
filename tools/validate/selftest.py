@@ -52,6 +52,9 @@ def main():
     case("extra property", lambda d: d.__setitem__("color", "red"))
     case("refs field out of date", lambda d: d.__setitem__("refs", ["dnd5e/spell/fire-bolt"]))
     case("bad area shape", lambda d: d["effects"][0]["target"]["area"].__setitem__("shape", "torus"))
+    case("predicate argument not in its params",
+         lambda d: d["effects"][0].__setitem__("when", {"pred": "item_state", "args": {"item": "this", "colour": "red"}}))
+    case("parameter on a name without params", lambda d: d["effects"][0].__setitem__("dc", {"var": "spell_save_dc.str"}))
     case("dice with odd faces", lambda d: d["effects"][0]["on_fail"][0]["amount"]["dice"].__setitem__("faces", 7))
 
     failures = []

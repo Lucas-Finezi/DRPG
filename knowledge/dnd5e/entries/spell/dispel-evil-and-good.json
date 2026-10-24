@@ -66,8 +66,9 @@
         "up_to": true
       },
       "when": {
-        "pred": "attacker_creature_type_in",
+        "pred": "creature_is",
         "args": {
+          "who": "attacker",
           "types": [
             "celestial",
             "elemental",

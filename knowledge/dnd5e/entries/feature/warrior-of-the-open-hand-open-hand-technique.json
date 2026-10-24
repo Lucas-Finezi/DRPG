@@ -33,8 +33,9 @@
       },
       "optional": true,
       "condition": {
-        "pred": "attack_from_feature",
+        "pred": "attack_is",
         "args": {
+          "attack_kind": "feature",
           "feature": "flurry_of_blows"
         }
       },

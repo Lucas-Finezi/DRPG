@@ -62,8 +62,9 @@
         ]
       },
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "chain-shirt"
         }
       }

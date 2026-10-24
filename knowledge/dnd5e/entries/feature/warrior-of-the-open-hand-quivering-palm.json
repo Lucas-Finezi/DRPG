@@ -47,7 +47,10 @@
       },
       "optional": true,
       "condition": {
-        "pred": "attack_is_unarmed_strike"
+        "pred": "attack_is",
+        "args": {
+          "via": "unarmed_strike"
+        }
       },
       "then": [
         {

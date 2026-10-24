@@ -76,8 +76,9 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
@@ -98,8 +99,9 @@
       "when": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
@@ -118,8 +120,9 @@
       "when": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
@@ -147,8 +150,9 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
@@ -171,8 +175,9 @@
           },
           {
             "not": {
-              "pred": "attack_uses_weapon",
+              "pred": "attack_is",
               "args": {
+                "via": "weapon",
                 "item": "this"
               }
             }

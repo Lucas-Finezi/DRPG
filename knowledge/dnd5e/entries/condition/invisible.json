@@ -31,8 +31,9 @@
         "id": "concealed",
         "immune_to_effects_requiring_seen_target": true,
         "unless": {
-          "pred": "can_be_seen_by",
+          "pred": "can_see",
           "args": {
+            "target": "self",
             "who": "effect_creator"
           }
         },
@@ -58,8 +59,9 @@
       "direction": "against",
       "when": {
         "not": {
-          "pred": "can_be_seen_by",
+          "pred": "can_see",
           "args": {
+            "target": "self",
             "who": "attacker"
           }
         }
@@ -74,8 +76,9 @@
       "direction": "own",
       "when": {
         "not": {
-          "pred": "can_be_seen_by",
+          "pred": "can_see",
           "args": {
+            "target": "self",
             "who": "target"
           }
         }

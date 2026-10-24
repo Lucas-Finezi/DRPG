@@ -157,8 +157,10 @@
         "whose": "any"
       },
       "condition": {
-        "pred": "farther_than_feet_from_target",
+        "pred": "within_feet",
         "args": {
+          "of": "target",
+          "farther": true,
           "feet": 120
         }
       },

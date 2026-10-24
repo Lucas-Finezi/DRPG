@@ -61,8 +61,9 @@
       "when": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
@@ -99,8 +100,9 @@
         }
       ],
       "condition": {
-        "pred": "attack_uses_weapon",
+        "pred": "attack_is",
         "args": {
+          "via": "weapon",
           "item": "this"
         }
       }

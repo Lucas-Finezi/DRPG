@@ -74,8 +74,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -86,8 +87,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -120,8 +122,9 @@
       ],
       "optional": true,
       "condition": {
-        "pred": "attack_uses_weapon",
+        "pred": "attack_is",
         "args": {
+          "via": "weapon",
           "item": "this"
         }
       }

@@ -124,10 +124,16 @@
       "condition": {
         "any": [
           {
-            "pred": "attack_uses_weapon"
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon"
+            }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       },
@@ -190,10 +196,16 @@
       "when": {
         "any": [
           {
-            "pred": "attack_uses_weapon"
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon"
+            }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       }

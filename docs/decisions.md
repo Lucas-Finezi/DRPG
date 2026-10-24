@@ -37,3 +37,24 @@ inventário.
 Os arquivos de dados ficam em inglês, como a fonte. Uma camada de tradução pt-BR será
 criada depois, em arquivo separado, sem alterar as entradas. **Adiada** (24/10/2026): fora do
 escopo por enquanto.
+
+## D-004 — Vocabulário canônico do motor
+
+**Decisão (do responsável pelo projeto, 24/10/2026):** os registros são unificados para que
+o motor de regras implemente **um predicado por conceito**. Famílias de nomes específicos
+viram um predicado com parâmetros, por exemplo:
+- `item_state {item, state}`, no lugar de `wearing_item`, `wielding_item`, `holds_item`,
+  `attuned_to_item` e mais 7;
+- `attack_is {range, via, item, property, weapon_kind, attack_kind}`, no lugar de 18
+  variantes;
+- `save_against`, `check_uses`, `creature_is`, `hp_is`, `spell_level_in`, `within_feet`,
+  `level_at_least`, `in_light`, `obscured`, `can_see`, `has_condition` e `spell_of_class`.
+
+Resultado: 221 → 153 predicados e 108 → 106 eventos. Argumentos com nome divergente foram
+padronizados (`deals_damage_type {damage_type}`, `behind_cover {degree}`,
+`has_speed {movement_mode}`).
+
+Aplicada por: `tools/build/vocabulary.py` (aliases e definições canônicas), na escrita de
+cada entrada e do `system.json`. O validador passa a recusar argumentos de predicado fora
+dos `params` declarados e parâmetros pontuados (`x.y`) em nomes sem parâmetros. O self-test
+ganhou 2 casos negativos.

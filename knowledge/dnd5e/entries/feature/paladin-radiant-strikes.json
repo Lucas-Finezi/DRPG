@@ -34,10 +34,17 @@
       "condition": {
         "any": [
           {
-            "pred": "attack_with_melee_weapon"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee",
+              "via": "weapon"
+            }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       },

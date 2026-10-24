@@ -280,7 +280,10 @@
         "saving_throw"
       ],
       "when": {
-        "pred": "save_against_spell_or_magic"
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
       }
     },
     {

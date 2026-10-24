@@ -57,7 +57,10 @@
           {
             "any": [
               {
-                "pred": "heavily_obscured"
+                "pred": "obscured",
+                "args": {
+                  "degree": "heavy"
+                }
               },
               {
                 "pred": "behind_cover",

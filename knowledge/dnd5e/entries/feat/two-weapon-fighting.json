@@ -47,7 +47,10 @@
       "when": {
         "all": [
           {
-            "pred": "extra_attack_from_light_property"
+            "pred": "attack_is",
+            "args": {
+              "attack_kind": "light_property_extra"
+            }
           },
           {
             "not": {

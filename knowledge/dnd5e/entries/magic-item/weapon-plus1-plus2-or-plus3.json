@@ -61,8 +61,9 @@
         "var": "item_bonus"
       },
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -75,8 +76,9 @@
         "var": "item_bonus"
       },
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }

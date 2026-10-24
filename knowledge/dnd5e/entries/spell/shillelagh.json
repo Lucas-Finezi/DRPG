@@ -73,7 +73,11 @@
         "var": "spellcasting_mod"
       },
       "when": {
-        "pred": "attack_with_chosen_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "chosen"
+        }
       },
       "duration": {
         "kind": "minutes",
@@ -86,7 +90,11 @@
       "stat": "weapon_damage_die",
       "mode": "set",
       "when": {
-        "pred": "attack_with_chosen_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "chosen"
+        }
       },
       "duration": {
         "kind": "minutes",

@@ -49,11 +49,17 @@
       "condition": {
         "all": [
           {
-            "pred": "bloodied"
+            "pred": "hp_is",
+            "args": {
+              "bloodied": true
+            }
           },
           {
             "not": {
-              "pred": "at_zero_hp"
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
             }
           }
         ]

@@ -36,8 +36,9 @@
         "amount": 1
       },
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "holy_symbol"
         }
       },
@@ -64,7 +65,10 @@
               "predicate": {
                 "all": [
                   {
-                    "pred": "bloodied"
+                    "pred": "hp_is",
+                    "args": {
+                      "bloodied": true
+                    }
                   },
                   {
                     "pred": "chosen_by_source"

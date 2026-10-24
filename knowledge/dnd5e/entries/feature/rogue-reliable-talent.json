@@ -32,7 +32,10 @@
       "mode": "min",
       "value": 10,
       "when": {
-        "pred": "check_uses_own_proficiency"
+        "pred": "check_uses",
+        "args": {
+          "proficient": "any"
+        }
       },
       "note": "Ability checks using a skill or tool proficiency."
     }

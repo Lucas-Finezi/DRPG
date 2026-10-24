@@ -34,8 +34,9 @@
       "optional": true,
       "condition": {
         "not": {
-          "pred": "attack_from_feature",
+          "pred": "attack_is",
           "args": {
+            "attack_kind": "feature",
             "feature": "step_of_the_wind"
           }
         }

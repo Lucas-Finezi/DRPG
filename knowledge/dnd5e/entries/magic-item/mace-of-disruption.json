@@ -99,9 +99,9 @@
             }
           ],
           "when": {
-            "pred": "hp_at_most",
+            "pred": "hp_is",
             "args": {
-              "hp": 25
+              "at_most": 25
             }
           },
           "note": "Only if it has 25 Hit Points or fewer after the damage."
@@ -110,13 +110,14 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "fiend",

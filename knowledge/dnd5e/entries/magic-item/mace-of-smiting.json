@@ -51,8 +51,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -63,8 +64,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -77,13 +79,14 @@
       "when": {
         "all": [
           {
-            "pred": "wielding_item",
+            "pred": "item_state",
             "args": {
+              "state": "wielded",
               "item": "this"
             }
           },
           {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "construct"
@@ -101,13 +104,14 @@
       "when": {
         "all": [
           {
-            "pred": "wielding_item",
+            "pred": "item_state",
             "args": {
+              "state": "wielded",
               "item": "this"
             }
           },
           {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "construct"
@@ -144,9 +148,9 @@
                   "op": "end_effect",
                   "scope": "this_entry_on_target",
                   "when": {
-                    "pred": "hp_at_most",
+                    "pred": "hp_is",
                     "args": {
-                      "hp": 25
+                      "at_most": 25
                     }
                   },
                   "note": "Destroyed if 25 Hit Points or fewer after the damage."
@@ -171,8 +175,9 @@
         }
       ],
       "condition": {
-        "pred": "attack_uses_weapon",
+        "pred": "attack_is",
         "args": {
+          "via": "weapon",
           "item": "this"
         }
       }

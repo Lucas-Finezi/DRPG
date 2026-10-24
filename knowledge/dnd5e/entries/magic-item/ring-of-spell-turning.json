@@ -51,13 +51,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_spell"
+            "pred": "save_against",
+            "args": {
+              "source": "spell"
+            }
           }
         ]
       }
@@ -78,15 +82,16 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "spell_level_at_most",
+            "pred": "spell_level_in",
             "args": {
-              "level": 7
+              "max": 7
             }
           }
         ]
@@ -110,8 +115,9 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -119,9 +125,9 @@
             "pred": "spell_targeted_only_you"
           },
           {
-            "pred": "spell_level_at_most",
+            "pred": "spell_level_in",
             "args": {
-              "level": 7
+              "max": 7
             }
           }
         ]

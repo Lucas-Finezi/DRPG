@@ -80,7 +80,11 @@
             ]
           },
           "when": {
-            "pred": "attack_with_chosen_weapon"
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "weapon_kind": "chosen"
+            }
           },
           "duration": {
             "kind": "minutes",

@@ -32,7 +32,11 @@
           {
             "all": [
               {
-                "pred": "attack_with_melee_weapon"
+                "pred": "attack_is",
+                "args": {
+                  "range": "melee",
+                  "via": "weapon"
+                }
               },
               {
                 "pred": "ability_score_below",
@@ -46,7 +50,11 @@
           {
             "all": [
               {
-                "pred": "attack_with_ranged_weapon"
+                "pred": "attack_is",
+                "args": {
+                  "range": "ranged",
+                  "via": "weapon"
+                }
               },
               {
                 "pred": "ability_score_below",

@@ -43,7 +43,11 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "attack_with_ranged_weapon"
+        "pred": "attack_is",
+        "args": {
+          "range": "ranged",
+          "via": "weapon"
+        }
       }
     }
   ],

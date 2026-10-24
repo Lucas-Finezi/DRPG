@@ -76,8 +76,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -88,8 +89,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -103,8 +105,9 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
@@ -118,7 +121,7 @@
             }
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "acrobatics"
             }
@@ -149,8 +152,9 @@
       "condition": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
@@ -173,8 +177,9 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },

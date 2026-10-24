@@ -117,7 +117,10 @@
             "pred": "is_ally"
           },
           {
-            "pred": "at_zero_hp"
+            "pred": "hp_is",
+            "args": {
+              "zero": true
+            }
           },
           {
             "pred": "in_spell_area"

@@ -40,7 +40,11 @@
       "mode": "max",
       "value": 2,
       "when": {
-        "pred": "attack_with_pact_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "pact"
+        }
       }
     }
   ],

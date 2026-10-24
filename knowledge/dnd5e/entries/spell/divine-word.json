@@ -182,7 +182,7 @@
           "op": "reference",
           "rule": "dnd5e/spell/divine-word",
           "when": {
-            "pred": "creature_type_in",
+            "pred": "creature_is",
             "args": {
               "types": [
                 "celestial",

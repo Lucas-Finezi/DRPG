@@ -28,7 +28,10 @@
       "op": "apply_condition",
       "condition": "dnd5e/condition/blinded",
       "when": {
-        "pred": "heavily_obscured"
+        "pred": "obscured",
+        "args": {
+          "degree": "heavy"
+        }
       }
     }
   ],

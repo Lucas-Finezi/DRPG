@@ -71,14 +71,16 @@
       "condition": {
         "all": [
           {
-            "pred": "attuned_to_item",
+            "pred": "item_state",
             "args": {
+              "state": "attuned",
               "item": "this"
             }
           },
           {
-            "pred": "within_feet_of_item",
+            "pred": "within_feet",
             "args": {
+              "of": "item",
               "feet": 30,
               "item": "this"
             }
@@ -95,14 +97,16 @@
       "when": {
         "all": [
           {
-            "pred": "attuned_to_item",
+            "pred": "item_state",
             "args": {
+              "state": "attuned",
               "item": "this"
             }
           },
           {
-            "pred": "within_feet_of_item",
+            "pred": "within_feet",
             "args": {
+              "of": "item",
               "feet": 30,
               "item": "this"
             }

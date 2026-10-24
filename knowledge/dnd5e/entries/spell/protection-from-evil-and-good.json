@@ -74,8 +74,9 @@
         }
       },
       "when": {
-        "pred": "attacker_creature_type_in",
+        "pred": "creature_is",
         "args": {
+          "who": "attacker",
           "types": [
             "aberration",
             "celestial",
@@ -107,8 +108,9 @@
         "up_to": true
       },
       "when": {
-        "pred": "source_creature_type_in",
+        "pred": "creature_is",
         "args": {
+          "who": "source",
           "types": [
             "aberration",
             "celestial",
@@ -134,7 +136,7 @@
         "up_to": true
       },
       "when": {
-        "pred": "save_against_effect_of_types",
+        "pred": "save_against",
         "args": {
           "types": [
             "aberration",

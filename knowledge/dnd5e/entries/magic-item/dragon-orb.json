@@ -106,8 +106,9 @@
               "duration": {
                 "kind": "while",
                 "while": {
-                  "pred": "attuned_to_item",
+                  "pred": "item_state",
                   "args": {
+                    "state": "attuned",
                     "item": "this"
                   }
                 }
@@ -124,8 +125,9 @@
         }
       ],
       "requires": {
-        "pred": "attuned_to_item",
+        "pred": "item_state",
         "args": {
+          "state": "attuned",
           "item": "this"
         }
       }
@@ -136,7 +138,7 @@
         "end_attunement_voluntarily"
       ],
       "when": {
-        "pred": "has_condition_from",
+        "pred": "has_condition",
         "args": {
           "condition": "charmed",
           "source": "this"
@@ -281,8 +283,9 @@
         }
       ],
       "requires": {
-        "pred": "controls_item",
+        "pred": "item_state",
         "args": {
+          "state": "controlled",
           "item": "this"
         }
       }

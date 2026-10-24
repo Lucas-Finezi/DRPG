@@ -64,8 +64,9 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -86,13 +87,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_spell_or_magic"
+            "pred": "save_against",
+            "args": {
+              "source": "spell_or_magic"
+            }
           }
         ]
       }
@@ -103,8 +108,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -115,8 +121,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

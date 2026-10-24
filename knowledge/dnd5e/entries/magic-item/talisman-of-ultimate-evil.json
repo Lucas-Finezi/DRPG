@@ -58,7 +58,7 @@
       ],
       "condition": {
         "not": {
-          "pred": "creature_type_in",
+          "pred": "creature_is",
           "args": {
             "types": [
               "fiend",
@@ -77,14 +77,16 @@
       "when": {
         "any": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           }
@@ -100,14 +102,16 @@
       "when": {
         "any": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           }
@@ -162,14 +166,16 @@
       "requires": {
         "any": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           }

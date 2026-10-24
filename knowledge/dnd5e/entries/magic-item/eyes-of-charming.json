@@ -86,8 +86,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

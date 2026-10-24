@@ -98,14 +98,18 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           },
           {
             "pred": "own_turn"
           },
           {
-            "pred": "attack_from_feature",
+            "pred": "attack_is",
             "args": {
+              "attack_kind": "feature",
               "feature": "attack_action"
             }
           }

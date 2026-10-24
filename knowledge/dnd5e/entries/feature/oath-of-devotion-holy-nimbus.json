@@ -88,15 +88,19 @@
           {
             "any": [
               {
-                "pred": "forced_by_creature_type",
+                "pred": "save_against",
                 "args": {
-                  "type": "fiend"
+                  "types": [
+                    "fiend"
+                  ]
                 }
               },
               {
-                "pred": "forced_by_creature_type",
+                "pred": "save_against",
                 "args": {
-                  "type": "undead"
+                  "types": [
+                    "undead"
+                  ]
                 }
               }
             ]

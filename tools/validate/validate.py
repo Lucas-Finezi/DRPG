@@ -82,6 +82,7 @@ class Vocab:
         self.sets["abilities"] = {a["id"] for a in system["abilities"]}
         self.sets["skills"] = {s["id"] for s in system.get("skills", [])}
         self.sets["action_costs"] = {a["id"] for a in system["action_economy"]} | {"none"}
+        self.params = {k: {i["id"]: set(i.get("params", [])) for i in v} for k, v in reg.items()}
 
     def has(self, registry, name):
         head = name.split(".", 1)[0]
@@ -95,6 +96,17 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
     def chk(registry, name, path):
         if vocab is not None and not vocab.has(registry, name):
             errors.append(f"{where}{path}: '{name}' is not declared in registry '{registry}'")
+        elif vocab is not None and "." in name and registry in ("variables", "events", "predicates") and \
+                not vocab.params.get(registry, {}).get(name.split(".", 1)[0]):
+            errors.append(f"{where}{path}: '{name}' passes a parameter but '{name.split('.', 1)[0]}' declares none in '{registry}'")
+
+    def chk_args(name, args, path):
+        if vocab is None or not isinstance(args, dict):
+            return
+        declared = vocab.params.get("predicates", {}).get(name)
+        if declared is not None and not set(args) <= declared:
+            errors.append(f"{where}{path}: predicate '{name}' called with {sorted(set(args) - declared)} "
+                          f"not among its params {sorted(declared)}")
 
     def ident_or_choice(value, registry, path):
         if isinstance(value, str):
@@ -118,6 +130,7 @@ def walk_vocab(node, vocab, errors, where, ctx=None):
             chk("variables", n["scale"].get("by", ""), path + "/scale")
         if "pred" in n and isinstance(n["pred"], str):
             chk("predicates", n["pred"], path)
+            chk_args(n["pred"], n.get("args", {}), path)
         if "event" in n and isinstance(n["event"], str):
             chk("events", n["event"], path)
         if "shape" in n and isinstance(n["shape"], str):

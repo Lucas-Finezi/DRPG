@@ -38,7 +38,11 @@
         "attack_roll"
       ],
       "when": {
-        "pred": "attack_with_ranged_weapon"
+        "pred": "attack_is",
+        "args": {
+          "range": "ranged",
+          "via": "weapon"
+        }
       }
     },
     {
@@ -48,7 +52,7 @@
         "ability_check"
       ],
       "when": {
-        "pred": "check_uses_skill",
+        "pred": "check_uses",
         "args": {
           "skill": "perception"
         }

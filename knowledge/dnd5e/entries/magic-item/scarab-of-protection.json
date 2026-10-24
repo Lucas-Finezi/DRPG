@@ -48,8 +48,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "possesses_item",
+        "pred": "item_state",
         "args": {
+          "state": "possessed",
           "item": "this"
         }
       }
@@ -79,8 +80,9 @@
       "condition": {
         "all": [
           {
-            "pred": "possesses_item",
+            "pred": "item_state",
             "args": {
+              "state": "possessed",
               "item": "this"
             }
           },
@@ -93,8 +95,9 @@
                 }
               },
               {
-                "pred": "source_creature_type_in",
+                "pred": "creature_is",
                 "args": {
+                  "who": "source",
                   "types": [
                     "undead"
                   ]
@@ -115,13 +118,17 @@
       "when": {
         "all": [
           {
-            "pred": "possesses_item",
+            "pred": "item_state",
             "args": {
+              "state": "possessed",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_spell"
+            "pred": "save_against",
+            "args": {
+              "source": "spell"
+            }
           }
         ]
       }

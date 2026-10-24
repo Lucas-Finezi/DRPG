@@ -28,7 +28,11 @@
       },
       "optional": true,
       "condition": {
-        "pred": "attack_with_melee_weapon"
+        "pred": "attack_is",
+        "args": {
+          "range": "melee",
+          "via": "weapon"
+        }
       },
       "then": [
         {

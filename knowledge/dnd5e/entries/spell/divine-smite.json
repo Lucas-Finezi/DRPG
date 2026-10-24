@@ -90,15 +90,19 @@
       "when": {
         "any": [
           {
-            "pred": "creature_type",
+            "pred": "creature_is",
             "args": {
-              "type": "fiend"
+              "types": [
+                "fiend"
+              ]
             }
           },
           {
-            "pred": "creature_type",
+            "pred": "creature_is",
             "args": {
-              "type": "undead"
+              "types": [
+                "undead"
+              ]
             }
           }
         ]

@@ -33,7 +33,11 @@
       },
       "optional": true,
       "condition": {
-        "pred": "attack_with_mastered_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "mastered"
+        }
       },
       "then": [
         {

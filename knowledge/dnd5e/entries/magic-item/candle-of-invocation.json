@@ -148,18 +148,20 @@
             }
           },
           {
-            "pred": "class_is",
+            "pred": "level_at_least",
             "args": {
-              "classes": [
+              "class": [
                 "cleric",
                 "druid"
-              ]
+              ],
+              "level": 1
             }
           },
           {
-            "pred": "spell_level_is",
+            "pred": "spell_level_in",
             "args": {
-              "level": 1
+              "min": 1,
+              "max": 1
             }
           }
         ]

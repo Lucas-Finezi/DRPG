@@ -155,8 +155,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -167,8 +168,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -179,8 +181,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -194,13 +197,17 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_spell"
+            "pred": "save_against",
+            "args": {
+              "source": "spell"
+            }
           }
         ]
       }
@@ -225,8 +232,9 @@
       "condition": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
@@ -256,8 +264,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -282,8 +291,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -308,8 +318,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -334,8 +345,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -360,8 +372,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -387,8 +400,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -413,8 +427,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -439,8 +454,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -465,8 +481,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -491,8 +508,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -517,8 +535,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -544,8 +563,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -570,8 +590,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -596,8 +617,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -622,8 +644,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -648,8 +671,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -674,8 +698,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -700,8 +725,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -726,8 +752,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -882,8 +909,9 @@
         }
       ],
       "requires": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }

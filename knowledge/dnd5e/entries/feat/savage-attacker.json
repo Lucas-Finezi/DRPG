@@ -40,7 +40,10 @@
       },
       "optional": true,
       "condition": {
-        "pred": "attack_uses_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon"
+        }
       },
       "frequency": {
         "count": 1,

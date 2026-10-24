@@ -53,21 +53,23 @@
           {
             "any": [
               {
-                "pred": "wearing_item",
+                "pred": "item_state",
                 "args": {
+                  "state": "worn",
                   "item": "this"
                 }
               },
               {
-                "pred": "holds_item",
+                "pred": "item_state",
                 "args": {
+                  "state": "held",
                   "item": "this"
                 }
               }
             ]
           },
           {
-            "pred": "check_uses_skill",
+            "pred": "check_uses",
             "args": {
               "skill": "arcana"
             }
@@ -108,8 +110,9 @@
         }
       ],
       "requires": {
-        "pred": "controls_item",
+        "pred": "item_state",
         "args": {
+          "state": "controlled",
           "item": "dnd5e/magic-item/sphere-of-annihilation"
         }
       }

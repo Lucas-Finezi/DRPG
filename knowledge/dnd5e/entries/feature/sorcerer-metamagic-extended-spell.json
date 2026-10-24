@@ -68,7 +68,11 @@
         "saving_throw.con"
       ],
       "when": {
-        "pred": "concentration_save_for_extended_spell"
+        "pred": "save_against",
+        "args": {
+          "kind": "concentration",
+          "modified_by": "extended_spell"
+        }
       }
     }
   ],

@@ -80,7 +80,11 @@
             "attack_roll"
           ],
           "when": {
-            "pred": "attacker_can_see_target"
+            "pred": "can_see",
+            "args": {
+              "who": "attacker",
+              "target": "target"
+            }
           },
           "direction": "against",
           "duration": {
@@ -126,8 +130,9 @@
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }

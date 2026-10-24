@@ -122,8 +122,10 @@
         "attack_roll"
       ],
       "when": {
-        "pred": "ally_within_feet_of_target",
+        "pred": "within_feet",
         "args": {
+          "who": "ally",
+          "of": "target",
           "feet": 5,
           "not_incapacitated": true
         }

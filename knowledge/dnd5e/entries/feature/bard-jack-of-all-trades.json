@@ -42,11 +42,18 @@
       "when": {
         "all": [
           {
-            "pred": "check_uses_unproficient_skill"
+            "pred": "check_uses",
+            "args": {
+              "skill": "any",
+              "proficient": false
+            }
           },
           {
             "not": {
-              "pred": "check_adds_proficiency_bonus"
+              "pred": "check_uses",
+              "args": {
+                "adds_proficiency_bonus": true
+              }
             }
           }
         ]

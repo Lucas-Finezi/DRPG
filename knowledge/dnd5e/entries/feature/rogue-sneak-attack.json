@@ -52,13 +52,18 @@
           {
             "any": [
               {
-                "pred": "attack_with_weapon_property",
+                "pred": "attack_is",
                 "args": {
+                  "via": "weapon",
                   "property": "finesse"
                 }
               },
               {
-                "pred": "attack_with_ranged_weapon"
+                "pred": "attack_is",
+                "args": {
+                  "range": "ranged",
+                  "via": "weapon"
+                }
               }
             ]
           },
@@ -70,8 +75,10 @@
               {
                 "all": [
                   {
-                    "pred": "ally_within_feet_of_target",
+                    "pred": "within_feet",
                     "args": {
+                      "who": "ally",
+                      "of": "target",
                       "feet": 5
                     }
                   },

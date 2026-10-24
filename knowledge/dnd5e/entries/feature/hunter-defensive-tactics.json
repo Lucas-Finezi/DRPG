@@ -55,7 +55,10 @@
               ],
               "direction": "against",
               "when": {
-                "pred": "attack_is_opportunity_attack"
+                "pred": "attack_is",
+                "args": {
+                  "attack_kind": "opportunity"
+                }
               }
             }
           ]

@@ -74,8 +74,9 @@
         "up_to": true
       },
       "when": {
-        "pred": "within_feet_of_effect",
+        "pred": "within_feet",
         "args": {
+          "of": "effect",
           "feet": 5
         }
       }

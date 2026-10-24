@@ -115,7 +115,10 @@
             "kind": "creature",
             "filter": {
               "predicate": {
-                "pred": "at_zero_hp"
+                "pred": "hp_is",
+                "args": {
+                  "zero": true
+                }
               }
             }
           },

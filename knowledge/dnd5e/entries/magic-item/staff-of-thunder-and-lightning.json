@@ -55,8 +55,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -67,8 +68,9 @@
       "mode": "add",
       "value": 2,
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -96,13 +98,17 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_melee"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
           }
         ]
       }
@@ -144,13 +150,17 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_melee"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
           }
         ]
       }
@@ -176,13 +186,17 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_melee"
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
           }
         ]
       }

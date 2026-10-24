@@ -76,8 +76,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -88,8 +89,9 @@
       "mode": "add",
       "value": 1,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -102,8 +104,9 @@
         "var": "level"
       },
       "when": {
-        "pred": "attuned_to_item",
+        "pred": "item_state",
         "args": {
+          "state": "attuned",
           "item": "this"
         }
       }
@@ -117,15 +120,17 @@
       "when": {
         "all": [
           {
-            "pred": "attuned_to_item",
+            "pred": "item_state",
             "args": {
+              "state": "attuned",
               "item": "this"
             }
           },
           {
             "not": {
-              "pred": "attack_uses_weapon",
+              "pred": "attack_is",
               "args": {
+                "via": "weapon",
                 "item": "this"
               }
             }
@@ -154,8 +159,9 @@
         }
       ],
       "condition": {
-        "pred": "possesses_item",
+        "pred": "item_state",
         "args": {
+          "state": "possessed",
           "item": "this"
         }
       }

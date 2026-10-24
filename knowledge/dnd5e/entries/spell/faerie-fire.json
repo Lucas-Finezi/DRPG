@@ -109,7 +109,11 @@
           ],
           "direction": "against",
           "when": {
-            "pred": "attacker_can_see_target"
+            "pred": "can_see",
+            "args": {
+              "who": "attacker",
+              "target": "target"
+            }
           },
           "duration": {
             "kind": "minutes",

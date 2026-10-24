@@ -282,6 +282,8 @@ def entry(kind, slug, name, nodes, lot, section_path, plan, tier=None, facets=No
 
 
 def write_entry(e):
+    from vocabulary import normalize
+    e = normalize(e)  # canonical predicate and event names (tools/build/vocabulary.py)
     kind, slug = e["ref"].split("/")[-2:]
     path = KNOWLEDGE / SYSTEM / "entries" / kind / f"{slug}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -429,8 +431,12 @@ def build(kind, slug, name, nodes, lot, section_path, items, text=None, **kw):
 
 def extend_registries(additions, lot):
     """Add registry names a lot needs to knowledge/<system>/system.json (idempotent)."""
+    from vocabulary import ALIASES, EVENT_ALIASES, normalize, normalize_registries
     path = KNOWLEDGE / SYSTEM / "system.json"
     system = json.loads(path.read_text(encoding="utf-8"))
+    additions = {reg: [i for i in items if not ((reg == "predicates" and i["id"] in ALIASES) or
+                                                  (reg == "events" and i["id"] in EVENT_ALIASES))]
+                 for reg, items in additions.items()}
     for reg, items in additions.items():
         current = system["registries"].setdefault(reg, [])
         ids = {i["id"] for i in current}
@@ -439,6 +445,8 @@ def extend_registries(additions, lot):
                 continue
             current.append({**item, "lot": lot})
             ids.add(item["id"])
+    system = {k: (normalize(v) if k != "registries" else v) for k, v in system.items()}
+    system["registries"] = normalize_registries(system["registries"])
     path.write_text(json.dumps(system, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return system
 

@@ -65,8 +65,9 @@
         "read_thoughts_or_lie_detection_by_magic"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },

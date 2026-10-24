@@ -50,10 +50,16 @@
       "requires": {
         "any": [
           {
-            "pred": "in_dim_light"
+            "pred": "in_light",
+            "args": {
+              "level": "dim"
+            }
           },
           {
-            "pred": "in_darkness"
+            "pred": "in_light",
+            "args": {
+              "level": "darkness"
+            }
           }
         ]
       }

@@ -195,7 +195,7 @@ class Items(unittest.TestCase):
     def test_cloak_of_protection(self):
         fx = E("dnd5e/magic-item/cloak-of-protection")["effects"]
         self.assertEqual([(e["stat"], e["value"]) for e in fx], [("ac", 1), ("saving_throw", 1)])
-        self.assertEqual(fx[0]["when"]["pred"], "wearing_item")
+        self.assertEqual(fx[0]["when"], {"pred": "item_state", "args": {"item": "this", "state": "worn"}})
 
     def test_potions_of_healing(self):
         v = E("dnd5e/magic-item/potions-of-healing")["data"]["item"]["variants"]

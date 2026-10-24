@@ -132,9 +132,9 @@
         }
       ],
       "condition": {
-        "pred": "creature_type_chosen",
+        "pred": "creature_is",
         "args": {
-          "choice": "slaying_type"
+          "chosen": "slaying_type"
         }
       }
     }

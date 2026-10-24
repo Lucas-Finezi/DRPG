@@ -103,7 +103,10 @@
         "amount": 1
       },
       "condition": {
-        "pred": "creature_type_chosen"
+        "pred": "creature_is",
+        "args": {
+          "chosen": true
+        }
       },
       "then": [
         {

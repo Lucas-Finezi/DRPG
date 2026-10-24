@@ -35,10 +35,17 @@
       "condition": {
         "any": [
           {
-            "pred": "attack_with_monk_weapon"
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "weapon_kind": "monk"
+            }
           },
           {
-            "pred": "attack_is_unarmed_strike"
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
           }
         ]
       },

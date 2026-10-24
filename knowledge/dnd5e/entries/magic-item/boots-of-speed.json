@@ -72,14 +72,18 @@
             "attack_roll"
           ],
           "when": {
-            "pred": "attack_is_opportunity_attack"
+            "pred": "attack_is",
+            "args": {
+              "attack_kind": "opportunity"
+            }
           },
           "direction": "against"
         }
       ],
       "requires": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       },

@@ -65,8 +65,9 @@
       "mode": "add",
       "value": 3,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -77,8 +78,9 @@
       "mode": "add",
       "value": 3,
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       }
@@ -89,8 +91,9 @@
         "dnd5e/weapon-property/thrown"
       ],
       "when": {
-        "pred": "wielding_item",
+        "pred": "item_state",
         "args": {
+          "state": "wielded",
           "item": "this"
         }
       },
@@ -141,13 +144,17 @@
       "condition": {
         "all": [
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_ranged"
+            "pred": "attack_is",
+            "args": {
+              "range": "ranged"
+            }
           }
         ]
       }

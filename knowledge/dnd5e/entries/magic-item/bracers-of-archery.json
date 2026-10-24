@@ -50,8 +50,9 @@
         "dnd5e/weapon/shortbow"
       ],
       "when": {
-        "pred": "wearing_item",
+        "pred": "item_state",
         "args": {
+          "state": "worn",
           "item": "this"
         }
       }
@@ -64,15 +65,17 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
-            "pred": "attack_uses_weapon",
+            "pred": "attack_is",
             "args": {
-              "weapon": [
+              "via": "weapon",
+              "item": [
                 "longbow",
                 "shortbow"
               ]

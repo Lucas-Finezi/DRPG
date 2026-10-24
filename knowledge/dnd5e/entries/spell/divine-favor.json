@@ -54,7 +54,10 @@
         "event": "hits_with_attack_roll"
       },
       "condition": {
-        "pred": "attack_uses_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon"
+        }
       },
       "duration": {
         "kind": "minutes",

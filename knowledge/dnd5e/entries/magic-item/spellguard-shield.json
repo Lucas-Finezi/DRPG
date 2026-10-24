@@ -57,13 +57,17 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
           {
-            "pred": "save_against_spell_or_magic"
+            "pred": "save_against",
+            "args": {
+              "source": "spell_or_magic"
+            }
           }
         ]
       }
@@ -77,13 +81,17 @@
       "when": {
         "all": [
           {
-            "pred": "holds_item",
+            "pred": "item_state",
             "args": {
+              "state": "held",
               "item": "this"
             }
           },
           {
-            "pred": "attack_is_spell"
+            "pred": "attack_is",
+            "args": {
+              "via": "spell"
+            }
           }
         ]
       },

@@ -74,8 +74,9 @@
       "condition": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
@@ -83,8 +84,9 @@
             "pred": "has_hand_free"
           },
           {
-            "pred": "attack_with_weapon_property",
+            "pred": "attack_is",
             "args": {
+              "via": "weapon",
               "property": [
                 "ranged",
                 "thrown"

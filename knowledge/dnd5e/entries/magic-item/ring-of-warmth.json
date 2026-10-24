@@ -62,15 +62,16 @@
       "when": {
         "all": [
           {
-            "pred": "wearing_item",
+            "pred": "item_state",
             "args": {
+              "state": "worn",
               "item": "this"
             }
           },
           {
             "pred": "deals_damage_type",
             "args": {
-              "type": "cold"
+              "damage_type": "cold"
             }
           }
         ]

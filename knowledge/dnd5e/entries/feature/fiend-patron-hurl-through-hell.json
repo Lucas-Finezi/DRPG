@@ -64,9 +64,11 @@
               "damage_type": "psychic",
               "when": {
                 "not": {
-                  "pred": "creature_type",
+                  "pred": "creature_is",
                   "args": {
-                    "type": "fiend"
+                    "types": [
+                      "fiend"
+                    ]
                   }
                 }
               }

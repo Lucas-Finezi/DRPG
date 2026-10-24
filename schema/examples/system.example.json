@@ -2148,27 +2148,6 @@
         "lot": "L14"
       },
       {
-        "id": "reduced_to_0_hp_not_killed",
-        "description": "The creature is reduced to 0 Hit Points but not killed outright.",
-        "type": "event",
-        "pages": [
-          86
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "damaged_by_creature_within",
-        "description": "The creature takes damage from a creature within 'feet'.",
-        "params": [
-          "feet"
-        ],
-        "type": "event",
-        "pages": [
-          85
-        ],
-        "lot": "L14"
-      },
-      {
         "id": "enemy_reduced_to_0_hp",
         "description": "An enemy is reduced to 0 Hit Points.",
         "pages": [
@@ -2647,179 +2626,92 @@
     ],
     "predicates": [
       {
-        "id": "has_condition",
-        "description": "The creature has the condition (param: condition slug).",
+        "id": "ability_score_below",
+        "description": "The creature's ability score (param) is below a value (param).",
         "params": [
-          "condition"
+          "ability",
+          "score"
         ],
         "type": "predicate",
         "pages": [
-          179
+          89
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "adds_ability_mod_to_damage",
+        "description": "The attack already adds the ability modifier to its damage.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "appraising_detailed_item",
+        "description": "The check is made to appraise or inspect a highly detailed item.",
+        "type": "predicate",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "attack_is",
+        "description": "The attack roll matches every given criterion: range (melee|ranged), via (weapon|spell|unarmed_strike), item (weapon or item slug, list of weapon slugs, or 'this'), property (weapon properties), weapon_kind (monk|pact|mastered|chosen), attack_kind (opportunity|light_property_extra|wild_shape_form|feature), feature (granting feature slug), ability (attack ability).",
+        "params": [
+          "range",
+          "via",
+          "item",
+          "property",
+          "weapon_kind",
+          "attack_kind",
+          "feature",
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
         ]
       },
       {
-        "id": "wearing_armor",
-        "description": "The creature wears armor of the category (param: light, medium, heavy).",
+        "id": "attack_targets_source",
+        "description": "The attack targets the source.",
+        "type": "predicate",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "attacker_is_trigger_creature",
+        "description": "The attacker is the creature that caused the trigger.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attacker_perceives_with",
+        "description": "The attacker perceives the target with one of these senses (param).",
         "params": [
-          "category"
+          "senses"
         ],
         "type": "predicate",
         "pages": [
-          92
-        ]
+          114
+        ],
+        "lot": "L19"
       },
       {
-        "id": "creature_type",
-        "description": "The creature is of the type (param: creature type id).",
-        "params": [
-          "creature_type"
-        ],
+        "id": "attuned_giant_item",
+        "description": "The creature wears and is attuned to a Belt of Giant Strength or Gauntlets of Ogre Power.",
         "type": "predicate",
         "pages": [
-          179
-        ]
-      },
-      {
-        "id": "can_see",
-        "description": "The acting creature can see the target.",
-        "type": "predicate",
-        "pages": [
-          14
-        ]
-      },
-      {
-        "id": "is_ally",
-        "description": "The target is an ally of the acting creature.",
-        "type": "predicate",
-        "pages": [
-          176
-        ]
-      },
-      {
-        "id": "is_enemy",
-        "description": "The target is an enemy of the acting creature.",
-        "type": "predicate",
-        "pages": [
-          181
-        ]
-      },
-      {
-        "id": "requires_sight",
-        "description": "The ability check requires sight.",
-        "type": "predicate",
-        "pages": [
-          177
+          224
         ],
-        "lot": "L03"
-      },
-      {
-        "id": "requires_hearing",
-        "description": "The ability check requires hearing.",
-        "type": "predicate",
-        "pages": [
-          181
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "roller_is_source",
-        "description": "The creature making the roll is the source of this effect (e.g. the charmer).",
-        "type": "predicate",
-        "pages": [
-          178
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "target_is_source",
-        "description": "The target of the roll is the source of this effect (e.g. the grappler).",
-        "type": "predicate",
-        "pages": [
-          182
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "social_interaction",
-        "description": "The ability check is made to interact socially with the affected creature.",
-        "type": "predicate",
-        "pages": [
-          178
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "source_in_line_of_sight",
-        "description": "The source of the effect is within the affected creature's line of sight.",
-        "type": "predicate",
-        "pages": [
-          182
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "within_feet",
-        "description": "A creature ('who': attacker, source...) is within 'feet' of the affected creature.",
-        "params": [
-          "who",
-          "feet"
-        ],
-        "type": "predicate",
-        "pages": [
-          186
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "can_be_seen_by",
-        "description": "The roller ('who') can somehow see the affected creature.",
-        "params": [
-          "who"
-        ],
-        "type": "predicate",
-        "pages": [
-          184
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "effect_requires_seen_target",
-        "description": "The effect requires its target to be seen.",
-        "type": "predicate",
-        "pages": [
-          184
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "speed_is_zero",
-        "description": "The creature's Speed is 0.",
-        "type": "predicate",
-        "pages": [
-          186
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "size_at_most_relative",
-        "description": "The affected creature is Tiny or 'steps' or more sizes smaller than the other creature.",
-        "params": [
-          "steps"
-        ],
-        "type": "predicate",
-        "pages": [
-          182
-        ],
-        "lot": "L03"
-      },
-      {
-        "id": "heavily_obscured",
-        "description": "The creature is in a Heavily Obscured area.",
-        "type": "predicate",
-        "pages": [
-          183
-        ],
-        "lot": "L04"
+        "lot": "L31"
       },
       {
         "id": "behind_cover",
@@ -2834,43 +2726,283 @@
         "lot": "L04"
       },
       {
-        "id": "in_enemy_line_of_sight",
-        "description": "The creature is in any enemy's line of sight.",
+        "id": "beyond_long_range",
+        "description": "The target is beyond the attack's long (or single) range.",
         "type": "predicate",
         "pages": [
-          183
+          15
         ],
         "lot": "L04"
       },
       {
-        "id": "hidden",
-        "description": "The creature is hidden (Hide action).",
+        "id": "beyond_normal_range",
+        "description": "The target is beyond the attack's normal range.",
         "type": "predicate",
         "pages": [
-          183
+          15
         ],
         "lot": "L04"
       },
       {
-        "id": "underwater",
-        "description": "The creature or attack is underwater.",
+        "id": "big_enough_space",
+        "description": "The creature is in a space big enough for the new size.",
         "type": "predicate",
         "pages": [
-          16
+          85
         ],
-        "lot": "L04"
+        "lot": "L14"
       },
       {
-        "id": "has_speed",
-        "description": "The creature has the movement mode (param).",
+        "id": "breaking_down_door",
+        "description": "The check is made to break down a door.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "can_hear_source",
+        "description": "The creature can hear the source.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "can_see",
+        "description": "The observer (who: the effect's owner by default, or attacker|source|target|...) can see the observed (target: the effect's target by default, or self|attacker|effect|...).",
+        "type": "predicate",
+        "pages": [
+          14
+        ],
         "params": [
-          "movement_mode"
+          "who",
+          "target"
+        ]
+      },
+      {
+        "id": "can_speak_normally",
+        "description": "The creature can utter words in a normal speaking voice (not gagged or in magical silence).",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "can_use_item",
+        "description": "The creature meets the item's requirements to use it (param: item).",
+        "type": "predicate",
+        "pages": [
+          229
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "cast_level_1_plus_spell_this_turn",
+        "description": "The creature has already cast a level 1+ spell this turn.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_for_jump",
+        "description": "The check is part of a High or Long Jump.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_for_movement",
+        "description": "The check is made to move in one of these modes, e.g. climb or swim (param: modes).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "modes"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_to_control_item",
+        "description": "The check is made to control this item (param: item).",
+        "type": "predicate",
+        "pages": [
+          249
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_to_end_condition",
+        "description": "The ability check is made to end the condition (param).",
+        "params": [
+          "condition"
         ],
         "type": "predicate",
         "pages": [
-          16
+          85
         ],
-        "lot": "L04"
+        "lot": "L14"
+      },
+      {
+        "id": "check_to_find_marked_target",
+        "description": "The check is made to find the marked creature.",
+        "type": "predicate",
+        "pages": [
+          141
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "check_to_remain_mounted",
+        "description": "The ability check is made to remain mounted.",
+        "type": "predicate",
+        "pages": [
+          100
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_uses",
+        "description": "The ability check uses: skill (id or 'any'), ability (id), tool, proficient (skill|tool|any, or false for a skill the creature lacks), adds_proficiency_bonus (true when it already adds it).",
+        "params": [
+          "skill",
+          "ability",
+          "tool",
+          "proficient",
+          "adds_proficiency_bonus"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "chosen_by_source",
+        "description": "The creature is one the source chose.",
+        "type": "predicate",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "concentrating",
+        "description": "The creature is concentrating on an effect.",
+        "type": "predicate",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "consulting_accurate_source",
+        "description": "The creature consults an accurate source about the topic or place.",
+        "type": "predicate",
+        "pages": [
+          96
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "cr_at_most",
+        "description": "The form's Challenge Rating is at most N (param).",
+        "params": [
+          "cr"
+        ],
+        "type": "predicate",
+        "pages": [
+          108
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "cr_at_most_target",
+        "description": "The form's Challenge Rating is at most the target's (or its level).",
+        "type": "predicate",
+        "pages": [
+          153
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "creature_is",
+        "description": "The creature (who: target by default, or attacker|source) has one of these types, tags or species; chosen = the type fixed by an earlier choice (choice id or true).",
+        "params": [
+          "types",
+          "tags",
+          "species",
+          "who",
+          "chosen"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "creature_kind_specified",
+        "description": "The creature is of the kind specified when the spell was cast.",
+        "type": "predicate",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "damage_from_falling",
+        "description": "The damage comes from a fall.",
+        "type": "predicate",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "damage_from_spell",
+        "description": "The damage comes from this spell (param).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          162
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "damage_reduced_to_zero",
+        "description": "The triggering attack's damage was reduced to 0.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "dead_at_least_days",
+        "description": "The creature has been dead at least N days (param).",
+        "params": [
+          "days"
+        ],
+        "type": "predicate",
+        "pages": [
+          159
+        ],
+        "lot": "L24"
       },
       {
         "id": "deals_damage_type",
@@ -2885,29 +3017,546 @@
         "lot": "L04"
       },
       {
-        "id": "beyond_normal_range",
-        "description": "The target is beyond the attack's normal range.",
+        "id": "doesnt_sleep",
+        "description": "The creature doesn't sleep.",
         "type": "predicate",
         "pages": [
-          15
+          163
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "effect_active",
+        "description": "An effect of the creature (param: entry slug, e.g. barbarian-rage) is active.",
+        "params": [
+          "effect"
+        ],
+        "type": "predicate",
+        "pages": [
+          28
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "effect_requires_seen_target",
+        "description": "The effect requires its target to be seen.",
+        "type": "predicate",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "failed_save_against_spell",
+        "description": "The damage results from failing a saving throw against a spell.",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "falls_into_liquid",
+        "description": "The fall ends in water or another liquid.",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "first_attack_this_turn",
+        "description": "It is the creature's first attack roll on its turn.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_advantage_on_roll",
+        "description": "The creature has Advantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_condition",
+        "description": "The creature has the condition (slug), optionally from a given source.",
+        "params": [
+          "condition",
+          "source"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "has_disadvantage_on_roll",
+        "description": "The creature has Disadvantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_expertise",
+        "description": "The creature has Expertise in the skill used.",
+        "params": [
+          "skill"
+        ],
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_hand_free",
+        "description": "The creature has a hand free.",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "has_head",
+        "description": "The creature has at least one head.",
+        "type": "predicate",
+        "pages": [
+          250
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_heroic_inspiration",
+        "description": "The creature has Heroic Inspiration.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_line_of_sight_to_source",
+        "description": "The creature has line of sight to the source.",
+        "type": "predicate",
+        "pages": [
+          130
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "has_marked_target",
+        "description": "The creature has a living sworn enemy or other marked target from the item.",
+        "type": "predicate",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_proficiency",
+        "description": "The creature has proficiency with the skill, tool, save or weapon used (param).",
+        "params": [
+          "item"
+        ],
+        "type": "predicate",
+        "pages": [
+          8
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_sense",
+        "description": "The creature has this sense (param: sense).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "sense"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_speed",
+        "description": "The creature has the movement mode (param).",
+        "params": [
+          "movement_mode"
+        ],
+        "type": "predicate",
+        "pages": [
+          16
         ],
         "lot": "L04"
       },
       {
-        "id": "beyond_long_range",
-        "description": "The target is beyond the attack's long (or single) range.",
+        "id": "heals_other_creature",
+        "description": "The spell restores Hit Points to a creature other than the caster.",
         "type": "predicate",
         "pages": [
-          15
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "helped_by_other_character",
+        "description": "Another character helps with the ram.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "hidden",
+        "description": "The creature is hidden (Hide action).",
+        "type": "predicate",
+        "pages": [
+          183
         ],
         "lot": "L04"
       },
       {
-        "id": "enemy_within_feet_sees",
-        "description": "An enemy within 'feet' can see the creature and doesn't have the Incapacitated condition.",
+        "id": "holds_bardic_inspiration_die",
+        "description": "The creature has an unexpended Bardic Inspiration die.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "holds_melee_weapon",
+        "description": "The creature holds a Melee weapon.",
+        "type": "predicate",
+        "pages": [
+          56
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hp_is",
+        "description": "The creature's Hit Points satisfy every given criterion: at_most N, below N, zero (0 HP), bloodied (half or fewer), missing_any (below maximum).",
+        "params": [
+          "at_most",
+          "below",
+          "zero",
+          "bloodied",
+          "missing_any"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "immune_to_condition",
+        "description": "The creature has Immunity to this condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          163
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "impersonating_costume_subject",
+        "description": "The check is made to impersonate the person or type the Costume represents.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "in_aura",
+        "description": "The creature is inside the source's aura (param: feature slug).",
+        "params": [
+          "aura"
+        ],
+        "type": "predicate",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_burning_webs",
+        "description": "The creature starts its turn in webs that are burning.",
+        "type": "predicate",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "in_combat",
+        "description": "The creature is in combat.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_difficult_terrain",
+        "description": "The space is Difficult Terrain.",
+        "type": "predicate",
+        "pages": [
+          181
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_enemy_line_of_sight",
+        "description": "The creature is in any enemy's line of sight.",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_item_light",
+        "description": "The creature is within the light the item sheds (param: item).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "in_light",
+        "description": "The creature is in light of this level: bright|dim|darkness|sunlight.",
+        "params": [
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "in_spell_area",
+        "description": "The creature is in the spell's area.",
+        "type": "predicate",
+        "pages": [
+          137
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "influence_check",
+        "description": "The ability check is made to influence the creature.",
+        "type": "predicate",
+        "pages": [
+          182,
+          183
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "influencing_indifferent_humanoid_within_feet",
+        "description": "The check influences an Indifferent Humanoid within N feet (param).",
         "params": [
           "feet"
         ],
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "interacting_with",
+        "description": "The check is made to interact with these creatures (param: creatures).",
+        "type": "predicate",
+        "pages": [
+          213
+        ],
+        "params": [
+          "creatures"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "is_ally",
+        "description": "The target is an ally of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          176
+        ]
+      },
+      {
+        "id": "is_chosen_spell",
+        "description": "The spell is the one chosen for this feature (param: choice id).",
+        "params": [
+          "choice"
+        ],
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "is_critical_hit",
+        "description": "The attack roll is a Critical Hit.",
+        "params": [],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "is_enemy",
+        "description": "The target is an enemy of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          181
+        ]
+      },
+      {
+        "id": "is_monster",
+        "description": "The creature is a monster (controlled by the GM).",
+        "type": "predicate",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "item_form_in",
+        "description": "The item is in one of these forms (param: forms).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "forms"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_has_gem",
+        "description": "The item still has at least one gem of this type (param: gem).",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "params": [
+          "gem"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_state",
+        "description": "The item (slug, kind or 'this') is in this state for the creature: worn|wielded|held|possessed|attuned|touching|gripping|ridden|played|controlled|orbiting.",
+        "params": [
+          "item",
+          "state"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "item_variant_is",
+        "description": "The item is of this variant or linked type (param: variant).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "variant"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "known_wild_shape_form",
+        "description": "The Beast form is one the Druid has learned for Wild Shape.",
+        "type": "predicate",
+        "pages": [
+          42
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "lacks_ability_score",
+        "description": "The creature lacks the ability score the roll uses.",
+        "type": "predicate",
+        "pages": [
+          187
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "level_at_least",
+        "description": "The character has at least 'level' levels in 'class' (a class slug, a list of slugs = any of them), or in total when 'class' is omitted.",
+        "params": [
+          "class",
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "leverage_applies",
+        "description": "The Crowbar's leverage can be applied to the Strength check.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "marked_by_spell",
+        "description": "The target is currently marked by the source's spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          59
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "marked_target_at_0_hp",
+        "description": "The creature marked by this spell has dropped to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "minutes_exceed_con_score",
+        "description": "Minutes spent in frigid water exceed the creature's Constitution score.",
+        "type": "predicate",
+        "pages": [
+          195
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "mounted",
+        "description": "The creature is riding a mount.",
         "type": "predicate",
         "pages": [
           15
@@ -2928,139 +3577,13 @@
         "lot": "L04"
       },
       {
-        "id": "in_difficult_terrain",
-        "description": "The space is Difficult Terrain.",
+        "id": "moved_this_turn",
+        "description": "The creature has moved during this turn.",
         "type": "predicate",
         "pages": [
-          181
+          62
         ],
-        "lot": "L04"
-      },
-      {
-        "id": "mounted",
-        "description": "The creature is riding a mount.",
-        "type": "predicate",
-        "pages": [
-          15
-        ],
-        "lot": "L04"
-      },
-      {
-        "id": "lacks_ability_score",
-        "description": "The creature lacks the ability score the roll uses.",
-        "type": "predicate",
-        "pages": [
-          187
-        ],
-        "lot": "L05"
-      },
-      {
-        "id": "has_proficiency",
-        "description": "The creature has proficiency with the skill, tool, save or weapon used (param).",
-        "params": [
-          "item"
-        ],
-        "type": "predicate",
-        "pages": [
-          8
-        ],
-        "lot": "L05"
-      },
-      {
-        "id": "has_expertise",
-        "description": "The creature has Expertise in the skill used.",
-        "params": [
-          "skill"
-        ],
-        "type": "predicate",
-        "pages": [
-          182
-        ],
-        "lot": "L05"
-      },
-      {
-        "id": "influence_check",
-        "description": "The ability check is made to influence the creature.",
-        "type": "predicate",
-        "pages": [
-          182,
-          183
-        ],
-        "lot": "L05"
-      },
-      {
-        "id": "bloodied",
-        "description": "The creature has half its Hit Points or fewer remaining.",
-        "type": "predicate",
-        "pages": [
-          16,
-          177
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "at_zero_hp",
-        "description": "The creature has 0 Hit Points.",
-        "type": "predicate",
-        "pages": [
-          17
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "stable",
-        "description": "The creature is Stable.",
-        "type": "predicate",
-        "pages": [
-          18,
-          188
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "is_monster",
-        "description": "The creature is a monster (controlled by the GM).",
-        "type": "predicate",
-        "pages": [
-          17
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "falls_into_liquid",
-        "description": "The fall ends in water or another liquid.",
-        "type": "predicate",
-        "pages": [
-          182
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "out_of_breath",
-        "description": "The creature has run out of breath or is choking.",
-        "type": "predicate",
-        "pages": [
-          189
-        ],
-        "lot": "L06"
-      },
-      {
-        "id": "wearing_untrained_armor",
-        "description": "The creature wears Light, Medium or Heavy armor it lacks training with.",
-        "type": "predicate",
-        "pages": [
-          177
-        ],
-        "lot": "L08"
-      },
-      {
-        "id": "using_untrained_shield",
-        "description": "The creature uses a Shield it lacks training with.",
-        "type": "predicate",
-        "pages": [
-          177
-        ],
-        "lot": "L08"
+        "lot": "L14"
       },
       {
         "id": "moving_weight_over_carry",
@@ -3072,82 +3595,78 @@
         "lot": "L08"
       },
       {
-        "id": "concentrating",
-        "description": "The creature is concentrating on an effect.",
+        "id": "name_on_page",
+        "description": "The creature's name is on the Gift of the Protectors page.",
         "type": "predicate",
         "pages": [
-          179
+          73
         ],
-        "lot": "L09"
+        "lot": "L14"
       },
       {
-        "id": "has_hand_free",
-        "description": "The creature has a hand free.",
-        "type": "predicate",
-        "pages": [
-          105
-        ],
-        "lot": "L09"
-      },
-      {
-        "id": "can_speak_normally",
-        "description": "The creature can utter words in a normal speaking voice (not gagged or in magical silence).",
-        "type": "predicate",
-        "pages": [
-          105
-        ],
-        "lot": "L09"
-      },
-      {
-        "id": "effect_active",
-        "description": "An effect of the creature (param: entry slug, e.g. barbarian-rage) is active.",
+        "id": "obscured",
+        "description": "The creature or thing looked at is in an area obscured to this degree: light|heavy.",
         "params": [
-          "effect"
+          "degree"
         ],
         "type": "predicate",
         "pages": [
-          28
+          9
+        ]
+      },
+      {
+        "id": "obscured_by_larger_creature",
+        "description": "The creature is obscured only by a creature at least one size larger.",
+        "type": "predicate",
+        "pages": [
+          86
         ],
         "lot": "L14"
       },
       {
-        "id": "wearing_armor_any",
-        "description": "The creature wears any armor.",
+        "id": "on_slippery_surface",
+        "description": "The creature is on a slippery surface, such as ice or oil.",
         "type": "predicate",
         "pages": [
-          29
+          244
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "on_stone_surface",
+        "description": "The creature is on or touching a stone surface.",
+        "type": "predicate",
+        "pages": [
+          84
         ],
         "lot": "L14"
       },
       {
-        "id": "using_shield",
-        "description": "The creature uses a Shield.",
+        "id": "on_vessel",
+        "description": "The creature is on a boat or ship.",
         "type": "predicate",
         "pages": [
-          29
+          221
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "only_monk_weapons_or_unarmed",
+        "description": "The creature is unarmed or wields only Monk weapons.",
+        "type": "predicate",
+        "pages": [
+          50
         ],
         "lot": "L14"
       },
       {
-        "id": "attack_uses_ability",
-        "description": "The attack uses the ability (param).",
-        "params": [
-          "ability"
-        ],
+        "id": "out_of_breath",
+        "description": "The creature has run out of breath or is choking.",
         "type": "predicate",
         "pages": [
-          28
+          189
         ],
-        "lot": "L14"
-      },
-      {
-        "id": "first_attack_this_turn",
-        "description": "It is the creature's first attack roll on its turn.",
-        "type": "predicate",
-        "pages": [
-          29
-        ],
-        "lot": "L14"
+        "lot": "L06"
       },
       {
         "id": "own_turn",
@@ -3159,47 +3678,62 @@
         "lot": "L14"
       },
       {
-        "id": "chosen_by_source",
-        "description": "The creature is one the source chose.",
+        "id": "phantasm_is_dangerous",
+        "description": "The phantasm represents a dangerous creature or hazard and the target is in or within 5 feet of it.",
         "type": "predicate",
         "pages": [
-          30
+          152
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "reduced_by_source",
+        "description": "The source reduced the creature to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          76
         ],
         "lot": "L14"
       },
       {
-        "id": "can_hear_source",
-        "description": "The creature can hear the source.",
+        "id": "requires_hearing",
+        "description": "The ability check requires hearing.",
         "type": "predicate",
         "pages": [
-          31
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "requires_sight",
+        "description": "The ability check requires sight.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "resource_available",
+        "description": "The creature has at least one unexpended use of this resource (param).",
+        "params": [
+          "resource"
+        ],
+        "type": "predicate",
+        "pages": [
+          48
         ],
         "lot": "L14"
       },
       {
-        "id": "holds_bardic_inspiration_die",
-        "description": "The creature has an unexpended Bardic Inspiration die.",
-        "type": "predicate",
-        "pages": [
-          31
+        "id": "resource_empty",
+        "description": "The creature has no uses of this resource left (param).",
+        "params": [
+          "resource"
         ],
-        "lot": "L14"
-      },
-      {
-        "id": "check_uses_unproficient_skill",
-        "description": "The ability check uses a skill the creature lacks proficiency in.",
         "type": "predicate",
         "pages": [
-          32
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "check_adds_proficiency_bonus",
-        "description": "The check already uses the Proficiency Bonus.",
-        "type": "predicate",
-        "pages": [
-          32
+          43
         ],
         "lot": "L14"
       },
@@ -3228,227 +3762,25 @@
         "lot": "L14"
       },
       {
-        "id": "check_uses_skill",
-        "description": "The ability check uses this skill (param).",
+        "id": "roll_uses_ability",
+        "description": "The D20 Test uses this ability (param).",
         "params": [
-          "skill"
+          "ability"
         ],
         "type": "predicate",
         "pages": [
-          37
+          157
         ],
-        "lot": "L14"
+        "lot": "L19"
       },
       {
-        "id": "holds_item",
-        "description": "The creature holds or presents an item of this kind (param).",
-        "params": [
-          "item"
-        ],
+        "id": "roller_is_source",
+        "description": "The creature making the roll is the source of this effect (e.g. the charmer).",
         "type": "predicate",
         "pages": [
-          37
+          178
         ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_uses_weapon",
-        "description": "The attack roll is made using a weapon.",
-        "type": "predicate",
-        "pages": [
-          38
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "cantrip_of_class",
-        "description": "The spell is a cantrip of this class (param) for the creature.",
-        "params": [
-          "class"
-        ],
-        "type": "predicate",
-        "pages": [
-          38
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "spell_cast_with_slot",
-        "description": "The spell was cast with a spell slot.",
-        "type": "predicate",
-        "pages": [
-          40
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "heals_other_creature",
-        "description": "The spell restores Hit Points to a creature other than the caster.",
-        "type": "predicate",
-        "pages": [
-          40
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "class_level_at_least",
-        "description": "The creature's level in a class is at least N (params: class, level).",
-        "params": [
-          "class",
-          "level"
-        ],
-        "type": "predicate",
-        "pages": [
-          40
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "known_wild_shape_form",
-        "description": "The Beast form is one the Druid has learned for Wild Shape.",
-        "type": "predicate",
-        "pages": [
-          42
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "resource_empty",
-        "description": "The creature has no uses of this resource left (param).",
-        "params": [
-          "resource"
-        ],
-        "type": "predicate",
-        "pages": [
-          43
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "wild_shape_form_attack",
-        "description": "The attack is a Beast form's attack made in Wild Shape.",
-        "type": "predicate",
-        "pages": [
-          43
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "resource_available",
-        "description": "The creature has at least one unexpended use of this resource (param).",
-        "params": [
-          "resource"
-        ],
-        "type": "predicate",
-        "pages": [
-          48
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "used_bonus_action",
-        "description": "The triggering feature was activated with a Bonus Action.",
-        "type": "predicate",
-        "pages": [
-          48
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_mastered_weapon",
-        "description": "The attack uses a weapon whose mastery property the creature can use.",
-        "type": "predicate",
-        "pages": [
-          48
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_is_unarmed_strike",
-        "description": "The attack is an Unarmed Strike.",
-        "type": "predicate",
-        "pages": [
-          49
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "in_combat",
-        "description": "The creature is in combat.",
-        "type": "predicate",
-        "pages": [
-          49
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "has_heroic_inspiration",
-        "description": "The creature has Heroic Inspiration.",
-        "type": "predicate",
-        "pages": [
-          49
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "only_monk_weapons_or_unarmed",
-        "description": "The creature is unarmed or wields only Monk weapons.",
-        "type": "predicate",
-        "pages": [
-          50
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_monk_weapon",
-        "description": "The attack uses a Monk weapon.",
-        "type": "predicate",
-        "pages": [
-          50
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "damage_reduced_to_zero",
-        "description": "The triggering attack's damage was reduced to 0.",
-        "type": "predicate",
-        "pages": [
-          51
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "spent_focus_point",
-        "description": "A Focus Point was expended for the triggering use.",
-        "type": "predicate",
-        "pages": [
-          51
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "used_feature_this_trigger",
-        "description": "The creature used this feature (param) for the same trigger.",
-        "params": [
-          "feature"
-        ],
-        "type": "predicate",
-        "pages": [
-          52
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_from_feature",
-        "description": "The attack or action was granted by this feature (param).",
-        "params": [
-          "feature"
-        ],
-        "type": "predicate",
-        "pages": [
-          52
-        ],
-        "lot": "L14"
+        "lot": "L03"
       },
       {
         "id": "same_plane_as_target",
@@ -3460,207 +3792,77 @@
         "lot": "L14"
       },
       {
-        "id": "in_aura",
-        "description": "The creature is inside the source's aura (param: feature slug).",
+        "id": "save_against",
+        "description": "The saving throw is against: source (spell|magic|spell_or_magic|contagion), spell (slug), condition (slug), hazard (slug), types (creature types causing the effect), effect (kind of effect, e.g. breath_weapon, possession), kind (concentration), modified_by (e.g. extended_spell).",
         "params": [
-          "aura"
-        ],
-        "type": "predicate",
-        "pages": [
-          55
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_melee_weapon",
-        "description": "The attack roll uses a Melee weapon.",
-        "type": "predicate",
-        "pages": [
-          55
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "holds_melee_weapon",
-        "description": "The creature holds a Melee weapon.",
-        "type": "predicate",
-        "pages": [
-          56
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_chosen_weapon",
-        "description": "The attack uses the weapon chosen for the effect.",
-        "type": "predicate",
-        "pages": [
-          56
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "forced_by_creature_type",
-        "description": "The saving throw is forced by a creature of this type (param).",
-        "params": [
-          "type"
-        ],
-        "type": "predicate",
-        "pages": [
-          57
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "marked_by_spell",
-        "description": "The target is currently marked by the source's spell (param: spell slug).",
-        "params": [
-          "spell"
-        ],
-        "type": "predicate",
-        "pages": [
-          59
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "target_missing_hit_points",
-        "description": "The target is missing any of its Hit Points.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_is_opportunity_attack",
-        "description": "The attack is an Opportunity Attack.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attacker_is_trigger_creature",
-        "description": "The attacker is the creature that caused the trigger.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_weapon_property",
-        "description": "The attack uses a weapon with this property (param).",
-        "params": [
-          "property"
-        ],
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_ranged_weapon",
-        "description": "The attack uses a Ranged weapon.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "has_advantage_on_roll",
-        "description": "The creature has Advantage on the roll.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "has_disadvantage_on_roll",
-        "description": "The creature has Disadvantage on the roll.",
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "ally_within_feet_of_target",
-        "description": "An ally without the Incapacitated condition is within N feet (param) of the target.",
-        "params": [
-          "feet"
-        ],
-        "type": "predicate",
-        "pages": [
-          61
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "moved_this_turn",
-        "description": "The creature has moved during this turn.",
-        "type": "predicate",
-        "pages": [
-          62
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "check_uses_own_proficiency",
-        "description": "The ability check uses one of the creature's skill or tool proficiencies.",
-        "type": "predicate",
-        "pages": [
-          63
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "has_condition_from",
-        "description": "The creature has the condition (param) from the given source (param).",
-        "params": [
+          "source",
+          "spell",
           "condition",
-          "source"
+          "hazard",
+          "types",
+          "effect",
+          "kind",
+          "modified_by"
         ],
         "type": "predicate",
         "pages": [
-          64
-        ],
-        "lot": "L14"
+          9
+        ]
       },
       {
-        "id": "spell_of_class",
-        "description": "The spell is a spell of this class (param) for the creature.",
+        "id": "size_at_most_relative",
+        "description": "The affected creature is Tiny or 'steps' or more sizes smaller than the other creature.",
         "params": [
-          "class"
+          "steps"
         ],
         "type": "predicate",
         "pages": [
-          65
+          182
         ],
-        "lot": "L14"
+        "lot": "L03"
       },
       {
-        "id": "spell_duration_at_least_minutes",
-        "description": "The spell's duration is at least N minutes (param).",
-        "params": [
-          "minutes"
-        ],
+        "id": "social_interaction",
+        "description": "The ability check is made to interact socially with the affected creature.",
         "type": "predicate",
         "pages": [
-          67
+          178
         ],
-        "lot": "L14"
+        "lot": "L03"
       },
       {
-        "id": "concentration_save_for_extended_spell",
-        "description": "A saving throw to maintain Concentration on a spell modified by Extended Spell.",
+        "id": "source_in_line_of_sight",
+        "description": "The source of the effect is within the affected creature's line of sight.",
         "type": "predicate",
         "pages": [
-          67
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "space_occupied",
+        "description": "The arrival space is occupied.",
+        "type": "predicate",
+        "pages": [
+          129
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "speed_is_zero",
+        "description": "The creature's Speed is 0.",
+        "type": "predicate",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "spell_cast_with_slot",
+        "description": "The spell was cast with a spell slot.",
+        "type": "predicate",
+        "pages": [
+          40
         ],
         "lot": "L14"
       },
@@ -3677,8 +3879,11 @@
         "lot": "L14"
       },
       {
-        "id": "cast_level_1_plus_spell_this_turn",
-        "description": "The creature has already cast a level 1+ spell this turn.",
+        "id": "spell_duration_at_least_minutes",
+        "description": "The spell's duration is at least N minutes (param).",
+        "params": [
+          "minutes"
+        ],
         "type": "predicate",
         "pages": [
           67
@@ -3686,154 +3891,46 @@
         "lot": "L14"
       },
       {
-        "id": "spell_targets_more_at_higher_level",
-        "description": "The spell can be cast with a higher-level slot to target an additional creature.",
+        "id": "spell_level_above_castable",
+        "description": "The spell is of a higher level than the creature can normally cast.",
         "type": "predicate",
         "pages": [
-          67
+          244
         ],
-        "lot": "L14"
+        "lot": "L32"
       },
       {
-        "id": "on_stone_surface",
-        "description": "The creature is on or touching a stone surface.",
-        "type": "predicate",
-        "pages": [
-          84
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "big_enough_space",
-        "description": "The creature is in a space big enough for the new size.",
-        "type": "predicate",
-        "pages": [
-          85
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "obscured_by_larger_creature",
-        "description": "The creature is obscured only by a creature at least one size larger.",
-        "type": "predicate",
-        "pages": [
-          86
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "character_level_at_least",
-        "description": "Character level is at least 'level'.",
+        "id": "spell_level_in",
+        "description": "The spell, as cast, is of a level within [min, max] (either bound optional).",
         "params": [
-          "level"
+          "min",
+          "max"
         ],
         "type": "predicate",
         "pages": [
-          84
-        ],
-        "lot": "L14"
+          9
+        ]
       },
       {
-        "id": "save_against_condition",
-        "description": "The saving throw is made to avoid or end the condition (param).",
+        "id": "spell_of_class",
+        "description": "The spell is a spell of this class for the creature; cantrip limits it to cantrips.",
         "params": [
-          "condition"
+          "class",
+          "cantrip"
         ],
         "type": "predicate",
         "pages": [
-          84
-        ],
-        "lot": "L14"
+          9
+        ]
       },
       {
-        "id": "check_to_end_condition",
-        "description": "The ability check is made to end the condition (param).",
-        "params": [
-          "condition"
-        ],
+        "id": "spell_on_your_list",
+        "description": "The spell is on the creature's spell list.",
         "type": "predicate",
         "pages": [
-          85
+          244
         ],
-        "lot": "L14"
-      },
-      {
-        "id": "save_against_spell",
-        "description": "The saving throw is against this spell (param: spell slug).",
-        "params": [
-          "spell"
-        ],
-        "type": "predicate",
-        "pages": [
-          72
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "is_chosen_spell",
-        "description": "The spell is the one chosen for this feature (param: choice id).",
-        "params": [
-          "choice"
-        ],
-        "type": "predicate",
-        "pages": [
-          72
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "concentration_save",
-        "description": "The saving throw is made to maintain Concentration.",
-        "type": "predicate",
-        "pages": [
-          72
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "attack_with_pact_weapon",
-        "description": "The attack uses the Warlock's pact weapon.",
-        "type": "predicate",
-        "pages": [
-          72
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "name_on_page",
-        "description": "The creature's name is on the Gift of the Protectors page.",
-        "type": "predicate",
-        "pages": [
-          73
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "in_dim_light",
-        "description": "The creature is in an area of Dim Light.",
-        "type": "predicate",
-        "pages": [
-          74
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "in_darkness",
-        "description": "The creature is in an area of Darkness.",
-        "type": "predicate",
-        "pages": [
-          74
-        ],
-        "lot": "L14"
-      },
-      {
-        "id": "reduced_by_source",
-        "description": "The source reduced the creature to 0 Hit Points.",
-        "type": "predicate",
-        "pages": [
-          76
-        ],
-        "lot": "L14"
+        "lot": "L32"
       },
       {
         "id": "spell_school",
@@ -3848,15 +3945,168 @@
         "lot": "L14"
       },
       {
-        "id": "spell_slot_level_between",
-        "description": "The spell slot level is within [min, max] (params).",
+        "id": "spell_targeted_only_you",
+        "description": "The spell targets only the creature and creates no area of effect.",
+        "type": "predicate",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_targets_more_at_higher_level",
+        "description": "The spell can be cast with a higher-level slot to target an additional creature.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spent_focus_point",
+        "description": "A Focus Point was expended for the triggering use.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spirit_restrains_creature",
+        "description": "The spirit already has a creature Restrained.",
+        "type": "predicate",
+        "pages": [
+          119
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "stable",
+        "description": "The creature is Stable.",
+        "type": "predicate",
+        "pages": [
+          18,
+          188
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "target_grappled_by_source",
+        "description": "The target has the Grappled condition from the source.",
+        "type": "predicate",
+        "pages": [
+          87
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "target_in_area",
+        "description": "The attack's target is within the spell's area.",
+        "type": "predicate",
+        "pages": [
+          146
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "target_is_marked",
+        "description": "The target is the creature marked by this spell.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "target_is_object",
+        "description": "The target is an object.",
+        "type": "predicate",
+        "pages": [
+          248
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "target_is_source",
+        "description": "The target of the roll is the source of this effect (e.g. the grappler).",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_size_at_most",
+        "description": "The target is of this size or smaller (param: size).",
         "params": [
-          "min",
-          "max"
+          "size"
         ],
         "type": "predicate",
         "pages": [
-          82
+          254
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "terrain_from",
+        "description": "The Difficult Terrain is created by these (param: source).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "source"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "took_damage_since_turn_start",
+        "description": "The creature took damage since the start of its last turn.",
+        "type": "predicate",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "travel_hours_over",
+        "description": "The group has traveled more than N hours today (param: hours).",
+        "params": [
+          "hours"
+        ],
+        "type": "predicate",
+        "pages": [
+          192
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "underwater",
+        "description": "The creature or attack is underwater.",
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "used_bonus_action",
+        "description": "The triggering feature was activated with a Bonus Action.",
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_feature_this_trigger",
+        "description": "The creature used this feature (param) for the same trigger.",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          52
         ],
         "lot": "L14"
       },
@@ -3873,13 +4123,51 @@
         "lot": "L14"
       },
       {
-        "id": "target_grappled_by_source",
-        "description": "The target has the Grappled condition from the source.",
+        "id": "using_shield",
+        "description": "The creature uses a Shield.",
         "type": "predicate",
         "pages": [
-          87
+          29
         ],
-        "lot": "L15"
+        "lot": "L14"
+      },
+      {
+        "id": "using_untrained_shield",
+        "description": "The creature uses a Shield it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "wearing_armor",
+        "description": "The creature wears armor of the category (param: light, medium, heavy).",
+        "params": [
+          "category"
+        ],
+        "type": "predicate",
+        "pages": [
+          92
+        ]
+      },
+      {
+        "id": "wearing_armor_any",
+        "description": "The creature wears any armor.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "wearing_untrained_armor",
+        "description": "The creature wears Light, Medium or Heavy armor it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
       },
       {
         "id": "wielded_two_handed",
@@ -3891,1020 +4179,22 @@
         "lot": "L15"
       },
       {
-        "id": "extra_attack_from_light_property",
-        "description": "The attack is the extra attack from using a Light weapon.",
-        "type": "predicate",
-        "pages": [
-          88
-        ],
-        "lot": "L15"
-      },
-      {
-        "id": "adds_ability_mod_to_damage",
-        "description": "The attack already adds the ability modifier to its damage.",
-        "type": "predicate",
-        "pages": [
-          88
-        ],
-        "lot": "L15"
-      },
-      {
-        "id": "attacker_can_see_target",
-        "description": "The attacker can see the target.",
-        "type": "predicate",
-        "pages": [
-          129
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "target_is_marked",
-        "description": "The target is the creature marked by this spell.",
-        "type": "predicate",
-        "pages": [
-          140
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "marked_target_at_0_hp",
-        "description": "The creature marked by this spell has dropped to 0 Hit Points.",
-        "type": "predicate",
-        "pages": [
-          140
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "check_uses_ability",
-        "description": "The ability check uses this ability (param).",
+        "id": "within_feet",
+        "description": "A creature (who: self by default, or attacker|ally|enemy|...) is within 'feet' of the reference (of: self by default, or target|item|effect); not_incapacitated / sees qualify that creature; farther inverts the test (more than 'feet').",
         "params": [
-          "ability"
-        ],
-        "type": "predicate",
-        "pages": [
-          140
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "check_to_find_marked_target",
-        "description": "The check is made to find the marked creature.",
-        "type": "predicate",
-        "pages": [
-          141
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "attacker_creature_type_in",
-        "description": "The attacker's creature type is one of these (param).",
-        "params": [
-          "types"
-        ],
-        "type": "predicate",
-        "pages": [
-          156
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "source_creature_type_in",
-        "description": "The effect's source creature is of one of these types (param).",
-        "params": [
-          "types"
-        ],
-        "type": "predicate",
-        "pages": [
-          156
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "save_against_effect_of_types",
-        "description": "The save is against possession, Charmed or Frightened caused by a creature of these types (param).",
-        "params": [
-          "types"
-        ],
-        "type": "predicate",
-        "pages": [
-          156
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "damage_from_spell",
-        "description": "The damage comes from this spell (param).",
-        "params": [
-          "spell"
-        ],
-        "type": "predicate",
-        "pages": [
-          162
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "doesnt_sleep",
-        "description": "The creature doesn't sleep.",
-        "type": "predicate",
-        "pages": [
-          163
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "immune_to_condition",
-        "description": "The creature has Immunity to this condition (param).",
-        "params": [
-          "condition"
-        ],
-        "type": "predicate",
-        "pages": [
-          163
-        ],
-        "lot": "L18"
-      },
-      {
-        "id": "attacker_perceives_with",
-        "description": "The attacker perceives the target with one of these senses (param).",
-        "params": [
-          "senses"
-        ],
-        "type": "predicate",
-        "pages": [
-          114
-        ],
-        "lot": "L19"
-      },
-      {
-        "id": "in_spell_area",
-        "description": "The creature is in the spell's area.",
-        "type": "predicate",
-        "pages": [
-          137
-        ],
-        "lot": "L19"
-      },
-      {
-        "id": "phantasm_is_dangerous",
-        "description": "The phantasm represents a dangerous creature or hazard and the target is in or within 5 feet of it.",
-        "type": "predicate",
-        "pages": [
-          152
-        ],
-        "lot": "L19"
-      },
-      {
-        "id": "roll_uses_ability",
-        "description": "The D20 Test uses this ability (param).",
-        "params": [
-          "ability"
-        ],
-        "type": "predicate",
-        "pages": [
-          157
-        ],
-        "lot": "L19"
-      },
-      {
-        "id": "in_burning_webs",
-        "description": "The creature starts its turn in webs that are burning.",
-        "type": "predicate",
-        "pages": [
-          174
-        ],
-        "lot": "L19"
-      },
-      {
-        "id": "attack_targets_source",
-        "description": "The attack targets the source.",
-        "type": "predicate",
-        "pages": [
-          113
-        ],
-        "lot": "L20"
-      },
-      {
-        "id": "within_feet_of_effect",
-        "description": "The creature is within N feet (param) of the effect.",
-        "params": [
-          "feet"
-        ],
-        "type": "predicate",
-        "pages": [
-          118
-        ],
-        "lot": "L20"
-      },
-      {
-        "id": "has_line_of_sight_to_source",
-        "description": "The creature has line of sight to the source.",
-        "type": "predicate",
-        "pages": [
-          130
-        ],
-        "lot": "L20"
-      },
-      {
-        "id": "target_in_area",
-        "description": "The attack's target is within the spell's area.",
-        "type": "predicate",
-        "pages": [
-          146
-        ],
-        "lot": "L20"
-      },
-      {
-        "id": "cr_at_most_target",
-        "description": "The form's Challenge Rating is at most the target's (or its level).",
-        "type": "predicate",
-        "pages": [
-          153
-        ],
-        "lot": "L21"
-      },
-      {
-        "id": "spirit_restrains_creature",
-        "description": "The spirit already has a creature Restrained.",
-        "type": "predicate",
-        "pages": [
-          119
-        ],
-        "lot": "L22"
-      },
-      {
-        "id": "creature_type_chosen",
-        "description": "The creature is of a type chosen for the effect.",
-        "type": "predicate",
-        "pages": [
-          139
-        ],
-        "lot": "L22"
-      },
-      {
-        "id": "creature_type_in",
-        "description": "The creature's type is one of these (param).",
-        "params": [
-          "types"
-        ],
-        "type": "predicate",
-        "pages": [
-          124
-        ],
-        "lot": "L24"
-      },
-      {
-        "id": "space_occupied",
-        "description": "The arrival space is occupied.",
-        "type": "predicate",
-        "pages": [
-          129
-        ],
-        "lot": "L24"
-      },
-      {
-        "id": "dead_at_least_days",
-        "description": "The creature has been dead at least N days (param).",
-        "params": [
-          "days"
-        ],
-        "type": "predicate",
-        "pages": [
-          159
-        ],
-        "lot": "L24"
-      },
-      {
-        "id": "cr_at_most",
-        "description": "The form's Challenge Rating is at most N (param).",
-        "params": [
-          "cr"
-        ],
-        "type": "predicate",
-        "pages": [
-          108
-        ],
-        "lot": "L25"
-      },
-      {
-        "id": "creature_kind_specified",
-        "description": "The creature is of the kind specified when the spell was cast.",
-        "type": "predicate",
-        "pages": [
-          110
-        ],
-        "lot": "L25"
-      },
-      {
-        "id": "farther_than_feet_from_target",
-        "description": "The creature is more than N feet (param) from the target.",
-        "params": [
-          "feet"
-        ],
-        "type": "predicate",
-        "pages": [
-          110
-        ],
-        "lot": "L25"
-      },
-      {
-        "id": "attack_is_melee",
-        "description": "The attack is a melee attack roll.",
-        "type": "predicate",
-        "pages": [
-          141
-        ],
-        "lot": "L25"
-      },
-      {
-        "id": "can_see_effect",
-        "description": "The creature can see the effect.",
-        "type": "predicate",
-        "pages": [
-          155
-        ],
-        "lot": "L26"
-      },
-      {
-        "id": "ability_score_below",
-        "description": "The creature's ability score (param) is below a value (param).",
-        "params": [
-          "ability",
-          "score"
-        ],
-        "type": "predicate",
-        "pages": [
-          89
-        ],
-        "lot": "L28"
-      },
-      {
-        "id": "attack_with_light_weapon",
-        "description": "The attack uses a Light weapon.",
-        "type": "predicate",
-        "pages": [
-          89
-        ],
-        "lot": "L28"
-      },
-      {
-        "id": "wearing_item",
-        "description": "The creature wears this item (param: item slug).",
-        "params": [
-          "item"
-        ],
-        "type": "predicate",
-        "pages": [
-          92
-        ],
-        "lot": "L29"
-      },
-      {
-        "id": "wielding_item",
-        "description": "The creature wields this item (param: item slug).",
-        "params": [
-          "item"
-        ],
-        "type": "predicate",
-        "pages": [
-          92
-        ],
-        "lot": "L29"
-      },
-      {
-        "id": "save_against_hazard",
-        "description": "The saving throw is against this hazard (param).",
-        "params": [
-          "hazard"
-        ],
-        "type": "predicate",
-        "pages": [
-          96
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "consulting_accurate_source",
-        "description": "The creature consults an accurate source about the topic or place.",
-        "type": "predicate",
-        "pages": [
-          96
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "impersonating_costume_subject",
-        "description": "The check is made to impersonate the person or type the Costume represents.",
-        "type": "predicate",
-        "pages": [
-          97
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "leverage_applies",
-        "description": "The Crowbar's leverage can be applied to the Strength check.",
-        "type": "predicate",
-        "pages": [
-          97
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "appraising_detailed_item",
-        "description": "The check is made to appraise or inspect a highly detailed item.",
-        "type": "predicate",
-        "pages": [
-          98
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "influencing_indifferent_humanoid_within_feet",
-        "description": "The check influences an Indifferent Humanoid within N feet (param).",
-        "params": [
-          "feet"
-        ],
-        "type": "predicate",
-        "pages": [
-          99
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "check_for_jump",
-        "description": "The check is part of a High or Long Jump.",
-        "type": "predicate",
-        "pages": [
-          99
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "breaking_down_door",
-        "description": "The check is made to break down a door.",
-        "type": "predicate",
-        "pages": [
-          99
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "helped_by_other_character",
-        "description": "Another character helps with the ram.",
-        "type": "predicate",
-        "pages": [
-          99
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "check_uses_proficient_tool",
-        "description": "The ability check uses a tool the creature is proficient with.",
-        "type": "predicate",
-        "pages": [
-          93
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "check_uses_proficient_skill",
-        "description": "The ability check also uses a skill the creature is proficient in.",
-        "type": "predicate",
-        "pages": [
-          93
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "check_to_remain_mounted",
-        "description": "The ability check is made to remain mounted.",
-        "type": "predicate",
-        "pages": [
-          100
-        ],
-        "lot": "L30"
-      },
-      {
-        "id": "attuned_to_item",
-        "description": "The creature is attuned to the item (param: item).",
-        "type": "predicate",
-        "pages": [
-          102
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "possesses_item",
-        "description": "The item is in the creature's possession (param: item).",
-        "type": "predicate",
-        "pages": [
-          213
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "within_feet_of_item",
-        "description": "The creature is within N feet of the item (params: feet, item).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
+          "who",
+          "of",
           "feet",
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "riding_item",
-        "description": "The creature rides the item, e.g. astride a broom (param: item).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "gripping_item",
-        "description": "The creature grips the item's edges, e.g. a cloak used to fly (param: item).",
-        "type": "predicate",
-        "pages": [
-          216
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "in_item_light",
-        "description": "The creature is within the light the item sheds (param: item).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "attack_is_ranged",
-        "description": "The attack roll is a ranged attack (weapon, spell or other).",
-        "type": "predicate",
-        "pages": [
-          211
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "class_is",
-        "description": "The creature has a level in one of these classes (param: classes).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
-          "classes"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "spell_level_is",
-        "description": "The spell being cast is of this level (param: level).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
-          "level"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "is_species",
-        "description": "The creature is of one of these species or kinds (param: species).",
-        "type": "predicate",
-        "pages": [
-          213
-        ],
-        "params": [
-          "species"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "interacting_with",
-        "description": "The check is made to interact with these creatures (param: creatures).",
-        "type": "predicate",
-        "pages": [
-          213
-        ],
-        "params": [
-          "creatures"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "terrain_from",
-        "description": "The Difficult Terrain is created by these (param: source).",
-        "type": "predicate",
-        "pages": [
-          214
-        ],
-        "params": [
-          "source"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "check_for_movement",
-        "description": "The check is made to move in one of these modes, e.g. climb or swim (param: modes).",
-        "type": "predicate",
-        "pages": [
-          224
-        ],
-        "params": [
-          "modes"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "has_sense",
-        "description": "The creature has this sense (param: sense).",
-        "type": "predicate",
-        "pages": [
-          224
-        ],
-        "params": [
-          "sense"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "creature_has_tag",
-        "description": "The target has one of these creature tags, e.g. Demon (param: tags).",
-        "type": "predicate",
-        "pages": [
-          218
-        ],
-        "params": [
-          "tags"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "source_has_tag",
-        "description": "The effect's source has one of these creature tags (param: tags).",
-        "type": "predicate",
-        "pages": [
-          218
-        ],
-        "params": [
-          "tags"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "controls_item",
-        "description": "The creature controls the item (an Artifact such as a Dragon Orb) (param: item).",
-        "type": "predicate",
-        "pages": [
-          218
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "attuned_giant_item",
-        "description": "The creature wears and is attuned to a Belt of Giant Strength or Gauntlets of Ogre Power.",
-        "type": "predicate",
-        "pages": [
-          224
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "on_vessel",
-        "description": "The creature is on a boat or ship.",
-        "type": "predicate",
-        "pages": [
-          221
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "can_use_item",
-        "description": "The creature meets the item's requirements to use it (param: item).",
-        "type": "predicate",
-        "pages": [
-          229
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "failed_save_against_spell",
-        "description": "The damage results from failing a saving throw against a spell.",
-        "type": "predicate",
-        "pages": [
-          225
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "hp_at_most",
-        "description": "The target has at most N Hit Points (param: hp).",
-        "type": "predicate",
-        "pages": [
-          229
-        ],
-        "params": [
-          "hp"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "hp_below",
-        "description": "The target has fewer than N Hit Points (param: hp).",
-        "type": "predicate",
-        "pages": [
-          233
-        ],
-        "params": [
-          "hp"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "item_has_gem",
-        "description": "The item still has at least one gem of this type (param: gem).",
-        "type": "predicate",
-        "pages": [
-          225
-        ],
-        "params": [
-          "gem"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "item_orbiting",
-        "description": "The Ioun Stone orbits the creature's head (param: item).",
-        "type": "predicate",
-        "pages": [
-          227
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "save_against_spell_or_magic",
-        "description": "The saving throw is against a spell or other magical effect.",
-        "type": "predicate",
-        "pages": [
-          226
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "damage_from_falling",
-        "description": "The damage comes from a fall.",
-        "type": "predicate",
-        "pages": [
-          238
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "has_marked_target",
-        "description": "The creature has a living sworn enemy or other marked target from the item.",
-        "type": "predicate",
-        "pages": [
-          233
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "item_form_in",
-        "description": "The item is in one of these forms (param: forms).",
-        "type": "predicate",
-        "pages": [
-          237
-        ],
-        "params": [
-          "forms"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "item_variant_is",
-        "description": "The item is of this variant or linked type (param: variant).",
-        "type": "predicate",
-        "pages": [
-          237
-        ],
-        "params": [
-          "variant"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "playing_item",
-        "description": "The creature is playing the instrument (param: item).",
-        "type": "predicate",
-        "pages": [
-          234
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "spell_level_at_most",
-        "description": "The spell is of level N or lower (param: level).",
-        "type": "predicate",
-        "pages": [
-          239
-        ],
-        "params": [
-          "level"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "spell_targeted_only_you",
-        "description": "The spell targets only the creature and creates no area of effect.",
-        "type": "predicate",
-        "pages": [
-          239
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "attack_is_spell",
-        "description": "The attack roll is a spell attack.",
-        "type": "predicate",
-        "pages": [
-          244
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "on_slippery_surface",
-        "description": "The creature is on a slippery surface, such as ice or oil.",
-        "type": "predicate",
-        "pages": [
-          244
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "target_is_object",
-        "description": "The target is an object.",
-        "type": "predicate",
-        "pages": [
-          248
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "touching_item",
-        "description": "The creature touches the item (param: item).",
-        "type": "predicate",
-        "pages": [
-          243
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "check_to_control_item",
-        "description": "The check is made to control this item (param: item).",
-        "type": "predicate",
-        "pages": [
-          249
-        ],
-        "params": [
-          "item"
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "has_head",
-        "description": "The creature has at least one head.",
-        "type": "predicate",
-        "pages": [
-          250
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "took_damage_since_turn_start",
-        "description": "The creature took damage since the start of its last turn.",
-        "type": "predicate",
-        "pages": [
-          215
-        ],
-        "lot": "L31"
-      },
-      {
-        "id": "spell_on_your_list",
-        "description": "The spell is on the creature's spell list.",
-        "type": "predicate",
-        "pages": [
-          244
-        ],
-        "lot": "L32"
-      },
-      {
-        "id": "spell_level_above_castable",
-        "description": "The spell is of a higher level than the creature can normally cast.",
-        "type": "predicate",
-        "pages": [
-          244
-        ],
-        "lot": "L32"
-      },
-      {
-        "id": "target_size_at_most",
-        "description": "The target is of this size or smaller (param: size).",
-        "params": [
-          "size"
+          "item",
+          "not_incapacitated",
+          "sees",
+          "farther"
         ],
         "type": "predicate",
         "pages": [
-          254
+          186
         ],
-        "lot": "L33"
-      },
-      {
-        "id": "in_sunlight",
-        "description": "The creature is in sunlight.",
-        "type": "predicate",
-        "pages": [
-          256
-        ],
-        "lot": "L33"
-      },
-      {
-        "id": "in_lightly_obscured_area",
-        "description": "The thing the creature tries to see is in a Lightly Obscured area.",
-        "type": "predicate",
-        "pages": [
-          11
-        ],
-        "lot": "L41"
-      },
-      {
-        "id": "travel_hours_over",
-        "description": "The group has traveled more than N hours today (param: hours).",
-        "params": [
-          "hours"
-        ],
-        "type": "predicate",
-        "pages": [
-          192
-        ],
-        "lot": "L41"
-      },
-      {
-        "id": "save_against_contagion",
-        "description": "The saving throw is made to fight off a magical contagion.",
-        "type": "predicate",
-        "pages": [
-          194
-        ],
-        "lot": "L41"
-      },
-      {
-        "id": "minutes_exceed_con_score",
-        "description": "Minutes spent in frigid water exceed the creature's Constitution score.",
-        "type": "predicate",
-        "pages": [
-          195
-        ],
-        "lot": "L41"
+        "lot": "L03"
       }
     ],
     "frequencies": [

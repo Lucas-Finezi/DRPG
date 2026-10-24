@@ -63,8 +63,9 @@
         "var": "item_bonus"
       },
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       }
@@ -75,8 +76,9 @@
         "half_cover_against_spell_attacks"
       ],
       "when": {
-        "pred": "holds_item",
+        "pred": "item_state",
         "args": {
+          "state": "held",
           "item": "this"
         }
       },

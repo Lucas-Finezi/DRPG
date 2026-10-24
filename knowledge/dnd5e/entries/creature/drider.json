@@ -172,7 +172,10 @@
       "when": {
         "all": [
           {
-            "pred": "in_sunlight"
+            "pred": "in_light",
+            "args": {
+              "level": "sunlight"
+            }
           },
           {
             "any": [
@@ -183,7 +186,7 @@
                 }
               },
               {
-                "pred": "check_uses_skill",
+                "pred": "check_uses",
                 "args": {
                   "skill": "perception"
                 }

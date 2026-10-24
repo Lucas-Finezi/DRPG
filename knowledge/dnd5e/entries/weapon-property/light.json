@@ -27,7 +27,13 @@
         "event": "takes_attack_action"
       },
       "condition": {
-        "pred": "attack_with_light_weapon"
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "property": [
+            "light"
+          ]
+        }
       },
       "then": [
         {
