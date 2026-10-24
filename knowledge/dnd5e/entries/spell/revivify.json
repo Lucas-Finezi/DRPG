@@ -1,0 +1,90 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/revivify",
+  "kind": "spell",
+  "name": "Revivify",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      159
+    ],
+    "section": "Spells/Spell Descriptions/Revivify",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Necromancy (Cleric, Druid, Paladin, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a diamond worth 300+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nYou touch a creature that has died within the last minute. That creature revives with 1 Hit Point. This spell can’t revive a creature that has died of old age, nor does it restore any missing body parts.",
+  "facets": {
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a diamond worth 300+ GP, which the spell consumes",
+      "material_cost_gp": 300,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp",
+      "mode": "set",
+      "value": 1,
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "note": "A creature dead for less than a minute revives; not death from old age; missing parts aren't restored."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Necromancy (Cleric, Druid, Paladin, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a diamond worth 300+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a creature that has died within the last minute. That creature revives with 1 Hit Point. This spell can’t revive a creature that has died of old age, nor does it restore any missing body parts.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

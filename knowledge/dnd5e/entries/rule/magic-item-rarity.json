@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-rarity",
+  "kind": "rule",
+  "name": "Magic Item Rarity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      205
+    ],
+    "section": "Magic Items/Magic Item Rarity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "Every magic item has a rarity, which provides a rough measure of an item’s power relative to other magic items. The rarities are shown in the Magic Item Rarities and Values table.\n\nCommon magic items, such as a *Potion of Healing*, are the most plentiful. Artifacts, such as the *Dragon Orb*, are priceless, unique, and difficult to acquire.",
+  "data": {
+    "rules": [
+      {
+        "id": "rarities",
+        "values": [
+          "common",
+          "uncommon",
+          "rare",
+          "very_rare",
+          "legendary",
+          "artifact"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Every magic item has a rarity, which provides a rough measure of an item’s power relative to other magic items. The rarities are shown in the Magic Item Rarities and Values table.\n\nCommon magic items, such as a *Potion of Healing*, are the most plentiful. Artifacts, such as the *Dragon Orb*, are priceless, unique, and difficult to acquire.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/case-crossbow-bolt",
+  "kind": "gear",
+  "name": "Case, Crossbow Bolt",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      96
+    ],
+    "section": "Equipment/Adventuring Gear/Case, Crossbow Bolt",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Crossbow Bolt Case holds up to 20 Bolts.",
+  "facets": {
+    "cost_cp": 100
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "gp",
+      "cp": 100
+    },
+    "weight_lb": 1
+  },
+  "coverage": [
+    {
+      "text": "A Crossbow Bolt Case holds up to 20 Bolts.",
+      "status": "structured",
+      "by": [
+        "/data/cost"
+      ]
+    }
+  ]
+}

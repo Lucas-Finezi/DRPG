@@ -1,0 +1,152 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/weapon-of-warning",
+  "kind": "magic-item",
+  "name": "Weapon of Warning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      253
+    ],
+    "section": "Magic Items/Magic Items A–Z/Weapon of Warning",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Any Simple or Martial), Uncommon (Requires Attunement)*\n\nAs long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.\n\n***Alarm.*** The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced sleep.\n\n***Supernatural Readiness.*** Each subject has Advantage on its Initiative rolls.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Any Simple or Martial), Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Any Simple or Martial"
+      },
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "subjects",
+        "you_and_allies_within_feet": 30,
+        "weapon_within_reach": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "initiative_rolled",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/unconscious"
+          ],
+          "note": "Natural sleep only, not magical sleep."
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "attuned",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "of": "item",
+              "feet": 30,
+              "item": "this"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "initiative"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "attuned",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "of": "item",
+              "feet": 30,
+              "item": "this"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Any Simple or Martial), Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Alarm.*** The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced sleep.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Supernatural Readiness.*** Each subject has Advantage on its Initiative rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/unconscious"
+  ]
+}

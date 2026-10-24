@@ -1,0 +1,187 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/sun-blade",
+  "kind": "magic-item",
+  "name": "Sun Blade",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      248
+    ],
+    "section": "Magic Items/Magic Items A–Z/Sun Blade",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Longsword), Rare (Requires Attunement)*\n\nThis item appears to be a sword hilt.\n\n***Blade of Radiance.*** While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the *Sun Blade*.\n\nYou gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n\n***Sunlight.*** The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Longsword), Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Longsword",
+        "refs": [
+          "dnd5e/weapon/longsword"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "blade",
+        "toggle": "bonus_action",
+        "functions_as": "dnd5e/weapon/longsword",
+        "properties": [
+          "dnd5e/weapon-property/finesse"
+        ],
+        "proficient_if": [
+          "dnd5e/weapon/longsword",
+          "dnd5e/weapon/shortsword"
+        ]
+      },
+      {
+        "id": "radiant",
+        "damage_type": "radiant",
+        "replaces": "slashing"
+      },
+      {
+        "id": "sunlight",
+        "bright_feet": 15,
+        "dim_feet": 15,
+        "is_sunlight": true,
+        "adjust": {
+          "cost": "dnd5e/action/magic",
+          "step_feet": 5,
+          "min_feet": 10,
+          "max_feet": 30
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d8",
+          "damage_type": "radiant",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "undead"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Longsword), Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This item appears to be a sword hilt.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Blade of Radiance.*** While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the *Sun Blade*.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Sunlight.*** The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-property/finesse",
+    "dnd5e/weapon/longsword",
+    "dnd5e/weapon/shortsword"
+  ]
+}

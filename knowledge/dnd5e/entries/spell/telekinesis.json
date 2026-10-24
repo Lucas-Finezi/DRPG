@@ -1,0 +1,198 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/telekinesis",
+  "kind": "spell",
+  "name": "Telekinesis",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      167,
+      168
+    ],
+    "section": "Spells/Spell Descriptions/Telekinesis",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Transmutation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou gain the ability to move or manipulate creatures or objects by thought. When you cast the spell and as a Magic action on your later turns before the spell ends, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.\n\n***Creature.*** You can try to move a Huge or smaller creature. The target must succeed on a Strength saving throw, or you move it up to 30 feet in any direction within the spell’s range. Until the end of your next turn, the creature has the Restrained condition, and if you lift it into the air, it is suspended there. It falls at the end of your next turn unless you use this option on it again and it fails the save.\n\n***Object.*** You can try to move a Huge or smaller object. If the object isn’t being worn or carried, you automatically move it up to 30 feet in any direction within the spell’s range.\n\nIf the object is worn or carried by a creature, that creature must succeed on a Strength saving throw, or you pull the object away and move it up to 30 feet in any direction within the spell’s range.\n\nYou can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool,",
+  "facets": {
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/telekinesis",
+          "note": "Exert your will on one creature or object you can see within range."
+        }
+      ]
+    },
+    {
+      "op": "save",
+      "ability": "str",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "filter": {
+          "sizes": [
+            "tiny",
+            "small",
+            "medium",
+            "large",
+            "huge"
+          ]
+        }
+      },
+      "on_fail": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 30
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/restrained",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "source",
+              "which": "next"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "move",
+      "mode": "move",
+      "distance_feet": 30,
+      "note": "A Huge or smaller object not worn or carried."
+    },
+    {
+      "op": "save",
+      "ability": "str",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "inherit"
+      },
+      "on_fail": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 30,
+          "note": "Pull the object away and move it."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "fine_control",
+      "reason": "ambiguous_source",
+      "prompt": "What fine manipulation is possible with the telekinetic grip?",
+      "source_text": "You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool,",
+      "pages": [
+        168
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Transmutation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell and as a Magic action on your later turns before the spell ends, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Creature.*** You can try to move a Huge or smaller creature. The target must succeed on a Strength saving throw, or you move it up to 30 feet in any direction within the spell’s range. Until the end of your next turn, the creature has the Restrained condition, and if you lift it into the air, it is suspended there. It falls at the end of your next turn unless you use this option on it again and it fails the save.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Object.*** You can try to move a Huge or smaller object. If the object isn’t being worn or carried, you automatically move it up to 30 feet in any direction within the spell’s range.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "If the object is worn or carried by a creature, that creature must succeed on a Strength saving throw, or you pull the object away and move it up to 30 feet in any direction within the spell’s range.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool,",
+      "status": "master_decision",
+      "by": [
+        "md:fine_control"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained",
+    "dnd5e/spell/telekinesis"
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/giant-ape",
+  "kind": "creature",
+  "name": "Giant Ape",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      349
+    ],
+    "section": "Animals/Giant Ape",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Huge Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +5 (15) |\n\n**HP** 168 (16d12 + 64)\n\n**Speed** 40 ft., Climb 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 14 | +2 | +2 | **Con** 18 | +4 | +4 |\n| **Int** | 5 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |\n\n**Skills** Athletics +9, Perception +4, Survival +4\n\n**Senses** Passive Perception 14\n\n**Languages** None\n\n**CR** 7 (XP 2,900; PB +3)\n\n##### Actions\n\n***Multiattack.*** The ape makes two Fist attacks.\n\n***Fist.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage.\n\n***Boulder Toss (Recharge 6).*** The ape hurls a boulder at a point it can see within 90 feet. *Dexterity Saving Throw:* DC 17, each creature in a 5-foot-radius Sphere centered on that point. *Failure:* 24 (7d6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition. *Success:* Half damage only.\n\n##### Bonus Actions\n\n***Leap.*** The ape jumps up to 30 feet by spending 10 feet of movement.",
+  "facets": {
+    "group": "animal",
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "7"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Huge Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 168,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d12",
+          64
+        ]
+      },
+      "text": "168 (16d12 + 64)"
+    },
+    "speed": {
+      "text": "40 ft., Climb 40 ft.",
+      "walk": 40,
+      "climb": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 23,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "athletics": 9,
+      "perception": 4,
+      "survival": 4,
+      "text": "Athletics +9, Perception +4, Survival +4"
+    },
+    "senses": {
+      "text": "Passive Perception 14",
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "7",
+      "xp": 2900,
+      "proficiency_bonus": 3,
+      "text": "7 (XP 2,900; PB +3)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The ape makes two Fist attacks."
+      },
+      {
+        "name": "Fist",
+        "text": "*Melee Attack Roll:* +9, reach 10 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage."
+      },
+      {
+        "name": "Boulder Toss",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "The ape hurls a boulder at a point it can see within 90 feet. *Dexterity Saving Throw:* DC 17, each creature in a 5-foot-radius Sphere centered on that point. *Failure:* 24 (7d6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition. *Success:* Half damage only."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Leap",
+        "text": "The ape jumps up to 30 feet by spending 10 feet of movement."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Fist",
+            "count": 2
+          }
+        ],
+        "text": "The ape makes two Fist attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Fist",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d10",
+                  6
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Boulder Toss",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "text": "each creature in a 5-foot-radius Sphere centered on that point"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "7d6",
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 6–6."
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Leap",
+      "then": [
+        {
+          "op": "move",
+          "mode": "jump",
+          "distance_feet": 30,
+          "note": "Spends 10 feet of movement."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 168 (16d12 + 64)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Climb 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 23 | +6 | +6 | **Dex** 14 | +2 | +2 | **Con** 18 | +4 | +4 |\n| **Int** | 5 | −3 | −3 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Athletics +9, Perception +4, Survival +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 7 (XP 2,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The ape makes two Fist attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Fist.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 22 (3d10 + 6) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Boulder Toss (Recharge 6).*** The ape hurls a boulder at a point it can see within 90 feet. *Dexterity Saving Throw:* DC 17, each creature in a 5-foot-radius Sphere centered on that point. *Failure:* 24 (7d6) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition. *Success:* Half damage only.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Leap.*** The ape jumps up to 30 feet by spending 10 feet of movement.",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

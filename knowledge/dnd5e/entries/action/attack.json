@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/attack",
+  "kind": "action",
+  "name": "Attack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177
+    ],
+    "section": "Rules Glossary/Rules Definitions/Attack [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.\n\n***Equipping and Unequipping Weapons.*** You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don’t need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.\n\n***Moving between Attacks.*** If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "equip_one_weapon",
+        "equip_or_unequip_per_attack": 1,
+        "timing": [
+          "before_attack",
+          "after_attack"
+        ],
+        "equip_includes": [
+          "draw",
+          "pick_up"
+        ],
+        "unequip_includes": [
+          "sheathe",
+          "stow",
+          "drop"
+        ]
+      },
+      {
+        "id": "move_between_attacks",
+        "allowed": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Attack",
+      "cost": "action",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee_weapon",
+          "note": "One attack roll with a weapon or an Unarmed Strike."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Equipping and Unequipping Weapons.*** You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don’t need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Moving between Attacks.*** If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

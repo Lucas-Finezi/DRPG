@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/carrying-capacity",
+  "kind": "rule",
+  "name": "Carrying Capacity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      178
+    ],
+    "section": "Rules Glossary/Rules Definitions/Carrying Capacity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L08"
+  },
+  "tier": 2,
+  "text": "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the Carrying Capacity table. The table also shows the maximum weight you can drag, lift, or push.\n\nWhile dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.\n\n##### Carrying Capacity\n\n| **Creature Size** | **Carry** | **Drag/Lift/Push** |\n| Tiny | Str. × 7.5 lb. | Str. × 15 lb. |\n| Small/Medium | Str. × 15 lb. | Str. × 30 lb. |\n| Large | Str. × 30 lb. | Str. × 60 lb. |\n| Huge | Str. × 60 lb. | Str. × 120 lb. |\n| Gargantuan | Str. × 120 lb. | Str. × 240 lb. |",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "carrying_capacity",
+        "caption": "Carrying Capacity",
+        "columns": [
+          "Creature Size",
+          "Carry",
+          "Drag/Lift/Push"
+        ],
+        "rows": [
+          [
+            "Tiny",
+            "Str. × 7.5 lb.",
+            "Str. × 15 lb."
+          ],
+          [
+            "Small/Medium",
+            "Str. × 15 lb.",
+            "Str. × 30 lb."
+          ],
+          [
+            "Large",
+            "Str. × 30 lb.",
+            "Str. × 60 lb."
+          ],
+          [
+            "Huge",
+            "Str. × 60 lb.",
+            "Str. × 120 lb."
+          ],
+          [
+            "Gargantuan",
+            "Str. × 120 lb.",
+            "Str. × 240 lb."
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "capacity_multipliers",
+        "by_size": {
+          "tiny": {
+            "carry": 7.5,
+            "drag_lift_push": 15
+          },
+          "small": {
+            "carry": 15,
+            "drag_lift_push": 30
+          },
+          "medium": {
+            "carry": 15,
+            "drag_lift_push": 30
+          },
+          "large": {
+            "carry": 30,
+            "drag_lift_push": 60
+          },
+          "huge": {
+            "carry": 60,
+            "drag_lift_push": 120
+          },
+          "gargantuan": {
+            "carry": 120,
+            "drag_lift_push": 240
+          }
+        },
+        "times": {
+          "var": "ability_score.str"
+        },
+        "unit": "pound"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "min",
+      "value": 5,
+      "when": {
+        "pred": "moving_weight_over_carry"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the Carrying Capacity table. The table also shows the maximum weight you can drag, lift, or push.",
+      "status": "structured",
+      "by": [
+        "/data/tables/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.\n\n##### Carrying Capacity\n\n| **Creature Size** | **Carry** | **Drag/Lift/Push** |\n| Tiny | Str. × 7.5 lb. | Str. × 15 lb. |\n| Small/Medium | Str. × 15 lb. | Str. × 30 lb. |\n| Large | Str. × 30 lb. | Str. × 60 lb. |\n| Huge | Str. × 60 lb. | Str. × 120 lb. |\n| Gargantuan | Str. × 120 lb. | Str. × 240 lb. |",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

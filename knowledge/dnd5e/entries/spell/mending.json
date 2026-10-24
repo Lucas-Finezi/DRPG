@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/mending",
+  "kind": "spell",
+  "name": "Mending",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      148
+    ],
+    "section": "Spells/Spell Descriptions/Mending",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 1,
+  "text": "*Transmutation Cantrip (Bard, Cleric, Druid, Sorcerer,* *Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (two lodestones)\n\n**Duration:** Instantaneous\n\nThis spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\n\nThis spell can physically repair a magic item, but it can’t restore magic to such an object.",
+  "facets": {
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "two lodestones"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "repair",
+        "target": "object_touched",
+        "breaks": 1,
+        "max_dimension_feet": 1,
+        "leaves_no_trace": true
+      },
+      {
+        "id": "magic_items",
+        "repairs_physically": true,
+        "restores_magic": false
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Transmutation Cantrip (Bard, Cleric, Druid, Sorcerer,* *Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (two lodestones)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "This spell can physically repair a magic item, but it can’t restore magic to such an object.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

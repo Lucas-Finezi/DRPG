@@ -1,0 +1,208 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/brown-bear",
+  "kind": "creature",
+  "name": "Brown Bear",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      346
+    ],
+    "section": "Animals/Brown Bear",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "*Large Beast, Unaligned*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 22 (3d10 + 6)\n\n**Speed** 40 ft., Climb 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 7 | −2 | −2 |\n\n**Skills** Perception +3\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** None\n\n**CR** 1 (XP 200; PB +2)\n\n##### Actions\n\n***Multiattack.*** The bear makes one Bite attack and one Claw attack.\n\n***Bite*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage.\n\n***Claw*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition.",
+  "facets": {
+    "group": "animal",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Large Beast, Unaligned",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": {
+        "op": "add",
+        "args": [
+          "3d10",
+          6
+        ]
+      },
+      "text": "22 (3d10 + 6)"
+    },
+    "speed": {
+      "text": "40 ft., Climb 30 ft.",
+      "walk": 40,
+      "climb": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "text": "Perception +3"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The bear makes one Bite attack and one Claw attack.\n\n***Bite*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage.\n\n***Claw*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The bear makes one Bite attack and one Claw attack. Bite. Melee Attack Roll: +5, reach 5 ft. Hit: 7 (1d8 + 3) Piercing damage. Claw. Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition."
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Large Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (3d10 + 6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Climb 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +2 |\n| **Int** | 2 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The bear makes one Bite attack and one Claw attack.\n\n***Bite*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage.\n\n***Claw*****.** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

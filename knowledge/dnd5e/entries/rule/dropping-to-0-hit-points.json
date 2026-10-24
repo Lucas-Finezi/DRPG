@@ -1,0 +1,263 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/dropping-to-0-hit-points",
+  "kind": "rule",
+  "name": "Dropping to 0 Hit Points",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      17,
+      18
+    ],
+    "section": "Playing the Game/Damage and Healing/Dropping to 0 Hit Points",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 3,
+  "text": "When a creature drops to 0 Hit Points, it either dies outright or falls unconscious, as explained below.\n\n#### Instant Death\n\nHere are the main ways a creature can die instantly.\n\n***Monster Death.*** A monster dies the instant it drops to 0 Hit Points, although a Game Master can ignore this rule for an individual monster and treat it like a character.\n\n***Hit Point Maximum of 0.*** A creature dies if its Hit Point maximum reaches 0. Certain effects drain life energy, reducing a creature’s Hit Point maximum.\n\n***Massive Damage.*** When damage reduces a character to 0 Hit Points and damage remains, the character dies if the remainder equals or exceeds their Hit Point maximum. For example, if your character has a Hit Point maximum of 12, currently has 6 Hit Points, and takes 18 damage, the character drops to 0 Hit Points, but 12 damage remains. The character then dies, since 12 equals their Hit Point maximum.\n\n#### Character Demise\n\nIf your character dies, others might find a magical way to revive your character, such as with the *Raise Dead* spell. Or talk with the GM about making a new character to join the group. “Rules Glossary” has more information on being dead.\n\n#### Falling Unconscious\n\nIf you reach 0 Hit Points and don’t die instantly, you have the Unconscious condition (see “Rules Glossary”) until you regain any Hit Points, and you now face making Death Saving Throws (see below).\n\n#### Death Saving Throws\n\nWhenever you start your turn with 0 Hit Points, you must make a Death Saving Throw to determine whether you creep closer to death or hang on to life. Unlike other saving throws, this one isn’t tied to an ability score. You’re in the hands of fate now.\n\n***Three Successes/Failures.*** Roll 1d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A success or failure has no effect by itself. On your third success, you become Stable (see “Stabilizing a Character” below). On your third failure, you die.\n\nThe successes and failures don’t need to be consecutive; keep track of both until you collect three of a kind. The number of both is reset to zero when you regain any Hit Points or become Stable.\n\n***Rolling a 1 or 20.*** When you roll a 1 on the d20 for a Death Saving Throw, you suffer two failures. If you roll a 20 on the d20, you regain 1 Hit Point.\n\n***Damage at 0 Hit Points.*** If you take any damage while you have 0 Hit Points, you suffer a Death Saving Throw failure. If the damage is from a Critical Hit, you suffer two failures instead. If the damage equals or exceeds your Hit Point maximum, you die.\n\n#### Stabilizing a Character\n\nYou can take the Help action to try to stabilize a creature with 0 Hit Points, which requires a successful DC 10 Wisdom (Medicine) check.\n\nA Stable creature doesn’t make Death Saving Throws even though it has 0 Hit Points, but it still has the Unconscious condition. If the creature takes damage, it stops being Stable and starts making Death Saving Throws again. A Stable creature that isn’t healed regains 1 Hit Point after 1d4 hours.",
+  "data": {
+    "rules": [
+      {
+        "id": "monster_death",
+        "when": {
+          "pred": "is_monster"
+        },
+        "dies_at_0_hp": true
+      },
+      {
+        "id": "hp_max_zero",
+        "dies": true
+      },
+      {
+        "id": "massive_damage",
+        "dies_if_remaining_damage_at_least": {
+          "var": "hp_max"
+        }
+      },
+      {
+        "id": "death_saves",
+        "when": "turn_start_at_0_hp",
+        "ability": null,
+        "roll": "1d20",
+        "success_at_least": 10
+      },
+      {
+        "id": "three",
+        "successes_to_stable": 3,
+        "failures_to_die": 3,
+        "consecutive": false,
+        "reset_on": [
+          "regain_hit_points",
+          "become_stable"
+        ]
+      },
+      {
+        "id": "natural",
+        "natural_1": "two_failures",
+        "natural_20": "regain_1_hit_point"
+      },
+      {
+        "id": "damage_at_0",
+        "any_damage": "one_failure",
+        "critical_hit": "two_failures",
+        "dies_if_damage_at_least": {
+          "var": "hp_max"
+        }
+      },
+      {
+        "id": "stable",
+        "death_saves": false,
+        "keeps": "dnd5e/condition/unconscious",
+        "damage_ends_stable": true,
+        "regain_1_hp_after": {
+          "dice": "1d4",
+          "unit": "hours"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "drops_to_0_hp"
+      },
+      "condition": {
+        "not": {
+          "pred": "is_monster"
+        }
+      },
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/unconscious",
+          "duration": {
+            "kind": "while",
+            "while": {
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
+            }
+          },
+          "note": "Until the creature regains any Hit Points."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "Stabilize",
+      "cost": "action",
+      "then": [
+        {
+          "op": "check",
+          "ability": "wis",
+          "skill": "medicine",
+          "dc": 10,
+          "target": {
+            "kind": "creature",
+            "filter": {
+              "predicate": {
+                "pred": "hp_is",
+                "args": {
+                  "zero": true
+                }
+              }
+            }
+          },
+          "on_success": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/rule/stable"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "monster_as_character",
+      "reason": "gm_judgment",
+      "prompt": "Treat this monster like a character at 0 Hit Points (no instant death)?",
+      "source_text": "a Game Master can ignore this rule for an individual monster and treat it like a character.",
+      "when": "on_gain",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": "new_character",
+      "reason": "narrative",
+      "prompt": "Will the player make a new character to join the group?",
+      "source_text": "Or talk with the GM about making a new character to join the group.",
+      "pages": [
+        17
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When a creature drops to 0 Hit Points, it either dies outright or falls unconscious, as explained below.\n\n#### Instant Death\n\nHere are the main ways a creature can die instantly.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Monster Death.*** A monster dies the instant it drops to 0 Hit Points, although a Game Master can ignore this rule for an individual monster and treat it like a character.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:monster_as_character"
+      ]
+    },
+    {
+      "text": "***Hit Point Maximum of 0.*** A creature dies if its Hit Point maximum reaches 0. Certain effects drain life energy, reducing a creature’s Hit Point maximum.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Massive Damage.*** When damage reduces a character to 0 Hit Points and damage remains, the character dies if the remainder equals or exceeds their Hit Point maximum. For example, if your character has a Hit Point maximum of 12, currently has 6 Hit Points, and takes 18 damage, the character drops to 0 Hit Points, but 12 damage remains. The character then dies, since 12 equals their Hit Point maximum.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Character Demise\n\nIf your character dies, others might find a magical way to revive your character, such as with the *Raise Dead* spell.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/spell/raise-dead",
+        "dnd5e/rule/dead"
+      ]
+    },
+    {
+      "text": "Or talk with the GM about making a new character to join the group. “Rules Glossary” has more information on being dead.",
+      "status": "master_decision",
+      "by": [
+        "md:new_character"
+      ]
+    },
+    {
+      "text": "#### Falling Unconscious\n\nIf you reach 0 Hit Points and don’t die instantly, you have the Unconscious condition (see “Rules Glossary”) until you regain any Hit Points, and you now face making Death Saving Throws (see below).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Death Saving Throws\n\nWhenever you start your turn with 0 Hit Points, you must make a Death Saving Throw to determine whether you creep closer to death or hang on to life. Unlike other saving throws, this one isn’t tied to an ability score. You’re in the hands of fate now.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Three Successes/Failures.*** Roll 1d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A success or failure has no effect by itself. On your third success, you become Stable (see “Stabilizing a Character” below). On your third failure, you die.\n\nThe successes and failures don’t need to be consecutive; keep track of both until you collect three of a kind. The number of both is reset to zero when you regain any Hit Points or become Stable.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Rolling a 1 or 20.*** When you roll a 1 on the d20 for a Death Saving Throw, you suffer two failures. If you roll a 20 on the d20, you regain 1 Hit Point.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "***Damage at 0 Hit Points.*** If you take any damage while you have 0 Hit Points, you suffer a Death Saving Throw failure. If the damage is from a Critical Hit, you suffer two failures instead. If the damage equals or exceeds your Hit Point maximum, you die.",
+      "status": "structured",
+      "by": [
+        "/data/rules/6"
+      ]
+    },
+    {
+      "text": "#### Stabilizing a Character\n\nYou can take the Help action to try to stabilize a creature with 0 Hit Points, which requires a successful DC 10 Wisdom (Medicine) check.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "A Stable creature doesn’t make Death Saving Throws even though it has 0 Hit Points, but it still has the Unconscious condition. If the creature takes damage, it stops being Stable and starts making Death Saving Throws again. A Stable creature that isn’t healed regains 1 Hit Point after 1d4 hours.",
+      "status": "structured",
+      "by": [
+        "/data/rules/7"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/dead",
+    "dnd5e/rule/stable",
+    "dnd5e/spell/raise-dead"
+  ]
+}

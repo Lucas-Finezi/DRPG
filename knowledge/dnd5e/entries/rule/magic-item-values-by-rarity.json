@@ -1,0 +1,110 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-values-by-rarity",
+  "kind": "rule",
+  "name": "Magic Item Values by Rarity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      205,
+      206
+    ],
+    "section": "Magic Items/Magic Item Rarity/Magic Item Values by Rarity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "Common magic items can often be bought in a town or city. Uncommon and Rare magic items are usually found only in cities, and rarer magic items might be sold only in wondrous locations, such as a city on another plane of existence. If you allow characters to buy and sell magic items in your campaign, rarity can help you set prices for those items. Gold Piece values are provided in the Magic Item Rarities and Values table, though a seller might ask for a service rather than coin as payment.\n\nIf a magic item incorporates an item that has a purchase cost in “Equipment” (such as a weapon or a suit of armor), add that item’s cost to the magic item’s value. For example, *+1 Armor* (Plate Armor) \n\nhas a value of 5,500 GP, which is the sum of a Rare magic item’s value (4,000 GP) and the cost of Plate Armor (1,500 GP).\n\n##### Magic Item Rarities and Values\n\n| **Rarity** | **Value\\*** | **Rarity** | **Value\\*** |\n| Common | 100 GP | Very Rare | 40,000 GP |\n| Uncommon | 400 GP | Legendary | 200,000 GP |\n| Rare | 4,000 GP | Artifact | Priceless |\n\n\\*Halve the value for a consumable item other than a *Spell Scroll*. The value of a *Spell Scroll* is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+  "data": {
+    "rules": [
+      {
+        "id": "availability",
+        "common": "town or city",
+        "uncommon_rare": "cities",
+        "rarer": "wondrous locations"
+      },
+      {
+        "id": "base_item_cost",
+        "add_equipment_cost": true
+      },
+      {
+        "id": "consumables",
+        "half_value": true,
+        "except": "dnd5e/magic-item/spell-scroll",
+        "spell_scroll_value": "double scribing cost"
+      }
+    ],
+    "tables": [
+      {
+        "id": "magic_item_values",
+        "caption": "Magic Item Rarities and Values",
+        "columns": [
+          "Rarity",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Common",
+            "100 GP"
+          ],
+          [
+            "Uncommon",
+            "400 GP"
+          ],
+          [
+            "Rare",
+            "4,000 GP"
+          ],
+          [
+            "Very Rare",
+            "40,000 GP"
+          ],
+          [
+            "Legendary",
+            "200,000 GP"
+          ],
+          [
+            "Artifact",
+            "Priceless"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Common magic items can often be bought in a town or city. Uncommon and Rare magic items are usually found only in cities, and rarer magic items might be sold only in wondrous locations, such as a city on another plane of existence. If you allow characters to buy and sell magic items in your campaign, rarity can help you set prices for those items. Gold Piece values are provided in the Magic Item Rarities and Values table, though a seller might ask for a service rather than coin as payment.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a magic item incorporates an item that has a purchase cost in “Equipment” (such as a weapon or a suit of armor), add that item’s cost to the magic item’s value. For example, *+1 Armor* (Plate Armor) \n\nhas a value of 5,500 GP, which is the sum of a Rare magic item’s value (4,000 GP) and the cost of Plate Armor (1,500 GP).",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "##### Magic Item Rarities and Values\n\n| **Rarity** | **Value\\*** | **Rarity** | **Value\\*** |\n| Common | 100 GP | Very Rare | 40,000 GP |\n| Uncommon | 400 GP | Legendary | 200,000 GP |\n| Rare | 4,000 GP | Artifact | Priceless |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "\\*Halve the value for a consumable item other than a *Spell Scroll*. The value of a *Spell Scroll* is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

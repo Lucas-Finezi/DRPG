@@ -1,0 +1,192 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/movement-and-position",
+  "kind": "rule",
+  "name": "Movement and Position",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      14
+    ],
+    "section": "Playing the Game/Combat/Movement and Position",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "On your turn, you can move a distance equal to your Speed or less. Or you can decide not to move.\n\nYour movement can include climbing, crawling, jumping, and swimming (each explained in “Rules Glossary”). These different modes of movement can be combined with your regular movement, or they can constitute your entire move.\n\nHowever you’re moving with your Speed, you deduct the distance of each part of your move from it until it is used up or until you are done moving, whichever comes first.\n\nA character’s Speed is determined during character creation. A monster’s Speed is noted in the monster’s stat block. See “Rules Glossary” for more about Speed as well as about special speeds, such as a Climb Speed, Fly Speed, or Swim Speed.\n\n#### Difficult Terrain\n\nCombatants are often slowed down by Difficult Terrain. Low furniture, rubble, undergrowth, steep stairs, snow, and shallow bogs are examples of Difficult Terrain.\n\nEvery foot of movement in Difficult Terrain costs 1 extra foot, even if multiple things in a space count as Difficult Terrain.\n\n#### Breaking Up Your Move\n\nYou can break up your move, using some of its movement before and after any action, Bonus Action, or Reaction you take on the same turn. For example, if you have a Speed of 30 feet, you could go 10 feet, take an action, and then go 20 feet.\n\n#### Dropping Prone\n\nOn your turn, you can give yourself the Prone condition (see “Rules Glossary”) without using an action or any of your Speed, but you can’t do so if your Speed is 0.\n\n#### Creature Size\n\nA creature belongs to a size category, which determines the width of the square space the creature occupies on a map, as shown on the Creature Size and Space table. That table lists the sizes from smallest (Tiny) to largest (Gargantuan). A creature’s space is the area that it effectively controls in combat and the area it needs to fight effectively.\n\nA character’s size is determined by species, and a monster’s size is specified in the monster’s stat block.\n\n##### Creature Size and Space\n\n| **Size** | **Space (Feet)** | **Space (Squares)** |\n| Tiny | 2½ by 2½ feet | 4 per square |\n| Small | 5 by 5 feet | 1 square |\n| Medium | 5 by 5 feet | 1 square |\n| Large | 10 by 10 feet | 4 squares (2 by 2) |\n| Huge | 15 by 15 feet | 9 squares (3 by 3) |\n| Gargantuan | 20 by 20 feet | 16 squares (4 by 4) |\n\n#### Moving around Other Creatures\n\nDuring your move, you can pass through the space of an ally, a creature that has the Incapacitated condition (see “Rules Glossary”), a Tiny creature, or a creature that is two sizes larger or smaller than you.\n\nAnother creature’s space is Difficult Terrain for you unless that creature is Tiny or your ally.\n\nYou can’t willingly end a move in a space occupied by another creature. If you somehow end a turn in a space with another creature, you have the Prone condition (see “Rules Glossary”) unless you are Tiny or are of a larger size than the other creature.",
+  "data": {
+    "rules": [
+      {
+        "id": "move_up_to_speed",
+        "may_not_move": true
+      },
+      {
+        "id": "deduct_movement",
+        "deduct_each_part": true
+      },
+      {
+        "id": "difficult_terrain",
+        "extra_feet_per_foot": 1,
+        "stacks": false
+      },
+      {
+        "id": "break_up_move",
+        "around": [
+          "action",
+          "bonus_action",
+          "reaction"
+        ]
+      },
+      {
+        "id": "pass_through",
+        "may_pass": [
+          "ally",
+          "incapacitated_creature",
+          "tiny_creature",
+          "creature_two_sizes_larger_or_smaller"
+        ]
+      },
+      {
+        "id": "creature_space_difficult",
+        "except": [
+          "tiny",
+          "ally"
+        ]
+      },
+      {
+        "id": "no_shared_space",
+        "willing_end_in_occupied": false,
+        "if_ended_in_occupied": {
+          "apply": "dnd5e/condition/prone",
+          "unless": [
+            "tiny",
+            "larger_than_other"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Drop prone",
+      "cost": "none",
+      "requires": {
+        "not": {
+          "pred": "speed_is_zero"
+        }
+      },
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "On your turn, you can move a distance equal to your Speed or less. Or you can decide not to move.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Your movement can include climbing, crawling, jumping, and swimming (each explained in “Rules Glossary”). These different modes of movement can be combined with your regular movement, or they can constitute your entire move.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/climbing",
+        "dnd5e/rule/crawling",
+        "dnd5e/rule/jumping",
+        "dnd5e/rule/swimming"
+      ]
+    },
+    {
+      "text": "However you’re moving with your Speed, you deduct the distance of each part of your move from it until it is used up or until you are done moving, whichever comes first.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "A character’s Speed is determined during character creation. A monster’s Speed is noted in the monster’s stat block. See “Rules Glossary” for more about Speed as well as about special speeds, such as a Climb Speed, Fly Speed, or Swim Speed.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/speed"
+      ]
+    },
+    {
+      "text": "#### Difficult Terrain\n\nCombatants are often slowed down by Difficult Terrain. Low furniture, rubble, undergrowth, steep stairs, snow, and shallow bogs are examples of Difficult Terrain.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/difficult-terrain"
+      ]
+    },
+    {
+      "text": "Every foot of movement in Difficult Terrain costs 1 extra foot, even if multiple things in a space count as Difficult Terrain.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Breaking Up Your Move\n\nYou can break up your move, using some of its movement before and after any action, Bonus Action, or Reaction you take on the same turn. For example, if you have a Speed of 30 feet, you could go 10 feet, take an action, and then go 20 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### Dropping Prone\n\nOn your turn, you can give yourself the Prone condition (see “Rules Glossary”) without using an action or any of your Speed, but you can’t do so if your Speed is 0.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Creature Size\n\nA creature belongs to a size category, which determines the width of the square space the creature occupies on a map, as shown on the Creature Size and Space table. That table lists the sizes from smallest (Tiny) to largest (Gargantuan). A creature’s space is the area that it effectively controls in combat and the area it needs to fight effectively.\n\nA character’s size is determined by species, and a monster’s size is specified in the monster’s stat block.\n\n##### Creature Size and Space\n\n| **Size** | **Space (Feet)** | **Space (Squares)** |\n| Tiny | 2½ by 2½ feet | 4 per square |\n| Small | 5 by 5 feet | 1 square |\n| Medium | 5 by 5 feet | 1 square |\n| Large | 10 by 10 feet | 4 squares (2 by 2) |\n| Huge | 15 by 15 feet | 9 squares (3 by 3) |\n| Gargantuan | 20 by 20 feet | 16 squares (4 by 4) |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/sizes"
+      ]
+    },
+    {
+      "text": "#### Moving around Other Creatures\n\nDuring your move, you can pass through the space of an ally, a creature that has the Incapacitated condition (see “Rules Glossary”), a Tiny creature, or a creature that is two sizes larger or smaller than you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "Another creature’s space is Difficult Terrain for you unless that creature is Tiny or your ally.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "You can’t willingly end a move in a space occupied by another creature. If you somehow end a turn in a space with another creature, you have the Prone condition (see “Rules Glossary”) unless you are Tiny or are of a larger size than the other creature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone",
+    "dnd5e/rule/climbing",
+    "dnd5e/rule/crawling",
+    "dnd5e/rule/difficult-terrain",
+    "dnd5e/rule/jumping",
+    "dnd5e/rule/speed",
+    "dnd5e/rule/swimming",
+    "dnd5e/system/dnd5e"
+  ]
+}

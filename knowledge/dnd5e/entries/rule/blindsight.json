@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/blindsight",
+  "kind": "rule",
+  "name": "Blindsight",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177
+    ],
+    "section": "Rules Glossary/Rules Definitions/Blindsight",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn’t behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in that range, you can see something that has the Invisible condition.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "blindsight",
+        "ignores": [
+          "blinded",
+          "darkness",
+          "invisible"
+        ],
+        "blocked_by": "total_cover"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "blindsight",
+      "range_feet": {
+        "var": "sense_range"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn’t behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in that range, you can see something that has the Invisible condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

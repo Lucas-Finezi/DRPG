@@ -1,0 +1,143 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-sneak-attack",
+  "kind": "feature",
+  "name": "Sneak Attack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      61,
+      62
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 1: Sneak Attack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage’s type is the same as the weapon’s type.\n\nYou don’t need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn’t have the Incapacitated condition, and you don’t have Disadvantage on the attack roll.\n\nThe extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "ally_alternative",
+        "ally_within_feet_of_target": 5,
+        "ally_not_incapacitated": true,
+        "no_disadvantage": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "pred": "attack_is",
+                "args": {
+                  "via": "weapon",
+                  "property": "finesse"
+                }
+              },
+              {
+                "pred": "attack_is",
+                "args": {
+                  "range": "ranged",
+                  "via": "weapon"
+                }
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "pred": "has_advantage_on_roll"
+              },
+              {
+                "all": [
+                  {
+                    "pred": "within_feet",
+                    "args": {
+                      "who": "ally",
+                      "of": "target",
+                      "feet": 5
+                    }
+                  },
+                  {
+                    "not": {
+                      "pred": "has_disadvantage_on_roll"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "table": "dnd5e/class/rogue",
+            "table_id": "rogue_features",
+            "key": {
+              "var": "class_level.rogue"
+            },
+            "column": "Sneak Attack"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "damage_type": {
+            "var": "chosen.weapon_damage_type"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage’s type is the same as the weapon’s type.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You don’t need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn’t have the Incapacitated condition, and you don’t have Disadvantage on the attack roll.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/rogue"
+  ]
+}

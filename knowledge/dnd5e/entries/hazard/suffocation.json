@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/hazard/suffocation",
+  "kind": "hazard",
+  "name": "Suffocation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      189
+    ],
+    "section": "Rules Glossary/Rules Definitions/Suffocation [Hazard]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 2,
+  "text": "A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins. When a creature runs out of breath or is choking, it gains 1 Exhaustion level at the end of each of its turns. When a creature can breathe again, it removes all levels of Exhaustion it gained from suffocating.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Hazard"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "hold_breath",
+        "minutes": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        },
+        "minimum_seconds": 30
+      },
+      {
+        "id": "recover",
+        "removes": "exhaustion_levels_from_suffocation"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "self",
+        "which": "each"
+      },
+      "condition": {
+        "pred": "out_of_breath"
+      },
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/exhaustion",
+          "params": {
+            "levels": 1
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When a creature runs out of breath or is choking, it gains 1 Exhaustion level at the end of each of its turns.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "When a creature can breathe again, it removes all levels of Exhaustion it gained from suffocating.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/tool/painters-supplies",
+  "kind": "tool",
+  "name": "Painter’s Supplies",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      93
+    ],
+    "section": "Equipment/Tools/Artisan’s Tools/Painter’s Supplies",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| **Ability:** Wisdom | **Weight:** 5 lb. |\n\n**Utilize:** Paint a recognizable image of something you’ve seen (DC 10)\n\n**Craft:** Druidic Focus, Holy Symbol",
+  "facets": {
+    "category": "artisans-tools",
+    "ability": "wis",
+    "cost_cp": 1000
+  },
+  "data": {
+    "ability": "wis",
+    "weight_lb": 5,
+    "utilize": [
+      {
+        "task": "Paint a recognizable image of something you’ve seen",
+        "dc": 10
+      }
+    ],
+    "craft": [
+      "Druidic Focus",
+      "Holy Symbol"
+    ],
+    "cost": {
+      "amount": 10,
+      "unit": "gp",
+      "cp": 1000
+    },
+    "category": "Artisan’s Tools"
+  },
+  "coverage": [
+    {
+      "text": "| **Ability:** Wisdom | **Weight:** 5 lb. |",
+      "status": "structured",
+      "by": [
+        "/data/ability",
+        "/data/weight_lb",
+        "/data/cost"
+      ]
+    },
+    {
+      "text": "**Utilize:** Paint a recognizable image of something you’ve seen (DC 10)",
+      "status": "structured",
+      "by": [
+        "/data/utilize",
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "**Craft:** Druidic Focus, Holy Symbol",
+      "status": "structured",
+      "by": [
+        "/data/craft"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/demon-armor",
+  "kind": "magic-item",
+  "name": "Demon Armor",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      218
+    ],
+    "section": "Magic Items/Magic Items A–Z/Demon Armor",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Any Light, Medium, or Heavy), Very Rare* *(Requires Attunement)*\n\nWhile wearing this armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n\n***Curse.*** Once you don this cursed armor, you can’t doff it unless you are targeted by a *Remove Curse* spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Any Light, Medium, or Heavy), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Any Light, Medium, or Heavy"
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "curse",
+        "cannot_doff": true,
+        "ends_by": [
+          "dnd5e/spell/remove-curse"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "abyssal"
+      ],
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "weapon_damage_die",
+      "mode": "set",
+      "value": "1d8",
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
+          }
+        ]
+      },
+      "note": "Slashing instead of Bludgeoning."
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "unarmed_strike"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "tags": [
+                "demon"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "who": "source",
+              "tags": [
+                "demon"
+              ]
+            }
+          }
+        ]
+      },
+      "note": "Against their spells and special abilities."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Any Light, Medium, or Heavy), Very Rare* *(Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Curse.*** Once you don this cursed armor, you can’t doff it unless you are targeted by a *Remove Curse* spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/cursed-items",
+        "/data/rules/0",
+        "/effects/5",
+        "/effects/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/cursed-items",
+    "dnd5e/spell/remove-curse"
+  ]
+}

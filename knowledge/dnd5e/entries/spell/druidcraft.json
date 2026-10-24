@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/druidcraft",
+  "kind": "spell",
+  "name": "Druidcraft",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      126
+    ],
+    "section": "Spells/Spell Descriptions/Druidcraft",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 1,
+  "text": "*Transmutation Cantrip (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nWhispering to the spirits of nature, you create one of the following effects within range.\n\n***Weather Sensor.*** You create a Tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.\n\n***Bloom.*** You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.\n\n***Sensory Effect.*** You create a harmless sensory effect, such as falling leaves, spectral dancing fairies, a gentle breeze, the sound of an animal, or the faint odor of skunk. The effect must fit in a 5-foot Cube.\n\n***Fire Play.*** You light or snuff out a candle, a torch, or a campfire.",
+  "facets": {
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "choose_one",
+        "effects": 1,
+        "within": "range"
+      },
+      {
+        "id": "effect_0",
+        "option": "Weather Sensor",
+        "size": "tiny",
+        "harmless": true,
+        "predicts_weather_hours": 24,
+        "persists_rounds": 1
+      },
+      {
+        "id": "effect_1",
+        "option": "Bloom",
+        "instant": true,
+        "targets": [
+          "flower",
+          "seed_pod",
+          "leaf_bud"
+        ]
+      },
+      {
+        "id": "effect_2",
+        "option": "Sensory Effect",
+        "harmless": true,
+        "fits_cube_feet": 5
+      },
+      {
+        "id": "effect_3",
+        "option": "Fire Play",
+        "light_or_snuff": [
+          "candle",
+          "torch",
+          "campfire"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Transmutation Cantrip (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Whispering to the spirits of nature, you create one of the following effects within range.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Weather Sensor.*** You create a Tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Bloom.*** You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Sensory Effect.*** You create a harmless sensory effect, such as falling leaves, spectral dancing fairies, a gentle breeze, the sound of an animal, or the faint odor of skunk. The effect must fit in a 5-foot Cube.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Fire Play.*** You light or snuff out a candle, a torch, or a campfire.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ]
+}

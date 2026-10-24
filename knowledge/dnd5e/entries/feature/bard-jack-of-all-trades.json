@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/bard-jack-of-all-trades",
+  "kind": "feature",
+  "name": "Jack of All Trades",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      32
+    ],
+    "section": "Classes/Bard/Bard Class Features/Level 2: Jack of All Trades",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can add half your Proficiency Bonus (round down) to any ability check you make that uses a skill proficiency you lack and that doesn’t otherwise use your Proficiency Bonus.\n\nFor example, if you make a Strength (Athletics) check and lack Athletics proficiency, you can add half your Proficiency Bonus to the check.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/bard",
+    "level": 2
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_check",
+      "mode": "add",
+      "value": {
+        "op": "div",
+        "args": [
+          {
+            "var": "proficiency_bonus"
+          },
+          2
+        ]
+      },
+      "when": {
+        "all": [
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "any",
+              "proficient": false
+            }
+          },
+          {
+            "not": {
+              "pred": "check_uses",
+              "args": {
+                "adds_proficiency_bonus": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can add half your Proficiency Bonus (round down) to any ability check you make that uses a skill proficiency you lack and that doesn’t otherwise use your Proficiency Bonus.\n\nFor example, if you make a Strength (Athletics) check and lack Athletics proficiency, you can add half your Proficiency Bonus to the check.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

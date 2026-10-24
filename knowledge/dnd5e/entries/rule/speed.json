@@ -1,0 +1,96 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/speed",
+  "kind": "rule",
+  "name": "Speed",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      188
+    ],
+    "section": "Rules Glossary/Rules Definitions/Speed",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn. *See also* “Climbing,” “Crawling,” “Flying,” “Jumping,” “Swimming” and “Playing the Game” (“Combat”).\n\n***Special Speeds.*** Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed, each of which is defined in this glossary. If you have more than one speed, choose which one to use when you move; you can switch between the speeds during your move. Whenever you switch, subtract the distance already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can’t use the new speed during the current move. For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more.\n\n***Changes to Your Speeds.*** If an effect increases or decreases your Speed for a time, any special speed you have increases or decreases by an equal amount for the same duration. For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0. Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "special_speeds.switch",
+        "mechanic": {
+          "choose_speed_per_move": true,
+          "switch_during_move": true,
+          "remaining": "new_speed_minus_distance_moved",
+          "zero_or_less": "cannot_use_new_speed_this_move"
+        }
+      },
+      {
+        "id": "special_speeds.changes",
+        "mechanic": {
+          "special_speeds_follow_speed_changes": true,
+          "applies_to": [
+            "increase",
+            "decrease",
+            "halve",
+            "set_to_zero"
+          ]
+        }
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/movement_modes/0",
+        "dnd5e/system/dnd5e#/units/distance"
+      ]
+    },
+    {
+      "text": "*See also* “Climbing,” “Crawling,” “Flying,” “Jumping,” “Swimming” and “Playing the Game” (“Combat”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/climbing",
+        "dnd5e/rule/crawling",
+        "dnd5e/rule/flying",
+        "dnd5e/rule/jumping",
+        "dnd5e/rule/swimming",
+        "dnd5e/rule/combat"
+      ]
+    },
+    {
+      "text": "***Special Speeds.*** Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed, each of which is defined in this glossary. If you have more than one speed, choose which one to use when you move; you can switch between the speeds during your move. Whenever you switch, subtract the distance already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can’t use the new speed during the current move. For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Changes to Your Speeds.*** If an effect increases or decreases your Speed for a time, any special speed you have increases or decreases by an equal amount for the same duration. For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0. Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/climbing",
+    "dnd5e/rule/combat",
+    "dnd5e/rule/crawling",
+    "dnd5e/rule/flying",
+    "dnd5e/rule/jumping",
+    "dnd5e/rule/swimming",
+    "dnd5e/system/dnd5e"
+  ]
+}

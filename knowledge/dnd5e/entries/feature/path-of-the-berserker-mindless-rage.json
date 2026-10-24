@@ -1,0 +1,73 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/path-of-the-berserker-mindless-rage",
+  "kind": "feature",
+  "name": "Mindless Rage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Subclass: Path of the Berserker/Level 6: Mindless Rage",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have Immunity to the Charmed and Frightened conditions while your Rage is active. If you’re Charmed or Frightened when you enter your Rage, the condition ends on you.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/path-of-the-berserker",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened"
+      ],
+      "when": {
+        "pred": "effect_active",
+        "args": {
+          "effect": "barbarian-rage"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_effect.barbarian-rage"
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/charmed",
+            "dnd5e/condition/frightened"
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have Immunity to the Charmed and Frightened conditions while your Rage is active. If you’re Charmed or Frightened when you enter your Rage, the condition ends on you.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened"
+  ]
+}

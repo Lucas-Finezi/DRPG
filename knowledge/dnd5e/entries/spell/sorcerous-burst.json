@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/sorcerous-burst",
+  "kind": "spell",
+  "name": "Sorcerous Burst",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      163
+    ],
+    "section": "Spells/Spell Descriptions/Sorcerous Burst",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 2,
+  "text": "*Evocation Cantrip (Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Component:** V, S\n\n**Duration:** Instantaneous\n\nYou cast sorcerous energy at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder.\n\nIf you roll an 8 on a d8 for this spell, you can roll another d8, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell’s damage equals your spellcasting ability modifier.\n\n***Cantrip Upgrade.*** The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+  "facets": {
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "sorcerer"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "exploding_d8",
+        "on_roll": 8,
+        "add_d8": true,
+        "max_extra_dice": {
+          "var": "spellcasting_mod"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_spell",
+      "target": {
+        "kind": "creature_or_object",
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "scale": {
+                  "by": "level",
+                  "steps": [
+                    {
+                      "from": 1,
+                      "value": 1
+                    },
+                    {
+                      "from": 5,
+                      "value": 2
+                    },
+                    {
+                      "from": 11,
+                      "value": 3
+                    },
+                    {
+                      "from": 17,
+                      "value": 4
+                    }
+                  ]
+                }
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": {
+            "choose_from": [
+              "acid",
+              "cold",
+              "fire",
+              "lightning",
+              "poison",
+              "psychic",
+              "thunder"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Evocation Cantrip (Sorcerer)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Component:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You cast sorcerous energy at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you roll an 8 on a d8 for this spell, you can roll another d8, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell’s damage equals your spellcasting ability modifier.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Cantrip Upgrade.*** The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount"
+      ]
+    }
+  ]
+}

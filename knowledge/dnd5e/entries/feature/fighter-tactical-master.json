@@ -1,0 +1,104 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-tactical-master",
+  "kind": "feature",
+  "name": "Tactical Master",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 9: Tactical Master",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 9
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "attack_roll_made"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "mastered"
+        }
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "replacement_mastery",
+          "choose": 1,
+          "options": [
+            {
+              "id": "push",
+              "label": "Push",
+              "effects": [
+                {
+                  "op": "grant",
+                  "refs": [
+                    "dnd5e/weapon-mastery/push"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sap",
+              "label": "Sap",
+              "effects": [
+                {
+                  "op": "grant",
+                  "refs": [
+                    "dnd5e/weapon-mastery/sap"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "slow",
+              "label": "Slow",
+              "effects": [
+                {
+                  "op": "grant",
+                  "refs": [
+                    "dnd5e/weapon-mastery/slow"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Replaces the weapon's mastery property for that attack."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-mastery/push",
+    "dnd5e/weapon-mastery/sap",
+    "dnd5e/weapon-mastery/slow"
+  ]
+}

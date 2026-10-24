@@ -1,0 +1,255 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/owl",
+  "kind": "creature",
+  "name": "Owl",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      358
+    ],
+    "section": "Animals/Owl",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 2,
+  "text": "*Tiny Beast, Unaligned*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 1 (1d4 − 1)\n\n**Speed** 5 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 8 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |\n\n**Skills** Perception +5, Stealth +5\n\n**Senses** Darkvision 120 ft.; Passive Perception 15\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Flyby.*** The owl doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach.\n\n##### Actions\n\n***Talons.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 1 Slashing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Tiny Beast, Unaligned",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 1,
+      "formula": {
+        "op": "sub",
+        "args": [
+          "1d4",
+          1
+        ]
+      },
+      "text": "1 (1d4 − 1)"
+    },
+    "speed": {
+      "text": "5 ft., Fly 60 ft.",
+      "walk": 5,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 5,
+      "stealth": 5,
+      "text": "Perception +5, Stealth +5"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 15",
+      "darkvision": 120,
+      "passive_perception": 15
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Flyby",
+        "text": "The owl doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 1 Slashing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "provoke_opportunity_attack_when_flying_out_of_reach"
+      ],
+      "target": {
+        "kind": "self"
+      },
+      "note": "Doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Talons",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": 1,
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 1 (1d4 − 1)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 8 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +5, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 15",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Flyby.*** The owl doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Talons.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 1 Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

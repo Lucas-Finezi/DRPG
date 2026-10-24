@@ -1,0 +1,238 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/flying-snake",
+  "kind": "creature",
+  "name": "Flying Snake",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      348
+    ],
+    "section": "Animals/Flying Snake",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 2,
+  "text": "*Tiny Monstrosity, Unaligned*\n\n| **AC** 14 | **Initiative** +2 (12) |\n\n**HP** 5 (2d4)\n\n**Speed** 30 ft., Fly 60 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |\n\n**Senses** Blindsight 10 ft.; Passive Perception 11\n\n**Languages** None\n\n**CR** 1/8 (XP 25; PB +2)\n\n##### Traits\n\n***Flyby.*** The snake doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach.\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Piercing damage plus 5 (2d4) Poison damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Tiny",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "cr": "1/8"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "type_line": "Tiny Monstrosity, Unaligned",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 5,
+      "formula": "2d4",
+      "text": "5 (2d4)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft., Swim 30 ft.",
+      "walk": 30,
+      "fly": 60,
+      "swim": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "senses": {
+      "text": "Blindsight 10 ft.; Passive Perception 11",
+      "blindsight": 10,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/8",
+      "xp": 25,
+      "proficiency_bonus": 2,
+      "text": "1/8 (XP 25; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Flyby",
+        "text": "The snake doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Piercing damage plus 5 (2d4) Poison damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "provoke_opportunity_attack_when_flying_out_of_reach"
+      ],
+      "target": {
+        "kind": "self"
+      },
+      "note": "Doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "2d4",
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Monstrosity, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 5 (2d4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 10 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/8 (XP 25; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Flyby.*** The snake doesn’t provoke an Opportunity Attack when it flies out of an enemy’s reach.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Piercing damage plus 5 (2d4) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

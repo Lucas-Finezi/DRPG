@@ -1,0 +1,403 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/quasit",
+  "kind": "creature",
+  "name": "Quasit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      317
+    ],
+    "section": "Monsters A–Z/Quasit/Quasit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Tiny Fiend (Demon), Chaotic Evil*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 25 (10d4)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 5 | −3 | −3 | **Dex** 17 | +3 | +3 | **Con** 10 | +0 | +0 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |\n\n**Skills** Stealth +5\n\n**Resistances** Cold, Fire, Lightning\n\n**Immunities** Poison; Poisoned\n\n**Senses** Darkvision 120 ft.; Passive Perception 10\n\n**Languages** Abyssal, Common\n\n**CR** 1 (XP 200; PB +2)\n\n##### Traits\n\n***Magic Resistance.*** The quasit has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn.\n\n***Invisibility.*** The quasit casts *Invisibility* on itself, requiring no spell components and using Charisma as the spellcasting ability.\n\n***Scare (1/Day).*** *Wisdom Saving Throw:* DC 10, one creature within 20 feet. *Failure:* The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.\n\n***Shape-Shift.*** The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed.",
+  "facets": {
+    "group": "monster",
+    "size": "Tiny",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Demon"
+    ],
+    "type_line": "Tiny Fiend (Demon), Chaotic Evil",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 25,
+      "formula": "10d4",
+      "text": "25 (10d4)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "stealth": 5,
+      "text": "Stealth +5"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold",
+        "fire",
+        "lightning"
+      ],
+      "text": "Cold, Fire, Lightning"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 10",
+      "darkvision": 120,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Abyssal, Common"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "text": "The quasit has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn."
+      },
+      {
+        "name": "Invisibility",
+        "text": "The quasit casts *Invisibility* on itself, requiring no spell components and using Charisma as the spellcasting ability."
+      },
+      {
+        "name": "Scare",
+        "per_day": 1,
+        "text": "*Wisdom Saving Throw:* DC 10, one creature within 20 feet. *Failure:* The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+      },
+      {
+        "name": "Shape-Shift",
+        "text": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Invisibility",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": []
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Scare",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 10,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 20
+            },
+            "text": "one creature within 20 feet"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened"
+            }
+          ]
+        }
+      ],
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_scare_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Scare as written.",
+      "source_text": "The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+    },
+    {
+      "id": "actions_shape_shift",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Shape-Shift as written.",
+      "source_text": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Fiend (Demon), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 25 (10d4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 5 | −3 | −3 | **Dex** 17 | +3 | +3 | **Con** 10 | +0 | +0 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold, Fire, Lightning",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Abyssal, Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The quasit has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Slashing damage, and the target has the Poisoned condition until the start of the quasit’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Invisibility.*** The quasit casts *Invisibility* on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Scare (1/Day).*** *Wisdom Saving Throw:* DC 10, one creature within 20 feet. *Failure:* The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/3",
+        "md:actions_scare_rider"
+      ]
+    },
+    {
+      "text": "***Shape-Shift.*** The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn’t transformed.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "md:actions_shape_shift"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/invisibility"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/counterspell",
+  "kind": "spell",
+  "name": "Counterspell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      120
+    ],
+    "section": "Spells/Spell Descriptions/Counterspell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Abjuration (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components\n\n**Range:** 60 feet\n\n**Components:** S\n\n**Duration:** Instantaneous\n\nYou attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn’t expended.",
+  "facets": {
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+      "cost": "reaction",
+      "trigger": "when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+      "triggers": [
+        {
+          "event": "sees_creature_casting_spell",
+          "whose": "any"
+        }
+      ]
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": false,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/counterspell",
+          "note": "The spell dissipates; the action, Bonus Action or Reaction is wasted; a spell slot isn't expended."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Abjuration (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components\n\n**Range:** 60 feet\n\n**Components:** S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn’t expended.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/counterspell"
+  ]
+}

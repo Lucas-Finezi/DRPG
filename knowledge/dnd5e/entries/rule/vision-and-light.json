@@ -1,0 +1,157 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/vision-and-light",
+  "kind": "rule",
+  "name": "Vision and Light",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      11
+    ],
+    "section": "Playing the Game/Exploration/Vision and Light",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "Some adventuring tasks—such as noticing danger, hitting an enemy, and targeting certain spells—are affected by sight, so effects that obscure vision can hinder you, as explained below.\n\n#### Obscured Areas\n\nAn area might be Lightly or Heavily Obscured. In a Lightly Obscured area—such as an area with Dim Light, patchy fog, or moderate foliage—you have Disadvantage on Wisdom (Perception) checks that rely on sight.\n\nA Heavily Obscured area—such as an area with Darkness, heavy fog, or dense foliage—is opaque. You have the Blinded condition (see “Rules Glossary”) when trying to see something there.\n\n#### Light\n\nThe presence or absence of light determines the category of illumination in an area, as defined below.\n\n***Bright Light.*** Bright Light lets most creatures see normally. Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a specific radius.\n\n***Dim Light.*** Dim Light, also called shadows, creates a Lightly Obscured area. An area of Dim Light is usually a boundary between Bright Light and surrounding Darkness. The soft light of twilight and dawn also counts as Dim Light. A full moon might bathe the land in Dim Light.\n\n***Darkness.*** Darkness creates a Heavily Obscured area. Characters face Darkness outdoors at night (even most moonlit nights), within the confines of an unlit dungeon, or in an area of magical Darkness.\n\n#### Special Senses\n\nSome creatures have special senses that help them perceive things in certain situations. “Rules Glossary” defines the following special senses:\n\nBlindsight Darkvision Tremorsense Truesight",
+  "data": {
+    "rules": [
+      {
+        "id": "illumination",
+        "categories": [
+          "bright_light",
+          "dim_light",
+          "darkness"
+        ]
+      },
+      {
+        "id": "dim_light",
+        "obscurement": "dnd5e/rule/lightly-obscured",
+        "examples": [
+          "twilight",
+          "dawn",
+          "full moon"
+        ]
+      },
+      {
+        "id": "darkness",
+        "obscurement": "dnd5e/rule/heavily-obscured"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "obscured",
+            "args": {
+              "degree": "light"
+            }
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "perception"
+            }
+          },
+          {
+            "pred": "requires_sight"
+          }
+        ]
+      }
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/blinded",
+      "when": {
+        "pred": "obscured",
+        "args": {
+          "degree": "heavy"
+        }
+      },
+      "note": "When trying to see something there."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some adventuring tasks—such as noticing danger, hitting an enemy, and targeting certain spells—are affected by sight, so effects that obscure vision can hinder you, as explained below.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Obscured Areas\n\nAn area might be Lightly or Heavily Obscured. In a Lightly Obscured area—such as an area with Dim Light, patchy fog, or moderate foliage—you have Disadvantage on Wisdom (Perception) checks that rely on sight.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "dnd5e/rule/lightly-obscured"
+      ]
+    },
+    {
+      "text": "A Heavily Obscured area—such as an area with Darkness, heavy fog, or dense foliage—is opaque. You have the Blinded condition (see “Rules Glossary”) when trying to see something there.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "dnd5e/rule/heavily-obscured"
+      ]
+    },
+    {
+      "text": "#### Light\n\nThe presence or absence of light determines the category of illumination in an area, as defined below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bright Light.*** Bright Light lets most creatures see normally. Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a specific radius.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/bright-light"
+      ]
+    },
+    {
+      "text": "***Dim Light.*** Dim Light, also called shadows, creates a Lightly Obscured area. An area of Dim Light is usually a boundary between Bright Light and surrounding Darkness. The soft light of twilight and dawn also counts as Dim Light. A full moon might bathe the land in Dim Light.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Darkness.*** Darkness creates a Heavily Obscured area. Characters face Darkness outdoors at night (even most moonlit nights), within the confines of an unlit dungeon, or in an area of magical Darkness.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Special Senses\n\nSome creatures have special senses that help them perceive things in certain situations. “Rules Glossary” defines the following special senses:\n\nBlindsight Darkvision Tremorsense Truesight",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/blindsight",
+        "dnd5e/rule/darkvision",
+        "dnd5e/rule/tremorsense",
+        "dnd5e/rule/truesight"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/rule/blindsight",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/darkvision",
+    "dnd5e/rule/heavily-obscured",
+    "dnd5e/rule/lightly-obscured",
+    "dnd5e/rule/tremorsense",
+    "dnd5e/rule/truesight"
+  ]
+}

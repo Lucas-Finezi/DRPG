@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/equipment-proficiencies",
+  "kind": "rule",
+  "name": "Equipment Proficiencies",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      9
+    ],
+    "section": "Playing the Game/Proficiency/Equipment Proficiencies",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 1,
+  "text": "A character gains proficiency with various weapons and tools from their class and background. There are two categories of equipment proficiency:\n\n**Weapons.** Anyone can wield a weapon, but proficiency makes you better at wielding it. If you have proficiency with a weapon, you add your Proficiency Bonus to attack rolls you make with it.\n\n**Tools.** If you have proficiency with a tool, you can add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in the skill that’s also used with that check, you have Advantage on the check too. This means you can benefit from both skill proficiency and tool proficiency on the same ability check.",
+  "data": {
+    "rules": [
+      {
+        "id": "sources",
+        "from": [
+          "class",
+          "background"
+        ],
+        "categories": [
+          "weapons",
+          "tools"
+        ]
+      },
+      {
+        "id": "weapon_proficiency",
+        "adds_to": "attack_roll"
+      },
+      {
+        "id": "tool_proficiency",
+        "adds_to": "ability_check_using_tool",
+        "with_skill_proficiency_too": "advantage"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A character gains proficiency with various weapons and tools from their class and background. There are two categories of equipment proficiency:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Weapons.** Anyone can wield a weapon, but proficiency makes you better at wielding it. If you have proficiency with a weapon, you add your Proficiency Bonus to attack rolls you make with it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Tools.** If you have proficiency with a tool, you can add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in the skill that’s also used with that check, you have Advantage on the check too. This means you can benefit from both skill proficiency and tool proficiency on the same ability check.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

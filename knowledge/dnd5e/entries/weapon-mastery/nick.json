@@ -1,0 +1,42 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-mastery/nick",
+  "kind": "weapon-mastery",
+  "name": "Nick",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      90
+    ],
+    "section": "Equipment/Weapons/Mastery Properties/Nick",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 1,
+  "text": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+  "data": {
+    "rules": [
+      {
+        "id": "nick",
+        "light_extra_attack_part_of": "dnd5e/action/attack",
+        "once_per_turn": true,
+        "property": "dnd5e/weapon-property/light"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

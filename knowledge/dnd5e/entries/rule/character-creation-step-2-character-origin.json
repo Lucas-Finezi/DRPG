@@ -1,0 +1,275 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/character-creation-step-2-character-origin",
+  "kind": "rule",
+  "name": "Step 2: Character Origin",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      19,
+      20
+    ],
+    "section": "Character Creation/Create Your Character/Step 2: Character Origin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 3,
+  "text": "Determining your character’s origin involves choosing a background, a species, and two languages.\n\nA character’s background represents the place and occupation that were most formative for the character. The combination of background, species, and languages provides fertile soil for your imagination as you ponder your character’s earliest days.\n\n#### Choose a Background\n\nChoose your character’s background, and write it on your character sheet. You can choose any of the backgrounds detailed in “Character Origins,” and your GM might offer additional backgrounds as options.\n\nThe background you choose influences step 3, when you determine your character’s ability scores. If you’re having trouble choosing, the Ability Scores and Backgrounds table shows which backgrounds benefit which ability scores. Look for your class’s primary ability there.\n\n##### Ability Scores and Backgrounds\n\n| **Ability** | **Background** |\n| Strength | Soldier |\n| Dexterity | Soldier |\n| Constitution | Soldier |\n| Intelligence | Acolyte |\n| **Ability** | **Background** |\n| Wisdom | Acolyte |\n| Charisma | Acolyte |\n\n***Record Your Feat.*** A background gives you a feat, which grants your character particular capabilities. Feats are detailed in “Feats.” Write the feat on your character sheet.\n\n***Note Proficiencies.*** Your background gives proficiency in two skills and with one tool. Record this information on your character sheet.\n\nYour class also gives proficiencies. Check your class description in “Classes” and note the proficiencies on your character sheet.\n\nThe features table in your class description shows your Proficiency Bonus (described in “Playing the Game”), which is +2 for a level 1 character. Note this number on your character sheet. You’ll fill in other numbers connected to these proficiencies in step 5.\n\n#### Choose Starting Equipment\n\nYour background and class both provide starting equipment. Any coins that you gain at this step can be immediately spent on equipment from “Equipment.”\n\nRecord your chosen equipment on your character sheet. Equipment is described in “Equipment,” but for now you can just write it all down and look up the specifics in “Equipment” later. Note any coins you have left after purchasing your equipment.\n\n#### Choose a Species\n\nChoose a species for your character. The following species options are detailed in “Character Origins”: Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling, Human, Orc, and Tiefling. Once you’ve chosen a species, write it on your character sheet. Then record your species’ traits.\n\nYour character’s size and Speed are determined by the character’s species; record these in the appropriate places on your character sheet as well (you may write just the first letter of your size).\n\n#### Imagine Your Past and Present\n\nLet your character’s background and species inspire how you imagine their past. That past fed into the character’s present. With that in mind, consider answers to the following questions as your character:\n\n- Who raised you?\n\n- Who was your dearest childhood friend?\n\n- Did you grow up with a pet?\n\n- Have you fallen in love? If so, with whom?\n\n- Did you join an organization, such as a guild or religion? If so, are you still a member of it?\n\n- What elements of your past inspire you to go on adventures now?\n\n#### Choose Languages\n\nYour character knows at least three languages: Common plus two languages you roll or choose from the Standard Languages table. Knowledge of a language means your character can communicate in it, read it, and write it. Your class and other features might also give you languages.\n\nThe Standard Languages table lists languages that are widespread in the setting. Every player character knows Common. The other standard languages originated with the first members of the most prominent species in the setting and have since spread widely.\n\n##### Standard Languages\n\n| **1d12** | **Language** |\n| — | Common |\n| 1 | Common Sign Language |\n| 2 | Draconic |\n| 3–4 | Dwarvish |\n| 5–6 | Elvish |\n| 7 | Giant |\n| 8 | Gnomish |\n| 9 | Goblin |\n| 10–11 | Halfling |\n| 12 | Orc |\n\nThe Rare Languages table lists languages that are either secret or derived from other planes of existence and thus less widespread in the worlds of the Material Plane. Some features let a character learn a rare language.\n\n##### Rare Languages\n\n| **Language** | **Language** |\n| Abyssal | Primordial\\* |\n| Celestial | Sylvan |\n| Deep Speech | Thieves’ Cant |\n| Druidic | Undercommon |\n\nInfernal\n\n\\*Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+  "data": {
+    "tables": [
+      {
+        "id": "ability_scores_and_backgrounds",
+        "caption": "Ability Scores and Backgrounds",
+        "columns": [
+          "Ability",
+          "Background"
+        ],
+        "rows": [
+          [
+            "Strength",
+            "Soldier"
+          ],
+          [
+            "Dexterity",
+            "Soldier"
+          ],
+          [
+            "Constitution",
+            "Soldier"
+          ],
+          [
+            "Intelligence",
+            "Acolyte"
+          ],
+          [
+            "Wisdom",
+            "Acolyte"
+          ],
+          [
+            "Charisma",
+            "Acolyte"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "origin_parts",
+        "mechanic": {
+          "choose": [
+            "background",
+            "species"
+          ],
+          "languages": 2
+        }
+      },
+      {
+        "id": "background_proficiencies",
+        "mechanic": {
+          "skills": 2,
+          "tools": 1
+        }
+      },
+      {
+        "id": "starting_coins_spendable",
+        "mechanic": {
+          "spend_coins_on": "equipment_chapter"
+        }
+      },
+      {
+        "id": "starting_languages",
+        "mechanic": {
+          "always": [
+            "common"
+          ],
+          "choose": 2,
+          "from": "standard",
+          "method": [
+            "roll_1d12",
+            "choose"
+          ],
+          "minimum_known": 3
+        }
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "extra_backgrounds",
+      "reason": "gm_judgment",
+      "prompt": "Offer backgrounds beyond those in Character Origins?",
+      "source_text": "your GM might offer additional backgrounds as options.",
+      "when": "campaign_setup",
+      "pages": [
+        19
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Determining your character’s origin involves choosing a background, a species, and two languages.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A character’s background represents the place and occupation that were most formative for the character. The combination of background, species, and languages provides fertile soil for your imagination as you ponder your character’s earliest days.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Choose a Background\n\nChoose your character’s background, and write it on your character sheet. You can choose any of the backgrounds detailed in “Character Origins,”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/background/acolyte",
+        "dnd5e/background/criminal",
+        "dnd5e/background/sage",
+        "dnd5e/background/soldier"
+      ]
+    },
+    {
+      "text": "and your GM might offer additional backgrounds as options.",
+      "status": "master_decision",
+      "by": [
+        "md:extra_backgrounds"
+      ]
+    },
+    {
+      "text": "The background you choose influences step 3, when you determine your character’s ability scores. If you’re having trouble choosing, the Ability Scores and Backgrounds table shows which backgrounds benefit which ability scores. Look for your class’s primary ability there.\n\n##### Ability Scores and Backgrounds\n\n| **Ability** | **Background** |\n| Strength | Soldier |\n| Dexterity | Soldier |\n| Constitution | Soldier |\n| Intelligence | Acolyte |\n| **Ability** | **Background** |\n| Wisdom | Acolyte |\n| Charisma | Acolyte |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Record Your Feat.*** A background gives you a feat, which grants your character particular capabilities. Feats are detailed in “Feats.” Write the feat on your character sheet.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/feat-descriptions"
+      ]
+    },
+    {
+      "text": "***Note Proficiencies.*** Your background gives proficiency in two skills and with one tool. Record this information on your character sheet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Your class also gives proficiencies. Check your class description in “Classes” and note the proficiencies on your character sheet.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/class/barbarian",
+        "dnd5e/class/bard",
+        "dnd5e/class/cleric",
+        "dnd5e/class/druid",
+        "dnd5e/class/fighter",
+        "dnd5e/class/monk",
+        "dnd5e/class/paladin",
+        "dnd5e/class/ranger",
+        "dnd5e/class/rogue",
+        "dnd5e/class/sorcerer",
+        "dnd5e/class/warlock",
+        "dnd5e/class/wizard"
+      ]
+    },
+    {
+      "text": "The features table in your class description shows your Proficiency Bonus (described in “Playing the Game”), which is +2 for a level 1 character. Note this number on your character sheet. You’ll fill in other numbers connected to these proficiencies in step 5.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/proficiency_bonus/by_level/1"
+      ]
+    },
+    {
+      "text": "#### Choose Starting Equipment\n\nYour background and class both provide starting equipment. Any coins that you gain at this step can be immediately spent on equipment from “Equipment.”\n\nRecord your chosen equipment on your character sheet. Equipment is described in “Equipment,” but for now you can just write it all down and look up the specifics in “Equipment” later. Note any coins you have left after purchasing your equipment.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Choose a Species\n\nChoose a species for your character. The following species options are detailed in “Character Origins”: Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling, Human, Orc, and Tiefling. Once you’ve chosen a species, write it on your character sheet. Then record your species’ traits.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/species/dragonborn",
+        "dnd5e/species/dwarf",
+        "dnd5e/species/elf",
+        "dnd5e/species/gnome",
+        "dnd5e/species/goliath",
+        "dnd5e/species/halfling",
+        "dnd5e/species/human",
+        "dnd5e/species/orc",
+        "dnd5e/species/tiefling"
+      ]
+    },
+    {
+      "text": "Your character’s size and Speed are determined by the character’s species; record these in the appropriate places on your character sheet as well (you may write just the first letter of your size).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/species/dragonborn",
+        "dnd5e/species/dwarf",
+        "dnd5e/species/elf",
+        "dnd5e/species/gnome",
+        "dnd5e/species/goliath",
+        "dnd5e/species/halfling",
+        "dnd5e/species/human",
+        "dnd5e/species/orc",
+        "dnd5e/species/tiefling"
+      ]
+    },
+    {
+      "text": "#### Imagine Your Past and Present\n\nLet your character’s background and species inspire how you imagine their past. That past fed into the character’s present. With that in mind, consider answers to the following questions as your character:\n\n- Who raised you?\n\n- Who was your dearest childhood friend?\n\n- Did you grow up with a pet?\n\n- Have you fallen in love? If so, with whom?\n\n- Did you join an organization, such as a guild or religion? If so, are you still a member of it?\n\n- What elements of your past inspire you to go on adventures now?",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Choose Languages\n\nYour character knows at least three languages: Common plus two languages you roll or choose from the Standard Languages table. Knowledge of a language means your character can communicate in it, read it, and write it. Your class and other features might also give you languages.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3",
+        "dnd5e/system/dnd5e#/languages"
+      ]
+    },
+    {
+      "text": "The Standard Languages table lists languages that are widespread in the setting. Every player character knows Common. The other standard languages originated with the first members of the most prominent species in the setting and have since spread widely.\n\n##### Standard Languages\n\n| **1d12** | **Language** |\n| — | Common |\n| 1 | Common Sign Language |\n| 2 | Draconic |\n| 3–4 | Dwarvish |\n| 5–6 | Elvish |\n| 7 | Giant |\n| 8 | Gnomish |\n| 9 | Goblin |\n| 10–11 | Halfling |\n| 12 | Orc |\n\nThe Rare Languages table lists languages that are either secret or derived from other planes of existence and thus less widespread in the worlds of the Material Plane. Some features let a character learn a rare language.\n\n##### Rare Languages\n\n| **Language** | **Language** |\n| Abyssal | Primordial\\* |\n| Celestial | Sylvan |\n| Deep Speech | Thieves’ Cant |\n| Druidic | Undercommon |\n\nInfernal\n\n\\*Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/languages"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/background/acolyte",
+    "dnd5e/background/criminal",
+    "dnd5e/background/sage",
+    "dnd5e/background/soldier",
+    "dnd5e/class/barbarian",
+    "dnd5e/class/bard",
+    "dnd5e/class/cleric",
+    "dnd5e/class/druid",
+    "dnd5e/class/fighter",
+    "dnd5e/class/monk",
+    "dnd5e/class/paladin",
+    "dnd5e/class/ranger",
+    "dnd5e/class/rogue",
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard",
+    "dnd5e/rule/feat-descriptions",
+    "dnd5e/species/dragonborn",
+    "dnd5e/species/dwarf",
+    "dnd5e/species/elf",
+    "dnd5e/species/gnome",
+    "dnd5e/species/goliath",
+    "dnd5e/species/halfling",
+    "dnd5e/species/human",
+    "dnd5e/species/orc",
+    "dnd5e/species/tiefling",
+    "dnd5e/system/dnd5e"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-thieves-cant",
+  "kind": "feature",
+  "name": "Thieves’ Cant",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      62
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 1: Thieves’ Cant",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You picked up various languages in the communities where you plied your roguish talents. You know Thieves’ Cant and one other language of your choice, which you choose from the language tables in “Character Creation.”",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 1
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "thieves_cant"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "choose": 1,
+      "from": [
+        "standard_and_rare_language_tables"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You picked up various languages in the communities where you plied your roguish talents. You know Thieves’ Cant and one other language of your choice, which you choose from the language tables in “Character Creation.”",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

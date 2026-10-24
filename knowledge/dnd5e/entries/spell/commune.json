@@ -1,0 +1,116 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/commune",
+  "kind": "spell",
+  "name": "Commune",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      116
+    ],
+    "section": "Spells/Spell Descriptions/Commune",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Divination (Cleric)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (incense)\n\n**Duration:** 1 minute\n\nYou contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.\n\nDivine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the GM might offer a short phrase as an answer instead.\n\nIf you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+  "facets": {
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "incense"
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "questions",
+        "max": 3,
+        "yes_or_no": true,
+        "correct_answers": true
+      },
+      {
+        "id": "repeat_casting",
+        "no_answer_chance_percent": {
+          "op": "mul",
+          "args": [
+            25,
+            {
+              "var": "uses_since_rest.commune"
+            }
+          ]
+        },
+        "reset_on": "long_rest_finished"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "commune_answer",
+      "reason": "narrative",
+      "prompt": "What does the deity answer?",
+      "source_text": "Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the GM might offer a short phrase as an answer instead."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Divination (Cleric)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (incense)\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the GM might offer a short phrase as an answer instead.",
+      "status": "master_decision",
+      "by": [
+        "md:commune_answer"
+      ]
+    },
+    {
+      "text": "If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

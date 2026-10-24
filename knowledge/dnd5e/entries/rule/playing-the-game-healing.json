@@ -1,0 +1,59 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/playing-the-game-healing",
+  "kind": "rule",
+  "name": "Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      17
+    ],
+    "section": "Playing the Game/Damage and Healing/Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 1,
+  "text": "Hit Points can be restored by magic, such as the *Cure Wounds* spell or a *Potion of Healing*, or by a Short or Long Rest (see “Rules Glossary”).\n\nWhen you receive healing, add the restored Hit Points to your current Hit Points. Your Hit Points can’t exceed your Hit Point maximum, so any Hit Points regained in excess of the maximum are lost. For example, if you receive 8 Hit Points of healing and have 14 Hit Points and a Hit Point maximum of 20, you regain 6 Hit Points, not 8.",
+  "data": {
+    "rules": [
+      {
+        "id": "healing_cap",
+        "max": {
+          "var": "hp_max"
+        },
+        "excess": "lost"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Hit Points can be restored by magic, such as the *Cure Wounds* spell or a *Potion of Healing*, or by a Short or Long Rest (see “Rules Glossary”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/spell/cure-wounds",
+        "dnd5e/magic-item/potions-of-healing",
+        "dnd5e/rule/short-rest",
+        "dnd5e/rule/long-rest"
+      ]
+    },
+    {
+      "text": "When you receive healing, add the restored Hit Points to your current Hit Points. Your Hit Points can’t exceed your Hit Point maximum, so any Hit Points regained in excess of the maximum are lost. For example, if you receive 8 Hit Points of healing and have 14 Hit Points and a Hit Point maximum of 20, you regain 6 Hit Points, not 8.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/potions-of-healing",
+    "dnd5e/rule/long-rest",
+    "dnd5e/rule/short-rest",
+    "dnd5e/spell/cure-wounds"
+  ]
+}

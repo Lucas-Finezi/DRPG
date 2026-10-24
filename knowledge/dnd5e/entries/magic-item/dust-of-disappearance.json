@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dust-of-disappearance",
+  "kind": "magic-item",
+  "name": "Dust of Disappearance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      219
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dust of Disappearance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThis powder resembles fine sand. There is enough of it for one use. When you take a Utilize action to throw the dust into the air, you and each creature and object within a 10-foot Emanation originating from you have the Invisible condition for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. Immediately after an affected creature makes an attack roll, deals damage, or casts a spell, the Invisible condition ends for that creature.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "single_use",
+        "consumed": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/invisible",
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 10,
+              "origin": "self"
+            }
+          },
+          "note": "You and each creature and object in the area; same duration for all; ends for a creature right after it attacks, deals damage or casts a spell.",
+          "duration": {
+            "kind": "minutes",
+            "amount": "2d4",
+            "ends_on": [
+              {
+                "event": "attacks_deals_damage_or_casts",
+                "whose": "target"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This powder resembles fine sand. There is enough of it for one use. When you take a Utilize action to throw the dust into the air, you and each creature and object within a 10-foot Emanation originating from you have the Invisible condition for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. Immediately after an affected creature makes an attack roll, deals damage, or casts a spell, the Invisible condition ends for that creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/invisible"
+  ]
+}

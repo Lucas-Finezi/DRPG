@@ -1,0 +1,188 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/acid-arrow",
+  "kind": "spell",
+  "name": "Acid Arrow",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      107
+    ],
+    "section": "Spells/Spell Descriptions/Acid Arrow",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Evocation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (powdered rhubarb leaf)\n\n**Duration:** Instantaneous\n\nA shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only.\n\n***Using a Higher-Level Spell Slot.*** The damage (both initial and later) increases by 1d4 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 90
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "powdered rhubarb leaf"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_spell",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 90
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  4,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      2
+                    ]
+                  }
+                ]
+              },
+              "faces": 4
+            }
+          },
+          "damage_type": "acid"
+        },
+        {
+          "op": "trigger",
+          "event": {
+            "event": "turn_end",
+            "whose": "target"
+          },
+          "then": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      2,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          2
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 4
+                }
+              },
+              "damage_type": "acid",
+              "target": {
+                "kind": "inherit"
+              }
+            }
+          ]
+        }
+      ],
+      "on_miss": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "div",
+            "args": [
+              {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      4,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          2
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 4
+                }
+              },
+              2
+            ]
+          },
+          "damage_type": "acid",
+          "note": "Half the initial damage only."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (powdered rhubarb leaf)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage (both initial and later) increases by 1d4 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount",
+        "/effects/0/on_hit/1/then/0/amount",
+        "/effects/0/on_miss/0/amount"
+      ]
+    }
+  ]
+}

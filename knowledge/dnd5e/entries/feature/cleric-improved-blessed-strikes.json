@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/cleric-improved-blessed-strikes",
+  "kind": "feature",
+  "name": "Improved Blessed Strikes",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      38
+    ],
+    "section": "Classes/Cleric/Cleric Class Features/Level 14: Improved Blessed Strikes",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The option you chose for Blessed Strikes grows more powerful.\n\n***Divine Strike.*** The extra damage of your Divine Strike increases to 2d8.\n\n***Potent Spellcasting.*** When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet of yourself, granting a number of Temporary Hit Points equal to twice your Wisdom modifier.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/cleric",
+    "level": 14
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "improves",
+        "feature": "dnd5e/feature/cleric-blessed-strikes"
+      },
+      {
+        "id": "divine_strike",
+        "damage": "2d8"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "deals_damage_with_spell"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "spell_of_class",
+        "args": {
+          "cantrip": true,
+          "class": "cleric"
+        }
+      },
+      "then": [
+        {
+          "op": "temp_hp",
+          "amount": {
+            "op": "mul",
+            "args": [
+              2,
+              {
+                "var": "ability_mod.wis"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            }
+          },
+          "note": "You or another creature."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The option you chose for Blessed Strikes grows more powerful.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Divine Strike.*** The extra damage of your Divine Strike increases to 2d8.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Potent Spellcasting.*** When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet of yourself, granting a number of Temporary Hit Points equal to twice your Wisdom modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

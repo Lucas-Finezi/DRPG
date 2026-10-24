@@ -1,0 +1,145 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/gnome-gnomish-lineage",
+  "kind": "feature",
+  "name": "Gnomish Lineage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      85
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Gnome",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Gnomish Lineage.*** You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):\n\n**Forest Gnome.** You know the *Minor Illusion* cantrip.\n\nYou also always have the *Speak with Animals* spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.\n\n**Rock Gnome.** You know the *Mending* and *Prestidigitation* cantrips. In addition, you can spend 10 minutes casting *Prestidigitation* to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from *Prestidigitation*; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/gnome"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "spellcasting_ability",
+        "choose_from": [
+          "int",
+          "wis",
+          "cha"
+        ],
+        "when": "lineage_chosen"
+      },
+      {
+        "id": "forest_gnome",
+        "cantrip": "dnd5e/spell/minor-illusion",
+        "always_prepared": "dnd5e/spell/speak-with-animals",
+        "free_casts": "proficiency_bonus",
+        "recovery": "long_rest",
+        "may_use_slots": true
+      },
+      {
+        "id": "rock_gnome",
+        "cantrips": [
+          "dnd5e/spell/mending",
+          "dnd5e/spell/prestidigitation"
+        ],
+        "clockwork_device": {
+          "casting_minutes": 10,
+          "size": "tiny",
+          "ac": 5,
+          "hp": 1,
+          "effect": "one_prestidigitation_effect",
+          "activation": "bonus_action_touch",
+          "max_devices": 3,
+          "lasts_hours": 8,
+          "dismantle": "utilize_action"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "forest_gnome",
+          "label": "Forest Gnome",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/minor-illusion",
+                "dnd5e/spell/speak-with-animals"
+              ]
+            },
+            {
+              "op": "resource",
+              "resource": "speak_with_animals_free",
+              "max": {
+                "var": "proficiency_bonus"
+              },
+              "recovery": [
+                {
+                  "on": {
+                    "event": "long_rest_finished"
+                  },
+                  "amount": "all"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rock_gnome",
+          "label": "Rock Gnome",
+          "effects": [
+            {
+              "op": "grant",
+              "refs": [
+                "dnd5e/spell/mending",
+                "dnd5e/spell/prestidigitation"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Gnomish Lineage.*** You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Forest Gnome.** You know the *Minor Illusion* cantrip.\n\nYou also always have the *Speak with Animals* spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Rock Gnome.** You know the *Mending* and *Prestidigitation* cantrips. In addition, you can spend 10 minutes casting *Prestidigitation* to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from *Prestidigitation*; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/mending",
+    "dnd5e/spell/minor-illusion",
+    "dnd5e/spell/prestidigitation",
+    "dnd5e/spell/speak-with-animals"
+  ]
+}

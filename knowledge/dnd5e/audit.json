@@ -1,0 +1,531 @@
+{
+ "inventory_entries": 1747,
+ "catalog_entries": 1951,
+ "missing": [],
+ "wrong_lot": [],
+ "duplicates": [],
+ "extra_section_entries": {
+  "rule": 204
+ },
+ "graph": {
+  "entries": 1952,
+  "edges": 4144,
+  "unresolved": 0,
+  "unreferenced": 869,
+  "by_kind": {
+   "action": 12,
+   "area": 6,
+   "armor": 13,
+   "attitude": 3,
+   "background": 4,
+   "class": 12,
+   "condition": 15,
+   "contagion": 3,
+   "creature": 336,
+   "curse": 5,
+   "environment": 9,
+   "feat": 17,
+   "feature": 303,
+   "gear": 98,
+   "hazard": 5,
+   "lifestyle": 7,
+   "magic-item": 258,
+   "mount": 8,
+   "poison": 14,
+   "rule": 318,
+   "service": 28,
+   "species": 9,
+   "spell": 339,
+   "spell-list": 16,
+   "subclass": 12,
+   "system": 1,
+   "tool": 25,
+   "trap": 8,
+   "vehicle": 12,
+   "weapon": 38,
+   "weapon-mastery": 8,
+   "weapon-property": 10
+  }
+ },
+ "coverage": {
+  "lots": 41,
+  "nodes": 17306,
+  "uncovered": 0
+ },
+ "master_decisions_by_reason": {
+  "gm_judgment": 125,
+  "player_choice_open": 4,
+  "not_automatable": 349,
+  "narrative": 27,
+  "ambiguous_source": 2
+ },
+ "stat_block_abilities": {
+  "L33": {
+   "automated": 282,
+   "rider_decision": 50,
+   "master_decision": 29
+  },
+  "L34": {
+   "automated": 86,
+   "rider_decision": 12,
+   "master_decision": 16
+  },
+  "L35": {
+   "automated": 172,
+   "rider_decision": 35,
+   "master_decision": 23
+  },
+  "L36": {
+   "automated": 34,
+   "rider_decision": 5,
+   "master_decision": 5
+  },
+  "L37": {
+   "automated": 76,
+   "rider_decision": 17,
+   "master_decision": 18
+  },
+  "L38": {
+   "automated": 76,
+   "rider_decision": 13,
+   "master_decision": 13
+  },
+  "L39": {
+   "automated": 117,
+   "rider_decision": 36,
+   "master_decision": 26
+  },
+  "L40": {
+   "automated": 106,
+   "rider_decision": 20,
+   "master_decision": 27
+  }
+ },
+ "source_inconsistencies": 8,
+ "lots": [
+  {
+   "lot": "L00",
+   "title": "Inventário da fonte",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  },
+  {
+   "lot": "L01",
+   "title": "Contrato base",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  },
+  {
+   "lot": "L02",
+   "title": "Sistema D&D 5e",
+   "expected": 27,
+   "present": 27,
+   "entries": 43,
+   "source_nodes": 442,
+   "uncovered": 0
+  },
+  {
+   "lot": "L03",
+   "title": "Condições",
+   "expected": 16,
+   "present": 16,
+   "entries": 16,
+   "source_nodes": 84,
+   "uncovered": 0
+  },
+  {
+   "lot": "L04",
+   "title": "Regras de combate",
+   "expected": 44,
+   "present": 44,
+   "entries": 57,
+   "source_nodes": 304,
+   "uncovered": 0
+  },
+  {
+   "lot": "L05",
+   "title": "Testes e proficiências",
+   "expected": 16,
+   "present": 16,
+   "entries": 28,
+   "source_nodes": 201,
+   "uncovered": 0
+  },
+  {
+   "lot": "L06",
+   "title": "Dano, cura e resistências",
+   "expected": 20,
+   "present": 20,
+   "entries": 31,
+   "source_nodes": 137,
+   "uncovered": 0
+  },
+  {
+   "lot": "L07",
+   "title": "Recursos e descansos",
+   "expected": 3,
+   "present": 3,
+   "entries": 4,
+   "source_nodes": 31,
+   "uncovered": 0
+  },
+  {
+   "lot": "L08",
+   "title": "Regras de equipamento",
+   "expected": 5,
+   "present": 5,
+   "entries": 8,
+   "source_nodes": 43,
+   "uncovered": 0
+  },
+  {
+   "lot": "L09",
+   "title": "Regras de magia",
+   "expected": 13,
+   "present": 13,
+   "entries": 26,
+   "source_nodes": 145,
+   "uncovered": 0
+  },
+  {
+   "lot": "L10",
+   "title": "Espécies",
+   "expected": 9,
+   "present": 9,
+   "entries": 11,
+   "source_nodes": 129,
+   "uncovered": 0
+  },
+  {
+   "lot": "L11",
+   "title": "Antecedentes",
+   "expected": 4,
+   "present": 4,
+   "entries": 7,
+   "source_nodes": 61,
+   "uncovered": 0
+  },
+  {
+   "lot": "L12",
+   "title": "Classes",
+   "expected": 12,
+   "present": 12,
+   "entries": 16,
+   "source_nodes": 234,
+   "uncovered": 0
+  },
+  {
+   "lot": "L13",
+   "title": "Subclasses",
+   "expected": 12,
+   "present": 12,
+   "entries": 12,
+   "source_nodes": 42,
+   "uncovered": 0
+  },
+  {
+   "lot": "L14",
+   "title": "Features e progressões",
+   "expected": 303,
+   "present": 303,
+   "entries": 303,
+   "source_nodes": 1220,
+   "uncovered": 0
+  },
+  {
+   "lot": "L15",
+   "title": "Talentos",
+   "expected": 17,
+   "present": 17,
+   "entries": 25,
+   "source_nodes": 94,
+   "uncovered": 0
+  },
+  {
+   "lot": "L16",
+   "title": "Multiclasse",
+   "expected": 0,
+   "present": 0,
+   "entries": 10,
+   "source_nodes": 59,
+   "uncovered": 0
+  },
+  {
+   "lot": "L17",
+   "title": "Truques",
+   "expected": 27,
+   "present": 27,
+   "entries": 27,
+   "source_nodes": 238,
+   "uncovered": 0
+  },
+  {
+   "lot": "L18",
+   "title": "Magias de círculo 1",
+   "expected": 57,
+   "present": 57,
+   "entries": 57,
+   "source_nodes": 472,
+   "uncovered": 0
+  },
+  {
+   "lot": "L19",
+   "title": "Magias de círculo 2",
+   "expected": 58,
+   "present": 58,
+   "entries": 58,
+   "source_nodes": 509,
+   "uncovered": 0
+  },
+  {
+   "lot": "L20",
+   "title": "Magias de círculo 3",
+   "expected": 42,
+   "present": 42,
+   "entries": 42,
+   "source_nodes": 378,
+   "uncovered": 0
+  },
+  {
+   "lot": "L21",
+   "title": "Magias de círculo 4",
+   "expected": 35,
+   "present": 35,
+   "entries": 35,
+   "source_nodes": 331,
+   "uncovered": 0
+  },
+  {
+   "lot": "L22",
+   "title": "Magias de círculo 5",
+   "expected": 40,
+   "present": 40,
+   "entries": 40,
+   "source_nodes": 437,
+   "uncovered": 0
+  },
+  {
+   "lot": "L23",
+   "title": "Magias de círculo 6",
+   "expected": 31,
+   "present": 31,
+   "entries": 31,
+   "source_nodes": 296,
+   "uncovered": 0
+  },
+  {
+   "lot": "L24",
+   "title": "Magias de círculo 7",
+   "expected": 20,
+   "present": 20,
+   "entries": 20,
+   "source_nodes": 235,
+   "uncovered": 0
+  },
+  {
+   "lot": "L25",
+   "title": "Magias de círculo 8",
+   "expected": 17,
+   "present": 17,
+   "entries": 17,
+   "source_nodes": 175,
+   "uncovered": 0
+  },
+  {
+   "lot": "L26",
+   "title": "Magias de círculo 9",
+   "expected": 16,
+   "present": 16,
+   "entries": 16,
+   "source_nodes": 174,
+   "uncovered": 0
+  },
+  {
+   "lot": "L27",
+   "title": "Listas de magia",
+   "expected": 16,
+   "present": 16,
+   "entries": 16,
+   "source_nodes": 1040,
+   "uncovered": 0
+  },
+  {
+   "lot": "L28",
+   "title": "Armas",
+   "expected": 56,
+   "present": 56,
+   "entries": 61,
+   "source_nodes": 96,
+   "uncovered": 0
+  },
+  {
+   "lot": "L29",
+   "title": "Armaduras e escudos",
+   "expected": 13,
+   "present": 13,
+   "entries": 16,
+   "source_nodes": 36,
+   "uncovered": 0
+  },
+  {
+   "lot": "L30",
+   "title": "Equipamento de aventura",
+   "expected": 178,
+   "present": 178,
+   "entries": 192,
+   "source_nodes": 623,
+   "uncovered": 0
+  },
+  {
+   "lot": "L31",
+   "title": "Itens mágicos",
+   "expected": 235,
+   "present": 235,
+   "entries": 267,
+   "source_nodes": 1687,
+   "uncovered": 0
+  },
+  {
+   "lot": "L32",
+   "title": "Poções, pergaminhos e consumíveis",
+   "expected": 39,
+   "present": 39,
+   "entries": 48,
+   "source_nodes": 211,
+   "uncovered": 0
+  },
+  {
+   "lot": "L33",
+   "title": "Bestiário A–C",
+   "expected": 79,
+   "present": 79,
+   "entries": 103,
+   "source_nodes": 1865,
+   "uncovered": 0
+  },
+  {
+   "lot": "L34",
+   "title": "Bestiário D–F",
+   "expected": 28,
+   "present": 28,
+   "entries": 28,
+   "source_nodes": 560,
+   "uncovered": 0
+  },
+  {
+   "lot": "L35",
+   "title": "Bestiário G–I",
+   "expected": 73,
+   "present": 73,
+   "entries": 73,
+   "source_nodes": 1336,
+   "uncovered": 0
+  },
+  {
+   "lot": "L36",
+   "title": "Bestiário J–L",
+   "expected": 10,
+   "present": 10,
+   "entries": 10,
+   "source_nodes": 210,
+   "uncovered": 0
+  },
+  {
+   "lot": "L37",
+   "title": "Bestiário M–O",
+   "expected": 28,
+   "present": 28,
+   "entries": 28,
+   "source_nodes": 555,
+   "uncovered": 0
+  },
+  {
+   "lot": "L38",
+   "title": "Bestiário P–R",
+   "expected": 28,
+   "present": 28,
+   "entries": 28,
+   "source_nodes": 532,
+   "uncovered": 0
+  },
+  {
+   "lot": "L39",
+   "title": "Bestiário S–T",
+   "expected": 45,
+   "present": 45,
+   "entries": 45,
+   "source_nodes": 911,
+   "uncovered": 0
+  },
+  {
+   "lot": "L40",
+   "title": "Bestiário U–Z",
+   "expected": 39,
+   "present": 39,
+   "entries": 39,
+   "source_nodes": 787,
+   "uncovered": 0
+  },
+  {
+   "lot": "L41",
+   "title": "Regras de exploração e encontros",
+   "expected": 36,
+   "present": 36,
+   "entries": 54,
+   "source_nodes": 320,
+   "uncovered": 0
+  },
+  {
+   "lot": "L42",
+   "title": "Encontros de combate",
+   "expected": 0,
+   "present": 0,
+   "entries": 3,
+   "source_nodes": 66,
+   "uncovered": 0
+  },
+  {
+   "lot": "L43",
+   "title": "Grafo de referências",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  },
+  {
+   "lot": "L44",
+   "title": "Manifest global",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  },
+  {
+   "lot": "L45",
+   "title": "Testes de comportamento",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  },
+  {
+   "lot": "L46",
+   "title": "Auditoria final",
+   "expected": 0,
+   "present": 0,
+   "entries": 0,
+   "source_nodes": null,
+   "uncovered": null
+  }
+ ],
+ "ok": true
+}

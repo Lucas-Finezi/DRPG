@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/blanket",
+  "kind": "gear",
+  "name": "Blanket",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      96
+    ],
+    "section": "Equipment/Adventuring Gear/Blanket",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see “Gameplay Toolbox”).",
+  "facets": {
+    "cost_cp": 50
+  },
+  "data": {
+    "cost": {
+      "amount": 5,
+      "unit": "sp",
+      "cp": 50
+    },
+    "weight_lb": 3
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "hazard": "extreme-cold"
+        }
+      },
+      "note": "While wrapped in it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see “Gameplay Toolbox”).",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    }
+  ]
+}

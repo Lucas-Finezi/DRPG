@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-deft-explorer",
+  "kind": "feature",
+  "name": "Deft Explorer",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 2: Deft Explorer",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Thanks to your travels, you gain the following benefits.\n\n***Expertise.*** Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.\n\n***Languages.*** You know two languages of your choice from the language tables in “Character Creation.”",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 2
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "expertise": true,
+      "choose": 1,
+      "from": [
+        "proficient_skills_without_expertise"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "choose": 2,
+      "from": [
+        "standard_and_rare_language_tables"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Thanks to your travels, you gain the following benefits.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Expertise.*** Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Languages.*** You know two languages of your choice from the language tables in “Character Creation.”",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/dwarf-stonecunning",
+  "kind": "feature",
+  "name": "Stonecunning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      84
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Dwarf",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Stonecunning.*** As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. \n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/dwarf"
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Stonecunning",
+      "cost": "bonus_action",
+      "uses": {
+        "resource": "stonecunning",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "sense",
+          "sense": "tremorsense",
+          "range_feet": 60,
+          "duration": {
+            "kind": "minutes",
+            "amount": 10
+          },
+          "when": {
+            "pred": "on_stone_surface"
+          }
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "stonecunning",
+      "max": {
+        "var": "proficiency_bonus"
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Stonecunning.*** As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

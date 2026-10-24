@@ -1,0 +1,288 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-fire",
+  "kind": "magic-item",
+  "name": "Staff of Fire",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      245
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Fire",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Very Rare (Requires Attunement by a Druid,* *Sorcerer, Warlock, or Wizard)*\n\nYou have Resistance to Fire damage while you hold this staff.\n\n***Spells.*** The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n| **Charge** | **Charge** |\n| **Spell** | **Cost** | **Spell** | **Cost** |\n| *Burning Hands* | 1 | *Wall of Fire* | 4 |\n| *Fireball* | 3 |\n\n***Regaining Charges.*** The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles into cinders and is destroyed.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Very Rare (Requires Attunement by a Druid, Sorcerer, Warlock, or Wizard)",
+      "attunement": {
+        "required": true,
+        "by": "a Druid, Sorcerer, Warlock, or Wizard",
+        "classes": [
+          "dnd5e/class/druid",
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "staff_of_fire",
+        "caption": "Staff of Fire",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Burning Hands",
+            "1"
+          ],
+          [
+            "Wall of Fire",
+            "4"
+          ],
+          [
+            "Fireball",
+            "3"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "fire"
+      ],
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 10
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/burning-hands",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-fire",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d6",
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The staff crumbles into cinders and is destroyed."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Very Rare (Requires Attunement by a Druid,* *Sorcerer, Warlock, or Wizard)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You have Resistance to Fire damage while you hold this staff.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Spells.*** The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "| **Charge** | **Charge** |\n| **Spell** | **Cost** | **Spell** | **Cost** |\n| *Burning Hands* | 1 | *Wall of Fire* | 4 |\n| *Fireball* | 3 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff crumbles into cinders and is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/5",
+        "/effects/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/druid",
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/burning-hands",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/wall-of-fire"
+  ]
+}

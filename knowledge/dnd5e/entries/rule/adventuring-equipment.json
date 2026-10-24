@@ -1,0 +1,41 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/adventuring-equipment",
+  "kind": "rule",
+  "name": "Adventuring Equipment",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      11
+    ],
+    "section": "Playing the Game/Exploration/Adventuring Equipment",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 0,
+  "text": "As adventurers explore, their equipment can help them in many ways. For example, they can reach out-of-the-way places with a Ladder, perceive things they wouldn’t otherwise notice with a Torch or another light source, bypass locked doors and containers with Thieves’ Tools, and create obstacles for pursuers with Caltrops.\n\nSee “Equipment” for rules on many items that are useful on adventures. The items in the“Tools” and “Adventuring Gear” sections are especially useful. The weapons in “Equipment” can also be used for more than battle; you could use a Quarterstaff, for example, to push a sinister-looking button that you’re reluctant to touch.",
+  "coverage": [
+    {
+      "text": "As adventurers explore, their equipment can help them in many ways. For example, they can reach out-of-the-way places with a Ladder, perceive things they wouldn’t otherwise notice with a Torch or another light source, bypass locked doors and containers with Thieves’ Tools, and create obstacles for pursuers with Caltrops.",
+      "status": "descriptive"
+    },
+    {
+      "text": "See “Equipment” for rules on many items that are useful on adventures. The items in the“Tools” and “Adventuring Gear” sections are especially useful. The weapons in “Equipment” can also be used for more than battle; you could use a Quarterstaff, for example, to push a sinister-looking button that you’re reluctant to touch.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/adventuring-gear",
+        "dnd5e/rule/tools"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/adventuring-gear",
+    "dnd5e/rule/tools"
+  ]
+}

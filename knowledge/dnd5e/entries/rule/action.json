@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/action",
+  "kind": "rule",
+  "name": "Action",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      176
+    ],
+    "section": "Rules Glossary/Rules Definitions/Action",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "On your turn, you can take one action. Choose which action to take from those below or from the special actions provided by your features. *See also* “Playing the Game” (“Actions”). These actions are defined elsewhere in this glossary:\n\nAttack Dash Disengage\n\nDodge Help Hide\n\nInfluence Magic Ready\n\nSearch Study Utilize",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "On your turn, you can take one action.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/action_economy/0"
+      ]
+    },
+    {
+      "text": "Choose which action to take from those below or from the special actions provided by your features.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/action/attack",
+        "dnd5e/action/dash",
+        "dnd5e/action/disengage",
+        "dnd5e/action/dodge",
+        "dnd5e/action/help",
+        "dnd5e/action/hide",
+        "dnd5e/action/influence",
+        "dnd5e/action/magic",
+        "dnd5e/action/ready",
+        "dnd5e/action/search",
+        "dnd5e/action/study",
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“Actions”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/actions"
+      ]
+    },
+    {
+      "text": "These actions are defined elsewhere in this glossary:\n\nAttack Dash Disengage\n\nDodge Help Hide\n\nInfluence Magic Ready\n\nSearch Study Utilize",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/action/attack",
+        "dnd5e/action/utilize"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/attack",
+    "dnd5e/action/dash",
+    "dnd5e/action/disengage",
+    "dnd5e/action/dodge",
+    "dnd5e/action/help",
+    "dnd5e/action/hide",
+    "dnd5e/action/influence",
+    "dnd5e/action/magic",
+    "dnd5e/action/ready",
+    "dnd5e/action/search",
+    "dnd5e/action/study",
+    "dnd5e/action/utilize",
+    "dnd5e/rule/actions",
+    "dnd5e/system/dnd5e"
+  ]
+}

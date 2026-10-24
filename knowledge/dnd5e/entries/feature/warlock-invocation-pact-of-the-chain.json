@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-pact-of-the-chain",
+  "kind": "feature",
+  "name": "Pact of the Chain",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      74
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Pact of the Chain",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You learn the *Find Familiar* spell and can cast it as a Magic action without expending a spell slot.\n\nWhen you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit,** **Skeleton, Sphinx of Wonder, Sprite,** or **Venomous Snake** (see “Monsters” for the familiar’s stat block).\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "special_forms",
+        "forms": [
+          "dnd5e/creature/imp",
+          "dnd5e/creature/pseudodragon",
+          "dnd5e/creature/quasit",
+          "dnd5e/creature/skeleton",
+          "dnd5e/creature/sphinx-of-wonder",
+          "dnd5e/creature/sprite",
+          "dnd5e/creature/venomous-snake"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/find-familiar"
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/find-familiar",
+          "slot": "none"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "takes_attack_action"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "note": "Forgo one of your attacks: the familiar makes one attack with its Reaction."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You learn the *Find Familiar* spell and can cast it as a Magic action without expending a spell slot.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "When you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: **Imp, Pseudodragon, Quasit,** **Skeleton, Sphinx of Wonder, Sprite,** or **Venomous Snake** (see “Monsters” for the familiar’s stat block).",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/imp",
+    "dnd5e/creature/pseudodragon",
+    "dnd5e/creature/quasit",
+    "dnd5e/creature/skeleton",
+    "dnd5e/creature/sphinx-of-wonder",
+    "dnd5e/creature/sprite",
+    "dnd5e/creature/venomous-snake",
+    "dnd5e/spell/find-familiar"
+  ]
+}

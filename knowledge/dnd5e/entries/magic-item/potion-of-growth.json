@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/potion-of-growth",
+  "kind": "magic-item",
+  "name": "Potion of Growth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      235
+    ],
+    "section": "Magic Items/Magic Items A–Z/Potion of Growth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Uncommon*\n\nWhen you drink this potion, you gain the “enlarge” effect of the *Enlarge/Reduce* spell for 10 minutes (no Concentration required).\n\nThe red in the potion’s liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Uncommon",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Drink",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/enlarge-reduce",
+          "slot": "none",
+          "components": [],
+          "note": "No Concentration required. Lasts 10 minutes (enlarge effect)."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you drink this potion, you gain the “enlarge” effect of the *Enlarge/Reduce* spell for 10 minutes (no Concentration required).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The red in the potion’s liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/enlarge-reduce"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/eyebite",
+  "kind": "spell",
+  "name": "Eyebite",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      129
+    ],
+    "section": "Spells/Spell Descriptions/Eyebite",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L23"
+  },
+  "tier": 2,
+  "text": "*Level 6 Necromancy (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nFor the duration, your eyes become an inky void. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration.\n\nOn each of your turns until the spell ends, you can take a Magic action to target another creature but can’t target a creature again if it has succeeded on a save against this casting of the spell.\n\n***Asleep.*** The target has the Unconscious condition. It wakes up if it takes any damage or if another creature takes an action to shake it awake.\n\n***Panicked.*** The target has the Frightened condition. On each of its turns, the Frightened target must take the Dash action and move away from you by the safest and shortest route available. If the target moves to a space at least 60 feet away from you where it can’t see you, this effect ends.\n\n***Sickened.*** The target has the Poisoned condition.",
+  "facets": {
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "choice",
+          "id": "eyebite",
+          "choose": 1,
+          "options": [
+            {
+              "id": "asleep",
+              "label": "Asleep",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/unconscious",
+                  "note": "Wakes if it takes damage or is shaken awake with an action.",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panicked",
+              "label": "Panicked",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/frightened",
+                  "note": "Must Dash away by the safest, shortest route; ends if 60+ feet away where it can't see you.",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "sickened",
+              "label": "Sickened",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/poisoned",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/eyebite",
+          "note": "Target another creature; not one that succeeded on a save against this casting."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 6 Necromancy (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, your eyes become an inky void. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "On each of your turns until the spell ends, you can take a Magic action to target another creature but can’t target a creature again if it has succeeded on a save against this casting of the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Asleep.*** The target has the Unconscious condition. It wakes up if it takes any damage or if another creature takes an action to shake it awake.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/0"
+      ]
+    },
+    {
+      "text": "***Panicked.*** The target has the Frightened condition. On each of its turns, the Frightened target must take the Dash action and move away from you by the safest and shortest route available. If the target moves to a space at least 60 feet away from you where it can’t see you, this effect ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/1"
+      ]
+    },
+    {
+      "text": "***Sickened.*** The target has the Poisoned condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/unconscious",
+    "dnd5e/spell/eyebite"
+  ]
+}

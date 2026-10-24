@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/mass-cure-wounds",
+  "kind": "spell",
+  "name": "Mass Cure Wounds",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      147
+    ],
+    "section": "Spells/Spell Descriptions/Mass Cure Wounds",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Abjuration (Bard, Cleric, Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nA wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier.\n\n***Using a Higher-Level Spell Slot.*** The healing increases by 1d8 for each spell slot level above 5.",
+  "facets": {
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "heal",
+      "amount": {
+        "op": "add",
+        "args": [
+          {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  5,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      5
+                    ]
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          },
+          {
+            "var": "spellcasting_mod"
+          }
+        ]
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 30,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        }
+      },
+      "note": "Up to six creatures in the Sphere."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Abjuration (Bard, Cleric, Druid)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The healing increases by 1d8 for each spell slot level above 5.",
+      "status": "structured",
+      "by": [
+        "/effects/0/amount"
+      ]
+    }
+  ]
+}

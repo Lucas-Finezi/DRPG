@@ -1,0 +1,135 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/dodge",
+  "kind": "action",
+  "name": "Dodge",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Dodge [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has Disadvantage if you can see the attacker, and you make Dexterity saving throws with Advantage.\n\nYou lose these benefits if you have the Incapacitated condition or if your Speed is 0.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "dodge_lost_when",
+        "conditions": [
+          "dnd5e/condition/incapacitated"
+        ],
+        "speed_zero": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Dodge",
+      "cost": "action",
+      "then": [
+        {
+          "op": "roll_mode",
+          "mode": "disadvantage",
+          "rolls": [
+            "attack_roll"
+          ],
+          "direction": "against",
+          "when": {
+            "all": [
+              {
+                "pred": "can_see",
+                "args": {
+                  "target": "attacker"
+                }
+              },
+              {
+                "not": {
+                  "any": [
+                    {
+                      "pred": "has_condition",
+                      "args": {
+                        "condition": "incapacitated"
+                      }
+                    },
+                    {
+                      "pred": "speed_is_zero"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_start",
+              "whose": "self"
+            }
+          }
+        },
+        {
+          "op": "roll_mode",
+          "mode": "advantage",
+          "rolls": [
+            "saving_throw.dex"
+          ],
+          "when": {
+            "not": {
+              "any": [
+                {
+                  "pred": "has_condition",
+                  "args": {
+                    "condition": "incapacitated"
+                  }
+                },
+                {
+                  "pred": "speed_is_zero"
+                }
+              ]
+            }
+          },
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_start",
+              "whose": "self"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has Disadvantage if you can see the attacker, and you make Dexterity saving throws with Advantage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You lose these benefits if you have the Incapacitated condition or if your Speed is 0.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated"
+  ]
+}

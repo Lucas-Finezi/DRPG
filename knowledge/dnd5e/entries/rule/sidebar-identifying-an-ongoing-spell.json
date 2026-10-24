@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-identifying-an-ongoing-spell",
+  "kind": "rule",
+  "name": "Identifying an Ongoing Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      106
+    ],
+    "section": "Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L09"
+  },
+  "tier": 2,
+  "text": "You can try to identify a non-instantaneous spell by its observable effects if its duration is ongoing. To identify it, you must take the Study action and succeed on a DC 15 Intelligence (Arcana) check.",
+  "facets": {
+    "sidebar": true
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Identify an ongoing spell",
+      "cost": "action",
+      "then": [
+        {
+          "op": "check",
+          "ability": "int",
+          "skill": "arcana",
+          "dc": 15
+        }
+      ],
+      "note": "Study action; the spell must be non-instantaneous with an ongoing duration and observable effects."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can try to identify a non-instantaneous spell by its observable effects if its duration is ongoing. To identify it, you must take the Study action and succeed on a DC 15 Intelligence (Arcana) check.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

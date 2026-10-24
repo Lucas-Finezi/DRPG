@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/species/dwarf",
+  "kind": "species",
+  "name": "Dwarf",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      84
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Dwarf",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 2,
+  "text": "**Creature Type:** Humanoid\n\n**Size:** Medium (about 4–5 feet tall)\n\n**Speed:** 30 feet\n\nAs a Dwarf, you have these special traits.\n\n***Darkvision.*** You have Darkvision with a range of 120 feet.\n\n***Dwarven Resilience.*** You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.\n\n***Dwarven Toughness.*** Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.\n\n***Stonecunning.*** As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. \n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+  "facets": {
+    "creature_type": "humanoid",
+    "size": [
+      "medium"
+    ],
+    "speed": 30
+  },
+  "data": {
+    "creature_type": "humanoid",
+    "sizes": [
+      "medium"
+    ],
+    "height": {
+      "medium": "about 4–5 feet tall"
+    },
+    "speed": 30,
+    "traits": [
+      "dnd5e/feature/dwarf-darkvision",
+      "dnd5e/feature/dwarf-dwarven-resilience",
+      "dnd5e/feature/dwarf-dwarven-toughness",
+      "dnd5e/feature/dwarf-stonecunning"
+    ],
+    "rules": [
+      {
+        "id": "creature_type",
+        "creature_type": "humanoid"
+      },
+      {
+        "id": "size",
+        "sizes": [
+          "medium"
+        ]
+      },
+      {
+        "id": "speed",
+        "walk": 30
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/dwarf-darkvision",
+        "dnd5e/feature/dwarf-dwarven-resilience",
+        "dnd5e/feature/dwarf-dwarven-toughness",
+        "dnd5e/feature/dwarf-stonecunning"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "**Creature Type:** Humanoid",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Size:** Medium (about 4–5 feet tall)",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Speed:** 30 feet",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Dwarf, you have these special traits.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Darkvision.*** You have Darkvision with a range of 120 feet.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/dwarf-darkvision"
+      ]
+    },
+    {
+      "text": "***Dwarven Resilience.*** You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/dwarf-dwarven-resilience"
+      ]
+    },
+    {
+      "text": "***Dwarven Toughness.*** Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/dwarf-dwarven-toughness"
+      ]
+    },
+    {
+      "text": "***Stonecunning.*** As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. \n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/dwarf-stonecunning"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/dwarf-darkvision",
+    "dnd5e/feature/dwarf-dwarven-resilience",
+    "dnd5e/feature/dwarf-dwarven-toughness",
+    "dnd5e/feature/dwarf-stonecunning"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/saving-throw-proficiencies",
+  "kind": "rule",
+  "name": "Saving Throw Proficiencies",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      9
+    ],
+    "section": "Playing the Game/Proficiency/Saving Throw Proficiencies",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 1,
+  "text": "Proficiency in a saving throw lets a character add their Proficiency Bonus to saves that use a particular ability. For example, proficiency in Wisdom saves lets you add your Proficiency Bonus to your Wisdom saves. Some monsters also have saving throw proficiencies, as noted in their stat blocks.\n\nEach class gives proficiency in at least two saving throws, representing that class’s training in evading or resisting certain threats. Wizards, for example, are proficient in Intelligence and Wisdom saves; they train to resist mental assault.",
+  "data": {
+    "rules": [
+      {
+        "id": "save_proficiency",
+        "adds": "proficiency_bonus"
+      },
+      {
+        "id": "class_saves",
+        "minimum_per_class": 2
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Proficiency in a saving throw lets a character add their Proficiency Bonus to saves that use a particular ability. For example, proficiency in Wisdom saves lets you add your Proficiency Bonus to your Wisdom saves. Some monsters also have saving throw proficiencies, as noted in their stat blocks.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Each class gives proficiency in at least two saving throws, representing that class’s training in evading or resisting certain threats. Wizards, for example, are proficient in Intelligence and Wisdom saves; they train to resist mental assault.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

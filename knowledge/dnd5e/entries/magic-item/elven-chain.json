@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/elven-chain",
+  "kind": "magic-item",
+  "name": "Elven Chain",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      220
+    ],
+    "section": "Magic Items/Magic Items A–Z/Elven Chain",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Chain Mail or Chain Shirt), Rare*\n\nYou gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Chain Mail or Chain Shirt), Rare",
+      "category": "armor",
+      "applies_to": {
+        "text": "Chain Mail or Chain Shirt",
+        "refs": [
+          "dnd5e/armor/chain-mail",
+          "dnd5e/armor/chain-shirt"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "dnd5e/armor/chain-mail",
+        "dnd5e/armor/chain-shirt"
+      ],
+      "note": "Considered trained with this armor."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Chain Mail or Chain Shirt), Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/chain-mail",
+    "dnd5e/armor/chain-shirt"
+  ]
+}

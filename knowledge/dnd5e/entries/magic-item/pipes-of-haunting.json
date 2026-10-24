@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/pipes-of-haunting",
+  "kind": "magic-item",
+  "name": "Pipes of Haunting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      234
+    ],
+    "section": "Magic Items/Magic Items A–Z/Pipes of Haunting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThese pipes have 3 charges and regain 1d3 expended charges daily at dawn. You can take a Magic action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the Frightened condition for 1 minute. A creature that fails the save repeats it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its save is immune to the effect of these pipes for 24 hours.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "predicate": {
+                "pred": "chosen_by_source"
+              }
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          },
+          "note": "A creature that succeeds is immune to these pipes for 24 hours."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "These pipes have 3 charges and regain 1d3 expended charges daily at dawn. You can take a Magic action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the Frightened condition for 1 minute. A creature that fails the save repeats it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its save is immune to the effect of these pipes for 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened"
+  ]
+}

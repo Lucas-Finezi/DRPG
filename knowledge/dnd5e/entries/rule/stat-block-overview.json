@@ -1,0 +1,113 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-overview",
+  "kind": "rule",
+  "name": "Stat Block Overview",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      254
+    ],
+    "section": "Monsters/Stat Block Overview",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "A monster has a stat block that contains the rules necessary to use it in the game. Stat blocks are divided into the following parts:\n\n**Name and General Details.** The name of the monster is followed by its size, creature type (along with any descriptive tags), and alignment.\n\n**Combat Highlights.** Armor Class, Hit Points, Speed, and Initiative are provided here.\n\n**Ability Scores.** A monster’s ability scores, ability modifiers, and saving throws are listed here.\n\n**Other Details.** The monster’s Senses, Languages, and CR entries appear here. Additional details appear in some monsters, such as skill proficiencies, Resistances, Immunities, and Gear. If a monster lacks those details, entries for them don’t appear.\n\n**Traits.** Monster characteristics that are active at all times or during certain situations appear here.\n\n**Actions.** The monster can take the actions here in addition to those in “Playing the Game.”\n\n**Bonus Actions.** This section provides a monster’s\n\nBonus Actions, if any.\n\n**Reactions and Legendary Actions.** These sections provide Reactions and Legendary Actions, if any.",
+  "data": {
+    "rules": [
+      {
+        "id": "parts",
+        "order": [
+          "name_and_general_details",
+          "combat_highlights",
+          "ability_scores",
+          "other_details",
+          "traits",
+          "actions",
+          "bonus_actions",
+          "reactions",
+          "legendary_actions"
+        ]
+      },
+      {
+        "id": "optional_entries",
+        "absent_when_lacking": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A monster has a stat block that contains the rules necessary to use it in the game. Stat blocks are divided into the following parts:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Name and General Details.** The name of the monster is followed by its size, creature type (along with any descriptive tags), and alignment.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Combat Highlights.** Armor Class, Hit Points, Speed, and Initiative are provided here.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Ability Scores.** A monster’s ability scores, ability modifiers, and saving throws are listed here.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Other Details.** The monster’s Senses, Languages, and CR entries appear here. Additional details appear in some monsters, such as skill proficiencies, Resistances, Immunities, and Gear. If a monster lacks those details, entries for them don’t appear.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Traits.** Monster characteristics that are active at all times or during certain situations appear here.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Actions.** The monster can take the actions here in addition to those in “Playing the Game.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/actions"
+      ]
+    },
+    {
+      "text": "**Bonus Actions.** This section provides a monster’s\n\nBonus Actions, if any.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Reactions and Legendary Actions.** These sections provide Reactions and Legendary Actions, if any.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/actions"
+  ]
+}

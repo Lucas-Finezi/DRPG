@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/tool/forgery-kit",
+  "kind": "tool",
+  "name": "Forgery Kit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      94
+    ],
+    "section": "Equipment/Tools/Other Tools/Forgery Kit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| **Ability:** Dexterity | **Weight:** 5 lb. |\n\n**Utilize:** Mimic 10 or fewer words of someone else’s handwriting (DC 15), or duplicate a wax seal (DC 20)",
+  "facets": {
+    "category": "other-tools",
+    "ability": "dex",
+    "cost_cp": 1500
+  },
+  "data": {
+    "ability": "dex",
+    "weight_lb": 5,
+    "utilize": [
+      {
+        "task": "Mimic 10 or fewer words of someone else’s handwriting",
+        "dc": 15
+      },
+      {
+        "task": "duplicate a wax seal",
+        "dc": 20
+      }
+    ],
+    "cost": {
+      "amount": 15,
+      "unit": "gp",
+      "cp": 1500
+    },
+    "category": "Other Tools"
+  },
+  "coverage": [
+    {
+      "text": "| **Ability:** Dexterity | **Weight:** 5 lb. |",
+      "status": "structured",
+      "by": [
+        "/data/ability",
+        "/data/weight_lb",
+        "/data/cost"
+      ]
+    },
+    {
+      "text": "**Utilize:** Mimic 10 or fewer words of someone else’s handwriting (DC 15), or duplicate a wax seal (DC 20)",
+      "status": "structured",
+      "by": [
+        "/data/utilize",
+        "dnd5e/action/utilize"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize"
+  ]
+}

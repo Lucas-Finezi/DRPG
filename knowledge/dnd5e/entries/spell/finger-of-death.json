@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/finger-of-death",
+  "kind": "spell",
+  "name": "Finger of Death",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      131
+    ],
+    "section": "Spells/Spell Descriptions/Finger of Death",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Necromancy (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou unleash negative energy toward a creature you can see within range. The target makes a Constitution saving throw, taking 7d8 + 30 Necrotic damage on a failed save or half as much damage on a successful one.\n\nA Humanoid killed by this spell rises at the start of your next turn as a **Zombie** (see “Monsters”) that follows your verbal orders.",
+  "facets": {
+    "level": 7,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "add",
+            "args": [
+              "7d8",
+              30
+            ]
+          },
+          "damage_type": "necrotic"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "summon",
+      "creature": "dnd5e/creature/zombie",
+      "controller": "summoner",
+      "initiative": "own",
+      "note": "A Humanoid killed by the spell rises at the start of your next turn and follows your verbal orders."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Necromancy (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You unleash negative energy toward a creature you can see within range. The target makes a Constitution saving throw, taking 7d8 + 30 Necrotic damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A Humanoid killed by this spell rises at the start of your next turn as a **Zombie** (see “Monsters”) that follows your verbal orders.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/zombie"
+  ]
+}

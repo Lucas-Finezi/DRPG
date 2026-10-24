@@ -1,0 +1,42 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/command-word",
+  "kind": "rule",
+  "name": "Command Word",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      206
+    ],
+    "section": "Magic Items/Activating a Magic Item/Command Word",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "A command word is a word or short phrase that must be spoken or signed for an item to work. Spoken command words must be audible and fail to work in areas where all sound is suppressed, as in the area of the *Silence* spell.",
+  "data": {
+    "rules": [
+      {
+        "id": "command_word",
+        "spoken_or_signed": true,
+        "spoken_needs_sound": true,
+        "example": "dnd5e/spell/silence"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A command word is a word or short phrase that must be spoken or signed for an item to work. Spoken command words must be audible and fail to work in areas where all sound is suppressed, as in the area of the *Silence* spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

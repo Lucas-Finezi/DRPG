@@ -1,0 +1,380 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/wraith",
+  "kind": "creature",
+  "name": "Wraith",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      342,
+      343
+    ],
+    "section": "Monsters A–Z/Wraith/Wraith",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Undead, Neutral Evil*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 67 (9d8 + 27)\n\n**Speed** 5 ft., Fly 60 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 15 | +2 | +2 |\n\n**Resistances** Acid, Bludgeoning, Cold, Fire, Piercing, Slashing\n\n**Immunities** Necrotic, Poison; Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 12\n\n**Languages** Common plus two other languages\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Incorporeal Movement.*** The wraith can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n***Sunlight Sensitivity.*** While in sunlight, the wraith has Disadvantage on ability checks and attack rolls.\n\n##### Actions\n\n***Life Drain.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.\n\n***Create Specter.*** The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target’s spirit rises as a **Specter** in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith’s control. The wraith can have no more than seven specters under its control at a time.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium or Small Undead, Neutral Evil",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 67,
+      "formula": {
+        "op": "add",
+        "args": [
+          "9d8",
+          27
+        ]
+      },
+      "text": "67 (9d8 + 27)"
+    },
+    "speed": {
+      "text": "5 ft., Fly 60 ft. (hover)",
+      "walk": 5,
+      "fly": 60,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Acid, Bludgeoning, Cold, Fire, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "necrotic",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Necrotic, Poison; Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 12",
+      "darkvision": 60,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common plus two other languages"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Incorporeal Movement",
+        "text": "The wraith can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      },
+      {
+        "name": "Sunlight Sensitivity",
+        "text": "While in sunlight, the wraith has Disadvantage on ability checks and attack rolls."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Life Drain",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken."
+      },
+      {
+        "name": "Create Specter",
+        "text": "The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target’s spirit rises as a **Specter** in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith’s control. The wraith can have no more than seven specters under its control at a time."
+      }
+    ],
+    "rules": [
+      {
+        "id": "incorporeal_movement",
+        "through_creatures_and_objects": true,
+        "difficult_terrain": true,
+        "ends_turn_inside": {
+          "damage": "1d10",
+          "damage_type": "force"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll",
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "in_light",
+            "args": {
+              "level": "sunlight"
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "attack_roll"
+                }
+              },
+              {
+                "pred": "check_uses",
+                "args": {
+                  "skill": "perception"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Attack rolls and Wisdom (Perception) checks while in sunlight."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Life Drain",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d8",
+                  3
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_life_drain_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Life Drain as written.",
+      "source_text": "21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken."
+    },
+    {
+      "id": "actions_create_specter",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Create Specter as written.",
+      "source_text": "The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target’s spirit rises as a Specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith’s control. The wraith can have no more than seven specters under its control at a time."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Undead, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 67 (9d8 + 27)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Fly 60 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 12 | +1 | +1 | **Wis** 14 | +2 | +2 | **Cha** 15 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Bludgeoning, Cold, Fire, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus two other languages",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Incorporeal Movement.*** The wraith can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Sunlight Sensitivity.*** While in sunlight, the wraith has Disadvantage on ability checks and attack rolls.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Life Drain.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 21 (4d8 + 3) Necrotic damage. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/1",
+        "md:actions_life_drain_rider"
+      ]
+    },
+    {
+      "text": "***Create Specter.*** The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target’s spirit rises as a **Specter** in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith’s control. The wraith can have no more than seven specters under its control at a time.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "md:actions_create_specter"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious"
+  ]
+}

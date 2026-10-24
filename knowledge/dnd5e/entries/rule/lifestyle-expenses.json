@@ -1,0 +1,85 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/lifestyle-expenses",
+  "kind": "rule",
+  "name": "Lifestyle Expenses",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Lifestyle Expenses",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 3,
+  "text": "Lifestyle expenses summarize the cost of living in a fantasy world. They cover lodging, food, equipment maintenance, and other necessities.\n\nAt the start of each week or month (GM’s choice), choose a lifestyle below—Wretched, Squalid, Poor, Modest, Comfortable, Wealthy, or Aristocratic—and pay the price to sustain that lifestyle.\n\nLifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character.",
+  "data": {
+    "rules": [
+      {
+        "id": "lifestyle",
+        "options": [
+          "dnd5e/lifestyle/wretched",
+          "dnd5e/lifestyle/squalid",
+          "dnd5e/lifestyle/poor",
+          "dnd5e/lifestyle/modest",
+          "dnd5e/lifestyle/comfortable",
+          "dnd5e/lifestyle/wealthy",
+          "dnd5e/lifestyle/aristocratic"
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "lifestyle_period",
+      "reason": "gm_judgment",
+      "prompt": "Is the lifestyle paid weekly or monthly?",
+      "source_text": "At the start of each week or month (GM’s choice), choose a lifestyle below"
+    },
+    {
+      "id": "lifestyle_effects",
+      "reason": "gm_judgment",
+      "prompt": "Does the lifestyle affect risks or perceptions here?",
+      "source_text": "Lifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Lifestyle expenses summarize the cost of living in a fantasy world. They cover lodging, food, equipment maintenance, and other necessities.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "At the start of each week or month (GM’s choice), choose a lifestyle below—Wretched, Squalid, Poor, Modest, Comfortable, Wealthy, or Aristocratic—and pay the price to sustain that lifestyle.",
+      "status": "master_decision",
+      "by": [
+        "md:lifestyle_period"
+      ]
+    },
+    {
+      "text": "Lifestyles have no inherent consequences, but the GM might take them into account when determining risks or how others perceive your character.",
+      "status": "master_decision",
+      "by": [
+        "md:lifestyle_effects"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/lifestyle/aristocratic",
+    "dnd5e/lifestyle/comfortable",
+    "dnd5e/lifestyle/modest",
+    "dnd5e/lifestyle/poor",
+    "dnd5e/lifestyle/squalid",
+    "dnd5e/lifestyle/wealthy",
+    "dnd5e/lifestyle/wretched"
+  ]
+}

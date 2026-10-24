@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-mastery/graze",
+  "kind": "weapon-mastery",
+  "name": "Graze",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      90
+    ],
+    "section": "Equipment/Weapons/Mastery Properties/Graze",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "misses_with_attack_roll"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "var": "attack_ability_mod"
+          },
+          "damage_type": {
+            "var": "chosen.weapon_damage_type"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "Can be increased only by increasing the ability modifier."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

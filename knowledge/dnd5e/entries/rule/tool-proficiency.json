@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/tool-proficiency",
+  "kind": "rule",
+  "name": "Tool Proficiency",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      93
+    ],
+    "section": "Equipment/Tools/Tool Proficiency",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that’s used with that check, you have Advantage on the check too.\n\nYour features might give you proficiency with a tool. A monster has proficiency with any tool in its stat block.",
+  "data": {
+    "rules": [
+      {
+        "id": "sources",
+        "features": true,
+        "monsters_proficient_with_stat_block_tools": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_check",
+      "mode": "add",
+      "value": {
+        "var": "proficiency_bonus"
+      },
+      "when": {
+        "pred": "check_uses",
+        "args": {
+          "proficient": "tool"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "check_uses",
+            "args": {
+              "proficient": "tool"
+            }
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "proficient": "skill"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you have proficiency with a tool, add your Proficiency Bonus to any ability check you make that uses the tool. If you have proficiency in a skill that’s used with that check, you have Advantage on the check too.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Your features might give you proficiency with a tool. A monster has proficiency with any tool in its stat block.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

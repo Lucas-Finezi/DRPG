@@ -1,0 +1,130 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/circle-of-the-land-natures-sanctuary",
+  "kind": "feature",
+  "name": "Nature’s Sanctuary",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Druid Subclass: Circle of the Land/Level 14: Nature’s Sanctuary",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature’s Ward while there.\n\nAs a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/circle-of-the-land",
+    "level": 14
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "duration",
+        "minutes": 1,
+        "ends_early": [
+          "dnd5e/condition/incapacitated",
+          "death"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "wild_shape",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "defense",
+          "kind": "resistance",
+          "damage_types": [
+            {
+              "var": "chosen.land_type_damage"
+            }
+          ],
+          "target": {
+            "kind": "area",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            },
+            "area": {
+              "shape": "cube",
+              "size_feet": 15
+            },
+            "filter": {
+              "allies_only": true
+            }
+          },
+          "duration": {
+            "kind": "minutes",
+            "amount": 1
+          }
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/cover",
+          "note": "You and your allies have Half Cover while in the area."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "requires": {
+        "pred": "effect_active",
+        "args": {
+          "effect": "circle-of-the-land-natures-sanctuary"
+        }
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 60,
+          "note": "The Cube, to ground within 120 feet of you."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature’s Ward while there.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "As a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated",
+    "dnd5e/rule/cover"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/druid-beast-spells",
+  "kind": "feature",
+  "name": "Beast Spells",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      43
+    ],
+    "section": "Classes/Druid/Druid Class Features/Level 18: Beast Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/druid",
+    "level": 18
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "beast_spells",
+        "can_cast_in_wild_shape": true,
+        "overrides": "dnd5e/feature/druid-wild-shape",
+        "except": [
+          "material_component_with_cost",
+          "consumed_material_component"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

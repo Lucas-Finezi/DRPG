@@ -1,0 +1,291 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/bestow-curse",
+  "kind": "spell",
+  "name": "Bestow Curse",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      112,
+      113
+    ],
+    "section": "Spells/Spell Descriptions/Bestow Curse",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Necromancy (Bard, Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nYou touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of your choice:\n\n- Choose one ability. The target has Disadvantage on ability checks and saving throws made with that ability.\n\n- The target has Disadvantage on attack rolls against you.\n\n- In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn.\n\n- If you deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage.\n\n***Using a Higher-Level Spell Slot.*** If you cast this spell using a level 4 spell slot, you can maintain Concentration on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn’t require Concentration, and the duration becomes 8 hours (level 5–6 slot) or 24 hours (level 7–8 slot). If you use a level 9 spell slot, the spell lasts until dispelled.",
+  "facets": {
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "upcast_duration",
+        "by_slot_level": [
+          {
+            "slot": 4,
+            "duration": {
+              "kind": "minutes",
+              "amount": 10,
+              "up_to": true,
+              "concentration": true
+            }
+          },
+          {
+            "slot": 5,
+            "duration": {
+              "kind": "hours",
+              "amount": 8
+            }
+          },
+          {
+            "slot": 7,
+            "duration": {
+              "kind": "hours",
+              "amount": 24
+            }
+          },
+          {
+            "slot": 9,
+            "duration": {
+              "kind": "until_dispelled"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "choice",
+          "id": "curse",
+          "choose": 1,
+          "options": [
+            {
+              "id": "ability",
+              "label": "Disadvantage with one ability",
+              "effects": [
+                {
+                  "op": "roll_mode",
+                  "mode": "disadvantage",
+                  "rolls": [
+                    "ability_check",
+                    "saving_throw"
+                  ],
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  },
+                  "when": {
+                    "pred": "roll_uses_ability",
+                    "args": {
+                      "ability": "chosen.ability"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "attacks_against_you",
+              "label": "Disadvantage on attacks against you",
+              "effects": [
+                {
+                  "op": "roll_mode",
+                  "mode": "disadvantage",
+                  "rolls": [
+                    "attack_roll"
+                  ],
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  },
+                  "when": {
+                    "pred": "attack_targets_source"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "dodge",
+              "label": "Forced Dodge",
+              "effects": [
+                {
+                  "op": "trigger",
+                  "event": {
+                    "event": "turn_start",
+                    "whose": "target",
+                    "which": "each"
+                  },
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  },
+                  "condition": {
+                    "pred": "in_combat"
+                  },
+                  "then": [
+                    {
+                      "op": "save",
+                      "ability": "wis",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "reference",
+                          "rule": "dnd5e/action/dodge",
+                          "note": "Forced to take the Dodge action that turn."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "necrotic",
+              "label": "Extra Necrotic damage",
+              "effects": [
+                {
+                  "op": "trigger",
+                  "event": {
+                    "event": "damaged_by_source_attack_or_spell"
+                  },
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1,
+                    "concentration": true,
+                    "up_to": true
+                  },
+                  "then": [
+                    {
+                      "op": "damage",
+                      "amount": "1d8",
+                      "damage_type": "necrotic",
+                      "target": {
+                        "kind": "inherit"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Necromancy (Bard, Cleric, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of your choice:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "- Choose one ability. The target has Disadvantage on ability checks and saving throws made with that ability.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/0"
+      ]
+    },
+    {
+      "text": "- The target has Disadvantage on attack rolls against you.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/1"
+      ]
+    },
+    {
+      "text": "- In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/2"
+      ]
+    },
+    {
+      "text": "- If you deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/3"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** If you cast this spell using a level 4 spell slot, you can maintain Concentration on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn’t require Concentration, and the duration becomes 8 hours (level 5–6 slot) or 24 hours (level 7–8 slot). If you use a level 9 spell slot, the spell lasts until dispelled.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/dodge"
+  ]
+}

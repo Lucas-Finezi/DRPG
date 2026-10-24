@@ -1,0 +1,577 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/glabrezu",
+  "kind": "creature",
+  "name": "Glabrezu",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      289
+    ],
+    "section": "Monsters A–Z/Glabrezu/Glabrezu",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Large Fiend (Demon), Chaotic Evil*\n\n| **AC** 17 | **Initiative** +6 (16) |\n\n**HP** 189 (18d10 + 90)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +9 | **Dex** 15 | +2 | +2 | **Con** 21 | +5 | +9 |\n| **Int** | 19 | +4 | +4 | **Wis** 17 | +3 | +7 | **Cha** 16 | +3 | +7 |\n\n**Skills** Deception +7, Perception +7\n\n**Resistances** Cold, Fire, Lightning\n\n**Immunities** Poison; Poisoned\n\n**Senses** Truesight 120 ft.; Passive Perception 17\n\n**Languages** Abyssal; telepathy 120 ft.\n\n**CR** 9 (XP 5,000; PB +4)\n\n##### Traits\n\n***Demonic Restoration.*** If the glabrezu dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.\n\n***Magic Resistance.*** The glabrezu has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The glabrezu makes two Pincer attacks and uses Pummel or Spellcasting.\n\n***Pincer.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 15) from one of two pincers.\n\n***Pummel.*** *Dexterity Saving Throw:* DC 17, one creature Grappled by the glabrezu. *Failure:* 15 (3d6 + 5) Bludgeoning damage. *Success:* Half damage.\n\n***Spellcasting.*** The glabrezu casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Darkness*, *Detect Magic*, *Dispel Magic*\n\n**1/Day Each:** *Confusion*, *Fly*, *Power Word Stun*",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "cr": "9"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Demon"
+    ],
+    "type_line": "Large Fiend (Demon), Chaotic Evil",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 6,
+      "score": 16,
+      "text": "+6 (16)"
+    },
+    "hp": {
+      "average": 189,
+      "formula": {
+        "op": "add",
+        "args": [
+          "18d10",
+          90
+        ]
+      },
+      "text": "189 (18d10 + 90)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 20,
+        "mod": 5,
+        "save": 9
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 21,
+        "mod": 5,
+        "save": 9
+      },
+      "int": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "wis": {
+        "score": 17,
+        "mod": 3,
+        "save": 7
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      }
+    },
+    "skills": {
+      "deception": 7,
+      "perception": 7,
+      "text": "Deception +7, Perception +7"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold",
+        "fire",
+        "lightning"
+      ],
+      "text": "Cold, Fire, Lightning"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Truesight 120 ft.; Passive Perception 17",
+      "truesight": 120,
+      "passive_perception": 17
+    },
+    "languages": {
+      "text": "Abyssal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "9",
+      "xp": 5000,
+      "proficiency_bonus": 4,
+      "text": "9 (XP 5,000; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Demonic Restoration",
+        "text": "If the glabrezu dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The glabrezu has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The glabrezu makes two Pincer attacks and uses Pummel or Spellcasting."
+      },
+      {
+        "name": "Pincer",
+        "text": "*Melee Attack Roll:* +9, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 15) from one of two pincers."
+      },
+      {
+        "name": "Pummel",
+        "text": "*Dexterity Saving Throw:* DC 17, one creature Grappled by the glabrezu. *Failure:* 15 (3d6 + 5) Bludgeoning damage. *Success:* Half damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The glabrezu casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Darkness*, *Detect Magic*, *Dispel Magic*\n\n**1/Day Each:** *Confusion*, *Fly*, *Power Word Stun*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Abyss",
+        "revives_in": "Abyss",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Pincer",
+            "count": 2
+          }
+        ],
+        "text": "The glabrezu makes two Pincer attacks and uses Pummel or Spellcasting."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The glabrezu casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16): At Will: Darkness, Detect Magic, Dispel Magic 1/Day Each: Confusion, Fly, Power Word Stun",
+        "ability": "int",
+        "save_dc": 16,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/darkness",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/dispel-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/confusion",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/fly",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/power-word-stun",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pincer",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 15
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pummel",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "text": "one creature Grappled by the glabrezu"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  5
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/darkness",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Darkness"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Dispel Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/confusion",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Confusion",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fly",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Fly",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/power-word-stun",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Power Word Stun",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Fiend (Demon), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +6 (16) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 189 (18d10 + 90)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +9 | **Dex** 15 | +2 | +2 | **Con** 21 | +5 | +9 |\n| **Int** | 19 | +4 | +4 | **Wis** 17 | +3 | +7 | **Cha** 16 | +3 | +7 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +7, Perception +7",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold, Fire, Lightning",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 120 ft.; Passive Perception 17",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Abyssal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 9 (XP 5,000; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Demonic Restoration.*** If the glabrezu dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The glabrezu has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The glabrezu makes two Pincer attacks and uses Pummel or Spellcasting.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Pincer.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 16 (2d10 + 5) Slashing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 15) from one of two pincers.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Pummel.*** *Dexterity Saving Throw:* DC 17, one creature Grappled by the glabrezu. *Failure:* 15 (3d6 + 5) Bludgeoning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The glabrezu casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Darkness*, *Detect Magic*, *Dispel Magic*\n\n**1/Day Each:** *Confusion*, *Fly*, *Power Word Stun*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/confusion",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/fly",
+    "dnd5e/spell/power-word-stun"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/detect-magic",
+  "kind": "spell",
+  "name": "Detect Magic",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      123
+    ],
+    "section": "Spells/Spell Descriptions/Detect Magic",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Divination (Bard, Cleric, Druid, Paladin,* *Ranger, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nFor the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.\n\nThe spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+  "facets": {
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "blocked_by",
+        "blocked_by": [
+          "1_foot_stone_dirt_or_wood",
+          "1_inch_metal",
+          "thin_sheet_of_lead"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "detect_magic",
+      "range_feet": 30,
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/detect-magic",
+          "note": "See a faint aura around visible magical creatures or objects in the area; learn the school of a spell's effect."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Divination (Bard, Cleric, Druid, Paladin,* *Ranger, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell’s school of magic.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/detect-magic"
+  ]
+}

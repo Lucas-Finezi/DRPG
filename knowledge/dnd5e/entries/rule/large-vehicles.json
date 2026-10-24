@@ -1,0 +1,118 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/large-vehicles",
+  "kind": "rule",
+  "name": "Large Vehicles",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      100,
+      101
+    ],
+    "section": "Equipment/Mounts and Vehicles/Large Vehicles",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "The Airborne and Waterborne Vehicles table provides statistics for various types of large vehicles. The following notes apply.\n\n#### Speed\n\nA ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can’t move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.\n\n#### Crew\n\nA ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see “Hirelings” later in “Equipment”) to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship, as shown in the table.\n\n#### Passengers\n\nThe table lists the number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.\n\n#### Damage Threshold\n\nIf a vehicle has a damage threshold (see “Rules Glossary”), it’s noted in the table.\n\n#### Ship Repair\n\nRepairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved.\n\n##### Airborne and Waterborne Vehicles\n\n| **Ship** | **Speed** | **Crew** | **Passengers** | **Cargo (Tons)** | **AC** | **HP** | **Damage Threshold** | **Cost** |",
+  "data": {
+    "rules": [
+      {
+        "id": "table",
+        "rows": "dnd5e/vehicle/*"
+      },
+      {
+        "id": "speed",
+        "against_strong_wind": 0.5,
+        "dead_calm": "rowed",
+        "downstream_add_current_mph": 3,
+        "rowboat_weight_lb": 100
+      },
+      {
+        "id": "crew",
+        "skilled_hirelings_required": true,
+        "rule": "dnd5e/service/skilled-hireling"
+      },
+      {
+        "id": "passengers",
+        "private_accommodations_fraction": 0.2,
+        "hammock_cost": {
+          "amount": 5,
+          "unit": "sp",
+          "cp": 50
+        },
+        "cabin_cost": {
+          "amount": 2,
+          "unit": "gp",
+          "cp": 200
+        }
+      },
+      {
+        "id": "repair",
+        "per_hp": {
+          "days": 1,
+          "cost": {
+            "amount": 20,
+            "unit": "gp",
+            "cp": 2000
+          }
+        },
+        "shipyard_multiplier": 0.5
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Airborne and Waterborne Vehicles table provides statistics for various types of large vehicles. The following notes apply.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Speed\n\nA ship sailing against a strong wind moves at half speed. In a dead calm (no wind), waterborne ships can’t move under sail and must be rowed. Keelboats and Rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can’t be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A Rowboat can be carried and weighs 100 pounds.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Crew\n\nA ship larger than a Keelboat or Rowboat needs a crew of skilled hirelings (see “Hirelings” later in “Equipment”) to function. The minimum number of skilled hirelings needed to crew a ship depends on the type of ship, as shown in the table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Passengers\n\nThe table lists the number of Small and Medium passengers the ship can accommodate using hammocks. A ship outfitted with private accommodations can carry one-fifth as many passengers. A passenger usually pays 5 SP per day for a hammock, but prices can vary from ship to ship. A small private cabin usually costs 2 GP per day.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "#### Damage Threshold\n\nIf a vehicle has a damage threshold (see “Rules Glossary”), it’s noted in the table.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/damage-threshold"
+      ]
+    },
+    {
+      "text": "#### Ship Repair\n\nRepairs to a damaged ship can be made while the vessel is berthed. Repairing 1 Hit Point of damage requires 1 day and costs 20 GP for materials and labor. If the repairs are made in a location where supplies and skilled labor are abundant, such as a city shipyard, the repair time and cost are halved.\n\n##### Airborne and Waterborne Vehicles\n\n| **Ship** | **Speed** | **Crew** | **Passengers** | **Cargo (Tons)** | **AC** | **HP** | **Damage Threshold** | **Cost** |",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-threshold",
+    "dnd5e/service/skilled-hireling"
+  ]
+}

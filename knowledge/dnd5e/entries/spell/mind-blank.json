@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/mind-blank",
+  "kind": "spell",
+  "name": "Mind Blank",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      149
+    ],
+    "section": "Spells/Spell Descriptions/Mind Blank",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 2,
+  "text": "*Level 8 Abjuration (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 24 hours\n\nUntil the spell ends, one willing creature you touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell—not even *Wish*—can gather information about the target, observe it remotely, or control its mind.",
+  "facets": {
+    "level": 8,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    }
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "damage_types": [
+        "psychic"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed"
+      ],
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 24
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "sensed_read_or_located_by_magic"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 24
+      },
+      "note": "No spell, not even Wish, can gather information about it, observe it remotely or control its mind."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Abjuration (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Until the spell ends, one willing creature you touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell—not even *Wish*—can gather information about the target, observe it remotely, or control its mind.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed"
+  ]
+}

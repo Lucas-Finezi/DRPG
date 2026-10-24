@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-fighting-style",
+  "kind": "feature",
+  "name": "Fighting Style",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      47
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 1: Fighting Style",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have honed your martial prowess and gain a Fighting Style feat of your choice (see “Feats”). Defense is recommended.\n\nWhenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "replace",
+        "on": "level_gained",
+        "replace_with": "different_fighting_style_feat"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feat/archery",
+        "dnd5e/feat/defense",
+        "dnd5e/feat/great-weapon-fighting",
+        "dnd5e/feat/two-weapon-fighting"
+      ],
+      "choose": 1,
+      "note": "A Fighting Style feat; Defense is recommended."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have honed your martial prowess and gain a Fighting Style feat of your choice (see “Feats”). Defense is recommended.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/archery",
+    "dnd5e/feat/defense",
+    "dnd5e/feat/great-weapon-fighting",
+    "dnd5e/feat/two-weapon-fighting"
+  ]
+}

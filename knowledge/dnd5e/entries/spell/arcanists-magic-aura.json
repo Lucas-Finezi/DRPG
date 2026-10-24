@@ -1,0 +1,110 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/arcanists-magic-aura",
+  "kind": "spell",
+  "name": "Arcanist’s Magic Aura",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      110,
+      111
+    ],
+    "section": "Spells/Spell Descriptions/Arcanist’s Magic Aura",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Illusion (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a small square of silk)\n\n**Duration:** 24 hours\n\nWith a touch, you place an illusion on a willing creature or an object that isn’t being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If you cast the spell on the same target every day for 30 days, the illusion lasts until dispelled.\n\n***Mask (Creature).*** Choose a creature type other than the target’s actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type.\n\n***False Aura (Object).*** You change the way the target appears to spells and magical effects that detect magical auras, such as *Detect Magic*. You can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object’s aura so that it appears to belong to a school of magic you choose.",
+  "facets": {
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a small square of silk"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "aura",
+        "targets": [
+          "willing_creature",
+          "object_not_worn_or_carried"
+        ],
+        "permanent_after_daily_casts": 30
+      },
+      {
+        "id": "mask",
+        "apparent_creature_type": "chosen",
+        "applies_to": "spells_and_magical_effects"
+      },
+      {
+        "id": "false_aura",
+        "options": [
+          "appear_magical",
+          "appear_nonmagical",
+          "apparent_school"
+        ],
+        "example": "dnd5e/spell/detect-magic"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Illusion (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a small square of silk)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "With a touch, you place an illusion on a willing creature or an object that isn’t being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If you cast the spell on the same target every day for 30 days, the illusion lasts until dispelled.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Mask (Creature).*** Choose a creature type other than the target’s actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***False Aura (Object).*** You change the way the target appears to spells and magical effects that detect magical auras, such as *Detect Magic*. You can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object’s aura so that it appears to belong to a school of magic you choose.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

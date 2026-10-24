@@ -1,0 +1,303 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/roc",
+  "kind": "creature",
+  "name": "Roc",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      320
+    ],
+    "section": "Monsters A–Z/Roc/Roc",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Gargantuan Monstrosity, Unaligned*\n\n| **AC** 15 | **Initiative** +8 (18) |\n\n**HP** 248 (16d20 + 80)\n\n**Speed** 20 ft., Fly 120 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 28 | +9 | +9 | **Dex** 10 | +0 | +4 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +4 | **Cha** 9 | −1 | −1 |\n\n**Skills** Perception +8\n\n**Senses** Passive Perception 18\n\n**Languages** None\n\n**CR** 11 (XP 7,200; PB +4)\n\n##### Actions\n\n***Multiattack.*** The roc makes two Beak attacks. It can replace one attack with a Talons attack.\n\n***Beak.*** *Melee Attack Roll:* +13, reach 10 ft. *Hit:* 28 (3d12 + 9) Piercing damage.\n\n***Talons.*** *Melee Attack Roll:* +13, reach 5 ft. Hit: 23 (4d6 + 9) Slashing damage. If the target is a Huge or smaller creature, it has the Grappled condition (escape DC 19) from both talons, and it has the Restrained condition until the grapple ends.\n\n##### Bonus Actions\n\n***Swoop (Recharge 5–6).*** If the roc has a creature Grappled, the roc flies up to half its Fly Speed without provoking Opportunity Attacks and drops that creature.",
+  "facets": {
+    "group": "monster",
+    "size": "Gargantuan",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "cr": "11"
+  },
+  "data": {
+    "size": "Gargantuan",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "type_line": "Gargantuan Monstrosity, Unaligned",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 8,
+      "score": 18,
+      "text": "+8 (18)"
+    },
+    "hp": {
+      "average": 248,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d20",
+          80
+        ]
+      },
+      "text": "248 (16d20 + 80)"
+    },
+    "speed": {
+      "text": "20 ft., Fly 120 ft.",
+      "walk": 20,
+      "fly": 120
+    },
+    "abilities": {
+      "str": {
+        "score": 28,
+        "mod": 9,
+        "save": 9
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 4
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 4
+      },
+      "cha": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "perception": 8,
+      "text": "Perception +8"
+    },
+    "senses": {
+      "text": "Passive Perception 18",
+      "passive_perception": 18
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "11",
+      "xp": 7200,
+      "proficiency_bonus": 4,
+      "text": "11 (XP 7,200; PB +4)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The roc makes two Beak attacks. It can replace one attack with a Talons attack."
+      },
+      {
+        "name": "Beak",
+        "text": "*Melee Attack Roll:* +13, reach 10 ft. *Hit:* 28 (3d12 + 9) Piercing damage."
+      },
+      {
+        "name": "Talons",
+        "text": "*Melee Attack Roll:* +13, reach 5 ft. Hit: 23 (4d6 + 9) Slashing damage. If the target is a Huge or smaller creature, it has the Grappled condition (escape DC 19) from both talons, and it has the Restrained condition until the grapple ends."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Swoop",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "If the roc has a creature Grappled, the roc flies up to half its Fly Speed without provoking Opportunity Attacks and drops that creature."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Beak",
+            "count": 2
+          }
+        ],
+        "text": "The roc makes two Beak attacks. It can replace one attack with a Talons attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Beak",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 13,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d12",
+                  9
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_talons",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Talons as written.",
+      "source_text": "Melee Attack Roll: +13, reach 5 ft. Hit: 23 (4d6 + 9) Slashing damage. If the target is a Huge or smaller creature, it has the Grappled condition (escape DC 19) from both talons, and it has the Restrained condition until the grapple ends."
+    },
+    {
+      "id": "bonus_actions_swoop",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Swoop as written.",
+      "source_text": "If the roc has a creature Grappled, the roc flies up to half its Fly Speed without provoking Opportunity Attacks and drops that creature."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Gargantuan Monstrosity, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +8 (18) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 248 (16d20 + 80)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Fly 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 28 | +9 | +9 | **Dex** 10 | +0 | +4 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +4 | **Cha** 9 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +8",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 18",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 11 (XP 7,200; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The roc makes two Beak attacks. It can replace one attack with a Talons attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Beak.*** *Melee Attack Roll:* +13, reach 10 ft. *Hit:* 28 (3d12 + 9) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Talons.*** *Melee Attack Roll:* +13, reach 5 ft. Hit: 23 (4d6 + 9) Slashing damage. If the target is a Huge or smaller creature, it has the Grappled condition (escape DC 19) from both talons, and it has the Restrained condition until the grapple ends.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "md:actions_talons"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Swoop (Recharge 5–6).*** If the roc has a creature Grappled, the roc flies up to half its Fly Speed without provoking Opportunity Attacks and drops that creature.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_swoop"
+      ]
+    }
+  ]
+}

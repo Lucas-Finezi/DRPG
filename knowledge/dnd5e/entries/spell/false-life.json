@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/false-life",
+  "kind": "spell",
+  "name": "False Life",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      129
+    ],
+    "section": "Spells/Spell Descriptions/False Life",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Necromancy (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a drop of alcohol)\n\n**Duration:** Instantaneous\n\nYou gain 2d4 + 4 Temporary Hit Points.\n\n***Using a Higher-Level Spell Slot.*** You gain 5 additional Temporary Hit Points for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a drop of alcohol"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "temp_hp",
+      "amount": {
+        "op": "add",
+        "args": [
+          "2d4",
+          4,
+          {
+            "op": "mul",
+            "args": [
+              5,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_slot_level"
+                  },
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "target": {
+        "kind": "self"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Necromancy (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a drop of alcohol)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You gain 2d4 + 4 Temporary Hit Points.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You gain 5 additional Temporary Hit Points for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/amount"
+      ]
+    }
+  ]
+}

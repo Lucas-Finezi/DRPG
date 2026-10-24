@@ -1,0 +1,265 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-healing",
+  "kind": "magic-item",
+  "name": "Staff of Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      245
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Rare (Requires Attunement by a Bard, Cleric, or Druid)*\n\nThis staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell.\n\n| **Spell** | **Charge Cost** |\n| *Cure Wounds* | 1 charge per spell level |\n\n(maximum 4 for a level 4 spell)\n\n| *Lesser Restoration* | 2 |\n| *Mass Cure Wounds* | 5 |\n\n***Regaining Charges.*** The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Rare (Requires Attunement by a Bard, Cleric, or Druid)",
+      "attunement": {
+        "required": true,
+        "by": "a Bard, Cleric, or Druid",
+        "classes": [
+          "dnd5e/class/bard",
+          "dnd5e/class/cleric",
+          "dnd5e/class/druid"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "staff_of_healing",
+        "caption": "Staff of Healing",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Cure Wounds",
+            "1 charge per spell level (maximum 4 for a level 4 spell)"
+          ],
+          [
+            "Lesser Restoration",
+            "2"
+          ],
+          [
+            "Mass Cure Wounds",
+            "5"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 10
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": {
+          "var": "charges_spent"
+        }
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/cure-wounds",
+          "slot": "none",
+          "components": [],
+          "level": {
+            "var": "charges_spent"
+          },
+          "note": "1 charge per spell level, maximum 4.",
+          "ability": {
+            "var": "spellcasting_mod"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/lesser-restoration",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mass-cure-wounds",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d6",
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The staff vanishes in a flash of light, lost forever."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Rare (Requires Attunement by a Bard, Cleric, or Druid)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Spell** | **Charge Cost** |\n| *Cure Wounds* | 1 charge per spell level |\n\n(maximum 4 for a level 4 spell)\n\n| *Lesser Restoration* | 2 |\n| *Mass Cure Wounds* | 5 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff vanishes in a flash of light, lost forever.",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/effects/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/bard",
+    "dnd5e/class/cleric",
+    "dnd5e/class/druid",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/cure-wounds",
+    "dnd5e/spell/lesser-restoration",
+    "dnd5e/spell/mass-cure-wounds"
+  ]
+}

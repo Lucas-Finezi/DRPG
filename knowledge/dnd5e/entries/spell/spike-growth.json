@@ -1,0 +1,133 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/spike-growth",
+  "kind": "spell",
+  "name": "Spike Growth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      164
+    ],
+    "section": "Spells/Spell Descriptions/Spike Growth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Transmutation (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (seven thorns)\n\n**Duration:** Concentration, up to 10 minutes\n\nThe ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels.\n\nThe transformation of the ground is camouflaged to look natural. Any creature that can’t see the area when the spell is cast must take a Search action and succeed on a Wisdom (Perception or Survival) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+  "facets": {
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "seven thorns"
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "terrain",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 20
+        },
+        "difficult_terrain": true
+      },
+      {
+        "id": "camouflage",
+        "recognize": {
+          "action": "dnd5e/action/search",
+          "check": {
+            "ability": "wis",
+            "skills": [
+              "perception",
+              "survival"
+            ],
+            "dc": "spell_save_dc"
+          }
+        },
+        "applies_to": "creatures_that_cant_see_area_at_casting"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "moves_within_area"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d4",
+          "damage_type": "piercing",
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "For every 5 feet it travels."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Transmutation (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (seven thorns)\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The transformation of the ground is camouflaged to look natural. Any creature that can’t see the area when the spell is cast must take a Search action and succeed on a Wisdom (Perception or Survival) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

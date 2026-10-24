@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/thief-supreme-sneak",
+  "kind": "feature",
+  "name": "Supreme Sneak",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64
+    ],
+    "section": "Classes/Rogue/Rogue Subclass: Thief/Level 9: Supreme Sneak",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain the following Cunning Strike option.\n\n***Stealth Attack (Cost: 1d6).*** If you have the Hide action’s Invisible condition, this attack doesn’t end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/thief",
+    "level": 9
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "new_option",
+        "adds_options_to": "dnd5e/feature/rogue-cunning-strike"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "sneak_attack_dice",
+      "mode": "add",
+      "value": -1,
+      "when": {
+        "pred": "has_condition",
+        "args": {
+          "condition": "invisible",
+          "source": "hide"
+        }
+      },
+      "note": "The attack doesn't end the Hide action's Invisible condition if you end the turn behind Three-Quarters or Total Cover."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain the following Cunning Strike option.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Stealth Attack (Cost: 1d6).*** If you have the Hide action’s Invisible condition, this attack doesn’t end that condition on you if you end the turn behind Three-Quarters Cover or Total Cover.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

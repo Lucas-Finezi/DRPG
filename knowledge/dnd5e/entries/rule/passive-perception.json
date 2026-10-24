@@ -1,0 +1,71 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/passive-perception",
+  "kind": "rule",
+  "name": "Passive Perception",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186
+    ],
+    "section": "Rules Glossary/Rules Definitions/Passive Perception",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "Passive Perception is a score that reflects a creature’s general awareness of its surroundings. The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.\n\nA creature’s Passive Perception equals 10 plus the creature’s Wisdom (Perception) check bonus. If the creature has Advantage on such checks, increase the score by 5. If the creature has Disadvantage on them, decrease the score by 5. For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2). If that character has Advantage on Wisdom (Perception) checks, the score becomes 19.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "passive_perception",
+        "score": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "check_mod.wis.perception"
+            }
+          ]
+        },
+        "advantage": 5,
+        "disadvantage": -5
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "passive_perception_use",
+      "reason": "gm_judgment",
+      "prompt": "Does the creature notice it (compare against its Passive Perception)?",
+      "source_text": "The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.",
+      "pages": [
+        186
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Passive Perception is a score that reflects a creature’s general awareness of its surroundings. The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.",
+      "status": "master_decision",
+      "by": [
+        "md:passive_perception_use"
+      ]
+    },
+    {
+      "text": "A creature’s Passive Perception equals 10 plus the creature’s Wisdom (Perception) check bonus. If the creature has Advantage on such checks, increase the score by 5. If the creature has Disadvantage on them, decrease the score by 5. For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2). If that character has Advantage on Wisdom (Perception) checks, the score becomes 19.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

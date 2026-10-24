@@ -1,0 +1,104 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/detect-evil-and-good",
+  "kind": "spell",
+  "name": "Detect Evil and Good",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      123
+    ],
+    "section": "Spells/Spell Descriptions/Detect Evil and Good",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Divination (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nFor the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the *Hallow* spell is active there and, if so, where.\n\nThe spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+  "facets": {
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "blocked_by",
+        "blocked_by": [
+          "1_foot_stone_dirt_or_wood",
+          "1_inch_metal",
+          "thin_sheet_of_lead"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "sense",
+      "sense": "detect_creature_types",
+      "range_feet": 30,
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Location of Aberrations, Celestials, Elementals, Fey, Fiends and Undead; whether Hallow is active and where."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Divination (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the *Hallow* spell is active there and, if so, where.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

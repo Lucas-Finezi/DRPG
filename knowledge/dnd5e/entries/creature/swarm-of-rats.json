@@ -1,0 +1,290 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/swarm-of-rats",
+  "kind": "creature",
+  "name": "Swarm of Rats",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      362
+    ],
+    "section": "Animals/Swarm of Rats",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Swarm of Tiny Beasts, Unaligned*\n\n| **AC** 10 | **Initiative** +0 (10) |\n\n**HP** 14 (4d8 − 4)\n\n**Speed** 30 ft., Climb 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 9 | −1 | −1 | **Dex** 11 | +0 | +2 | **Con** 9 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |\n\n**Resistances** Bludgeoning, Piercing, Slashing\n\n**Immunities** Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned\n\n**Senses** Darkvision 30 ft.; Passive Perception 10\n\n**Languages** None\n\n**CR** 1/4 (XP 50; PB +2)\n\n##### Traits\n\n***Swarm.*** The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can’t regain Hit Points or gain Temporary Hit Points.\n\n##### Actions\n\n***Bites.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 5 (2d4) Piercing damage, or 2 (1d4) Piercing damage if the swarm is Bloodied.",
+  "facets": {
+    "group": "animal",
+    "size": "Medium",
+    "type": "Swarm of Tiny Beasts",
+    "alignment": "Unaligned",
+    "cr": "1/4"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Swarm of Tiny Beasts",
+    "alignment": "Unaligned",
+    "type_line": "Medium Swarm of Tiny Beasts, Unaligned",
+    "ac": {
+      "value": 10,
+      "text": "10"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 14,
+      "formula": {
+        "op": "sub",
+        "args": [
+          "4d8",
+          4
+        ]
+      },
+      "text": "14 (4d8 − 4)"
+    },
+    "speed": {
+      "text": "30 ft., Climb 30 ft.",
+      "walk": 30,
+      "climb": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "dex": {
+        "score": 11,
+        "mod": 0,
+        "save": 2
+      },
+      "con": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/stunned"
+      ],
+      "text": "Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned"
+    },
+    "senses": {
+      "text": "Darkvision 30 ft.; Passive Perception 10",
+      "darkvision": 30,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/4",
+      "xp": 50,
+      "proficiency_bonus": 2,
+      "text": "1/4 (XP 50; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Swarm",
+        "text": "The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can’t regain Hit Points or gain Temporary Hit Points."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bites",
+        "text": "*Melee Attack Roll:* +2, reach 5 ft. *Hit:* 5 (2d4) Piercing damage, or 2 (1d4) Piercing damage if the swarm is Bloodied."
+      }
+    ],
+    "rules": [
+      {
+        "id": "swarm",
+        "occupies_others_space": true,
+        "squeezes_tiny_openings": true,
+        "no_hp_regain": true,
+        "no_temp_hp": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bites",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 2
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bites_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bites as written.",
+      "source_text": "5 (2d4) Piercing damage, or 2 (1d4) Piercing damage if the swarm is Bloodied."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Swarm of Tiny Beasts, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 10 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 14 (4d8 − 4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Climb 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 9 | −1 | −1 | **Dex** 11 | +0 | +2 | **Con** 9 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 3 | −4 | −4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 30 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/4 (XP 50; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Swarm.*** The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can’t regain Hit Points or gain Temporary Hit Points.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bites.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 5 (2d4) Piercing damage, or 2 (1d4) Piercing damage if the swarm is Bloodied.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/0",
+        "md:actions_bites_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/stunned"
+  ]
+}

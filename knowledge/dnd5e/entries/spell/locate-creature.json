@@ -1,0 +1,119 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/locate-creature",
+  "kind": "spell",
+  "name": "Locate Creature",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      145
+    ],
+    "section": "Spells/Spell Descriptions/Locate Creature",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 1,
+  "text": "*Level 4 Divination (Bard, Cleric, Druid, Paladin,* *Ranger, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (fur from a bloodhound)\n\n**Duration:** Concentration, up to 1 hour\n\nDescribe or name a creature that is familiar to you. You sense the direction to the creature’s location if that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.\n\nThe spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as under the effects of a *Flesh to Stone* or *Polymorph* spell, this spell doesn’t locate the creature.\n\nThis spell can’t locate a creature if any thickness of lead blocks a direct path between you and the creature.",
+  "facets": {
+    "level": 4,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "fur from a bloodhound"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "locate",
+        "range_feet": 1000,
+        "learns": [
+          "direction",
+          "movement_direction"
+        ]
+      },
+      {
+        "id": "known",
+        "seen_within_feet": 30,
+        "or": "nearest_of_kind",
+        "fails_on_different_form": [
+          "dnd5e/spell/flesh-to-stone",
+          "dnd5e/spell/polymorph"
+        ]
+      },
+      {
+        "id": "blocked",
+        "blocked_by": "any_thickness_of_lead"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 4 Divination (Bard, Cleric, Druid, Paladin,* *Ranger, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (fur from a bloodhound)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Describe or name a creature that is familiar to you. You sense the direction to the creature’s location if that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as under the effects of a *Flesh to Stone* or *Polymorph* spell, this spell doesn’t locate the creature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "This spell can’t locate a creature if any thickness of lead blocks a direct path between you and the creature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/flesh-to-stone",
+    "dnd5e/spell/polymorph"
+  ]
+}

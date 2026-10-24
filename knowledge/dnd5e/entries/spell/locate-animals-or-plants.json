@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/locate-animals-or-plants",
+  "kind": "spell",
+  "name": "Locate Animals or Plants",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      144
+    ],
+    "section": "Spells/Spell Descriptions/Locate Animals or Plants",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Divination (Bard, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (fur from a bloodhound)\n\n**Duration:** Instantaneous\n\nDescribe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+  "facets": {
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "fur from a bloodhound"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "locate",
+        "kinds": [
+          "beast",
+          "plant_creature",
+          "nonmagical_plant"
+        ],
+        "range_miles": 5,
+        "learns": [
+          "direction",
+          "distance"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Divination (Bard, Druid, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (fur from a bloodhound)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

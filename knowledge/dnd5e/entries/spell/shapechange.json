@@ -1,0 +1,167 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/shapechange",
+  "kind": "spell",
+  "name": "Shapechange",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      161
+    ],
+    "section": "Spells/Spell Descriptions/Shapechange",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Transmutation (Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a jade circlet worth 1,500+ GP)\n\n**Duration:** Concentration, up to 1 hour\n\nYou shape-shift into another creature for the duration or until you take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than your level or Challenge Rating. You must have seen the sort of creature before, and it can’t be a Construct or an Undead.\n\nWhen you cast the spell, you gain a number of Temporary Hit Points equal to the Hit Points of the first form into which you shape-shift. These Temporary Hit Points vanish if any remain when the spell ends.\n\nYour game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting feature, you retain it too.\n\nUpon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you’re in it.",
+  "facets": {
+    "level": 9,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a jade circlet worth 1,500+ GP",
+      "material_cost_gp": 1500
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "equipment",
+        "choose": [
+          "drops",
+          "resizes_to_fit"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "transform",
+      "into": {
+        "exclude_creature_types": [
+          "construct",
+          "undead"
+        ],
+        "predicate": {
+          "pred": "cr_at_most_target"
+        }
+      },
+      "keeps": [
+        "creature_type",
+        "alignment",
+        "personality",
+        "ability_score.int",
+        "ability_score.wis",
+        "ability_score.cha",
+        "hp",
+        "hit_point_dice",
+        "proficiencies",
+        "languages",
+        "spellcasting"
+      ],
+      "target": {
+        "kind": "self"
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "A creature you have seen; CR no higher than your level or CR."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/shapechange",
+          "note": "Shift into a different eligible form."
+        }
+      ]
+    },
+    {
+      "op": "temp_hp",
+      "amount": {
+        "var": "form_hp"
+      },
+      "note": "Vanish when the spell ends."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Transmutation (Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a jade circlet worth 1,500+ GP)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You shape-shift into another creature for the duration or until you take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than your level or Challenge Rating. You must have seen the sort of creature before, and it can’t be a Construct or an Undead.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "When you cast the spell, you gain a number of Temporary Hit Points equal to the Hit Points of the first form into which you shape-shift. These Temporary Hit Points vanish if any remain when the spell ends.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting feature, you retain it too.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "dnd5e/rule/shape-shifting"
+      ]
+    },
+    {
+      "text": "Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you’re in it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/shape-shifting",
+    "dnd5e/spell/shapechange"
+  ]
+}

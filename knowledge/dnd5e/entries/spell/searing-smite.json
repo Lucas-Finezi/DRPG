@@ -1,0 +1,171 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/searing-smite",
+  "kind": "spell",
+  "name": "Searing Smite",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      160
+    ],
+    "section": "Spells/Spell Descriptions/Searing Smite",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Evocation (Paladin)*\n\n**Casting Time:** Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike\n\n**Range:** Self\n\n**Component:** V\n\n**Duration:** 1 minute\n\nAs you hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends.\n\n***Using a Higher-Level Spell Slot.*** All the damage increases by 1d6 for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+      "cost": "bonus_action",
+      "trigger": "immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+      "triggers": [
+        {
+          "event": "hits_with_attack_roll"
+        }
+      ]
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "damage",
+      "amount": {
+        "dice": {
+          "count": {
+            "op": "add",
+            "args": [
+              1,
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "var": "spell_slot_level"
+                  },
+                  1
+                ]
+              }
+            ]
+          },
+          "faces": 6
+        }
+      },
+      "damage_type": "fire",
+      "target": {
+        "kind": "inherit"
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "target",
+        "which": "each"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  1,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      1
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "fire",
+          "target": {
+            "kind": "inherit"
+          }
+        },
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_success": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Evocation (Paladin)*\n\n**Casting Time:** Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike\n\n**Range:** Self\n\n**Component:** V\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "As you hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** All the damage increases by 1d6 for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/amount",
+        "/effects/1/then/0/amount"
+      ]
+    }
+  ]
+}

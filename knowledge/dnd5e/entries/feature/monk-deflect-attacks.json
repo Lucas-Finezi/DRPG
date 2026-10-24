@@ -1,0 +1,169 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/monk-deflect-attacks",
+  "kind": "feature",
+  "name": "Deflect Attacks",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      51
+    ],
+    "section": "Classes/Monk/Monk Class Features/Level 3: Deflect Attacks",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When an attack roll hits you and its damage includes Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to reduce the attack’s total damage against you. The reduction equals 1d10 plus your Dexterity modifier and Monk level.\n\nIf you reduce the damage to 0, you can expend 1 Focus Point to redirect some of the attack’s force. If you do so, choose a creature you can see within 5 feet of yourself if the attack was a melee attack or a creature you can see within 60 feet of yourself that isn’t behind Total Cover if the attack was a ranged attack. That creature must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die plus your Dexterity modifier. The damage is the same type dealt by the attack.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/monk",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hit_by_attack_roll"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "any": [
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "bludgeoning"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "piercing"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "slashing"
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "damage_taken",
+          "mode": "add",
+          "value": {
+            "op": "neg",
+            "args": [
+              {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  {
+                    "var": "ability_mod.dex"
+                  },
+                  {
+                    "var": "class_level.monk"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "uses": {
+        "resource": "focus_points",
+        "amount": 1
+      },
+      "requires": {
+        "pred": "damage_reduced_to_zero"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "ability_mod.wis"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature",
+            "must_see": true
+          },
+          "note": "A creature within 5 feet (melee attack) or 60 feet not behind Total Cover (ranged attack).",
+          "on_fail": [
+            {
+              "op": "damage",
+              "damage_type": {
+                "var": "chosen.attack_damage_type"
+              },
+              "amount": {
+                "op": "add",
+                "args": [
+                  {
+                    "table": "dnd5e/class/monk",
+                    "table_id": "monk_features",
+                    "key": {
+                      "var": "class_level.monk"
+                    },
+                    "column": "Martial Arts"
+                  },
+                  {
+                    "table": "dnd5e/class/monk",
+                    "table_id": "monk_features",
+                    "key": {
+                      "var": "class_level.monk"
+                    },
+                    "column": "Martial Arts"
+                  },
+                  {
+                    "var": "ability_mod.dex"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When an attack roll hits you and its damage includes Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to reduce the attack’s total damage against you. The reduction equals 1d10 plus your Dexterity modifier and Monk level.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you reduce the damage to 0, you can expend 1 Focus Point to redirect some of the attack’s force. If you do so, choose a creature you can see within 5 feet of yourself if the attack was a melee attack or a creature you can see within 60 feet of yourself that isn’t behind Total Cover if the attack was a ranged attack. That creature must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die plus your Dexterity modifier. The damage is the same type dealt by the attack.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/monk"
+  ]
+}

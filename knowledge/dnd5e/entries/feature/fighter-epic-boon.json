@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-epic-boon",
+  "kind": "feature",
+  "name": "Epic Boon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 19: Epic Boon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain an Epic Boon feat (see “Feats”) or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 19
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feat/boon-of-combat-prowess"
+      ],
+      "note": "An Epic Boon feat or another feat you qualify for; Boon of Combat Prowess is recommended."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain an Epic Boon feat (see “Feats”) or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feat/boon-of-combat-prowess"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feat/savage-attacker",
+  "kind": "feat",
+  "name": "Savage Attacker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/Origin Feats/Savage Attacker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 2,
+  "text": "*Origin Feat*\n\nYou’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target.",
+  "facets": {
+    "category": "origin",
+    "repeatable": false
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "category": "Origin"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon"
+        }
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "reroll",
+          "rolls": [
+            "damage_roll"
+          ],
+          "keep": "choice",
+          "note": "Roll the weapon's damage dice twice and use either roll."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Origin Feat*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

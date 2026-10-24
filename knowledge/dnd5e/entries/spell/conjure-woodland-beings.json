@@ -1,0 +1,166 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/conjure-woodland-beings",
+  "kind": "spell",
+  "name": "Conjure Woodland Beings",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      118,
+      119
+    ],
+    "section": "Spells/Spell Descriptions/Conjure Woodland Beings",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Conjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou conjure nature spirits that flit around you in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. The creature takes 5d8 Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn.\n\nIn addition, you can take the Disengage action as a Bonus Action for the spell’s duration.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 4.",
+  "facets": {
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "creature_within_feet_of_effect"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      5,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          4
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 8
+                }
+              },
+              "damage_type": "force"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "10-foot Emanation; a creature you can see."
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/action/disengage"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Conjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You conjure nature spirits that flit around you in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. The creature takes 5d8 Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "In addition, you can take the Disengage action as a Bonus Action for the spell’s duration.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 4.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/disengage"
+  ]
+}

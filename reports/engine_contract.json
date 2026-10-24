@@ -1,0 +1,2394 @@
+{
+ "op": {
+  "used": 32,
+  "implemented": 31,
+  "missing": [
+   {
+    "name": "summon",
+    "entries": 23
+   }
+  ]
+ },
+ "pred": {
+  "used": 145,
+  "implemented": 57,
+  "missing": [
+   {
+    "name": "target_is_object",
+    "entries": 6
+   },
+   {
+    "name": "requires_sight",
+    "entries": 5
+   },
+   {
+    "name": "roll_uses_ability",
+    "entries": 5
+   },
+   {
+    "name": "spell_school",
+    "entries": 4
+   },
+   {
+    "name": "spell_targeted_only_you",
+    "entries": 4
+   },
+   {
+    "name": "resource_empty",
+    "entries": 3
+   },
+   {
+    "name": "spell_level_in",
+    "entries": 3
+   },
+   {
+    "name": "check_for_movement",
+    "entries": 3
+   },
+   {
+    "name": "wearing_untrained_armor",
+    "entries": 3
+   },
+   {
+    "name": "in_spell_area",
+    "entries": 3
+   },
+   {
+    "name": "cr_at_most_target",
+    "entries": 3
+   },
+   {
+    "name": "influence_check",
+    "entries": 2
+   },
+   {
+    "name": "has_speed",
+    "entries": 2
+   },
+   {
+    "name": "can_hear_source",
+    "entries": 2
+   },
+   {
+    "name": "in_combat",
+    "entries": 2
+   },
+   {
+    "name": "used_since_long_rest",
+    "entries": 2
+   },
+   {
+    "name": "marked_by_spell",
+    "entries": 2
+   },
+   {
+    "name": "is_enemy",
+    "entries": 2
+   },
+   {
+    "name": "in_aura",
+    "entries": 2
+   },
+   {
+    "name": "consulting_accurate_source",
+    "entries": 2
+   },
+   {
+    "name": "breaking_down_door",
+    "entries": 2
+   },
+   {
+    "name": "terrain_from",
+    "entries": 2
+   },
+   {
+    "name": "in_item_light",
+    "entries": 2
+   },
+   {
+    "name": "item_form_in",
+    "entries": 2
+   },
+   {
+    "name": "using_untrained_shield",
+    "entries": 2
+   },
+   {
+    "name": "attacker_perceives_with",
+    "entries": 2
+   },
+   {
+    "name": "target_in_area",
+    "entries": 2
+   },
+   {
+    "name": "hidden",
+    "entries": 1
+   },
+   {
+    "name": "social_interaction",
+    "entries": 1
+   },
+   {
+    "name": "requires_hearing",
+    "entries": 1
+   },
+   {
+    "name": "minutes_exceed_con_score",
+    "entries": 1
+   },
+   {
+    "name": "target_grappled_by_source",
+    "entries": 1
+   },
+   {
+    "name": "has_heroic_inspiration",
+    "entries": 1
+   },
+   {
+    "name": "on_stone_surface",
+    "entries": 1
+   },
+   {
+    "name": "used_bonus_action",
+    "entries": 1
+   },
+   {
+    "name": "big_enough_space",
+    "entries": 1
+   },
+   {
+    "name": "attacker_is_trigger_creature",
+    "entries": 1
+   },
+   {
+    "name": "heals_other_creature",
+    "entries": 1
+   },
+   {
+    "name": "spent_focus_point",
+    "entries": 1
+   },
+   {
+    "name": "used_feature_this_trigger",
+    "entries": 1
+   },
+   {
+    "name": "spell_duration_at_least_minutes",
+    "entries": 1
+   },
+   {
+    "name": "spell_casting_time",
+    "entries": 1
+   },
+   {
+    "name": "cast_level_1_plus_spell_this_turn",
+    "entries": 1
+   },
+   {
+    "name": "spell_targets_more_at_higher_level",
+    "entries": 1
+   },
+   {
+    "name": "name_on_page",
+    "entries": 1
+   },
+   {
+    "name": "same_plane_as_target",
+    "entries": 1
+   },
+   {
+    "name": "impersonating_costume_subject",
+    "entries": 1
+   },
+   {
+    "name": "leverage_applies",
+    "entries": 1
+   },
+   {
+    "name": "appraising_detailed_item",
+    "entries": 1
+   },
+   {
+    "name": "influencing_indifferent_humanoid_within_feet",
+    "entries": 1
+   },
+   {
+    "name": "check_for_jump",
+    "entries": 1
+   },
+   {
+    "name": "helped_by_other_character",
+    "entries": 1
+   },
+   {
+    "name": "falls_into_liquid",
+    "entries": 1
+   },
+   {
+    "name": "out_of_breath",
+    "entries": 1
+   },
+   {
+    "name": "is_critical_hit",
+    "entries": 1
+   },
+   {
+    "name": "interacting_with",
+    "entries": 1
+   },
+   {
+    "name": "took_damage_since_turn_start",
+    "entries": 1
+   },
+   {
+    "name": "on_vessel",
+    "entries": 1
+   },
+   {
+    "name": "has_hand_free",
+    "entries": 1
+   },
+   {
+    "name": "has_sense",
+    "entries": 1
+   },
+   {
+    "name": "attuned_giant_item",
+    "entries": 1
+   },
+   {
+    "name": "item_has_gem",
+    "entries": 1
+   },
+   {
+    "name": "failed_save_against_spell",
+    "entries": 1
+   },
+   {
+    "name": "can_use_item",
+    "entries": 1
+   },
+   {
+    "name": "has_marked_target",
+    "entries": 1
+   },
+   {
+    "name": "item_variant_is",
+    "entries": 1
+   },
+   {
+    "name": "damage_from_falling",
+    "entries": 1
+   },
+   {
+    "name": "on_slippery_surface",
+    "entries": 1
+   },
+   {
+    "name": "check_to_control_item",
+    "entries": 1
+   },
+   {
+    "name": "has_head",
+    "entries": 1
+   },
+   {
+    "name": "moving_weight_over_carry",
+    "entries": 1
+   },
+   {
+    "name": "in_difficult_terrain",
+    "entries": 1
+   },
+   {
+    "name": "mounted",
+    "entries": 1
+   },
+   {
+    "name": "check_to_remain_mounted",
+    "entries": 1
+   },
+   {
+    "name": "lacks_ability_score",
+    "entries": 1
+   },
+   {
+    "name": "travel_hours_over",
+    "entries": 1
+   },
+   {
+    "name": "underwater",
+    "entries": 1
+   },
+   {
+    "name": "cr_at_most",
+    "entries": 1
+   },
+   {
+    "name": "creature_kind_specified",
+    "entries": 1
+   },
+   {
+    "name": "is_ally",
+    "entries": 1
+   },
+   {
+    "name": "attack_targets_source",
+    "entries": 1
+   },
+   {
+    "name": "spirit_restrains_creature",
+    "entries": 1
+   },
+   {
+    "name": "space_occupied",
+    "entries": 1
+   },
+   {
+    "name": "has_line_of_sight_to_source",
+    "entries": 1
+   },
+   {
+    "name": "check_to_find_marked_target",
+    "entries": 1
+   },
+   {
+    "name": "phantasm_is_dangerous",
+    "entries": 1
+   },
+   {
+    "name": "dead_at_least_days",
+    "entries": 1
+   },
+   {
+    "name": "in_burning_webs",
+    "entries": 1
+   }
+  ]
+ },
+ "var": {
+  "used": 44,
+  "implemented": 15,
+  "missing": [
+   {
+    "name": "charges_spent",
+    "entries": 9
+   },
+   {
+    "name": "spell_level",
+    "entries": 8
+   },
+   {
+    "name": "item_bonus",
+    "entries": 5
+   },
+   {
+    "name": "rolled",
+    "entries": 4
+   },
+   {
+    "name": "resource",
+    "entries": 4
+   },
+   {
+    "name": "aura_size",
+    "entries": 4
+   },
+   {
+    "name": "sense_range",
+    "entries": 4
+   },
+   {
+    "name": "form_hp",
+    "entries": 4
+   },
+   {
+    "name": "hit_point_die",
+    "entries": 3
+   },
+   {
+    "name": "weapon_damage_type",
+    "entries": 3
+   },
+   {
+    "name": "uses_since_rest",
+    "entries": 2
+   },
+   {
+    "name": "item_variant_score",
+    "entries": 2
+   },
+   {
+    "name": "rounds_elapsed",
+    "entries": 2
+   },
+   {
+    "name": "target_ability_score",
+    "entries": 1
+   },
+   {
+    "name": "hours_exposed",
+    "entries": 1
+   },
+   {
+    "name": "fall_feet",
+    "entries": 1
+   },
+   {
+    "name": "shield_ac_bonus",
+    "entries": 1
+   },
+   {
+    "name": "item_variant_fly_speed",
+    "entries": 1
+   },
+   {
+    "name": "item_gems",
+    "entries": 1
+   },
+   {
+    "name": "item_variant_spirits",
+    "entries": 1
+   },
+   {
+    "name": "item_variant_healing",
+    "entries": 1
+   },
+   {
+    "name": "item_spheres_damage",
+    "entries": 1
+   },
+   {
+    "name": "spellcasting_ability",
+    "entries": 1
+   },
+   {
+    "name": "weapon_damage_max",
+    "entries": 1
+   },
+   {
+    "name": "escape_dc",
+    "entries": 1
+   },
+   {
+    "name": "item_ability_mod",
+    "entries": 1
+   },
+   {
+    "name": "hit_point_dice_count",
+    "entries": 1
+   },
+   {
+    "name": "travel_hours_over_8",
+    "entries": 1
+   },
+   {
+    "name": "feet_moved",
+    "entries": 1
+   }
+  ]
+ },
+ "event": {
+  "used": 102
+ },
+ "field": {
+  "used": 98,
+  "implemented": 73,
+  "missing": [
+   {
+    "name": "cast_spell.spell",
+    "entries": 154
+   },
+   {
+    "name": "cast_spell.slot",
+    "entries": 154
+   },
+   {
+    "name": "cast_spell.components",
+    "entries": 118
+   },
+   {
+    "name": "activation.frequency",
+    "entries": 104
+   },
+   {
+    "name": "cast_spell.save_dc",
+    "entries": 77
+   },
+   {
+    "name": "apply_condition.params",
+    "entries": 50
+   },
+   {
+    "name": "cast_spell.level",
+    "entries": 40
+   },
+   {
+    "name": "save.repeat",
+    "entries": 31
+   },
+   {
+    "name": "summon.creature",
+    "entries": 23
+   },
+   {
+    "name": "summon.controller",
+    "entries": 23
+   },
+   {
+    "name": "summon.initiative",
+    "entries": 19
+   },
+   {
+    "name": "defense.conditions",
+    "entries": 17
+   },
+   {
+    "name": "cast_spell.attack_bonus",
+    "entries": 15
+   },
+   {
+    "name": "speed.hover",
+    "entries": 7
+   },
+   {
+    "name": "remove_condition.levels",
+    "entries": 5
+   },
+   {
+    "name": "transform.into",
+    "entries": 5
+   },
+   {
+    "name": "transform.keeps",
+    "entries": 5
+   },
+   {
+    "name": "move.provokes_opportunity_attacks",
+    "entries": 4
+   },
+   {
+    "name": "restore.level",
+    "entries": 4
+   },
+   {
+    "name": "remove_condition.count",
+    "entries": 4
+   },
+   {
+    "name": "summon.count",
+    "entries": 3
+   },
+   {
+    "name": "cast_spell.ability",
+    "entries": 2
+   },
+   {
+    "name": "reroll.dice",
+    "entries": 1
+   },
+   {
+    "name": "sense.mode",
+    "entries": 1
+   },
+   {
+    "name": "spend.level",
+    "entries": 1
+   }
+  ]
+ },
+ "entries": {
+  "with_effects": 1391,
+  "fully_executable_by_prototype": 952
+ },
+ "notes_to_review": {
+  "count": 351,
+  "by_op": {
+   "reference": 63,
+   "save": 39,
+   "trigger": 31,
+   "move": 25,
+   "cast_spell": 24,
+   "activation": 23,
+   "modifier": 21,
+   "apply_condition": 16,
+   "damage": 15,
+   "roll_mode": 14,
+   "grant": 13,
+   "summon": 13,
+   "attack": 12,
+   "auto_result": 6,
+   "restrict": 6,
+   "choice": 5,
+   "speed": 4,
+   "heal": 4,
+   "defense": 3,
+   "check": 3,
+   "restore": 2,
+   "remove_condition": 2,
+   "repeat": 2,
+   "sense": 2,
+   "resource": 1,
+   "transform": 1,
+   "reroll": 1
+  },
+  "items": [
+   {
+    "ref": "dnd5e/action/help",
+    "op": "roll_mode",
+    "note": "Next check with the chosen skill or tool proficiency."
+   },
+   {
+    "ref": "dnd5e/action/help",
+    "op": "roll_mode",
+    "note": "Next attack roll by one of your allies against that enemy."
+   },
+   {
+    "ref": "dnd5e/condition/paralyzed",
+    "op": "auto_result",
+    "note": "Only an attack roll that hits becomes a Critical Hit."
+   },
+   {
+    "ref": "dnd5e/condition/unconscious",
+    "op": "auto_result",
+    "note": "Only an attack roll that hits becomes a Critical Hit."
+   },
+   {
+    "ref": "dnd5e/contagion/cackle-fever",
+    "op": "apply_condition",
+    "note": "Lasts until the contagion ends."
+   },
+   {
+    "ref": "dnd5e/contagion/sight-rot",
+    "op": "apply_condition",
+    "note": "Until the contagion ends."
+   },
+   {
+    "ref": "dnd5e/creature/adult-brass-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/adult-bronze-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/adult-copper-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/adult-gold-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/adult-silver-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/ancient-brass-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/ancient-bronze-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/ancient-copper-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/ancient-gold-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/ancient-silver-dragon",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/azer-sentinel",
+    "op": "trigger",
+    "note": "unless the azer has the Incapacitated condition."
+   },
+   {
+    "ref": "dnd5e/creature/balor",
+    "op": "move",
+    "note": "Teleports itself or a willing demon within 10 feet of itself."
+   },
+   {
+    "ref": "dnd5e/creature/chain-devil",
+    "op": "trigger",
+    "note": "Trigger: A creature the devil can see starts its turn within 30 feet of the devil and can see the devil."
+   },
+   {
+    "ref": "dnd5e/creature/couatl",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/deva",
+    "op": "cast_spell",
+    "note": "(Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell)"
+   },
+   {
+    "ref": "dnd5e/creature/djinni",
+    "op": "cast_spell",
+    "note": "(can create wine instead of water)"
+   },
+   {
+    "ref": "dnd5e/creature/doppelganger",
+    "op": "attack",
+    "note": "Attack: with Advantage during the first round of each combat."
+   },
+   {
+    "ref": "dnd5e/creature/draconic-spirit",
+    "op": "defense",
+    "note": "The summoner, until the spell ends."
+   },
+   {
+    "ref": "dnd5e/creature/earth-elemental",
+    "op": "modifier",
+    "note": "Double damage to objects and structures."
+   },
+   {
+    "ref": "dnd5e/creature/green-hag",
+    "op": "cast_spell",
+    "note": "(self only, and the hag leaves no tracks while Invisible)"
+   },
+   {
+    "ref": "dnd5e/creature/kraken",
+    "op": "modifier",
+    "note": "Double damage to objects and structures."
+   },
+   {
+    "ref": "dnd5e/creature/nalfeshnee",
+    "op": "trigger",
+    "note": "Trigger: Another creature the nalfeshnee can see ends its move within 120 feet of the nalfeshnee."
+   },
+   {
+    "ref": "dnd5e/creature/night-hag",
+    "op": "cast_spell",
+    "note": "(self only)"
+   },
+   {
+    "ref": "dnd5e/creature/octopus",
+    "op": "trigger",
+    "note": "Trigger: A creature ends its turn within 5 feet of the octopus while underwater."
+   },
+   {
+    "ref": "dnd5e/creature/shield-guardian",
+    "op": "trigger",
+    "note": "Trigger: An attack roll hits the wearer of the guardian’s amulet while the wearer is within 5 feet of the guardian."
+   },
+   {
+    "ref": "dnd5e/creature/shrieker-fungus",
+    "op": "trigger",
+    "note": "Trigger: A creature or a source of Bright Light moves within 30 feet of the shrieker."
+   },
+   {
+    "ref": "dnd5e/creature/sphinx-of-wonder",
+    "op": "trigger",
+    "note": "Trigger: The sphinx or another creature within 30 feet makes an ability check or a saving throw."
+   },
+   {
+    "ref": "dnd5e/creature/tarrasque",
+    "op": "modifier",
+    "note": "Double damage to objects and structures."
+   },
+   {
+    "ref": "dnd5e/creature/treant",
+    "op": "modifier",
+    "note": "Double damage to objects and structures."
+   },
+   {
+    "ref": "dnd5e/curse/environmental-curses",
+    "op": "reference",
+    "note": "Possessed: on a 1 on a D20 Test the entity takes control; DC 15 Charisma save at the end of each later turn regains control."
+   },
+   {
+    "ref": "dnd5e/environment/extreme-heat",
+    "op": "save",
+    "note": "DC 5 the first hour, +1 each additional hour; Disadvantage in Medium or Heavy armor; Resistance or Immunity to Fire: automatic success."
+   },
+   {
+    "ref": "dnd5e/environment/frigid-water",
+    "op": "save",
+    "note": "Each minute beyond Constitution score minutes; Resistance/Immunity to Cold or adapted: automatic success."
+   },
+   {
+    "ref": "dnd5e/feat/boon-of-combat-prowess",
+    "op": "auto_result",
+    "note": "Usable again from the start of your next turn."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-barbarian-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Barbarian level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-brutal-strike",
+    "op": "trigger",
+    "note": "Forgo Advantage on one Strength-based attack roll without Disadvantage, once per turn."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-brutal-strike",
+    "op": "speed",
+    "note": "Only one Hamstring Blow at a time (the most recent)."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-improved-brutal-strike-level-13",
+    "op": "roll_mode",
+    "note": "The target's next saving throw."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-improved-brutal-strike-level-13",
+    "op": "modifier",
+    "note": "Next attack roll by another creature against the target before the start of your next turn; only one Sundering Blow bonus per roll."
+   },
+   {
+    "ref": "dnd5e/feature/barbarian-weapon-mastery",
+    "op": "modifier",
+    "note": "Kinds of Simple or Martial Melee weapons; one choice may change after each Long Rest."
+   },
+   {
+    "ref": "dnd5e/feature/bard-bard-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Bard level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/bard-bardic-inspiration",
+    "op": "grant",
+    "note": "The creature gains one Bardic Inspiration die (only one at a time)."
+   },
+   {
+    "ref": "dnd5e/feature/circle-of-the-land-natural-recovery",
+    "op": "restore",
+    "note": "Combined slot levels; none of level 6+."
+   },
+   {
+    "ref": "dnd5e/feature/circle-of-the-land-natures-sanctuary",
+    "op": "reference",
+    "note": "You and your allies have Half Cover while in the area."
+   },
+   {
+    "ref": "dnd5e/feature/circle-of-the-land-natures-sanctuary",
+    "op": "move",
+    "note": "The Cube, to ground within 120 feet of you."
+   },
+   {
+    "ref": "dnd5e/feature/cleric-cleric-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Cleric level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/cleric-sear-undead",
+    "op": "damage",
+    "note": "Each Undead that failed its save; this damage doesn't end the turn effect."
+   },
+   {
+    "ref": "dnd5e/feature/druid-druid-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Druid level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/evoker-overchannel",
+    "op": "damage",
+    "note": "2d12 per slot level on the second use, +1d12 per level on each later use; ignores Resistance and Immunity."
+   },
+   {
+    "ref": "dnd5e/feature/evoker-potent-cantrip",
+    "op": "damage",
+    "note": "Half the cantrip's damage (if any) and no additional effect."
+   },
+   {
+    "ref": "dnd5e/feature/evoker-sculpt-spells",
+    "op": "auto_result",
+    "note": "No damage instead of half damage on a successful save."
+   },
+   {
+    "ref": "dnd5e/feature/fiend-patron-fiendish-resilience",
+    "op": "defense",
+    "note": "One damage type other than Force, until you choose a different one."
+   },
+   {
+    "ref": "dnd5e/feature/fighter-fighter-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Fighter level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/fighter-studied-attacks",
+    "op": "roll_mode",
+    "note": "Next attack roll against that creature."
+   },
+   {
+    "ref": "dnd5e/feature/fighter-weapon-mastery",
+    "op": "modifier",
+    "note": "Kinds of Simple or Martial weapons; one choice may change after each Long Rest."
+   },
+   {
+    "ref": "dnd5e/feature/hunter-hunters-prey",
+    "op": "attack",
+    "note": "Same weapon; a different creature within 5 feet of the original target, within the weapon's range, not attacked this turn."
+   },
+   {
+    "ref": "dnd5e/feature/hunter-superior-hunters-prey",
+    "op": "reference",
+    "note": "Deal the spell's extra damage to a different creature within 30 feet of the first."
+   },
+   {
+    "ref": "dnd5e/feature/life-domain-preserve-life",
+    "op": "heal",
+    "note": "Divided among the chosen creatures (can include you); no more than half each one's Hit Point maximum."
+   },
+   {
+    "ref": "dnd5e/feature/monk-deflect-attacks",
+    "op": "save",
+    "note": "A creature within 5 feet (melee attack) or 60 feet not behind Total Cover (ranged attack)."
+   },
+   {
+    "ref": "dnd5e/feature/monk-evasion",
+    "op": "modifier",
+    "note": "Dexterity saves for half damage: no damage on a success, half on a failure."
+   },
+   {
+    "ref": "dnd5e/feature/monk-martial-arts",
+    "op": "modifier",
+    "note": "Optional: Dexterity instead of Strength for attack and damage rolls."
+   },
+   {
+    "ref": "dnd5e/feature/monk-monk-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Monk level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/monk-stunning-strike",
+    "op": "roll_mode",
+    "note": "Only the next attack roll against the target."
+   },
+   {
+    "ref": "dnd5e/feature/oath-of-devotion-smite-of-protection",
+    "op": "reference",
+    "note": "Half Cover while in your Aura of Protection."
+   },
+   {
+    "ref": "dnd5e/feature/paladin-paladin-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Paladin level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/ranger-ranger-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Ranger level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/rogue-evasion",
+    "op": "modifier",
+    "note": "Dexterity saves for half damage: no damage on a success, half on a failure."
+   },
+   {
+    "ref": "dnd5e/feature/rogue-rogue-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Rogue level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/rogue-steady-aim",
+    "op": "roll_mode",
+    "note": "Next attack roll this turn."
+   },
+   {
+    "ref": "dnd5e/feature/sorcerer-metamagic-careful-spell",
+    "op": "auto_result",
+    "note": "Chosen creatures; no damage instead of half."
+   },
+   {
+    "ref": "dnd5e/feature/sorcerer-sorcerer-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Sorcerer level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/thief-fast-hands",
+    "op": "reference",
+    "note": "Only to use a magic item that requires that action."
+   },
+   {
+    "ref": "dnd5e/feature/warlock-contact-patron",
+    "op": "auto_result",
+    "note": "Only when cast with this feature to contact your patron."
+   },
+   {
+    "ref": "dnd5e/feature/warlock-invocation-pact-of-the-blade",
+    "op": "modifier",
+    "note": "Optional: instead of Strength or Dexterity."
+   },
+   {
+    "ref": "dnd5e/feature/warlock-mystic-arcanum",
+    "op": "activation",
+    "note": "Once per Long Rest for each arcanum spell."
+   },
+   {
+    "ref": "dnd5e/feature/warlock-warlock-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Warlock level or lower."
+   },
+   {
+    "ref": "dnd5e/feature/wizard-arcane-recovery",
+    "op": "restore",
+    "note": "Combined slot levels; none of level 6 or higher."
+   },
+   {
+    "ref": "dnd5e/feature/wizard-signature-spells",
+    "op": "resource",
+    "note": "One free casting of each."
+   },
+   {
+    "ref": "dnd5e/feature/wizard-wizard-subclass",
+    "op": "grant",
+    "note": "Gain each subclass feature of your Wizard level or lower."
+   },
+   {
+    "ref": "dnd5e/gear/acid",
+    "op": "trigger",
+    "note": "Replace one attack with throwing the Acid; target within 20 feet you can see."
+   },
+   {
+    "ref": "dnd5e/gear/alchemists-fire",
+    "op": "trigger",
+    "note": "Replace one attack with throwing the Alchemist’s Fire; target within 20 feet you can see."
+   },
+   {
+    "ref": "dnd5e/gear/ball-bearings",
+    "op": "trigger",
+    "note": "10-foot-square area within 10 feet; a creature entering it for the first time on a turn."
+   },
+   {
+    "ref": "dnd5e/gear/caltrops",
+    "op": "trigger",
+    "note": "5-foot-square area within 5 feet."
+   },
+   {
+    "ref": "dnd5e/gear/chain",
+    "op": "activation",
+    "note": "An unwilling creature within 5 feet that is Grappled, Incapacitated or Restrained."
+   },
+   {
+    "ref": "dnd5e/gear/chain",
+    "op": "apply_condition",
+    "note": "If its legs are bound, until it escapes."
+   },
+   {
+    "ref": "dnd5e/gear/grappling-hook",
+    "op": "check",
+    "note": "Catches a railing, ledge or other catch within 50 feet; with a Rope tied, you can climb it."
+   },
+   {
+    "ref": "dnd5e/gear/holy-water",
+    "op": "trigger",
+    "note": "Replace one attack with throwing the Holy Water; target within 20 feet you can see."
+   },
+   {
+    "ref": "dnd5e/gear/manacles",
+    "op": "activation",
+    "note": "An unwilling Small or Medium creature within 5 feet that is Grappled, Incapacitated or Restrained."
+   },
+   {
+    "ref": "dnd5e/gear/net",
+    "op": "trigger",
+    "note": "Replace one attack with throwing the Net; target within 15 feet you can see."
+   },
+   {
+    "ref": "dnd5e/gear/net",
+    "op": "apply_condition",
+    "note": "Until it escapes; Huge or larger automatically succeed."
+   },
+   {
+    "ref": "dnd5e/gear/oil",
+    "op": "trigger",
+    "note": "Replace one attack with throwing the Oil flask; target within 20 feet you can see."
+   },
+   {
+    "ref": "dnd5e/gear/oil",
+    "op": "trigger",
+    "note": "5-foot square within 5 feet, once lit."
+   },
+   {
+    "ref": "dnd5e/gear/poison-basic",
+    "op": "activation",
+    "note": "Coat one weapon or up to three pieces of ammunition."
+   },
+   {
+    "ref": "dnd5e/gear/potion-of-healing",
+    "op": "heal",
+    "note": "You or another creature within 5 feet that drinks it."
+   },
+   {
+    "ref": "dnd5e/hazard/dehydration",
+    "op": "trigger",
+    "note": "When the creature drank less than half the required water that day."
+   },
+   {
+    "ref": "dnd5e/hazard/falling",
+    "op": "apply_condition",
+    "note": "Unless the creature took no damage from the fall."
+   },
+   {
+    "ref": "dnd5e/hazard/malnutrition",
+    "op": "trigger",
+    "note": "When the creature ate, but less than half the required food that day."
+   },
+   {
+    "ref": "dnd5e/magic-item/ammunition-of-slaying",
+    "op": "save",
+    "note": "Extra damage; half as much on a success."
+   },
+   {
+    "ref": "dnd5e/magic-item/amulet-of-proof-against-detection-and-location",
+    "op": "restrict",
+    "note": "Can't be targeted by Divination spells or perceived through magical scrying sensors unless you allow it."
+   },
+   {
+    "ref": "dnd5e/magic-item/amulet-of-the-planes",
+    "op": "move",
+    "note": "You and each creature and object within 15 feet travel to a random destination (table)."
+   },
+   {
+    "ref": "dnd5e/magic-item/apparatus-of-the-crab",
+    "op": "attack",
+    "note": "Lever 5 up: each extended claw; reach 5 ft."
+   },
+   {
+    "ref": "dnd5e/magic-item/apparatus-of-the-crab",
+    "op": "attack",
+    "note": "Lever 5 down: each extended claw; reach 5 ft."
+   },
+   {
+    "ref": "dnd5e/magic-item/arrow-catching-shield",
+    "op": "reference",
+    "note": "You become the target of the attack instead."
+   },
+   {
+    "ref": "dnd5e/magic-item/bag-of-holding",
+    "op": "move",
+    "note": "Each creature within the Sphere is sucked to a random location on the Astral Plane."
+   },
+   {
+    "ref": "dnd5e/magic-item/bag-of-tricks",
+    "op": "choice",
+    "note": "Thrown up to 20 feet; roll 1d8 on the table of the bag's color."
+   },
+   {
+    "ref": "dnd5e/magic-item/bead-of-force",
+    "op": "save",
+    "note": "Thrown up to 60 feet; the bead is destroyed."
+   },
+   {
+    "ref": "dnd5e/magic-item/bead-of-force",
+    "op": "reference",
+    "note": "A sphere of force encloses the area: creatures that failed and are wholly inside are trapped; others are pushed out. Only breathable air passes."
+   },
+   {
+    "ref": "dnd5e/magic-item/broom-of-flying",
+    "op": "move",
+    "note": "The broom travels alone to a familiar named location within 1 mile."
+   },
+   {
+    "ref": "dnd5e/magic-item/candle-of-invocation",
+    "op": "cast_spell",
+    "note": "Only when first lit; destroys the candle."
+   },
+   {
+    "ref": "dnd5e/magic-item/carpet-of-flying",
+    "op": "activation",
+    "note": "Command word; moves at your direction while you are within 30 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/cloak-of-displacement",
+    "op": "roll_mode",
+    "note": "Suppressed after you take damage until the start of your next turn, and while your Speed is 0."
+   },
+   {
+    "ref": "dnd5e/magic-item/crystal-ball-of-mind-reading",
+    "op": "cast_spell",
+    "note": "No Concentration needed. Targets creatures you can see within 30 feet of the Scrying sensor; ends if Scrying ends."
+   },
+   {
+    "ref": "dnd5e/magic-item/crystal-ball-of-telepathy",
+    "op": "reference",
+    "note": "With creatures you can see within 30 feet of the sensor."
+   },
+   {
+    "ref": "dnd5e/magic-item/dancing-sword",
+    "op": "attack",
+    "note": "The weapon hovers, flies up to 30 feet and attacks one creature within 5 feet of itself; your attack roll and ability modifier."
+   },
+   {
+    "ref": "dnd5e/magic-item/dancing-sword",
+    "op": "attack",
+    "note": "Fly up to 30 feet to a spot within 30 feet of you, then attack one creature within 5 feet of it."
+   },
+   {
+    "ref": "dnd5e/magic-item/decanter-of-endless-water",
+    "op": "choice",
+    "note": "Fresh or salt water (your choice); stops pouring at the start of your next turn."
+   },
+   {
+    "ref": "dnd5e/magic-item/deck-of-illusions",
+    "op": "reference",
+    "note": "Draw a random card, throw it within 30 feet: an illusion of the creature from the table forms over it; it can do no harm."
+   },
+   {
+    "ref": "dnd5e/magic-item/deck-of-illusions",
+    "op": "move",
+    "note": "Move the illusion anywhere within 30 feet of its card."
+   },
+   {
+    "ref": "dnd5e/magic-item/demon-armor",
+    "op": "modifier",
+    "note": "Slashing instead of Bludgeoning."
+   },
+   {
+    "ref": "dnd5e/magic-item/dragon-scale-mail",
+    "op": "reference",
+    "note": "Learn distance and direction to the closest dragon of the armor's type within 30 miles."
+   },
+   {
+    "ref": "dnd5e/magic-item/dust-of-disappearance",
+    "op": "apply_condition",
+    "note": "You and each creature and object in the area; same duration for all; ends for a creature right after it attacks, deals damage or casts a spell."
+   },
+   {
+    "ref": "dnd5e/magic-item/dust-of-dryness",
+    "op": "reference",
+    "note": "Up to a 15-foot Cube of water becomes a marble-sized pellet."
+   },
+   {
+    "ref": "dnd5e/magic-item/dwarven-plate",
+    "op": "reference",
+    "note": "Reduce the distance moved by up to 10 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/efreeti-bottle",
+    "op": "summon",
+    "note": "Appears at the end of your turn within 30 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/energy-bow",
+    "op": "save",
+    "note": "Instead of damage. The creature can take an action: DC 20 Strength (Athletics) check ends it."
+   },
+   {
+    "ref": "dnd5e/magic-item/energy-bow",
+    "op": "move",
+    "note": "Willing Medium or smaller creature, or an unattended object that fits in a 5-foot Cube: to a space you can see within 10 feet of you."
+   },
+   {
+    "ref": "dnd5e/magic-item/energy-bow",
+    "op": "reference",
+    "note": "A ladder up to 60 feet long on a wall up to 60 feet away."
+   },
+   {
+    "ref": "dnd5e/magic-item/feather-token",
+    "op": "summon",
+    "note": "Bird: Roc statistics but can't attack; carries 500 lb. at 16 mph (144 miles/day, 1-hour rest every 3 hours) or 1,000 lb. at half speed; dismiss as a Magic action."
+   },
+   {
+    "ref": "dnd5e/magic-item/feather-token",
+    "op": "reference",
+    "note": "Tree: nonmagical oak, 60 feet tall, 5-foot trunk, 20-foot crown radius; outdoors only."
+   },
+   {
+    "ref": "dnd5e/magic-item/feather-token",
+    "op": "reference",
+    "note": "Whip: floats at a point within 10 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/feather-token",
+    "op": "attack",
+    "note": "Against a creature within 10 feet of the whip; the whip may first fly up to 20 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 5 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 2 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 7 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 15 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 7 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 30 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 7 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 5 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "summon",
+    "note": "Fights only to defend itself."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 7 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 2 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/figurine-of-wondrous-power",
+    "op": "activation",
+    "note": "Can't be used again until 2 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/flame-tongue",
+    "op": "activation",
+    "note": "Command word; until you repeat it as a Bonus Action or drop, stow or sheathe the weapon."
+   },
+   {
+    "ref": "dnd5e/magic-item/folding-boat",
+    "op": "reference",
+    "note": "Only if no creatures are aboard."
+   },
+   {
+    "ref": "dnd5e/magic-item/frost-brand",
+    "op": "reference",
+    "note": "Extinguish all nonmagical flames within 30 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/gem-of-brightness",
+    "op": "reference",
+    "note": "Bright Light 30 feet, Dim Light 30 more; until repeated as a Bonus Action or another function is used."
+   },
+   {
+    "ref": "dnd5e/magic-item/glamoured-studded-leather",
+    "op": "reference",
+    "note": "Illusory appearance of clothing or other armor; bulk and weight unchanged; lasts until reused or doffed."
+   },
+   {
+    "ref": "dnd5e/magic-item/hammer-of-thunderbolts",
+    "op": "save",
+    "note": "The target and every creature within 30 feet of it other than you; thunderclap audible to 300 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/handy-haversack",
+    "op": "move",
+    "note": "Creatures within 10 feet of the gate and not behind Total Cover go to a random location on the Astral Plane."
+   },
+   {
+    "ref": "dnd5e/magic-item/hat-of-many-spells",
+    "op": "activation",
+    "note": "A level 1+ Wizard spell you don't know, of a level you can cast, Material components no more than 1,000 GP; the frequency applies on success."
+   },
+   {
+    "ref": "dnd5e/magic-item/helm-of-brilliance",
+    "op": "activation",
+    "note": "One held weapon bursts into flames until extinguished (Bonus Action), dropped or stowed."
+   },
+   {
+    "ref": "dnd5e/magic-item/horn-of-blasting",
+    "op": "save",
+    "note": "Audible to 600 feet; on a success, half damage only."
+   },
+   {
+    "ref": "dnd5e/magic-item/horn-of-valhalla",
+    "op": "summon",
+    "note": "Warrior spirits from Ysgard within 60 feet; Immunity to Charmed and Frightened."
+   },
+   {
+    "ref": "dnd5e/magic-item/horseshoes-of-a-zephyr",
+    "op": "reference",
+    "note": "Up to 12 hours of travel a day without Exhaustion from extended travel."
+   },
+   {
+    "ref": "dnd5e/magic-item/immovable-rod",
+    "op": "reference",
+    "note": "Fixed in place until the button is pushed again (Utilize action)."
+   },
+   {
+    "ref": "dnd5e/magic-item/instant-fortress",
+    "op": "reference",
+    "note": "Command word: the statuette grows into the tower; repeat to revert (only if empty)."
+   },
+   {
+    "ref": "dnd5e/magic-item/ioun-stone",
+    "op": "reference",
+    "note": "Stores up to 4 levels of spells; found with 1d4 levels chosen by the GM."
+   },
+   {
+    "ref": "dnd5e/magic-item/iron-bands",
+    "op": "apply_condition",
+    "note": "Until you issue the release command as a Bonus Action."
+   },
+   {
+    "ref": "dnd5e/magic-item/iron-flask",
+    "op": "save",
+    "note": "Only if the flask is empty and the target is native to another plane; Advantage if trapped before."
+   },
+   {
+    "ref": "dnd5e/magic-item/iron-flask",
+    "op": "reference",
+    "note": "Trapped in the flask until released."
+   },
+   {
+    "ref": "dnd5e/magic-item/javelin-of-lightning",
+    "op": "reference",
+    "note": "Deal Lightning damage instead of Piercing."
+   },
+   {
+    "ref": "dnd5e/magic-item/javelin-of-lightning",
+    "op": "save",
+    "note": "A Line between you and a target up to 120 feet away; the javelin reappears in your hand."
+   },
+   {
+    "ref": "dnd5e/magic-item/mace-of-disruption",
+    "op": "save",
+    "note": "Only if it has 25 Hit Points or fewer after the damage."
+   },
+   {
+    "ref": "dnd5e/magic-item/marvelous-pigments",
+    "op": "reference",
+    "note": "Paint objects and terrain within a 20-foot Cube; they become real."
+   },
+   {
+    "ref": "dnd5e/magic-item/mirror-of-life-trapping",
+    "op": "move",
+    "note": "Creatures within 10 feet of the gate and not behind Total Cover go to a random location on the Astral Plane."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "Choose a foe at your next Initiative; if you reduce it to 0 HP, Advantage on Death Saving Throws for 1 year."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "Imprisoned in suspended animation; Artifacts stay; only Wish reveals the location; no more draws."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "modifier",
+    "note": "Curse; only a god or the Fates card ends it."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "A powerful devil becomes your enemy until one of you dies."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "25 jewelry pieces worth 2,000 GP each or 50 gems worth 1,000 GP each."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "summon",
+    "note": "Within 30 feet; same alignment; loyal until death."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "An unknown NPC becomes Hostile; only Wish or divine intervention ends it."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "Within one year, one question answered truthfully."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "summon",
+    "note": "Targets only you; an ally who damages it summons another; slain creatures can't be restored to life."
+   },
+   {
+    "ref": "dnd5e/magic-item/mysterious-deck",
+    "op": "reference",
+    "note": "Soul trapped in an object guarded somewhere; Wish only reveals the location; no more draws."
+   },
+   {
+    "ref": "dnd5e/magic-item/necklace-of-fireballs",
+    "op": "cast_spell",
+    "note": "Thrown up to 60 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/oathbow",
+    "op": "reference",
+    "note": "Command words: the target becomes your sworn enemy until it dies or dawn 7 days later."
+   },
+   {
+    "ref": "dnd5e/magic-item/philter-of-love",
+    "op": "apply_condition",
+    "note": "By the next creature you see within 10 minutes after drinking."
+   },
+   {
+    "ref": "dnd5e/magic-item/pipes-of-the-sewers",
+    "op": "summon",
+    "note": "If enough rats are within half a mile (GM); otherwise the charge is wasted."
+   },
+   {
+    "ref": "dnd5e/magic-item/pipes-of-the-sewers",
+    "op": "reference",
+    "note": "Friendly while you keep playing each round; obeys you; control ends if it starts its turn more than 30 feet away."
+   },
+   {
+    "ref": "dnd5e/magic-item/plate-armor-of-etherealness",
+    "op": "cast_spell",
+    "note": "Ends if you remove the armor or repeat the command word (Magic action)."
+   },
+   {
+    "ref": "dnd5e/magic-item/portable-hole",
+    "op": "reference",
+    "note": "Forces its way out within 5 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/portable-hole",
+    "op": "move",
+    "note": "Creatures within 10 feet of the gate and not behind Total Cover go to a random location on the Astral Plane."
+   },
+   {
+    "ref": "dnd5e/magic-item/potion-of-gaseous-form",
+    "op": "cast_spell",
+    "note": "No Concentration required. Lasts 1 hour or until ended as a Bonus Action."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-animal-influence",
+    "op": "cast_spell",
+    "note": "Affects Beasts only."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-djinni-summoning",
+    "op": "summon",
+    "note": "Within 120 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-elemental-command",
+    "op": "reference",
+    "note": "You determine its move and action on its next turn."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-free-action",
+    "op": "defense",
+    "note": "From magic only."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-invisibility",
+    "op": "apply_condition",
+    "note": "Until the ring is removed or you take a Bonus Action to become visible."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-jumping",
+    "op": "cast_spell",
+    "note": "Can target only yourself."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-mind-shielding",
+    "op": "restrict",
+    "note": "Also alignment and creature type; telepathy only if you allow it."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-shooting-stars",
+    "op": "reference",
+    "note": "Up to four spheres within 120 feet; each sheds Dim Light 30 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-shooting-stars",
+    "op": "save",
+    "note": "When a sphere first comes within 5 feet of a creature other than you not behind Total Cover; damage by number of spheres (table)."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-shooting-stars",
+    "op": "save",
+    "note": "One mote per charge, each at a point within 60 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-the-ram",
+    "op": "check",
+    "note": "Ring's check with +5 per charge spent; breaks an unattended nonmagical object within 60 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/ring-of-water-walking",
+    "op": "cast_spell",
+    "note": "Targeting only yourself."
+   },
+   {
+    "ref": "dnd5e/magic-item/robe-of-eyes",
+    "op": "trigger",
+    "note": "Light cast on the robe (save DC 11) or Daylight within 5 feet (DC 15); Constitution save at the end of each of your turns ends it."
+   },
+   {
+    "ref": "dnd5e/magic-item/rod-of-absorption",
+    "op": "reference",
+    "note": "Absorb a spell targeting only you without an area: canceled; its level is stored."
+   },
+   {
+    "ref": "dnd5e/magic-item/rod-of-security",
+    "op": "activation",
+    "note": "Can't be used again until 10 days have passed."
+   },
+   {
+    "ref": "dnd5e/magic-item/rod-of-security",
+    "op": "move",
+    "note": "You and up to 199 willing creatures you can see go to a demiplane of your design."
+   },
+   {
+    "ref": "dnd5e/magic-item/shield-of-missile-attraction",
+    "op": "reference",
+    "note": "You become the target instead (within 10 feet)."
+   },
+   {
+    "ref": "dnd5e/magic-item/shield-of-the-cavalier",
+    "op": "trigger",
+    "note": "One attack roll of the Attack action, against a target within 5 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/sphere-of-annihilation",
+    "op": "trigger",
+    "note": "Obliterates matter that passes through it; Artifacts pass unscathed unless susceptible."
+   },
+   {
+    "ref": "dnd5e/magic-item/sphere-of-annihilation",
+    "op": "reference",
+    "note": "You control it until the start of your next turn."
+   },
+   {
+    "ref": "dnd5e/magic-item/sphere-of-annihilation",
+    "op": "save",
+    "note": "Moves up to 5 × Intelligence modifier feet (min 5); each creature whose space it enters."
+   },
+   {
+    "ref": "dnd5e/magic-item/staff-of-striking",
+    "op": "trigger",
+    "note": "Up to 3 charges."
+   },
+   {
+    "ref": "dnd5e/magic-item/staff-of-the-python",
+    "op": "summon",
+    "note": "Lands within 10 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/staff-of-thunder-and-lightning",
+    "op": "save",
+    "note": "Audible to 600 feet; success: half damage only."
+   },
+   {
+    "ref": "dnd5e/magic-item/stone-of-controlling-earth-elementals",
+    "op": "summon",
+    "note": "Within 30 feet; dismiss as a Bonus Action."
+   },
+   {
+    "ref": "dnd5e/magic-item/talisman-of-pure-good",
+    "op": "trigger",
+    "note": "Again each time it ends its turn holding or carrying the talisman."
+   },
+   {
+    "ref": "dnd5e/magic-item/talisman-of-ultimate-evil",
+    "op": "trigger",
+    "note": "Again each time it ends its turn holding or carrying the talisman."
+   },
+   {
+    "ref": "dnd5e/magic-item/thunderous-greatclub",
+    "op": "modifier",
+    "note": "Unless already 20 or higher."
+   },
+   {
+    "ref": "dnd5e/magic-item/thunderous-greatclub",
+    "op": "trigger",
+    "note": "Objects not worn or carried (instead of 1d8)."
+   },
+   {
+    "ref": "dnd5e/magic-item/wand-of-enemy-detection",
+    "op": "reference",
+    "note": "Direction (not distance) of the nearest Hostile creature within 60 feet, even Invisible, ethereal, disguised or hidden."
+   },
+   {
+    "ref": "dnd5e/magic-item/wand-of-fear",
+    "op": "cast_spell",
+    "note": "“Flee” or “grovel” only."
+   },
+   {
+    "ref": "dnd5e/magic-item/wand-of-secrets",
+    "op": "reference",
+    "note": "Points at the nearest secret door or trap within 60 feet."
+   },
+   {
+    "ref": "dnd5e/magic-item/wand-of-the-war-mage-plus1-plus2-or-plus3",
+    "op": "restrict",
+    "note": "You ignore Half Cover on spell attack rolls."
+   },
+   {
+    "ref": "dnd5e/magic-item/wand-of-wonder",
+    "op": "reference",
+    "note": "Choose a point within 120 feet; roll 1d100 on the Wand of Wonder Effects table."
+   },
+   {
+    "ref": "dnd5e/magic-item/weapon-of-warning",
+    "op": "remove_condition",
+    "note": "Natural sleep only, not magical sleep."
+   },
+   {
+    "ref": "dnd5e/magic-item/well-of-many-worlds",
+    "op": "reference",
+    "note": "Two-way, 6-foot portal to another world or plane; closed by a creature within 5 feet (Magic action)."
+   },
+   {
+    "ref": "dnd5e/poison/assassins-blood",
+    "op": "save",
+    "note": "On a success, half damage only."
+   },
+   {
+    "ref": "dnd5e/poison/burnt-othur-fumes",
+    "op": "save",
+    "note": "Repeat the save at the start of each turn: 1d6 Poison damage on each failure; ends after three successes."
+   },
+   {
+    "ref": "dnd5e/poison/midnight-tears",
+    "op": "trigger",
+    "note": "No effect until midnight; anything that ends the Poisoned condition neutralizes it."
+   },
+   {
+    "ref": "dnd5e/poison/pale-tincture",
+    "op": "save",
+    "note": "Repeat every 24 hours (1d6 Poison damage on failure); the damage can't be healed while Poisoned; ends after seven successes."
+   },
+   {
+    "ref": "dnd5e/rule/dropping-to-0-hit-points",
+    "op": "apply_condition",
+    "note": "Until the creature regains any Hit Points."
+   },
+   {
+    "ref": "dnd5e/rule/heroic-inspiration",
+    "op": "trigger",
+    "note": "Player characters only."
+   },
+   {
+    "ref": "dnd5e/rule/mounted-combat",
+    "op": "move",
+    "note": "Fall off into an unoccupied space within 5 feet of the mount."
+   },
+   {
+    "ref": "dnd5e/rule/mounted-combat",
+    "op": "move",
+    "note": "Fall off into an unoccupied space within 5 feet of the mount."
+   },
+   {
+    "ref": "dnd5e/rule/sentient-magic-item-traits",
+    "op": "apply_condition",
+    "note": "Follows the item's commands; repeats the save when it takes damage. Once per dawn."
+   },
+   {
+    "ref": "dnd5e/rule/short-rest",
+    "op": "activation",
+    "note": "Only when finishing a Short Rest; decide after each roll."
+   },
+   {
+    "ref": "dnd5e/spell/acid-arrow",
+    "op": "damage",
+    "note": "Half the initial damage only."
+   },
+   {
+    "ref": "dnd5e/spell/animal-shapes",
+    "op": "transform",
+    "note": "Any number of willing creatures; a different form for each."
+   },
+   {
+    "ref": "dnd5e/spell/animate-dead",
+    "op": "choice",
+    "note": "Remains of a Medium or Small Humanoid within range."
+   },
+   {
+    "ref": "dnd5e/spell/animate-dead",
+    "op": "reference",
+    "note": "Command any or all of your creatures within 60 feet: specific action and movement or a general order."
+   },
+   {
+    "ref": "dnd5e/spell/animate-objects",
+    "op": "summon",
+    "note": "One per object; under your control until the spell ends or it drops to 0 Hit Points."
+   },
+   {
+    "ref": "dnd5e/spell/animate-objects",
+    "op": "reference",
+    "note": "Command any or all of your creatures within 500 feet."
+   },
+   {
+    "ref": "dnd5e/spell/antipathy-sympathy",
+    "op": "apply_condition",
+    "note": "Moves as close as possible; can't willingly move away within 5 feet."
+   },
+   {
+    "ref": "dnd5e/spell/arcane-hand",
+    "op": "reference",
+    "note": "Half Cover against attacks and effects from or through its space; its space is Difficult Terrain for your enemies."
+   },
+   {
+    "ref": "dnd5e/spell/astral-projection",
+    "op": "reference",
+    "note": "You and up to eight willing creatures project into the Astral Plane; ends instantly if already there."
+   },
+   {
+    "ref": "dnd5e/spell/beacon-of-hope",
+    "op": "roll_mode",
+    "note": "Any number of creatures within range."
+   },
+   {
+    "ref": "dnd5e/spell/befuddlement",
+    "op": "damage",
+    "note": "Half damage only."
+   },
+   {
+    "ref": "dnd5e/spell/chain-lightning",
+    "op": "save",
+    "note": "The first target plus up to three others within 30 feet of it; each targeted by one bolt only."
+   },
+   {
+    "ref": "dnd5e/spell/chill-touch",
+    "op": "attack",
+    "note": "A target within reach."
+   },
+   {
+    "ref": "dnd5e/spell/command",
+    "op": "move",
+    "note": "Toward you by the shortest route; ends its turn within 5 feet of you."
+   },
+   {
+    "ref": "dnd5e/spell/compulsion",
+    "op": "save",
+    "note": "Each creature of your choice within range."
+   },
+   {
+    "ref": "dnd5e/spell/compulsion",
+    "op": "move",
+    "note": "Each Charmed target uses as much movement as possible in the designated horizontal direction on its next turn, by the safest route."
+   },
+   {
+    "ref": "dnd5e/spell/confusion",
+    "op": "attack",
+    "note": "One melee attack against a random creature within reach, if any."
+   },
+   {
+    "ref": "dnd5e/spell/conjure-celestial",
+    "op": "choice",
+    "note": "Each creature you can see in the Cylinder; once per turn per creature."
+   },
+   {
+    "ref": "dnd5e/spell/control-water",
+    "op": "move",
+    "note": "Creatures in the water within 25 feet of the whirlpool."
+   },
+   {
+    "ref": "dnd5e/spell/create-undead",
+    "op": "repeat",
+    "note": "Only at night; up to three corpses of Medium or Small Humanoids."
+   },
+   {
+    "ref": "dnd5e/spell/create-undead",
+    "op": "reference",
+    "note": "Command any or all of your creatures within 120 feet."
+   },
+   {
+    "ref": "dnd5e/spell/dancing-lights",
+    "op": "move",
+    "note": "The lights, to a space within range."
+   },
+   {
+    "ref": "dnd5e/spell/dispel-evil-and-good",
+    "op": "remove_condition",
+    "note": "Only those from Celestials, Elementals, Fey, Fiends or Undead; also ends possession."
+   },
+   {
+    "ref": "dnd5e/spell/dream",
+    "op": "save",
+    "note": "After a message of no more than ten words."
+   },
+   {
+    "ref": "dnd5e/spell/earthquake",
+    "op": "save",
+    "note": "Within half the structure's height; buried: DC 20 Strength (Athletics) check as an action to escape."
+   },
+   {
+    "ref": "dnd5e/spell/enlarge-reduce",
+    "op": "save",
+    "note": "Only an unwilling creature saves; on a success the spell has no effect."
+   },
+   {
+    "ref": "dnd5e/spell/ensnaring-strike",
+    "op": "activation",
+    "note": "The target or a creature within its reach."
+   },
+   {
+    "ref": "dnd5e/spell/faithful-hound",
+    "op": "save",
+    "note": "One enemy within 5 feet of the hound."
+   },
+   {
+    "ref": "dnd5e/spell/fear",
+    "op": "reference",
+    "note": "Moves away from you by the safest route unless there is nowhere to move."
+   },
+   {
+    "ref": "dnd5e/spell/find-the-path",
+    "op": "sense",
+    "note": "Distance, direction and the most direct path at each choice, on the same plane."
+   },
+   {
+    "ref": "dnd5e/spell/finger-of-death",
+    "op": "summon",
+    "note": "A Humanoid killed by the spell rises at the start of your next turn and follows your verbal orders."
+   },
+   {
+    "ref": "dnd5e/spell/flaming-sphere",
+    "op": "trigger",
+    "note": "A creature that ends its turn within 5 feet of the sphere."
+   },
+   {
+    "ref": "dnd5e/spell/gaseous-form",
+    "op": "speed",
+    "note": "Its only method of movement."
+   },
+   {
+    "ref": "dnd5e/spell/guiding-bolt",
+    "op": "roll_mode",
+    "note": "Only the next attack roll against it."
+   },
+   {
+    "ref": "dnd5e/spell/harm",
+    "op": "damage",
+    "note": "Half damage only."
+   },
+   {
+    "ref": "dnd5e/spell/haste",
+    "op": "modifier",
+    "note": "Only Attack (one attack), Dash, Disengage, Hide or Utilize."
+   },
+   {
+    "ref": "dnd5e/spell/heat-metal",
+    "op": "damage",
+    "note": "Each creature in physical contact with the chosen metal object."
+   },
+   {
+    "ref": "dnd5e/spell/heat-metal",
+    "op": "activation",
+    "note": "Again on later turns, if the object is within range."
+   },
+   {
+    "ref": "dnd5e/spell/heat-metal",
+    "op": "restrict",
+    "note": "Drops the object if it can; if it doesn't, Disadvantage on attack rolls and ability checks until the start of your next turn."
+   },
+   {
+    "ref": "dnd5e/spell/heroes-feast",
+    "op": "modifier",
+    "note": "2d10, rolled once; the creature gains the same number of Hit Points."
+   },
+   {
+    "ref": "dnd5e/spell/hunters-mark",
+    "op": "reference",
+    "note": "Move the mark to a new creature you can see within range."
+   },
+   {
+    "ref": "dnd5e/spell/hypnotic-pattern",
+    "op": "save",
+    "note": "Only creatures that can see the pattern."
+   },
+   {
+    "ref": "dnd5e/spell/ice-knife",
+    "op": "save",
+    "note": "Hit or miss: the target and each creature within 5 feet of it."
+   },
+   {
+    "ref": "dnd5e/spell/imprisonment",
+    "op": "reference",
+    "note": "1 inch tall inside an indestructible gemstone; only light passes."
+   },
+   {
+    "ref": "dnd5e/spell/levitate",
+    "op": "save",
+    "note": "Only an unwilling creature saves; a loose object can weigh up to 500 pounds."
+   },
+   {
+    "ref": "dnd5e/spell/magic-jar",
+    "op": "reference",
+    "note": "Return to the container if within 100 feet."
+   },
+   {
+    "ref": "dnd5e/spell/major-image",
+    "op": "move",
+    "note": "The image, to any spot within range; appearance and sounds can change."
+   },
+   {
+    "ref": "dnd5e/spell/mass-cure-wounds",
+    "op": "heal",
+    "note": "Up to six creatures in the Sphere."
+   },
+   {
+    "ref": "dnd5e/spell/mass-heal",
+    "op": "heal",
+    "note": "Up to 700 Hit Points divided among any number of creatures you can see."
+   },
+   {
+    "ref": "dnd5e/spell/meteor-swarm",
+    "op": "save",
+    "note": "A creature in more than one Sphere is affected only once."
+   },
+   {
+    "ref": "dnd5e/spell/mind-spike",
+    "op": "sense",
+    "note": "Same plane only; the target can't hide from you and gains no benefit from Invisible against you."
+   },
+   {
+    "ref": "dnd5e/spell/mirror-image",
+    "op": "reference",
+    "note": "Roll a d6 per remaining duplicate; on any 3+, a duplicate is hit and destroyed instead."
+   },
+   {
+    "ref": "dnd5e/spell/mislead",
+    "op": "move",
+    "note": "The double; it gestures, speaks and behaves as you choose; intangible and invulnerable."
+   },
+   {
+    "ref": "dnd5e/spell/moonbeam",
+    "op": "save",
+    "note": "Also when the area moves into its space, when it enters or ends its turn there; once per turn."
+   },
+   {
+    "ref": "dnd5e/spell/moonbeam",
+    "op": "reference",
+    "note": "A shape-shifted creature reverts and can't shape-shift until it leaves the Cylinder."
+   },
+   {
+    "ref": "dnd5e/spell/phantasmal-force",
+    "op": "reference",
+    "note": "A phantasm no larger than a 10-foot Cube, perceivable only by the target."
+   },
+   {
+    "ref": "dnd5e/spell/phantasmal-force",
+    "op": "damage",
+    "note": "If the target is in the phantasm's area or within 5 feet of it; perceived as a type appropriate to the illusion."
+   },
+   {
+    "ref": "dnd5e/spell/phantom-steed",
+    "op": "summon",
+    "note": "Speed 100 feet; 13 miles per hour; ends early if it takes any damage; 1 minute to dismount at the end."
+   },
+   {
+    "ref": "dnd5e/spell/plane-shift",
+    "op": "move",
+    "note": "You and up to eight willing creatures linking hands."
+   },
+   {
+    "ref": "dnd5e/spell/prismatic-spray",
+    "op": "choice",
+    "note": "Roll 1d8 for each creature in the Cone."
+   },
+   {
+    "ref": "dnd5e/spell/prismatic-spray",
+    "op": "save",
+    "note": "Three successes end the condition; three failures: Petrified until freed by an effect like Greater Restoration."
+   },
+   {
+    "ref": "dnd5e/spell/prismatic-wall",
+    "op": "trigger",
+    "note": "Within 20 feet; you and designated creatures are unaffected."
+   },
+   {
+    "ref": "dnd5e/spell/prismatic-wall",
+    "op": "apply_condition",
+    "note": "Constitution save at the end of each of its turns: three successes end it, three failures: Petrified until freed by an effect like Greater Restoration."
+   },
+   {
+    "ref": "dnd5e/spell/prismatic-wall",
+    "op": "apply_condition",
+    "note": "Wisdom save at the start of your next turn: success ends it; failure ends it and teleports the creature to another plane (GM's choice)."
+   },
+   {
+    "ref": "dnd5e/spell/raise-dead",
+    "op": "modifier",
+    "note": "Reduced by 1 each time the target finishes a Long Rest."
+   },
+   {
+    "ref": "dnd5e/spell/ray-of-enfeeblement",
+    "op": "roll_mode",
+    "note": "Next attack roll only."
+   },
+   {
+    "ref": "dnd5e/spell/ray-of-enfeeblement",
+    "op": "save",
+    "note": "Repeated at the end of each of its turns; ends the spell on a success."
+   },
+   {
+    "ref": "dnd5e/spell/resilient-sphere",
+    "op": "save",
+    "note": "Only an unwilling creature saves."
+   },
+   {
+    "ref": "dnd5e/spell/resurrection",
+    "op": "modifier",
+    "note": "Dead no more than a century, not of old age, and not Undead when it died."
+   },
+   {
+    "ref": "dnd5e/spell/resurrection",
+    "op": "modifier",
+    "note": "Reduced by 1 each time the target finishes a Long Rest."
+   },
+   {
+    "ref": "dnd5e/spell/resurrection",
+    "op": "restrict",
+    "note": "You also have Disadvantage on D20 Tests until then."
+   },
+   {
+    "ref": "dnd5e/spell/scrying",
+    "op": "reference",
+    "note": "An Invisible, intangible sensor within 10 feet of the target that moves with it."
+   },
+   {
+    "ref": "dnd5e/spell/secret-chest",
+    "op": "reference",
+    "note": "Recall the chest within 5 feet of you, or send it back."
+   },
+   {
+    "ref": "dnd5e/spell/seeming",
+    "op": "reference",
+    "note": "Illusory appearance; only unwilling targets save."
+   },
+   {
+    "ref": "dnd5e/spell/silent-image",
+    "op": "move",
+    "note": "The image, to any spot within range; its appearance can change to look natural."
+   },
+   {
+    "ref": "dnd5e/spell/sleep",
+    "op": "trigger",
+    "note": "Repeated at the end of its next turn."
+   },
+   {
+    "ref": "dnd5e/spell/slow",
+    "op": "save",
+    "note": "Up to six creatures of your choice in the Cube."
+   },
+   {
+    "ref": "dnd5e/spell/slow",
+    "op": "restrict",
+    "note": "Only one attack with the Attack action."
+   },
+   {
+    "ref": "dnd5e/spell/spiritual-weapon",
+    "op": "attack",
+    "note": "Against a creature within 5 feet of the force."
+   },
+   {
+    "ref": "dnd5e/spell/storm-of-vengeance",
+    "op": "damage",
+    "note": "Each creature and object under the cloud."
+   },
+   {
+    "ref": "dnd5e/spell/sunburst",
+    "op": "damage",
+    "note": "Half damage only."
+   },
+   {
+    "ref": "dnd5e/spell/symbol",
+    "op": "trigger",
+    "note": "Also each creature in the Sphere when it activates."
+   },
+   {
+    "ref": "dnd5e/spell/symbol",
+    "op": "apply_condition",
+    "note": "Must move at least 30 feet away from the glyph each turn, if able."
+   },
+   {
+    "ref": "dnd5e/spell/telekinesis",
+    "op": "reference",
+    "note": "Exert your will on one creature or object you can see within range."
+   },
+   {
+    "ref": "dnd5e/spell/teleport",
+    "op": "move",
+    "note": "You and up to eight willing creatures, or one Large or smaller object not carried by an unwilling creature."
+   },
+   {
+    "ref": "dnd5e/spell/teleport",
+    "op": "damage",
+    "note": "Each teleporting creature or the object; the GM rerolls on the table."
+   },
+   {
+    "ref": "dnd5e/spell/thaumaturgy",
+    "op": "roll_mode",
+    "note": "Your voice booms up to three times as loud as normal."
+   },
+   {
+    "ref": "dnd5e/spell/tree-stride",
+    "op": "move",
+    "note": "Enter a living tree at least your size and pass into another of the same kind within 500 feet (or step out); appear within 5 feet of it using another 5 feet of movement."
+   },
+   {
+    "ref": "dnd5e/spell/true-polymorph",
+    "op": "save",
+    "note": "Only an unwilling creature saves; an object must be neither worn nor carried."
+   },
+   {
+    "ref": "dnd5e/spell/true-strike",
+    "op": "modifier",
+    "note": "Attack and damage rolls of that attack, instead of Strength or Dexterity."
+   },
+   {
+    "ref": "dnd5e/spell/tsunami",
+    "op": "save",
+    "note": "Once per round; 5d10, reduced by 1d10 on later rounds."
+   },
+   {
+    "ref": "dnd5e/spell/unseen-servant",
+    "op": "move",
+    "note": "The servant moves and interacts with an object; it performs simple tasks until done."
+   },
+   {
+    "ref": "dnd5e/spell/vampiric-touch",
+    "op": "reference",
+    "note": "Repeat the attack."
+   },
+   {
+    "ref": "dnd5e/spell/vicious-mockery",
+    "op": "roll_mode",
+    "note": "Only the next attack roll it makes."
+   },
+   {
+    "ref": "dnd5e/spell/vitriolic-sphere",
+    "op": "damage",
+    "note": "Half the initial damage only."
+   },
+   {
+    "ref": "dnd5e/spell/wall-of-fire",
+    "op": "damage",
+    "note": "Ends its turn within 10 feet of the chosen side or inside the wall, or enters the wall."
+   },
+   {
+    "ref": "dnd5e/spell/wall-of-stone",
+    "op": "save",
+    "note": "Only a creature that would be surrounded on all sides."
+   },
+   {
+    "ref": "dnd5e/spell/web",
+    "op": "apply_condition",
+    "note": "While in the webs or until it breaks free."
+   },
+   {
+    "ref": "dnd5e/spell/weird",
+    "op": "damage",
+    "note": "Half damage only."
+   },
+   {
+    "ref": "dnd5e/spell/wind-walk",
+    "op": "speed",
+    "note": "You and up to ten willing creatures."
+   },
+   {
+    "ref": "dnd5e/spell/wish",
+    "op": "reference",
+    "note": "A nonmagical object worth up to 25,000 GP, no more than 300 feet in any dimension."
+   },
+   {
+    "ref": "dnd5e/spell/wish",
+    "op": "reroll",
+    "note": "A roll made within the last round; with Advantage or Disadvantage if you choose."
+   },
+   {
+    "ref": "dnd5e/spell/wish",
+    "op": "modifier",
+    "note": "Each day of rest and light activity reduces the remaining time by 2 days."
+   },
+   {
+    "ref": "dnd5e/spell/word-of-recall",
+    "op": "move",
+    "note": "You and up to five willing creatures within 5 feet to your designated sanctuary; no effect without one."
+   },
+   {
+    "ref": "dnd5e/trap/collapsing-roof",
+    "op": "save",
+    "note": "Each creature beneath the section; rubble becomes Difficult Terrain."
+   },
+   {
+    "ref": "dnd5e/trap/collapsing-roof",
+    "op": "check",
+    "note": "Search action; once detected the wire is cut or avoided without a check."
+   },
+   {
+    "ref": "dnd5e/trap/falling-net",
+    "op": "save",
+    "note": "Huge or larger succeed automatically; an action and a DC 10 Strength (Athletics) check frees a creature within reach."
+   },
+   {
+    "ref": "dnd5e/trap/poisoned-darts",
+    "op": "repeat",
+    "note": "Struck by 1d3 darts, 1d6 Poison damage each."
+   },
+   {
+    "ref": "dnd5e/trap/poisoned-needle",
+    "op": "save",
+    "note": "On a success, half damage only."
+   },
+   {
+    "ref": "dnd5e/weapon-mastery/cleave",
+    "op": "attack",
+    "note": "A second creature within 5 feet of the first and within your reach; no ability modifier to damage unless negative."
+   },
+   {
+    "ref": "dnd5e/weapon-mastery/graze",
+    "op": "damage",
+    "note": "Can be increased only by increasing the ability modifier."
+   },
+   {
+    "ref": "dnd5e/weapon-mastery/sap",
+    "op": "roll_mode",
+    "note": "Its next attack roll."
+   },
+   {
+    "ref": "dnd5e/weapon-mastery/slow",
+    "op": "speed",
+    "note": "Only if damage was dealt; reductions from this property don't exceed 10 feet."
+   },
+   {
+    "ref": "dnd5e/weapon-mastery/vex",
+    "op": "roll_mode",
+    "note": "Your next attack roll against that creature; only if damage was dealt."
+   },
+   {
+    "ref": "dnd5e/weapon-property/light",
+    "op": "attack",
+    "note": "With a different Light weapon; no ability modifier to damage unless negative."
+   }
+  ]
+ }
+}

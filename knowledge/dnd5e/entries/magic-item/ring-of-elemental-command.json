@@ -1,0 +1,1235 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-elemental-command",
+  "kind": "magic-item",
+  "name": "Ring of Elemental Command",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      237,
+      238
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of Elemental Command",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Ring, Legendary (Requires Attunement)*\n\nEach *Ring of Elemental Command* is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane. For example, a *Ring of Elemental Command* (air) is linked to the Elemental Plane of Air.\n\nEvery *Ring of Elemental Command* has the following two properties:\n\n**Elemental Bane.** While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n\n**Elemental Compulsion.** While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n\n***Elemental Focus.*** While wearing the ring, you benefit from additional properties corresponding to the ring’s linked Elemental Plane:\n\n**Air.** You know Auran, you have Resistance to Lightning damage, and you have a Fly Speed equal to your Speed and can hover.\n\n**Earth.** You know Terran, and you have Resistance to Acid damage. Terrain composed of rubble, rocks, or dirt isn’t Difficult Terrain for you. In addition, you can move through solid earth or rock as if those areas were Difficult Terrain without disturbing the matter through which you pass. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied.\n\n**Fire.** You know Ignan, and you have Immunity to Fire damage.\n\n**Water.** You know Aquan, you gain a Swim Speed of 60 feet, and you can breathe underwater.\n\n***Spellcasting.*** The ring has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While wearing the ring, you can cast a spell from it. Choose the spell from the list of available spells based on the Elemental Plane the ring is linked to, as shown in the following table. The table indicates how many charges you must expend to cast the spell, which has a save DC of 18.\n\n| **Plane** | **Spells (Charges)** |\n| Air | *Chain Lightning* (3 charges), *Feather Fall* (0 charges), *Gust of Wind* (2 charges), *Wind Wall* (1 charge) |\n| Earth | *Earthquake* (5 charges), *Stone Shape* (2 charges), *Stoneskin* (3 charges), *Wall of Stone* (3 charges) |\n| Fire | *Burning Hands* (1 charge), *Fireball* (2 charges), *Fire Storm* (4 charges), *Wall of Fire* (3 charges) |\n| Water | *Create or Destroy Water* (1 charge), *Ice Storm* (2 charges), *Tsunami* (5 charges), *Wall of Ice* (3 charges), *Water Walk* (2 charges) |",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "earth_glide",
+        "through": [
+          "solid earth",
+          "rock"
+        ],
+        "as": "difficult_terrain",
+        "end_turn_inside": "shunted to last unoccupied space"
+      }
+    ],
+    "tables": [
+      {
+        "id": "ring_of_elemental_command",
+        "caption": "Ring of Elemental Command",
+        "columns": [
+          "Plane",
+          "Spells (Charges)"
+        ],
+        "rows": [
+          [
+            "Air",
+            "Chain Lightning (3 charges), Feather Fall (0 charges), Gust of Wind (2 charges), Wind Wall (1 charge)"
+          ],
+          [
+            "Earth",
+            "Earthquake (5 charges), Stone Shape (2 charges), Stoneskin (3 charges), Wall of Stone (3 charges)"
+          ],
+          [
+            "Fire",
+            "Burning Hands (1 charge), Fireball (2 charges), Fire Storm (4 charges), Wall of Fire (3 charges)"
+          ],
+          [
+            "Water",
+            "Create or Destroy Water (1 charge), Ice Storm (2 charges), Tsunami (5 charges), Wall of Ice (3 charges), Water Walk (2 charges)"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "elemental"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "who": "attacker",
+              "types": [
+                "elemental"
+              ]
+            }
+          }
+        ]
+      },
+      "direction": "against"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 18,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true,
+            "filter": {
+              "creature_types": [
+                "elemental"
+              ]
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/charmed",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "self",
+                  "which": "next"
+                }
+              }
+            },
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/ring-of-elemental-command",
+              "note": "You determine its move and action on its next turn."
+            }
+          ]
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "auran"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "lightning"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "speed",
+      "movement": "fly",
+      "mode": "equal_to_walk",
+      "value": 0,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      },
+      "hover": true
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "terran"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "acid"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ignores_difficult_terrain",
+      "mode": "set",
+      "value": 1,
+      "when": {
+        "all": [
+          {
+            "all": [
+              {
+                "pred": "item_state",
+                "args": {
+                  "state": "worn",
+                  "item": "this"
+                }
+              },
+              {
+                "pred": "item_variant_is",
+                "args": {
+                  "variant": "earth"
+                }
+              }
+            ]
+          },
+          {
+            "pred": "terrain_from",
+            "args": {
+              "source": [
+                "rubble",
+                "rocks",
+                "dirt"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "ignan"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "damage_types": [
+        "fire"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "proficiency",
+      "category": "language",
+      "items": [
+        "aquan"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "speed",
+      "movement": "swim",
+      "mode": "set",
+      "value": 60,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 5,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d4",
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/chain-lightning",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/feather-fall",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/gust-of-wind",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wind-wall",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "air"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/earthquake",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/stone-shape",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/stoneskin",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-stone",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/burning-hands",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fire-storm",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-fire",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "fire"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/create-or-destroy-water",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/ice-storm",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/tsunami",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-ice",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/water-walk",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_variant_is",
+            "args": {
+              "variant": "water"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "linked_plane",
+      "reason": "gm_judgment",
+      "prompt": "Which Elemental Plane is the ring linked to?",
+      "source_text": "The GM chooses or randomly determines the linked plane.",
+      "options": [
+        {
+          "id": "air",
+          "label": "air"
+        },
+        {
+          "id": "earth",
+          "label": "earth"
+        },
+        {
+          "id": "fire",
+          "label": "fire"
+        },
+        {
+          "id": "water",
+          "label": "water"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "Each *Ring of Elemental Command* is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane. For example, a *Ring of Elemental Command* (air) is linked to the Elemental Plane of Air.",
+      "status": "master_decision",
+      "by": [
+        "md:linked_plane"
+      ]
+    },
+    {
+      "text": "Every *Ring of Elemental Command* has the following two properties:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Elemental Bane.** While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Elemental Compulsion.** While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Elemental Focus.*** While wearing the ring, you benefit from additional properties corresponding to the ring’s linked Elemental Plane:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Air.** You know Auran, you have Resistance to Lightning damage, and you have a Fly Speed equal to your Speed and can hover.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4",
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "**Earth.** You know Terran, and you have Resistance to Acid damage. Terrain composed of rubble, rocks, or dirt isn’t Difficult Terrain for you. In addition, you can move through solid earth or rock as if those areas were Difficult Terrain without disturbing the matter through which you pass. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied.",
+      "status": "structured",
+      "by": [
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Fire.** You know Ignan, and you have Immunity to Fire damage.",
+      "status": "structured",
+      "by": [
+        "/effects/9",
+        "/effects/10"
+      ]
+    },
+    {
+      "text": "**Water.** You know Aquan, you gain a Swim Speed of 60 feet, and you can breathe underwater.",
+      "status": "structured",
+      "by": [
+        "/effects/11",
+        "/effects/12",
+        "/effects/13"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The ring has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While wearing the ring, you can cast a spell from it. Choose the spell from the list of available spells based on the Elemental Plane the ring is linked to, as shown in the following table. The table indicates how many charges you must expend to cast the spell, which has a save DC of 18.",
+      "status": "structured",
+      "by": [
+        "/effects/14",
+        "/effects/15",
+        "/effects/16",
+        "/effects/17",
+        "/effects/18",
+        "/effects/19",
+        "/effects/20",
+        "/effects/21",
+        "/effects/22",
+        "/effects/23",
+        "/effects/24",
+        "/effects/25",
+        "/effects/26",
+        "/effects/27",
+        "/effects/28",
+        "/effects/29",
+        "/effects/30",
+        "/effects/31"
+      ]
+    },
+    {
+      "text": "| **Plane** | **Spells (Charges)** |\n| Air | *Chain Lightning* (3 charges), *Feather Fall* (0 charges), *Gust of Wind* (2 charges), *Wind Wall* (1 charge) |\n| Earth | *Earthquake* (5 charges), *Stone Shape* (2 charges), *Stoneskin* (3 charges), *Wall of Stone* (3 charges) |\n| Fire | *Burning Hands* (1 charge), *Fireball* (2 charges), *Fire Storm* (4 charges), *Wall of Fire* (3 charges) |\n| Water | *Create or Destroy Water* (1 charge), *Ice Storm* (2 charges), *Tsunami* (5 charges), *Wall of Ice* (3 charges), *Water Walk* (2 charges) |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/magic-item/ring-of-elemental-command",
+    "dnd5e/spell/burning-hands",
+    "dnd5e/spell/chain-lightning",
+    "dnd5e/spell/create-or-destroy-water",
+    "dnd5e/spell/earthquake",
+    "dnd5e/spell/feather-fall",
+    "dnd5e/spell/fire-storm",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/gust-of-wind",
+    "dnd5e/spell/ice-storm",
+    "dnd5e/spell/stone-shape",
+    "dnd5e/spell/stoneskin",
+    "dnd5e/spell/tsunami",
+    "dnd5e/spell/wall-of-fire",
+    "dnd5e/spell/wall-of-ice",
+    "dnd5e/spell/wall-of-stone",
+    "dnd5e/spell/water-walk",
+    "dnd5e/spell/wind-wall"
+  ]
+}

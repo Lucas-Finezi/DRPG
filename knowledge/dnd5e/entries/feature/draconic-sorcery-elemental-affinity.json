@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/draconic-sorcery-elemental-affinity",
+  "kind": "feature",
+  "name": "Elemental Affinity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      70
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Subclass: Draconic Sorcery/Level 6: Elemental Affinity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your draconic magic has an affinity with a damage type associated with dragons. Choose one of those types: Acid, Cold, Fire, Lightning, or Poison.\n\nYou have Resistance to that damage type, and when you cast a spell that deals damage of that type, you can add your Charisma modifier to one damage roll of that spell.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/draconic-sorcery",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "elemental_affinity",
+      "choose": 1,
+      "options": [
+        {
+          "id": "acid",
+          "label": "Acid",
+          "value": "acid",
+          "effects": []
+        },
+        {
+          "id": "cold",
+          "label": "Cold",
+          "value": "cold",
+          "effects": []
+        },
+        {
+          "id": "fire",
+          "label": "Fire",
+          "value": "fire",
+          "effects": []
+        },
+        {
+          "id": "lightning",
+          "label": "Lightning",
+          "value": "lightning",
+          "effects": []
+        },
+        {
+          "id": "poison",
+          "label": "Poison",
+          "value": "poison",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "var": "chosen.elemental_affinity"
+        }
+      ]
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": {
+        "var": "ability_mod.cha"
+      },
+      "when": {
+        "pred": "deals_damage_type",
+        "args": {
+          "damage_type": "chosen.elemental_affinity"
+        }
+      },
+      "note": "One damage roll of a spell that deals that type."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your draconic magic has an affinity with a damage type associated with dragons. Choose one of those types: Acid, Cold, Fire, Lightning, or Poison.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You have Resistance to that damage type, and when you cast a spell that deals damage of that type, you can add your Charisma modifier to one damage roll of that spell.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ]
+}

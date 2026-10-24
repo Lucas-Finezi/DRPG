@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warrior-of-the-open-hand-fleet-step",
+  "kind": "feature",
+  "name": "Fleet Step",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      52
+    ],
+    "section": "Classes/Monk/Monk Subclass: Warrior of the Open Hand/Level 11: Fleet Step",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/warrior-of-the-open-hand",
+    "level": 11
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "bonus_action_taken"
+      },
+      "optional": true,
+      "condition": {
+        "not": {
+          "pred": "attack_is",
+          "args": {
+            "attack_kind": "feature",
+            "feature": "step_of_the_wind"
+          }
+        }
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/monk-monks-focus",
+          "note": "Use Step of the Wind immediately after that Bonus Action."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take a Bonus Action other than Step of the Wind, you can also use Step of the Wind immediately after that Bonus Action.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/monk-monks-focus"
+  ]
+}

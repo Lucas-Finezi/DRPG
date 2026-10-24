@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/vehicle/sailing-ship",
+  "kind": "vehicle",
+  "name": "Sailing Ship",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Mounts and Vehicles/Large Vehicles/Sailing Ship",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| Sailing Ship | 2 mph | 20 | 20 | 100 | 15 | 300 | 15 | 10,000 GP |",
+  "facets": {
+    "cost_cp": 1000000
+  },
+  "data": {
+    "speed_mph": 2,
+    "crew": 20,
+    "passengers": 20,
+    "cargo_tons": 100,
+    "ac": 15,
+    "hp": 300,
+    "damage_threshold": 15,
+    "cost": {
+      "amount": 10000,
+      "unit": "gp",
+      "cp": 1000000
+    }
+  },
+  "coverage": [
+    {
+      "text": "| Sailing Ship | 2 mph | 20 | 20 | 100 | 15 | 300 | 15 | 10,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/speed_mph",
+        "/data/crew",
+        "/data/passengers",
+        "/data/cargo_tons",
+        "/data/ac",
+        "/data/hp",
+        "/data/damage_threshold",
+        "/data/cost",
+        "dnd5e/rule/damage-threshold"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-threshold"
+  ]
+}

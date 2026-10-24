@@ -1,0 +1,72 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/life-domain-blessed-healer",
+  "kind": "feature",
+  "name": "Blessed Healer",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      40
+    ],
+    "section": "Classes/Cleric/Cleric Subclass: Life Domain/Level 6: Blessed Healer",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The healing spells you cast on others heal you as well. Immediately after you cast a spell with a spell slot that restores Hit Points to one or more creatures other than yourself, you regain Hit Points equal to 2 plus the spell slot’s level.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/life-domain",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "spell_restores_hp"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "spell_cast_with_slot"
+          },
+          {
+            "pred": "heals_other_creature"
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "op": "add",
+            "args": [
+              2,
+              {
+                "var": "spell_slot_level"
+              }
+            ]
+          },
+          "target": {
+            "kind": "self"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The healing spells you cast on others heal you as well. Immediately after you cast a spell with a spell slot that restores Hit Points to one or more creatures other than yourself, you regain Hit Points equal to 2 plus the spell slot’s level.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

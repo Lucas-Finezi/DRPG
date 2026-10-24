@@ -1,0 +1,379 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/air-elemental",
+  "kind": "creature",
+  "name": "Air Elemental",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      258,
+      259
+    ],
+    "section": "Monsters A–Z/Air Elemental/Air Elemental",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Elemental, Neutral*\n\n| **AC** 15 | **Initiative** +5 (15) |\n\n**HP** 90 (12d10 + 24)\n\n**Speed** 10 ft., Fly 90 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 20 | +5 | +5 | **Con** 14 | +2 | +2 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |\n\n**Resistances** Bludgeoning, Lightning, Piercing, Slashing\n\n**Immunities** Poison, Thunder; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Primordial (Auran)\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Air Form.*** The elemental can enter a creature’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n##### Actions\n\n***Multiattack.*** The elemental makes two Thunderous Slam attacks.\n\n***Thunderous Slam.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Thunder damage.\n\n***Whirlwind (Recharge 4–6).*** *Strength Saving Throw:* DC 13, one Medium or smaller creature in the elemental’s space. *Failure:* 24 (4d10 + 2) Thunder damage, and the target is pushed up to 20 feet straight away from the elemental and has the Prone condition. *Success:* Half damage only.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "type_line": "Large Elemental, Neutral",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 90,
+      "formula": {
+        "op": "add",
+        "args": [
+          "12d10",
+          24
+        ]
+      },
+      "text": "90 (12d10 + 24)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 90 ft. (hover)",
+      "walk": 10,
+      "fly": 90,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "lightning",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Lightning, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison",
+        "thunder"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Poison, Thunder; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Auran)"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Air Form",
+        "text": "The elemental can enter a creature’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The elemental makes two Thunderous Slam attacks."
+      },
+      {
+        "name": "Thunderous Slam",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Thunder damage."
+      },
+      {
+        "name": "Whirlwind",
+        "recharge": {
+          "min": 4,
+          "die": "1d6"
+        },
+        "text": "*Strength Saving Throw:* DC 13, one Medium or smaller creature in the elemental’s space. *Failure:* 24 (4d10 + 2) Thunder damage, and the target is pushed up to 20 feet straight away from the elemental and has the Prone condition. *Success:* Half damage only."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Thunderous Slam",
+            "count": 2
+          }
+        ],
+        "text": "The elemental makes two Thunderous Slam attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Thunderous Slam",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  5
+                ]
+              },
+              "damage_type": "thunder"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Whirlwind",
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 13,
+          "target": {
+            "kind": "creature",
+            "text": "one Medium or smaller creature in the elemental’s space"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d10",
+                  2
+                ]
+              },
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            },
+            {
+              "op": "move",
+              "mode": "push",
+              "distance_feet": 20
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 4–6."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_air_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Air Form as written.",
+      "source_text": "The elemental can enter a creature’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 90 (12d10 + 24)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 90 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 20 | +5 | +5 | **Con** 14 | +2 | +2 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Lightning, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison, Thunder; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Auran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Air Form.*** The elemental can enter a creature’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_air_form"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The elemental makes two Thunderous Slam attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Thunderous Slam.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 14 (2d8 + 5) Thunder damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Whirlwind (Recharge 4–6).*** *Strength Saving Throw:* DC 13, one Medium or smaller creature in the elemental’s space. *Failure:* 24 (4d10 + 2) Thunder damage, and the target is pushed up to 20 feet straight away from the elemental and has the Prone condition. *Success:* Half damage only.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious"
+  ]
+}

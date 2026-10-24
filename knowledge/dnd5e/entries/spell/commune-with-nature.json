@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/commune-with-nature",
+  "kind": "spell",
+  "name": "Commune with Nature",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      116,
+      117
+    ],
+    "section": "Spells/Spell Descriptions/Commune with Nature",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Divination (Druid, Ranger)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou commune with nature spirits and gain knowledge of the surrounding area. In the outdoors, the spell gives you knowledge of the area within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn’t function where nature has been replaced by construction, such as in castles and settlements.\n\nChoose three of the following facts; you learn those facts as they pertain to the spell’s area:\n\n- Locations of settlements\n\n- Locations of portals to other planes of existence\n\n- Location of one Challenge Rating 10+ creature (GM’s choice) that is a Celestial, an Elemental, a Fey, a Fiend, or an Undead\n\n- The most prevalent kind of plant, mineral, or Beast (you choose which to learn)\n\n- Locations of bodies of water\n\nFor example, you could determine the location of a powerful monster in the area, the locations of bodies of water, and the locations of any towns.",
+  "facets": {
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "area",
+        "outdoors_miles": 3,
+        "underground_feet": 300,
+        "fails_in_constructed_areas": true
+      },
+      {
+        "id": "facts",
+        "choose": 3,
+        "options": [
+          "settlements",
+          "planar_portals",
+          "one_cr_10_plus_celestial_elemental_fey_fiend_or_undead_gm_choice",
+          "most_prevalent_plant_mineral_or_beast",
+          "bodies_of_water"
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "nature_facts",
+      "reason": "narrative",
+      "prompt": "What does the caster learn about the chosen facts?",
+      "source_text": "Choose three of the following facts; you learn those facts as they pertain to the spell’s area"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Divination (Druid, Ranger)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You commune with nature spirits and gain knowledge of the surrounding area. In the outdoors, the spell gives you knowledge of the area within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn’t function where nature has been replaced by construction, such as in castles and settlements.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Choose three of the following facts; you learn those facts as they pertain to the spell’s area:\n\n- Locations of settlements\n\n- Locations of portals to other planes of existence\n\n- Location of one Challenge Rating 10+ creature (GM’s choice) that is a Celestial, an Elemental, a Fey, a Fiend, or an Undead\n\n- The most prevalent kind of plant, mineral, or Beast (you choose which to learn)\n\n- Locations of bodies of water",
+      "status": "master_decision",
+      "by": [
+        "md:nature_facts",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "For example, you could determine the location of a powerful monster in the area, the locations of bodies of water, and the locations of any towns.",
+      "status": "descriptive"
+    }
+  ]
+}

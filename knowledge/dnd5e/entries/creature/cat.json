@@ -1,0 +1,247 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/cat",
+  "kind": "creature",
+  "name": "Cat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      346
+    ],
+    "section": "Animals/Cat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Tiny Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 2 (1d4)\n\n**Speed** 40 ft., Climb 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 15 | +2 | +4 | **Con** 10 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |\n\n**Skills** Perception +3, Stealth +4\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Jumper.*** The cat’s jump distance is determined using its Dexterity rather than its Strength.\n\n##### Actions\n\n***Scratch.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Slashing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Tiny Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 2,
+      "formula": "1d4",
+      "text": "2 (1d4)"
+    },
+    "speed": {
+      "text": "40 ft., Climb 40 ft.",
+      "walk": 40,
+      "climb": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 4
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "stealth": 4,
+      "text": "Perception +3, Stealth +4"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Jumper",
+        "text": "The cat’s jump distance is determined using its Dexterity rather than its Strength."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Scratch",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Slashing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Scratch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": 1,
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_jumper",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Jumper as written.",
+      "source_text": "The cat’s jump distance is determined using its Dexterity rather than its Strength."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 2 (1d4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Climb 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 15 | +2 | +4 | **Con** 10 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Jumper.*** The cat’s jump distance is determined using its Dexterity rather than its Strength.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_jumper"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Scratch.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

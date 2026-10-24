@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/thaumaturgy",
+  "kind": "spell",
+  "name": "Thaumaturgy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      169
+    ],
+    "section": "Spells/Spell Descriptions/Thaumaturgy",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 2,
+  "text": "*Transmutation Cantrip (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Up to 1 minute\n\nYou manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.\n\n***Altered Eyes.*** You alter the appearance of your eyes for 1 minute.\n\n***Booming Voice.*** Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on Charisma (Intimidation) checks.\n\n***Fire Play.*** You cause flames to flicker, brighten, dim, or change color for 1 minute.\n\n***Invisible Hand.*** You instantaneously cause an unlocked door or window to fly open or slam shut.\n\n***Phantom Sound.*** You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.\n\n***Tremors.*** You cause harmless tremors in the ground for 1 minute.",
+  "facets": {
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "text": "Up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "choose_one",
+        "max_active_1_minute_effects": 3
+      },
+      {
+        "id": "altered_eyes",
+        "minutes": 1
+      },
+      {
+        "id": "fire_play",
+        "flicker_brighten_dim_or_recolor": true,
+        "minutes": 1
+      },
+      {
+        "id": "invisible_hand",
+        "instantaneous": true,
+        "open_or_slam": "unlocked_door_or_window"
+      },
+      {
+        "id": "phantom_sound",
+        "instantaneous": true,
+        "origin": "point_within_range"
+      },
+      {
+        "id": "tremors",
+        "harmless": true,
+        "minutes": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check.cha"
+      ],
+      "when": {
+        "pred": "check_uses",
+        "args": {
+          "skill": "intimidation"
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "note": "Your voice booms up to three times as loud as normal."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Transmutation Cantrip (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Altered Eyes.*** You alter the appearance of your eyes for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Booming Voice.*** Your voice booms up to three times as loud as normal for 1 minute. For the duration, you have Advantage on Charisma (Intimidation) checks.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Fire Play.*** You cause flames to flicker, brighten, dim, or change color for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Invisible Hand.*** You instantaneously cause an unlocked door or window to fly open or slam shut.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Phantom Sound.*** You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Tremors.*** You cause harmless tremors in the ground for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ]
+}

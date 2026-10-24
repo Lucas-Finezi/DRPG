@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/oil-of-sharpness",
+  "kind": "magic-item",
+  "name": "Oil of Sharpness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      233
+    ],
+    "section": "Magic Items/Magic Items A–Z/Oil of Sharpness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Very Rare*\n\nOne vial of this oil can coat one Melee weapon or twenty pieces of ammunition, but only ammunition and Melee weapons that are nonmagical and deal Slashing or Piercing damage are affected. Applying the oil takes 1 minute, after which the oil magically seeps into whatever it coats, turning the coated weapon into a *+3 Weapon* or the coated ammunition into *+3 Ammunition*.\n\nThis clear, gelatinous oil sparkles with tiny, ultrathin silver shards.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Very Rare",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "coverage",
+        "one_melee_weapon_or_ammunition": 20,
+        "only": "nonmagical, Slashing or Piercing"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "name": "Apply",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/weapon-plus1-plus2-or-plus3",
+          "note": "The coated weapon becomes a +3 Weapon; ammunition becomes +3 Ammunition."
+        }
+      ],
+      "note": "Applying the oil takes 1 minute."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "One vial of this oil can coat one Melee weapon or twenty pieces of ammunition, but only ammunition and Melee weapons that are nonmagical and deal Slashing or Piercing damage are affected. Applying the oil takes 1 minute, after which the oil magically seeps into whatever it coats, turning the coated weapon into a *+3 Weapon* or the coated ammunition into *+3 Ammunition*.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "This clear, gelatinous oil sparkles with tiny, ultrathin silver shards.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/weapon-plus1-plus2-or-plus3"
+  ]
+}

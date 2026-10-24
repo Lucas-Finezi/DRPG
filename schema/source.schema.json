@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:source",
+  "title": "Source",
+  "description": "Provenance of an entry: which document, pages and section it came from, under which license, and which lot produced it. Homebrew entries carry origin 'homebrew' and an owner.",
+  "type": "object",
+  "required": ["system", "document", "origin", "license"],
+  "additionalProperties": false,
+  "properties": {
+    "system": { "$ref": "urn:drpg:schema:common#/$defs/slug" },
+    "document": {
+      "description": "Source document id, e.g. 'srd-5.2.1'. For homebrew, the owner's collection id.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    },
+    "origin": { "enum": ["official", "homebrew"] },
+    "pages": {
+      "description": "PDF pages the entry's text comes from (PDF page = printed page in the SRD 5.2.1).",
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "section": {
+      "description": "Outline path of the source section, as in inventory outline.json (e.g. 'Spells/Spell Descriptions/Fireball').",
+      "type": "string"
+    },
+    "license": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "description": "SPDX-like id ('CC-BY-4.0') or 'homebrew'.", "type": "string" },
+        "attribution": { "type": "string" }
+      }
+    },
+    "owner": {
+      "description": "Homebrew only: id of the user or table that owns the entry.",
+      "type": "string"
+    },
+    "extracted_by": {
+      "description": "Lot that produced the entry (official content).",
+      "$ref": "urn:drpg:schema:common#/$defs/lot"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "origin": { "const": "official" } } },
+      "then": { "required": ["pages", "extracted_by"] }
+    },
+    {
+      "if": { "properties": { "origin": { "const": "homebrew" } } },
+      "then": { "required": ["owner"] }
+    }
+  ]
+}

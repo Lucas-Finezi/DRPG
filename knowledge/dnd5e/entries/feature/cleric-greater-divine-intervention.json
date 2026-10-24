@@ -1,0 +1,49 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/cleric-greater-divine-intervention",
+  "kind": "feature",
+  "name": "Greater Divine Intervention",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      38
+    ],
+    "section": "Classes/Cleric/Cleric Class Features/Level 20: Greater Divine Intervention",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "You can call on even more powerful divine intervention. When you use your Divine Intervention feature, you can choose *Wish* when you select a spell. If you do so, you can’t use Divine Intervention again until you finish 2d4 Long Rests.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/cleric",
+    "level": 20
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "wish",
+        "adds_spell_choice": "dnd5e/spell/wish",
+        "feature": "dnd5e/feature/cleric-divine-intervention",
+        "if_wish_cooldown": {
+          "long_rests": "2d4"
+        }
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "You can call on even more powerful divine intervention. When you use your Divine Intervention feature, you can choose *Wish* when you select a spell. If you do so, you can’t use Divine Intervention again until you finish 2d4 Long Rests.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

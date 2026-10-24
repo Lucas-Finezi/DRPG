@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-uncanny-dodge",
+  "kind": "feature",
+  "name": "Uncanny Dodge",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      63
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 5: Uncanny Dodge",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack’s damage against you (round down).",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 5
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hit_by_attack_roll"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "can_see",
+        "args": {
+          "who": "attacker"
+        }
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "damage_taken",
+          "mode": "multiply",
+          "value": 0.5,
+          "note": "Halve the attack's damage against you (round down)."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack’s damage against you (round down).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

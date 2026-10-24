@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/paladin-channel-divinity",
+  "kind": "feature",
+  "name": "Channel Divinity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      54,
+      55
+    ],
+    "section": "Classes/Paladin/Paladin Class Features/Level 3: Channel Divinity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class’s Channel Divinity, you choose which effect from this class to create.\n\nYou can use this class’s Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain an additional use when you reach Paladin level 11.\n\nIf a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class’s Spellcasting feature.\n\n***Divine Sense.*** As a Bonus Action, you can open your awareness to detect Celestials, Fiends, and Undead. For the next 10 minutes or until you have the Incapacitated condition, you know the location of any creature of those types within 60 feet of yourself, and you know its creature type. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the *Hallow* spell.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/paladin",
+    "level": 3
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "channel_divinity",
+        "effects": [
+          "divine_sense"
+        ],
+        "one_effect_per_use": true
+      },
+      {
+        "id": "save_dc",
+        "dc": "spell_save_dc"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "channel_divinity",
+      "name": "Channel Divinity",
+      "max": {
+        "table": "dnd5e/class/paladin",
+        "table_id": "paladin_features",
+        "key": {
+          "var": "class_level.paladin"
+        },
+        "column": "Channel Divinity"
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "short_rest_finished"
+          },
+          "amount": 1
+        },
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "Divine Sense",
+      "cost": "bonus_action",
+      "uses": {
+        "resource": "channel_divinity",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "sense",
+          "sense": "divine_sense",
+          "range_feet": 60,
+          "duration": {
+            "kind": "minutes",
+            "amount": 10
+          },
+          "note": "Location and type of Celestials, Fiends and Undead; consecrated or desecrated places and objects, as with Hallow. Ends early if Incapacitated."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class’s Channel Divinity, you choose which effect from this class to create.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can use this class’s Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain an additional use when you reach Paladin level 11.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class’s Spellcasting feature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Divine Sense.*** As a Bonus Action, you can open your awareness to detect Celestials, Fiends, and Undead. For the next 10 minutes or until you have the Incapacitated condition, you know the location of any creature of those types within 60 feet of yourself, and you know its creature type. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the *Hallow* spell.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/paladin"
+  ]
+}

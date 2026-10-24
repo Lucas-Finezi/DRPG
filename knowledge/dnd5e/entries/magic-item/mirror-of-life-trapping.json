@@ -1,0 +1,244 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/mirror-of-life-trapping",
+  "kind": "magic-item",
+  "name": "Mirror of Life Trapping",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      230
+    ],
+    "section": "Magic Items/Magic Items A–Z/Mirror of Life Trapping",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Very Rare*\n\nWhen this 4-foot-tall, 2-foot-wide mirror is viewed indirectly, its surface shows faint images of creatures. The mirror weighs 50 pounds, and it has AC 11, HP 10, Immunity to Poison and Psychic damage, and Vulnerability to Bludgeoning damage. It shatters and is destroyed when reduced to 0 Hit Points.\n\nIf the mirror is hanging on a vertical surface and you are within 5 feet of it, you can take a Magic action and use a command word to activate it. It remains activated until you take a Magic action and repeat the command word to deactivate it.\n\nAny creature other than you that sees its reflection in the activated mirror while within 30 feet of the mirror must succeed on a DC 15 Charisma saving throw or be trapped, along with anything it is wearing or carrying, in one of the mirror’s twelve extradimensional cells. A creature that knows the mirror’s nature makes the save with Advantage, and Constructs succeed on the save automatically.\n\nAn extradimensional cell is an infinite expanse filled with thick fog that reduces visibility to 10 feet. Creatures trapped in the mirror’s cells don’t age, and they don’t need to eat, drink, or sleep. A creature trapped within a cell can escape using magic that permits planar travel. Otherwise, the creature is confined to the cell until freed.\n\nIf the mirror traps a creature but its twelve extradimensional cells are already occupied, the mirror frees one trapped creature at random to accommodate the new prisoner. A freed creature appears in an unoccupied space within sight of the mirror but facing away from it. If the mirror is shattered, all creatures it contains are freed and appear in unoccupied spaces near it.\n\nWhile within 5 feet of the mirror, you can take a Magic action to name one creature trapped in it or call out a particular cell by number. The creature named or contained in the named cell appears as an image on the mirror’s surface. You and the creature can then communicate.\n\nIn a similar way, you can take a Magic action and use a second command word to free one creature trapped in the mirror. The freed creature appears, along with its possessions, in the unoccupied space nearest to the mirror and facing away from it.\n\nPlacing the mirror inside an extradimensional space created by a *Bag of Holding*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "object",
+        "height_feet": 4,
+        "width_feet": 2,
+        "weight_lb": 50,
+        "ac": 11,
+        "hp": 10,
+        "immunities": [
+          "poison",
+          "psychic"
+        ],
+        "vulnerabilities": [
+          "bludgeoning"
+        ],
+        "destroyed_at_0_hp": true
+      },
+      {
+        "id": "cell",
+        "visibility_feet": 10,
+        "no_aging_food_drink_sleep": true,
+        "escape": "planar travel magic"
+      },
+      {
+        "id": "overflow",
+        "cells": 12,
+        "full": "frees one at random",
+        "shattered": "frees all"
+      },
+      {
+        "id": "converse",
+        "cost": "dnd5e/action/magic",
+        "range_feet": 5
+      },
+      {
+        "id": "free",
+        "cost": "dnd5e/action/magic",
+        "second_command_word": true
+      },
+      {
+        "id": "extradimensional_conflict",
+        "with": [
+          "dnd5e/magic-item/bag-of-holding",
+          "dnd5e/magic-item/portable-hole"
+        ],
+        "both_destroyed": true,
+        "gate": "astral_plane",
+        "one_way": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/mirror-of-life-trapping",
+          "note": "Command word toggles activation."
+        }
+      ],
+      "requires": {
+        "pred": "within_feet",
+        "args": {
+          "of": "item",
+          "feet": 5,
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "sees_reflection",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": 15,
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/mirror-of-life-trapping",
+              "note": "Trapped in one of 12 cells with its gear."
+            }
+          ],
+          "note": "Advantage if it knows the mirror's nature; Constructs succeed automatically."
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "effect_active"
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "of": "item",
+              "feet": 30,
+              "item": "this"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "move",
+      "mode": "teleport",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 10,
+          "origin": "point"
+        }
+      },
+      "when": {
+        "not": {
+          "pred": "behind_cover",
+          "args": {
+            "degree": "total"
+          }
+        }
+      },
+      "note": "Creatures within 10 feet of the gate and not behind Total Cover go to a random location on the Astral Plane."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When this 4-foot-tall, 2-foot-wide mirror is viewed indirectly, its surface shows faint images of creatures. The mirror weighs 50 pounds, and it has AC 11, HP 10, Immunity to Poison and Psychic damage, and Vulnerability to Bludgeoning damage. It shatters and is destroyed when reduced to 0 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If the mirror is hanging on a vertical surface and you are within 5 feet of it, you can take a Magic action and use a command word to activate it. It remains activated until you take a Magic action and repeat the command word to deactivate it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Any creature other than you that sees its reflection in the activated mirror while within 30 feet of the mirror must succeed on a DC 15 Charisma saving throw or be trapped, along with anything it is wearing or carrying, in one of the mirror’s twelve extradimensional cells. A creature that knows the mirror’s nature makes the save with Advantage, and Constructs succeed on the save automatically.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "An extradimensional cell is an infinite expanse filled with thick fog that reduces visibility to 10 feet. Creatures trapped in the mirror’s cells don’t age, and they don’t need to eat, drink, or sleep. A creature trapped within a cell can escape using magic that permits planar travel. Otherwise, the creature is confined to the cell until freed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If the mirror traps a creature but its twelve extradimensional cells are already occupied, the mirror frees one trapped creature at random to accommodate the new prisoner. A freed creature appears in an unoccupied space within sight of the mirror but facing away from it. If the mirror is shattered, all creatures it contains are freed and appear in unoccupied spaces near it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "While within 5 feet of the mirror, you can take a Magic action to name one creature trapped in it or call out a particular cell by number. The creature named or contained in the named cell appears as an image on the mirror’s surface. You and the creature can then communicate.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "In a similar way, you can take a Magic action and use a second command word to free one creature trapped in the mirror. The freed creature appears, along with its possessions, in the unoccupied space nearest to the mirror and facing away from it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "Placing the mirror inside an extradimensional space created by a *Bag of Holding*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/bag-of-holding",
+    "dnd5e/magic-item/mirror-of-life-trapping",
+    "dnd5e/magic-item/portable-hole"
+  ]
+}

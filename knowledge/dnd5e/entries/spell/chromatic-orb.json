@@ -1,0 +1,161 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/chromatic-orb",
+  "kind": "spell",
+  "name": "Chromatic Orb",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      115
+    ],
+    "section": "Spells/Spell Descriptions/Chromatic Orb",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (a diamond worth 50+ GP)\n\n**Duration:** Instantaneous\n\nYou hurl an orb of energy at a target within range. Choose Acid, Cold, Fire, Lightning, Poison, or Thunder for the type of orb you create, and then make a ranged spell attack against the target. On a hit, the target takes 3d8 damage of the chosen type.\n\nIf you roll the same number on two or more of the d8s, the orb leaps to a different target of your choice within 30 feet of the target. Make an attack roll against the new target, and make a new damage roll. The orb can’t leap again unless you cast the spell with a level 2+ spell slot.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 1. The orb can leap a maximum number of times equal to the level of the slot expended, and a creature can be targeted only once by each casting of this spell.",
+  "facets": {
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 90
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a diamond worth 50+ GP",
+      "material_cost_gp": 50
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "leap",
+        "on": "two_or_more_d8_same_number",
+        "new_target_within_feet": 30,
+        "new_attack_and_damage_roll": true,
+        "max_leaps": {
+          "op": "sub",
+          "args": [
+            {
+              "var": "spell_slot_level"
+            },
+            1
+          ]
+        }
+      },
+      {
+        "id": "leap_limits",
+        "max_leaps": {
+          "var": "spell_slot_level"
+        },
+        "each_creature_targeted_once": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_spell",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 90
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  3,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      1
+                    ]
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": {
+            "choose_from": [
+              "acid",
+              "cold",
+              "fire",
+              "lightning",
+              "poison",
+              "thunder"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 90 feet\n\n**Components:** V, S, M (a diamond worth 50+ GP)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You hurl an orb of energy at a target within range. Choose Acid, Cold, Fire, Lightning, Poison, or Thunder for the type of orb you create, and then make a ranged spell attack against the target. On a hit, the target takes 3d8 damage of the chosen type.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you roll the same number on two or more of the d8s, the orb leaps to a different target of your choice within 30 feet of the target. Make an attack roll against the new target, and make a new damage roll. The orb can’t leap again unless you cast the spell with a level 2+ spell slot.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 1. The orb can leap a maximum number of times equal to the level of the slot expended, and a creature can be targeted only once by each casting of this spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount",
+        "/data/rules/0",
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

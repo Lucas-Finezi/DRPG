@@ -1,0 +1,252 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/rat",
+  "kind": "creature",
+  "name": "Rat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      359
+    ],
+    "section": "Animals/Rat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Tiny Beast, Unaligned*\n\n| **AC** 10 | **Initiative** +0 (10) |\n\n**HP** 1 (1d4 − 1)\n\n**Speed** 20 ft., Climb 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 2 | −4 | −4 | **Dex** 11 | +0 | +0 | **Con** 9 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |\n\n**Skills** Perception +2\n\n**Senses** Darkvision 30 ft.; Passive Perception 12\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Agile.*** The rat doesn’t provoke an Opportunity Attack when it moves out of an enemy’s reach.\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 1 Piercing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Tiny Beast, Unaligned",
+    "ac": {
+      "value": 10,
+      "text": "10"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 1,
+      "formula": {
+        "op": "sub",
+        "args": [
+          "1d4",
+          1
+        ]
+      },
+      "text": "1 (1d4 − 1)"
+    },
+    "speed": {
+      "text": "20 ft., Climb 20 ft.",
+      "walk": 20,
+      "climb": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "dex": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "text": "Perception +2"
+    },
+    "senses": {
+      "text": "Darkvision 30 ft.; Passive Perception 12",
+      "darkvision": 30,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Agile",
+        "text": "The rat doesn’t provoke an Opportunity Attack when it moves out of an enemy’s reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +2, reach 5 ft. *Hit:* 1 Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 2,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": 1,
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_agile",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Agile as written.",
+      "source_text": "The rat doesn’t provoke an Opportunity Attack when it moves out of an enemy’s reach."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Tiny Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 10 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 1 (1d4 − 1)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Climb 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 2 | −4 | −4 | **Dex** 11 | +0 | +0 | **Con** 9 | −1 | −1 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 30 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Agile.*** The rat doesn’t provoke an Opportunity Attack when it moves out of an enemy’s reach.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_agile"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 1 Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

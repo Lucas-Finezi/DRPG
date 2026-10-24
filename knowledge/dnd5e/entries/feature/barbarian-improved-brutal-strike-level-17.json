@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/barbarian-improved-brutal-strike-level-17",
+  "kind": "feature",
+  "name": "Improved Brutal Strike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Class Features/Level 17: Improved Brutal Strike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "The extra damage of your Brutal Strike increases to 2d10. In addition, you can use two different Brutal Strike effects whenever you use your Brutal Strike feature.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/barbarian",
+    "level": 17
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "upgrade",
+        "brutal_strike_damage": "2d10",
+        "effects_per_use": 2,
+        "distinct": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The extra damage of your Brutal Strike increases to 2d10. In addition, you can use two different Brutal Strike effects whenever you use your Brutal Strike feature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

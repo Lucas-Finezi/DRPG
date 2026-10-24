@@ -1,0 +1,77 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/cleric-divine-intervention",
+  "kind": "feature",
+  "name": "Divine Intervention",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      38
+    ],
+    "section": "Classes/Cleric/Cleric Class Features/Level 10: Divine Intervention",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn’t require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components. You can’t use this feature again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/cleric",
+    "level": 10
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "spell_choice",
+        "spell_list": "dnd5e/spell-list/cleric",
+        "max_level": 5,
+        "excludes_casting_time": "reaction",
+        "no_spell_slot": true,
+        "no_material_components": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Divine Intervention",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell-list/cleric",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "note": "Any Cleric spell of level 5 or lower that doesn't require a Reaction; no Material components."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn’t require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components. You can’t use this feature again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/cleric"
+  ]
+}

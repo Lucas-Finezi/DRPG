@@ -1,0 +1,83 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fiend-patron-dark-ones-blessing",
+  "kind": "feature",
+  "name": "Dark One’s Blessing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Subclass: Fiend Patron/Level 3: Dark One’s Blessing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you reduce an enemy to 0 Hit Points, you gain Temporary Hit Points equal to your Charisma modifier plus your Warlock level (minimum of 1 Temporary Hit Point). You also gain this benefit if someone else reduces an enemy within 10 feet of you to 0 Hit Points.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/fiend-patron",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enemy_reduced_to_0_hp"
+      },
+      "condition": {
+        "any": [
+          {
+            "pred": "reduced_by_source"
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "feet": 10
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "temp_hp",
+          "target": {
+            "kind": "self"
+          },
+          "amount": {
+            "op": "max",
+            "args": [
+              1,
+              {
+                "op": "add",
+                "args": [
+                  {
+                    "var": "ability_mod.cha"
+                  },
+                  {
+                    "var": "class_level.warlock"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you reduce an enemy to 0 Hit Points, you gain Temporary Hit Points equal to your Charisma modifier plus your Warlock level (minimum of 1 Temporary Hit Point). You also gain this benefit if someone else reduces an enemy within 10 feet of you to 0 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-weapon-mastery",
+  "kind": "feature",
+  "name": "Weapon Mastery",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      62
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 1: Weapon Mastery",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows.\n\nWhenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Shortswords.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "choices",
+        "weapons": "proficient",
+        "swap_on_long_rest": "all"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "weapon_mastery_kinds",
+      "mode": "set",
+      "value": 2,
+      "note": "Kinds of weapons you are proficient with."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Shortswords.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

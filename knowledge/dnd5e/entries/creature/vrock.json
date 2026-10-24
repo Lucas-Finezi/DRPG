@@ -1,0 +1,462 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/vrock",
+  "kind": "creature",
+  "name": "Vrock",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      336
+    ],
+    "section": "Monsters A–Z/Vrock/Vrock",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Large Fiend (Demon), Chaotic Evil*\n\n| **AC** 15 | **Initiative** +2 (12) |\n\n**HP** 152 (16d10 + 64)\n\n**Speed** 40 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +5 | **Con** 18 | +4 | +4 |\n| **Int** | 8 | −1 | −1 | **Wis** 13 | +1 | +4 | **Cha** 8 | −1 | +2 |\n\n**Resistances** Cold, Fire, Lightning\n\n**Immunities** Poison; Poisoned\n\n**Senses** Darkvision 120 ft.; Passive Perception 11\n\n**Languages** Abyssal; telepathy 120 ft.\n\n**CR** 6 (XP 2,300; PB +3)\n\n##### Traits\n\n***Demonic Restoration.*** If the vrock dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.\n\n***Magic Resistance.*** The vrock has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The vrock makes two Shred attacks.\n\n***Shred.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage plus 10 (3d6) Poison damage.\n\n***Spores (Recharge 6).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes 5 (1d10) Poison damage at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.\n\n***Stunning Screech (1/Day).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically). *Failure:* 10 (3d6) Thunder damage, and the target has the Stunned condition until the end of the vrock’s next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "cr": "6"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Demon"
+    ],
+    "type_line": "Large Fiend (Demon), Chaotic Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 152,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d10",
+          64
+        ]
+      },
+      "text": "152 (16d10 + 64)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 60 ft.",
+      "walk": 40,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 5
+      },
+      "con": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 4
+      },
+      "cha": {
+        "score": 8,
+        "mod": -1,
+        "save": 2
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "cold",
+        "fire",
+        "lightning"
+      ],
+      "text": "Cold, Fire, Lightning"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 11",
+      "darkvision": 120,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Abyssal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "6",
+      "xp": 2300,
+      "proficiency_bonus": 3,
+      "text": "6 (XP 2,300; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Demonic Restoration",
+        "text": "If the vrock dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The vrock has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The vrock makes two Shred attacks."
+      },
+      {
+        "name": "Shred",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage plus 10 (3d6) Poison damage."
+      },
+      {
+        "name": "Spores",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "*Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes 5 (1d10) Poison damage at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early."
+      },
+      {
+        "name": "Stunning Screech",
+        "per_day": 1,
+        "text": "*Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically). *Failure:* 10 (3d6) Thunder damage, and the target has the Stunned condition until the end of the vrock’s next turn."
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Abyss",
+        "revives_in": "Abyss",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Shred",
+            "count": 2
+          }
+        ],
+        "text": "The vrock makes two Shred attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Shred",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "poison"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Spores",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 20,
+              "origin": "self"
+            },
+            "text": "each creature in a 20-foot Emanation originating from the vrock"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "1d10",
+              "damage_type": "poison"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned"
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ],
+      "note": "Recharge 6–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Stunning Screech",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 20,
+              "origin": "self"
+            },
+            "text": "each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically)"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/stunned",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_spores_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Spores as written.",
+      "source_text": "The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes 5 (1d10) Poison damage at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Fiend (Demon), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 152 (16d10 + 64)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 15 | +2 | +5 | **Con** 18 | +4 | +4 |\n| **Int** | 8 | −1 | −1 | **Wis** 13 | +1 | +4 | **Cha** 8 | −1 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold, Fire, Lightning",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Abyssal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 6 (XP 2,300; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Demonic Restoration.*** If the vrock dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The vrock has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The vrock makes two Shred attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Shred.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 10 (2d6 + 3) Piercing damage plus 10 (3d6) Poison damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Spores (Recharge 6).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes 5 (1d10) Poison damage at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_spores_rider"
+      ]
+    },
+    {
+      "text": "***Stunning Screech (1/Day).*** *Constitution Saving Throw:* DC 15, each creature in a 20-foot Emanation originating from the vrock (demons succeed automatically). *Failure:* 10 (3d6) Thunder damage, and the target has the Stunned condition until the end of the vrock’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/stunned"
+  ]
+}

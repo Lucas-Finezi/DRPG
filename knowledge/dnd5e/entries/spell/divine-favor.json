@@ -1,0 +1,98 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/divine-favor",
+  "kind": "spell",
+  "name": "Divine Favor",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      125
+    ],
+    "section": "Spells/Spell Descriptions/Divine Favor",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Transmutation (Paladin)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 minute\n\nUntil the spell ends, your attacks with weapons deal an extra 1d4 Radiant damage on a hit.",
+  "facets": {
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon"
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d4",
+          "damage_type": "radiant",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Transmutation (Paladin)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Until the spell ends, your attacks with weapons deal an extra 1d4 Radiant damage on a hit.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

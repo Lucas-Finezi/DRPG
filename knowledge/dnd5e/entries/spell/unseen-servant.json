@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/unseen-servant",
+  "kind": "spell",
+  "name": "Unseen Servant",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      171
+    ],
+    "section": "Spells/Spell Descriptions/Unseen Servant",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Conjuration (Bard, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a bit of string and of wood)\n\n**Duration:** 1 hour\n\nThis spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can’t attack. If it drops to 0 Hit Points, the spell ends.\n\nOnce on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.\n\nIf you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
+  "facets": {
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a bit of string and of wood"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "servant",
+        "invisible": true,
+        "size": "medium",
+        "ac": 10,
+        "hp": 1,
+        "str": 2,
+        "can_attack": false,
+        "ends_at_0_hp": true
+      },
+      {
+        "id": "range",
+        "ends_if_task_takes_it_beyond_feet": 60
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 15,
+          "note": "The servant moves and interacts with an object; it performs simple tasks until done."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Conjuration (Bard, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a bit of string and of wood)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can’t attack. If it drops to 0 Hit Points, the spell ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

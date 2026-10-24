@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/comprehend-languages",
+  "kind": "spell",
+  "name": "Comprehend Languages",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      117
+    ],
+    "section": "Spells/Spell Descriptions/Comprehend Languages",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 1,
+  "text": "*Level 1 Divination (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (a pinch of soot and salt)\n\n**Duration:** 1 hour\n\nFor the duration, you understand the literal meaning of any language that you hear or see signed. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn’t decode symbols or secret messages.",
+  "facets": {
+    "level": 1,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a pinch of soot and salt"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "comprehend",
+        "understand": [
+          "spoken",
+          "signed",
+          "written_while_touching_surface"
+        ],
+        "minutes_per_page": 1,
+        "decodes_symbols_or_secret_messages": false
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 1 Divination (Bard, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (a pinch of soot and salt)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, you understand the literal meaning of any language that you hear or see signed. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn’t decode symbols or secret messages.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

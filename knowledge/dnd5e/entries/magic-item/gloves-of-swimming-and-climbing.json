@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/gloves-of-swimming-and-climbing",
+  "kind": "magic-item",
+  "name": "Gloves of Swimming and Climbing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      224
+    ],
+    "section": "Magic Items/Magic Items A–Z/Gloves of Swimming and Climbing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon (Requires Attunement)*\n\nWhile wearing these gloves, you have a Climb Speed and a Swim Speed equal to your Speed, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "climb",
+      "mode": "equal_to_walk",
+      "value": 0,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "speed",
+      "movement": "swim",
+      "mode": "equal_to_walk",
+      "value": 0,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_check",
+      "mode": "add",
+      "value": 5,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "athletics"
+            }
+          },
+          {
+            "pred": "check_for_movement",
+            "args": {
+              "modes": [
+                "climb",
+                "swim"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing these gloves, you have a Climb Speed and a Swim Speed equal to your Speed, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/monk-evasion",
+  "kind": "feature",
+  "name": "Evasion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      51
+    ],
+    "section": "Classes/Monk/Monk Class Features/Level 7: Evasion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you’re subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail.\n\nYou don’t benefit from this feature if you have the Incapacitated condition.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/monk",
+    "level": 7
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "evasion",
+      "mode": "set",
+      "value": 1,
+      "when": {
+        "not": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "incapacitated"
+          }
+        }
+      },
+      "note": "Dexterity saves for half damage: no damage on a success, half on a failure."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you’re subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You don’t benefit from this feature if you have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/poison-basic",
+  "kind": "gear",
+  "name": "Poison, Basic",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Poison, Basic",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first.",
+  "facets": {
+    "cost_cp": 10000
+  },
+  "data": {
+    "cost": {
+      "amount": 100,
+      "unit": "gp",
+      "cp": 10000
+    },
+    "weight_lb": null
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "deals_damage"
+          },
+          "duration": {
+            "kind": "minutes",
+            "amount": 1
+          },
+          "condition": {
+            "any": [
+              {
+                "pred": "deals_damage_type",
+                "args": {
+                  "damage_type": "piercing"
+                }
+              },
+              {
+                "pred": "deals_damage_type",
+                "args": {
+                  "damage_type": "slashing"
+                }
+              }
+            ]
+          },
+          "then": [
+            {
+              "op": "damage",
+              "amount": "1d4",
+              "damage_type": "poison",
+              "target": {
+                "kind": "inherit"
+              }
+            },
+            {
+              "op": "end_effect",
+              "scope": "this_entry"
+            }
+          ]
+        }
+      ],
+      "note": "Coat one weapon or up to three pieces of ammunition."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    }
+  ]
+}

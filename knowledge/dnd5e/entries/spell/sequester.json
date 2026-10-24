@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/sequester",
+  "kind": "spell",
+  "name": "Sequester",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      161
+    ],
+    "section": "Spells/Spell Descriptions/Sequester",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 3,
+  "text": "*Level 7 Transmutation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (gem dust worth 5,000+ GP, which the spell consumes)\n\n**Duration:** Until dispelled\n\nWith a touch, you magically sequester an object or a willing creature. For the duration, the target has the Invisible condition and can’t be targeted by Divination spells, detected by magic, or viewed remotely with magic.\n\nIf the target is a creature, it enters a state of suspended animation; it has the Unconscious condition, doesn’t age, and doesn’t need food, water, or air.\n\nYou can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include “after 1,000 years” or “when the tarrasque awakens.” This spell also ends if the target takes any damage.",
+  "facets": {
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "gem dust worth 5,000+ GP, which the spell consumes",
+      "material_cost_gp": 5000,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "until_dispelled",
+      "text": "Until dispelled"
+    },
+    "rules": [
+      {
+        "id": "end",
+        "ends_on_damage": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/invisible",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "until_dispelled"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "targeted_by_divination",
+        "detected_or_viewed_by_magic"
+      ],
+      "duration": {
+        "kind": "until_dispelled"
+      }
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/unconscious",
+      "note": "Suspended animation: doesn't age or need food, water or air.",
+      "duration": {
+        "kind": "until_dispelled"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "sequester_end",
+      "reason": "gm_judgment",
+      "prompt": "Has the end condition occurred?",
+      "source_text": "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Transmutation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (gem dust worth 5,000+ GP, which the spell consumes)\n\n**Duration:** Until dispelled",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "With a touch, you magically sequester an object or a willing creature. For the duration, the target has the Invisible condition and can’t be targeted by Divination spells, detected by magic, or viewed remotely with magic.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "If the target is a creature, it enters a state of suspended animation; it has the Unconscious condition, doesn’t age, and doesn’t need food, water, or air.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include “after 1,000 years” or “when the tarrasque awakens.” This spell also ends if the target takes any damage.",
+      "status": "master_decision",
+      "by": [
+        "md:sequester_end",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/invisible",
+    "dnd5e/condition/unconscious"
+  ]
+}

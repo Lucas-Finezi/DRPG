@@ -1,0 +1,128 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dust-of-sneezing-and-choking",
+  "kind": "magic-item",
+  "name": "Dust of Sneezing and Choking",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      219
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dust of Sneezing and Choking",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nFound in a small container, this powder resembles *Dust of Disappearance*, and *Identify* reveals it to be such. There is enough of it for one use.\n\nAs a Utilize action, you can throw the dust into the air, forcing yourself and every creature in a 30-foot Emanation originating from you to make a DC 15 Constitution saving throw. Constructs, Elementals, Oozes, Plants, and Undead succeed on the save automatically.\n\nOn a failed save, a creature begins sneezing uncontrollably; it has the Incapacitated condition and is suffocating. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The effect also ends on any creature targeted by a *Lesser Restoration* spell.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "disguise",
+        "resembles": "dnd5e/magic-item/dust-of-disappearance",
+        "identify_reveals_as": "dnd5e/magic-item/dust-of-disappearance",
+        "uses": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "include_self": true
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/incapacitated"
+            },
+            {
+              "op": "reference",
+              "rule": "dnd5e/hazard/suffocation"
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          },
+          "note": "Constructs, Elementals, Oozes, Plants and Undead succeed automatically. Lesser Restoration ends it."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "Found in a small container, this powder resembles *Dust of Disappearance*, and *Identify* reveals it to be such. There is enough of it for one use.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "As a Utilize action, you can throw the dust into the air, forcing yourself and every creature in a 30-foot Emanation originating from you to make a DC 15 Constitution saving throw. Constructs, Elementals, Oozes, Plants, and Undead succeed on the save automatically.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "On a failed save, a creature begins sneezing uncontrollably; it has the Incapacitated condition and is suffocating. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The effect also ends on any creature targeted by a *Lesser Restoration* spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated",
+    "dnd5e/hazard/suffocation"
+  ]
+}

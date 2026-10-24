@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/manacles",
+  "kind": "gear",
+  "name": "Manacles",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98
+    ],
+    "section": "Equipment/Adventuring Gear/Manacles",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 \n\nDexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.\n\nEach set of Manacles comes with a key. Without the key, a creature can use Thieves’ Tools to pick the Manacles’ lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+  "facets": {
+    "cost_cp": 200
+  },
+  "data": {
+    "cost": {
+      "amount": 2,
+      "unit": "gp",
+      "cp": 200
+    },
+    "weight_lb": 6,
+    "rules": [
+      {
+        "id": "escape",
+        "escape": {
+          "ability": "dex",
+          "skill": "sleight_of_hand",
+          "dc": 20,
+          "cost": "action"
+        },
+        "burst": {
+          "ability": "str",
+          "skill": "athletics",
+          "dc": 25,
+          "cost": "action"
+        }
+      },
+      {
+        "id": "lock",
+        "key": true,
+        "pick": {
+          "tool": "dnd5e/tool/thieves-tools",
+          "ability": "dex",
+          "skill": "sleight_of_hand",
+          "dc": 15
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "check",
+          "ability": "dex",
+          "skill": "sleight_of_hand",
+          "dc": 13,
+          "on_success": [
+            {
+              "op": "roll_mode",
+              "mode": "disadvantage",
+              "rolls": [
+                "attack_roll"
+              ],
+              "note": "While bound; Restrained if attached to a fixed chain or hook."
+            }
+          ]
+        }
+      ],
+      "note": "An unwilling Small or Medium creature within 5 feet that is Grappled, Incapacitated or Restrained."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 \n\nDexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Each set of Manacles comes with a key. Without the key, a creature can use Thieves’ Tools to pick the Manacles’ lock with a successful DC 15 Dexterity (Sleight of Hand) check.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

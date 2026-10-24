@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/dispel-magic",
+  "kind": "spell",
+  "name": "Dispel Magic",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      124
+    ],
+    "section": "Spells/Spell Descriptions/Dispel Magic",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Abjuration (Bard, Cleric, Druid, Paladin,* *Ranger, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nChoose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell’s level). On a successful check, the spell ends.\n\n***Using a Higher-Level Spell Slot.*** You automatically end a spell on the target if the spell’s level is equal to or less than the level of the spell slot you use.",
+  "facets": {
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "higher_spells",
+        "check": {
+          "ability": "spellcasting",
+          "dc": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "spell_level"
+              }
+            ]
+          }
+        },
+        "for_each_spell_of_level_at_least": 4
+      },
+      {
+        "id": "upcast",
+        "auto_end_spell_level_at_most": {
+          "var": "spell_slot_level"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "reference",
+      "rule": "dnd5e/spell/dispel-magic",
+      "target": {
+        "kind": "creature_or_object",
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "note": "Ends every ongoing spell of level 3 or lower on the target."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Abjuration (Bard, Cleric, Druid, Paladin,* *Ranger, Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell’s level). On a successful check, the spell ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You automatically end a spell on the target if the spell’s level is equal to or less than the level of the spell slot you use.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/dispel-magic"
+  ]
+}

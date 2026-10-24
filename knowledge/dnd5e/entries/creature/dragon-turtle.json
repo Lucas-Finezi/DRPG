@@ -1,0 +1,401 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/dragon-turtle",
+  "kind": "creature",
+  "name": "Dragon Turtle",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      281
+    ],
+    "section": "Monsters A–Z/Dragon Turtle/Dragon Turtle",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Gargantuan Dragon, Neutral*\n\n| **AC** 20 | **Initiative** +6 (16) |\n\n**HP** 356 (23d20 + 115)\n\n**Speed** 20 ft., Swim 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 25 | +7 | +7 | **Dex** 10 | +0 | +0 | **Con** 20 | +5 | +11 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +7 | **Cha** 12 | +1 | +1 |\n\n**Resistances** Fire\n\n**Senses** Darkvision 120 ft.; Passive Perception 11\n\n**Languages** Draconic, Primordial (Aquan)\n\n**CR** 17 (XP 18,000; PB +6)\n\n##### Traits\n\n***Amphibious.*** The dragon can breathe air and water.\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Bite attacks. It can replace one attack with a Tail attack.\n\n***Bite.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn’t grant Resistance to this Fire damage.\n\n***Tail.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.\n\n***Steam Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Fire damage. *Success:* Half damage. *Failure or Success:* Being underwater doesn’t grant Resistance to this Fire damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Gargantuan",
+    "type": "Dragon",
+    "alignment": "Neutral",
+    "cr": "17"
+  },
+  "data": {
+    "size": "Gargantuan",
+    "type": "Dragon",
+    "alignment": "Neutral",
+    "type_line": "Gargantuan Dragon, Neutral",
+    "ac": {
+      "value": 20,
+      "text": "20"
+    },
+    "initiative": {
+      "modifier": 6,
+      "score": 16,
+      "text": "+6 (16)"
+    },
+    "hp": {
+      "average": 356,
+      "formula": {
+        "op": "add",
+        "args": [
+          "23d20",
+          115
+        ]
+      },
+      "text": "356 (23d20 + 115)"
+    },
+    "speed": {
+      "text": "20 ft., Swim 50 ft.",
+      "walk": 20,
+      "swim": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 25,
+        "mod": 7,
+        "save": 7
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 11
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 7
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "fire"
+      ],
+      "text": "Fire"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 11",
+      "darkvision": 120,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Draconic, Primordial (Aquan)"
+    },
+    "cr": {
+      "value": "17",
+      "xp": 18000,
+      "proficiency_bonus": 6,
+      "text": "17 (XP 18,000; PB +6)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The dragon can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Bite attacks. It can replace one attack with a Tail attack."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +13, reach 15 ft. *Hit:* 23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn’t grant Resistance to this Fire damage."
+      },
+      {
+        "name": "Tail",
+        "text": "*Melee Attack Roll:* +13, reach 15 ft. *Hit:* 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition."
+      },
+      {
+        "name": "Steam Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Fire damage. *Success:* Half damage. *Failure or Success:* Being underwater doesn’t grant Resistance to this Fire damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Bite attacks. It can replace one attack with a Tail attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 13,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d10",
+                  7
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tail",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 13,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  7
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "huge"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Steam Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 19,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 60,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "16d6",
+              "damage_type": "fire"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bite_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bite as written.",
+      "source_text": "23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn’t grant Resistance to this Fire damage."
+    },
+    {
+      "id": "actions_steam_breath_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Steam Breath as written.",
+      "source_text": "Failure or Success: Being underwater doesn’t grant Resistance to this Fire damage."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Gargantuan Dragon, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 20 | **Initiative** +6 (16) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 356 (23d20 + 115)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Swim 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 25 | +7 | +7 | **Dex** 10 | +0 | +0 | **Con** 20 | +5 | +11 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +7 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Fire",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Draconic, Primordial (Aquan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 17 (XP 18,000; PB +6)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The dragon can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Bite attacks. It can replace one attack with a Tail attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 23 (3d10 + 7) Piercing damage plus 7 (2d6) Fire damage. Being underwater doesn’t grant Resistance to this Fire damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/1",
+        "md:actions_bite_rider"
+      ]
+    },
+    {
+      "text": "***Tail.*** *Melee Attack Roll:* +13, reach 15 ft. *Hit:* 18 (2d10 + 7) Bludgeoning damage. If the target is a Huge or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Steam Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 56 (16d6) Fire damage. *Success:* Half damage. *Failure or Success:* Being underwater doesn’t grant Resistance to this Fire damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/3",
+        "md:actions_steam_breath_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

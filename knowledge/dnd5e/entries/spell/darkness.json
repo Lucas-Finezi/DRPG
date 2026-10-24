@@ -1,0 +1,118 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/darkness",
+  "kind": "spell",
+  "name": "Darkness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      122
+    ],
+    "section": "Spells/Spell Descriptions/Darkness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Evocation (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, M (bat fur and a piece of coal)\n\n**Duration:** Concentration, up to 10 minutes\n\nFor the duration, magical Darkness spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can’t see through it, and nonmagical light can’t illuminate it.\n\nAlternatively, you cast the spell on an object that isn’t being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness.\n\nIf any of this spell’s area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": "bat fur and a piece of coal"
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "darkness",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 15
+        },
+        "magical_darkness": true,
+        "darkvision_sees_through": false,
+        "nonmagical_light_illuminates": false,
+        "rule": "dnd5e/rule/darkness"
+      },
+      {
+        "id": "object",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 15
+        },
+        "opaque_cover_blocks": true
+      },
+      {
+        "id": "dispel_light",
+        "dispels_light_spells_of_level_at_most": 2
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, M (bat fur and a piece of coal)\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, magical Darkness spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can’t see through it, and nonmagical light can’t illuminate it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Alternatively, you cast the spell on an object that isn’t being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If any of this spell’s area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/darkness"
+  ]
+}

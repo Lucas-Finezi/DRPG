@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/path-of-the-berserker-frenzy",
+  "kind": "feature",
+  "name": "Frenzy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Subclass: Path of the Berserker/Level 3: Frenzy",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "If you use Reckless Attack while your Rage is active, you deal extra damage to the first target you hit on your turn with a Strength-based attack. To determine the extra damage, roll a number of d6s equal to your Rage Damage bonus, and add them together. The damage has the same type as the weapon or Unarmed Strike used for the attack.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/path-of-the-berserker",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "effect_active",
+            "args": {
+              "effect": "barbarian-rage"
+            }
+          },
+          {
+            "pred": "effect_active",
+            "args": {
+              "effect": "barbarian-reckless-attack"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "ability": "str"
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "table": "dnd5e/class/barbarian",
+                "table_id": "barbarian_features",
+                "key": {
+                  "var": "class_level.barbarian"
+                },
+                "column": "Rage Damage"
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": {
+            "var": "chosen.weapon_damage_type"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "First target you hit on your turn; same type as the weapon or Unarmed Strike."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you use Reckless Attack while your Rage is active, you deal extra damage to the first target you hit on your turn with a Strength-based attack. To determine the extra damage, roll a number of d6s equal to your Rage Damage bonus, and add them together. The damage has the same type as the weapon or Unarmed Strike used for the attack.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/barbarian"
+  ]
+}

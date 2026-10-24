@@ -1,0 +1,7028 @@
+{
+  "$schema": "../../schema/system.schema.json",
+  "id": "dnd5e",
+  "ref": "dnd5e/system/dnd5e",
+  "name": "Dungeons & Dragons fifth edition — System Reference Document 5.2.1",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      13,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      89,
+      176,
+      192
+    ],
+    "section": "System",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "core_rules": [
+    {
+      "id": "general_rules",
+      "text": "General rules govern each part of the game. For example, the combat rules tell you that melee attacks use Strength and ranged attacks use Dexterity. That’s a general rule, and a general rule is in effect as long as something in the game doesn’t explicitly say otherwise.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "exceptions_supersede",
+      "text": "When an exception and a general rule disagree, the exception wins.",
+      "pages": [
+        5
+      ],
+      "data": {
+        "precedence": [
+          "specific_exception",
+          "general_rule"
+        ]
+      }
+    },
+    {
+      "id": "round_down",
+      "text": "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.",
+      "pages": [
+        5,
+        187
+      ],
+      "data": {
+        "default_rounding": "down"
+      }
+    },
+    {
+      "id": "simultaneous_effects",
+      "text": "If two or more things happen at the same time on a turn, the person at the game table—player or GM—whose turn it is decides the order in which those things happen.",
+      "pages": [
+        187
+      ],
+      "data": {
+        "orderer": "controller_of_current_turn"
+      }
+    },
+    {
+      "id": "per_day",
+      "text": "If a rule says you can use something a certain number of times per day, that means you must finish a Long Rest to use it again after you run out of uses.",
+      "pages": [
+        186
+      ],
+      "data": {
+        "per_day_recovers_on": "long_rest_finish"
+      }
+    },
+    {
+      "id": "ally",
+      "text": "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.",
+      "pages": [
+        176
+      ],
+      "data": {
+        "relationship": "ally",
+        "designated_by": [
+          "party",
+          "rules",
+          "gm"
+        ]
+      }
+    },
+    {
+      "id": "enemy",
+      "text": "A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or GM.",
+      "pages": [
+        181
+      ],
+      "data": {
+        "relationship": "enemy",
+        "designated_by": [
+          "combat_side",
+          "rules",
+          "gm"
+        ]
+      }
+    },
+    {
+      "id": "monster",
+      "text": "A monster is a creature controlled by the GM, even if the creature is benevolent.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "controller": "gm"
+      }
+    },
+    {
+      "id": "player_character",
+      "text": "A player character is a character controlled by a player.",
+      "pages": [
+        186
+      ],
+      "data": {
+        "controller": "player"
+      }
+    },
+    {
+      "id": "nonplayer_character",
+      "text": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "is_a": "monster"
+      }
+    },
+    {
+      "id": "magical_effect",
+      "text": "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.",
+      "pages": [
+        185
+      ],
+      "data": {
+        "sources": [
+          "spell",
+          "magic_item",
+          "rule_labelled_magical"
+        ]
+      }
+    },
+    {
+      "id": "shape_shifting",
+      "text": "Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.",
+      "pages": [
+        187
+      ],
+      "data": {
+        "ongoing_effects_carry_over": true,
+        "revert_on_death": true
+      }
+    },
+    {
+      "id": "telepathy.language",
+      "text": "Unless a rule states otherwise, the contacted creature doesn’t need to share a language with the telepath to understand this communication, but the contacted creature must be able to understand at least one language or be telepathic itself to understand.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "shared_language_required": false,
+        "target_needs": "any_language_or_telepathy"
+      }
+    },
+    {
+      "id": "telepathy.contact",
+      "text": "A telepath doesn’t need to see a contacted creature, and the telepath can start or end the telepathic contact at any time (no action required). Telepathic contact can’t be initiated and is immediately broken if either the telepath or the other creature has the Incapacitated condition. Telepathic contact is also broken if the contacted creature is no longer within the telepathy’s range or if the telepath contacts a different creature within range.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "sight_required": false,
+        "action_cost": "none",
+        "broken_by": [
+          "incapacitated_either",
+          "out_of_range",
+          "contacts_other_creature"
+        ]
+      }
+    },
+    {
+      "id": "telepathy.non_telepath",
+      "text": "A creature without telepathy can receive telepathic messages but can’t initiate a telepathic conversation. Once a telepathic conversation starts, the non-telepath can communicate mentally to the telepath until the telepathic connection ends.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "non_telepath_can_initiate": false,
+        "non_telepath_can_reply": true
+      }
+    },
+    {
+      "id": "teleportation.movement",
+      "text": "If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "expends_movement": false,
+        "provokes_opportunity_attacks": false
+      }
+    },
+    {
+      "id": "teleportation.passengers",
+      "text": "When you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "carried_equipment": true,
+        "touched_creatures": false
+      }
+    },
+    {
+      "id": "teleportation.blocked",
+      "text": "If the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.",
+      "pages": [
+        190
+      ],
+      "data": {
+        "blocked_destination": "nearest_unoccupied_space_of_choice"
+      }
+    },
+    {
+      "id": "illusions",
+      "text": "If an illusion manifests in space, the illusion is insubstantial and weightless, yet it seems to be affected by the environment as if the illusion were real unless the effect that created it specifies otherwise.",
+      "pages": [
+        183
+      ],
+      "data": {
+        "insubstantial": true,
+        "weightless": true
+      }
+    },
+    {
+      "id": "stat_block.damage_notation",
+      "text": "A stat block usually provides both a static number and a die expression for each instance of damage. For example, an attack might deal 4 (1d4 + 2) damage on a hit. The GM determines whether you use the static number or the die expression in parentheses; you don’t use both.",
+      "pages": [
+        189
+      ],
+      "data": {
+        "modes": [
+          "static",
+          "dice"
+        ],
+        "chooser": "gm"
+      }
+    },
+    {
+      "id": "stat_block.attack_targets",
+      "text": "An attack is against one target unless its entry says otherwise.",
+      "pages": [
+        189,
+        256
+      ],
+      "data": {
+        "default_targets": 1
+      }
+    }
+  ],
+  "core_die": {
+    "die": "d20",
+    "rules": [
+      {
+        "id": "d20_test.kinds",
+        "text": "When the outcome of an action is uncertain, the game uses a d20 roll to determine success or failure. These rolls are called D20 Tests, and they come in three kinds: ability checks, saving throws, and attack rolls.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "kinds": [
+            "ability_check",
+            "saving_throw",
+            "attack_roll"
+          ]
+        }
+      },
+      {
+        "id": "d20_test.step_roll",
+        "text": "Roll 1d20. You always want to roll high.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "roll": "1d20"
+        }
+      },
+      {
+        "id": "d20_test.step_modifiers",
+        "text": "Add Modifiers. Add these modifiers to the number rolled on the d20:",
+        "pages": [
+          6
+        ],
+        "data": {
+          "modifiers": [
+            "ability_modifier",
+            "proficiency_bonus_if_relevant",
+            "circumstantial_bonuses_and_penalties"
+          ]
+        }
+      },
+      {
+        "id": "d20_test.success",
+        "text": "If the total of the d20 and its modifiers equals or exceeds the target number, the D20 Test succeeds. Otherwise, it fails.",
+        "pages": [
+          6
+        ],
+        "data": {
+          "comparison": ">="
+        }
+      },
+      {
+        "id": "d20_test.target_numbers",
+        "text": "The target number for an ability check or a saving throw is called a Difficulty Class (DC). The target number for an attack roll is called an Armor Class (AC)",
+        "pages": [
+          6
+        ],
+        "data": {
+          "ability_check": "dc",
+          "saving_throw": "dc",
+          "attack_roll": "ac"
+        }
+      },
+      {
+        "id": "attack_roll.natural_20",
+        "text": "If you roll a 20 on the d20 (called a “natural 20”) for an attack roll, the attack hits regardless of any modifiers or the target’s AC. This is called a Critical Hit",
+        "pages": [
+          7
+        ],
+        "data": {
+          "roll": "attack_roll",
+          "natural": 20,
+          "result": "hit",
+          "critical_hit": true
+        }
+      },
+      {
+        "id": "attack_roll.natural_1",
+        "text": "If you roll a 1 on the d20 (a “natural 1”) for an attack roll, the attack misses regardless of any modifiers or the target’s AC.",
+        "pages": [
+          7
+        ],
+        "data": {
+          "roll": "attack_roll",
+          "natural": 1,
+          "result": "miss"
+        }
+      },
+      {
+        "id": "advantage.roll",
+        "text": "When a roll has either Advantage or Disadvantage, roll a second d20 when you make the roll. Use the higher of the two rolls if you have Advantage, and use the lower roll if you have Disadvantage.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "advantage": "highest_of_2d20",
+          "disadvantage": "lowest_of_2d20"
+        }
+      },
+      {
+        "id": "advantage.no_stacking",
+        "text": "If multiple situations affect a roll and they all grant Advantage on it, you still roll only two d20s. Similarly, if multiple situations impose Disadvantage on a roll, you roll only two d20s.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "stacks": false
+        }
+      },
+      {
+        "id": "advantage.cancel",
+        "text": "If circumstances cause a roll to have both Advantage and Disadvantage, the roll has neither of them, and you roll one d20. This is true even if multiple circumstances impose Disadvantage and only one grants Advantage or vice versa.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "both_present": "neither"
+        }
+      },
+      {
+        "id": "advantage.reroll",
+        "text": "When you have Advantage or Disadvantage and something in the game lets you reroll or replace the d20, you can reroll or replace only one die, not both. You choose which one.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "reroll_dice": 1,
+          "chooser": "roller"
+        }
+      }
+    ]
+  },
+  "abilities": [
+    {
+      "id": "str",
+      "name": "Strength",
+      "abbreviation": "Str.",
+      "measures": "Physical might",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "dex",
+      "name": "Dexterity",
+      "abbreviation": "Dex.",
+      "measures": "Agility, reflexes, and balance",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "con",
+      "name": "Constitution",
+      "abbreviation": "Con.",
+      "measures": "Health and stamina",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "int",
+      "name": "Intelligence",
+      "abbreviation": "Int.",
+      "measures": "Reasoning and memory",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "wis",
+      "name": "Wisdom",
+      "abbreviation": "Wis.",
+      "measures": "Perceptiveness and mental fortitude",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": "cha",
+      "name": "Charisma",
+      "abbreviation": "Cha.",
+      "measures": "Confidence, poise, and charm",
+      "pages": [
+        5
+      ]
+    }
+  ],
+  "ability_scores": {
+    "min": 1,
+    "max": 30,
+    "descriptors": [
+      {
+        "id": "ability_score.range_1_1",
+        "text": "This is the lowest a score can normally go. If an effect reduces a score to 0, that effect explains what happens.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ability_score.range_2_9",
+        "text": "This represents a weak capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 2,
+          "max": 9
+        }
+      },
+      {
+        "id": "ability_score.range_10_11",
+        "text": "This represents the human average.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 10,
+          "max": 11
+        }
+      },
+      {
+        "id": "ability_score.range_12_19",
+        "text": "This represents a strong capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 12,
+          "max": 19
+        }
+      },
+      {
+        "id": "ability_score.range_20_20",
+        "text": "This is the highest an adventurer’s score can go unless a feature says otherwise.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 20,
+          "max": 20
+        }
+      },
+      {
+        "id": "ability_score.range_21_29",
+        "text": "This represents an extraordinary capability.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 21,
+          "max": 29
+        }
+      },
+      {
+        "id": "ability_score.range_30_30",
+        "text": "This is the highest a score can go.",
+        "pages": [
+          5
+        ],
+        "data": {
+          "min": 30,
+          "max": 30
+        }
+      }
+    ],
+    "modifier_table": [
+      {
+        "min": 1,
+        "max": 1,
+        "modifier": -5
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "modifier": -4
+      },
+      {
+        "min": 4,
+        "max": 5,
+        "modifier": -3
+      },
+      {
+        "min": 6,
+        "max": 7,
+        "modifier": -2
+      },
+      {
+        "min": 8,
+        "max": 9,
+        "modifier": -1
+      },
+      {
+        "min": 10,
+        "max": 11,
+        "modifier": 0
+      },
+      {
+        "min": 12,
+        "max": 13,
+        "modifier": 1
+      },
+      {
+        "min": 14,
+        "max": 15,
+        "modifier": 2
+      },
+      {
+        "min": 16,
+        "max": 17,
+        "modifier": 3
+      },
+      {
+        "min": 18,
+        "max": 19,
+        "modifier": 4
+      },
+      {
+        "min": 20,
+        "max": 21,
+        "modifier": 5
+      },
+      {
+        "min": 22,
+        "max": 23,
+        "modifier": 6
+      },
+      {
+        "min": 24,
+        "max": 25,
+        "modifier": 7
+      },
+      {
+        "min": 26,
+        "max": 27,
+        "modifier": 8
+      },
+      {
+        "min": 28,
+        "max": 29,
+        "modifier": 9
+      },
+      {
+        "min": 30,
+        "max": 30,
+        "modifier": 10
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ]
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "name": "Acrobatics",
+      "ability": "dex",
+      "example_uses": "Stay on your feet in a tricky situation, or perform an acrobatic stunt.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "animal_handling",
+      "name": "Animal Handling",
+      "ability": "wis",
+      "example_uses": "Calm or train an animal, or get an animal to behave in a certain way.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "arcana",
+      "name": "Arcana",
+      "ability": "int",
+      "example_uses": "Recall lore about spells, magic items, and the planes of existence.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "athletics",
+      "name": "Athletics",
+      "ability": "str",
+      "example_uses": "Jump farther than normal, stay afloat in rough water, or break something.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "deception",
+      "name": "Deception",
+      "ability": "cha",
+      "example_uses": "Tell a convincing lie, or wear a disguise convincingly.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "ability": "int",
+      "example_uses": "Recall lore about historical events, people, nations, and cultures.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "insight",
+      "name": "Insight",
+      "ability": "wis",
+      "example_uses": "Discern a person’s mood and intentions.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "intimidation",
+      "name": "Intimidation",
+      "ability": "cha",
+      "example_uses": "Awe or threaten someone into doing what you want.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "investigation",
+      "name": "Investigation",
+      "ability": "int",
+      "example_uses": "Find obscure information in books, or deduce how something works.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "ability": "wis",
+      "example_uses": "Diagnose an illness, or determine what killed the recently slain.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "ability": "int",
+      "example_uses": "Recall lore about terrain, plants, animals, and weather.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "perception",
+      "name": "Perception",
+      "ability": "wis",
+      "example_uses": "Using a combination of senses, notice something that’s easy to miss.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "ability": "cha",
+      "example_uses": "Act, tell a story, perform music, or dance.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "ability": "cha",
+      "example_uses": "Honestly and graciously convince someone of something.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "religion",
+      "name": "Religion",
+      "ability": "int",
+      "example_uses": "Recall lore about gods, religious rituals, and holy symbols.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "sleight_of_hand",
+      "name": "Sleight of Hand",
+      "ability": "dex",
+      "example_uses": "Pick a pocket, conceal a handheld object, or perform legerdemain.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "stealth",
+      "name": "Stealth",
+      "ability": "dex",
+      "example_uses": "Escape notice by moving quietly and hiding behind things.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "ability": "wis",
+      "example_uses": "Follow tracks, forage, find a trail, or avoid natural hazards.",
+      "pages": [
+        9
+      ]
+    }
+  ],
+  "proficiency_bonus": {
+    "by_level": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 4,
+      "13": 5,
+      "14": 5,
+      "15": 5,
+      "16": 5,
+      "17": 6,
+      "18": 6,
+      "19": 6,
+      "20": 6
+    },
+    "by_challenge_rating": [
+      {
+        "min": 0,
+        "max": 4,
+        "bonus": 2
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "bonus": 3
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "bonus": 4
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "bonus": 5
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "bonus": 6
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "bonus": 7
+      },
+      {
+        "min": 25,
+        "max": 28,
+        "bonus": 8
+      },
+      {
+        "min": 29,
+        "max": 30,
+        "bonus": 9
+      }
+    ],
+    "rules": [
+      {
+        "id": "proficiency_bonus.once",
+        "text": "Your Proficiency Bonus can’t be added to a die roll or another number more than once.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "max_additions": 1
+        }
+      },
+      {
+        "id": "proficiency_bonus.multiply_divide_once",
+        "text": "Whenever the bonus is used, it can be multiplied only once and divided only once.",
+        "pages": [
+          8
+        ],
+        "data": {
+          "max_multiplications": 1,
+          "max_divisions": 1
+        }
+      }
+    ],
+    "pages": [
+      8,
+      23
+    ]
+  },
+  "levels": {
+    "min": 1,
+    "max": 20,
+    "advancement": [
+      {
+        "level": 1,
+        "xp": 0,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 2,
+        "xp": 300,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 3,
+        "xp": 900,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 4,
+        "xp": 2700,
+        "proficiency_bonus": 2
+      },
+      {
+        "level": 5,
+        "xp": 6500,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 6,
+        "xp": 14000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 7,
+        "xp": 23000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 8,
+        "xp": 34000,
+        "proficiency_bonus": 3
+      },
+      {
+        "level": 9,
+        "xp": 48000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 10,
+        "xp": 64000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 11,
+        "xp": 85000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 12,
+        "xp": 100000,
+        "proficiency_bonus": 4
+      },
+      {
+        "level": 13,
+        "xp": 120000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 14,
+        "xp": 140000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 15,
+        "xp": 165000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 16,
+        "xp": 195000,
+        "proficiency_bonus": 5
+      },
+      {
+        "level": 17,
+        "xp": 225000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 18,
+        "xp": 265000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 19,
+        "xp": 305000,
+        "proficiency_bonus": 6
+      },
+      {
+        "level": 20,
+        "xp": 355000,
+        "proficiency_bonus": 6
+      }
+    ],
+    "tiers": [
+      {
+        "id": "tier_1",
+        "text": "In tier 1, characters are apprentice adventurers",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 1,
+          "max_level": 4
+        }
+      },
+      {
+        "id": "tier_2",
+        "text": "In tier 2, characters are full-fledged adventurers.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 5,
+          "max_level": 10
+        }
+      },
+      {
+        "id": "tier_3",
+        "text": "In tier 3, characters have reached a level of power that makes them special among adventurers.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 11,
+          "max_level": 16
+        }
+      },
+      {
+        "id": "tier_4",
+        "text": "At tier 4, characters achieve the pinnacle of their class features, becoming heroic archetypes.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "min_level": 17,
+          "max_level": 20
+        }
+      }
+    ],
+    "rules": [
+      {
+        "id": "level.threshold",
+        "text": "When your XP total equals or exceeds a number in the Experience Points column, you reach the corresponding level.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "comparison": ">="
+        }
+      },
+      {
+        "id": "level.hit_points",
+        "text": "Each time you gain a level, you gain an additional Hit Die. Roll that die, add your Constitution modifier to the roll, and add the total (minimum of 1) to your Hit Point maximum. Instead of rolling, you can use the fixed value shown in the Fixed Hit Points by Class table.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "hit_dice_gained": 1,
+          "hp_gain": "roll_hit_die_plus_con_mod_min_1_or_fixed",
+          "minimum": 1
+        }
+      },
+      {
+        "id": "level.con_retroactive",
+        "text": "When your Constitution modifier increases by 1, your Hit Point maximum increases by 1 for each level you have attained.",
+        "pages": [
+          23
+        ],
+        "data": {
+          "retroactive": true
+        }
+      },
+      {
+        "id": "level.ability_modifier_change",
+        "text": "If you choose a feat that increases one or more of your ability scores, your ability modifier also changes if the new score is an even number.",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "start_higher.xp",
+        "text": "You begin with the minimum amount of XP required to reach your starting level.",
+        "pages": [
+          24
+        ],
+        "data": {
+          "starting_xp": "threshold_of_starting_level"
+        }
+      },
+      {
+        "id": "level.start_xp",
+        "text": "A level 1 character has 0 XP.",
+        "pages": [
+          19
+        ],
+        "data": {
+          "level": 1,
+          "xp": 0
+        }
+      },
+      {
+        "id": "level.start_hit_dice",
+        "text": "At level 1, your character has 1 Hit Die.",
+        "pages": [
+          22
+        ],
+        "data": {
+          "level": 1,
+          "hit_dice": 1
+        }
+      },
+      {
+        "id": "base_ac",
+        "text": "Without armor or a shield, your base Armor Class is 10 plus your Dexterity modifier.",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "ability_mod.dex"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "passive_perception",
+        "text": "Passive Perception = 10 + Wisdom (Perception) check modifier",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "var": "check_mod.wis.perception"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "spell_save_dc",
+        "text": "Spell save DC = 8 + spellcasting ability modifier + Proficiency Bonus",
+        "pages": [
+          23
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "spellcasting_mod"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "spell_attack_bonus",
+        "text": "Spell attack bonus = spellcasting ability modifier + Proficiency Bonus",
+        "pages": [
+          23
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "spellcasting_mod"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "melee_attack_bonus",
+        "text": "Melee attack bonus = Strength modifier + Proficiency Bonus",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.str"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "ranged_attack_bonus",
+        "text": "Ranged attack bonus = Dexterity modifier + Proficiency Bonus",
+        "pages": [
+          22
+        ],
+        "data": {
+          "formula": {
+            "op": "add",
+            "args": [
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "pages": [
+      23,
+      24
+    ]
+  },
+  "action_economy": [
+    {
+      "id": "action",
+      "name": "Action",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "turn.action_and_move",
+          "text": "On your turn, you can move a distance up to your Speed and take one action.",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "action.one_at_a_time",
+          "text": "You can take only one action at a time.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "bonus_action",
+      "name": "Bonus Action",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "bonus_action.granted_only",
+          "text": "You can take a Bonus Action only when a special ability, a spell, or another feature of the game states that you can do something as a Bonus Action. You otherwise don’t have a Bonus Action to take.",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "bonus_action.one_per_turn",
+          "text": "You can take only one Bonus Action on your turn",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "bonus_action.deprived",
+          "text": "Anything that deprives you of your ability to take actions also prevents you from taking a Bonus Action.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "reaction",
+      "name": "Reaction",
+      "per": "round",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "reaction.refresh",
+          "text": "When you take a Reaction, you can’t take another one until the start of your next turn.",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "reaction.timing",
+          "text": "In terms of timing, a Reaction takes place immediately after its trigger unless the Reaction’s description says otherwise.",
+          "pages": [
+            10
+          ]
+        }
+      ],
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "movement",
+      "name": "Movement",
+      "per": "turn",
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "turn.order_free",
+          "text": "You decide whether to move first or take your action first.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "object_interaction",
+      "name": "Interacting with Things",
+      "per": "turn",
+      "count": 1,
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "object_interaction.free",
+          "text": "You can interact with one object or feature of the environment for free, during either your move or action.",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "object_interaction.second",
+          "text": "If you want to interact with a second object, you need to take the Utilize action.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "free",
+      "name": "Communicating",
+      "per": "turn",
+      "rules": [
+        {
+          "id": "communicating",
+          "text": "You can communicate however you are able—through brief utterances and gestures—as you take your turn. Doing so uses neither your action nor your move.",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "legendary_action",
+      "name": "Legendary Action",
+      "per": "round",
+      "refreshes_on": "turn_start",
+      "rules": [
+        {
+          "id": "legendary_action.timing",
+          "text": "A Legendary Action is an action that a monster can take immediately after another creature’s turn.",
+          "pages": [
+            257
+          ]
+        },
+        {
+          "id": "legendary_action.uses",
+          "text": "The monster expends one use whenever it takes a Legendary Action, and it regains all expended uses at the start of each of its turns.",
+          "pages": [
+            257
+          ]
+        }
+      ],
+      "pages": [
+        257
+      ]
+    }
+  ],
+  "initiative": {
+    "check": "dex",
+    "rules": [
+      {
+        "id": "initiative.check",
+        "text": "When combat starts, every participant rolls Initiative; they make a Dexterity check that determines their place in the Initiative order.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "ability": "dex"
+        }
+      },
+      {
+        "id": "initiative.groups",
+        "text": "The GM rolls for monsters. For a group of identical creatures, the GM makes a single roll, so each member of the group has the same Initiative.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "identical_creatures": "single_roll"
+        }
+      },
+      {
+        "id": "initiative.surprise",
+        "text": "If a combatant is surprised by combat starting, that combatant has Disadvantage on their Initiative roll.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "surprised": "disadvantage"
+        }
+      },
+      {
+        "id": "initiative.order",
+        "text": "The GM ranks the combatants, from highest to lowest Initiative. This is the order in which they act during each round. The Initiative order remains the same from round to round.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "sort": "descending",
+          "fixed": true
+        }
+      },
+      {
+        "id": "initiative.ties",
+        "text": "If a tie occurs, the GM decides the order among tied monsters, and the players decide the order among tied characters. The GM decides the order if the tie is between a monster and a player character.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "monsters": "gm",
+          "player_characters": "players",
+          "mixed": "gm"
+        }
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  "rests": [
+    {
+      "id": "short_rest",
+      "name": "Short Rest",
+      "ref": "dnd5e/rule/short-rest",
+      "minimum_duration": {
+        "kind": "hours",
+        "amount": 1,
+        "text": "1-hour period"
+      },
+      "pages": [
+        187
+      ]
+    },
+    {
+      "id": "long_rest",
+      "name": "Long Rest",
+      "ref": "dnd5e/rule/long-rest",
+      "minimum_duration": {
+        "kind": "hours",
+        "amount": 8,
+        "text": "at least 8 hours"
+      },
+      "pages": [
+        185
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": "common",
+      "name": "Common",
+      "category": "standard",
+      "roll": "—",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "common_sign_language",
+      "name": "Common Sign Language",
+      "category": "standard",
+      "roll": "1",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "draconic",
+      "name": "Draconic",
+      "category": "standard",
+      "roll": "2",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "dwarvish",
+      "name": "Dwarvish",
+      "category": "standard",
+      "roll": "3–4",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "elvish",
+      "name": "Elvish",
+      "category": "standard",
+      "roll": "5–6",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "giant",
+      "name": "Giant",
+      "category": "standard",
+      "roll": "7",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "gnomish",
+      "name": "Gnomish",
+      "category": "standard",
+      "roll": "8",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "category": "standard",
+      "roll": "9",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "halfling",
+      "name": "Halfling",
+      "category": "standard",
+      "roll": "10–11",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "category": "standard",
+      "roll": "12",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "abyssal",
+      "name": "Abyssal",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "celestial",
+      "name": "Celestial",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "deep_speech",
+      "name": "Deep Speech",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "druidic",
+      "name": "Druidic",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "infernal",
+      "name": "Infernal",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "primordial",
+      "name": "Primordial",
+      "category": "rare",
+      "pages": [
+        20
+      ],
+      "note": "Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one."
+    },
+    {
+      "id": "sylvan",
+      "name": "Sylvan",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "thieves_cant",
+      "name": "Thieves’ Cant",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": "undercommon",
+      "name": "Undercommon",
+      "category": "rare",
+      "pages": [
+        20
+      ]
+    }
+  ],
+  "currency": [
+    {
+      "id": "cp",
+      "name": "Copper Piece",
+      "abbreviation": "CP",
+      "value_in_cp": 1.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "sp",
+      "name": "Silver Piece",
+      "abbreviation": "SP",
+      "value_in_cp": 10.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "ep",
+      "name": "Electrum Piece",
+      "abbreviation": "EP",
+      "value_in_cp": 50.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "gp",
+      "name": "Gold Piece",
+      "abbreviation": "GP",
+      "value_in_cp": 100.0,
+      "pages": [
+        89
+      ]
+    },
+    {
+      "id": "pp",
+      "name": "Platinum Piece",
+      "abbreviation": "PP",
+      "value_in_cp": 1000.0,
+      "pages": [
+        89
+      ]
+    }
+  ],
+  "units": {
+    "distance": {
+      "unit": "foot",
+      "pages": [
+        188
+      ]
+    },
+    "long_distance": {
+      "unit": "mile",
+      "pages": [
+        12
+      ]
+    },
+    "weight": {
+      "unit": "pound",
+      "conversions": {
+        "coins_per_pound": 50
+      },
+      "pages": [
+        89
+      ]
+    }
+  },
+  "time": {
+    "round_seconds": 6,
+    "derived": {
+      "rounds_per_minute": 10
+    },
+    "rules": [
+      {
+        "id": "time.round",
+        "text": "A round represents about 6 seconds in the game world.",
+        "pages": [
+          13
+        ],
+        "data": {
+          "seconds": 6,
+          "derives": {
+            "rounds_per_minute": "60 seconds / 6 seconds per round"
+          }
+        }
+      }
+    ]
+  },
+  "registries": {
+    "variables": [
+      {
+        "id": "ability_score",
+        "description": "A creature's score in an ability.",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          5
+        ]
+      },
+      {
+        "id": "ability_mod",
+        "description": "The modifier derived from an ability score (Ability Modifiers table).",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          5,
+          6
+        ]
+      },
+      {
+        "id": "proficiency_bonus",
+        "description": "Proficiency Bonus by character level or Challenge Rating.",
+        "type": "number",
+        "pages": [
+          8
+        ]
+      },
+      {
+        "id": "level",
+        "description": "Character level.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "class_level",
+        "description": "Levels the character has in one class.",
+        "params": [
+          "class"
+        ],
+        "type": "number",
+        "pages": [
+          24
+        ]
+      },
+      {
+        "id": "xp",
+        "description": "Experience Points total.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "cr",
+        "description": "Challenge Rating of a monster.",
+        "type": "number",
+        "pages": [
+          178
+        ]
+      },
+      {
+        "id": "speed",
+        "description": "Speed in feet for a movement mode.",
+        "params": [
+          "movement_mode"
+        ],
+        "type": "number",
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "hp_max",
+        "description": "Hit Point maximum.",
+        "type": "number",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "check_mod",
+        "description": "Total modifier of an ability check (ability, optional skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "type": "number",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "spellcasting_mod",
+        "description": "Spellcasting ability modifier of the feature that grants the spell.",
+        "type": "number",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "spell_save_dc",
+        "description": "8 + spellcasting ability modifier + Proficiency Bonus.",
+        "type": "number",
+        "pages": [
+          23
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            8,
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/9"
+      },
+      {
+        "id": "spell_attack_bonus",
+        "description": "Spellcasting ability modifier + Proficiency Bonus.",
+        "type": "number",
+        "pages": [
+          23
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/10"
+      },
+      {
+        "id": "spell_slot_level",
+        "description": "Level of the spell slot used to cast the current spell.",
+        "type": "number",
+        "pages": [
+          104
+        ]
+      },
+      {
+        "id": "condition_level",
+        "description": "Current level of a leveled condition (Exhaustion).",
+        "params": [
+          "condition"
+        ],
+        "type": "number",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_ability_score",
+        "description": "An ability score of the target of the current effect.",
+        "params": [
+          "ability"
+        ],
+        "type": "number",
+        "pages": [
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "check_total",
+        "description": "Total of the ability check just made.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "height",
+        "description": "The creature's height in feet.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "jump_height",
+        "description": "Height in feet of the current High Jump.",
+        "type": "number",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "escape_dc",
+        "description": "Escape DC of the grapple affecting the creature.",
+        "type": "number",
+        "pages": [
+          182
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "hp",
+        "description": "Current Hit Points.",
+        "type": "number",
+        "pages": [
+          16
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "temp_hp",
+        "description": "Current Temporary Hit Points.",
+        "type": "number",
+        "pages": [
+          18
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "fall_feet",
+        "description": "Distance in feet of the current fall.",
+        "type": "number",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "days_without_food",
+        "description": "Consecutive days the creature has eaten nothing.",
+        "type": "number",
+        "pages": [
+          185
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "hit_point_die",
+        "description": "The die type of one of the creature's Hit Point Dice.",
+        "type": "dice",
+        "pages": [
+          183,
+          187
+        ],
+        "lot": "L07"
+      },
+      {
+        "id": "item_cost_gp",
+        "description": "Purchase cost of the item in GP.",
+        "type": "number",
+        "pages": [
+          103
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "damage_amount",
+        "description": "Amount of damage just taken.",
+        "type": "number",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "spell_level",
+        "description": "Level of the spell as cast (the slot level when cast with a higher slot).",
+        "type": "number",
+        "pages": [
+          104
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "uses_since_rest",
+        "description": "Times a feature was used since the last Short or Long Rest (param).",
+        "params": [
+          "feature"
+        ],
+        "type": "number",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolled",
+        "description": "Result of a die rolled by the effect (param: die name, e.g. bardic_inspiration_die).",
+        "params": [
+          "die"
+        ],
+        "type": "number",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "resource",
+        "description": "Current (unexpended) uses of a resource of the creature (param: resource id).",
+        "params": [
+          "resource"
+        ],
+        "type": "number",
+        "pages": [
+          33
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "aura_size",
+        "description": "Size in feet of a creature's aura (param: feature slug).",
+        "params": [
+          "feature"
+        ],
+        "type": "number",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "chosen",
+        "description": "Value fixed by an earlier choice of the same entry (param: the choice id).",
+        "params": [
+          "choice"
+        ],
+        "type": "identifier",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "form_hp",
+        "description": "Hit Points of the form a creature transformed into.",
+        "type": "number",
+        "pages": [
+          153
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "rounds_elapsed",
+        "description": "Number of the caster's turns that ended while the spell lasted.",
+        "type": "number",
+        "pages": [
+          122
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "feet_moved",
+        "description": "Distance in feet the creature was moved.",
+        "type": "number",
+        "pages": [
+          129
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "attack_ability_mod",
+        "description": "The ability modifier used for the attack roll.",
+        "type": "number",
+        "pages": [
+          90
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "item_bonus",
+        "description": "The +N of the item's variant (data.item.rarity[].bonus).",
+        "type": "number",
+        "pages": [
+          205
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_score",
+        "description": "Ability score granted by the item's variant (data.item.variants[].score).",
+        "type": "number",
+        "pages": [
+          213
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_fly_speed",
+        "description": "Fly Speed of the item's variant (its table).",
+        "type": "number",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "charges_spent",
+        "description": "Charges the user chooses to expend on this activation.",
+        "type": "number",
+        "pages": [
+          221
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "weapon_damage_type",
+        "description": "Damage type of the weapon used.",
+        "type": "identifier",
+        "pages": [
+          219
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_gems",
+        "description": "Number of gems remaining in the item.",
+        "type": "number",
+        "pages": [
+          225
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_spirits",
+        "description": "Spirits summoned by the item's variant (its table).",
+        "type": "number",
+        "pages": [
+          226
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_spheres_damage",
+        "description": "Lightning damage by the number of spheres created (Ring of Shooting Stars table).",
+        "type": "number",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "creatures_present",
+        "description": "Number of creatures present in the demiplane.",
+        "type": "number",
+        "pages": [
+          242
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "weapon_damage_max",
+        "description": "Maximum result of the weapon's damage dice.",
+        "type": "number",
+        "pages": [
+          248
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_ability_mod",
+        "description": "Ability modifier of a sentient item (param: ability).",
+        "type": "number",
+        "pages": [
+          207
+        ],
+        "params": [
+          "ability"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "shield_ac_bonus",
+        "description": "Armor Class bonus a wielded Shield grants (base 2 plus magic bonus).",
+        "type": "number",
+        "pages": [
+          92,
+          209
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_variant_healing",
+        "description": "Hit Points regained by the potion's variant (Potions of Healing table).",
+        "type": "number",
+        "pages": [
+          236
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "spellcasting_ability",
+        "description": "The creature's spellcasting ability.",
+        "type": "identifier",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "hit_point_dice_count",
+        "description": "Number of Hit Dice in a monster's Hit Point expression.",
+        "type": "number",
+        "pages": [
+          255
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "travel_hours_over_8",
+        "description": "Hours of travel beyond 8 today.",
+        "type": "number",
+        "pages": [
+          192
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "hours_exposed",
+        "description": "Hours of exposure so far (first hour = 1).",
+        "type": "number",
+        "pages": [
+          195
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "sense_range",
+        "description": "Range in feet of the special sense given in the creature's stat block or feature.",
+        "type": "number",
+        "pages": [
+          177
+        ],
+        "lot": "L41"
+      }
+    ],
+    "stats": [
+      {
+        "id": "ac",
+        "name": "Armor Class",
+        "description": "Target number for attack rolls against the creature.",
+        "pages": [
+          6,
+          7
+        ]
+      },
+      {
+        "id": "attack_roll",
+        "description": "Bonus to attack rolls (optionally by attack kind).",
+        "params": [
+          "attack_kind"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "damage_roll",
+        "description": "Bonus to damage rolls.",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "saving_throw",
+        "description": "Bonus to saving throws (optionally one ability).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "ability_check",
+        "description": "Bonus to ability checks (optionally one ability or skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "initiative",
+        "description": "Initiative modifier.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "hp_max",
+        "description": "Hit Point maximum.",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "id": "speed",
+        "description": "Speed (optionally one movement mode).",
+        "params": [
+          "movement_mode"
+        ],
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "passive_perception",
+        "description": "10 + Wisdom (Perception) check modifier.",
+        "pages": [
+          22
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "check_mod.wis.perception"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/8"
+      },
+      {
+        "id": "spell_save_dc",
+        "description": "Spell save DC.",
+        "pages": [
+          23
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            8,
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/9"
+      },
+      {
+        "id": "spell_attack_bonus",
+        "description": "Spell attack bonus.",
+        "pages": [
+          23
+        ],
+        "formula": {
+          "op": "add",
+          "args": [
+            {
+              "var": "spellcasting_mod"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/10"
+      },
+      {
+        "id": "damage_taken",
+        "description": "Damage the creature takes (param: the source's ref slug, e.g. a spell).",
+        "params": [
+          "source"
+        ],
+        "pages": [
+          162
+        ]
+      },
+      {
+        "id": "d20_test",
+        "description": "Every D20 Test the creature makes.",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "weight",
+        "description": "The creature's weight.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "movement",
+        "description": "Movement (feet) available to the creature this turn.",
+        "pages": [
+          180
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "provokes_opportunity_attacks",
+        "description": "Whether the creature's movement provokes Opportunity Attacks (1 or 0).",
+        "pages": [
+          181
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "reach",
+        "description": "Reach in feet (default 5).",
+        "pages": [
+          186
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "hp",
+        "description": "Current Hit Points.",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "base_ac",
+        "description": "Base Armor Class calculation (one alternative may be chosen).",
+        "pages": [
+          29
+        ],
+        "lot": "L14",
+        "formula": {
+          "op": "add",
+          "args": [
+            10,
+            {
+              "var": "ability_mod.dex"
+            }
+          ]
+        },
+        "formula_source": "#/levels/rules/7"
+      },
+      {
+        "id": "attacks_per_attack_action",
+        "description": "Number of attacks when taking the Attack action.",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "weapon_mastery_kinds",
+        "description": "Kinds of weapons whose mastery property the creature can use.",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "ability_score_max",
+        "description": "Maximum of an ability score (param).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "ability_score",
+        "description": "An ability score (param).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "triggering_roll",
+        "description": "The roll that caused the trigger.",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cantrips_known",
+        "description": "Number of cantrips the creature knows from a feature.",
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "creature_type",
+        "description": "The creature's type.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hit_point_dice",
+        "description": "The creature's Hit Point Dice.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "class_features",
+        "description": "The creature's class features.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "languages",
+        "description": "The languages the creature knows.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "feats",
+        "description": "The creature's feats.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "skill_proficiencies",
+        "description": "The creature's skill proficiencies.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "saving_throw_proficiencies",
+        "description": "The creature's saving throw proficiencies.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "proficiency_bonus",
+        "description": "The creature's Proficiency Bonus.",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "actions_this_turn",
+        "description": "Number of actions the creature can take this turn.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "critical_hit_min_d20",
+        "description": "Lowest d20 roll that scores a Critical Hit (default 20).",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "death_save_natural_20_min",
+        "description": "Lowest Death Saving Throw roll that counts as a 20.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "weapon_damage_die",
+        "description": "Damage die used for the weapon or Unarmed Strike.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_ability",
+        "description": "Ability modifier used for attack and damage rolls.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "unarmed_strike_save_dc_ability",
+        "description": "Ability modifier used for the save DC of Unarmed Strike's Grapple or Shove.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "jump_distance",
+        "description": "The creature's jump distance.",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "evasion",
+        "description": "Evasion: on a Dexterity save for half damage, no damage on a success and half on a failure.",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "aura_size",
+        "description": "Size in feet of a creature's aura (param: feature slug).",
+        "params": [
+          "feature"
+        ],
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "sneak_attack_dice",
+        "description": "Number of Sneak Attack damage dice rolled.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "d20_roll",
+        "description": "The number rolled on the d20.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "jump_ability",
+        "description": "Ability score used to determine jump distance.",
+        "pages": [
+          64
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "max_attuned_items",
+        "description": "Maximum magic items the creature can be attuned to at once.",
+        "pages": [
+          64
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_range",
+        "description": "Range of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_duration",
+        "description": "Duration of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_casting_time",
+        "description": "Casting time of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_components",
+        "description": "Components required by the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_effective_level",
+        "description": "Effective level of the spell being cast.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "size",
+        "description": "The creature's size category.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "size_for_carrying_capacity",
+        "description": "Size used to determine carrying capacity.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hp_max_per_level",
+        "description": "Hit Point maximum increase per level.",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "breathe_underwater",
+        "description": "The creature can breathe underwater (1) or not (0).",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spellcasting_focus",
+        "description": "The item can be used as a Spellcasting Focus.",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_damage_dice",
+        "description": "How the spell's damage dice are resolved (0 = maximum).",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "damage_die_min",
+        "description": "Lowest value a damage die counts as.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "fall_rate_feet_per_round",
+        "description": "Rate of descent of a falling creature, in feet per round.",
+        "pages": [
+          130
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "weapon_bonus",
+        "description": "Magic bonus of a weapon to attack and damage rolls.",
+        "pages": [
+          148
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "leaves_tracks",
+        "description": "The creature leaves tracks (1) or not (0).",
+        "pages": [
+          151
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "spider_climb",
+        "description": "The creature can move on vertical surfaces and ceilings with hands free.",
+        "pages": [
+          164
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "healing_dice",
+        "description": "How healing dice are resolved for the creature (0 = maximum possible).",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "water_walk",
+        "description": "The creature can move across liquid surfaces as solid ground.",
+        "pages": [
+          172
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "ignores_difficult_terrain",
+        "description": "The creature's movement is unaffected by Difficult Terrain.",
+        "pages": [
+          134
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "ability_score_reduction",
+        "description": "Total reduction applied to the creature's ability scores.",
+        "pages": [
+          138
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "hp_max_reduction",
+        "description": "Total reduction applied to the creature's Hit Point maximum.",
+        "pages": [
+          138
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "truth_detection_result",
+        "description": "Magic that determines truthfulness reports the creature as truthful (1).",
+        "pages": [
+          137
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "armor_stealth_disadvantage",
+        "description": "The worn armor imposes Disadvantage on Dexterity (Stealth) checks (1) or not (0).",
+        "pages": [
+          231
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "armor_strength_requirement",
+        "description": "Strength score the worn armor requires (0 = none).",
+        "pages": [
+          231
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "breathe_any_environment",
+        "description": "The creature can breathe normally in any environment (1) or not (0).",
+        "pages": [
+          232
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_slot_cost",
+        "description": "Spell slots a casting expends (0 = cast without expending a slot).",
+        "pages": [
+          214
+        ],
+        "lot": "L31"
+      }
+    ],
+    "rolls": [
+      {
+        "id": "d20_test",
+        "description": "Any D20 Test: ability check, saving throw or attack roll.",
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "ability_check",
+        "description": "Ability check (optionally one ability or skill).",
+        "params": [
+          "ability",
+          "skill"
+        ],
+        "pages": [
+          6
+        ]
+      },
+      {
+        "id": "saving_throw",
+        "description": "Saving throw (optionally one ability).",
+        "params": [
+          "ability"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "attack_roll",
+        "description": "Attack roll (optionally by attack kind).",
+        "params": [
+          "attack_kind"
+        ],
+        "pages": [
+          7
+        ]
+      },
+      {
+        "id": "damage_roll",
+        "description": "Damage roll.",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "initiative",
+        "description": "Initiative roll (a Dexterity check).",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "hit_point_die",
+        "description": "Roll of a Hit Point Die.",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "any_die",
+        "description": "Any die the creature rolls.",
+        "pages": [
+          8,
+          183
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "death_saving_throw",
+        "description": "A Death Saving Throw.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      }
+    ],
+    "events": [
+      {
+        "id": "turn_start",
+        "description": "Start of a creature's turn.",
+        "type": "event",
+        "pages": [
+          10,
+          13
+        ]
+      },
+      {
+        "id": "turn_end",
+        "description": "End of a creature's turn.",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "round_end",
+        "description": "End of a round (everyone has taken a turn).",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "initiative_rolled",
+        "description": "Initiative is rolled (combat starts).",
+        "type": "event",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "d20_rolled",
+        "description": "Immediately after a die is rolled.",
+        "type": "event",
+        "pages": [
+          8
+        ]
+      },
+      {
+        "id": "short_rest_finished",
+        "description": "A Short Rest is finished.",
+        "type": "event",
+        "pages": [
+          187
+        ]
+      },
+      {
+        "id": "long_rest_finished",
+        "description": "A Long Rest is finished.",
+        "type": "event",
+        "pages": [
+          185
+        ]
+      },
+      {
+        "id": "level_gained",
+        "description": "The character gains a level.",
+        "type": "event",
+        "pages": [
+          23
+        ]
+      },
+      {
+        "id": "hit_by_attack_roll",
+        "description": "The creature is hit by an attack roll.",
+        "type": "event",
+        "pages": [
+          161
+        ]
+      },
+      {
+        "id": "targeted_by_spell",
+        "description": "The creature is targeted by a spell (param: spell ref slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "event",
+        "pages": [
+          161
+        ]
+      },
+      {
+        "id": "condition_ended",
+        "description": "A condition ends on the creature (param: condition slug).",
+        "params": [
+          "condition"
+        ],
+        "type": "event",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "leaves_reach",
+        "description": "A creature the reactor can see leaves its reach (using its action, Bonus Action, Reaction or one of its speeds).",
+        "type": "event",
+        "pages": [
+          15,
+          185
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "would_drop_to_0_hp_by_melee",
+        "description": "The creature would reduce another creature to 0 Hit Points with a melee attack.",
+        "type": "event",
+        "pages": [
+          17,
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "readied_trigger",
+        "description": "The perceivable circumstance chosen with the Ready action occurs.",
+        "type": "event",
+        "pages": [
+          186
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "regains_hit_points",
+        "description": "The creature regains any Hit Points.",
+        "type": "event",
+        "pages": [
+          17
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "attack_roll_made",
+        "description": "The creature makes an attack roll.",
+        "type": "event",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "mount_moved_against_will",
+        "description": "An effect is about to move the creature's mount against its will.",
+        "type": "event",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "knocked_prone_while_mounted",
+        "description": "The rider or its mount is knocked Prone.",
+        "type": "event",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "die_rolled",
+        "description": "Immediately after the creature rolls a die.",
+        "type": "event",
+        "pages": [
+          8,
+          183
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "fall_ends",
+        "description": "A falling creature lands.",
+        "type": "event",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "day_ends",
+        "description": "The end of a day (food and water needs).",
+        "type": "event",
+        "pages": [
+          181,
+          185
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "damage_taken",
+        "description": "The creature takes damage.",
+        "type": "event",
+        "pages": [
+          17,
+          18
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "drops_to_0_hp",
+        "description": "The creature drops to 0 Hit Points.",
+        "type": "event",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "rest_interrupted",
+        "description": "A rest is stopped by an interruption.",
+        "type": "event",
+        "pages": [
+          185,
+          187
+        ],
+        "lot": "L07"
+      },
+      {
+        "id": "concentration_effect_started",
+        "description": "The creature starts casting a Concentration spell or activates another Concentration effect.",
+        "type": "event",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "dies",
+        "description": "The creature dies.",
+        "type": "event",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "takes_attack_action",
+        "description": "The creature takes the Attack action on its turn.",
+        "type": "event",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "drops_to_0_hp_not_killed",
+        "description": "The creature drops to 0 Hit Points and doesn't die outright.",
+        "type": "event",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "damaged_by_creature_within_feet",
+        "description": "The creature takes damage from a creature within 'feet'.",
+        "params": [
+          "feet"
+        ],
+        "type": "event",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "enters_effect",
+        "description": "The creature activates an effect (param: entry slug).",
+        "params": [
+          "effect"
+        ],
+        "type": "event",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_d20_test",
+        "description": "The creature fails a D20 Test.",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_saving_throw",
+        "description": "A creature fails a saving throw.",
+        "pages": [
+          33
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_roll",
+        "description": "The creature makes a roll and fails.",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "creature_roll_made",
+        "description": "A creature makes a roll (damage roll, ability check, attack roll...).",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "uses_feature",
+        "description": "The creature uses a feature (param: feature slug; optional option id).",
+        "params": [
+          "feature",
+          "option"
+        ],
+        "pages": [
+          37
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_damage_with_spell",
+        "description": "The creature casts a spell and deals damage to a creature with it.",
+        "pages": [
+          38
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_restores_hp",
+        "description": "A spell the creature casts restores Hit Points to one or more creatures.",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "fails_ability_check",
+        "description": "The creature fails an ability check.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "misses_with_attack_roll",
+        "description": "The creature makes an attack roll against a creature and misses.",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "scores_critical_hit",
+        "description": "The creature scores a Critical Hit.",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "falls",
+        "description": "The creature falls.",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "bonus_action_taken",
+        "description": "The creature takes a Bonus Action.",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "casts_spell",
+        "description": "The creature casts a spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "pages": [
+          57
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_damage",
+        "description": "The creature deals damage to a creature.",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "deals_sneak_attack_damage",
+        "description": "The creature deals Sneak Attack damage.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "casts_spell_forcing_save",
+        "description": "The creature casts a spell that forces creatures to make a saving throw.",
+        "pages": [
+          66
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolls_spell_damage",
+        "description": "The creature rolls damage for a spell.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "misses_with_spell_attack",
+        "description": "The creature makes an attack roll for a spell and misses.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "condition_gained",
+        "description": "The creature gains a condition (param: condition slug).",
+        "params": [
+          "condition"
+        ],
+        "type": "event",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_action_attack",
+        "description": "One of the attacks of the creature's Attack action on its turn.",
+        "type": "event",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hits_with_attack_roll",
+        "description": "The creature hits a target with an attack roll and deals damage to it.",
+        "type": "event",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rolls_natural_1",
+        "description": "The creature rolls a 1 on the d20 of a D20 Test.",
+        "type": "event",
+        "pages": [
+          86
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "enemy_reduced_to_0_hp",
+        "description": "An enemy is reduced to 0 Hit Points.",
+        "pages": [
+          76
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "familiar_takes_damage",
+        "description": "The creature's familiar takes damage.",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "rest_finished",
+        "description": "The creature finishes a Short or Long Rest.",
+        "pages": [
+          74
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cantrip_misses_or_saved",
+        "description": "The creature casts a cantrip at a creature and misses with the attack roll or the target succeeds on its save.",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "takes_attack_or_magic_action",
+        "description": "The creature takes the Attack action or the Magic action.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "d20_test_resolved",
+        "description": "A creature succeeds on or fails a D20 Test.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "rolls_natural_20_attack",
+        "description": "The creature rolls a 20 on the d20 for an attack roll.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "sees_creature_casting_spell",
+        "description": "A creature the caster can see within range casts a spell with Verbal, Somatic or Material components.",
+        "pages": [
+          119
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "enters_or_ends_turn_in_area",
+        "description": "A creature enters the area or ends its turn there.",
+        "pages": [
+          138
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "targeted_by_attack_or_damaging_spell",
+        "description": "A creature targets the warded creature with an attack roll or a damaging spell.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "warded_creature_attacks_casts_or_damages",
+        "description": "The warded creature makes an attack roll, casts a spell, or deals damage.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "dons_armor",
+        "description": "The creature dons armor.",
+        "pages": [
+          146
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "ends_turn_within_feet_of_effect",
+        "description": "A creature ends its turn within a distance of the spell's effect.",
+        "pages": [
+          132
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "attacks_deals_damage_or_casts",
+        "description": "The creature makes an attack roll, deals damage, or casts a spell.",
+        "pages": [
+          142
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "moves_within_area",
+        "description": "A creature moves into or within the area.",
+        "pages": [
+          164
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "enters_or_starts_turn_in_area",
+        "description": "A creature enters the area or starts its turn there.",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "damaged_by_source_attack_or_spell",
+        "description": "The source deals damage to the target with an attack roll or a spell.",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "moves_on_turn",
+        "description": "The creature moves on its turn.",
+        "pages": [
+          118
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "creature_within_feet_of_effect",
+        "description": "The effect moves within range of a creature, or a creature enters or ends its turn within range of it.",
+        "pages": [
+          118
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "effect_ends",
+        "description": "The effect ends.",
+        "pages": [
+          138
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "stone_partially_destroyed",
+        "description": "The stone is partially destroyed or changes shape so the creature no longer fits.",
+        "pages": [
+          148
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "stone_destroyed",
+        "description": "The stone is destroyed or transmuted into a different substance.",
+        "pages": [
+          148
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "would_drop_to_0_hp",
+        "description": "The creature would drop to 0 Hit Points.",
+        "pages": [
+          122
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "instant_death_effect",
+        "description": "The creature is subjected to an effect that would kill it instantly without dealing damage.",
+        "pages": [
+          122
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "teleport_destination_occupied",
+        "description": "A teleporting creature would arrive in an occupied or filled space.",
+        "pages": [
+          124
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "hit_by_melee_attack_within_feet",
+        "description": "A creature within N feet (param) hits the creature with a melee attack roll.",
+        "params": [
+          "feet"
+        ],
+        "pages": [
+          133
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "enters_or_ends_turn_near_wall",
+        "description": "A creature ends its turn near the damaging side of the wall or inside it, or enters it.",
+        "pages": [
+          172
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "enters_space_or_starts_turn_near_spirit",
+        "description": "A creature enters the spirit's space or starts its turn within 5 feet of it.",
+        "pages": [
+          119
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "condition_would_end",
+        "description": "An effect would end a condition (param) on the creature.",
+        "params": [
+          "condition"
+        ],
+        "pages": [
+          121
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "acts_against_command",
+        "description": "The Charmed creature acts in a manner directly counter to the command.",
+        "pages": [
+          137
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "touches_effect",
+        "description": "A creature touches the spell's effect.",
+        "pages": [
+          122
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "tries_teleport_out",
+        "description": "A creature tries to use teleportation or interplanar travel to leave.",
+        "pages": [
+          133
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "comes_within_feet_of_target",
+        "description": "A creature comes within N feet (param) of the target.",
+        "params": [
+          "feet"
+        ],
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "damaged_by_target",
+        "description": "The creature is damaged by the spell's target.",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "passes_through_effect",
+        "description": "A creature reaches into or passes through the effect.",
+        "pages": [
+          155
+        ],
+        "lot": "L26"
+      },
+      {
+        "id": "targeted_by_attack_roll",
+        "description": "An attack roll is made against the creature (an effect ending on it is used up by that roll).",
+        "type": "event",
+        "pages": [
+          90,
+          110
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "steps_on_trap",
+        "description": "A creature steps on the trap's pressure plate.",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "takes_fire_damage",
+        "description": "The creature takes Fire damage.",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "dawn",
+        "description": "The next dawn: magic items regain charges and daily properties.",
+        "type": "event",
+        "pages": [
+          206
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "unequips_item",
+        "description": "The creature stops wearing or wielding the item (param: item).",
+        "type": "event",
+        "pages": [
+          210
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hood_lowered",
+        "description": "The wearer pulls the item's hood down (no action required).",
+        "type": "event",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "deals_damage_with_item",
+        "description": "A creature takes damage from the item (param: item).",
+        "type": "event",
+        "pages": [
+          209
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "ranged_attack_against_creature_within_feet",
+        "description": "An attacker makes a ranged attack roll against a target within N feet of the creature (param: feet).",
+        "type": "event",
+        "pages": [
+          211
+        ],
+        "params": [
+          "feet"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "draws_item",
+        "description": "The creature draws the item (param: item).",
+        "type": "event",
+        "pages": [
+          223
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "moved_against_will_along_ground",
+        "description": "An effect moves the creature against its will along the ground.",
+        "type": "event",
+        "pages": [
+          219
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "hour_elapsed",
+        "description": "An hour passes (end of each hour).",
+        "type": "event",
+        "pages": [
+          227
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "reads_item",
+        "description": "The creature attempts to read the item (param: item).",
+        "type": "event",
+        "pages": [
+          229
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "sees_reflection",
+        "description": "A creature sees its reflection in the item (param: item).",
+        "type": "event",
+        "pages": [
+          230
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "minutes_elapsed",
+        "description": "Every 10 minutes pass.",
+        "type": "event",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "succeeds_saving_throw",
+        "description": "The creature succeeds on a saving throw.",
+        "type": "event",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "targeted_by_attack_or_area",
+        "description": "The creature (or an ally within range) is targeted by an attack or saves against an area of effect.",
+        "type": "event",
+        "pages": [
+          243
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "expends_last_charge",
+        "description": "The item's last charge is expended.",
+        "type": "event",
+        "pages": [
+          206
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "midnight",
+        "description": "The stroke of midnight.",
+        "type": "event",
+        "pages": [
+          197
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "shaken_awake",
+        "description": "Another creature takes an action to shake the creature awake.",
+        "type": "event",
+        "pages": [
+          197
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "reaction_trigger",
+        "description": "The trigger stated in a stat block Reaction (its text is in the effect's note).",
+        "type": "event",
+        "pages": [
+          257
+        ],
+        "lot": "L33"
+      }
+    ],
+    "predicates": [
+      {
+        "id": "ability_score_below",
+        "description": "The creature's ability score (param) is below a value (param).",
+        "params": [
+          "ability",
+          "score"
+        ],
+        "type": "predicate",
+        "pages": [
+          89
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "adds_ability_mod_to_damage",
+        "description": "The attack already adds the ability modifier to its damage.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "appraising_detailed_item",
+        "description": "The check is made to appraise or inspect a highly detailed item.",
+        "type": "predicate",
+        "pages": [
+          98
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "attack_is",
+        "description": "The attack roll matches every given criterion: range (melee|ranged), via (weapon|spell|unarmed_strike), item (weapon or item slug, list of weapon slugs, or 'this'), property (weapon properties), weapon_kind (monk|pact|mastered|chosen), attack_kind (opportunity|light_property_extra|wild_shape_form|feature), feature (granting feature slug), ability (attack ability).",
+        "params": [
+          "range",
+          "via",
+          "item",
+          "property",
+          "weapon_kind",
+          "attack_kind",
+          "feature",
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "attack_targets_source",
+        "description": "The attack targets the source.",
+        "type": "predicate",
+        "pages": [
+          113
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "attacker_is_trigger_creature",
+        "description": "The attacker is the creature that caused the trigger.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attacker_perceives_with",
+        "description": "The attacker perceives the target with one of these senses (param).",
+        "params": [
+          "senses"
+        ],
+        "type": "predicate",
+        "pages": [
+          114
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "attuned_giant_item",
+        "description": "The creature wears and is attuned to a Belt of Giant Strength or Gauntlets of Ogre Power.",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "behind_cover",
+        "description": "The creature is behind cover of a degree ('half', 'three_quarters', 'total') or better.",
+        "params": [
+          "degree"
+        ],
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "beyond_long_range",
+        "description": "The target is beyond the attack's long (or single) range.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "beyond_normal_range",
+        "description": "The target is beyond the attack's normal range.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "big_enough_space",
+        "description": "The creature is in a space big enough for the new size.",
+        "type": "predicate",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "breaking_down_door",
+        "description": "The check is made to break down a door.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "can_hear_source",
+        "description": "The creature can hear the source.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "can_see",
+        "description": "The observer (who: the effect's owner by default, or attacker|source|target|...) can see the observed (target: the effect's target by default, or self|attacker|effect|...).",
+        "type": "predicate",
+        "pages": [
+          14
+        ],
+        "params": [
+          "who",
+          "target"
+        ]
+      },
+      {
+        "id": "can_speak_normally",
+        "description": "The creature can utter words in a normal speaking voice (not gagged or in magical silence).",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "can_use_item",
+        "description": "The creature meets the item's requirements to use it (param: item).",
+        "type": "predicate",
+        "pages": [
+          229
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "cast_level_1_plus_spell_this_turn",
+        "description": "The creature has already cast a level 1+ spell this turn.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_for_jump",
+        "description": "The check is part of a High or Long Jump.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_for_movement",
+        "description": "The check is made to move in one of these modes, e.g. climb or swim (param: modes).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "modes"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_to_control_item",
+        "description": "The check is made to control this item (param: item).",
+        "type": "predicate",
+        "pages": [
+          249
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "check_to_end_condition",
+        "description": "The ability check is made to end the condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "check_to_find_marked_target",
+        "description": "The check is made to find the marked creature.",
+        "type": "predicate",
+        "pages": [
+          141
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "check_to_remain_mounted",
+        "description": "The ability check is made to remain mounted.",
+        "type": "predicate",
+        "pages": [
+          100
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "check_uses",
+        "description": "The ability check uses: skill (id or 'any'), ability (id), tool, proficient (skill|tool|any, or false for a skill the creature lacks), adds_proficiency_bonus (true when it already adds it).",
+        "params": [
+          "skill",
+          "ability",
+          "tool",
+          "proficient",
+          "adds_proficiency_bonus"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "chosen_by_source",
+        "description": "The creature is one the source chose.",
+        "type": "predicate",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "concentrating",
+        "description": "The creature is concentrating on an effect.",
+        "type": "predicate",
+        "pages": [
+          179
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "consulting_accurate_source",
+        "description": "The creature consults an accurate source about the topic or place.",
+        "type": "predicate",
+        "pages": [
+          96
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "cr_at_most",
+        "description": "The form's Challenge Rating is at most N (param).",
+        "params": [
+          "cr"
+        ],
+        "type": "predicate",
+        "pages": [
+          108
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "cr_at_most_target",
+        "description": "The form's Challenge Rating is at most the target's (or its level).",
+        "type": "predicate",
+        "pages": [
+          153
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "creature_is",
+        "description": "The creature (who: target by default, or attacker|source) has one of these types, tags or species; chosen = the type fixed by an earlier choice (choice id or true).",
+        "params": [
+          "types",
+          "tags",
+          "species",
+          "who",
+          "chosen"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "creature_kind_specified",
+        "description": "The creature is of the kind specified when the spell was cast.",
+        "type": "predicate",
+        "pages": [
+          110
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "damage_from_falling",
+        "description": "The damage comes from a fall.",
+        "type": "predicate",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "damage_from_spell",
+        "description": "The damage comes from this spell (param).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          162
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "damage_reduced_to_zero",
+        "description": "The triggering attack's damage was reduced to 0.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "dead_at_least_days",
+        "description": "The creature has been dead at least N days (param).",
+        "params": [
+          "days"
+        ],
+        "type": "predicate",
+        "pages": [
+          159
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "deals_damage_type",
+        "description": "The weapon or attack deals the damage type (param).",
+        "params": [
+          "damage_type"
+        ],
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "doesnt_sleep",
+        "description": "The creature doesn't sleep.",
+        "type": "predicate",
+        "pages": [
+          163
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "effect_active",
+        "description": "An effect of the creature (param: entry slug, e.g. barbarian-rage) is active.",
+        "params": [
+          "effect"
+        ],
+        "type": "predicate",
+        "pages": [
+          28
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "effect_requires_seen_target",
+        "description": "The effect requires its target to be seen.",
+        "type": "predicate",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "failed_save_against_spell",
+        "description": "The damage results from failing a saving throw against a spell.",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "falls_into_liquid",
+        "description": "The fall ends in water or another liquid.",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "first_attack_this_turn",
+        "description": "It is the creature's first attack roll on its turn.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_advantage_on_roll",
+        "description": "The creature has Advantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_condition",
+        "description": "The creature has the condition (slug), optionally from a given source.",
+        "params": [
+          "condition",
+          "source"
+        ],
+        "type": "predicate",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "has_disadvantage_on_roll",
+        "description": "The creature has Disadvantage on the roll.",
+        "type": "predicate",
+        "pages": [
+          61
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_expertise",
+        "description": "The creature has Expertise in the skill used.",
+        "params": [
+          "skill"
+        ],
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_hand_free",
+        "description": "The creature has a hand free.",
+        "type": "predicate",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "has_head",
+        "description": "The creature has at least one head.",
+        "type": "predicate",
+        "pages": [
+          250
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_heroic_inspiration",
+        "description": "The creature has Heroic Inspiration.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "has_line_of_sight_to_source",
+        "description": "The creature has line of sight to the source.",
+        "type": "predicate",
+        "pages": [
+          130
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "has_marked_target",
+        "description": "The creature has a living sworn enemy or other marked target from the item.",
+        "type": "predicate",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_proficiency",
+        "description": "The creature has proficiency with the skill, tool, save or weapon used (param).",
+        "params": [
+          "item"
+        ],
+        "type": "predicate",
+        "pages": [
+          8
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "has_sense",
+        "description": "The creature has this sense (param: sense).",
+        "type": "predicate",
+        "pages": [
+          224
+        ],
+        "params": [
+          "sense"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "has_speed",
+        "description": "The creature has the movement mode (param).",
+        "params": [
+          "movement_mode"
+        ],
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "heals_other_creature",
+        "description": "The spell restores Hit Points to a creature other than the caster.",
+        "type": "predicate",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "helped_by_other_character",
+        "description": "Another character helps with the ram.",
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "hidden",
+        "description": "The creature is hidden (Hide action).",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "holds_bardic_inspiration_die",
+        "description": "The creature has an unexpended Bardic Inspiration die.",
+        "type": "predicate",
+        "pages": [
+          31
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "holds_melee_weapon",
+        "description": "The creature holds a Melee weapon.",
+        "type": "predicate",
+        "pages": [
+          56
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "hp_is",
+        "description": "The creature's Hit Points satisfy every given criterion: at_most N, below N, zero (0 HP), bloodied (half or fewer), missing_any (below maximum).",
+        "params": [
+          "at_most",
+          "below",
+          "zero",
+          "bloodied",
+          "missing_any"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "immune_to_condition",
+        "description": "The creature has Immunity to this condition (param).",
+        "params": [
+          "condition"
+        ],
+        "type": "predicate",
+        "pages": [
+          163
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "impersonating_costume_subject",
+        "description": "The check is made to impersonate the person or type the Costume represents.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "in_aura",
+        "description": "The creature is inside the source's aura (param: feature slug).",
+        "params": [
+          "aura"
+        ],
+        "type": "predicate",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_burning_webs",
+        "description": "The creature starts its turn in webs that are burning.",
+        "type": "predicate",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "in_combat",
+        "description": "The creature is in combat.",
+        "type": "predicate",
+        "pages": [
+          49
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "in_difficult_terrain",
+        "description": "The space is Difficult Terrain.",
+        "type": "predicate",
+        "pages": [
+          181
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_enemy_line_of_sight",
+        "description": "The creature is in any enemy's line of sight.",
+        "type": "predicate",
+        "pages": [
+          183
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "in_item_light",
+        "description": "The creature is within the light the item sheds (param: item).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "item"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "in_light",
+        "description": "The creature is in light of this level: bright|dim|darkness|sunlight.",
+        "params": [
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "in_spell_area",
+        "description": "The creature is in the spell's area.",
+        "type": "predicate",
+        "pages": [
+          137
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "influence_check",
+        "description": "The ability check is made to influence the creature.",
+        "type": "predicate",
+        "pages": [
+          182,
+          183
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "influencing_indifferent_humanoid_within_feet",
+        "description": "The check influences an Indifferent Humanoid within N feet (param).",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          99
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "interacting_with",
+        "description": "The check is made to interact with these creatures (param: creatures).",
+        "type": "predicate",
+        "pages": [
+          213
+        ],
+        "params": [
+          "creatures"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "is_ally",
+        "description": "The target is an ally of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          176
+        ]
+      },
+      {
+        "id": "is_chosen_spell",
+        "description": "The spell is the one chosen for this feature (param: choice id).",
+        "params": [
+          "choice"
+        ],
+        "type": "predicate",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "is_critical_hit",
+        "description": "The attack roll is a Critical Hit.",
+        "params": [],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "is_enemy",
+        "description": "The target is an enemy of the acting creature.",
+        "type": "predicate",
+        "pages": [
+          181
+        ]
+      },
+      {
+        "id": "is_monster",
+        "description": "The creature is a monster (controlled by the GM).",
+        "type": "predicate",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "item_form_in",
+        "description": "The item is in one of these forms (param: forms).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "forms"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_has_gem",
+        "description": "The item still has at least one gem of this type (param: gem).",
+        "type": "predicate",
+        "pages": [
+          225
+        ],
+        "params": [
+          "gem"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "item_state",
+        "description": "The item (slug, kind or 'this') is in this state for the creature: worn|wielded|held|possessed|attuned|touching|gripping|ridden|played|controlled|orbiting.",
+        "params": [
+          "item",
+          "state"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "item_variant_is",
+        "description": "The item is of this variant or linked type (param: variant).",
+        "type": "predicate",
+        "pages": [
+          237
+        ],
+        "params": [
+          "variant"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "known_wild_shape_form",
+        "description": "The Beast form is one the Druid has learned for Wild Shape.",
+        "type": "predicate",
+        "pages": [
+          42
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "lacks_ability_score",
+        "description": "The creature lacks the ability score the roll uses.",
+        "type": "predicate",
+        "pages": [
+          187
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "level_at_least",
+        "description": "The character has at least 'level' levels in 'class' (a class slug, a list of slugs = any of them), or in total when 'class' is omitted.",
+        "params": [
+          "class",
+          "level"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "leverage_applies",
+        "description": "The Crowbar's leverage can be applied to the Strength check.",
+        "type": "predicate",
+        "pages": [
+          97
+        ],
+        "lot": "L30"
+      },
+      {
+        "id": "marked_by_spell",
+        "description": "The target is currently marked by the source's spell (param: spell slug).",
+        "params": [
+          "spell"
+        ],
+        "type": "predicate",
+        "pages": [
+          59
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "marked_target_at_0_hp",
+        "description": "The creature marked by this spell has dropped to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "minutes_exceed_con_score",
+        "description": "Minutes spent in frigid water exceed the creature's Constitution score.",
+        "type": "predicate",
+        "pages": [
+          195
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "mounted",
+        "description": "The creature is riding a mount.",
+        "type": "predicate",
+        "pages": [
+          15
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "moved_on_foot_before",
+        "description": "The creature moved at least 'feet' on foot immediately before (jumps).",
+        "params": [
+          "feet"
+        ],
+        "type": "predicate",
+        "pages": [
+          183,
+          184
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "moved_this_turn",
+        "description": "The creature has moved during this turn.",
+        "type": "predicate",
+        "pages": [
+          62
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "moving_weight_over_carry",
+        "description": "The creature drags, lifts or pushes weight above its carrying capacity.",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "name_on_page",
+        "description": "The creature's name is on the Gift of the Protectors page.",
+        "type": "predicate",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "obscured",
+        "description": "The creature or thing looked at is in an area obscured to this degree: light|heavy.",
+        "params": [
+          "degree"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "obscured_by_larger_creature",
+        "description": "The creature is obscured only by a creature at least one size larger.",
+        "type": "predicate",
+        "pages": [
+          86
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "on_slippery_surface",
+        "description": "The creature is on a slippery surface, such as ice or oil.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "on_stone_surface",
+        "description": "The creature is on or touching a stone surface.",
+        "type": "predicate",
+        "pages": [
+          84
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "on_vessel",
+        "description": "The creature is on a boat or ship.",
+        "type": "predicate",
+        "pages": [
+          221
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "only_monk_weapons_or_unarmed",
+        "description": "The creature is unarmed or wields only Monk weapons.",
+        "type": "predicate",
+        "pages": [
+          50
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "out_of_breath",
+        "description": "The creature has run out of breath or is choking.",
+        "type": "predicate",
+        "pages": [
+          189
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "own_turn",
+        "description": "It is the creature's turn.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "phantasm_is_dangerous",
+        "description": "The phantasm represents a dangerous creature or hazard and the target is in or within 5 feet of it.",
+        "type": "predicate",
+        "pages": [
+          152
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "reduced_by_source",
+        "description": "The source reduced the creature to 0 Hit Points.",
+        "type": "predicate",
+        "pages": [
+          76
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "requires_hearing",
+        "description": "The ability check requires hearing.",
+        "type": "predicate",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "requires_sight",
+        "description": "The ability check requires sight.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "resource_available",
+        "description": "The creature has at least one unexpended use of this resource (param).",
+        "params": [
+          "resource"
+        ],
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "resource_empty",
+        "description": "The creature has no uses of this resource left (param).",
+        "params": [
+          "resource"
+        ],
+        "type": "predicate",
+        "pages": [
+          43
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "roll_is",
+        "description": "The triggering roll is of this kind (param: roll).",
+        "params": [
+          "roll"
+        ],
+        "type": "predicate",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "roll_succeeded",
+        "description": "The roll (param) succeeds.",
+        "params": [
+          "roll"
+        ],
+        "type": "predicate",
+        "pages": [
+          35
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "roll_uses_ability",
+        "description": "The D20 Test uses this ability (param).",
+        "params": [
+          "ability"
+        ],
+        "type": "predicate",
+        "pages": [
+          157
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "roller_is_source",
+        "description": "The creature making the roll is the source of this effect (e.g. the charmer).",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "same_plane_as_target",
+        "description": "The creature and the target are on the same plane of existence.",
+        "type": "predicate",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "save_against",
+        "description": "The saving throw is against: source (spell|magic|spell_or_magic|contagion), spell (slug), condition (slug), hazard (slug), types (creature types causing the effect), effect (kind of effect, e.g. breath_weapon, possession), kind (concentration), modified_by (e.g. extended_spell).",
+        "params": [
+          "source",
+          "spell",
+          "condition",
+          "hazard",
+          "types",
+          "effect",
+          "kind",
+          "modified_by"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "size_at_most_relative",
+        "description": "The affected creature is Tiny or 'steps' or more sizes smaller than the other creature.",
+        "params": [
+          "steps"
+        ],
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "social_interaction",
+        "description": "The ability check is made to interact socially with the affected creature.",
+        "type": "predicate",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "source_in_line_of_sight",
+        "description": "The source of the effect is within the affected creature's line of sight.",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "space_occupied",
+        "description": "The arrival space is occupied.",
+        "type": "predicate",
+        "pages": [
+          129
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "speed_is_zero",
+        "description": "The creature's Speed is 0.",
+        "type": "predicate",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "spell_cast_with_slot",
+        "description": "The spell was cast with a spell slot.",
+        "type": "predicate",
+        "pages": [
+          40
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_casting_time",
+        "description": "The spell has this casting time (param).",
+        "params": [
+          "time"
+        ],
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_duration_at_least_minutes",
+        "description": "The spell's duration is at least N minutes (param).",
+        "params": [
+          "minutes"
+        ],
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_level_above_castable",
+        "description": "The spell is of a higher level than the creature can normally cast.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "spell_level_in",
+        "description": "The spell, as cast, is of a level within [min, max] (either bound optional).",
+        "params": [
+          "min",
+          "max"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "spell_of_class",
+        "description": "The spell is a spell of this class for the creature; cantrip limits it to cantrips.",
+        "params": [
+          "class",
+          "cantrip"
+        ],
+        "type": "predicate",
+        "pages": [
+          9
+        ]
+      },
+      {
+        "id": "spell_on_your_list",
+        "description": "The spell is on the creature's spell list.",
+        "type": "predicate",
+        "pages": [
+          244
+        ],
+        "lot": "L32"
+      },
+      {
+        "id": "spell_school",
+        "description": "The spell belongs to this school (param).",
+        "params": [
+          "school"
+        ],
+        "type": "predicate",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spell_targeted_only_you",
+        "description": "The spell targets only the creature and creates no area of effect.",
+        "type": "predicate",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "spell_targets_more_at_higher_level",
+        "description": "The spell can be cast with a higher-level slot to target an additional creature.",
+        "type": "predicate",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spent_focus_point",
+        "description": "A Focus Point was expended for the triggering use.",
+        "type": "predicate",
+        "pages": [
+          51
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "spirit_restrains_creature",
+        "description": "The spirit already has a creature Restrained.",
+        "type": "predicate",
+        "pages": [
+          119
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "stable",
+        "description": "The creature is Stable.",
+        "type": "predicate",
+        "pages": [
+          18,
+          188
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "target_grappled_by_source",
+        "description": "The target has the Grappled condition from the source.",
+        "type": "predicate",
+        "pages": [
+          87
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "target_in_area",
+        "description": "The attack's target is within the spell's area.",
+        "type": "predicate",
+        "pages": [
+          146
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "target_is_marked",
+        "description": "The target is the creature marked by this spell.",
+        "type": "predicate",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "target_is_object",
+        "description": "The target is an object.",
+        "type": "predicate",
+        "pages": [
+          248
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "target_is_source",
+        "description": "The target of the roll is the source of this effect (e.g. the grappler).",
+        "type": "predicate",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_size_at_most",
+        "description": "The target is of this size or smaller (param: size).",
+        "params": [
+          "size"
+        ],
+        "type": "predicate",
+        "pages": [
+          254
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "terrain_from",
+        "description": "The Difficult Terrain is created by these (param: source).",
+        "type": "predicate",
+        "pages": [
+          214
+        ],
+        "params": [
+          "source"
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "took_damage_since_turn_start",
+        "description": "The creature took damage since the start of its last turn.",
+        "type": "predicate",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "travel_hours_over",
+        "description": "The group has traveled more than N hours today (param: hours).",
+        "params": [
+          "hours"
+        ],
+        "type": "predicate",
+        "pages": [
+          192
+        ],
+        "lot": "L41"
+      },
+      {
+        "id": "underwater",
+        "description": "The creature or attack is underwater.",
+        "type": "predicate",
+        "pages": [
+          16
+        ],
+        "lot": "L04"
+      },
+      {
+        "id": "used_bonus_action",
+        "description": "The triggering feature was activated with a Bonus Action.",
+        "type": "predicate",
+        "pages": [
+          48
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_feature_this_trigger",
+        "description": "The creature used this feature (param) for the same trigger.",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          52
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "used_since_long_rest",
+        "description": "The feature (param) was already used since the last Long Rest.",
+        "params": [
+          "feature"
+        ],
+        "type": "predicate",
+        "pages": [
+          82
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "using_shield",
+        "description": "The creature uses a Shield.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "using_untrained_shield",
+        "description": "The creature uses a Shield it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "wearing_armor",
+        "description": "The creature wears armor of the category (param: light, medium, heavy).",
+        "params": [
+          "category"
+        ],
+        "type": "predicate",
+        "pages": [
+          92
+        ]
+      },
+      {
+        "id": "wearing_armor_any",
+        "description": "The creature wears any armor.",
+        "type": "predicate",
+        "pages": [
+          29
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "wearing_untrained_armor",
+        "description": "The creature wears Light, Medium or Heavy armor it lacks training with.",
+        "type": "predicate",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "wielded_two_handed",
+        "description": "The weapon is held with two hands.",
+        "type": "predicate",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "within_feet",
+        "description": "A creature (who: self by default, or attacker|ally|enemy|...) is within 'feet' of the reference (of: self by default, or target|item|effect); not_incapacitated / sees qualify that creature; farther inverts the test (more than 'feet').",
+        "params": [
+          "who",
+          "of",
+          "feet",
+          "item",
+          "not_incapacitated",
+          "sees",
+          "farther"
+        ],
+        "type": "predicate",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      }
+    ],
+    "frequencies": [
+      {
+        "id": "turn",
+        "description": "Once per turn.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "round",
+        "description": "Once per round.",
+        "pages": [
+          13
+        ]
+      },
+      {
+        "id": "short_rest",
+        "description": "Recovers when a Short or Long Rest is finished.",
+        "pages": [
+          187
+        ]
+      },
+      {
+        "id": "long_rest",
+        "description": "Recovers when a Long Rest is finished.",
+        "pages": [
+          185
+        ]
+      },
+      {
+        "id": "day",
+        "description": "Per day: recovers when a Long Rest is finished.",
+        "pages": [
+          186
+        ]
+      },
+      {
+        "id": "dawn",
+        "description": "Recovers at the next dawn.",
+        "pages": [
+          206
+        ]
+      },
+      {
+        "id": "instance",
+        "description": "Once per instance of damage.",
+        "pages": [
+          17
+        ],
+        "lot": "L06"
+      },
+      {
+        "id": "improve_fate",
+        "description": "Until the creature rolls Initiative or finishes a Short or Long Rest.",
+        "pages": [
+          88
+        ],
+        "lot": "L15"
+      },
+      {
+        "id": "hour",
+        "description": "Can't be used again for 1 hour.",
+        "pages": [
+          218
+        ],
+        "lot": "L31"
+      }
+    ],
+    "damage_types": [
+      {
+        "id": "acid",
+        "name": "Acid",
+        "description": "Corrosive liquids, digestive enzymes",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "bludgeoning",
+        "name": "Bludgeoning",
+        "description": "Blunt objects, constriction, falling",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "cold",
+        "name": "Cold",
+        "description": "Freezing water, icy blasts",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "fire",
+        "name": "Fire",
+        "description": "Flames, unbearable heat",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "force",
+        "name": "Force",
+        "description": "Pure magical energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "lightning",
+        "name": "Lightning",
+        "description": "Electricity",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "necrotic",
+        "name": "Necrotic",
+        "description": "Life-draining energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "piercing",
+        "name": "Piercing",
+        "description": "Fangs, puncturing objects",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "poison",
+        "name": "Poison",
+        "description": "Toxic gas, venom",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "psychic",
+        "name": "Psychic",
+        "description": "Mind-rending energy",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "radiant",
+        "name": "Radiant",
+        "description": "Holy energy, searing radiation",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "slashing",
+        "name": "Slashing",
+        "description": "Claws, cutting objects",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "thunder",
+        "name": "Thunder",
+        "description": "Concussive sound",
+        "pages": [
+          180
+        ]
+      }
+    ],
+    "sizes": [
+      {
+        "id": "tiny",
+        "name": "Tiny",
+        "description": "Space 2½ by 2½ feet; 4 per square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "small",
+        "name": "Small",
+        "description": "Space 5 by 5 feet; 1 square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "medium",
+        "name": "Medium",
+        "description": "Space 5 by 5 feet; 1 square.",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "large",
+        "name": "Large",
+        "description": "Space 10 by 10 feet; 4 squares (2 by 2).",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "huge",
+        "name": "Huge",
+        "description": "Space 15 by 15 feet; 9 squares (3 by 3).",
+        "pages": [
+          14
+        ]
+      },
+      {
+        "id": "gargantuan",
+        "name": "Gargantuan",
+        "description": "Space 20 by 20 feet; 16 squares (4 by 4).",
+        "pages": [
+          14
+        ]
+      }
+    ],
+    "creature_types": [
+      {
+        "id": "aberration",
+        "name": "Aberration",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "beast",
+        "name": "Beast",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "celestial",
+        "name": "Celestial",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "construct",
+        "name": "Construct",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "dragon",
+        "name": "Dragon",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "elemental",
+        "name": "Elemental",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fey",
+        "name": "Fey",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fiend",
+        "name": "Fiend",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "giant",
+        "name": "Giant",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "humanoid",
+        "name": "Humanoid",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "monstrosity",
+        "name": "Monstrosity",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "ooze",
+        "name": "Ooze",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "plant",
+        "name": "Plant",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "undead",
+        "name": "Undead",
+        "description": "Creature type.",
+        "pages": [
+          179
+        ]
+      }
+    ],
+    "area_shapes": [
+      {
+        "id": "cone",
+        "name": "Cone",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cone",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "cube",
+        "name": "Cube",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cube",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "cylinder",
+        "name": "Cylinder",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/cylinder",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "emanation",
+        "name": "Emanation",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/emanation",
+        "pages": [
+          181
+        ]
+      },
+      {
+        "id": "line",
+        "name": "Line",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/line",
+        "pages": [
+          184
+        ]
+      },
+      {
+        "id": "sphere",
+        "name": "Sphere",
+        "description": "Area of effect shape.",
+        "ref": "dnd5e/area/sphere",
+        "pages": [
+          188
+        ]
+      }
+    ],
+    "senses": [
+      {
+        "id": "blindsight",
+        "name": "Blindsight",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/blindsight",
+        "pages": [
+          177
+        ]
+      },
+      {
+        "id": "darkvision",
+        "name": "Darkvision",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/darkvision",
+        "pages": [
+          180
+        ]
+      },
+      {
+        "id": "tremorsense",
+        "name": "Tremorsense",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/tremorsense",
+        "pages": [
+          190
+        ]
+      },
+      {
+        "id": "truesight",
+        "name": "Truesight",
+        "description": "Special sense.",
+        "ref": "dnd5e/rule/truesight",
+        "pages": [
+          190
+        ]
+      },
+      {
+        "id": "divine_sense",
+        "description": "Knows the location and type of Celestials, Fiends and Undead, and consecrated or desecrated places and objects, within range.",
+        "pages": [
+          54
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "devils_sight",
+        "description": "See normally in Dim Light and Darkness, both magical and nonmagical, within range.",
+        "pages": [
+          72
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "shared_senses",
+        "description": "Perceive through another creature's senses.",
+        "pages": [
+          73
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "detect_creature_types",
+        "description": "Sense the location of creatures of certain types within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "detect_magic",
+        "description": "Sense the presence of magical effects within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "detect_poison_and_disease",
+        "description": "Sense poisons, poisonous or venomous creatures, and magical contagions within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "sense_thoughts",
+        "description": "Sense the presence of thinking creatures within range.",
+        "pages": [
+          124
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "know_target_location",
+        "description": "Always know the target's location (same plane).",
+        "pages": [
+          149
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "see_invisible",
+        "description": "See Invisible creatures and objects as if visible.",
+        "pages": [
+          161
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "see_ethereal",
+        "description": "See into the Ethereal Plane.",
+        "pages": [
+          161
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "know_route",
+        "description": "Know the distance, direction and most direct path to a named destination.",
+        "pages": [
+          132
+        ],
+        "lot": "L23"
+      },
+      {
+        "id": "xray_vision",
+        "description": "X-ray vision: solid objects within range appear transparent.",
+        "pages": [
+          239
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "telepathy",
+        "description": "Telepathic communication within a range.",
+        "pages": [
+          226
+        ],
+        "lot": "L31"
+      }
+    ],
+    "movement_modes": [
+      {
+        "id": "walk",
+        "name": "Speed",
+        "description": "Normal Speed.",
+        "ref": "dnd5e/rule/speed",
+        "pages": [
+          188
+        ]
+      },
+      {
+        "id": "burrow",
+        "name": "Burrow Speed",
+        "description": "Burrow Speed.",
+        "ref": "dnd5e/rule/burrow-speed",
+        "pages": [
+          178
+        ]
+      },
+      {
+        "id": "climb",
+        "name": "Climb Speed",
+        "description": "Climb Speed.",
+        "ref": "dnd5e/rule/climb-speed",
+        "pages": [
+          179
+        ]
+      },
+      {
+        "id": "fly",
+        "name": "Fly Speed",
+        "description": "Fly Speed.",
+        "ref": "dnd5e/rule/fly-speed",
+        "pages": [
+          182
+        ]
+      },
+      {
+        "id": "swim",
+        "name": "Swim Speed",
+        "description": "Swim Speed.",
+        "ref": "dnd5e/rule/swim-speed",
+        "pages": [
+          189
+        ]
+      }
+    ],
+    "alignments": [
+      {
+        "id": "lawful_good",
+        "name": "Lawful Good (LG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral_good",
+        "name": "Neutral Good (NG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_good",
+        "name": "Chaotic Good (CG)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "lawful_neutral",
+        "name": "Lawful Neutral (LN)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral",
+        "name": "Neutral (N)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_neutral",
+        "name": "Chaotic Neutral (CN)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "lawful_evil",
+        "name": "Lawful Evil (LE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "neutral_evil",
+        "name": "Neutral Evil (NE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "chaotic_evil",
+        "name": "Chaotic Evil (CE)",
+        "description": "Alignment.",
+        "pages": [
+          21,
+          22
+        ]
+      },
+      {
+        "id": "unaligned",
+        "name": "Unaligned",
+        "description": "Creatures that lack the capacity for rational thought don't have alignments.",
+        "pages": [
+          22
+        ]
+      }
+    ],
+    "restrictions": [
+      {
+        "id": "see",
+        "description": "The creature can't see.",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "hear",
+        "description": "The creature can't hear.",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "speak",
+        "description": "The creature can't speak.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_actions",
+        "description": "The creature can't take any action.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_bonus_actions",
+        "description": "The creature can't take any Bonus Action.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "take_reactions",
+        "description": "The creature can't take any Reaction.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "maintain_concentration",
+        "description": "The creature's Concentration is broken and can't be kept.",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "increase_speed",
+        "description": "The creature's Speed can't increase.",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "move_closer_to_source",
+        "description": "The creature can't willingly move closer to the source of the effect.",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "attack_source",
+        "description": "The creature can't attack the source of the effect.",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "target_source_harmfully",
+        "description": "The creature can't target the source with damaging abilities or magical effects.",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "move_except_crawl",
+        "description": "The creature's only movement options are to crawl or to stand up.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "age",
+        "description": "The creature ceases aging.",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "aware_of_surroundings",
+        "description": "The creature is unaware of its surroundings.",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "hold_items",
+        "description": "The creature drops whatever it's holding.",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "cast_spells",
+        "description": "The creature can't cast spells.",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "shield_ac_bonus",
+        "description": "The creature doesn't gain a Shield's AC bonus.",
+        "pages": [
+          177
+        ],
+        "lot": "L08"
+      },
+      {
+        "id": "make_opportunity_attacks",
+        "description": "The creature can't make Opportunity Attacks.",
+        "pages": [
+          30
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "more_than_one_of_move_action_bonus_action",
+        "description": "On its turns, can do only one of: move, take an action, or take a Bonus Action.",
+        "pages": [
+          55
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "attack_rolls_against_have_advantage",
+        "description": "No attack roll can have Advantage against the creature.",
+        "pages": [
+          63
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "cast_level_1_plus_spells",
+        "description": "The creature can't cast a level 1+ spell.",
+        "pages": [
+          67
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "need_sleep",
+        "description": "The creature doesn't need to sleep.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "magical_sleep",
+        "description": "Magic can't put the creature to sleep.",
+        "pages": [
+          85
+        ],
+        "lot": "L14"
+      },
+      {
+        "id": "regain_hit_points",
+        "description": "The creature can't regain Hit Points.",
+        "pages": [
+          115
+        ],
+        "lot": "L17"
+      },
+      {
+        "id": "benefit_from_invisible",
+        "description": "The creature can't benefit from the Invisible condition.",
+        "pages": [
+          165
+        ],
+        "lot": "L17"
+      },
+      {
+        "id": "move",
+        "description": "The creature can't move.",
+        "pages": [
+          117
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "end_prone_on_self",
+        "description": "The creature can't end the Prone condition on itself.",
+        "pages": [
+          140
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "target_warded_creature",
+        "description": "The creature can't target the warded creature with this attack or spell.",
+        "pages": [
+          161
+        ],
+        "lot": "L18"
+      },
+      {
+        "id": "cast_verbal_spells",
+        "description": "The creature can't cast a spell that includes a Verbal component.",
+        "pages": [
+          163
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "speak_deliberate_lie",
+        "description": "The creature can't speak a deliberate lie.",
+        "pages": [
+          174
+        ],
+        "lot": "L19"
+      },
+      {
+        "id": "attack",
+        "description": "The creature can't attack.",
+        "pages": [
+          134
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "enter_area_nonmagically",
+        "description": "The creature can't willingly enter the area by nonmagical means.",
+        "pages": [
+          146
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "action_and_bonus_action_same_turn",
+        "description": "The creature can take either an action or a Bonus Action on its turn, not both.",
+        "pages": [
+          163
+        ],
+        "lot": "L20"
+      },
+      {
+        "id": "hp_max_reduced",
+        "description": "The creature's Hit Point maximum can't be reduced.",
+        "pages": [
+          111
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "speed_reduced_by_magic",
+        "description": "Spells and other magical effects can't reduce the creature's Speed.",
+        "pages": [
+          134
+        ],
+        "lot": "L21"
+      },
+      {
+        "id": "pass_or_reach_through_barrier",
+        "description": "The creature can't pass or reach through the barrier.",
+        "pages": [
+          109
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "benefit_from_rest",
+        "description": "The creature gains no benefit from its rest.",
+        "pages": [
+          127
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "enter_area_willingly",
+        "description": "The creature can't willingly enter the area.",
+        "pages": [
+          139
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "teleport_or_planar_travel_in_area",
+        "description": "The creature can't enter or exit the area by teleportation or interplanar travel.",
+        "pages": [
+          139
+        ],
+        "lot": "L22"
+      },
+      {
+        "id": "actions_other_than_dash_or_magic",
+        "description": "The creature can take only the Dash action or a Magic action.",
+        "pages": [
+          173
+        ],
+        "lot": "L23"
+      },
+      {
+        "id": "targeted_by_divination",
+        "description": "The creature can't be targeted by Divination spells.",
+        "pages": [
+          161
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "detected_or_viewed_by_magic",
+        "description": "The creature can't be detected by magic or viewed remotely with magic.",
+        "pages": [
+          161
+        ],
+        "lot": "L24"
+      },
+      {
+        "id": "take_magic_action",
+        "description": "The creature can't take the Magic action.",
+        "pages": [
+          113
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "create_magical_effects",
+        "description": "The creature can't create magical effects.",
+        "pages": [
+          109
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "sensed_read_or_located_by_magic",
+        "description": "Magic can't sense the creature's emotions or alignment, read its thoughts or locate it.",
+        "pages": [
+          149
+        ],
+        "lot": "L25"
+      },
+      {
+        "id": "ranged_weapon_attacks",
+        "description": "Ranged attacks with weapons are impossible.",
+        "pages": [
+          165
+        ],
+        "lot": "L26"
+      },
+      {
+        "id": "attack_beyond_long_range",
+        "description": "The creature can't attack a target beyond the weapon's long range.",
+        "pages": [
+          90
+        ],
+        "lot": "L28"
+      },
+      {
+        "id": "half_cover_against_spell_attacks",
+        "description": "Half Cover applies against your spell attack rolls.",
+        "pages": [
+          251
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "resistance_to_slashing_applies",
+        "description": "The target's Resistance to Slashing damage applies to this weapon's damage.",
+        "pages": [
+          250
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "cover_benefit_half_three_quarters",
+        "description": "Benefit from Half Cover or Three-Quarters Cover against the attack.",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "long_range_disadvantage",
+        "description": "Suffer Disadvantage due to long range.",
+        "pages": [
+          233
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "read_thoughts_or_lie_detection_by_magic",
+        "description": "Be affected by magic that reads thoughts, detects lies, or reveals alignment or creature type.",
+        "pages": [
+          238
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "actions_other_than_dash_or_escape",
+        "description": "Take actions other than Dash or trying to escape an effect that prevents movement (Dodge if it can't move).",
+        "pages": [
+          229
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "need_food_or_drink",
+        "description": "Need to eat or drink.",
+        "pages": [
+          228
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "end_attunement_voluntarily",
+        "description": "Voluntarily end Attunement to the item.",
+        "pages": [
+          218
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "speed_reduced_by_encumbrance_or_heavy_armor",
+        "description": "Speed reduced by carrying weight over capacity or wearing Heavy Armor.",
+        "pages": [
+          214
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "caught_in_webs",
+        "description": "Be caught in webs of any sort.",
+        "pages": [
+          215
+        ],
+        "lot": "L31"
+      },
+      {
+        "id": "provoke_opportunity_attack_when_flying_out_of_reach",
+        "description": "Provoke Opportunity Attacks when flying out of an enemy's reach.",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "shape_changed",
+        "description": "Have its shape changed (shape-shifting effects).",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
+      },
+      {
+        "id": "web_movement_restrictions",
+        "description": "Be subject to movement restrictions caused by webs.",
+        "pages": [
+          256
+        ],
+        "lot": "L33"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "blinded",
+        "name": "Blinded",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/blinded",
+        "pages": [
+          177
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "charmed",
+        "name": "Charmed",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/charmed",
+        "pages": [
+          178
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "deafened",
+        "name": "Deafened",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/deafened",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "exhaustion",
+        "name": "Exhaustion",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/exhaustion",
+        "pages": [
+          181
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "frightened",
+        "name": "Frightened",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/frightened",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "grappled",
+        "name": "Grappled",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/grappled",
+        "pages": [
+          182
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "incapacitated",
+        "name": "Incapacitated",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/incapacitated",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "invisible",
+        "name": "Invisible",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/invisible",
+        "pages": [
+          184
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "paralyzed",
+        "name": "Paralyzed",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/paralyzed",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "petrified",
+        "name": "Petrified",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/petrified",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "poisoned",
+        "name": "Poisoned",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/poisoned",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "prone",
+        "name": "Prone",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/prone",
+        "pages": [
+          186
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "restrained",
+        "name": "Restrained",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/restrained",
+        "pages": [
+          187
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "stunned",
+        "name": "Stunned",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/stunned",
+        "pages": [
+          189
+        ],
+        "lot": "L03"
+      },
+      {
+        "id": "unconscious",
+        "name": "Unconscious",
+        "description": "Condition.",
+        "ref": "dnd5e/condition/unconscious",
+        "pages": [
+          191
+        ],
+        "lot": "L03"
+      }
+    ],
+    "attitudes": [
+      {
+        "id": "friendly",
+        "name": "Friendly",
+        "description": "Views you favorably.",
+        "ref": "dnd5e/attitude/friendly",
+        "pages": [
+          182
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "indifferent",
+        "name": "Indifferent",
+        "description": "No desire to help or hinder; the default attitude of a monster.",
+        "ref": "dnd5e/attitude/indifferent",
+        "pages": [
+          184
+        ],
+        "lot": "L05"
+      },
+      {
+        "id": "hostile",
+        "name": "Hostile",
+        "description": "Views you unfavorably.",
+        "ref": "dnd5e/attitude/hostile",
+        "pages": [
+          183
+        ],
+        "lot": "L05"
+      }
+    ],
+    "pools": [
+      {
+        "id": "hit_point_dice",
+        "name": "Hit Point Dice",
+        "description": "Hit Point Dice available to spend (spent dice are tracked).",
+        "pages": [
+          183
+        ],
+        "lot": "L07"
+      },
+      {
+        "id": "spell_slot",
+        "name": "Spell Slots",
+        "description": "Spell slots by level (param: level).",
+        "pages": [
+          104
+        ],
+        "lot": "L09"
+      }
+    ],
+    "schools": [
+      {
+        "id": "abjuration",
+        "name": "Abjuration",
+        "description": "Prevents or reverses harmful effects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "conjuration",
+        "name": "Conjuration",
+        "description": "Transports creatures or objects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "divination",
+        "name": "Divination",
+        "description": "Reveals information",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "enchantment",
+        "name": "Enchantment",
+        "description": "Influences minds",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "evocation",
+        "name": "Evocation",
+        "description": "Channels energy to create effects that are often destructive",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "illusion",
+        "name": "Illusion",
+        "description": "Deceives the mind or senses",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "necromancy",
+        "name": "Necromancy",
+        "description": "Manipulates life and death",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      },
+      {
+        "id": "transmutation",
+        "name": "Transmutation",
+        "description": "Transforms creatures or objects",
+        "pages": [
+          105
+        ],
+        "lot": "L09"
+      }
+    ]
+  },
+  "abbreviations": {
+    "AC": "Armor Class",
+    "C": "Concentration",
+    "CE": "Chaotic Evil",
+    "CG": "Chaotic Good",
+    "Cha.": "Charisma",
+    "CN": "Chaotic Neutral",
+    "Con.": "Constitution",
+    "CP": "Copper Piece(s)",
+    "CR": "Challenge Rating",
+    "DC": "Difficulty Class",
+    "Dex.": "Dexterity",
+    "EP": "Electrum Piece(s)",
+    "GM": "Game Master",
+    "GP": "Gold Piece(s)",
+    "HP": "Hit Point(s)",
+    "Int.": "Intelligence",
+    "LE": "Lawful Evil",
+    "LG": "Lawful Good",
+    "LN": "Lawful Neutral",
+    "M": "Material component",
+    "N": "Neutral",
+    "NE": "Neutral Evil",
+    "NG": "Neutral Good",
+    "NPC": "Nonplayer character",
+    "PB": "Proficiency Bonus",
+    "PP": "Platinum Piece(s)",
+    "R": "Ritual",
+    "S": "Somatic component",
+    "SP": "Silver Piece(s)",
+    "Str.": "Strength",
+    "V": "Verbal component",
+    "Wis.": "Wisdom",
+    "XP": "Experience Point(s)"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell-list/circle-of-the-land-spells-arid-land",
+  "kind": "spell-list",
+  "name": "Circle of the Land Spells: Arid Land",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Circle of the Land Spells: Arid Land",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L27"
+  },
+  "tier": 1,
+  "text": "##### Arid Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Blur*, *Burning Hands*, *Fire Bolt* |\n| 5 | *Fireball* |\n| 7 | *Blight* |\n| 9 | *Wall of Stone* |",
+  "facets": {
+    "class": "dnd5e/class/druid",
+    "subclass_list": true,
+    "spell_count": 6
+  },
+  "data": {
+    "class": "dnd5e/class/druid",
+    "granted_by": "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "always_prepared": true,
+    "by_level": [
+      {
+        "class_level": 3,
+        "spells": [
+          "dnd5e/spell/blur",
+          "dnd5e/spell/burning-hands",
+          "dnd5e/spell/fire-bolt"
+        ]
+      },
+      {
+        "class_level": 5,
+        "spells": [
+          "dnd5e/spell/fireball"
+        ]
+      },
+      {
+        "class_level": 7,
+        "spells": [
+          "dnd5e/spell/blight"
+        ]
+      },
+      {
+        "class_level": 9,
+        "spells": [
+          "dnd5e/spell/wall-of-stone"
+        ]
+      }
+    ],
+    "spells": [
+      "dnd5e/spell/blur",
+      "dnd5e/spell/burning-hands",
+      "dnd5e/spell/fire-bolt",
+      "dnd5e/spell/fireball",
+      "dnd5e/spell/blight",
+      "dnd5e/spell/wall-of-stone"
+    ]
+  },
+  "coverage": [
+    {
+      "text": "##### Arid Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Blur*, *Burning Hands*, *Fire Bolt* |\n| 5 | *Fireball* |\n| 7 | *Blight* |\n| 9 | *Wall of Stone* |",
+      "status": "structured",
+      "by": [
+        "/data/by_level",
+        "/data/spells",
+        "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/spell/blight",
+    "dnd5e/spell/blur",
+    "dnd5e/spell/burning-hands",
+    "dnd5e/spell/fire-bolt",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/wall-of-stone"
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/satyr",
+  "kind": "creature",
+  "name": "Satyr",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      321,
+      322
+    ],
+    "section": "Monsters A–Z/Satyr/Satyr",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Fey, Chaotic Neutral*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 31 (7d8)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |\n| **Int** | 12 | +1 | +1 | **Wis** 10 | +0 | +0 | **Cha** 14 | +2 | +2 |\n\n**Skills** Perception +2, Performance +6, Stealth +5\n\n**Senses** Passive Perception 12\n\n**Languages** Common, Elvish, Sylvan\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Magic Resistance.*** The satyr has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Hooves.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself.\n\n***Mockery.*** *Wisdom Saving Throw:* DC 12, one creature the satyr can see within 90 feet. *Failure:* 5 (1d6 + 2) Psychic damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Chaotic Neutral",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Chaotic Neutral",
+    "type_line": "Medium Fey, Chaotic Neutral",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 31,
+      "formula": "7d8",
+      "text": "31 (7d8)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "performance": 6,
+      "stealth": 5,
+      "text": "Perception +2, Performance +6, Stealth +5"
+    },
+    "senses": {
+      "text": "Passive Perception 12",
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Common, Elvish, Sylvan"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "text": "The satyr has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hooves",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself."
+      },
+      {
+        "name": "Mockery",
+        "text": "*Wisdom Saving Throw:* DC 12, one creature the satyr can see within 90 feet. *Failure:* 5 (1d6 + 2) Psychic damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Hooves",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Mockery",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 12,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 90
+            },
+            "text": "one creature the satyr can see within 90 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  2
+                ]
+              },
+              "damage_type": "psychic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_hooves_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Hooves as written.",
+      "source_text": "5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fey, Chaotic Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 31 (7d8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 16 | +3 | +3 | **Con** 11 | +0 | +0 |\n| **Int** | 12 | +1 | +1 | **Wis** 10 | +0 | +0 | **Cha** 14 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2, Performance +6, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Elvish, Sylvan",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The satyr has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Hooves.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/1",
+        "md:actions_hooves_rider"
+      ]
+    },
+    {
+      "text": "***Mockery.*** *Wisdom Saving Throw:* DC 12, one creature the satyr can see within 90 feet. *Failure:* 5 (1d6 + 2) Psychic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    }
+  ]
+}

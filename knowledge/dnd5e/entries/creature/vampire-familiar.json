@@ -1,0 +1,385 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/vampire-familiar",
+  "kind": "creature",
+  "name": "Vampire Familiar",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      334
+    ],
+    "section": "Monsters A–Z/Vampires/Vampire Familiar",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Humanoid, Neutral Evil*\n\n| **AC** 15 | **Initiative** +5 (15) |\n\n**HP** 65 (10d8 + 20)\n\n**Speed** 30 ft., Climb 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 16 | +3 | +5 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +2 | **Cha** 14 | +2 | +2 |\n\n**Skills** Perception +4, Persuasion +4, Stealth +7\n\n**Resistances** Necrotic\n\n**Immunities** Charmed (except from its vampire master)\n\n**Gear** Daggers (10)\n\n**Senses** Darkvision 60 ft.; Passive Perception 14\n\n**Languages** Common plus one other language\n\n**CR** 3 (XP 700; PB +2)\n\n##### Traits\n\n***Vampiric Connection.*** While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar’s senses.\n\n##### Actions\n\n***Multiattack.*** The familiar makes two Umbral Dagger attacks.\n\n***Umbral Dagger.*** *Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 20/60 ft. *Hit:* 5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition.\n\n##### Bonus Actions\n\n***Deathless Agility.*** The familiar takes the Dash or Disengage action.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral Evil",
+    "cr": "3"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium or Small Humanoid, Neutral Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 65,
+      "formula": {
+        "op": "add",
+        "args": [
+          "10d8",
+          20
+        ]
+      },
+      "text": "65 (10d8 + 20)"
+    },
+    "speed": {
+      "text": "30 ft., Climb 30 ft.",
+      "walk": 30,
+      "climb": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 5
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 2
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "perception": 4,
+      "persuasion": 4,
+      "stealth": 7,
+      "text": "Perception +4, Persuasion +4, Stealth +7"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic"
+      ],
+      "text": "Necrotic"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [],
+      "text": "Charmed (except from its vampire master)"
+    },
+    "gear": {
+      "text": "Daggers (10)"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 14",
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "3",
+      "xp": 700,
+      "proficiency_bonus": 2,
+      "text": "3 (XP 700; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Vampiric Connection",
+        "text": "While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar’s senses."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The familiar makes two Umbral Dagger attacks."
+      },
+      {
+        "name": "Umbral Dagger",
+        "text": "*Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 20/60 ft. *Hit:* 5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Deathless Agility",
+        "text": "The familiar takes the Dash or Disengage action."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Umbral Dagger",
+            "count": 2
+          }
+        ],
+        "text": "The familiar makes two Umbral Dagger attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Umbral Dagger",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d4",
+              "damage_type": "necrotic"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned",
+              "duration": {
+                "kind": "hours",
+                "amount": 1
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_vampiric_connection",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Vampiric Connection as written.",
+      "source_text": "While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar’s senses."
+    },
+    {
+      "id": "actions_umbral_dagger_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Umbral Dagger as written.",
+      "source_text": "5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition."
+    },
+    {
+      "id": "bonus_actions_deathless_agility",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Deathless Agility as written.",
+      "source_text": "The familiar takes the Dash or Disengage action."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 65 (10d8 + 20)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Climb 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 16 | +3 | +5 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +2 | **Cha** 14 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +4, Persuasion +4, Stealth +7",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Charmed (except from its vampire master)",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Gear** Daggers (10)",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (XP 700; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Vampiric Connection.*** While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar’s senses.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_vampiric_connection"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The familiar makes two Umbral Dagger attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Umbral Dagger.*** *Melee or Ranged Attack Roll:* +5, reach 5 ft. or range 20/60 ft. *Hit:* 5 (1d4 + 3) Piercing damage plus 7 (3d4) Necrotic damage. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the Poisoned condition for 1 hour. While it has the Poisoned condition, the target has the Paralyzed condition.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_umbral_dagger_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Deathless Agility.*** The familiar takes the Dash or Disengage action.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_deathless_agility"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned"
+  ]
+}

@@ -1,0 +1,799 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/sphinx-of-lore",
+  "kind": "creature",
+  "name": "Sphinx of Lore",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      327,
+      328
+    ],
+    "section": "Monsters A–Z/Sphinxes/Sphinx of Lore",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Large Celestial, Lawful Neutral*\n\n| **AC** 17 | **Initiative** +10 (20) |\n\n**HP** 170 (20d10 + 60)\n\n**Speed** 40 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |\n| **Int** | 18 | +4 | +4 | **Wis** 18 | +4 | +4 | **Cha** 18 | +4 | +4 |\n\n**Skills** Arcana +12, History +12, Perception +8, Religion +12\n\n**Resistances** Necrotic, Radiant\n\n**Immunities** Psychic; Charmed, Frightened\n\n**Senses** Truesight 120 ft.; Passive Perception 18\n\n**Languages** Celestial, Common\n\n**CR** 11 (XP 7,200, or 8,400 in lair; PB +4)\n\n##### Traits\n\n***Inscrutable.*** No magic can observe the sphinx remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage.\n\n***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the sphinx fails a saving throw, it can choose to succeed instead.\n\n##### Actions\n\n***Multiattack.*** The sphinx makes three Claw attacks.\n\n***Claw.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 14 (3d6 + 4) Slashing damage.\n\n***Mind-Rending Roar (Recharge 5–6).*** *Wisdom Saving Throw:* DC 16, each enemy in a 300-foot Emanation originating from the sphinx. *Failure:* 35 (10d6) Psychic damage, and the target has the Incapacitated condition until the start of the sphinx’s next turn.\n\n***Spellcasting.*** The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illusion*, *Prestidigitation*\n\n**1/Day Each:** *Dispel Magic*, *Legend Lore*, *Locate Object*, *Plane Shift*, *Remove Curse*, *Tongues*\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the sphinx can expend a use to take one of the following actions. The sphinx regains all expended uses at the start of each of its turns.*\n\n***Arcane Prowl.*** The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack.\n\n***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Failure or Success:* The sphinx can’t take this action again until the start of its next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Neutral",
+    "cr": "11"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Neutral",
+    "type_line": "Large Celestial, Lawful Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 10,
+      "score": 20,
+      "text": "+10 (20)"
+    },
+    "hp": {
+      "average": 170,
+      "formula": {
+        "op": "add",
+        "args": [
+          "20d10",
+          60
+        ]
+      },
+      "text": "170 (20d10 + 60)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 60 ft.",
+      "walk": 40,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "wis": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "cha": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      }
+    },
+    "skills": {
+      "arcana": 12,
+      "history": 12,
+      "perception": 8,
+      "religion": 12,
+      "text": "Arcana +12, History +12, Perception +8, Religion +12"
+    },
+    "resistances": {
+      "damage_types": [
+        "necrotic",
+        "radiant"
+      ],
+      "text": "Necrotic, Radiant"
+    },
+    "immunities": {
+      "damage_types": [
+        "psychic"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened"
+      ],
+      "text": "Psychic; Charmed, Frightened"
+    },
+    "senses": {
+      "text": "Truesight 120 ft.; Passive Perception 18",
+      "truesight": 120,
+      "passive_perception": 18
+    },
+    "languages": {
+      "text": "Celestial, Common"
+    },
+    "cr": {
+      "value": "11",
+      "xp": 7200,
+      "proficiency_bonus": 4,
+      "text": "11 (XP 7,200, or 8,400 in lair; PB +4)",
+      "xp_in_lair": 8400
+    },
+    "traits": [
+      {
+        "name": "Inscrutable",
+        "text": "No magic can observe the sphinx remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage."
+      },
+      {
+        "name": "Legendary Resistance",
+        "per_day": 3,
+        "per_day_in_lair": 4,
+        "text": "If the sphinx fails a saving throw, it can choose to succeed instead."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The sphinx makes three Claw attacks."
+      },
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +8, reach 5 ft. *Hit:* 14 (3d6 + 4) Slashing damage."
+      },
+      {
+        "name": "Mind-Rending Roar",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Wisdom Saving Throw:* DC 16, each enemy in a 300-foot Emanation originating from the sphinx. *Failure:* 35 (10d6) Psychic damage, and the target has the Incapacitated condition until the start of the sphinx’s next turn."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illusion*, *Prestidigitation*\n\n**1/Day Each:** *Dispel Magic*, *Legend Lore*, *Locate Object*, *Plane Shift*, *Remove Curse*, *Tongues*"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Arcane Prowl",
+        "text": "The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack."
+      },
+      {
+        "name": "Weight of Years",
+        "text": "*Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Failure or Success:* The sphinx can’t take this action again until the start of its next turn."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the sphinx can expend a use to take one of the following actions. The sphinx regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Claw",
+            "count": 3
+          }
+        ],
+        "text": "The sphinx makes three Claw attacks."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16): At Will: Detect Magic, Identify, Mage Hand, Minor Illusion, Prestidigitation 1/Day Each: Dispel Magic, Legend Lore, Locate Object, Plane Shift, Remove Curse, Tongues",
+        "ability": "int",
+        "save_dc": 16,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/identify",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/mage-hand",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/minor-illusion",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/prestidigitation",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/dispel-magic",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/legend-lore",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/locate-object",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/plane-shift",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/remove-curse",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/tongues",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 4,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Mind-Rending Roar",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 16,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 300,
+              "origin": "self"
+            },
+            "text": "each enemy in a 300-foot Emanation originating from the sphinx"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d6",
+              "damage_type": "psychic"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/incapacitated",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/identify",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Identify"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Mage Hand"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/minor-illusion",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Minor Illusion"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/prestidigitation",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Prestidigitation"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Dispel Magic",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/legend-lore",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Legend Lore",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/locate-object",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Locate Object",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Plane Shift",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/remove-curse",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Remove Curse",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/tongues",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Tongues",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Weight of Years",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 16,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            },
+            "text": "one creature the sphinx can see within 120 feet"
+          }
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_inscrutable",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Inscrutable as written.",
+      "source_text": "No magic can observe the sphinx remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage."
+    },
+    {
+      "id": "legendary_actions_arcane_prowl",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Arcane Prowl as written.",
+      "source_text": "The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack."
+    },
+    {
+      "id": "legendary_actions_weight_of_years_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Weight of Years as written.",
+      "source_text": "The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. Failure or Success: The sphinx can’t take this action again until the start of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Celestial, Lawful Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +10 (20) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 170 (20d10 + 60)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 15 | +2 | +2 | **Con** 16 | +3 | +3 |\n| **Int** | 18 | +4 | +4 | **Wis** 18 | +4 | +4 | **Cha** 18 | +4 | +4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Arcana +12, History +12, Perception +8, Religion +12",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Necrotic, Radiant",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Psychic; Charmed, Frightened",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 120 ft.; Passive Perception 18",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Celestial, Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 11 (XP 7,200, or 8,400 in lair; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Inscrutable.*** No magic can observe the sphinx remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_inscrutable"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the sphinx fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The sphinx makes three Claw attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 14 (3d6 + 4) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Mind-Rending Roar (Recharge 5–6).*** *Wisdom Saving Throw:* DC 16, each enemy in a 300-foot Emanation originating from the sphinx. *Failure:* 35 (10d6) Psychic damage, and the target has the Incapacitated condition until the start of the sphinx’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The sphinx casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Identify*, *Mage Hand*, *Minor Illusion*, *Prestidigitation*\n\n**1/Day Each:** *Dispel Magic*, *Legend Lore*, *Locate Object*, *Plane Shift*, *Remove Curse*, *Tongues*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11",
+        "/effects/12",
+        "/effects/13"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the sphinx can expend a use to take one of the following actions. The sphinx regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Arcane Prowl.*** The sphinx can teleport up to 30 feet to an unoccupied space it can see, and it makes one Claw attack.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/0",
+        "md:legendary_actions_arcane_prowl"
+      ]
+    },
+    {
+      "text": "***Weight of Years.*** *Constitution Saving Throw:* DC 16, one creature the sphinx can see within 120 feet. *Failure:* The target gains 1 Exhaustion level. While the target has any Exhaustion levels, it appears 3d10 years older. *Failure or Success:* The sphinx can’t take this action again until the start of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/1",
+        "/effects/14",
+        "md:legendary_actions_weight_of_years_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/incapacitated",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/identify",
+    "dnd5e/spell/legend-lore",
+    "dnd5e/spell/locate-object",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/minor-illusion",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/prestidigitation",
+    "dnd5e/spell/remove-curse",
+    "dnd5e/spell/tongues"
+  ]
+}

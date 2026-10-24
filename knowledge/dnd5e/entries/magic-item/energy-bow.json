@@ -1,0 +1,222 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/energy-bow",
+  "kind": "magic-item",
+  "name": "Energy Bow",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      220
+    ],
+    "section": "Magic Items/Magic Items A–Z/Energy Bow",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Longbow or Shortbow), Very Rare (Requires Attunement)*\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\nThis weapon has the following additional properties.\n\n***Arrow of Restraint.*** Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n\n***Arrow of Transport.*** As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n\n***Energy Ladder.*** As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Longbow or Shortbow), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Longbow or Shortbow",
+        "refs": [
+          "dnd5e/weapon/longbow",
+          "dnd5e/weapon/shortbow"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "energy_arrows",
+        "string": false,
+        "arrow_appears_on_draw": true,
+        "damage_type": "force",
+        "replaces": "piercing",
+        "vanishes_after_hit_or_miss": true
+      },
+      {
+        "id": "arrow_light",
+        "bright_feet": 20,
+        "dim_feet": 20,
+        "rules": [
+          "dnd5e/rule/bright-light",
+          "dnd5e/rule/dim-light"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 15,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "note": "Instead of damage. The creature can take an action: DC 20 Strength (Athletics) check ends it."
+        }
+      ],
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "move",
+          "mode": "teleport",
+          "target": {
+            "kind": "creature_or_object",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true
+          },
+          "note": "Willing Medium or smaller creature, or an unattended object that fits in a 5-foot Cube: to a space you can see within 10 feet of you."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/energy-bow",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1
+          },
+          "note": "A ladder up to 60 feet long on a wall up to 60 feet away."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Longbow or Shortbow), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "This weapon has the following additional properties.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Arrow of Restraint.*** Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Arrow of Transport.*** As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Energy Ladder.*** As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained",
+    "dnd5e/magic-item/energy-bow",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light",
+    "dnd5e/weapon/longbow",
+    "dnd5e/weapon/shortbow"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/alter-self",
+  "kind": "spell",
+  "name": "Alter Self",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      107
+    ],
+    "section": "Spells/Spell Descriptions/Alter Self",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 3,
+  "text": "*Level 2 Transmutation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour\n\nYou alter your physical form. Choose one of the following options. Its effects last for the duration, during which you can take a Magic action to replace the option you chose with a different one.\n\n***Aquatic Adaptation.*** You sprout gills and grow webs between your fingers. You can breathe underwater and gain a Swim Speed equal to your Speed.\n\n***Change Appearance.*** You alter your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and other distinguishing characteristics. You can make yourself appear as a member of another species, though none of your statistics change. You can’t appear as a creature of a different size, and your basic shape stays the same; if you’re bipedal, you can’t use this spell to become quadrupedal, for instance. For the duration, you can take a Magic action to change your appearance in this way again.\n\n***Natural Weapons.*** You grow claws (Slashing), fangs (Piercing), horns (Piercing), or hooves (Bludgeoning). When you use your Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parentheses instead of dealing the normal damage for your Unarmed Strike, and you use your spellcasting ability modifier for the attack and damage rolls rather than using Strength.",
+  "facets": {
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "appearance_limits",
+        "statistics_change": false,
+        "same_size": true,
+        "same_basic_shape": true,
+        "magic_action_to_change_again": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "alter_self",
+      "choose": 1,
+      "options": [
+        {
+          "id": "aquatic_adaptation",
+          "label": "Aquatic Adaptation",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "breathe_underwater",
+              "mode": "set",
+              "value": 1,
+              "duration": {
+                "kind": "hours",
+                "amount": 1,
+                "concentration": true,
+                "up_to": true
+              }
+            },
+            {
+              "op": "speed",
+              "movement": "swim",
+              "mode": "equal_to_walk",
+              "value": 0,
+              "duration": {
+                "kind": "hours",
+                "amount": 1,
+                "concentration": true,
+                "up_to": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "change_appearance",
+          "label": "Change Appearance",
+          "effects": [
+            {
+              "op": "master_decision",
+              "decision": "appearance"
+            }
+          ]
+        },
+        {
+          "id": "natural_weapons",
+          "label": "Natural Weapons",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "weapon_damage_die",
+              "mode": "set",
+              "value": "1d6",
+              "when": {
+                "pred": "attack_is",
+                "args": {
+                  "via": "unarmed_strike"
+                }
+              },
+              "duration": {
+                "kind": "hours",
+                "amount": 1,
+                "concentration": true,
+                "up_to": true
+              },
+              "note": "Claws (Slashing), fangs or horns (Piercing), hooves (Bludgeoning)."
+            },
+            {
+              "op": "modifier",
+              "stat": "attack_ability",
+              "mode": "set",
+              "value": {
+                "var": "spellcasting_mod"
+              },
+              "when": {
+                "pred": "attack_is",
+                "args": {
+                  "via": "unarmed_strike"
+                }
+              },
+              "duration": {
+                "kind": "hours",
+                "amount": 1,
+                "concentration": true,
+                "up_to": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/alter-self",
+          "note": "Replace the chosen option."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "appearance",
+      "reason": "player_choice_open",
+      "prompt": "What does the caster look like?",
+      "source_text": "You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and other distinguishing characteristics."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Transmutation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You alter your physical form. Choose one of the following options. Its effects last for the duration, during which you can take a Magic action to replace the option you chose with a different one.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Aquatic Adaptation.*** You sprout gills and grow webs between your fingers. You can breathe underwater and gain a Swim Speed equal to your Speed.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "***Change Appearance.*** You alter your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and other distinguishing characteristics. You can make yourself appear as a member of another species, though none of your statistics change. You can’t appear as a creature of a different size, and your basic shape stays the same; if you’re bipedal, you can’t use this spell to become quadrupedal, for instance. For the duration, you can take a Magic action to change your appearance in this way again.",
+      "status": "master_decision",
+      "by": [
+        "md:appearance",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Natural Weapons.*** You grow claws (Slashing), fangs (Piercing), horns (Piercing), or hooves (Bludgeoning). When you use your Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parentheses instead of dealing the normal damage for your Unarmed Strike, and you use your spellcasting ability modifier for the attack and damage rolls rather than using Strength.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/alter-self"
+  ]
+}

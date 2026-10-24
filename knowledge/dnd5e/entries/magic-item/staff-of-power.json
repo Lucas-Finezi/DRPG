@@ -1,0 +1,695 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-power",
+  "kind": "magic-item",
+  "name": "Staff of Power",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      245,
+      246
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of Power",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Very Rare (Requires Attunement by a Sorcerer,* *Warlock, or Wizard)*\n\nThis staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.\n\n***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**\n\n| **Spell** | **Cost** |\n| *Cone of Cold* | 5 |\n| *Fireball* (level 5 version) | 5 |\n| *Globe of Invulnerability* | 6 |\n| *Hold Monster* | 5 |\n| *Levitate* | 2 |\n| *Lightning Bolt* (level 5 version) | 5 |\n| *Magic Missile* | 1 |\n| *Ray of Enfeeblement* | 1 |\n| *Wall of Force* | 5 |\n\n***Regaining Charges.*** The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff retains its +2 bonus to attack rolls and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges.\n\n***Retributive Strike.*** You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Very Rare (Requires Attunement by a Sorcerer, Warlock, or Wizard)",
+      "attunement": {
+        "required": true,
+        "by": "a Sorcerer, Warlock, or Wizard",
+        "classes": [
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "quarterstaff",
+        "functions_as": "dnd5e/weapon/quarterstaff"
+      }
+    ],
+    "tables": [
+      {
+        "id": "staff_of_power",
+        "caption": "Staff of Power",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Cone of Cold",
+            "5"
+          ],
+          [
+            "Fireball (level 5 version)",
+            "5"
+          ],
+          [
+            "Globe of Invulnerability",
+            "6"
+          ],
+          [
+            "Hold Monster",
+            "5"
+          ],
+          [
+            "Levitate",
+            "2"
+          ],
+          [
+            "Lightning Bolt (level 5 version)",
+            "5"
+          ],
+          [
+            "Magic Missile",
+            "1"
+          ],
+          [
+            "Ray of Enfeeblement",
+            "1"
+          ],
+          [
+            "Wall of Force",
+            "5"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 20
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "saving_throw",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_attack_bonus",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/cone-of-cold",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "components": [],
+          "level": 5,
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 6
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/globe-of-invulnerability",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/hold-monster",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/levitate",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/lightning-bolt",
+          "slot": "none",
+          "components": [],
+          "level": 5,
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/magic-missile",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/ray-of-enfeeblement",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-force",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "2d8",
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/magic-item/staff-of-power",
+                  "note": "Keeps its +2 to attack and damage rolls but loses all other properties."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "d20_20",
+          "choose": 1,
+          "note": "On a 20:",
+          "options": [
+            {
+              "id": "twenty",
+              "label": "20",
+              "effects": [
+                {
+                  "op": "restore",
+                  "resource": "charges",
+                  "amount": {
+                    "op": "add",
+                    "args": [
+                      "1d8",
+                      2
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "1–19",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Retributive Strike",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "choice",
+          "id": "escape",
+          "choose": 1,
+          "note": "50 percent chance to travel to a random plane, avoiding the explosion.",
+          "options": [
+            {
+              "id": "escape",
+              "label": "Escape (50%)",
+              "effects": [
+                {
+                  "op": "move",
+                  "mode": "teleport",
+                  "note": "To a random plane of existence."
+                }
+              ]
+            },
+            {
+              "id": "caught",
+              "label": "Caught (50%)",
+              "effects": [
+                {
+                  "op": "damage",
+                  "amount": {
+                    "op": "mul",
+                    "args": [
+                      16,
+                      {
+                        "var": "resource.charges"
+                      }
+                    ]
+                  },
+                  "damage_type": "force",
+                  "target": {
+                    "kind": "self"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "object"
+            },
+            "filter": {
+              "include_self": false
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "mul",
+                "args": [
+                  4,
+                  {
+                    "var": "resource.charges"
+                  }
+                ]
+              },
+              "damage_type": "force"
+            }
+          ],
+          "half_on_success": true
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry",
+          "note": "The item is destroyed."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Very Rare (Requires Attunement by a Sorcerer,* *Warlock, or Wizard)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**",
+      "status": "structured",
+      "by": [
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11",
+        "/effects/12",
+        "/effects/13",
+        "/effects/14"
+      ]
+    },
+    {
+      "text": "| **Spell** | **Cost** |\n| *Cone of Cold* | 5 |\n| *Fireball* (level 5 version) | 5 |\n| *Globe of Invulnerability* | 6 |\n| *Hold Monster* | 5 |\n| *Levitate* | 2 |\n| *Lightning Bolt* (level 5 version) | 5 |\n| *Magic Missile* | 1 |\n| *Ray of Enfeeblement* | 1 |\n| *Wall of Force* | 5 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff retains its +2 bonus to attack rolls and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges.",
+      "status": "structured",
+      "by": [
+        "/effects/15",
+        "/effects/16",
+        "/effects/17"
+      ]
+    },
+    {
+      "text": "***Retributive Strike.*** You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
+      "status": "structured",
+      "by": [
+        "/effects/18"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard",
+    "dnd5e/magic-item/staff-of-power",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/cone-of-cold",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/globe-of-invulnerability",
+    "dnd5e/spell/hold-monster",
+    "dnd5e/spell/levitate",
+    "dnd5e/spell/lightning-bolt",
+    "dnd5e/spell/magic-missile",
+    "dnd5e/spell/ray-of-enfeeblement",
+    "dnd5e/spell/wall-of-force"
+  ]
+}

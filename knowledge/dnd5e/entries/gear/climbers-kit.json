@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/climbers-kit",
+  "kind": "gear",
+  "name": "Climber’s Kit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      97
+    ],
+    "section": "Equipment/Adventuring Gear/Climber’s Kit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Climber’s Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber’s Kit to anchor yourself; when you do, you can’t fall more than 25 feet from the anchor point, and you can’t move more than 25 feet from there without undoing the anchor as a Bonus Action.",
+  "facets": {
+    "cost_cp": 2500
+  },
+  "data": {
+    "cost": {
+      "amount": 25,
+      "unit": "gp",
+      "cp": 2500
+    },
+    "weight_lb": 12,
+    "rules": [
+      {
+        "id": "anchor",
+        "cost": "dnd5e/action/utilize",
+        "max_fall_feet": 25,
+        "max_distance_feet": 25,
+        "undo": "bonus_action"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Climber’s Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber’s Kit to anchor yourself; when you do, you can’t fall more than 25 feet from the anchor point, and you can’t move more than 25 feet from there without undoing the anchor as a Bonus Action.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

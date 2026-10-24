@@ -1,0 +1,1021 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-the-magi",
+  "kind": "magic-item",
+  "name": "Staff of the Magi",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      246,
+      247
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of the Magi",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Legendary (Requires Attunement by a Sorcerer,* *Warlock, or Wizard)*\n\nThis staff has 50 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.\n\n***Spell Absorption.*** While holding the staff, you have Advantage on saving throws against spells. In addition, you can take a Reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell’s level. However, if doing so brings the staff’s total number of charges above 50, the staff explodes as if you activated its Retributive Strike (see below).\n\n***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**\n\n| **Spell** | **Cost** |\n| *Arcane Lock* | 0 |\n| *Conjure Elemental* | 7 |\n| *Detect Magic* | 0 |\n| *Dispel Magic* | 3 |\n| *Enlarge/Reduce* | 0 |\n| *Fireball* (level 7 version) | 7 |\n| *Flaming Sphere* | 2 |\n| *Ice Storm* | 4 |\n| *Invisibility* | 2 |\n| *Knock* | 2 |\n| *Light* | 0 |\n| *Lightning Bolt* (level 7 version) | 7 |\n\n**Charge**\n\n| **Spell** | **Cost** |\n| *Mage Hand* | 0 |\n| *Passwall* | 5 |\n| *Plane Shift* | 7 |\n| *Protection from Evil and Good* | 0 |\n| *Telekinesis* | 5 |\n| *Wall of Fire* | 4 |\n| *Web* | 2 |\n\n***Regaining Charges.*** The staff regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 20, the staff regains 1d12 + 1 charges.\n\n***Retributive Strike.*** You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 6 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Legendary (Requires Attunement by a Sorcerer, Warlock, or Wizard)",
+      "attunement": {
+        "required": true,
+        "by": "a Sorcerer, Warlock, or Wizard",
+        "classes": [
+          "dnd5e/class/sorcerer",
+          "dnd5e/class/warlock",
+          "dnd5e/class/wizard"
+        ]
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "quarterstaff",
+        "functions_as": "dnd5e/weapon/quarterstaff"
+      }
+    ],
+    "tables": [
+      {
+        "id": "staff_of_the_magi",
+        "caption": "Staff of the Magi",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Arcane Lock",
+            "0"
+          ],
+          [
+            "Conjure Elemental",
+            "7"
+          ],
+          [
+            "Detect Magic",
+            "0"
+          ],
+          [
+            "Dispel Magic",
+            "3"
+          ],
+          [
+            "Enlarge/Reduce",
+            "0"
+          ],
+          [
+            "Fireball (level 7 version)",
+            "7"
+          ],
+          [
+            "Flaming Sphere",
+            "2"
+          ],
+          [
+            "Ice Storm",
+            "4"
+          ],
+          [
+            "Invisibility",
+            "2"
+          ],
+          [
+            "Knock",
+            "2"
+          ],
+          [
+            "Light",
+            "0"
+          ],
+          [
+            "Lightning Bolt (level 7 version)",
+            "7"
+          ],
+          [
+            "Mage Hand",
+            "0"
+          ],
+          [
+            "Passwall",
+            "5"
+          ],
+          [
+            "Plane Shift",
+            "7"
+          ],
+          [
+            "Protection from Evil and Good",
+            "0"
+          ],
+          [
+            "Telekinesis",
+            "5"
+          ],
+          [
+            "Wall of Fire",
+            "4"
+          ],
+          [
+            "Web",
+            "2"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 50
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_attack_bonus",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against",
+            "args": {
+              "source": "spell"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "targeted_by_spell"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "var": "spell_level"
+          },
+          "note": "The spell is canceled; above 50 charges the staff explodes as Retributive Strike."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "spell_targeted_only_you"
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/arcane-lock",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 7
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/conjure-elemental",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-magic",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/enlarge-reduce",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 7
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "components": [],
+          "level": 7,
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/flaming-sphere",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/ice-storm",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/knock",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/light",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 7
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/lightning-bolt",
+          "slot": "none",
+          "components": [],
+          "level": 7,
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/passwall",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 7
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 0
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/protection-from-evil-and-good",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/telekinesis",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 4
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-fire",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/web",
+          "slot": "none",
+          "components": [],
+          "save_dc": {
+            "var": "spell_save_dc"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "4d6",
+              2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "d20_20",
+          "choose": 1,
+          "note": "On a 20:",
+          "options": [
+            {
+              "id": "twenty",
+              "label": "20",
+              "effects": [
+                {
+                  "op": "restore",
+                  "resource": "charges",
+                  "amount": {
+                    "op": "add",
+                    "args": [
+                      "1d12",
+                      1
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "1–19",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Retributive Strike",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "choice",
+          "id": "escape",
+          "choose": 1,
+          "note": "50 percent chance to travel to a random plane, avoiding the explosion.",
+          "options": [
+            {
+              "id": "escape",
+              "label": "Escape (50%)",
+              "effects": [
+                {
+                  "op": "move",
+                  "mode": "teleport",
+                  "note": "To a random plane of existence."
+                }
+              ]
+            },
+            {
+              "id": "caught",
+              "label": "Caught (50%)",
+              "effects": [
+                {
+                  "op": "damage",
+                  "amount": {
+                    "op": "mul",
+                    "args": [
+                      16,
+                      {
+                        "var": "resource.charges"
+                      }
+                    ]
+                  },
+                  "damage_type": "force",
+                  "target": {
+                    "kind": "self"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "object"
+            },
+            "filter": {
+              "include_self": false
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "mul",
+                "args": [
+                  6,
+                  {
+                    "var": "resource.charges"
+                  }
+                ]
+              },
+              "damage_type": "force"
+            }
+          ],
+          "half_on_success": true
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry",
+          "note": "The item is destroyed."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Legendary (Requires Attunement by a Sorcerer,* *Warlock, or Wizard)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This staff has 50 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spell Absorption.*** While holding the staff, you have Advantage on saving throws against spells. In addition, you can take a Reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell’s level. However, if doing so brings the staff’s total number of charges above 50, the staff explodes as if you activated its Retributive Strike (see below).",
+      "status": "structured",
+      "by": [
+        "/effects/4",
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Spells.*** While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**",
+      "status": "structured",
+      "by": [
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11",
+        "/effects/12",
+        "/effects/13",
+        "/effects/14",
+        "/effects/15",
+        "/effects/16",
+        "/effects/17",
+        "/effects/18",
+        "/effects/19",
+        "/effects/20",
+        "/effects/21",
+        "/effects/22",
+        "/effects/23",
+        "/effects/24"
+      ]
+    },
+    {
+      "text": "| **Spell** | **Cost** |\n| *Arcane Lock* | 0 |\n| *Conjure Elemental* | 7 |\n| *Detect Magic* | 0 |\n| *Dispel Magic* | 3 |\n| *Enlarge/Reduce* | 0 |\n| *Fireball* (level 7 version) | 7 |\n| *Flaming Sphere* | 2 |\n| *Ice Storm* | 4 |\n| *Invisibility* | 2 |\n| *Knock* | 2 |\n| *Light* | 0 |\n| *Lightning Bolt* (level 7 version) | 7 |\n\n**Charge**\n\n| **Spell** | **Cost** |\n| *Mage Hand* | 0 |\n| *Passwall* | 5 |\n| *Plane Shift* | 7 |\n| *Protection from Evil and Good* | 0 |\n| *Telekinesis* | 5 |\n| *Wall of Fire* | 4 |\n| *Web* | 2 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The staff regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 20, the staff regains 1d12 + 1 charges.",
+      "status": "structured",
+      "by": [
+        "/effects/25",
+        "/effects/26"
+      ]
+    },
+    {
+      "text": "***Retributive Strike.*** You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 6 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
+      "status": "structured",
+      "by": [
+        "/effects/27"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/sorcerer",
+    "dnd5e/class/warlock",
+    "dnd5e/class/wizard",
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/arcane-lock",
+    "dnd5e/spell/conjure-elemental",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/enlarge-reduce",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/flaming-sphere",
+    "dnd5e/spell/ice-storm",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/knock",
+    "dnd5e/spell/light",
+    "dnd5e/spell/lightning-bolt",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/passwall",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/protection-from-evil-and-good",
+    "dnd5e/spell/telekinesis",
+    "dnd5e/spell/wall-of-fire",
+    "dnd5e/spell/web"
+  ]
+}

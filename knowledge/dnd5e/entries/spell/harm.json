@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/harm",
+  "kind": "spell",
+  "name": "Harm",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      139
+    ],
+    "section": "Spells/Spell Descriptions/Harm",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L23"
+  },
+  "tier": 2,
+  "text": "*Level 6 Necromancy (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can’t reduce a target’s Hit Point maximum below 1.",
+  "facets": {
+    "level": 6,
+    "school": "necromancy",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "14d6",
+          "damage_type": "necrotic"
+        },
+        {
+          "op": "modifier",
+          "stat": "hp_max",
+          "mode": "add",
+          "value": {
+            "op": "neg",
+            "args": [
+              {
+                "var": "damage_amount"
+              }
+            ]
+          },
+          "note": "Can't reduce the Hit Point maximum below 1."
+        }
+      ],
+      "on_success": [
+        {
+          "op": "damage",
+          "amount": {
+            "op": "div",
+            "args": [
+              "14d6",
+              2
+            ]
+          },
+          "damage_type": "necrotic",
+          "note": "Half damage only."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 6 Necromancy (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can’t reduce a target’s Hit Point maximum below 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

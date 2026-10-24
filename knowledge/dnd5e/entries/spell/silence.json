@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/silence",
+  "kind": "spell",
+  "name": "Silence",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      162
+    ],
+    "section": "Spells/Spell Descriptions/Silence",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Illusion (Bard, Cleric, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nFor the duration, no sound can be created within or pass through a 20-foot-radius Sphere centered on a point you choose within range. Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the Deafened condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there.",
+  "facets": {
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "cleric",
+      "ranger"
+    ],
+    "concentration": true,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "silence",
+        "no_sound_created_or_passes": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "damage_types": [
+        "thunder"
+      ],
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/deafened",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "note": "While entirely inside the Sphere.",
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "cast_verbal_spells"
+      ],
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 20,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Illusion (Bard, Cleric, Ranger)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, no sound can be created within or pass through a 20-foot-radius Sphere centered on a point you choose within range. Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the Deafened condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/deafened"
+  ]
+}

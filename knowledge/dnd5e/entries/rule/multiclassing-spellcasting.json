@@ -1,0 +1,410 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-spellcasting",
+  "kind": "rule",
+  "name": "Spellcasting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25,
+      26
+    ],
+    "section": "Character Creation/Multiclassing/Class Features/Spellcasting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "Your capacity for spellcasting depends partly on your combined levels in all your spellcasting classes and partly on your individual levels in those classes. Once you have the Spellcasting feature from more than one class, use the rules below. If you multiclass but have the Spellcasting feature from only one class, follow the rules for that class.\n\n***Spells Prepared.*** You determine what spells you can prepare for each class individually, as if you were a single-classed member of that class. If you are a level 4 Ranger / level 3 Sorcerer, for example, you can prepare five level 1 Ranger spells, and you can prepare six Sorcerer spells of level 1 or 2 (as well as four Sorcerer cantrips). \n\nEach spell you prepare is associated with one of your classes, and you use the spellcasting ability of that class when you cast the spell.\n\n***Cantrips.*** If a cantrip of yours increases in power at higher levels, the increase is based on your total character level, not your level in a particular class, unless the spell says otherwise.\n\n***Spell Slots.*** You determine your available spell slots by adding together the following:\n\n- All your levels in the Bard, Cleric, Druid, Sorcerer, and Wizard classes\n\n- Half your levels (round up) in the Paladin and Ranger classes\n\nThen look up this total level in the Level column of the Multiclass Spellcaster table. You use the slots for that level to cast spells of an appropriate level from any class whose Spellcasting feature you have.\n\nThis table might give you spell slots of a higher level than the spells you prepare. You can use those slots but only to cast your lower-level spells. If a lower-level spell that you cast, like *Burning Hands*, has an enhanced effect when cast at a higher level, you can use the enhanced effect as normal.\n\nFor example, if you are a level 4 Ranger / level 3 Sorcerer, you count as a level 5 character when determining your spell slots, counting all your levels as a Sorcerer and half your Ranger levels. As shown in the Multiclass Spellcaster table, you have four level 1 spell slots, three level 2 slots, and two level 3 slots. However, you can’t prepare any level 3 spells, nor can you prepare any level 2 Ranger spells. You can use the spell slots of those levels to cast the spells you do prepare—and potentially enhance their effects.\n\n***Pact Magic.*** If you have the Pact Magic feature from the Warlock class and the Spellcasting feature, you can use the spell slots you gain from Pact Magic to cast spells you have prepared from classes with the Spellcasting feature, and you can use the spell slots you gain from the Spellcasting feature to cast Warlock spells you have prepared.\n\n##### Multiclass Spellcaster:\n\n##### Spell Slots per Spell Level\n\n| **Level** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| 1 | 2 | — | — | — | — | — | — | — | — |\n| 2 | 3 | — | — | — | — | — | — | — | — |\n| 3 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+  "data": {
+    "rules": [
+      {
+        "id": "applies",
+        "when": "spellcasting_feature_from_more_than_one_class",
+        "single_spellcasting_class": "follow_that_class"
+      },
+      {
+        "id": "spells_prepared",
+        "per_class_as_single_classed": true,
+        "spell_uses_class_spellcasting_ability": true
+      },
+      {
+        "id": "cantrips",
+        "scaling_based_on": "total_character_level",
+        "unless_spell_says_otherwise": true
+      },
+      {
+        "id": "spell_slots",
+        "caster_level": {
+          "op": "add",
+          "args": [
+            {
+              "var": "class_level.bard"
+            },
+            {
+              "var": "class_level.cleric"
+            },
+            {
+              "var": "class_level.druid"
+            },
+            {
+              "var": "class_level.sorcerer"
+            },
+            {
+              "var": "class_level.wizard"
+            },
+            {
+              "op": "div",
+              "round": "up",
+              "args": [
+                {
+                  "var": "class_level.paladin"
+                },
+                2
+              ]
+            },
+            {
+              "op": "div",
+              "round": "up",
+              "args": [
+                {
+                  "var": "class_level.ranger"
+                },
+                2
+              ]
+            }
+          ]
+        },
+        "table": "/data/tables/0",
+        "slots_usable_for": "any_class_with_spellcasting"
+      },
+      {
+        "id": "higher_slots",
+        "usable_only_for_lower_level_spells": true,
+        "upcast_effects_apply": true
+      },
+      {
+        "id": "pact_magic",
+        "pact_slots_cast_spellcasting_spells": true,
+        "spellcasting_slots_cast_warlock_spells": true,
+        "feature": "dnd5e/feature/warlock-pact-magic"
+      }
+    ],
+    "tables": [
+      {
+        "id": "multiclass_spellcaster",
+        "caption": "Multiclass Spellcaster: Spell Slots per Spell Level",
+        "columns": [
+          "Level",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "rows": [
+          [
+            "1",
+            "2",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "2",
+            "3",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "3",
+            "4",
+            "2",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "4",
+            "4",
+            "3",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "5",
+            "4",
+            "3",
+            "2",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "6",
+            "4",
+            "3",
+            "3",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "7",
+            "4",
+            "3",
+            "3",
+            "1",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "8",
+            "4",
+            "3",
+            "3",
+            "2",
+            "—",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "9",
+            "4",
+            "3",
+            "3",
+            "3",
+            "1",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "10",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "—",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "11",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "12",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "—",
+            "—",
+            "—"
+          ],
+          [
+            "13",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "—",
+            "—"
+          ],
+          [
+            "14",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "—",
+            "—"
+          ],
+          [
+            "15",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "1",
+            "—"
+          ],
+          [
+            "16",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "1",
+            "—"
+          ],
+          [
+            "17",
+            "4",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "18",
+            "4",
+            "3",
+            "3",
+            "3",
+            "3",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "19",
+            "4",
+            "3",
+            "3",
+            "3",
+            "3",
+            "2",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "20",
+            "4",
+            "3",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "1",
+            "1"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Your capacity for spellcasting depends partly on your combined levels in all your spellcasting classes and partly on your individual levels in those classes. Once you have the Spellcasting feature from more than one class, use the rules below. If you multiclass but have the Spellcasting feature from only one class, follow the rules for that class.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Spells Prepared.*** You determine what spells you can prepare for each class individually, as if you were a single-classed member of that class. If you are a level 4 Ranger / level 3 Sorcerer, for example, you can prepare five level 1 Ranger spells, and you can prepare six Sorcerer spells of level 1 or 2 (as well as four Sorcerer cantrips). \n\nEach spell you prepare is associated with one of your classes, and you use the spellcasting ability of that class when you cast the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Cantrips.*** If a cantrip of yours increases in power at higher levels, the increase is based on your total character level, not your level in a particular class, unless the spell says otherwise.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Spell Slots.*** You determine your available spell slots by adding together the following:\n\n- All your levels in the Bard, Cleric, Druid, Sorcerer, and Wizard classes\n\n- Half your levels (round up) in the Paladin and Ranger classes\n\nThen look up this total level in the Level column of the Multiclass Spellcaster table. You use the slots for that level to cast spells of an appropriate level from any class whose Spellcasting feature you have.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "This table might give you spell slots of a higher level than the spells you prepare. You can use those slots but only to cast your lower-level spells. If a lower-level spell that you cast, like *Burning Hands*, has an enhanced effect when cast at a higher level, you can use the enhanced effect as normal.\n\nFor example, if you are a level 4 Ranger / level 3 Sorcerer, you count as a level 5 character when determining your spell slots, counting all your levels as a Sorcerer and half your Ranger levels. As shown in the Multiclass Spellcaster table, you have four level 1 spell slots, three level 2 slots, and two level 3 slots. However, you can’t prepare any level 3 spells, nor can you prepare any level 2 Ranger spells. You can use the spell slots of those levels to cast the spells you do prepare—and potentially enhance their effects.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Pact Magic.*** If you have the Pact Magic feature from the Warlock class and the Spellcasting feature, you can use the spell slots you gain from Pact Magic to cast spells you have prepared from classes with the Spellcasting feature, and you can use the spell slots you gain from the Spellcasting feature to cast Warlock spells you have prepared.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "##### Multiclass Spellcaster:\n\n##### Spell Slots per Spell Level\n\n| **Level** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| 1 | 2 | — | — | — | — | — | — | — | — |\n| 2 | 3 | — | — | — | — | — | — | — | — |\n| 3 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

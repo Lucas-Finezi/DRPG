@@ -1,0 +1,103 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/create-your-character",
+  "kind": "rule",
+  "name": "Create Your Character",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      19
+    ],
+    "section": "Character Creation/Create Your Character",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "Here are the steps to make a character; each step is explored in detail:\n\n**1: Choose a Class.** Every adventurer is a member of a class. A class broadly describes a character’s vocation, special talents, and favored tactics.\n\n**2: Determine Origin.** A character’s origin includes two elements: background and species. How did the character spend the years leading up to a life of adventure? Who are the character’s ancestors? You can also choose your character’s languages.\n\n**3: Determine Ability Scores.** Much of what your character does in the game depends on the character’s six abilities.\n\n**4: Choose an Alignment.** Alignment is a shorthand for your character’s moral compass.\n\n**5: Fill in Details.** Using the choices you’ve made, fill in the remaining details on your character sheet.",
+  "data": {
+    "procedure": [
+      {
+        "step": 1,
+        "id": "choose_class",
+        "rule": "dnd5e/rule/character-creation-step-1-choose-class"
+      },
+      {
+        "step": 2,
+        "id": "determine_origin",
+        "rule": "dnd5e/rule/character-creation-step-2-character-origin"
+      },
+      {
+        "step": 3,
+        "id": "determine_ability_scores",
+        "rule": "dnd5e/rule/character-creation-step-3-ability-scores"
+      },
+      {
+        "step": 4,
+        "id": "choose_alignment",
+        "rule": "dnd5e/rule/character-creation-step-4-alignment"
+      },
+      {
+        "step": 5,
+        "id": "fill_in_details",
+        "rule": "dnd5e/rule/character-creation-step-5-character-creation-details"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Here are the steps to make a character; each step is explored in detail:",
+      "status": "structured",
+      "by": [
+        "/data/procedure"
+      ]
+    },
+    {
+      "text": "**1: Choose a Class.** Every adventurer is a member of a class. A class broadly describes a character’s vocation, special talents, and favored tactics.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/character-creation-step-1-choose-class"
+      ]
+    },
+    {
+      "text": "**2: Determine Origin.** A character’s origin includes two elements: background and species. How did the character spend the years leading up to a life of adventure? Who are the character’s ancestors? You can also choose your character’s languages.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/character-creation-step-2-character-origin"
+      ]
+    },
+    {
+      "text": "**3: Determine Ability Scores.** Much of what your character does in the game depends on the character’s six abilities.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/character-creation-step-3-ability-scores"
+      ]
+    },
+    {
+      "text": "**4: Choose an Alignment.** Alignment is a shorthand for your character’s moral compass.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/character-creation-step-4-alignment"
+      ]
+    },
+    {
+      "text": "**5: Fill in Details.** Using the choices you’ve made, fill in the remaining details on your character sheet.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/character-creation-step-1-choose-class",
+    "dnd5e/rule/character-creation-step-2-character-origin",
+    "dnd5e/rule/character-creation-step-3-ability-scores",
+    "dnd5e/rule/character-creation-step-4-alignment",
+    "dnd5e/rule/character-creation-step-5-character-creation-details"
+  ]
+}

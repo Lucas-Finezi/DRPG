@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/damage-types",
+  "kind": "rule",
+  "name": "Damage Types",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      180
+    ],
+    "section": "Rules Glossary/Rules Definitions/Damage Types",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 3,
+  "text": "Attacks and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as Resistance, rely on the types. The Damage Types table offers examples to help a GM assign a type to a new effect.\n\n##### Damage Types\n\n| **Type** | **Examples** |\n| Acid | Corrosive liquids, digestive enzymes |\n| Bludgeoning | Blunt objects, constriction, falling |\n| Cold | Freezing water, icy blasts |\n| Fire | Flames, unbearable heat |\n| Force | Pure magical energy |\n| Lightning | Electricity |\n| **Type** | **Examples** |\n| Necrotic | Life-draining energy |\n| Piercing | Fangs, puncturing objects |\n| Poison | Toxic gas, venom |\n| Psychic | Mind-rending energy |\n| Radiant | Holy energy, searing radiation |\n| Slashing | Claws, cutting objects |\n| Thunder | Concussive sound |",
+  "facets": {
+    "glossary": true
+  },
+  "master_decisions": [
+    {
+      "id": "assign_damage_type",
+      "reason": "gm_judgment",
+      "prompt": "Which damage type does this new effect deal?",
+      "source_text": "The Damage Types table offers examples to help a GM assign a type to a new effect.",
+      "pages": [
+        180
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Attacks and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as Resistance, rely on the types.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/damage_types"
+      ]
+    },
+    {
+      "text": "The Damage Types table offers examples to help a GM assign a type to a new effect.\n\n##### Damage Types\n\n| **Type** | **Examples** |\n| Acid | Corrosive liquids, digestive enzymes |\n| Bludgeoning | Blunt objects, constriction, falling |\n| Cold | Freezing water, icy blasts |\n| Fire | Flames, unbearable heat |\n| Force | Pure magical energy |\n| Lightning | Electricity |\n| **Type** | **Examples** |\n| Necrotic | Life-draining energy |\n| Piercing | Fangs, puncturing objects |\n| Poison | Toxic gas, venom |\n| Psychic | Mind-rending energy |\n| Radiant | Holy energy, searing radiation |\n| Slashing | Claws, cutting objects |\n| Thunder | Concussive sound |",
+      "status": "master_decision",
+      "by": [
+        "md:assign_damage_type"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

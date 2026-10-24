@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-foe-slayer",
+  "kind": "feature",
+  "name": "Foe Slayer",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 20: Foe Slayer",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "The damage die of your *Hunter’s Mark* is a d10 rather than a d6.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 20
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "damage_die",
+        "spell": "dnd5e/spell/hunters-mark",
+        "die": "d10",
+        "replaces": "d6"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The damage die of your *Hunter’s Mark* is a d10 rather than a d6.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/hunters-mark"
+  ]
+}

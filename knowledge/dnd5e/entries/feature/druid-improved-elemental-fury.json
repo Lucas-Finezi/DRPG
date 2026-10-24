@@ -1,0 +1,68 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/druid-improved-elemental-fury",
+  "kind": "feature",
+  "name": "Improved Elemental Fury",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      43
+    ],
+    "section": "Classes/Druid/Druid Class Features/Level 15: Improved Elemental Fury",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "The option you chose for Elemental Fury grows more powerful, as detailed below.\n\n***Potent Spellcasting.*** When you cast a Druid cantrip with a range of 10 feet or greater, the spell’s range increases by 300 feet.\n\n***Primal Strike.*** The extra damage of your Primal Strike increases to 2d8.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/druid",
+    "level": 15
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "improves",
+        "feature": "dnd5e/feature/druid-elemental-fury"
+      },
+      {
+        "id": "potent_spellcasting",
+        "druid_cantrip_min_range_feet": 10,
+        "range_increase_feet": 300
+      },
+      {
+        "id": "primal_strike",
+        "damage": "2d8"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The option you chose for Elemental Fury grows more powerful, as detailed below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Potent Spellcasting.*** When you cast a Druid cantrip with a range of 10 feet or greater, the spell’s range increases by 300 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Primal Strike.*** The extra damage of your Primal Strike increases to 2d8.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

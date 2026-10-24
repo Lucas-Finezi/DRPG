@@ -1,0 +1,178 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/polymorph",
+  "kind": "spell",
+  "name": "Polymorph",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      153,
+      154
+    ],
+    "section": "Spells/Spell Descriptions/Polymorph",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Transmutation (Bard, Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a caterpillar cocoon)\n\n**Duration:** Concentration, up to 1 hour\n\nYou attempt to transform a creature that you can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into a Beast form for the duration. That form can be any Beast you choose that has a Challenge Rating equal to or less than the target’s (or the target’s level if it doesn’t have a Challenge Rating). The target’s game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice. See the “Animals” section of “Monsters” for a sample of Beast stat blocks.\n\nThe target gains a number of Temporary Hit Points equal to the Hit Points of the Beast form. These Temporary Hit Points vanish if any remain when the spell ends. The spell ends early on the target if it has no Temporary Hit Points left.\n\nThe target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.\n\nThe target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.",
+  "facets": {
+    "level": 4,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a caterpillar cocoon"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "temp_hp",
+        "vanish_on_end": true,
+        "ends_when_temp_hp_gone": true
+      },
+      {
+        "id": "gear",
+        "melds": true,
+        "usable": false
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "transform",
+          "into": {
+            "creature_types": [
+              "beast"
+            ],
+            "predicate": {
+              "pred": "cr_at_most_target"
+            }
+          },
+          "keeps": [
+            "alignment",
+            "personality",
+            "creature_type",
+            "hp",
+            "hit_point_dice"
+          ],
+          "duration": {
+            "kind": "hours",
+            "amount": 1,
+            "concentration": true,
+            "up_to": true
+          }
+        },
+        {
+          "op": "temp_hp",
+          "amount": {
+            "var": "form_hp"
+          }
+        }
+      ]
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "speak",
+        "cast_spells"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Actions limited by the new form's anatomy."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Transmutation (Bard, Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a caterpillar cocoon)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You attempt to transform a creature that you can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into a Beast form for the duration. That form can be any Beast you choose that has a Challenge Rating equal to or less than the target’s (or the target’s level if it doesn’t have a Challenge Rating). The target’s game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice. See the “Animals” section of “Monsters” for a sample of Beast stat blocks.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "dnd5e/rule/shape-shifting"
+      ]
+    },
+    {
+      "text": "The target gains a number of Temporary Hit Points equal to the Hit Points of the Beast form. These Temporary Hit Points vanish if any remain when the spell ends. The spell ends early on the target if it has no Temporary Hit Points left.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The target is limited in the actions it can perform by the anatomy of its new form, and it can’t speak or cast spells.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The target’s gear melds into the new form. The creature can’t use or otherwise benefit from any of that equipment.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/shape-shifting"
+  ]
+}

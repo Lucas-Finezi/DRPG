@@ -1,0 +1,361 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/giant-crocodile",
+  "kind": "creature",
+  "name": "Giant Crocodile",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      350
+    ],
+    "section": "Animals/Giant Crocodile",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Huge Beast, Unaligned*\n\n| **AC** 14 | **Initiative** −1 (9) |\n\n**HP** 85 (9d12 + 27)\n\n**Speed** 30 ft., Swim 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |\n\n**Skills** Stealth +5\n\n**Senses** Passive Perception 10\n\n**Languages** None\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Hold Breath.*** The crocodile can hold its breath for 1 hour.\n\n##### Actions\n\n***Multiattack.*** The crocodile makes one Bite attack and one Tail attack.\n\n***Bite.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 21 (3d10 + 5) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 15). While Grappled, the target has the Restrained condition and can’t be targeted by the crocodile’s Tail.\n\n***Tail.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 18 (3d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+  "facets": {
+    "group": "animal",
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Huge Beast, Unaligned",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": -1,
+      "score": 9,
+      "text": "−1 (9)"
+    },
+    "hp": {
+      "average": 85,
+      "formula": {
+        "op": "add",
+        "args": [
+          "9d12",
+          27
+        ]
+      },
+      "text": "85 (9d12 + 27)"
+    },
+    "speed": {
+      "text": "30 ft., Swim 50 ft.",
+      "walk": 30,
+      "swim": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "stealth": 5,
+      "text": "Stealth +5"
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Hold Breath",
+        "text": "The crocodile can hold its breath for 1 hour."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The crocodile makes one Bite attack and one Tail attack."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +8, reach 5 ft. *Hit:* 21 (3d10 + 5) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 15). While Grappled, the target has the Restrained condition and can’t be targeted by the crocodile’s Tail."
+      },
+      {
+        "name": "Tail",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 18 (3d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "hold_breath",
+        "text": "The crocodile can hold its breath for 1 hour.",
+        "minutes": 1
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 1
+          },
+          {
+            "name": "Tail",
+            "count": 1
+          }
+        ],
+        "text": "The crocodile makes one Bite attack and one Tail attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d10",
+                  5
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 15
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tail",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d8",
+                  5
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bite_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bite as written.",
+      "source_text": "21 (3d10 + 5) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 15). While Grappled, the target has the Restrained condition and can’t be targeted by the crocodile’s Tail."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** −1 (9) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 85 (9d12 + 27)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Swim 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Hold Breath.*** The crocodile can hold its breath for 1 hour.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The crocodile makes one Bite attack and one Tail attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +8, reach 5 ft. *Hit:* 21 (3d10 + 5) Piercing damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 15). While Grappled, the target has the Restrained condition and can’t be targeted by the crocodile’s Tail.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_bite_rider"
+      ]
+    },
+    {
+      "text": "***Tail.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 18 (3d8 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained"
+  ]
+}

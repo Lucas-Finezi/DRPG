@@ -1,0 +1,119 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/disguise-self",
+  "kind": "spell",
+  "name": "Disguise Self",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      124
+    ],
+    "section": "Spells/Spell Descriptions/Disguise Self",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 3,
+  "text": "*Level 1 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 hour\n\nYou make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.\n\nThe changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.\n\nTo discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an Intelligence (Investigation) check against your spell save DC.",
+  "facets": {
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "disguise",
+        "includes_belongings": true,
+        "height_change_feet": 1,
+        "weight": "heavier_or_lighter",
+        "same_limb_arrangement": true
+      },
+      {
+        "id": "physical_inspection",
+        "fails_physical_inspection": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "check",
+      "ability": "int",
+      "skill": "investigation",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "note": "A creature that takes the Study action; on a success it discerns the illusion."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "disguise_extent",
+      "reason": "player_choice_open",
+      "prompt": "What does the disguise look like, within the spell's limits?",
+      "source_text": "Otherwise, the extent of the illusion is up to you."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:disguise_extent"
+      ]
+    },
+    {
+      "text": "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "To discern that you are disguised, a creature must take the Study action to inspect your appearance and succeed on an Intelligence (Investigation) check against your spell save DC.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

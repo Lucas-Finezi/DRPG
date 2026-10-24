@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/shillelagh",
+  "kind": "spell",
+  "name": "Shillelagh",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      162
+    ],
+    "section": "Spells/Spell Descriptions/Shillelagh",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 2,
+  "text": "*Transmutation Cantrip (Druid)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S, M (mistletoe)\n\n**Duration:** 1 minute\n\nA Club or Quarterstaff you are holding is imbued with nature’s power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon’s damage die becomes a d8. If the attack deals damage, it can be Force damage or the weapon’s normal damage type (your choice).\n\nThe spell ends early if you cast it again or if you let go of the weapon.\n\n***Cantrip Upgrade.*** The damage die changes when you reach levels 5 (d10), 11 (d12), and 17 (2d6).",
+  "facets": {
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "mistletoe"
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "damage_type",
+        "choose_from": [
+          "force",
+          "normal_damage_type"
+        ]
+      },
+      {
+        "id": "ends",
+        "ends_on": [
+          "cast_again",
+          "let_go_of_weapon"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_ability",
+      "mode": "set",
+      "value": {
+        "var": "spellcasting_mod"
+      },
+      "when": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "chosen"
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "note": "Club or Quarterstaff you are holding; melee attack and damage rolls; optional."
+    },
+    {
+      "op": "modifier",
+      "stat": "weapon_damage_die",
+      "mode": "set",
+      "when": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "chosen"
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "value": {
+        "scale": {
+          "by": "level",
+          "steps": [
+            {
+              "from": 1,
+              "value": "1d8"
+            },
+            {
+              "from": 5,
+              "value": "1d10"
+            },
+            {
+              "from": 11,
+              "value": "1d12"
+            },
+            {
+              "from": 17,
+              "value": "2d6"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Transmutation Cantrip (Druid)*\n\n**Casting Time:** Bonus Action\n\n**Range:** Self\n\n**Components:** V, S, M (mistletoe)\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A Club or Quarterstaff you are holding is imbued with nature’s power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon’s damage die becomes a d8. If the attack deals damage, it can be Force damage or the weapon’s normal damage type (your choice).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The spell ends early if you cast it again or if you let go of the weapon.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Cantrip Upgrade.*** The damage die changes when you reach levels 5 (d10), 11 (d12), and 17 (2d6).",
+      "status": "structured",
+      "by": [
+        "/effects/1/value"
+      ]
+    }
+  ]
+}

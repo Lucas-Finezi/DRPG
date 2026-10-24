@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-mystic-arcanum",
+  "kind": "feature",
+  "name": "Mystic Arcanum",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Warlock Class Features/Level 11: Mystic Arcanum",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your patron grants you a magical secret called an arcanum. Choose one level 6 Warlock spell as this arcanum.\n\nYou can cast your arcanum spell once without expending a spell slot, and you must finish a Long Rest before you can cast it in this way again.\n\nAs shown in the Warlock Features table, you gain another Warlock spell of your choice that can be cast in this way when you reach Warlock levels 13 (level 7 spell), 15 (level 8 spell), and 17 (level 9 spell). You regain all uses of your Mystic Arcanum when you finish a Long Rest.\n\nWhenever you gain a Warlock level, you can replace one of your arcanum spells with another Warlock spell of the same level.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/warlock",
+    "level": 11
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "arcanum",
+        "spells": [
+          {
+            "level": 6,
+            "from_warlock_level": 11
+          },
+          {
+            "level": 7,
+            "from_warlock_level": 13
+          },
+          {
+            "level": 8,
+            "from_warlock_level": 15
+          },
+          {
+            "level": 9,
+            "from_warlock_level": 17
+          }
+        ],
+        "from": "dnd5e/spell-list/warlock"
+      },
+      {
+        "id": "replace",
+        "on": "level_gained",
+        "count": 1,
+        "same_level": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell-list/warlock",
+          "slot": "none"
+        }
+      ],
+      "note": "Once per Long Rest for each arcanum spell."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your patron grants you a magical secret called an arcanum. Choose one level 6 Warlock spell as this arcanum.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can cast your arcanum spell once without expending a spell slot, and you must finish a Long Rest before you can cast it in this way again.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "As shown in the Warlock Features table, you gain another Warlock spell of your choice that can be cast in this way when you reach Warlock levels 13 (level 7 spell), 15 (level 8 spell), and 17 (level 9 spell). You regain all uses of your Mystic Arcanum when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Whenever you gain a Warlock level, you can replace one of your arcanum spells with another Warlock spell of the same level.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/warlock"
+  ]
+}

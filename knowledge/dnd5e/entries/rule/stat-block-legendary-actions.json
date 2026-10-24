@@ -1,0 +1,54 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-legendary-actions",
+  "kind": "rule",
+  "name": "Legendary Actions (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      257
+    ],
+    "section": "Monsters/Parts of a Stat Block/Legendary Actions",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "If the monster has Legendary Action options, those are listed in this section. A Legendary Action is an action that a monster can take immediately after another creature’s turn. Only one of these actions can be taken at a time and only after another creature’s turn ends. The monster can’t take a Legendary Action if it has the Incapacitated condition or is otherwise unable to take actions.\n\nThe monster has a limited number of Legendary Action uses, and that number is specified in the stat block. The monster expends one use whenever it takes a Legendary Action, and it regains all expended uses at the start of each of its turns.",
+  "data": {
+    "rules": [
+      {
+        "id": "legendary_action",
+        "after_another_creatures_turn": true,
+        "one_at_a_time": true,
+        "not_if_incapacitated": true
+      },
+      {
+        "id": "uses",
+        "resource": "legendary_actions",
+        "regain": "start of its turn"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "If the monster has Legendary Action options, those are listed in this section. A Legendary Action is an action that a monster can take immediately after another creature’s turn. Only one of these actions can be taken at a time and only after another creature’s turn ends. The monster can’t take a Legendary Action if it has the Incapacitated condition or is otherwise unable to take actions.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The monster has a limited number of Legendary Action uses, and that number is specified in the stat block. The monster expends one use whenever it takes a Legendary Action, and it regains all expended uses at the start of each of its turns.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

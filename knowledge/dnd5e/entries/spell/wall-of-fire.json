@@ -1,0 +1,210 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/wall-of-fire",
+  "kind": "spell",
+  "name": "Wall of Fire",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      172
+    ],
+    "section": "Spells/Spell Descriptions/Wall of Fire",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Evocation (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a piece of charcoal)\n\n**Duration:** Concentration, up to 1 minute\n\nYou create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.\n\nWhen the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one.\n\nOne side of the wall, selected by you when you cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 4.",
+  "facets": {
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a piece of charcoal"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "wall",
+        "shapes": [
+          {
+            "length_feet": 60,
+            "height_feet": 20,
+            "thickness_feet": 1
+          },
+          {
+            "ring_diameter_feet": 20,
+            "height_feet": 20,
+            "thickness_feet": 1
+          }
+        ],
+        "opaque": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "line",
+          "size_feet": 60,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  5,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      4
+                    ]
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": "fire"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_ends_turn_near_wall"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  5,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      4
+                    ]
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          },
+          "damage_type": "fire",
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "Ends its turn within 10 feet of the chosen side or inside the wall, or enters the wall."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Evocation (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a piece of charcoal)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "One side of the wall, selected by you when you cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 4.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/amount",
+        "/effects/1/then/0/amount"
+      ]
+    }
+  ]
+}

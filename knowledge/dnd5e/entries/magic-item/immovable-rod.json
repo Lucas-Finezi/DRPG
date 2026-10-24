@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/immovable-rod",
+  "kind": "magic-item",
+  "name": "Immovable Rod",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      227
+    ],
+    "section": "Magic Items/Magic Items A–Z/Immovable Rod",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Rod, Uncommon*\n\nThis iron rod has a button on one end. You can take a Utilize action to press the button, which causes the rod to become magically fixed in place. Until you or another creature takes a Utilize action to push the button again, the rod doesn’t move, even if it defies gravity. The rod can hold up to 8,000 pounds of weight. More weight causes the rod to deactivate and fall. A creature can take a Utilize action to make a DC 30 Strength (Athletics) check, moving the fixed rod up to 10 feet on a successful check.",
+  "facets": {
+    "category": "rod",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Rod, Uncommon",
+      "category": "rod",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "hold",
+        "max_lb": 8000,
+        "overload": "deactivates and falls",
+        "move": {
+          "action": "dnd5e/action/utilize",
+          "check": "str.athletics",
+          "dc": 30,
+          "distance_feet": 10
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/immovable-rod",
+          "note": "Fixed in place until the button is pushed again (Utilize action)."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Rod, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This iron rod has a button on one end. You can take a Utilize action to press the button, which causes the rod to become magically fixed in place. Until you or another creature takes a Utilize action to push the button again, the rod doesn’t move, even if it defies gravity. The rod can hold up to 8,000 pounds of weight. More weight causes the rod to deactivate and fall. A creature can take a Utilize action to make a DC 30 Strength (Athletics) check, moving the fixed rod up to 10 feet on a successful check.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/immovable-rod"
+  ]
+}

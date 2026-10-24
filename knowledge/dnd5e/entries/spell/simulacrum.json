@@ -1,0 +1,127 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/simulacrum",
+  "kind": "spell",
+  "name": "Simulacrum",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      162,
+      163
+    ],
+    "section": "Spells/Spell Descriptions/Simulacrum",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 1,
+  "text": "*Level 7 Illusion (Wizard)*\n\n**Casting Time:** 12 hours\n\n**Range:** Touch\n\n**Components:** V, S, M (powdered ruby worth 1,500+ GP, which the spell consumes)\n\n**Duration:** Until dispelled\n\nYou create a simulacrum of one Beast or Humanoid that is within 10 feet of you for the entire casting of the spell. You finish the casting by touching both the creature and a pile of ice or snow that is the same size as that creature, and the pile turns into the simulacrum, which is a creature. It uses the game statistics of the original creature at the time of casting, except it is a Construct, its Hit Point maximum is half as much, and it can’t cast this spell.\n\nThe simulacrum is Friendly to you and creatures you designate. It obeys your commands and acts on your turn in combat. The simulacrum can’t gain levels, and it can’t take Short or Long Rests.\n\nIf the simulacrum takes damage, the only way to restore its Hit Points is to repair it as you take a Long Rest, during which you expend components worth 100 GP per Hit Point restored. The simulacrum must stay within 5 feet of you for the repair.\n\nThe simulacrum lasts until it drops to 0 Hit Points, at which point it reverts to snow and melts away. If you cast this spell again, any simulacrum you created with this spell is instantly destroyed.",
+  "facets": {
+    "level": 7,
+    "school": "illusion",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "12 hours",
+      "cost": "time",
+      "minutes": 720
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "powdered ruby worth 1,500+ GP, which the spell consumes",
+      "material_cost_gp": 1500,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "until_dispelled",
+      "text": "Until dispelled"
+    },
+    "rules": [
+      {
+        "id": "simulacrum",
+        "original": [
+          "beast",
+          "humanoid"
+        ],
+        "within_feet_entire_casting": 10,
+        "statistics_of_original": true,
+        "creature_type": "construct",
+        "hp_max_multiplier": 0.5,
+        "cannot_cast": "dnd5e/spell/simulacrum"
+      },
+      {
+        "id": "behavior",
+        "attitude": "dnd5e/attitude/friendly",
+        "acts_on_your_turn": true,
+        "gains_levels": false,
+        "rests": false
+      },
+      {
+        "id": "repair",
+        "only_during_your_long_rest": true,
+        "gp_per_hp": 100,
+        "within_feet": 5
+      },
+      {
+        "id": "end",
+        "at_0_hp": "melts",
+        "recast_destroys_previous": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 7 Illusion (Wizard)*\n\n**Casting Time:** 12 hours\n\n**Range:** Touch\n\n**Components:** V, S, M (powdered ruby worth 1,500+ GP, which the spell consumes)\n\n**Duration:** Until dispelled",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You create a simulacrum of one Beast or Humanoid that is within 10 feet of you for the entire casting of the spell. You finish the casting by touching both the creature and a pile of ice or snow that is the same size as that creature, and the pile turns into the simulacrum, which is a creature. It uses the game statistics of the original creature at the time of casting, except it is a Construct, its Hit Point maximum is half as much, and it can’t cast this spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The simulacrum is Friendly to you and creatures you designate. It obeys your commands and acts on your turn in combat. The simulacrum can’t gain levels, and it can’t take Short or Long Rests.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If the simulacrum takes damage, the only way to restore its Hit Points is to repair it as you take a Long Rest, during which you expend components worth 100 GP per Hit Point restored. The simulacrum must stay within 5 feet of you for the repair.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The simulacrum lasts until it drops to 0 Hit Points, at which point it reverts to snow and melts away. If you cast this spell again, any simulacrum you created with this spell is instantly destroyed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

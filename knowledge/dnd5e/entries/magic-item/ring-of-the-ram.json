@@ -1,0 +1,176 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-the-ram",
+  "kind": "magic-item",
+  "name": "Ring of the Ram",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      239
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of the Ram",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Ring, Rare (Requires Attunement)*\n\nThis ring has 3 charges and regains 1d3 expended charges daily at dawn. While wearing the ring, you can take a Magic action to expend 1 to 3 charges to make a ranged spell attack against one creature you can see within 60 feet of yourself. The ring produces a spectral ram’s head and makes its attack roll with a +7 bonus. On a hit, for each charge you spend, the target takes 2d10 Force damage and is pushed 5 feet away from you.\n\nAlternatively, you can expend 1 to 3 of the ring’s charges as a Magic action to try to break a nonmagical object you can see within 60 feet of yourself that isn’t being worn or carried. The ring makes a Strength check with a +5 bonus for each charge you spend.",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": {
+          "var": "charges_spent"
+        }
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged_spell",
+          "bonus": 7,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "mul",
+                    "args": [
+                      2,
+                      {
+                        "var": "charges_spent"
+                      }
+                    ]
+                  },
+                  "faces": 10
+                }
+              },
+              "damage_type": "force"
+            },
+            {
+              "op": "move",
+              "mode": "push",
+              "distance_feet": {
+                "op": "mul",
+                "args": [
+                  5,
+                  {
+                    "var": "charges_spent"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": {
+          "var": "charges_spent"
+        }
+      },
+      "then": [
+        {
+          "op": "check",
+          "ability": "str",
+          "note": "Ring's check with +5 per charge spent; breaks an unattended nonmagical object within 60 feet."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This ring has 3 charges and regains 1d3 expended charges daily at dawn. While wearing the ring, you can take a Magic action to expend 1 to 3 charges to make a ranged spell attack against one creature you can see within 60 feet of yourself. The ring produces a spectral ram’s head and makes its attack roll with a +7 bonus. On a hit, for each charge you spend, the target takes 2d10 Force damage and is pushed 5 feet away from you.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Alternatively, you can expend 1 to 3 of the ring’s charges as a Magic action to try to break a nonmagical object you can see within 60 feet of yourself that isn’t being worn or carried. The ring makes a Strength check with a +5 bonus for each charge you spend.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

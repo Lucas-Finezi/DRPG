@@ -1,0 +1,63 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/swimming",
+  "kind": "rule",
+  "name": "Swimming",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      189
+    ],
+    "section": "Rules Glossary/Rules Definitions/Swimming",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "While you’re swimming, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Swim Speed and use it to swim. At the GM’s option, moving any distance in rough water might require a successful DC 15 Strength (Athletics) check.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "swim_cost",
+        "extra_feet_per_foot": 1,
+        "extra_in_difficult_terrain": 2,
+        "ignored_with": "swim_speed"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "rough_water",
+      "reason": "gm_judgment",
+      "prompt": "Does moving in this rough water require a DC 15 Strength (Athletics) check?",
+      "source_text": "At the GM’s option, moving any distance in rough water might require a successful DC 15 Strength (Athletics) check.",
+      "pages": [
+        189
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you’re swimming, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Swim Speed and use it to swim.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "At the GM’s option, moving any distance in rough water might require a successful DC 15 Strength (Athletics) check.",
+      "status": "master_decision",
+      "by": [
+        "md:rough_water"
+      ]
+    }
+  ]
+}

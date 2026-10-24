@@ -1,0 +1,244 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/conjure-elemental",
+  "kind": "spell",
+  "name": "Conjure Elemental",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      118
+    ],
+    "section": "Spells/Spell Descriptions/Conjure Elemental",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Conjuration (Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes\n\nYou conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit’s element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold). The spirit lasts for the duration.\n\nWhenever a creature you can see enters the spirit’s space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit’s type, and the target has the Restrained condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. \n\nOn a failed save, the target takes 4d8 damage of the spirit’s type. On a successful save, the target isn’t Restrained by the spirit.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 5.",
+  "facets": {
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "spirit",
+        "size": "large",
+        "intangible": true,
+        "elements": {
+          "air": "lightning",
+          "earth": "thunder",
+          "fire": "fire",
+          "water": "cold"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_space_or_starts_turn_near_spirit"
+      },
+      "optional": true,
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "not": {
+          "pred": "spirit_restrains_creature"
+        }
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      8,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 8
+                }
+              },
+              "damage_type": {
+                "var": "chosen.element_damage_type"
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "duration": {
+                "kind": "minutes",
+                "amount": 10,
+                "concentration": true,
+                "up_to": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "target",
+        "which": "each"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "pred": "has_condition",
+        "args": {
+          "condition": "restrained"
+        }
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "dice": {
+                  "count": {
+                    "op": "add",
+                    "args": [
+                      4,
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "var": "spell_slot_level"
+                          },
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "faces": 8
+                }
+              },
+              "damage_type": {
+                "var": "chosen.element_damage_type"
+              }
+            }
+          ],
+          "on_success": [
+            {
+              "op": "remove_condition",
+              "conditions": [
+                "dnd5e/condition/restrained"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Conjuration (Druid, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit’s element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold). The spirit lasts for the duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Whenever a creature you can see enters the spirit’s space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit’s type, and the target has the Restrained condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. \n\nOn a failed save, the target takes 4d8 damage of the spirit’s type. On a successful save, the target isn’t Restrained by the spirit.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d8 for each spell slot level above 5.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_fail/0/amount",
+        "/effects/1/then/0/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained"
+  ]
+}

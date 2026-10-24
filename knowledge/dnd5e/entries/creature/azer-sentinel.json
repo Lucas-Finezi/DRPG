@@ -1,0 +1,311 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/azer-sentinel",
+  "kind": "creature",
+  "name": "Azer Sentinel",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      261
+    ],
+    "section": "Monsters A–Z/Azer/Azer Sentinel",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Medium Elemental, Lawful Neutral*\n\n| **AC** 17 | **Initiative** +1 (11) |\n\n**HP** 39 (6d8 + 12)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +4 |\n| **Int** | 12 | +1 | +1 | **Wis** 13 | +1 | +1 | **Cha** 10 | +0 | +0 |\n\n**Immunities** Fire, Poison; Poisoned\n\n**Senses** Passive Perception 11\n\n**Languages** Primordial (Ignan)\n\n**CR** 2 (XP 450; PB +2)\n\n##### Traits\n\n***Fire Aura.*** At the end of each of the azer’s turns, each creature of the azer’s choice in a 5-foot Emanation originating from the azer takes 5 (1d10) Fire damage unless the azer has the Incapacitated condition.\n\n***Illumination.*** The azer sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.\n\n##### Actions\n\n***Burning Hammer.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 8 (1d10 + 3) Bludgeoning damage plus 3 (1d6) Fire damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Elemental",
+    "alignment": "Lawful Neutral",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Elemental",
+    "alignment": "Lawful Neutral",
+    "type_line": "Medium Elemental, Lawful Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 39,
+      "formula": {
+        "op": "add",
+        "args": [
+          "6d8",
+          12
+        ]
+      },
+      "text": "39 (6d8 + 12)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 4
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Passive Perception 11",
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Primordial (Ignan)"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Fire Aura",
+        "text": "At the end of each of the azer’s turns, each creature of the azer’s choice in a 5-foot Emanation originating from the azer takes 5 (1d10) Fire damage unless the azer has the Incapacitated condition."
+      },
+      {
+        "name": "Illumination",
+        "text": "The azer sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Burning Hammer",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 8 (1d10 + 3) Bludgeoning damage plus 3 (1d6) Fire damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "light",
+        "bright_feet": 10,
+        "dim_feet": 10,
+        "rules": [
+          "dnd5e/rule/bright-light",
+          "dnd5e/rule/dim-light"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "self",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d10",
+          "damage_type": "fire",
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 5,
+              "origin": "self"
+            }
+          }
+        }
+      ],
+      "note": "unless the azer has the Incapacitated condition."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Burning Hammer",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Elemental, Lawful Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 39 (6d8 + 12)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 17 | +3 | +3 | **Dex** 12 | +1 | +1 | **Con** 15 | +2 | +4 |\n| **Int** | 12 | +1 | +1 | **Wis** 13 | +1 | +1 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Fire Aura.*** At the end of each of the azer’s turns, each creature of the azer’s choice in a 5-foot Emanation originating from the azer takes 5 (1d10) Fire damage unless the azer has the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Illumination.*** The azer sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Burning Hammer.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 8 (1d10 + 3) Bludgeoning damage plus 3 (1d6) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

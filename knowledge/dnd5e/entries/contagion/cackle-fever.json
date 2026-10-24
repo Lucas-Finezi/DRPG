@@ -1,0 +1,203 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/contagion/cackle-fever",
+  "kind": "contagion",
+  "name": "Cackle Fever",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      194
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Magical Contagions/Cackle Fever",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "*Magical Contagion*\n\nCheaply made potions and elixirs are sometimes tainted by Cackle Fever, which affects Humanoids only (gnomes are strangely immune). A creature suffers the following effects 1d4 days after infection:\n\n**Fever.** The creature gains 1 Exhaustion level, which lasts until the contagion ends on the creature.\n\n**Uncontrollable Laughter.** While the creature has the Exhaustion condition, the creature makes a DC 13 Constitution saving throw each time it takes damage other than Psychic damage. On a failed save, the creature takes 5 (1d10) Psychic damage and has the Incapacitated condition as it laughs uncontrollably. At the end of each of its turns, the creature repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.\n\n***Fighting the Contagion.*** At the end of each Long Rest, an infected creature makes a DC 13 Constitution saving throw. After the creature succeeds on three of these saves, the contagion ends on it, and the creature is immune to Cackle Fever for 1 year.\n\n***Spreading the Contagion.*** Any Humanoid (other than a gnome) that starts its turn within a 10-foot Emanation originating from a creature infected with Cackle Fever must succeed on a DC 10 Constitution saving throw or also become infected with the contagion. On a successful save, the Humanoid can’t catch the contagion from that particular infected creature for the next 24 hours.",
+  "facets": {
+    "type": "magical_contagion"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "hosts",
+        "creature_types": [
+          "humanoid"
+        ],
+        "immune": "gnomes",
+        "onset_days": "1d4"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/exhaustion",
+      "params": {
+        "levels": 1
+      },
+      "note": "Lasts until the contagion ends."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "damage_taken",
+        "which": "each"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "has_condition",
+            "args": {
+              "condition": "exhaustion"
+            }
+          },
+          {
+            "not": {
+              "pred": "deals_damage_type",
+              "args": {
+                "damage_type": "psychic"
+              }
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 13,
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "1d10",
+              "damage_type": "psychic"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/incapacitated",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 13
+        }
+      ],
+      "note": "After three successes the contagion ends; immune for 1 year."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/contagion/cackle-fever",
+              "note": "Infected."
+            }
+          ],
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 10,
+              "origin": "self"
+            },
+            "filter": {
+              "creature_types": [
+                "humanoid"
+              ]
+            }
+          },
+          "note": "Non-gnome Humanoids; on a success immune to this carrier for 24 hours."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Magical Contagion*",
+      "status": "structured",
+      "by": [
+        "/facets"
+      ]
+    },
+    {
+      "text": "Cheaply made potions and elixirs are sometimes tainted by Cackle Fever, which affects Humanoids only (gnomes are strangely immune). A creature suffers the following effects 1d4 days after infection:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Fever.** The creature gains 1 Exhaustion level, which lasts until the contagion ends on the creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Uncontrollable Laughter.** While the creature has the Exhaustion condition, the creature makes a DC 13 Constitution saving throw each time it takes damage other than Psychic damage. On a failed save, the creature takes 5 (1d10) Psychic damage and has the Incapacitated condition as it laughs uncontrollably. At the end of each of its turns, the creature repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Fighting the Contagion.*** At the end of each Long Rest, an infected creature makes a DC 13 Constitution saving throw. After the creature succeeds on three of these saves, the contagion ends on it, and the creature is immune to Cackle Fever for 1 year.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spreading the Contagion.*** Any Humanoid (other than a gnome) that starts its turn within a 10-foot Emanation originating from a creature infected with Cackle Fever must succeed on a DC 10 Constitution saving throw or also become infected with the contagion. On a successful save, the Humanoid can’t catch the contagion from that particular infected creature for the next 24 hours.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/incapacitated",
+    "dnd5e/contagion/cackle-fever"
+  ]
+}

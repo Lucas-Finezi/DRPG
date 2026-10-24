@@ -1,0 +1,346 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/character-creation-step-3-ability-scores",
+  "kind": "rule",
+  "name": "Step 3: Ability Scores",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      20,
+      21
+    ],
+    "section": "Character Creation/Create Your Character/Step 3: Ability Scores",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 3,
+  "text": "To determine your character’s ability scores, you first generate a set of six numbers using the instructions below and then assign them to your six abilities. “Playing the Game” explains what each ability means.\n\n#### Generate Your Scores\n\nDetermine your ability scores by using one of the following three methods. Your GM might prefer you to use a particular one.\n\n***Standard Array.*** Use the following six scores for your abilities: 15, 14, 13, 12, 10, 8.\n\n***Random Generation.*** Roll four d6s and record the total of the highest three dice. Do this five more times, so you have six numbers.\n\n***Point Cost.*** You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point Costs table. For example, a score of 14 costs 7 of your 27 points.\n\n##### Ability Score Point Costs\n\n| **Score** | **Cost** |\n| 8 | 0 |\n| 9 | 1 |\n| 10 | 2 |\n| 11 | 3 |\n| **Score** | **Cost** |\n| 12 | 4 |\n| 13 | 5 |\n| 14 | 7 |\n| 15 | 9 |\n\n#### Assign Ability Scores\n\nOnce you’ve generated six scores, assign them to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma, keeping in mind your class’s primary ability. Fill in the ability modifiers as well.\n\nIf you’re using the Standard Array option, consult the Standard Array by Class table for suggestions on where to assign scores for your character’s class. The table puts the highest scores in a class’s main abilities. If you used a different method to generate the scores, you may still use this table to guide where you place your highest and lowest scores.\n\n##### Standard Array by Class\n\n| **Class** | **Str.** | **Dex.** | **Con.** | **Int.** | **Wis.** | **Cha.** |\n| Barbarian | 15 | 13 | 14 | 10 | 12 | 8 |\n| Bard | 8 | 14 | 12 | 13 | 10 | 15 |\n| Cleric | 14 | 8 | 13 | 10 | 15 | 12 |\n| Druid | 8 | 12 | 14 | 13 | 15 | 10 |\n| Fighter | 15 | 14 | 13 | 8 | 10 | 12 |\n| Monk | 12 | 15 | 13 | 10 | 14 | 8 |\n| Paladin | 15 | 10 | 13 | 8 | 12 | 14 |\n| Ranger | 12 | 15 | 13 | 8 | 14 | 10 |\n| Rogue | 12 | 15 | 13 | 14 | 10 | 8 |\n| Sorcerer | 10 | 13 | 14 | 8 | 12 | 15 |\n| Warlock | 8 | 14 | 13 | 12 | 10 | 15 |\n| Wizard | 8 | 12 | 13 | 15 | 14 | 10 |\n\n#### Adjust Ability Scores\n\nAfter assigning your ability scores, adjust them according to your background. Your background lists three abilities; increase one of those scores by 2 and a different one by 1, or increase all three by 1. None of these increases can raise a score above 20.\n\nSome players like to increase their class’s primary ability, while others prefer to increase a low score.\n\n#### Determine Ability Modifiers\n\nFinally, determine your ability modifiers using the Ability Scores and Modifiers table. Write the modifier next to each of your scores.\n\n##### Ability Scores and Modifiers\n\n| **Score** | **Modifier** |\n| 3 | −4 |\n| 4–5 | −3 |\n| 6–7 | −2 |\n| 8–9 | −1 |\n| 10–11 | +0 |\n| **Score** | **Modifier** |\n| 12–13 | +1 |\n| 14–15 | +2 |\n| 16–17 | +3 |\n| 18–19 | +4 |\n| 20 | +5 |",
+  "data": {
+    "tables": [
+      {
+        "id": "ability_score_point_costs",
+        "caption": "Ability Score Point Costs",
+        "columns": [
+          "Score",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "8",
+            "0"
+          ],
+          [
+            "9",
+            "1"
+          ],
+          [
+            "10",
+            "2"
+          ],
+          [
+            "11",
+            "3"
+          ],
+          [
+            "12",
+            "4"
+          ],
+          [
+            "13",
+            "5"
+          ],
+          [
+            "14",
+            "7"
+          ],
+          [
+            "15",
+            "9"
+          ]
+        ]
+      },
+      {
+        "id": "standard_array_by_class",
+        "caption": "Standard Array by Class",
+        "columns": [
+          "Class",
+          "Str.",
+          "Dex.",
+          "Con.",
+          "Int.",
+          "Wis.",
+          "Cha."
+        ],
+        "rows": [
+          [
+            "Barbarian",
+            "15",
+            "13",
+            "14",
+            "10",
+            "12",
+            "8"
+          ],
+          [
+            "Bard",
+            "8",
+            "14",
+            "12",
+            "13",
+            "10",
+            "15"
+          ],
+          [
+            "Cleric",
+            "14",
+            "8",
+            "13",
+            "10",
+            "15",
+            "12"
+          ],
+          [
+            "Druid",
+            "8",
+            "12",
+            "14",
+            "13",
+            "15",
+            "10"
+          ],
+          [
+            "Fighter",
+            "15",
+            "14",
+            "13",
+            "8",
+            "10",
+            "12"
+          ],
+          [
+            "Monk",
+            "12",
+            "15",
+            "13",
+            "10",
+            "14",
+            "8"
+          ],
+          [
+            "Paladin",
+            "15",
+            "10",
+            "13",
+            "8",
+            "12",
+            "14"
+          ],
+          [
+            "Ranger",
+            "12",
+            "15",
+            "13",
+            "8",
+            "14",
+            "10"
+          ],
+          [
+            "Rogue",
+            "12",
+            "15",
+            "13",
+            "14",
+            "10",
+            "8"
+          ],
+          [
+            "Sorcerer",
+            "10",
+            "13",
+            "14",
+            "8",
+            "12",
+            "15"
+          ],
+          [
+            "Warlock",
+            "8",
+            "14",
+            "13",
+            "12",
+            "10",
+            "15"
+          ],
+          [
+            "Wizard",
+            "8",
+            "12",
+            "13",
+            "15",
+            "14",
+            "10"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "generate_then_assign",
+        "mechanic": {
+          "scores": 6,
+          "assign_to": "abilities"
+        }
+      },
+      {
+        "id": "standard_array",
+        "mechanic": {
+          "scores": [
+            15,
+            14,
+            13,
+            12,
+            10,
+            8
+          ]
+        }
+      },
+      {
+        "id": "random_generation",
+        "mechanic": {
+          "roll": "4d6",
+          "keep_highest": 3,
+          "repeat": 6
+        }
+      },
+      {
+        "id": "point_cost",
+        "mechanic": {
+          "points": 27,
+          "cost_table": "ability_score_point_costs"
+        }
+      },
+      {
+        "id": "assign",
+        "mechanic": {
+          "suggestion_table": "standard_array_by_class"
+        }
+      },
+      {
+        "id": "background_adjustment",
+        "mechanic": {
+          "options": [
+            {
+              "plus_2": 1,
+              "plus_1": 1,
+              "distinct": true
+            },
+            {
+              "plus_1": 3
+            }
+          ],
+          "from": "background_abilities",
+          "max_score": 20
+        }
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "generation_method",
+      "reason": "gm_judgment",
+      "prompt": "Require a particular ability score generation method?",
+      "source_text": "Your GM might prefer you to use a particular one.",
+      "when": "campaign_setup",
+      "options": [
+        {
+          "id": "standard_array",
+          "label": "Standard Array"
+        },
+        {
+          "id": "random_generation",
+          "label": "Random Generation"
+        },
+        {
+          "id": "point_cost",
+          "label": "Point Cost"
+        }
+      ],
+      "pages": [
+        21
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "To determine your character’s ability scores, you first generate a set of six numbers using the instructions below and then assign them to your six abilities. “Playing the Game” explains what each ability means.\n\n#### Generate Your Scores\n\nDetermine your ability scores by using one of the following three methods.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Your GM might prefer you to use a particular one.",
+      "status": "master_decision",
+      "by": [
+        "md:generation_method"
+      ]
+    },
+    {
+      "text": "***Standard Array.*** Use the following six scores for your abilities: 15, 14, 13, 12, 10, 8.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Random Generation.*** Roll four d6s and record the total of the highest three dice. Do this five more times, so you have six numbers.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Point Cost.*** You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point Costs table. For example, a score of 14 costs 7 of your 27 points.\n\n##### Ability Score Point Costs\n\n| **Score** | **Cost** |\n| 8 | 0 |\n| 9 | 1 |\n| 10 | 2 |\n| 11 | 3 |\n| **Score** | **Cost** |\n| 12 | 4 |\n| 13 | 5 |\n| 14 | 7 |\n| 15 | 9 |",
+      "status": "structured",
+      "by": [
+        "/data/rules/3",
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "#### Assign Ability Scores\n\nOnce you’ve generated six scores, assign them to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma, keeping in mind your class’s primary ability. Fill in the ability modifiers as well.\n\nIf you’re using the Standard Array option, consult the Standard Array by Class table for suggestions on where to assign scores for your character’s class. The table puts the highest scores in a class’s main abilities. If you used a different method to generate the scores, you may still use this table to guide where you place your highest and lowest scores.\n\n##### Standard Array by Class\n\n| **Class** | **Str.** | **Dex.** | **Con.** | **Int.** | **Wis.** | **Cha.** |\n| Barbarian | 15 | 13 | 14 | 10 | 12 | 8 |\n| Bard | 8 | 14 | 12 | 13 | 10 | 15 |\n| Cleric | 14 | 8 | 13 | 10 | 15 | 12 |\n| Druid | 8 | 12 | 14 | 13 | 15 | 10 |\n| Fighter | 15 | 14 | 13 | 8 | 10 | 12 |\n| Monk | 12 | 15 | 13 | 10 | 14 | 8 |\n| Paladin | 15 | 10 | 13 | 8 | 12 | 14 |\n| Ranger | 12 | 15 | 13 | 8 | 14 | 10 |\n| Rogue | 12 | 15 | 13 | 14 | 10 | 8 |\n| Sorcerer | 10 | 13 | 14 | 8 | 12 | 15 |\n| Warlock | 8 | 14 | 13 | 12 | 10 | 15 |\n| Wizard | 8 | 12 | 13 | 15 | 14 | 10 |",
+      "status": "structured",
+      "by": [
+        "/data/rules/4",
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "#### Adjust Ability Scores\n\nAfter assigning your ability scores, adjust them according to your background. Your background lists three abilities; increase one of those scores by 2 and a different one by 1, or increase all three by 1. None of these increases can raise a score above 20.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "Some players like to increase their class’s primary ability, while others prefer to increase a low score.",
+      "status": "descriptive"
+    },
+    {
+      "text": "#### Determine Ability Modifiers\n\nFinally, determine your ability modifiers using the Ability Scores and Modifiers table. Write the modifier next to each of your scores.\n\n##### Ability Scores and Modifiers\n\n| **Score** | **Modifier** |\n| 3 | −4 |\n| 4–5 | −3 |\n| 6–7 | −2 |\n| 8–9 | −1 |\n| 10–11 | +0 |\n| **Score** | **Modifier** |\n| 12–13 | +1 |\n| 14–15 | +2 |\n| 16–17 | +3 |\n| 18–19 | +4 |\n| 20 | +5 |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/ability_scores/modifier_table"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

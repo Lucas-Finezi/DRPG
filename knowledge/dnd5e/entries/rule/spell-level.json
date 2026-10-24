@@ -1,0 +1,145 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/spell-level",
+  "kind": "rule",
+  "name": "Spell Level",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      104,
+      105
+    ],
+    "section": "Spells/Casting Spells/Spell Level",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L09"
+  },
+  "tier": 2,
+  "text": "Every spell has a level from 0 to 9, which is indicated in a spell’s description. A spell’s level is an indicator of how powerful it is. Cantrips—simple spells that can be cast almost by rote—are level 0. The rules for each spellcasting class say when its members gain access to spells of certain levels.\n\n#### Spell Slots\n\nSpellcasting is taxing, so a spellcaster can cast only a limited number of level 1+ spells before resting. Spell slots are the main way a spellcaster’s magical potential is represented. Each spellcasting class gives its members a limited number of spell slots of certain spell levels. For example, a level 3 Wizard has four level 1 spell slots and two level 2 slots.\n\nWhen you cast a spell, you expend a slot of that spell’s level or higher, effectively “filling” a slot with the spell. Imagine a spell slot is a groove of a certain size—small for a level 1 slot and larger for a higher-level spell. A level 1 spell fits into a slot of any size, but a level 2 spell fits only into a slot that’s at least level 2. So when a level 3 Wizard casts *Magic Missile*, a level 1 spell, that Wizard spends one of four level 1 slots and has three remaining.\n\nFinishing a Long Rest restores any expended spell slots.\n\n#### Casting without Slots\n\nThere are several ways to cast a spell without expending a spell slot:\n\n**Cantrips.** A cantrip is cast without a spell slot.\n\n**Rituals**. Certain spells have the Ritual tag in the Casting Time entry. Such a spell can be cast following the normal rules for spellcasting, or it can be cast as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal, but it doesn’t expend a spell slot. To cast a spell as a Ritual, a spellcaster must have it prepared.\n\n**Special Abilities.** Some characters and monsters have special abilities that allow them to cast specific spells without a spell slot. This casting is usually limited in another way, such as being able to cast the spell a limited number of times per day.\n\n**Magic Items.** *Spell Scrolls* and some other magic items contain spells that can be cast without a spell slot. The description of such an item specifies how many times a spell can be cast from it.\n\n#### Using a Higher-Level Spell Slot\n\nWhen a spellcaster casts a spell using a slot that is of a higher level than the spell, the spell takes on the higher level for that casting. For instance, if a Wizard casts *Magic Missile* using a level 2 slot, that *Magic Missile* is level 2. Effectively, the spell expands to fill the slot it is put into.\n\nSome spells, such as *Magic Missile* and *Cure Wounds*, have more powerful effects when cast at a higher level, as detailed in a spell’s description.",
+  "data": {
+    "rules": [
+      {
+        "id": "levels",
+        "min": 0,
+        "max": 9,
+        "cantrip_level": 0
+      },
+      {
+        "id": "slots",
+        "level_1_plus_requires_slot": true,
+        "pool": "spell_slot"
+      },
+      {
+        "id": "slot_level",
+        "slot_level_at_least_spell_level": true
+      },
+      {
+        "id": "without_slots",
+        "ways": [
+          "cantrip",
+          "ritual",
+          "special_ability",
+          "magic_item"
+        ]
+      },
+      {
+        "id": "special_abilities",
+        "limited_by": "their_description"
+      },
+      {
+        "id": "upcast",
+        "spell_level_becomes": "slot_level",
+        "variable": "spell_slot_level"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "spell_slot",
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Every spell has a level from 0 to 9, which is indicated in a spell’s description. A spell’s level is an indicator of how powerful it is. Cantrips—simple spells that can be cast almost by rote—are level 0. The rules for each spellcasting class say when its members gain access to spells of certain levels.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Spell Slots\n\nSpellcasting is taxing, so a spellcaster can cast only a limited number of level 1+ spells before resting. Spell slots are the main way a spellcaster’s magical potential is represented. Each spellcasting class gives its members a limited number of spell slots of certain spell levels. For example, a level 3 Wizard has four level 1 spell slots and two level 2 slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When you cast a spell, you expend a slot of that spell’s level or higher, effectively “filling” a slot with the spell. Imagine a spell slot is a groove of a certain size—small for a level 1 slot and larger for a higher-level spell. A level 1 spell fits into a slot of any size, but a level 2 spell fits only into a slot that’s at least level 2. So when a level 3 Wizard casts *Magic Missile*, a level 1 spell, that Wizard spends one of four level 1 slots and has three remaining.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "Finishing a Long Rest restores any expended spell slots.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Casting without Slots\n\nThere are several ways to cast a spell without expending a spell slot:\n\n**Cantrips.** A cantrip is cast without a spell slot.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Rituals**. Certain spells have the Ritual tag in the Casting Time entry. Such a spell can be cast following the normal rules for spellcasting, or it can be cast as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal, but it doesn’t expend a spell slot. To cast a spell as a Ritual, a spellcaster must have it prepared.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/ritual"
+      ]
+    },
+    {
+      "text": "**Special Abilities.** Some characters and monsters have special abilities that allow them to cast specific spells without a spell slot. This casting is usually limited in another way, such as being able to cast the spell a limited number of times per day.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "**Magic Items.** *Spell Scrolls* and some other magic items contain spells that can be cast without a spell slot. The description of such an item specifies how many times a spell can be cast from it.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/magic-item/spell-scroll"
+      ]
+    },
+    {
+      "text": "#### Using a Higher-Level Spell Slot\n\nWhen a spellcaster casts a spell using a slot that is of a higher level than the spell, the spell takes on the higher level for that casting. For instance, if a Wizard casts *Magic Missile* using a level 2 slot, that *Magic Missile* is level 2. Effectively, the spell expands to fill the slot it is put into.\n\nSome spells, such as *Magic Missile* and *Cure Wounds*, have more powerful effects when cast at a higher level, as detailed in a spell’s description.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/spell-scroll",
+    "dnd5e/rule/ritual"
+  ]
+}

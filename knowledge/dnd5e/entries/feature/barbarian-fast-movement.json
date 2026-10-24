@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/barbarian-fast-movement",
+  "kind": "feature",
+  "name": "Fast Movement",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      29
+    ],
+    "section": "Classes/Barbarian/Barbarian Class Features/Level 5: Fast Movement",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your speed increases by 10 feet while you aren’t wearing Heavy armor.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/barbarian",
+    "level": 5
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "add",
+      "value": 10,
+      "when": {
+        "not": {
+          "pred": "wearing_armor",
+          "args": {
+            "category": "heavy"
+          }
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your speed increases by 10 feet while you aren’t wearing Heavy armor.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

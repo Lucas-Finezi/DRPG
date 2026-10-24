@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/burning-hands",
+  "kind": "spell",
+  "name": "Burning Hands",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      114
+    ],
+    "section": "Spells/Spell Descriptions/Burning Hands",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nA thin sheet of flames shoots forth from you. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking 3d6 Fire damage on a failed save or half as much damage on a successful one.\n\nFlammable objects in the Cone that aren’t being worn or carried start burning.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "ignite",
+        "objects_in_area": true,
+        "not_worn_or_carried": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cone",
+          "size_feet": 15,
+          "origin": "self"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  3,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      1
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "fire"
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A thin sheet of flames shoots forth from you. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking 3d6 Fire damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Flammable objects in the Cone that aren’t being worn or carried start burning.",
+      "status": "structured",
+      "by": [
+        "dnd5e/hazard/burning",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/burning"
+  ]
+}

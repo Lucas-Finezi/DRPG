@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/hit-point-dice",
+  "kind": "rule",
+  "name": "Hit Point Dice",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      183
+    ],
+    "section": "Rules Glossary/Rules Definitions/Hit Point Dice",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L07"
+  },
+  "tier": 1,
+  "text": "Hit Point Dice, or Hit Dice for short, help determine a player character’s Hit Point maximum, as explained in “Character Creation.” Most monsters also have Hit Dice. A creature can spend Hit Dice during a Short Rest to regain Hit Points. *See also* “Short Rest.”",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "hit_point_dice",
+        "pool": "hit_point_dice",
+        "sets_hp_max": true,
+        "monsters_have_hit_dice": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Hit Point Dice, or Hit Dice for short, help determine a player character’s Hit Point maximum, as explained in “Character Creation.” Most monsters also have Hit Dice.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A creature can spend Hit Dice during a Short Rest to regain Hit Points.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/short-rest"
+      ]
+    },
+    {
+      "text": "*See also* “Short Rest.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/short-rest"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/short-rest"
+  ]
+}

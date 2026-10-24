@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-mastery/slow",
+  "kind": "weapon-mastery",
+  "name": "Slow",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      90
+    ],
+    "section": "Equipment/Weapons/Mastery Properties/Slow",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.",
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "speed",
+          "movement": "walk",
+          "mode": "add",
+          "value": -10,
+          "target": {
+            "kind": "inherit"
+          },
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_start",
+              "whose": "source"
+            }
+          },
+          "note": "Only if damage was dealt; reductions from this property don't exceed 10 feet."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

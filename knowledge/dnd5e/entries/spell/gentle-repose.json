@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/gentle-repose",
+  "kind": "spell",
+  "name": "Gentle Repose",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      135
+    ],
+    "section": "Spells/Spell Descriptions/Gentle Repose",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Necromancy (Cleric, Paladin, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (2 Copper Pieces, which the spell consumes)\n\n**Duration:** 10 days\n\nYou touch a corpse or other remains. For the duration, the target is protected from decay and can’t become Undead.\n\nThe spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as *Raise Dead*.",
+  "facets": {
+    "level": 2,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "paladin",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "2 Copper Pieces, which the spell consumes",
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "10 days",
+      "kind": "days",
+      "amount": 10
+    },
+    "rules": [
+      {
+        "id": "protection",
+        "no_decay": true,
+        "cannot_become_undead": true
+      },
+      {
+        "id": "raise_dead_limit",
+        "days_dont_count": true,
+        "example": "dnd5e/spell/raise-dead"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Necromancy (Cleric, Paladin, Wizard)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** Touch\n\n**Components:** V, S, M (2 Copper Pieces, which the spell consumes)\n\n**Duration:** 10 days",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a corpse or other remains. For the duration, the target is protected from decay and can’t become Undead.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as *Raise Dead*.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

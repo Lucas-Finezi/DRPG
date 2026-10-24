@@ -1,0 +1,106 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/horseshoes-of-a-zephyr",
+  "kind": "magic-item",
+  "name": "Horseshoes of a Zephyr",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Horseshoes of a Zephyr",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Very Rare*\n\nThese horseshoes come in a set of four. As a Magic action, you can touch one of the horseshoes to the hoof of a horse or similar creature, whereupon the horseshoe affixes itself to the hoof. Removing a horseshoe also takes a Magic action.\n\nWhile all four shoes are affixed to the hooves of a horse or similar creature, they allow the creature to move normally while floating 4 inches above a surface. This effect means the creature can cross or stand above nonsolid or unstable surfaces, such as water or lava. The creature leaves no tracks and ignores Difficult Terrain. In addition, the creature can travel for up to 12 hours a day without gaining Exhaustion levels from extended travel.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "set",
+        "count": 4,
+        "affix": "dnd5e/action/magic",
+        "remove": "dnd5e/action/magic",
+        "creature": "horse or similar creature"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "water_walk",
+      "mode": "set",
+      "value": 1,
+      "note": "Floats 4 inches above any surface, including water or lava."
+    },
+    {
+      "op": "modifier",
+      "stat": "leaves_tracks",
+      "mode": "set",
+      "value": 0
+    },
+    {
+      "op": "modifier",
+      "stat": "ignores_difficult_terrain",
+      "mode": "set",
+      "value": 1
+    },
+    {
+      "op": "reference",
+      "rule": "dnd5e/condition/exhaustion",
+      "note": "Up to 12 hours of travel a day without Exhaustion from extended travel."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "These horseshoes come in a set of four. As a Magic action, you can touch one of the horseshoes to the hoof of a horse or similar creature, whereupon the horseshoe affixes itself to the hoof. Removing a horseshoe also takes a Magic action.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While all four shoes are affixed to the hooves of a horse or similar creature, they allow the creature to move normally while floating 4 inches above a surface. This effect means the creature can cross or stand above nonsolid or unstable surfaces, such as water or lava. The creature leaves no tracks and ignores Difficult Terrain. In addition, the creature can travel for up to 12 hours a day without gaining Exhaustion levels from extended travel.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

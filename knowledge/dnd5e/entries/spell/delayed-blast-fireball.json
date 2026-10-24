@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/delayed-blast-fireball",
+  "kind": "spell",
+  "name": "Delayed Blast Fireball",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      122
+    ],
+    "section": "Spells/Spell Descriptions/Delayed Blast Fireball",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (a ball of bat guano and sulfur)\n\n**Duration:** Concentration, up to 1 minute\n\nA beam of yellow light flashes from you, then condenses at a chosen point within range as a glowing bead for the duration. When the spell ends, the bead explodes, and each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw. A creature takes Fire damage equal to the total accumulated damage on a failed save or half as much damage on a successful one.\n\nThe spell’s base damage is 12d6, and the damage increases by 1d6 whenever your turn ends and the spell hasn’t ended.\n\nIf a creature touches the glowing bead before the spell ends, that creature makes a Dexterity saving throw. On a failed save, the spell ends, causing the bead to explode. On a successful save, the creature can throw the bead up to 40 feet. If the thrown bead enters a creature’s space or collides with a solid object, the spell ends, and the bead explodes.\n\nWhen the bead explodes, flammable objects in the explosion that aren’t being worn or carried start burning.\n\n***Using a Higher-Level Spell Slot.*** The base damage increases by 1d6 for each spell slot level above 7.",
+  "facets": {
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a ball of bat guano and sulfur"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "accumulation",
+        "base": "12d6",
+        "per_turn_end": "1d6"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "effect_ends"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "sphere",
+              "size_feet": 20,
+              "origin": "point"
+            },
+            "range": {
+              "kind": "distance",
+              "feet": 150
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  {
+                    "dice": {
+                      "count": {
+                        "op": "add",
+                        "args": [
+                          12,
+                          {
+                            "op": "sub",
+                            "args": [
+                              {
+                                "var": "spell_slot_level"
+                              },
+                              7
+                            ]
+                          }
+                        ]
+                      },
+                      "faces": 6
+                    }
+                  },
+                  {
+                    "dice": {
+                      "count": {
+                        "var": "rounds_elapsed"
+                      },
+                      "faces": 6
+                    }
+                  }
+                ]
+              },
+              "damage_type": "fire"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "The bead explodes when the spell ends."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "touches_effect"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry"
+            }
+          ],
+          "on_success": [
+            {
+              "op": "move",
+              "mode": "move",
+              "distance_feet": 40,
+              "note": "It can throw the bead; it explodes on hitting a creature's space or a solid object."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 150 feet\n\n**Components:** V, S, M (a ball of bat guano and sulfur)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A beam of yellow light flashes from you, then condenses at a chosen point within range as a glowing bead for the duration. When the spell ends, the bead explodes, and each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw. A creature takes Fire damage equal to the total accumulated damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The spell’s base damage is 12d6, and the damage increases by 1d6 whenever your turn ends and the spell hasn’t ended.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a creature touches the glowing bead before the spell ends, that creature makes a Dexterity saving throw. On a failed save, the spell ends, causing the bead to explode. On a successful save, the creature can throw the bead up to 40 feet. If the thrown bead enters a creature’s space or collides with a solid object, the spell ends, and the bead explodes.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "When the bead explodes, flammable objects in the explosion that aren’t being worn or carried start burning.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/hazard/burning"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The base damage increases by 1d6 for each spell slot level above 7.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/burning"
+  ]
+}

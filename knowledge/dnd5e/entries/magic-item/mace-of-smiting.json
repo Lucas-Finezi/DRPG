@@ -1,0 +1,216 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/mace-of-smiting",
+  "kind": "magic-item",
+  "name": "Mace of Smiting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      229
+    ],
+    "section": "Magic Items/Magic Items A–Z/Mace of Smiting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Mace), Rare*\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The bonus increases to +3 when you use the weapon to attack a Construct.\n\nWhen you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 Bludgeoning damage, or 14 Bludgeoning damage if it’s a Construct. If a Construct has 25 Hit Points or fewer after taking this damage, it is destroyed.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Mace), Rare",
+      "category": "weapon",
+      "applies_to": {
+        "text": "Mace",
+        "refs": [
+          "dnd5e/weapon/mace"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "wielded",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "construct"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "wielded",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "construct"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "rolls_natural_20_attack"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "construct",
+          "choose": 1,
+          "options": [
+            {
+              "id": "construct",
+              "label": "Construct",
+              "effects": [
+                {
+                  "op": "damage",
+                  "amount": 14,
+                  "damage_type": "bludgeoning",
+                  "target": {
+                    "kind": "inherit"
+                  }
+                },
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry_on_target",
+                  "when": {
+                    "pred": "hp_is",
+                    "args": {
+                      "at_most": 25
+                    }
+                  },
+                  "note": "Destroyed if 25 Hit Points or fewer after the damage."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "Other",
+              "effects": [
+                {
+                  "op": "damage",
+                  "amount": 7,
+                  "damage_type": "bludgeoning",
+                  "target": {
+                    "kind": "inherit"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Mace), Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The bonus increases to +3 when you use the weapon to attack a Construct.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "When you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 Bludgeoning damage, or 14 Bludgeoning damage if it’s a Construct. If a Construct has 25 Hit Points or fewer after taking this damage, it is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon/mace"
+  ]
+}

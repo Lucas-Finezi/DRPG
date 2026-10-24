@@ -1,0 +1,299 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/rod-of-alertness",
+  "kind": "magic-item",
+  "name": "Rod of Alertness",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      241
+    ],
+    "section": "Magic Items/Magic Items A–Z/Rod of Alertness",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Rod, Very Rare (Requires Attunement)*\n\nThis rod has the following properties.\n\n***Alertness.*** While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.\n\n***Spells.*** While holding the rod, you can cast the following spells from it:\n\n- *Detect Evil and Good*\n\n- *Detect Magic*\n\n- *Detect Poison and Disease*\n\n- *See Invisibility*\n\n***Protective Aura.*** As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod’s head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.\n\nThe rod’s head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can’t be used again until the next dawn.",
+  "facets": {
+    "category": "rod",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Rod, Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "rod",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "aura_light",
+        "bright_feet": 60,
+        "dim_feet": 60
+      },
+      {
+        "id": "aura_end",
+        "minutes": 10,
+        "ends_on": "a creature pulls the rod out (Magic action)"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "initiative",
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "initiative"
+                }
+              },
+              {
+                "pred": "check_uses",
+                "args": {
+                  "skill": "perception"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-evil-and-good",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-poison-and-disease",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/see-invisibility",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "ac",
+          "mode": "add",
+          "value": 1,
+          "when": {
+            "pred": "in_item_light",
+            "args": {
+              "item": "this"
+            }
+          }
+        },
+        {
+          "op": "modifier",
+          "stat": "saving_throw",
+          "mode": "add",
+          "value": 1,
+          "when": {
+            "pred": "in_item_light",
+            "args": {
+              "item": "this"
+            }
+          }
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/condition/invisible",
+          "note": "Sense the location of Invisible creatures in the Bright Light."
+        }
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 10
+      },
+      "note": "You and your allies in the Bright Light (60 feet)."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Rod, Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This rod has the following properties.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Alertness.*** While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Spells.*** While holding the rod, you can cast the following spells from it:",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "- *Detect Evil and Good*",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "- *Detect Magic*",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "- *Detect Poison and Disease*",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "- *See Invisibility*",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Protective Aura.*** As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod’s head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.",
+      "status": "structured",
+      "by": [
+        "/effects/5",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The rod’s head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/invisible",
+    "dnd5e/spell/detect-evil-and-good",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/detect-poison-and-disease",
+    "dnd5e/spell/see-invisibility"
+  ]
+}

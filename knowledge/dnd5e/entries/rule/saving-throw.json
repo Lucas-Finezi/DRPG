@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/saving-throw",
+  "kind": "rule",
+  "name": "Saving Throw",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      187
+    ],
+    "section": "Rules Glossary/Rules Definitions/Saving Throw",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 2,
+  "text": "A saving throw—also called a save—represents an attempt to avoid or resist a threat. You normally make a saving throw only when a rule requires you to do so, but you can decide to fail the save without rolling. The result of a save is detailed in the effect that allowed it. If a target is forced to make a save and lacks the ability score used by it, the target automatically fails. *See also* “Playing the Game” (“D20 Tests”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "saving_throw",
+        "made_when": "rule_requires",
+        "may_choose_to_fail": true,
+        "result_defined_by": "effect"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "auto_result",
+      "rolls": [
+        "saving_throw"
+      ],
+      "result": "fail",
+      "when": {
+        "pred": "lacks_ability_score"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A saving throw—also called a save—represents an attempt to avoid or resist a threat. You normally make a saving throw only when a rule requires you to do so, but you can decide to fail the save without rolling. The result of a save is detailed in the effect that allowed it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a target is forced to make a save and lacks the ability score used by it, the target automatically fails.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "*See also* “Playing the Game” (“D20 Tests”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/d20-tests"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/d20-tests"
+  ]
+}

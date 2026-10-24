@@ -1,0 +1,243 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/awakened-tree",
+  "kind": "creature",
+  "name": "Awakened Tree",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      260
+    ],
+    "section": "Monsters A–Z/Awakened Plants/Awakened Tree",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Huge Plant, Neutral*\n\n| **AC** 13 | **Initiative** −2 (8) |\n\n**HP** 59 (7d12 + 14)\n\n**Speed** 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |\n\n**Vulnerabilities** Fire\n\n**Resistances** Bludgeoning, Piercing\n\n**Senses** Passive Perception 10\n\n**Languages** Common plus one other language\n\n**CR** 2 (XP 450; PB +2)\n\n##### Actions\n\n***Slam.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 14 (3d6 + 4) Bludgeoning damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Huge",
+    "type": "Plant",
+    "alignment": "Neutral",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Plant",
+    "alignment": "Neutral",
+    "type_line": "Huge Plant, Neutral",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": -2,
+      "score": 8,
+      "text": "−2 (8)"
+    },
+    "hp": {
+      "average": 59,
+      "formula": {
+        "op": "add",
+        "args": [
+          "7d12",
+          14
+        ]
+      },
+      "text": "59 (7d12 + 14)"
+    },
+    "speed": {
+      "text": "20 ft.",
+      "walk": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "fire"
+      ],
+      "text": "Fire"
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "piercing"
+      ],
+      "text": "Bludgeoning, Piercing"
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Slam",
+        "text": "*Melee Attack Roll:* +6, reach 10 ft. *Hit:* 14 (3d6 + 4) Bludgeoning damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slam",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Plant, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** −2 (8) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 59 (7d12 + 14)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 6 | −2 | −2 | **Con** 15 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Piercing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Slam.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 14 (3d6 + 4) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

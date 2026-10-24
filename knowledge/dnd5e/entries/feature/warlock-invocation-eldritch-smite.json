@@ -1,0 +1,121 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-eldritch-smite",
+  "kind": "feature",
+  "name": "Eldritch Smite",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72,
+      73
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Eldritch Smite",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation*\n\nOnce per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 5,
+        "invocation": "dnd5e/feature/warlock-invocation-pact-of-the-blade"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "pact"
+        }
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "pact_magic_slot",
+          "amount": 1
+        },
+        {
+          "op": "damage",
+          "damage_type": "force",
+          "target": {
+            "kind": "inherit"
+          },
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  1,
+                  {
+                    "var": "spell_slot_level"
+                  }
+                ]
+              },
+              "faces": 8
+            }
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/prone",
+          "note": "Optional; Huge or smaller.",
+          "target": {
+            "kind": "inherit",
+            "filter": {
+              "sizes": [
+                "tiny",
+                "small",
+                "medium",
+                "large",
+                "huge"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 5+ Warlock, Pact of the Blade Invocation*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Once per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

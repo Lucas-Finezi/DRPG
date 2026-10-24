@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/boots-of-striding-and-springing",
+  "kind": "magic-item",
+  "name": "Boots of Striding and Springing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      214
+    ],
+    "section": "Magic Items/Magic Items A–Z/Boots of Striding and Springing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon (Requires Attunement)*\n\nWhile you wear these boots, your Speed becomes 30 feet unless your Speed is higher, and your Speed isn’t reduced by you carrying weight in excess of your carrying capacity or wearing Heavy Armor.\n\nOnce on each of your turns, you can jump up to 30 feet by spending only 10 feet of movement.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "min",
+      "value": 30,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "speed_reduced_by_encumbrance_or_heavy_armor"
+      ],
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "movement_cost": 10,
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "jump",
+          "distance_feet": 30
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While you wear these boots, your Speed becomes 30 feet unless your Speed is higher, and your Speed isn’t reduced by you carrying weight in excess of your carrying capacity or wearing Heavy Armor.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Once on each of your turns, you can jump up to 30 feet by spending only 10 feet of movement.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

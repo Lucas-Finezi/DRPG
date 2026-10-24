@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/gnome-gnomish-cunning",
+  "kind": "feature",
+  "name": "Gnomish Cunning",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      85
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Gnome",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Gnomish Cunning.*** You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/gnome"
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw.int",
+        "saving_throw.wis",
+        "saving_throw.cha"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Gnomish Cunning.*** You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

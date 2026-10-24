@@ -1,0 +1,88 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/equipment-armor-training",
+  "kind": "rule",
+  "name": "Armor Training",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      92
+    ],
+    "section": "Equipment/Armor/Armor Training",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L29"
+  },
+  "tier": 2,
+  "text": "Anyone can don armor or hold a Shield, but only those with training can use them effectively, as explained below. A character’s class and other features determine the character’s armor training. A monster has training with any armor in its stat block.\n\n#### Light, Medium, or Heavy Armor\n\nIf you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells.\n\n#### Shield\n\nYou gain the Armor Class benefit of a Shield only if you have training with it.",
+  "data": {
+    "rules": [
+      {
+        "id": "training",
+        "anyone_can_don": true,
+        "training_from_class_or_features": true,
+        "monsters_trained_with_stat_block_armor": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "d20_test.str",
+        "d20_test.dex"
+      ],
+      "when": {
+        "pred": "wearing_untrained_armor"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "cast_spells"
+      ],
+      "when": {
+        "pred": "wearing_untrained_armor"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "shield_ac_bonus"
+      ],
+      "when": {
+        "pred": "using_untrained_shield"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Anyone can don armor or hold a Shield, but only those with training can use them effectively, as explained below. A character’s class and other features determine the character’s armor training. A monster has training with any armor in its stat block.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Light, Medium, or Heavy Armor\n\nIf you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "#### Shield\n\nYou gain the Armor Class benefit of a Shield only if you have training with it.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

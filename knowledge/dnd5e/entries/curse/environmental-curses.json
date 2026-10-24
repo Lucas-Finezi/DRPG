@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/curse/environmental-curses",
+  "kind": "curse",
+  "name": "Environmental Curses",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      193
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Curses/Environmental Curses",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "Some locations are so suffused with evil that anyone who lingers there is burdened with a curse. Demonic Possession is one example of an environmental curse.\n\n***Demonic Possession.*** Demonic Possession arises from the chaos and evil of the Abyss and commonly besets creatures that interact with demonic objects or linger in desecrated locations, where demonic spirits await victims.\n\nA creature that becomes the target of Demonic Possession must succeed on a DC 15 Charisma saving throw or be possessed by a bodiless demonic entity. Whenever the possessed creature rolls a 1 on a D20 Test, the demonic entity takes control of the creature and determines the creature’s behavior thereafter. At the end of each of the possessed creature’s later turns, the creature makes a DC 15 Charisma saving throw, regaining control of itself on a success.\n\nAfter finishing a Long Rest, a creature with Demonic Possession makes a DC 15 Charisma saving throw. On a successful save, the effect ends on the creature. A *Dispel Evil and Good* spell or any magic that removes a curse also ends the effect on it.",
+  "effects": [
+    {
+      "op": "save",
+      "ability": "cha",
+      "dc": 15,
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/curse/environmental-curses",
+          "note": "Possessed: on a 1 on a D20 Test the entity takes control; DC 15 Charisma save at the end of each later turn regains control."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": 15,
+          "on_success": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry_on_target"
+            }
+          ]
+        }
+      ],
+      "note": "Dispel Evil and Good or any magic that removes a curse also ends it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some locations are so suffused with evil that anyone who lingers there is burdened with a curse. Demonic Possession is one example of an environmental curse.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Demonic Possession.*** Demonic Possession arises from the chaos and evil of the Abyss and commonly besets creatures that interact with demonic objects or linger in desecrated locations, where demonic spirits await victims.",
+      "status": "descriptive"
+    },
+    {
+      "text": "A creature that becomes the target of Demonic Possession must succeed on a DC 15 Charisma saving throw or be possessed by a bodiless demonic entity. Whenever the possessed creature rolls a 1 on a D20 Test, the demonic entity takes control of the creature and determines the creature’s behavior thereafter. At the end of each of the possessed creature’s later turns, the creature makes a DC 15 Charisma saving throw, regaining control of itself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "After finishing a Long Rest, a creature with Demonic Possession makes a DC 15 Charisma saving throw. On a successful save, the effect ends on the creature. A *Dispel Evil and Good* spell or any magic that removes a curse also ends the effect on it.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/curse/environmental-curses"
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/death-dog",
+  "kind": "creature",
+  "name": "Death Dog",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      279
+    ],
+    "section": "Monsters A–Z/Death Dog/Death Dog",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Medium Monstrosity, Neutral Evil*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 39 (6d8 + 12)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |\n| **Int** | 3 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |\n\n**Skills** Perception +5, Stealth +4\n\n**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious\n\n**Senses** Darkvision 120 ft.; Passive Perception 15\n\n**Languages** None\n\n**CR** 1 (XP 200; PB +2)\n\n##### Actions\n\n***Multiattack.*** The death dog makes two Bite attacks.\n\n***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *First Failure:* The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. *Subsequent Failures:* The Poisoned target’s Hit Point maximum decreases by 5 (1d10).",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Monstrosity",
+    "alignment": "Neutral Evil",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Monstrosity",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium Monstrosity, Neutral Evil",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 39,
+      "formula": {
+        "op": "add",
+        "args": [
+          "6d8",
+          12
+        ]
+      },
+      "text": "39 (6d8 + 12)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 5,
+      "stealth": 4,
+      "text": "Perception +5, Stealth +4"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/blinded",
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/stunned",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 15",
+      "darkvision": 120,
+      "passive_perception": 15
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The death dog makes two Bite attacks."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *First Failure:* The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. *Subsequent Failures:* The Poisoned target’s Hit Point maximum decreases by 5 (1d10)."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 2
+          }
+        ],
+        "text": "The death dog makes two Bite attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bite_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bite as written.",
+      "source_text": "4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC 12. First Failure: The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Monstrosity, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 39 (6d8 + 12)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +2 | **Dex** 14 | +2 | +2 | **Con** 14 | +2 | +2 |\n| **Int** | 3 | −4 | −4 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +5, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 15",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The death dog makes two Bite attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Piercing damage. If the target is a creature, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *First Failure:* The target has the Poisoned condition. While Poisoned, the target’s Hit Point maximum doesn’t return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. *Subsequent Failures:* The Poisoned target’s Hit Point maximum decreases by 5 (1d10).",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_bite_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/stunned",
+    "dnd5e/condition/unconscious"
+  ]
+}

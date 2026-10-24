@@ -1,0 +1,262 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/blink-dog",
+  "kind": "creature",
+  "name": "Blink Dog",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      266
+    ],
+    "section": "Monsters A–Z/Blink Dog/Blink Dog",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Medium Fey, Lawful Good*\n\n| **AC** 13 | **Initiative** +3 (13) |\n\n**HP** 22 (4d8 + 4)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 17 | +3 | +3 | **Con** 12 | +1 | +1 |\n| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |\n\n**Skills** Perception +5, Stealth +5\n\n**Senses** Darkvision 60 ft.; Passive Perception 15\n\n**Languages** Blink Dog; understands Elvish and Sylvan but can’t speak them\n\n**CR** 1/4 (XP 50; PB +2)\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Piercing damage.\n\n##### Bonus Actions\n\n***Teleport (Recharge 4–6).*** The dog teleports up to 40 feet to an unoccupied space it can see.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Lawful Good",
+    "cr": "1/4"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fey",
+    "alignment": "Lawful Good",
+    "type_line": "Medium Fey, Lawful Good",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": {
+        "op": "add",
+        "args": [
+          "4d8",
+          4
+        ]
+      },
+      "text": "22 (4d8 + 4)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "perception": 5,
+      "stealth": 5,
+      "text": "Perception +5, Stealth +5"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 15",
+      "darkvision": 60,
+      "passive_perception": 15
+    },
+    "languages": {
+      "text": "Blink Dog; understands Elvish and Sylvan but can’t speak them"
+    },
+    "cr": {
+      "value": "1/4",
+      "xp": 50,
+      "proficiency_bonus": 2,
+      "text": "1/4 (XP 50; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Piercing damage."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Teleport",
+        "recharge": {
+          "min": 4,
+          "die": "1d6"
+        },
+        "text": "The dog teleports up to 40 feet to an unoccupied space it can see."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "bonus_actions_teleport",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Teleport as written.",
+      "source_text": "The dog teleports up to 40 feet to an unoccupied space it can see."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fey, Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (4d8 + 4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 17 | +3 | +3 | **Con** 12 | +1 | +1 |\n| **Int** | 10 | +0 | +0 | **Wis** 13 | +1 | +1 | **Cha** 11 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +5, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 15",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Blink Dog; understands Elvish and Sylvan but can’t speak them",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/4 (XP 50; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 5 (1d4 + 3) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Teleport (Recharge 4–6).*** The dog teleports up to 40 feet to an unoccupied space it can see.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_teleport"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/color-spray",
+  "kind": "spell",
+  "name": "Color Spray",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      116
+    ],
+    "section": "Spells/Spell Descriptions/Color Spray",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a pinch of colorful sand)\n\n**Duration:** Instantaneous\n\nYou launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn.",
+  "facets": {
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a pinch of colorful sand"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cone",
+          "size_feet": 15,
+          "origin": "self"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/blinded",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "source",
+              "which": "next"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a pinch of colorful sand)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded"
+  ]
+}

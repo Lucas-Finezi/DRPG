@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/draconic-sorcery-draconic-resilience",
+  "kind": "feature",
+  "name": "Draconic Resilience",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      69
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Subclass: Draconic Sorcery/Level 3: Draconic Resilience",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The magic in your body manifests physical traits of your draconic gift. Your Hit Point maximum increases by 3, and it increases by 1 whenever you gain another Sorcerer level.\n\nParts of you are also covered by dragon-like scales. While you aren’t wearing armor, your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/draconic-sorcery",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp_max",
+      "mode": "add",
+      "value": {
+        "op": "add",
+        "args": [
+          3,
+          {
+            "op": "sub",
+            "args": [
+              {
+                "var": "class_level.sorcerer"
+              },
+              3
+            ]
+          }
+        ]
+      },
+      "note": "+3, then +1 per Sorcerer level gained after this one."
+    },
+    {
+      "op": "modifier",
+      "stat": "base_ac",
+      "mode": "set",
+      "when": {
+        "not": {
+          "pred": "wearing_armor_any"
+        }
+      },
+      "value": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "ability_mod.dex"
+          },
+          {
+            "var": "ability_mod.cha"
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The magic in your body manifests physical traits of your draconic gift. Your Hit Point maximum increases by 3, and it increases by 1 whenever you gain another Sorcerer level.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Parts of you are also covered by dragon-like scales. While you aren’t wearing armor, your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/acid",
+  "kind": "gear",
+  "name": "Acid",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      94
+    ],
+    "section": "Equipment/Adventuring Gear/Acid",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage.",
+  "facets": {
+    "cost_cp": 2500
+  },
+  "data": {
+    "cost": {
+      "amount": 25,
+      "unit": "gp",
+      "cp": 2500
+    },
+    "weight_lb": 1
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "takes_attack_action"
+      },
+      "optional": true,
+      "note": "Replace one attack with throwing the Acid; target within 20 feet you can see.",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature_or_object",
+            "range": {
+              "kind": "distance",
+              "feet": 20
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "acid"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    }
+  ]
+}

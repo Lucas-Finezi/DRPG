@@ -1,0 +1,182 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/freedom-of-movement",
+  "kind": "spell",
+  "name": "Freedom of Movement",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      134
+    ],
+    "section": "Spells/Spell Descriptions/Freedom of Movement",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Abjuration (Bard, Cleric, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a leather strap)\n\n**Duration:** 1 hour\n\nYou touch a willing creature. For the duration, the target’s movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target’s Speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed.\n\nIn addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it.\n\n***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 4.",
+  "facets": {
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a leather strap"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "targets",
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                4
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ignores_difficult_terrain",
+      "mode": "set",
+      "value": 1,
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "speed_reduced_by_magic"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/restrained"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "note": "Against spells and other magical effects."
+    },
+    {
+      "op": "speed",
+      "movement": "swim",
+      "mode": "equal_to_walk",
+      "value": 0,
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "movement_cost": 5,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/grappling",
+          "note": "Escape nonmagical restraints or the Grappled condition."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Abjuration (Bard, Cleric, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a leather strap)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a willing creature. For the duration, the target’s movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target’s Speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "In addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 4.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/restrained",
+    "dnd5e/rule/grappling"
+  ]
+}

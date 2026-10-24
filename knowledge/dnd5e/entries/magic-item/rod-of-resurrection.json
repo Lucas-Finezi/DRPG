@@ -1,0 +1,184 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/rod-of-resurrection",
+  "kind": "magic-item",
+  "name": "Rod of Resurrection",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      242
+    ],
+    "section": "Magic Items/Magic Items A–Z/Rod of Resurrection",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Rod, Legendary (Requires Attunement)*\n\nThe rod has 5 charges. While you hold it, you can cast one of the following spells from it: *Heal* (expends 1 charge) or *Resurrection* (expends 5 charges).\n\nThe rod regains 1 expended charge daily at dawn. If you expend the last charge, roll 1d20. On a 1, the rod disappears in a harmless burst of radiance.",
+  "facets": {
+    "category": "rod",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Rod, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "rod",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 5
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/heal",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 5
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/resurrection",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The rod disappears in a harmless burst of radiance."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Rod, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "The rod has 5 charges. While you hold it, you can cast one of the following spells from it: *Heal* (expends 1 charge) or *Resurrection* (expends 5 charges).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "The rod regains 1 expended charge daily at dawn. If you expend the last charge, roll 1d20. On a 1, the rod disappears in a harmless burst of radiance.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/heal",
+    "dnd5e/spell/resurrection"
+  ]
+}

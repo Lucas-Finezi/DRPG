@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/illusory-script",
+  "kind": "spell",
+  "name": "Illusory Script",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      142
+    ],
+    "section": "Spells/Spell Descriptions/Illusory Script",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 1,
+  "text": "*Level 1 Illusion (Bard, Warlock, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Touch\n\n**Components:** S, M (ink worth 10+ GP, which the spell consumes)\n\n**Duration:** 10 days\n\nYou write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, seems to be written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one you know.\n\nIf the spell is dispelled, the original script and the illusion both disappear.\n\nA creature that has Truesight can read the hidden message.",
+  "facets": {
+    "level": 1,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": false,
+      "somatic": true,
+      "material": "ink worth 10+ GP, which the spell consumes",
+      "material_cost_gp": 10,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "10 days",
+      "kind": "days",
+      "amount": 10
+    },
+    "rules": [
+      {
+        "id": "script",
+        "readers": [
+          "you",
+          "designated_creatures"
+        ],
+        "others_see": "unintelligible_script",
+        "alternative": "alter_meaning_handwriting_language",
+        "language_must_be_known": true
+      },
+      {
+        "id": "dispelled",
+        "both_disappear": true
+      },
+      {
+        "id": "truesight",
+        "can_read_hidden_message": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 1 Illusion (Bard, Warlock, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Touch\n\n**Components:** S, M (ink worth 10+ GP, which the spell consumes)\n\n**Duration:** 10 days",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, seems to be written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one you know.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If the spell is dispelled, the original script and the illusion both disappear.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "A creature that has Truesight can read the hidden message.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

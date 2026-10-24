@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/improvised-weapons",
+  "kind": "rule",
+  "name": "Improvised Weapons",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      183
+    ],
+    "section": "Rules Glossary/Rules Definitions/Improvised Weapons",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it’s wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.\n\n***Proficiency.*** Don’t add your Proficiency Bonus to attack rolls with an improvised weapon.\n\n***Damage.*** On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.\n\n***Range.*** If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.\n\n***Weapon Equivalents.*** If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules. For example, the GM could treat a table leg as a Club.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "improvised",
+        "includes": [
+          "object_wielded_as_weapon",
+          "ranged_weapon_used_in_melee",
+          "melee_weapon_thrown_without_thrown_property"
+        ]
+      },
+      {
+        "id": "no_proficiency_bonus",
+        "add_proficiency_bonus": false
+      },
+      {
+        "id": "damage",
+        "dice": "1d4"
+      },
+      {
+        "id": "thrown_range",
+        "normal_feet": 20,
+        "long_feet": 60
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "improvised_damage_type",
+      "reason": "gm_judgment",
+      "prompt": "Which damage type does this improvised weapon deal?",
+      "source_text": "On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.",
+      "options": [
+        {
+          "id": "bludgeoning",
+          "label": "Bludgeoning"
+        },
+        {
+          "id": "piercing",
+          "label": "Piercing"
+        },
+        {
+          "id": "slashing",
+          "label": "Slashing"
+        }
+      ],
+      "pages": [
+        183
+      ]
+    },
+    {
+      "id": "weapon_equivalent",
+      "reason": "gm_judgment",
+      "prompt": "Does this improvised weapon function as a Simple or Martial weapon it resembles?",
+      "source_text": "If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules.",
+      "pages": [
+        183
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it’s wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Proficiency.*** Don’t add your Proficiency Bonus to attack rolls with an improvised weapon.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Damage.*** On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/2",
+        "md:improvised_damage_type"
+      ]
+    },
+    {
+      "text": "***Range.*** If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Weapon Equivalents.*** If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules. For example, the GM could treat a table leg as a Club.",
+      "status": "master_decision",
+      "by": [
+        "md:weapon_equivalent"
+      ]
+    }
+  ]
+}

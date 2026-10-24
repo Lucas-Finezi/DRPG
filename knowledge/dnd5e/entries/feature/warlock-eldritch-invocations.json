@@ -1,0 +1,114 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-eldritch-invocations",
+  "kind": "feature",
+  "name": "Eldritch Invocations",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      70,
+      71
+    ],
+    "section": "Classes/Warlock/Warlock Class Features/Level 1: Eldritch Invocations",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have unearthed Eldritch Invocations, pieces of forbidden knowledge that imbue you with an abiding magical ability or other lessons. You gain one invocation of your choice, such as Pact of the Tome. Invocations are described in the “Eldritch Invocation Options” section later in this class’s description.\n\n***Prerequisites.*** If an invocation has a prerequisite, you must meet it to learn that invocation. For example, if an invocation requires you to be a level 5+ Warlock, you can select the invocation once you reach Warlock level 5.\n\n***Replacing and Gaining Invocations.*** Whenever you gain a Warlock level, you can replace one of your invocations with another one for which you qualify. You can’t replace an invocation if it’s a prerequisite for another invocation that you have.\n\nWhen you gain certain Warlock levels, you gain more invocations of your choice, as shown in the Invocations column of the Warlock Features table.\n\nYou can’t pick the same invocation more than once unless its description says otherwise.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/warlock",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisites",
+        "must_meet_prerequisite": true
+      },
+      {
+        "id": "replace",
+        "on": "level_gained",
+        "count": 1,
+        "must_qualify": true,
+        "cannot_replace_if_prerequisite_of_another": true
+      },
+      {
+        "id": "unique",
+        "unless": "repeatable"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/warlock-invocation-pact-of-the-tome"
+      ],
+      "choose": {
+        "table": "dnd5e/class/warlock",
+        "table_id": "warlock_features",
+        "key": {
+          "var": "class_level.warlock"
+        },
+        "column": "Eldritch Invocations"
+      },
+      "note": "Invocations of your choice from Eldritch Invocation Options (feature_type eldritch_invocation); Pact of the Tome is an example."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have unearthed Eldritch Invocations, pieces of forbidden knowledge that imbue you with an abiding magical ability or other lessons. You gain one invocation of your choice, such as Pact of the Tome.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Invocations are described in the “Eldritch Invocation Options” section later in this class’s description.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/eldritch-invocation-options"
+      ]
+    },
+    {
+      "text": "***Prerequisites.*** If an invocation has a prerequisite, you must meet it to learn that invocation. For example, if an invocation requires you to be a level 5+ Warlock, you can select the invocation once you reach Warlock level 5.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Replacing and Gaining Invocations.*** Whenever you gain a Warlock level, you can replace one of your invocations with another one for which you qualify. You can’t replace an invocation if it’s a prerequisite for another invocation that you have.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When you gain certain Warlock levels, you gain more invocations of your choice, as shown in the Invocations column of the Warlock Features table.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can’t pick the same invocation more than once unless its description says otherwise.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/warlock",
+    "dnd5e/feature/warlock-invocation-pact-of-the-tome",
+    "dnd5e/rule/eldritch-invocation-options"
+  ]
+}

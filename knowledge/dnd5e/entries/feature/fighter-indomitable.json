@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-indomitable",
+  "kind": "feature",
+  "name": "Indomitable",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 9: Indomitable",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can’t use this feature again until you finish a Long Rest.\n\nYou can use this feature twice before a Long Rest starting at level 13 and three times before a Long Rest starting at level 17.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 9
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "target_is_source"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "indomitable",
+          "amount": 1
+        },
+        {
+          "op": "reroll",
+          "rolls": [
+            "saving_throw"
+          ],
+          "keep": "new"
+        },
+        {
+          "op": "modifier",
+          "stat": "saving_throw",
+          "mode": "add",
+          "value": {
+            "var": "class_level.fighter"
+          },
+          "note": "The new roll."
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "indomitable",
+      "name": "Indomitable",
+      "max": {
+        "scale": {
+          "by": "class_level.fighter",
+          "steps": [
+            {
+              "from": 9,
+              "value": 1
+            },
+            {
+              "from": 13,
+              "value": 2
+            },
+            {
+              "from": 17,
+              "value": 3
+            }
+          ]
+        }
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can’t use this feature again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "You can use this feature twice before a Long Rest starting at level 13 and three times before a Long Rest starting at level 17.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

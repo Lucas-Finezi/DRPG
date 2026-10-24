@@ -1,0 +1,169 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/draconic-sorcery-draconic-spells",
+  "kind": "feature",
+  "name": "Draconic Spells",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      70
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Subclass: Draconic Sorcery/Level 3: Draconic Spells",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you reach a Sorcerer level specified in the Draconic Spells table, you thereafter always have the listed spells prepared.\n\n##### Draconic Spells\n\n**Sorcerer**\n\n| **Level** | **Spells** |\n| 3 | *Alter Self*, *Chromatic Orb*, *Command*, *Dragon’s Breath* |\n| 5 | *Fear*, *Fly* |\n| 7 | *Arcane Eye*, *Charm Monster* |\n| 9 | *Legend Lore*, *Summon Dragon* |",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/draconic-sorcery",
+    "level": 3
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "draconic_spells",
+        "caption": "Draconic Spells",
+        "columns": [
+          "Sorcerer Level",
+          "Spells"
+        ],
+        "rows": [
+          [
+            3,
+            [
+              "dnd5e/spell/alter-self",
+              "dnd5e/spell/chromatic-orb",
+              "dnd5e/spell/command",
+              "dnd5e/spell/dragons-breath"
+            ]
+          ],
+          [
+            5,
+            [
+              "dnd5e/spell/fear",
+              "dnd5e/spell/fly"
+            ]
+          ],
+          [
+            7,
+            [
+              "dnd5e/spell/arcane-eye",
+              "dnd5e/spell/charm-monster"
+            ]
+          ],
+          [
+            9,
+            [
+              "dnd5e/spell/legend-lore",
+              "dnd5e/spell/summon-dragon"
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/alter-self",
+        "dnd5e/spell/chromatic-orb",
+        "dnd5e/spell/command",
+        "dnd5e/spell/dragons-breath"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 3
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/fear",
+        "dnd5e/spell/fly"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 5
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/arcane-eye",
+        "dnd5e/spell/charm-monster"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 7
+        }
+      }
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/legend-lore",
+        "dnd5e/spell/summon-dragon"
+      ],
+      "note": "Always prepared.",
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "sorcerer",
+          "level": 9
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you reach a Sorcerer level specified in the Draconic Spells table, you thereafter always have the listed spells prepared.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "##### Draconic Spells\n\n**Sorcerer**\n\n| **Level** | **Spells** |\n| 3 | *Alter Self*, *Chromatic Orb*, *Command*, *Dragon’s Breath* |\n| 5 | *Fear*, *Fly* |\n| 7 | *Arcane Eye*, *Charm Monster* |\n| 9 | *Legend Lore*, *Summon Dragon* |",
+      "status": "structured",
+      "by": [
+        "dnd5e/spell-list/draconic-spells",
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell-list/draconic-spells",
+    "dnd5e/spell/alter-self",
+    "dnd5e/spell/arcane-eye",
+    "dnd5e/spell/charm-monster",
+    "dnd5e/spell/chromatic-orb",
+    "dnd5e/spell/command",
+    "dnd5e/spell/dragons-breath",
+    "dnd5e/spell/fear",
+    "dnd5e/spell/fly",
+    "dnd5e/spell/legend-lore",
+    "dnd5e/spell/summon-dragon"
+  ]
+}

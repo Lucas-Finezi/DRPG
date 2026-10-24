@@ -1,0 +1,197 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/elemental-gem",
+  "kind": "magic-item",
+  "name": "Elemental Gem",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      220
+    ],
+    "section": "Magic Items/Magic Items A–Z/Elemental Gem",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThis gem contains a mote of elemental energy. When you take a Utilize action to break the gem, an elemental is summoned (see “Monsters” for its stat block), and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The type of gem determines the elemental, as shown in the following table.\n\n| **Gem** | **Summoned Elemental** |\n| Blue sapphire | Air Elemental |\n| Emerald | Water Elemental |\n| Red corundum | Fire Elemental |\n| Yellow diamond | Earth Elemental |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "elemental",
+        "single_use": true,
+        "dismiss": "bonus_action",
+        "ends_on": [
+          "1_hour",
+          "dies",
+          "dismissed"
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "id": "elemental_gem",
+        "caption": "Elemental Gem",
+        "columns": [
+          "Gem",
+          "Summoned Elemental"
+        ],
+        "rows": [
+          [
+            "Blue sapphire",
+            "Air Elemental"
+          ],
+          [
+            "Emerald",
+            "Water Elemental"
+          ],
+          [
+            "Red corundum",
+            "Fire Elemental"
+          ],
+          [
+            "Yellow diamond",
+            "Earth Elemental"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "choice",
+          "id": "gem",
+          "choose": 1,
+          "note": "The gem's type determines the elemental.",
+          "options": [
+            {
+              "id": "blue_sapphire",
+              "label": "Blue sapphire",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/air-elemental",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "emerald",
+              "label": "Emerald",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/water-elemental",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "red_corundum",
+              "label": "Red corundum",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/fire-elemental",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "yellow_diamond",
+              "label": "Yellow diamond",
+              "effects": [
+                {
+                  "op": "summon",
+                  "creature": "dnd5e/creature/earth-elemental",
+                  "controller": "summoner",
+                  "initiative": "after_summoner",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This gem contains a mote of elemental energy.",
+      "status": "descriptive"
+    },
+    {
+      "text": "When you take a Utilize action to break the gem, an elemental is summoned (see “Monsters” for its stat block), and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The type of gem determines the elemental, as shown in the following table.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "| **Gem** | **Summoned Elemental** |\n| Blue sapphire | Air Elemental |\n| Emerald | Water Elemental |\n| Red corundum | Fire Elemental |\n| Yellow diamond | Earth Elemental |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/air-elemental",
+    "dnd5e/creature/earth-elemental",
+    "dnd5e/creature/fire-elemental",
+    "dnd5e/creature/water-elemental"
+  ]
+}

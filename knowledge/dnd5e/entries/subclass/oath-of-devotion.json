@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/oath-of-devotion",
+  "kind": "subclass",
+  "name": "Oath of Devotion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      56
+    ],
+    "section": "Classes/Paladin/Paladin Subclass: Oath of Devotion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Paladin Subclass: Oath of Devotion\n\n*Uphold the Ideals of Justice and Order*\n\nThe Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.\n\nMany who swear this oath are devoted to gods of law and good and use their gods’ tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms. \n\nThese paladins share the following tenets:\n\n- Let your word be your promise.\n\n- Protect the weak and never fear to act.\n\n- Let your honorable deeds be an example.",
+  "facets": {
+    "class": "paladin",
+    "feature_levels": [
+      3,
+      7,
+      15,
+      20
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/paladin",
+    "levels": {
+      "3": [
+        "dnd5e/feature/oath-of-devotion-oath-of-devotion-spells",
+        "dnd5e/feature/oath-of-devotion-sacred-weapon"
+      ],
+      "7": [
+        "dnd5e/feature/oath-of-devotion-aura-of-devotion"
+      ],
+      "15": [
+        "dnd5e/feature/oath-of-devotion-smite-of-protection"
+      ],
+      "20": [
+        "dnd5e/feature/oath-of-devotion-holy-nimbus"
+      ]
+    },
+    "tagline": "Uphold the Ideals of Justice and Order"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-oath-of-devotion-spells",
+        "dnd5e/feature/oath-of-devotion-sacred-weapon"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Paladin level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-aura-of-devotion"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 7
+        }
+      },
+      "note": "Subclass feature at Paladin level 7."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-smite-of-protection"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 15
+        }
+      },
+      "note": "Subclass feature at Paladin level 15."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/oath-of-devotion-holy-nimbus"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "paladin",
+          "level": 20
+        }
+      },
+      "note": "Subclass feature at Paladin level 20."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Paladin Subclass: Oath of Devotion\n\n*Uphold the Ideals of Justice and Order*",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "The Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.\n\nMany who swear this oath are devoted to gods of law and good and use their gods’ tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms.",
+      "status": "descriptive"
+    },
+    {
+      "text": "These paladins share the following tenets:\n\n- Let your word be your promise.\n\n- Protect the weak and never fear to act.\n\n- Let your honorable deeds be an example.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/oath-of-devotion-aura-of-devotion",
+    "dnd5e/feature/oath-of-devotion-holy-nimbus",
+    "dnd5e/feature/oath-of-devotion-oath-of-devotion-spells",
+    "dnd5e/feature/oath-of-devotion-sacred-weapon",
+    "dnd5e/feature/oath-of-devotion-smite-of-protection"
+  ]
+}

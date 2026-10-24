@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warrior-of-the-open-hand-quivering-palm",
+  "kind": "feature",
+  "name": "Quivering Palm",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      52
+    ],
+    "section": "Classes/Monk/Monk Subclass: Warrior of the Open Hand/Level 17: Quivering Palm",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain the ability to set up lethal vibrations in someone’s body. When you hit a creature with an Unarmed Strike, you can expend 4 Focus Points to start these imperceptible vibrations, which last for a number of days equal to your Monk level. The vibrations are harmless unless you take an action to end them. Alternatively, when you take the Attack action on your turn, you can forgo one of the attacks to end the vibrations. To end them, you and the target must be on the same plane of existence. When you end them, the target must make a Constitution saving throw, taking 10d12 Force damage on a failed save or half as much damage on a successful one.\n\nYou can have only one creature under the effect of this feature at a time. You can end the vibrations harmlessly (no action required).",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/warrior-of-the-open-hand",
+    "level": 17
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "end_with_attack",
+        "forgo_one_attack_of_attack_action": true,
+        "own_turn": true
+      },
+      {
+        "id": "limits",
+        "max_targets": 1,
+        "end_harmlessly_cost": "none"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "unarmed_strike"
+        }
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "focus_points",
+          "amount": 4
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/warrior-of-the-open-hand-quivering-palm",
+          "id": "vibrations",
+          "target": {
+            "kind": "inherit"
+          },
+          "duration": {
+            "kind": "days",
+            "amount": {
+              "var": "class_level.monk"
+            }
+          },
+          "note": "Harmless imperceptible vibrations; one creature at a time."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "End the vibrations",
+      "cost": "action",
+      "requires": {
+        "pred": "same_plane_as_target"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "ability_mod.wis"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "half_on_success": true,
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d12",
+              "damage_type": "force"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain the ability to set up lethal vibrations in someone’s body. When you hit a creature with an Unarmed Strike, you can expend 4 Focus Points to start these imperceptible vibrations, which last for a number of days equal to your Monk level. The vibrations are harmless unless you take an action to end them.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "Alternatively, when you take the Attack action on your turn, you can forgo one of the attacks to end the vibrations. To end them, you and the target must be on the same plane of existence. When you end them, the target must make a Constitution saving throw, taking 10d12 Force damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can have only one creature under the effect of this feature at a time. You can end the vibrations harmlessly (no action required).",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/warrior-of-the-open-hand-quivering-palm"
+  ]
+}

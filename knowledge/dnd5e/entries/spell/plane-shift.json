@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/plane-shift",
+  "kind": "spell",
+  "name": "Plane Shift",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      153
+    ],
+    "section": "Spells/Spell Descriptions/Plane Shift",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 3,
+  "text": "*Level 7 Conjuration (Cleric, Druid, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a forked, metal rod worth 250+ GP and attuned to a plane of existence)\n\n**Duration:** Instantaneous\n\nYou and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as a specific city on the Elemental Plane of Fire or palace on the second level of the Nine Hells, and you appear in or near that destination, as determined by the GM.\n\nAlternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.",
+  "facets": {
+    "level": 7,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a forked, metal rod worth 250+ GP and attuned to a plane of existence",
+      "material_cost_gp": 250
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "circle",
+        "known_teleportation_circle": true,
+        "overflow": "closest_unoccupied_spaces"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "move",
+      "mode": "teleport",
+      "target": {
+        "kind": "creature",
+        "count": 9,
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "note": "You and up to eight willing creatures linking hands."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "plane_shift_arrival",
+      "reason": "gm_judgment",
+      "prompt": "Where exactly in or near the destination do the travelers appear?",
+      "source_text": "you appear in or near that destination, as determined by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Conjuration (Cleric, Druid, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a forked, metal rod worth 250+ GP and attuned to a plane of existence)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as a specific city on the Elemental Plane of Fire or palace on the second level of the Nine Hells, and you appear in or near that destination, as determined by the GM.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:plane_shift_arrival"
+      ]
+    },
+    {
+      "text": "Alternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-studied-attacks",
+  "kind": "feature",
+  "name": "Studied Attacks",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 13: Studied Attacks",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 13
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "misses_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "roll_mode",
+          "mode": "advantage",
+          "rolls": [
+            "attack_roll"
+          ],
+          "note": "Next attack roll against that creature.",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "self",
+              "which": "next"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/staff-of-the-python",
+  "kind": "magic-item",
+  "name": "Staff of the Python",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      247
+    ],
+    "section": "Magic Items/Magic Items A–Z/Staff of the Python",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Staff, Uncommon (Requires Attunement)*\n\nAs a Magic action, you can throw this staff so that it lands in an unoccupied space within 10 feet of you, causing the staff to become a **Giant Constrictor Snake** in that space. The snake is under your control and shares your Initiative count, taking its turn immediately after yours. \n\nOn your turn, you can mentally command the snake (no action required) if it is within 60 feet of you and you don’t have the Incapacitated condition. You decide what action the snake takes and where it moves during its turn, or you can issue it a general command, such as to attack your enemies or guard a location. Absent commands from you, the snake defends itself.\n\nAs a Bonus Action, you can command the snake to revert to staff form in its current space, and you can’t use the staff’s property again for 1 hour. If the snake is reduced to 0 Hit Points, it dies and reverts to its staff form; the staff then shatters and is destroyed. If the snake reverts to staff form before losing all its Hit Points, it regains all of them.",
+  "facets": {
+    "category": "staff",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Staff, Uncommon (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "staff",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "command",
+        "cost": "none",
+        "range_feet": 60,
+        "not_incapacitated": true,
+        "general_orders": true,
+        "no_orders": "defends_itself"
+      },
+      {
+        "id": "revert",
+        "cost": "bonus_action",
+        "recharge_hours": 1,
+        "at_0_hp": "dies, reverts and the staff is destroyed",
+        "early_revert_restores_hp": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "hour"
+      },
+      "then": [
+        {
+          "op": "summon",
+          "creature": "dnd5e/creature/giant-constrictor-snake",
+          "controller": "summoner",
+          "initiative": "after_summoner",
+          "note": "Lands within 10 feet."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Staff, Uncommon (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "As a Magic action, you can throw this staff so that it lands in an unoccupied space within 10 feet of you, causing the staff to become a **Giant Constrictor Snake** in that space. The snake is under your control and shares your Initiative count, taking its turn immediately after yours.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "On your turn, you can mentally command the snake (no action required) if it is within 60 feet of you and you don’t have the Incapacitated condition. You decide what action the snake takes and where it moves during its turn, or you can issue it a general command, such as to attack your enemies or guard a location. Absent commands from you, the snake defends itself.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "As a Bonus Action, you can command the snake to revert to staff form in its current space, and you can’t use the staff’s property again for 1 hour. If the snake is reduced to 0 Hit Points, it dies and reverts to its staff form; the staff then shatters and is destroyed. If the snake reverts to staff form before losing all its Hit Points, it regains all of them.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/giant-constrictor-snake"
+  ]
+}

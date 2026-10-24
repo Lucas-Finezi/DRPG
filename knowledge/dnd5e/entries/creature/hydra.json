@@ -1,0 +1,339 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/hydra",
+  "kind": "creature",
+  "name": "Hydra",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      300
+    ],
+    "section": "Monsters A–Z/Hydra/Hydra",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Huge Monstrosity, Unaligned*\n\n| **AC** 15 | **Initiative** +4 (14) |\n\n**HP** 184 (16d12 + 80)\n\n**Speed** 40 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +5 | **Dex** 12 | +1 | +1 | **Con** 20 | +5 | +5 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |\n\n**Skills** Perception +6\n\n**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 16\n\n**Languages** None\n\n**CR** 8 (XP 3,900; PB +3)\n\n##### Traits\n\n***Hold Breath.*** The hydra can hold its breath for 1 hour.\n\n***Multiple Heads.*** The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows new heads.\n\n***Reactive Heads.*** For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks.\n\n##### Actions\n\n***Multiattack.*** The hydra makes as many Bite attacks as it has heads.\n\n***Bite.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 10 (1d10 + 5) Piercing damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Huge",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "cr": "8"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Monstrosity",
+    "alignment": "Unaligned",
+    "type_line": "Huge Monstrosity, Unaligned",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 184,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d12",
+          80
+        ]
+      },
+      "text": "184 (16d12 + 80)"
+    },
+    "speed": {
+      "text": "40 ft., Swim 40 ft.",
+      "walk": 40,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "text": "Perception +6"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/blinded",
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/stunned",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 16",
+      "darkvision": 60,
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "8",
+      "xp": 3900,
+      "proficiency_bonus": 3,
+      "text": "8 (XP 3,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Hold Breath",
+        "text": "The hydra can hold its breath for 1 hour."
+      },
+      {
+        "name": "Multiple Heads",
+        "text": "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows new heads."
+      },
+      {
+        "name": "Reactive Heads",
+        "text": "For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The hydra makes as many Bite attacks as it has heads."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +8, reach 10 ft. *Hit:* 10 (1d10 + 5) Piercing damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "hold_breath",
+        "text": "The hydra can hold its breath for 1 hour.",
+        "minutes": 1
+      },
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The hydra makes as many Bite attacks as it has heads."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  5
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_multiple_heads",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Multiple Heads as written.",
+      "source_text": "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows "
+    },
+    {
+      "id": "traits_reactive_heads",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Reactive Heads as written.",
+      "source_text": "For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Monstrosity, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 184 (16d12 + 80)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 20 | +5 | +5 | **Dex** 12 | +1 | +1 | **Con** 20 | +5 | +5 |\n| **Int** | 2 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 8 (XP 3,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Hold Breath.*** The hydra can hold its breath for 1 hour.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Multiple Heads.*** The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 Hit Points when it grows new heads.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_multiple_heads"
+      ]
+    },
+    {
+      "text": "***Reactive Heads.*** For each head the hydra has beyond one, it gets an extra Reaction that can be used only for Opportunity Attacks.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/2",
+        "md:traits_reactive_heads"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The hydra makes as many Bite attacks as it has heads.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +8, reach 10 ft. *Hit:* 10 (1d10 + 5) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/stunned",
+    "dnd5e/condition/unconscious"
+  ]
+}

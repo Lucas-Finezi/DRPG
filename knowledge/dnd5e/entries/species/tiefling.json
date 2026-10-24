@@ -1,0 +1,171 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/species/tiefling",
+  "kind": "species",
+  "name": "Tiefling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Tiefling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L10"
+  },
+  "tier": 2,
+  "text": "**Creature Type:** Humanoid\n\n**Size:** Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species\n\n**Speed:** 30 feet\n\nAs a Tiefling, you have the following special traits.\n\n***Darkvision.*** You have Darkvision with a range of 60 feet.\n\n***Fiendish Legacy.*** You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).\n\n***Otherworldly Presence.*** You know the *Thaumaturgy* cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.\n\n##### Fiendish Legacies\n\n| **Legacy** | **Level 1** | **Level 3** | **Level 5** |\n| Abyssal | You have Resistance to Poison damage. You also know the *Poison Spray* cantrip. | *Ray of Sickness* | *Hold Person* |\n| Chthonic | You have Resistance to Necrotic damage. You also know the *Chill Touch* cantrip. | *False Life* | *Ray of Enfeeblement* |\n| Infernal | You have Resistance to Fire damage. You also know the *Fire Bolt* cantrip. | *Hellish Rebuke* | *Darkness* |",
+  "facets": {
+    "creature_type": "humanoid",
+    "size": [
+      "medium",
+      "small"
+    ],
+    "speed": 30
+  },
+  "data": {
+    "creature_type": "humanoid",
+    "sizes": [
+      "medium",
+      "small"
+    ],
+    "height": {
+      "medium": "about 4–7 feet tall",
+      "small": "about 3–4 feet tall"
+    },
+    "speed": 30,
+    "traits": [
+      "dnd5e/feature/tiefling-darkvision",
+      "dnd5e/feature/tiefling-fiendish-legacy",
+      "dnd5e/feature/tiefling-otherworldly-presence"
+    ],
+    "size_choice": "chosen when you select this species",
+    "rules": [
+      {
+        "id": "creature_type",
+        "creature_type": "humanoid"
+      },
+      {
+        "id": "size",
+        "sizes": [
+          "medium",
+          "small"
+        ]
+      },
+      {
+        "id": "speed",
+        "walk": 30
+      }
+    ],
+    "tables": [
+      {
+        "id": "fiendish_legacies",
+        "caption": "Fiendish Legacies",
+        "columns": [
+          "Legacy",
+          "Level 1",
+          "Level 3",
+          "Level 5"
+        ],
+        "rows": [
+          [
+            "Abyssal",
+            "You have Resistance to Poison damage. You also know the Poison Spray cantrip.",
+            "Ray of Sickness",
+            "Hold Person"
+          ],
+          [
+            "Chthonic",
+            "You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.",
+            "False Life",
+            "Ray of Enfeeblement"
+          ],
+          [
+            "Infernal",
+            "You have Resistance to Fire damage. You also know the Fire Bolt cantrip.",
+            "Hellish Rebuke",
+            "Darkness"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/tiefling-darkvision",
+        "dnd5e/feature/tiefling-fiendish-legacy",
+        "dnd5e/feature/tiefling-otherworldly-presence"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "**Creature Type:** Humanoid",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Size:** Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Speed:** 30 feet",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Tiefling, you have the following special traits.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Darkvision.*** You have Darkvision with a range of 60 feet.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/tiefling-darkvision"
+      ]
+    },
+    {
+      "text": "***Fiendish Legacy.*** You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/tiefling-fiendish-legacy"
+      ]
+    },
+    {
+      "text": "***Otherworldly Presence.*** You know the *Thaumaturgy* cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/feature/tiefling-otherworldly-presence"
+      ]
+    },
+    {
+      "text": "##### Fiendish Legacies\n\n| **Legacy** | **Level 1** | **Level 3** | **Level 5** |\n| Abyssal | You have Resistance to Poison damage. You also know the *Poison Spray* cantrip. | *Ray of Sickness* | *Hold Person* |\n| Chthonic | You have Resistance to Necrotic damage. You also know the *Chill Touch* cantrip. | *False Life* | *Ray of Enfeeblement* |\n| Infernal | You have Resistance to Fire damage. You also know the *Fire Bolt* cantrip. | *Hellish Rebuke* | *Darkness* |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/tiefling-darkvision",
+    "dnd5e/feature/tiefling-fiendish-legacy",
+    "dnd5e/feature/tiefling-otherworldly-presence"
+  ]
+}

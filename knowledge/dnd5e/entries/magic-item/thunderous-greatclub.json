@@ -1,0 +1,275 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/thunderous-greatclub",
+  "kind": "magic-item",
+  "name": "Thunderous Greatclub",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      249
+    ],
+    "section": "Magic Items/Magic Items A–Z/Thunderous Greatclub",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Greatclub), Very Rare (Requires Attunement)*\n\nWhile you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n\nThe weapon has the following additional properties.\n\n***Clap of Thunder.*** As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n\n***Earthquake.*** As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw, or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must make a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Greatclub), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Greatclub",
+        "refs": [
+          "dnd5e/weapon/greatclub"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_score.str",
+      "mode": "set",
+      "value": 20,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "attuned",
+          "item": "this"
+        }
+      },
+      "note": "Unless already 20 or higher."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d8",
+          "damage_type": "thunder",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "3d8",
+          "damage_type": "thunder",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "target_is_object"
+          }
+        ]
+      },
+      "note": "Objects not worn or carried (instead of 1d8)."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        },
+        {
+          "op": "damage",
+          "amount": "3d8",
+          "damage_type": "thunder",
+          "target": {
+            "kind": "object",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "objects": "not_worn_or_carried"
+            }
+          },
+          "note": "Nonmagical objects."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": 50,
+          "damage_type": "bludgeoning",
+          "target": {
+            "kind": "object",
+            "area": {
+              "shape": "cylinder",
+              "size_feet": 50,
+              "origin": "point"
+            }
+          },
+          "note": "Structures in contact with the ground."
+        },
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 20,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cylinder",
+              "size_feet": 50,
+              "origin": "point"
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        },
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 20,
+          "on_fail": [
+            {
+              "op": "end_effect",
+              "scope": "concentration"
+            }
+          ],
+          "when": {
+            "pred": "concentrating"
+          }
+        },
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 20,
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "fall",
+              "note": "Into the 30-foot-deep, 10-foot-wide fissure."
+            }
+          ],
+          "note": "Creatures where the optional fissure opens; structures there collapse."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Greatclub), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "The weapon has the following additional properties.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Clap of Thunder.*** As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Earthquake.*** As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw, or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must make a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone",
+    "dnd5e/weapon/greatclub"
+  ]
+}

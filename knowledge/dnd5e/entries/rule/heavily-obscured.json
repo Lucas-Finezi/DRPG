@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/heavily-obscured",
+  "kind": "rule",
+  "name": "Heavily Obscured",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      182
+    ],
+    "section": "Rules Glossary/Rules Definitions/Heavily Obscured",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "You have the Blinded condition while trying to see something in a Heavily Obscured space. *See also* “Blinded,” “Darkness,” and “Playing the Game” (“Exploration”).",
+  "facets": {
+    "glossary": true
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/blinded",
+      "when": {
+        "pred": "obscured",
+        "args": {
+          "degree": "heavy"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have the Blinded condition while trying to see something in a Heavily Obscured space.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "*See also* “Blinded,” “Darkness,” and “Playing the Game” (“Exploration”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/condition/blinded",
+        "dnd5e/rule/darkness",
+        "dnd5e/rule/vision-and-light"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/rule/darkness",
+    "dnd5e/rule/vision-and-light"
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ghost",
+  "kind": "creature",
+  "name": "Ghost",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      287,
+      288
+    ],
+    "section": "Monsters A–Z/Ghost/Ghost",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Medium Undead, Neutral*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 45 (10d8)\n\n**Speed** 5 ft., Fly 40 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 17 | +3 | +3 |\n\n**Resistances** Acid, Bludgeoning, Cold, Fire, Lightning, Piercing, Slashing, Thunder\n\n**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained\n\n**Senses** Darkvision 60 ft.; Passive Perception 11\n\n**Languages** Common plus one other language\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Traits\n\n***Ethereal Sight.*** The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane.\n\n***Incorporeal Movement.*** The ghost can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n##### Actions\n\n***Multiattack.*** The ghost makes two Withering Touch attacks.\n\n***Withering Touch.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 19 (3d10 + 3) Necrotic damage.\n\n***Etherealness.*** The ghost casts the *Etherealness* spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane.\n\n***Horrific Visage.*** *Wisdom Saving Throw:* DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. *Failure:* 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. *Success:* The target is immune to this ghost’s Horrific Visage for 24 hours.\n\n***Possession (Recharge 6).*** *Charisma Saving Throw:* DC 13, one Humanoid the ghost can see within 5 feet. *Failure:* The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. \n\nThe possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. \n\n*Success:* The target is immune to this ghost’s Possession for 24 hours.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral",
+    "type_line": "Medium Undead, Neutral",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 45,
+      "formula": "10d8",
+      "text": "45 (10d8)"
+    },
+    "speed": {
+      "text": "5 ft., Fly 40 ft. (hover)",
+      "walk": 5,
+      "fly": 40,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "text": "Acid, Bludgeoning, Cold, Fire, Lightning, Piercing, Slashing, Thunder"
+    },
+    "immunities": {
+      "damage_types": [
+        "necrotic",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained"
+      ],
+      "text": "Necrotic, Poison; Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 11",
+      "darkvision": 60,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Common plus one other language"
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Ethereal Sight",
+        "text": "The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane."
+      },
+      {
+        "name": "Incorporeal Movement",
+        "text": "The ghost can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The ghost makes two Withering Touch attacks."
+      },
+      {
+        "name": "Withering Touch",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 19 (3d10 + 3) Necrotic damage."
+      },
+      {
+        "name": "Etherealness",
+        "text": "The ghost casts the *Etherealness* spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane."
+      },
+      {
+        "name": "Horrific Visage",
+        "text": "*Wisdom Saving Throw:* DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. *Failure:* 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. *Success:* The target is immune to this ghost’s Horrific Visage for 24 hours."
+      },
+      {
+        "name": "Possession",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "*Charisma Saving Throw:* DC 13, one Humanoid the ghost can see within 5 feet. *Failure:* The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. \n\nThe possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. \n\n*Success:* The target is immune to this ghost’s Possession for 24 hours."
+      }
+    ],
+    "rules": [
+      {
+        "id": "incorporeal_movement",
+        "through_creatures_and_objects": true,
+        "difficult_terrain": true,
+        "ends_turn_inside": {
+          "damage": "1d10",
+          "damage_type": "force"
+        }
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Withering Touch",
+            "count": 2
+          }
+        ],
+        "text": "The ghost makes two Withering Touch attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Withering Touch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d10",
+                  3
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Etherealness",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/etherealness",
+          "slot": "none",
+          "components": []
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Horrific Visage",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 13,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 60,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot Cone that can see the ghost and isn’t an Undead"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  3
+                ]
+              },
+              "damage_type": "psychic"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Possession",
+      "then": [
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": 13,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one Humanoid the ghost can see within 5 feet"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/incapacitated"
+            }
+          ]
+        }
+      ],
+      "note": "Recharge 6–6."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_ethereal_sight",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Ethereal Sight as written.",
+      "source_text": "The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane."
+    },
+    {
+      "id": "actions_horrific_visage_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Horrific Visage as written.",
+      "source_text": "Success: The target is immune to this ghost’s Horrific Visage for 24 hours."
+    },
+    {
+      "id": "actions_possession_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Possession as written.",
+      "source_text": "The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Spe"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Undead, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 45 (10d8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Fly 40 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 10 | +0 | +0 | **Wis** 12 | +1 | +1 | **Cha** 17 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Bludgeoning, Cold, Fire, Lightning, Piercing, Slashing, Thunder",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus one other language",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Ethereal Sight.*** The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_ethereal_sight"
+      ]
+    },
+    {
+      "text": "***Incorporeal Movement.*** The ghost can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The ghost makes two Withering Touch attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Withering Touch.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 19 (3d10 + 3) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Etherealness.*** The ghost casts the *Etherealness* spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can’t affect or be affected by anything on the other plane.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Horrific Visage.*** *Wisdom Saving Throw:* DC 13, each creature in a 60-foot Cone that can see the ghost and isn’t an Undead. *Failure:* 10 (2d6 + 3) Psychic damage, and the target has the Frightened condition until the start of the ghost’s next turn. *Success:* The target is immune to this ghost’s Horrific Visage for 24 hours.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/2",
+        "md:actions_horrific_visage_rider"
+      ]
+    },
+    {
+      "text": "***Possession (Recharge 6).*** *Charisma Saving Throw:* DC 13, one Humanoid the ghost can see within 5 feet. *Failure:* The target is possessed by the ghost; the ghost disappears, and the target has the Incapacitated condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can’t be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost’s game statistics are the same, except it uses the possessed target’s Speed, as well as the target’s Strength, Dexterity, and Constitution modifiers. \n\nThe possession lasts until the body drops to 0 Hit Points or the ghost leaves as a Bonus Action. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost’s Possession for 24 hours. \n\n*Success:* The target is immune to this ghost’s Possession for 24 hours.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/4",
+        "/effects/3",
+        "md:actions_possession_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/incapacitated",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/spell/etherealness"
+  ]
+}

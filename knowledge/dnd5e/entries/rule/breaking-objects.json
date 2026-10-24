@@ -1,0 +1,223 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/breaking-objects",
+  "kind": "rule",
+  "name": "Breaking Objects",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177,
+      178
+    ],
+    "section": "Rules Glossary/Rules Definitions/Breaking Objects",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "Objects can be harmed by attacks and by some spells, using the rules below. If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the Attack or Utilize action.\n\n***Armor Class.*** The Object Armor Class table suggests ACs for various substances.\n\n##### Object Armor Class\n\n| **AC** | **Substance** | **AC** | **Substance** |\n| 11 | Cloth, paper, rope | 19 | Iron, steel |\n| 13 | Crystal, glass, ice | 21 | Mithral |\n| 15 | Wood | 23 | Adamantine |\n| 17 | Stone |\n\n***Hit Points.*** An object is destroyed when it has 0 Hit Points. The Object Hit Points table suggests Hit Points for fragile and resilient objects that are Large or smaller. To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section’s Hit Points separately. The GM determines whether destroying part of an object causes the whole thing to collapse.\n\n##### Object Hit Points\n\n| **Size** | **Fragile** | **Resilient** |\n| Tiny (bottle, lock) | 2 (1d4) | 5 (2d4) |\n| Small (chest, lute) | 3 (1d6) | 10 (3d6) |\n| Medium (barrel, chandelier) | 4 (1d8) | 18 (4d8) |\n| Large (cart, dining table) | 5 (1d10) | 27 (5d10) |\n\n***Damage Types and Objects.*** Objects have Immunity to Poison and Psychic damage. The GM might decide that some damage types are more or less effective against an object. For example, Bludgeoning damage works well for smashing things but not for cutting. Paper or cloth objects might have Vulnerability to Fire damage.\n\n***Damage Threshold.*** Big objects, such as castle walls, often have extra resilience represented by a damage threshold. *See also* “Damage Threshold.”\n\n***No Ability Scores.*** An object lacks ability scores unless a rule assigns scores to the object. Without ability scores, an object can’t make ability checks, and it fails all saving throws.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "objects_can_be_harmed",
+        "by": [
+          "attacks",
+          "spells"
+        ]
+      },
+      {
+        "id": "object_destroyed_at_0_hp",
+        "huge_or_larger": "track_large_sections"
+      },
+      {
+        "id": "object_immunities",
+        "immunity": [
+          "poison",
+          "psychic"
+        ]
+      },
+      {
+        "id": "objects_no_ability_scores",
+        "ability_checks": false,
+        "saving_throws": "auto_fail"
+      }
+    ],
+    "tables": [
+      {
+        "id": "object_armor_class",
+        "caption": "Object Armor Class",
+        "columns": [
+          "AC",
+          "Substance"
+        ],
+        "rows": [
+          [
+            "11",
+            "Cloth, paper, rope"
+          ],
+          [
+            "13",
+            "Crystal, glass, ice"
+          ],
+          [
+            "15",
+            "Wood"
+          ],
+          [
+            "17",
+            "Stone"
+          ],
+          [
+            "19",
+            "Iron, steel"
+          ],
+          [
+            "21",
+            "Mithral"
+          ],
+          [
+            "23",
+            "Adamantine"
+          ]
+        ]
+      },
+      {
+        "id": "object_hit_points",
+        "caption": "Object Hit Points",
+        "columns": [
+          "Size",
+          "Fragile",
+          "Resilient"
+        ],
+        "rows": [
+          [
+            "Tiny (bottle, lock)",
+            "2 (1d4)",
+            "5 (2d4)"
+          ],
+          [
+            "Small (chest, lute)",
+            "3 (1d6)",
+            "10 (3d6)"
+          ],
+          [
+            "Medium (barrel, chandelier)",
+            "4 (1d8)",
+            "18 (4d8)"
+          ],
+          [
+            "Large (cart, dining table)",
+            "5 (1d10)",
+            "27 (5d10)"
+          ]
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "fragile_object",
+      "reason": "gm_judgment",
+      "prompt": "Can this exceedingly fragile object be broken automatically?",
+      "source_text": "If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the Attack or Utilize action.",
+      "pages": [
+        177
+      ]
+    },
+    {
+      "id": "partial_collapse",
+      "reason": "gm_judgment",
+      "prompt": "Does destroying this part of the object collapse the whole thing?",
+      "source_text": "The GM determines whether destroying part of an object causes the whole thing to collapse.",
+      "pages": [
+        177
+      ]
+    },
+    {
+      "id": "object_damage_types",
+      "reason": "gm_judgment",
+      "prompt": "Is this damage type more or less effective against this object?",
+      "source_text": "The GM might decide that some damage types are more or less effective against an object.",
+      "pages": [
+        177
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Objects can be harmed by attacks and by some spells, using the rules below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the Attack or Utilize action.",
+      "status": "master_decision",
+      "by": [
+        "md:fragile_object"
+      ]
+    },
+    {
+      "text": "***Armor Class.*** The Object Armor Class table suggests ACs for various substances.\n\n##### Object Armor Class\n\n| **AC** | **Substance** | **AC** | **Substance** |\n| 11 | Cloth, paper, rope | 19 | Iron, steel |\n| 13 | Crystal, glass, ice | 21 | Mithral |\n| 15 | Wood | 23 | Adamantine |\n| 17 | Stone |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Hit Points.*** An object is destroyed when it has 0 Hit Points. The Object Hit Points table suggests Hit Points for fragile and resilient objects that are Large or smaller. To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section’s Hit Points separately.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1",
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "The GM determines whether destroying part of an object causes the whole thing to collapse.\n\n##### Object Hit Points\n\n| **Size** | **Fragile** | **Resilient** |\n| Tiny (bottle, lock) | 2 (1d4) | 5 (2d4) |\n| Small (chest, lute) | 3 (1d6) | 10 (3d6) |\n| Medium (barrel, chandelier) | 4 (1d8) | 18 (4d8) |\n| Large (cart, dining table) | 5 (1d10) | 27 (5d10) |",
+      "status": "master_decision",
+      "by": [
+        "md:partial_collapse"
+      ]
+    },
+    {
+      "text": "***Damage Types and Objects.*** Objects have Immunity to Poison and Psychic damage.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The GM might decide that some damage types are more or less effective against an object. For example, Bludgeoning damage works well for smashing things but not for cutting. Paper or cloth objects might have Vulnerability to Fire damage.",
+      "status": "master_decision",
+      "by": [
+        "md:object_damage_types"
+      ]
+    },
+    {
+      "text": "***Damage Threshold.*** Big objects, such as castle walls, often have extra resilience represented by a damage threshold. *See also* “Damage Threshold.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/damage-threshold"
+      ]
+    },
+    {
+      "text": "***No Ability Scores.*** An object lacks ability scores unless a rule assigns scores to the object. Without ability scores, an object can’t make ability checks, and it fails all saving throws.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/damage-threshold"
+  ]
+}

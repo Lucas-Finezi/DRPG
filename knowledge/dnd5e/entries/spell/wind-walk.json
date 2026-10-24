@@ -1,0 +1,161 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/wind-walk",
+  "kind": "spell",
+  "name": "Wind Walk",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      174
+    ],
+    "section": "Spells/Spell Descriptions/Wind Walk",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L23"
+  },
+  "tier": 2,
+  "text": "*Level 6 Transmutation (Druid)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a candle)\n\n**Duration:** 8 hours\n\nYou and up to ten willing creatures of your choice within range assume gaseous forms for the duration, appearing as wisps of cloud. While in this cloud form, a target has a Fly Speed of 300 feet and can hover; it has Immunity to the Prone condition; and it has Resistance to Bludgeoning, Piercing, and Slashing damage. The only actions a target can take in this form are the Dash action or a Magic action to begin reverting to its normal form. Reverting takes 1 minute, during which the target has the Stunned condition. Until the spell ends, the target can revert to cloud form, which also requires a Magic action followed by a 1-minute transformation.\n\nIf a target is in cloud form and flying when the effect ends, the target descends 60 feet per round for 1 minute until it lands, which it does safely. If it can’t land after 1 minute, it falls the remaining distance.",
+  "facets": {
+    "level": 6,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a candle"
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    },
+    "rules": [
+      {
+        "id": "revert",
+        "cost": "dnd5e/action/magic",
+        "minutes": 1,
+        "condition_while_reverting": "dnd5e/condition/stunned",
+        "return_to_cloud": "magic_action_plus_1_minute"
+      },
+      {
+        "id": "descent",
+        "feet_per_round": 60,
+        "minutes": 1,
+        "then": "falls_remaining_distance"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "fly",
+      "mode": "set",
+      "value": 300,
+      "hover": true,
+      "target": {
+        "kind": "creature",
+        "count": 11,
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      },
+      "note": "You and up to ten willing creatures."
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/prone"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "actions_other_than_dash_or_magic"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 6 Transmutation (Druid)*\n\n**Casting Time:** 1 minute\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a candle)\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You and up to ten willing creatures of your choice within range assume gaseous forms for the duration, appearing as wisps of cloud. While in this cloud form, a target has a Fly Speed of 300 feet and can hover; it has Immunity to the Prone condition; and it has Resistance to Bludgeoning, Piercing, and Slashing damage. The only actions a target can take in this form are the Dash action or a Magic action to begin reverting to its normal form. Reverting takes 1 minute, during which the target has the Stunned condition. Until the spell ends, the target can revert to cloud form, which also requires a Magic action followed by a 1-minute transformation.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a target is in cloud form and flying when the effect ends, the target descends 60 feet per round for 1 minute until it lands, which it does safely. If it can’t land after 1 minute, it falls the remaining distance.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

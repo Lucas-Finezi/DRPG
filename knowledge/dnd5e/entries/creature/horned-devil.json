@@ -1,0 +1,432 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/horned-devil",
+  "kind": "creature",
+  "name": "Horned Devil",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      299,
+      300
+    ],
+    "section": "Monsters A–Z/Horned Devil/Horned Devil",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Large Fiend (Devil), Lawful Evil*\n\n| **AC** 18 | **Initiative** +7 (17) |\n\n**HP** 199 (19d10 + 95)\n\n**Speed** 30 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +10 | **Dex** 17 | +3 | +7 | **Con** 21 | +5 | +5 |\n| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +7 | **Cha** 18 | +4 | +8 |\n\n**Resistances** Cold\n\n**Immunities** Fire, Poison; Poisoned\n\n**Senses** Darkvision 150 ft. (unimpeded by magical\n\nDarkness); Passive Perception 13\n\n**Languages** Infernal; telepathy 120 ft.\n\n**CR** 11 (XP 7,200; PB +4)\n\n##### Traits\n\n***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.\n\n***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail.\n\n***Searing Fork.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Piercing damage plus 9 (2d8) Fire damage.\n\n***Hurl Flame.*** *Ranged Attack Roll:* +8, range 150 ft. *Hit:* 26 (5d8 + 4) Fire damage. If the target is a flammable object that isn’t being worn or carried, it starts burning.\n\n***Infernal Tail.*** *Dexterity Saving Throw:* DC 17, one creature the devil can see within 10 feet. *Failure:* 10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn’t have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Medicine) check.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "cr": "11"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Devil"
+    ],
+    "type_line": "Large Fiend (Devil), Lawful Evil",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 7,
+      "score": 17,
+      "text": "+7 (17)"
+    },
+    "hp": {
+      "average": 199,
+      "formula": {
+        "op": "add",
+        "args": [
+          "19d10",
+          95
+        ]
+      },
+      "text": "199 (19d10 + 95)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft.",
+      "walk": 30,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 22,
+        "mod": 6,
+        "save": 10
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 7
+      },
+      "con": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      },
+      "cha": {
+        "score": 18,
+        "mod": 4,
+        "save": 8
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 150 ft. (unimpeded by magical Darkness); Passive Perception 13",
+      "darkvision": 150,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "Infernal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "11",
+      "xp": 7200,
+      "proficiency_bonus": 4,
+      "text": "11 (XP 7,200; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Diabolical Restoration",
+        "text": "If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail."
+      },
+      {
+        "name": "Searing Fork",
+        "text": "*Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Piercing damage plus 9 (2d8) Fire damage."
+      },
+      {
+        "name": "Hurl Flame",
+        "text": "*Ranged Attack Roll:* +8, range 150 ft. *Hit:* 26 (5d8 + 4) Fire damage. If the target is a flammable object that isn’t being worn or carried, it starts burning."
+      },
+      {
+        "name": "Infernal Tail",
+        "text": "*Dexterity Saving Throw:* DC 17, one creature the devil can see within 10 feet. *Failure:* 10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn’t have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Medicine) check."
+      }
+    ],
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Nine Hells",
+        "revives_in": "Nine Hells",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Searing Fork",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  6
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d8",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Hurl Flame",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "5d8",
+                  4
+                ]
+              },
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Infernal Tail",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 10
+            },
+            "text": "one creature the devil can see within 10 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  6
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_hurl_flame_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Hurl Flame as written.",
+      "source_text": "26 (5d8 + 4) Fire damage. If the target is a flammable object that isn’t being worn or carried, it starts burning."
+    },
+    {
+      "id": "actions_infernal_tail_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Infernal Tail as written.",
+      "source_text": "10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn’t have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Me"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Fiend (Devil), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +7 (17) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 199 (19d10 + 95)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +10 | **Dex** 17 | +3 | +7 | **Con** 21 | +5 | +5 |\n| **Int** | 12 | +1 | +1 | **Wis** 16 | +3 | +7 | **Cha** 18 | +4 | +8 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 150 ft. (unimpeded by magical\n\nDarkness); Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Infernal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 11 (XP 7,200; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Diabolical Restoration.*** If the devil dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The devil makes three attacks, using Searing Fork or Hurl Flame in any combination. It can replace one attack with a use of Infernal Tail.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Searing Fork.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 15 (2d8 + 6) Piercing damage plus 9 (2d8) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Hurl Flame.*** *Ranged Attack Roll:* +8, range 150 ft. *Hit:* 26 (5d8 + 4) Fire damage. If the target is a flammable object that isn’t being worn or carried, it starts burning.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_hurl_flame_rider"
+      ]
+    },
+    {
+      "text": "***Infernal Tail.*** *Dexterity Saving Throw:* DC 17, one creature the devil can see within 10 feet. *Failure:* 10 (1d8 + 6) Necrotic damage, and the target receives an infernal wound if it doesn’t have one. While wounded, the target loses 10 (3d6) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 17 Wisdom (Medicine) check.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/3",
+        "md:actions_infernal_tail_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned"
+  ]
+}

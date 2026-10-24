@@ -1,0 +1,114 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/druid-archdruid",
+  "kind": "feature",
+  "name": "Archdruid",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      43
+    ],
+    "section": "Classes/Druid/Druid Class Features/Level 20: Archdruid",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The vitality of nature constantly blooms within you, granting you the following benefits.\n\n***Evergreen Wild Shape.*** Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.\n\n***Nature Magician.*** You can convert uses of Wild Shape into a spell slot (no action required). Choose a number of your unexpended uses of Wild Shape and convert them into a single spell slot, with each use contributing 2 spell levels. For example, if you convert two uses of Wild Shape, you produce a level 4 spell slot. Once you use this benefit, you can’t do so again until you finish a Long Rest.\n\n***Longevity.*** The primal magic that you wield causes you to age more slowly. For every ten years that pass, your body ages only one year.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/druid",
+    "level": 20
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "longevity",
+        "aging_rate": 0.1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "initiative_rolled"
+      },
+      "condition": {
+        "pred": "resource_empty",
+        "args": {
+          "resource": "wild_shape"
+        }
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "wild_shape",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "uses": {
+        "resource": "wild_shape",
+        "amount": {
+          "var": "chosen.wild_shape_uses"
+        }
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "spell_slot",
+          "amount": 1,
+          "level": {
+            "op": "mul",
+            "args": [
+              2,
+              {
+                "var": "chosen.wild_shape_uses"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The vitality of nature constantly blooms within you, granting you the following benefits.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Evergreen Wild Shape.*** Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Nature Magician.*** You can convert uses of Wild Shape into a spell slot (no action required). Choose a number of your unexpended uses of Wild Shape and convert them into a single spell slot, with each use contributing 2 spell levels. For example, if you convert two uses of Wild Shape, you produce a level 4 spell slot. Once you use this benefit, you can’t do so again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Longevity.*** The primal magic that you wield causes you to age more slowly. For every ten years that pass, your body ages only one year.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

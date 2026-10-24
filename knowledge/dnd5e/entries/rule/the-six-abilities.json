@@ -1,0 +1,52 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/the-six-abilities",
+  "kind": "rule",
+  "name": "The Six Abilities",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      5,
+      6
+    ],
+    "section": "Playing the Game/The Six Abilities",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 0,
+  "text": "All creatures—characters and monsters—have six abilities that measure physical and mental characteristics, as shown on the Ability Descriptions table.\n\n##### Ability Descriptions\n\n| **Ability** | **Score Measures …** |\n| Strength | Physical might |\n| Dexterity | Agility, reflexes, and balance |\n| Constitution | Health and stamina |\n| Intelligence | Reasoning and memory |\n| Wisdom | Perceptiveness and mental fortitude |\n| Charisma | Confidence, poise, and charm |\n\n### Ability Scores\n\nEach ability has a score from 1 to 20, although some monsters have a score as high as 30. The score represents the magnitude of an ability. The Ability Scores table summarizes what the scores mean.\n\n##### Ability Scores\n\n| **Score** | **Meaning** |\n| 1 | This is the lowest a score can normally go. If an effect reduces a score to 0, that effect explains what happens. |\n| 2–9 | This represents a weak capability. |\n| 10–11 | This represents the human average. |\n| 12–19 | This represents a strong capability. |\n| 20 | This is the highest an adventurer’s score can go unless a feature says otherwise. |\n| 21–29 | This represents an extraordinary capability. |\n| 30 | This is the highest a score can go. |\n\n### Ability Modifiers\n\nEach ability has a modifier that you apply whenever you make a D20 Test with that ability (explained in “D20 Tests”). An ability modifier is derived from its score, as shown in the Ability Modifiers table.\n\n##### Ability Modifiers\n\n| **Score** | **Modifier** |\n| 1 | −5 |\n| 2–3 | −4 |\n| 4–5 | −3 |\n| 6–7 | −2 |\n| 8–9 | −1 |\n| 10–11 | +0 |\n| 12–13 | +1 |\n| 14–15 | +2 |\n| **Score** | **Modifier** |\n| 16–17 | +3 |\n| 18–19 | +4 |\n| 20–21 | +5 |\n| 22–23 | +6 |\n| 24–25 | +7 |\n| 26–27 | +8 |\n| 28–29 | +9 |\n| 30 | +10 |",
+  "coverage": [
+    {
+      "text": "All creatures—characters and monsters—have six abilities that measure physical and mental characteristics, as shown on the Ability Descriptions table.\n\n##### Ability Descriptions\n\n| **Ability** | **Score Measures …** |\n| Strength | Physical might |\n| Dexterity | Agility, reflexes, and balance |\n| Constitution | Health and stamina |\n| Intelligence | Reasoning and memory |\n| Wisdom | Perceptiveness and mental fortitude |\n| Charisma | Confidence, poise, and charm |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/abilities"
+      ]
+    },
+    {
+      "text": "### Ability Scores\n\nEach ability has a score from 1 to 20, although some monsters have a score as high as 30. The score represents the magnitude of an ability. The Ability Scores table summarizes what the scores mean.\n\n##### Ability Scores\n\n| **Score** | **Meaning** |\n| 1 | This is the lowest a score can normally go. If an effect reduces a score to 0, that effect explains what happens. |\n| 2–9 | This represents a weak capability. |\n| 10–11 | This represents the human average. |\n| 12–19 | This represents a strong capability. |\n| 20 | This is the highest an adventurer’s score can go unless a feature says otherwise. |\n| 21–29 | This represents an extraordinary capability. |\n| 30 | This is the highest a score can go. |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/ability_scores/descriptors",
+        "dnd5e/system/dnd5e#/ability_scores/min",
+        "dnd5e/system/dnd5e#/ability_scores/max"
+      ]
+    },
+    {
+      "text": "### Ability Modifiers\n\nEach ability has a modifier that you apply whenever you make a D20 Test with that ability (explained in “D20 Tests”). An ability modifier is derived from its score, as shown in the Ability Modifiers table.\n\n##### Ability Modifiers\n\n| **Score** | **Modifier** |\n| 1 | −5 |\n| 2–3 | −4 |\n| 4–5 | −3 |\n| 6–7 | −2 |\n| 8–9 | −1 |\n| 10–11 | +0 |\n| 12–13 | +1 |\n| 14–15 | +2 |\n| **Score** | **Modifier** |\n| 16–17 | +3 |\n| 18–19 | +4 |\n| 20–21 | +5 |\n| 22–23 | +6 |\n| 24–25 | +7 |\n| 26–27 | +8 |\n| 28–29 | +9 |\n| 30 | +10 |",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/ability_scores/modifier_table"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

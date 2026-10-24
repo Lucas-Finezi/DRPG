@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/passwall",
+  "kind": "spell",
+  "name": "Passwall",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      151
+    ],
+    "section": "Spells/Spell Descriptions/Passwall",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 1,
+  "text": "*Level 5 Transmutation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a pinch of sesame seeds)\n\n**Duration:** 1 hour\n\nA passage appears at a point that you can see on a wooden, plaster, or stone surface (such as a wall, ceiling, or floor) within range and lasts for the duration. You choose the opening’s dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it.\n\nWhen the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
+  "facets": {
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a pinch of sesame seeds"
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "passage",
+        "surfaces": [
+          "wood",
+          "plaster",
+          "stone"
+        ],
+        "max_feet": {
+          "width": 5,
+          "height": 8,
+          "depth": 20
+        },
+        "no_instability": true
+      },
+      {
+        "id": "ejection",
+        "safe_ejection_to_nearest_space": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 5 Transmutation (Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S, M (a pinch of sesame seeds)\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A passage appears at a point that you can see on a wooden, plaster, or stone surface (such as a wall, ceiling, or floor) within range and lasts for the duration. You choose the opening’s dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

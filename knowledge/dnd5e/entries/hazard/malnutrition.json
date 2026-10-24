@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/hazard/malnutrition",
+  "kind": "hazard",
+  "name": "Malnutrition",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      185
+    ],
+    "section": "Rules Glossary/Rules Definitions/Malnutrition [Hazard]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 2,
+  "text": "A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table. A creature that eats but consumes less than half the required food for a day must succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level at the day’s end. A creature that eats nothing for 5 days automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food.\n\nExhaustion caused by malnutrition can’t be removed until the creature eats the full amount of food required for a day. *See also* “Exhaustion.”\n\n##### Food Needs per Day\n\n| **Size** | **Food** | **Size** | **Food** |\n| Tiny | 1/4 pound | Large | 4 pounds |\n| Small | 1 pound | Huge | 16 pounds |\n| Medium | 1 pound | Gargantuan | 64 pounds |",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Hazard"
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "food_needs_per_day",
+        "caption": "Food Needs per Day",
+        "columns": [
+          "Size",
+          "Food"
+        ],
+        "rows": [
+          [
+            "Tiny",
+            "1/4 pound"
+          ],
+          [
+            "Small",
+            "1 pound"
+          ],
+          [
+            "Medium",
+            "1 pound"
+          ],
+          [
+            "Large",
+            "4 pounds"
+          ],
+          [
+            "Huge",
+            "16 pounds"
+          ],
+          [
+            "Gargantuan",
+            "64 pounds"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "starvation",
+        "after_days_without_food": 5,
+        "exhaustion_per_day": 1,
+        "automatic": true
+      },
+      {
+        "id": "removal_blocked_until",
+        "eats_full_daily_food": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "day_ends"
+      },
+      "note": "When the creature ate, but less than half the required food that day.",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/exhaustion",
+              "params": {
+                "levels": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table.",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "A creature that eats but consumes less than half the required food for a day must succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level at the day’s end.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A creature that eats nothing for 5 days automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Exhaustion caused by malnutrition can’t be removed until the creature eats the full amount of food required for a day.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "*See also* “Exhaustion.”\n\n##### Food Needs per Day\n\n| **Size** | **Food** | **Size** | **Food** |\n| Tiny | 1/4 pound | Large | 4 pounds |\n| Small | 1 pound | Huge | 16 pounds |\n| Medium | 1 pound | Gargantuan | 64 pounds |",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/condition/exhaustion"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

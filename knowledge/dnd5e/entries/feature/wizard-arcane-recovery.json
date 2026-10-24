@@ -1,0 +1,75 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-arcane-recovery",
+  "kind": "feature",
+  "name": "Arcane Recovery",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      78
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 1: Arcane Recovery",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can regain some of your magical energy by studying your spellbook. When you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to no more than half your Wizard level (round up), and none of the slots can be level 6 or higher. For example, if you’re a level 4 Wizard, you can recover up to two levels’ worth of spell slots, regaining either one level 2 spell slot or two level 1 spell slots.\n\nOnce you use this feature, you can’t do so again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 1
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "short_rest_finished"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "spell_slot",
+          "amount": {
+            "op": "div",
+            "round": "up",
+            "args": [
+              {
+                "var": "class_level.wizard"
+              },
+              2
+            ]
+          },
+          "max_level": 5,
+          "note": "Combined slot levels; none of level 6 or higher."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can regain some of your magical energy by studying your spellbook. When you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to no more than half your Wizard level (round up), and none of the slots can be level 6 or higher. For example, if you’re a level 4 Wizard, you can recover up to two levels’ worth of spell slots, regaining either one level 2 spell slot or two level 1 spell slots.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Once you use this feature, you can’t do so again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

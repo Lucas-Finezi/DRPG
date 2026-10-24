@@ -1,0 +1,174 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-pact-of-the-blade",
+  "kind": "feature",
+  "name": "Pact of the Blade",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      74
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Pact of the Blade",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Bonus Action, you can conjure a pact weapon in your hand—a Simple or Martial Melee weapon of your choice with which you bond—or create a bond with a magic weapon you touch; you can’t bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it. Until the bond ends, you have proficiency with the weapon, and you can use it as a Spellcasting Focus.\n\nWhenever you attack with the bonded weapon, you can use your Charisma modifier for the attack and damage rolls instead of using Strength or Dexterity; and you can cause the weapon to deal Necrotic, Psychic, or Radiant damage or its normal damage type.\n\nYour bond with the weapon ends if you use this feature’s Bonus Action again, if the weapon is more than 5 feet away from you for 1 minute or more, or if you die. A conjured weapon disappears when the bond ends.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "bond_ends",
+        "ends_on": [
+          "bonus_action_used_again",
+          "weapon_more_than_5_feet_away_for_1_minute",
+          "death"
+        ],
+        "conjured_weapon_disappears": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Pact of the Blade",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "choice",
+          "id": "pact_weapon",
+          "choose": 1,
+          "options": [
+            {
+              "id": "conjure",
+              "label": "Conjure a Simple or Martial Melee weapon",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/feature/warlock-invocation-pact-of-the-blade",
+                  "note": "Weapon of your choice, in your hand."
+                }
+              ]
+            },
+            {
+              "id": "bond",
+              "label": "Bond with a magic weapon you touch",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/feature/warlock-invocation-pact-of-the-blade",
+                  "note": "Not if someone else is attuned to it or another Warlock is bonded with it."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "pact_weapon"
+      ]
+    },
+    {
+      "op": "modifier",
+      "stat": "spellcasting_focus",
+      "mode": "set",
+      "value": 1,
+      "note": "The pact weapon."
+    },
+    {
+      "op": "modifier",
+      "stat": "attack_ability",
+      "mode": "set",
+      "value": {
+        "var": "ability_mod.cha"
+      },
+      "when": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "pact"
+        }
+      },
+      "note": "Optional: instead of Strength or Dexterity."
+    },
+    {
+      "op": "choice",
+      "id": "pact_damage_type",
+      "choose": 1,
+      "options": [
+        {
+          "id": "necrotic",
+          "label": "Necrotic",
+          "value": "necrotic",
+          "effects": []
+        },
+        {
+          "id": "psychic",
+          "label": "Psychic",
+          "value": "psychic",
+          "effects": []
+        },
+        {
+          "id": "radiant",
+          "label": "Radiant",
+          "value": "radiant",
+          "effects": []
+        },
+        {
+          "id": "normal_damage_type",
+          "label": "Normal_Damage_Type",
+          "value": "normal_damage_type",
+          "effects": []
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Bonus Action, you can conjure a pact weapon in your hand—a Simple or Martial Melee weapon of your choice with which you bond—or create a bond with a magic weapon you touch; you can’t bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Until the bond ends, you have proficiency with the weapon, and you can use it as a Spellcasting Focus.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "Whenever you attack with the bonded weapon, you can use your Charisma modifier for the attack and damage rolls instead of using Strength or Dexterity; and you can cause the weapon to deal Necrotic, Psychic, or Radiant damage or its normal damage type.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "Your bond with the weapon ends if you use this feature’s Bonus Action again, if the weapon is more than 5 feet away from you for 1 minute or more, or if you die. A conjured weapon disappears when the bond ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/warlock-invocation-pact-of-the-blade"
+  ]
+}

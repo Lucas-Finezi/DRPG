@@ -1,0 +1,175 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/forcecage",
+  "kind": "spell",
+  "name": "Forcecage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      134
+    ],
+    "section": "Spells/Spell Descriptions/Forcecage",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Evocation (Bard, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 100 feet\n\n**Components:** V, S, M (ruby dust worth 1,500+ GP, which the spell consumes)\n\n**Duration:** Concentration, up to 1 hour\n\nAn immobile, Invisible, Cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose.\n\nA prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart. A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area.\n\nWhen you cast the spell, any creature that is completely inside the cage’s area is trapped. Creatures only partially within the area, or those too large to fit inside it, are pushed away from the center of the area until they are completely outside it.\n\nA creature inside the cage can’t leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave, it must first make a Charisma saving throw. On a successful save, the creature can use that magic to exit the cage. On a failed save, the creature doesn’t exit the cage and wastes the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel.\n\nThis spell can’t be dispelled by *Dispel Magic*.",
+  "facets": {
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 100
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "ruby dust worth 1,500+ GP, which the spell consumes",
+      "material_cost_gp": 1500,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "prison",
+        "immobile": true,
+        "invisible": true,
+        "forms": [
+          "cage",
+          "box"
+        ]
+      },
+      {
+        "id": "forms",
+        "cage": {
+          "side_feet": 20,
+          "bar_inches": 0.5,
+          "gap_inches": 0.5
+        },
+        "box": {
+          "side_feet": 10,
+          "blocks_matter_and_spells": true
+        }
+      },
+      {
+        "id": "trapping",
+        "inside": "trapped",
+        "partially_inside": "pushed_out"
+      },
+      {
+        "id": "barrier",
+        "nonmagical_exit": false,
+        "blocks_ethereal": true
+      },
+      {
+        "id": "dispel",
+        "dispel_magic": false
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "tries_teleport_out"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/spell/forcecage",
+              "note": "The magic is wasted."
+            }
+          ],
+          "note": "On a success it can use that magic to exit."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Evocation (Bard, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 100 feet\n\n**Components:** V, S, M (ruby dust worth 1,500+ GP, which the spell consumes)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "An immobile, Invisible, Cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart. A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When you cast the spell, any creature that is completely inside the cage’s area is trapped. Creatures only partially within the area, or those too large to fit inside it, are pushed away from the center of the area until they are completely outside it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "A creature inside the cage can’t leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave, it must first make a Charisma saving throw. On a successful save, the creature can use that magic to exit the cage. On a failed save, the creature doesn’t exit the cage and wastes the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "This spell can’t be dispelled by *Dispel Magic*.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/forcecage"
+  ]
+}

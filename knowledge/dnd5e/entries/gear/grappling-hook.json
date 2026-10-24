@@ -1,0 +1,60 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/grappling-hook",
+  "kind": "gear",
+  "name": "Grappling Hook",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      97
+    ],
+    "section": "Equipment/Adventuring Gear/Grappling Hook",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it.",
+  "facets": {
+    "cost_cp": 200
+  },
+  "data": {
+    "cost": {
+      "amount": 2,
+      "unit": "gp",
+      "cp": 200
+    },
+    "weight_lb": 4
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "check",
+          "ability": "dex",
+          "skill": "acrobatics",
+          "dc": 13,
+          "note": "Catches a railing, ledge or other catch within 50 feet; with a Rope tied, you can climb it."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/cleric-blessed-strikes",
+  "kind": "feature",
+  "name": "Blessed Strikes",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      38
+    ],
+    "section": "Classes/Cleric/Cleric Class Features/Level 7: Blessed Strikes",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Divine power infuses you in battle. You gain one of the following options of your choice (if you get either option from a Cleric subclass in an older book, use only the option you choose for this feature).\n\n***Divine Strike.*** Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).\n\n***Potent Spellcasting.*** Add your Wisdom modifier to the damage you deal with any Cleric cantrip.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/cleric",
+    "level": 7
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "blessed_strikes",
+      "choose": 1,
+      "options": [
+        {
+          "id": "divine_strike",
+          "label": "Divine Strike",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "optional": true,
+              "condition": {
+                "all": [
+                  {
+                    "pred": "own_turn"
+                  },
+                  {
+                    "pred": "attack_is",
+                    "args": {
+                      "via": "weapon"
+                    }
+                  }
+                ]
+              },
+              "frequency": {
+                "count": 1,
+                "per": "turn"
+              },
+              "then": [
+                {
+                  "op": "damage",
+                  "amount": "1d8",
+                  "damage_type": {
+                    "choose_from": [
+                      "necrotic",
+                      "radiant"
+                    ]
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "potent_spellcasting",
+          "label": "Potent Spellcasting",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "damage_roll",
+              "mode": "add",
+              "value": {
+                "var": "ability_mod.wis"
+              },
+              "when": {
+                "pred": "spell_of_class",
+                "args": {
+                  "cantrip": true,
+                  "class": "cleric"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Divine power infuses you in battle. You gain one of the following options of your choice (if you get either option from a Cleric subclass in an older book, use only the option you choose for this feature).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Divine Strike.*** Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "***Potent Spellcasting.*** Add your Wisdom modifier to the damage you deal with any Cleric cantrip.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/thief-fast-hands",
+  "kind": "feature",
+  "name": "Fast Hands",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64
+    ],
+    "section": "Classes/Rogue/Rogue Subclass: Thief/Level 3: Fast Hands",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "As a Bonus Action, you can do one of the following.\n\n***Sleight of Hand.*** Make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap with Thieves’ Tools or to pick a pocket.\n\n***Use an Object.*** Take the Utilize action, or take the Magic action to use a magic item that requires that action.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/thief",
+    "level": 3
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Fast Hands",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "choice",
+          "id": "fast_hands",
+          "choose": 1,
+          "options": [
+            {
+              "id": "sleight_of_hand",
+              "label": "Sleight of Hand",
+              "effects": [
+                {
+                  "op": "check",
+                  "ability": "dex",
+                  "skill": "sleight_of_hand",
+                  "note": "Pick a lock or disarm a trap with Thieves' Tools, or pick a pocket."
+                }
+              ]
+            },
+            {
+              "id": "use_an_object",
+              "label": "Use an Object",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/utilize"
+                },
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/action/magic",
+                  "note": "Only to use a magic item that requires that action."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Bonus Action, you can do one of the following.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Sleight of Hand.*** Make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap with Thieves’ Tools or to pick a pocket.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/0",
+        "dnd5e/tool/thieves-tools"
+      ]
+    },
+    {
+      "text": "***Use an Object.*** Take the Utilize action, or take the Magic action to use a magic item that requires that action.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/magic",
+    "dnd5e/action/utilize",
+    "dnd5e/tool/thieves-tools"
+  ]
+}

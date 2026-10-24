@@ -1,0 +1,386 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/bearded-devil",
+  "kind": "creature",
+  "name": "Bearded Devil",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      262,
+      263
+    ],
+    "section": "Monsters A–Z/Bearded Devil/Bearded Devil",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Medium Fiend (Devil), Lawful Evil*\n\n| **AC** 13 | **Initiative** +2 (12) |\n\n**HP** 58 (9d8 + 18)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +5 | **Dex** 15 | +2 | +2 | **Con** 15 | +2 | +4 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 14 | +2 | +4 |\n\n**Resistances** Cold\n\n**Immunities** Fire, Poison; Frightened, Poisoned\n\n**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 10\n\n**Languages** Infernal; telepathy 120 ft.\n\n**CR** 3 (XP 700; PB +2)\n\n##### Traits\n\n***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The devil makes one Beard attack and one Infernal Glaive attack.\n\n***Beard.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil’s next turn. Until this poison ends, the target can’t regain Hit Points.\n\n***Infernal Glaive.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "cr": "3"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Devil"
+    ],
+    "type_line": "Medium Fiend (Devil), Lawful Evil",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 58,
+      "formula": {
+        "op": "add",
+        "args": [
+          "9d8",
+          18
+        ]
+      },
+      "text": "58 (9d8 + 18)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 5
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 4
+      },
+      "int": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 4
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "cold"
+      ],
+      "text": "Cold"
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison; Frightened, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft. (unimpeded by magical Darkness); Passive Perception 10",
+      "darkvision": 120,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Infernal; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "3",
+      "xp": 700,
+      "proficiency_bonus": 2,
+      "text": "3 (XP 700; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "text": "The devil has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The devil makes one Beard attack and one Infernal Glaive attack."
+      },
+      {
+        "name": "Beard",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil’s next turn. Until this poison ends, the target can’t regain Hit Points."
+      },
+      {
+        "name": "Infernal Glaive",
+        "text": "*Melee Attack Roll:* +5, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Beard",
+            "count": 1
+          },
+          {
+            "name": "Infernal Glaive",
+            "count": 1
+          }
+        ],
+        "text": "The devil makes one Beard attack and one Infernal Glaive attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Beard",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Infernal Glaive",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_beard_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Beard as written.",
+      "source_text": "7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil’s next turn. Until this poison ends, the target can’t regain Hit Points."
+    },
+    {
+      "id": "actions_infernal_glaive_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Infernal Glaive as written.",
+      "source_text": "8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. Constitution Saving Throw: DC 12. Failure: The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or aft"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fiend (Devil), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 58 (9d8 + 18)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +5 | **Dex** 15 | +2 | +2 | **Con** 15 | +2 | +4 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 14 | +2 | +4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison; Frightened, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft. (unimpeded by magical\n\nDarkness); Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Infernal; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 3 (XP 700; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The devil has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The devil makes one Beard attack and one Infernal Glaive attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Beard.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Piercing damage, and the target has the Poisoned condition until the start of the devil’s next turn. Until this poison ends, the target can’t regain Hit Points.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/1",
+        "md:actions_beard_rider"
+      ]
+    },
+    {
+      "text": "***Infernal Glaive.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 8 (1d10 + 3) Slashing damage. If the target is a creature and doesn’t already have an infernal wound, it is subjected to the following effect. *Constitution Saving Throw:* DC 12. *Failure:* The target receives an infernal wound. While wounded, the target loses 5 (1d10) Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a DC 12 Wisdom (Medicine) check.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_infernal_glaive_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/poisoned"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/bag-of-holding",
+  "kind": "magic-item",
+  "name": "Bag of Holding",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      212
+    ],
+    "section": "Magic Items/Magic Items A–Z/Bag of Holding",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Uncommon*\n\nThis bag has an interior space considerably larger than its outside dimensions—roughly 2 feet square and 4 feet deep on the inside. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 5 pounds, regardless of its contents. Retrieving an item from the bag requires a Utilize action.\n\nIf the bag is overloaded, pierced, or torn, it is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth unharmed, but the bag must be put right before it can be used again. The bag holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.\n\nPlacing a *Bag of Holding* inside an extradimensional space created by a *Handy Haversack*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "uncommon"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Uncommon",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "uncommon"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "capacity",
+        "interior_feet": [
+          2,
+          2,
+          4
+        ],
+        "max_lb": 500,
+        "max_cubic_feet": 64,
+        "weight_lb": 5,
+        "retrieve": "dnd5e/action/utilize"
+      },
+      {
+        "id": "destroyed",
+        "on": [
+          "overloaded",
+          "pierced",
+          "torn"
+        ],
+        "contents_to": "astral_plane",
+        "inside_out": "spills_unharmed",
+        "air_minutes": 10,
+        "air_divided_by_breathers": true
+      },
+      {
+        "id": "extradimensional_conflict",
+        "with": [
+          "dnd5e/magic-item/handy-haversack",
+          "dnd5e/magic-item/portable-hole"
+        ],
+        "both_destroyed": true,
+        "gate": "astral_plane",
+        "one_way": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "move",
+      "mode": "teleport",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 10,
+          "origin": "point"
+        }
+      },
+      "note": "Each creature within the Sphere is sucked to a random location on the Astral Plane."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Uncommon*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This bag has an interior space considerably larger than its outside dimensions—roughly 2 feet square and 4 feet deep on the inside. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 5 pounds, regardless of its contents. Retrieving an item from the bag requires a Utilize action.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If the bag is overloaded, pierced, or torn, it is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth unharmed, but the bag must be put right before it can be used again. The bag holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Placing a *Bag of Holding* inside an extradimensional space created by a *Handy Haversack*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/handy-haversack",
+    "dnd5e/magic-item/portable-hole"
+  ]
+}

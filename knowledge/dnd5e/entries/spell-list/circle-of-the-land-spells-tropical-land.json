@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell-list/circle-of-the-land-spells-tropical-land",
+  "kind": "spell-list",
+  "name": "Circle of the Land Spells: Tropical Land",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Circle of the Land Spells: Tropical Land",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L27"
+  },
+  "tier": 1,
+  "text": "##### Tropical Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Acid Splash*, *Ray of Sickness*, *Web* |\n| 5 | *Stinking Cloud* |\n| 7 | *Polymorph* |\n| 9 | *Insect Plague* |",
+  "facets": {
+    "class": "dnd5e/class/druid",
+    "subclass_list": true,
+    "spell_count": 6
+  },
+  "data": {
+    "class": "dnd5e/class/druid",
+    "granted_by": "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "always_prepared": true,
+    "by_level": [
+      {
+        "class_level": 3,
+        "spells": [
+          "dnd5e/spell/acid-splash",
+          "dnd5e/spell/ray-of-sickness",
+          "dnd5e/spell/web"
+        ]
+      },
+      {
+        "class_level": 5,
+        "spells": [
+          "dnd5e/spell/stinking-cloud"
+        ]
+      },
+      {
+        "class_level": 7,
+        "spells": [
+          "dnd5e/spell/polymorph"
+        ]
+      },
+      {
+        "class_level": 9,
+        "spells": [
+          "dnd5e/spell/insect-plague"
+        ]
+      }
+    ],
+    "spells": [
+      "dnd5e/spell/acid-splash",
+      "dnd5e/spell/ray-of-sickness",
+      "dnd5e/spell/web",
+      "dnd5e/spell/stinking-cloud",
+      "dnd5e/spell/polymorph",
+      "dnd5e/spell/insect-plague"
+    ]
+  },
+  "coverage": [
+    {
+      "text": "##### Tropical Land\n\n| **Druid Level** | **Circle Spells** |\n| 3 | *Acid Splash*, *Ray of Sickness*, *Web* |\n| 5 | *Stinking Cloud* |\n| 7 | *Polymorph* |\n| 9 | *Insect Plague* |",
+      "status": "structured",
+      "by": [
+        "/data/by_level",
+        "/data/spells",
+        "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+    "dnd5e/spell/acid-splash",
+    "dnd5e/spell/insect-plague",
+    "dnd5e/spell/polymorph",
+    "dnd5e/spell/ray-of-sickness",
+    "dnd5e/spell/stinking-cloud",
+    "dnd5e/spell/web"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/spell-components",
+  "kind": "rule",
+  "name": "Components",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      105,
+      106
+    ],
+    "section": "Spells/Casting Spells/Components",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L09"
+  },
+  "tier": 1,
+  "text": "A spell’s components are physical requirements the spellcaster must meet to cast the spell. Each spell’s description indicates whether it requires Verbal (V), Somatic (S), or Material (M) components. If the spellcaster can’t provide one or more of a spell’s components, the spellcaster can’t cast the spell.\n\n#### Verbal (V)\n\nA Verbal component is the chanting of esoteric words that sound like nonsense to the uninitiated. The words must be uttered in a normal speaking voice. The words themselves aren’t the source of the spell’s power; rather, the particular combination of sounds, with specific pitch and resonance, sets the threads of magic in motion. Thus, a creature who is gagged or in an area of magical silence can’t cast a spell with a Verbal component.\n\n#### Somatic (S)\n\nA Somatic component is a forceful gesticulation or an intricate set of gestures. A spellcaster must use at least one of their hands to perform these movements.\n\n#### Material (M)\n\nA Material component is a particular material used in a spell’s casting, as specified in parentheses in the Components entry. These materials aren’t consumed by the spell unless the spell’s description states otherwise. The spellcaster must have a hand free to access them, but it can be the same hand used to perform Somatic components, if any.\n\nIf a spell doesn’t consume its materials and doesn’t specify a cost for them, a spellcaster can use a Component Pouch (see “Equipment”) instead of providing the materials specified in the spell, or the spellcaster can substitute a Spellcasting Focus if the caster has a feature that allows that substitution. To use a Component Pouch, you must have a hand free to reach into it, and to use a Spellcasting Focus, you must hold it unless its description says otherwise (see “Equipment” for descriptions).",
+  "data": {
+    "rules": [
+      {
+        "id": "components",
+        "kinds": [
+          "verbal",
+          "somatic",
+          "material"
+        ],
+        "missing_component": "cannot_cast"
+      },
+      {
+        "id": "verbal",
+        "requires": {
+          "pred": "can_speak_normally"
+        }
+      },
+      {
+        "id": "somatic",
+        "requires": {
+          "pred": "has_hand_free"
+        }
+      },
+      {
+        "id": "material",
+        "consumed_only_if_stated": true,
+        "hand_free_required": true,
+        "may_be_somatic_hand": true
+      },
+      {
+        "id": "substitutes",
+        "if": [
+          "not_consumed",
+          "no_cost"
+        ],
+        "component_pouch": {
+          "hand_free": true
+        },
+        "spellcasting_focus": {
+          "requires_feature": true,
+          "held": true
+        }
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A spell’s components are physical requirements the spellcaster must meet to cast the spell. Each spell’s description indicates whether it requires Verbal (V), Somatic (S), or Material (M) components. If the spellcaster can’t provide one or more of a spell’s components, the spellcaster can’t cast the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Verbal (V)\n\nA Verbal component is the chanting of esoteric words that sound like nonsense to the uninitiated. The words must be uttered in a normal speaking voice. The words themselves aren’t the source of the spell’s power; rather, the particular combination of sounds, with specific pitch and resonance, sets the threads of magic in motion. Thus, a creature who is gagged or in an area of magical silence can’t cast a spell with a Verbal component.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### Somatic (S)\n\nA Somatic component is a forceful gesticulation or an intricate set of gestures. A spellcaster must use at least one of their hands to perform these movements.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Material (M)\n\nA Material component is a particular material used in a spell’s casting, as specified in parentheses in the Components entry. These materials aren’t consumed by the spell unless the spell’s description states otherwise. The spellcaster must have a hand free to access them, but it can be the same hand used to perform Somatic components, if any.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "If a spell doesn’t consume its materials and doesn’t specify a cost for them, a spellcaster can use a Component Pouch (see “Equipment”) instead of providing the materials specified in the spell, or the spellcaster can substitute a Spellcasting Focus if the caster has a feature that allows that substitution. To use a Component Pouch, you must have a hand free to reach into it, and to use a Spellcasting Focus, you must hold it unless its description says otherwise (see “Equipment” for descriptions).",
+      "status": "structured",
+      "by": [
+        "/data/rules/4",
+        "dnd5e/gear/component-pouch",
+        "dnd5e/rule/spellcasting-focus"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/gear/component-pouch",
+    "dnd5e/rule/spellcasting-focus"
+  ]
+}

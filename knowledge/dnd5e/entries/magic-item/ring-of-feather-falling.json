@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-feather-falling",
+  "kind": "magic-item",
+  "name": "Ring of Feather Falling",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      238
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of Feather Falling",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Ring, Rare (Requires Attunement)*\n\nWhen you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "fall_rate_feet_per_round",
+      "mode": "set",
+      "value": 60,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "damage_types": [
+        "bludgeoning"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "damage_from_falling"
+          }
+        ]
+      },
+      "note": "No damage from falling."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

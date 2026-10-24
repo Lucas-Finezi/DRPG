@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/brewing-potions-of-healing",
+  "kind": "rule",
+  "name": "Brewing Potions of Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      103
+    ],
+    "section": "Equipment/Brewing Potions of Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 1,
+  "text": "A character who has proficiency with the Herbalism Kit can create a *Potion of Healing*. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).",
+  "data": {
+    "rules": [
+      {
+        "id": "brew",
+        "proficiency": "dnd5e/tool/herbalism-kit",
+        "cost_gp": 25,
+        "days": 1,
+        "hours": 8,
+        "product": "dnd5e/magic-item/potions-of-healing"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A character who has proficiency with the Herbalism Kit can create a *Potion of Healing*. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

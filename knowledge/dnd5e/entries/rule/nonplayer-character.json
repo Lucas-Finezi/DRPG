@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/nonplayer-character",
+  "kind": "rule",
+  "name": "Nonplayer Character",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      185
+    ],
+    "section": "Rules Glossary/Rules Definitions/Nonplayer Character",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. *See also* “Monster.”",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_rules/9"
+      ]
+    },
+    {
+      "text": "*See also* “Monster.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/monster"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/monster",
+    "dnd5e/system/dnd5e"
+  ]
+}

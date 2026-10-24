@@ -1,0 +1,29 @@
+{
+  "kind": "creature",
+  "count": {
+    "op": "add",
+    "args": [
+      1,
+      {
+        "op": "sub",
+        "args": [
+          {
+            "var": "spell_slot_level"
+          },
+          2
+        ]
+      }
+    ]
+  },
+  "range": {
+    "kind": "distance",
+    "feet": 60
+  },
+  "must_see": true,
+  "distinct": true,
+  "filter": {
+    "creature_types": [
+      "humanoid"
+    ]
+  }
+}

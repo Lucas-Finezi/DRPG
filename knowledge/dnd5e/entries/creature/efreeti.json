@@ -1,0 +1,605 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/efreeti",
+  "kind": "creature",
+  "name": "Efreeti",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      283
+    ],
+    "section": "Monsters A–Z/Efreeti/Efreeti",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Large Elemental (Genie), Neutral*\n\n| **AC** 17 | **Initiative** +1 (11) |\n\n**HP** 212 (17d10 + 119)\n\n**Speed** 40 ft., Fly 60 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 12 | +1 | +1 | **Con** 24 | +7 | +7 |\n| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +6 | **Cha** 19 | +4 | +8 |\n\n**Immunities** Fire\n\n**Senses** Darkvision 120 ft.; Passive Perception 12\n\n**Languages** Primordial (Ignan)\n\n**CR** 11 (XP 7,200; PB +4)\n\n##### Traits\n\n***Elemental Restoration.*** If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Fire.\n\n***Magic Resistance.*** The efreeti has Advantage on saving throws against spells and other magical effects.\n\n***Wishes.*** The efreeti has a 30 percent chance of knowing the *Wish* spell. If the efreeti knows it, the efreeti can cast it only on behalf of a non-genie creature who communicates a wish in a way the efreeti can understand. If the efreeti casts the spell for the creature, the efreeti suffers none of the spell’s stress. Once the efreeti has cast it three times, the efreeti can’t do so again for 365 days.\n\n##### Actions\n\n***Multiattack.*** The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination.\n\n***Heated Blade.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 13 (2d12) Fire damage.\n\n***Hurl Flame.*** *Ranged Attack Roll:* +8, range 120 ft. *Hit:* 24 (7d6) Fire damage.\n\n***Spellcasting.*** The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Elementalism*\n\n**1/Day Each:** *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*, *Tongues*, *Wall of Fire* (level 7 version)",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "11"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "tags": [
+      "Genie"
+    ],
+    "type_line": "Large Elemental (Genie), Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 212,
+      "formula": {
+        "op": "add",
+        "args": [
+          "17d10",
+          119
+        ]
+      },
+      "text": "212 (17d10 + 119)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 60 ft. (hover)",
+      "walk": 40,
+      "fly": 60,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 24,
+        "mod": 7,
+        "save": 7
+      },
+      "int": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "wis": {
+        "score": 15,
+        "mod": 2,
+        "save": 6
+      },
+      "cha": {
+        "score": 19,
+        "mod": 4,
+        "save": 8
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "fire"
+      ],
+      "conditions": [],
+      "text": "Fire"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 12",
+      "darkvision": 120,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Primordial (Ignan)"
+    },
+    "cr": {
+      "value": "11",
+      "xp": 7200,
+      "proficiency_bonus": 4,
+      "text": "11 (XP 7,200; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Elemental Restoration",
+        "text": "If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Fire."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The efreeti has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Wishes",
+        "text": "The efreeti has a 30 percent chance of knowing the *Wish* spell. If the efreeti knows it, the efreeti can cast it only on behalf of a non-genie creature who communicates a wish in a way the efreeti can understand. If the efreeti casts the spell for the creature, the efreeti suffers none of the spell’s stress. Once the efreeti has cast it three times, the efreeti can’t do so again for 365 days."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination."
+      },
+      {
+        "name": "Heated Blade",
+        "text": "*Melee Attack Roll:* +10, reach 5 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 13 (2d12) Fire damage."
+      },
+      {
+        "name": "Hurl Flame",
+        "text": "*Ranged Attack Roll:* +8, range 120 ft. *Hit:* 24 (7d6) Fire damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Elementalism*\n\n**1/Day Each:** *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*, *Tongues*, *Wall of Fire* (level 7 version)"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16): At Will: Detect Magic, Elementalism 1/Day Each: Gaseous Form, Invisibility, Major Image, Plane Shift, Tongues, Wall of Fire (level 7 version)",
+        "ability": "cha",
+        "save_dc": 16,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/elementalism",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/gaseous-form",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/invisibility",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/major-image",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/plane-shift",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/tongues",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/wall-of-fire",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "cast_spell",
+      "spell": "dnd5e/spell/wish",
+      "slot": "none"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Heated Blade",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  6
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d12",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Hurl Flame",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 8,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "7d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/elementalism",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Elementalism"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/gaseous-form",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Gaseous Form",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Invisibility",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/major-image",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Major Image",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Plane Shift",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/tongues",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 16
+        }
+      ],
+      "name": "Tongues",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-fire",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "level": 7,
+          "save_dc": 16
+        }
+      ],
+      "name": "Wall of Fire",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_elemental_restoration",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Elemental Restoration as written.",
+      "source_text": "If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Fire."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental (Genie), Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 212 (17d10 + 119)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 60 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 12 | +1 | +1 | **Con** 24 | +7 | +7 |\n| **Int** | 16 | +3 | +3 | **Wis** 15 | +2 | +6 | **Cha** 19 | +4 | +8 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 11 (XP 7,200; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Elemental Restoration.*** If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Fire.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_elemental_restoration"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The efreeti has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Wishes.*** The efreeti has a 30 percent chance of knowing the *Wish* spell. If the efreeti knows it, the efreeti can cast it only on behalf of a non-genie creature who communicates a wish in a way the efreeti can understand. If the efreeti casts the spell for the creature, the efreeti suffers none of the spell’s stress. Once the efreeti has cast it three times, the efreeti can’t do so again for 365 days.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Heated Blade.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 13 (2d12) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Hurl Flame.*** *Ranged Attack Roll:* +8, range 120 ft. *Hit:* 24 (7d6) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 16):\n\n**At Will:** *Detect Magic*, *Elementalism*\n\n**1/Day Each:** *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*, *Tongues*, *Wall of Fire* (level 7 version)",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/elementalism",
+    "dnd5e/spell/gaseous-form",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/major-image",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/tongues",
+    "dnd5e/spell/wall-of-fire",
+    "dnd5e/spell/wish"
+  ]
+}

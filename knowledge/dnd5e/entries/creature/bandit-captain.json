@@ -1,0 +1,335 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/bandit-captain",
+  "kind": "creature",
+  "name": "Bandit Captain",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      261,
+      262
+    ],
+    "section": "Monsters A–Z/Bandits/Bandit Captain",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Medium or Small Humanoid, Neutral*\n\n| **AC** 15 | **Initiative** +3 (13) |\n\n**HP** 52 (8d8 + 16)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +4 | **Dex** 16 | +3 | +5 | **Con** 14 | +2 | +2 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 14 | +2 | +2 |\n\n**Skills** Athletics +4, Deception +4\n\n**Gear** Pistol, Scimitar, Studded Leather Armor\n\n**Senses** Passive Perception 10\n\n**Languages** Common, Thieves’ Cant\n\n**CR** 2 (XP 450; PB +2)\n\n##### Actions\n\n***Multiattack.*** The bandit makes two attacks, using Scimitar and Pistol in any combination.\n\n***Scimitar.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Slashing damage.\n\n***Pistol.*** *Ranged Attack Roll:* +5, range 30/90 ft. *Hit:* 8 (1d10 + 3) Piercing damage.\n\n##### Reactions\n\n***Parry.*** *Trigger:* The bandit is hit by a melee attack roll while holding a weapon. *Response:* The bandit adds 2 to its AC against that attack, possibly causing it to miss.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Humanoid",
+    "alignment": "Neutral",
+    "type_line": "Medium or Small Humanoid, Neutral",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 52,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d8",
+          16
+        ]
+      },
+      "text": "52 (8d8 + 16)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 15,
+        "mod": 2,
+        "save": 4
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 5
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 2
+      },
+      "cha": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "athletics": 4,
+      "deception": 4,
+      "text": "Athletics +4, Deception +4"
+    },
+    "gear": {
+      "text": "Pistol, Scimitar, Studded Leather Armor"
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Common, Thieves’ Cant"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The bandit makes two attacks, using Scimitar and Pistol in any combination."
+      },
+      {
+        "name": "Scimitar",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Slashing damage."
+      },
+      {
+        "name": "Pistol",
+        "text": "*Ranged Attack Roll:* +5, range 30/90 ft. *Hit:* 8 (1d10 + 3) Piercing damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Parry",
+        "text": "*Trigger:* The bandit is hit by a melee attack roll while holding a weapon. *Response:* The bandit adds 2 to its AC against that attack, possibly causing it to miss."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The bandit makes two attacks, using Scimitar and Pistol in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Scimitar",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  3
+                ]
+              },
+              "damage_type": "slashing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pistol",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "ac",
+          "mode": "add",
+          "value": 2,
+          "note": "Against the triggering attack."
+        }
+      ],
+      "note": "Trigger: The bandit is hit by a melee attack roll while holding a weapon."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Humanoid, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 52 (8d8 + 16)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 15 | +2 | +4 | **Dex** 16 | +3 | +5 | **Con** 14 | +2 | +2 |\n| **Int** | 14 | +2 | +2 | **Wis** 11 | +0 | +2 | **Cha** 14 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Athletics +4, Deception +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Gear** Pistol, Scimitar, Studded Leather Armor",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Thieves’ Cant",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The bandit makes two attacks, using Scimitar and Pistol in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Scimitar.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 6 (1d6 + 3) Slashing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Pistol.*** *Ranged Attack Roll:* +5, range 30/90 ft. *Hit:* 8 (1d10 + 3) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Parry.*** *Trigger:* The bandit is hit by a melee attack roll while holding a weapon. *Response:* The bandit adds 2 to its AC against that attack, possibly causing it to miss.",
+      "status": "structured",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2"
+      ]
+    }
+  ]
+}

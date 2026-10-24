@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/purify-food-and-drink",
+  "kind": "spell",
+  "name": "Purify Food and Drink",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      157
+    ],
+    "section": "Spells/Spell Descriptions/Purify Food and Drink",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 1,
+  "text": "*Level 1 Transmutation (Cleric, Druid, Paladin)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 10 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou remove poison and rot from nonmagical food and drink in a 5-foot-radius Sphere centered on a point within range.",
+  "facets": {
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action or Ritual",
+      "ritual": true,
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "purify",
+        "removes": [
+          "poison",
+          "rot"
+        ],
+        "from": "nonmagical_food_and_drink",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 5
+        }
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 1 Transmutation (Cleric, Druid, Paladin)*\n\n**Casting Time:** Action or Ritual\n\n**Range:** 10 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You remove poison and rot from nonmagical food and drink in a 5-foot-radius Sphere centered on a point within range.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

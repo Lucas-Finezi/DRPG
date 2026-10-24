@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/the-order-of-combat",
+  "kind": "rule",
+  "name": "The Order of Combat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      13,
+      14
+    ],
+    "section": "Playing the Game/Combat/The Order of Combat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "A typical combat encounter is a clash between two sides: a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes combat into a cycle of rounds and turns. A round represents about 6 seconds in the game world. During a round, each participant in a battle takes a turn. The order of turns is determined at the beginning of combat when everyone rolls Initiative. Once everyone has taken a turn, the fight continues to the next round if neither side is defeated.\n\n#### Combat Step by Step\n\nCombat unfolds in these steps:\n\n**1: Establish Positions.** The Game Master determines where all the characters and monsters are located. Given the adventurers’ marching order or their stated positions in the room or other location, the GM figures out where the adversaries are—how far away and in what direction.\n\n**2: Roll Initiative.** Everyone involved in the combat encounter rolls Initiative, determining the order of combatants’ turns.\n\n**3: Take Turns.** Each participant in the battle takes a turn in Initiative order. When everyone involved in the combat has had a turn, the round ends. Repeat this step until the fighting stops.\n\n#### Initiative\n\nInitiative determines the order of turns during combat. When combat starts, every participant rolls Initiative; they make a Dexterity check that determines their place in the Initiative order. The GM rolls for monsters. For a group of identical creatures, the GM makes a single roll, so each member of the group has the same Initiative.\n\n***Surprise.*** If a combatant is surprised by combat starting, that combatant has Disadvantage on their Initiative roll. For example, if an ambusher starts combat while hidden from a foe who is unaware that combat is starting, that foe is surprised.\n\n***Initiative Order.*** A combatant’s check total is called their Initiative count, or Initiative for short. The GM ranks the combatants, from highest to lowest Initiative. This is the order in which they act during each round. The Initiative order remains the same from round to round.\n\n***Ties.*** If a tie occurs, the GM decides the order among tied monsters, and the players decide the order among tied characters. The GM decides the order if the tie is between a monster and a player character.\n\n#### Your Turn\n\nOn your turn, you can move a distance up to your Speed and take one action. You decide whether to move first or take your action first.\n\nThe main actions you can take are listed in “Actions” earlier in “Playing the Game.” A character’s features and a monster’s stat block also provide action options. “Movement and Position” later in “Playing the Game” gives the rules for movement.\n\n***Communicating.*** You can communicate however you are able—through brief utterances and gestures—as you take your turn. Doing so uses neither your action nor your move.\n\nExtended communication, such as a detailed explanation of something or an attempt to persuade a foe, requires an action. The Influence action is the main way you try to influence a monster.\n\n***Interacting with Things.*** You can interact with one object or feature of the environment for free, during either your move or action. For example, you could open a door during your move as you stride toward a foe.\n\nIf you want to interact with a second object, you need to take the Utilize action. Some magic items and other special objects always require an action to use, as stated in their descriptions.\n\nThe GM might require you to use an action for any of these activities when it needs special care or when it presents an unusual obstacle. For instance, the GM might require you to take the Utilize action to open a stuck door or turn a crank to lower a drawbridge.\n\n***Doing Nothing on Your Turn.*** You can forgo moving, taking an action, or doing anything at all on your turn. If you can’t decide what to do, consider taking the defensive Dodge action or the Ready action to delay acting.\n\n#### Ending Combat\n\nCombat ends when one side or the other is defeated, which can mean the creatures are killed or knocked out or have surrendered or fled. Combat can also end when both sides agree to end it.",
+  "data": {
+    "rules": [
+      {
+        "id": "rounds_and_turns",
+        "each_participant_one_turn_per_round": true,
+        "order_by": "initiative",
+        "next_round_if_not_defeated": true
+      },
+      {
+        "id": "steps",
+        "procedure": [
+          "establish_positions",
+          "roll_initiative",
+          "take_turns"
+        ]
+      },
+      {
+        "id": "round_end",
+        "round_ends_when": "everyone_had_a_turn",
+        "repeat_until": "fighting_stops"
+      },
+      {
+        "id": "extended_communication",
+        "cost": "action"
+      },
+      {
+        "id": "do_nothing",
+        "allowed": true
+      },
+      {
+        "id": "ending_combat",
+        "ends_when": [
+          "one_side_defeated",
+          "both_sides_agree"
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "positions",
+      "reason": "gm_judgment",
+      "prompt": "Place the characters and monsters and determine where the adversaries are.",
+      "source_text": "The Game Master determines where all the characters and monsters are located.",
+      "when": "on_use",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": "interaction_cost",
+      "reason": "gm_judgment",
+      "prompt": "Does this interaction need an action (special care or an unusual obstacle)?",
+      "source_text": "The GM might require you to use an action for any of these activities when it needs special care or when it presents an unusual obstacle.",
+      "pages": [
+        13
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A typical combat encounter is a clash between two sides: a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes combat into a cycle of rounds and turns. A round represents about 6 seconds in the game world. During a round, each participant in a battle takes a turn. The order of turns is determined at the beginning of combat when everyone rolls Initiative. Once everyone has taken a turn, the fight continues to the next round if neither side is defeated.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/time/rules/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Combat Step by Step\n\nCombat unfolds in these steps:",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**1: Establish Positions.** The Game Master determines where all the characters and monsters are located. Given the adventurers’ marching order or their stated positions in the room or other location, the GM figures out where the adversaries are—how far away and in what direction.",
+      "status": "master_decision",
+      "by": [
+        "md:positions"
+      ]
+    },
+    {
+      "text": "**2: Roll Initiative.** Everyone involved in the combat encounter rolls Initiative, determining the order of combatants’ turns.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative"
+      ]
+    },
+    {
+      "text": "**3: Take Turns.** Each participant in the battle takes a turn in Initiative order. When everyone involved in the combat has had a turn, the round ends. Repeat this step until the fighting stops.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Initiative\n\nInitiative determines the order of turns during combat. When combat starts, every participant rolls Initiative; they make a Dexterity check that determines their place in the Initiative order. The GM rolls for monsters. For a group of identical creatures, the GM makes a single roll, so each member of the group has the same Initiative.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative/rules/0",
+        "dnd5e/system/dnd5e#/initiative/rules/1"
+      ]
+    },
+    {
+      "text": "***Surprise.*** If a combatant is surprised by combat starting, that combatant has Disadvantage on their Initiative roll. For example, if an ambusher starts combat while hidden from a foe who is unaware that combat is starting, that foe is surprised.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative/rules/2"
+      ]
+    },
+    {
+      "text": "***Initiative Order.*** A combatant’s check total is called their Initiative count, or Initiative for short. The GM ranks the combatants, from highest to lowest Initiative. This is the order in which they act during each round. The Initiative order remains the same from round to round.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative/rules/3"
+      ]
+    },
+    {
+      "text": "***Ties.*** If a tie occurs, the GM decides the order among tied monsters, and the players decide the order among tied characters. The GM decides the order if the tie is between a monster and a player character.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/initiative/rules/4"
+      ]
+    },
+    {
+      "text": "#### Your Turn\n\nOn your turn, you can move a distance up to your Speed and take one action. You decide whether to move first or take your action first.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/action_economy/0/rules/0",
+        "dnd5e/system/dnd5e#/action_economy/3/rules/0"
+      ]
+    },
+    {
+      "text": "The main actions you can take are listed in “Actions” earlier in “Playing the Game.” A character’s features and a monster’s stat block also provide action options. “Movement and Position” later in “Playing the Game” gives the rules for movement.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/actions",
+        "dnd5e/rule/movement-and-position"
+      ]
+    },
+    {
+      "text": "***Communicating.*** You can communicate however you are able—through brief utterances and gestures—as you take your turn. Doing so uses neither your action nor your move.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/action_economy/5"
+      ]
+    },
+    {
+      "text": "Extended communication, such as a detailed explanation of something or an attempt to persuade a foe, requires an action. The Influence action is the main way you try to influence a monster.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3",
+        "dnd5e/action/influence"
+      ]
+    },
+    {
+      "text": "***Interacting with Things.*** You can interact with one object or feature of the environment for free, during either your move or action. For example, you could open a door during your move as you stride toward a foe.\n\nIf you want to interact with a second object, you need to take the Utilize action. Some magic items and other special objects always require an action to use, as stated in their descriptions.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/action_economy/4"
+      ]
+    },
+    {
+      "text": "The GM might require you to use an action for any of these activities when it needs special care or when it presents an unusual obstacle. For instance, the GM might require you to take the Utilize action to open a stuck door or turn a crank to lower a drawbridge.",
+      "status": "master_decision",
+      "by": [
+        "md:interaction_cost"
+      ]
+    },
+    {
+      "text": "***Doing Nothing on Your Turn.*** You can forgo moving, taking an action, or doing anything at all on your turn. If you can’t decide what to do, consider taking the defensive Dodge action or the Ready action to delay acting.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "#### Ending Combat\n\nCombat ends when one side or the other is defeated, which can mean the creatures are killed or knocked out or have surrendered or fled. Combat can also end when both sides agree to end it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/influence",
+    "dnd5e/rule/actions",
+    "dnd5e/rule/movement-and-position",
+    "dnd5e/system/dnd5e"
+  ]
+}

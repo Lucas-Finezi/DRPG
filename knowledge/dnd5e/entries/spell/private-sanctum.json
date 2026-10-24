@@ -1,0 +1,137 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/private-sanctum",
+  "kind": "spell",
+  "name": "Private Sanctum",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      156
+    ],
+    "section": "Spells/Spell Descriptions/Private Sanctum",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 1,
+  "text": "*Level 4 Abjuration (Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a thin sheet of lead)\n\n**Duration:** 24 hours\n\nYou make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:\n\n- Sound can’t pass through the barrier at the edge of the warded area.\n\n- The barrier of the warded area appears dark and foggy, preventing vision (including Darkvision) through it.\n\n- Sensors created by Divination spells can’t appear inside the protected area or pass through the barrier at its perimeter.\n\n- Creatures in the area can’t be targeted by Divination spells.\n\n- Nothing can teleport into or out of the warded area.\n\n- Planar travel is blocked within the warded area.\n\nCasting this spell on the same spot every day for 365 days makes the spell last until dispelled.\n\n***Using a Higher-Level Spell Slot.*** You can increase the size of the Cube by 100 feet for each spell slot level above 4.",
+  "facets": {
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes",
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a thin sheet of lead"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "area",
+        "cube_feet_min": 5,
+        "cube_feet_max": {
+          "op": "add",
+          "args": [
+            100,
+            {
+              "op": "mul",
+              "args": [
+                100,
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "var": "spell_slot_level"
+                    },
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "properties",
+        "choose_any_of": [
+          "block_sound",
+          "block_vision",
+          "block_divination_sensors",
+          "block_divination_targeting",
+          "block_teleportation",
+          "block_planar_travel"
+        ]
+      },
+      {
+        "id": "permanent",
+        "daily_castings": 365,
+        "then": "until_dispelled"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 4 Abjuration (Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a thin sheet of lead)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:\n\n- Sound can’t pass through the barrier at the edge of the warded area.\n\n- The barrier of the warded area appears dark and foggy, preventing vision (including Darkvision) through it.\n\n- Sensors created by Divination spells can’t appear inside the protected area or pass through the barrier at its perimeter.\n\n- Creatures in the area can’t be targeted by Divination spells.\n\n- Nothing can teleport into or out of the warded area.\n\n- Planar travel is blocked within the warded area.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Casting this spell on the same spot every day for 365 days makes the spell last until dispelled.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can increase the size of the Cube by 100 feet for each spell slot level above 4.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

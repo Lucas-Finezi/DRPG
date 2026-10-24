@@ -1,0 +1,154 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/hunter-hunters-prey",
+  "kind": "feature",
+  "name": "Hunter’s Prey",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      61
+    ],
+    "section": "Classes/Ranger/Ranger Subclass: Hunter/Level 3: Hunter’s Prey",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\n***Colossus Slayer.*** Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it’s missing any of its Hit Points. You can deal this extra damage only once per turn.\n\n***Horde Breaker.*** Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon’s range, and that you haven’t attacked this turn.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/hunter",
+    "level": 3
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "swap",
+        "on": [
+          "short_rest_finished",
+          "long_rest_finished"
+        ],
+        "replace_with": "other_option"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "hunters_prey",
+      "choose": 1,
+      "options": [
+        {
+          "id": "colossus_slayer",
+          "label": "Colossus Slayer",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "condition": {
+                "all": [
+                  {
+                    "pred": "attack_is",
+                    "args": {
+                      "via": "weapon"
+                    }
+                  },
+                  {
+                    "pred": "hp_is",
+                    "args": {
+                      "missing_any": true
+                    }
+                  }
+                ]
+              },
+              "frequency": {
+                "count": 1,
+                "per": "turn"
+              },
+              "then": [
+                {
+                  "op": "damage",
+                  "amount": "1d8",
+                  "damage_type": {
+                    "var": "chosen.weapon_damage_type"
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "horde_breaker",
+          "label": "Horde Breaker",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "attack_roll_made"
+              },
+              "optional": true,
+              "condition": {
+                "all": [
+                  {
+                    "pred": "own_turn"
+                  },
+                  {
+                    "pred": "attack_is",
+                    "args": {
+                      "via": "weapon"
+                    }
+                  }
+                ]
+              },
+              "frequency": {
+                "count": 1,
+                "per": "turn"
+              },
+              "then": [
+                {
+                  "op": "attack",
+                  "attack_type": "melee",
+                  "note": "Same weapon; a different creature within 5 feet of the original target, within the weapon's range, not attacked this turn."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Colossus Slayer.*** Your tenacity can wear down even the most resilient foes. When you hit a creature with a weapon, the weapon deals an extra 1d8 damage to the target if it’s missing any of its Hit Points. You can deal this extra damage only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "***Horde Breaker.*** Once on each of your turns when you make an attack with a weapon, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target, that is within the weapon’s range, and that you haven’t attacked this turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/1"
+      ]
+    }
+  ]
+}

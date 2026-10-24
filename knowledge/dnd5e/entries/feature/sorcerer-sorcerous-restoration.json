@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-sorcerous-restoration",
+  "kind": "feature",
+  "name": "Sorcerous Restoration",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      66
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Class Features/Level 5: Sorcerous Restoration",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you finish a Short Rest, you can regain expended Sorcery Points, but no more than a number equal to half your Sorcerer level (round down). Once you use this feature, you can’t do so again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/sorcerer",
+    "level": 5
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "short_rest_finished"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "sorcery_points",
+          "amount": {
+            "op": "div",
+            "args": [
+              {
+                "var": "class_level.sorcerer"
+              },
+              2
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you finish a Short Rest, you can regain expended Sorcery Points, but no more than a number equal to half your Sorcerer level (round down). Once you use this feature, you can’t do so again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

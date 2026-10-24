@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/environment/heavy-precipitation",
+  "kind": "environment",
+  "name": "Heavy Precipitation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      195
+    ],
+    "section": "Gameplay Toolbox/Environmental Effects/Heavy Precipitation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 2,
+  "text": "Everything within an area of heavy rain or heavy snowfall is Lightly Obscured, and creatures in the area have Disadvantage on all Wisdom (Perception) checks. Heavy rain also extinguishes open flames.",
+  "data": {
+    "rules": [
+      {
+        "id": "rain",
+        "extinguishes_open_flames": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "reference",
+      "rule": "dnd5e/rule/lightly-obscured"
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "pred": "check_uses",
+        "args": {
+          "skill": "perception"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Everything within an area of heavy rain or heavy snowfall is Lightly Obscured, and creatures in the area have Disadvantage on all Wisdom (Perception) checks. Heavy rain also extinguishes open flames.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/lightly-obscured"
+  ]
+}

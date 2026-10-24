@@ -1,0 +1,52 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/spellcasting-services",
+  "kind": "rule",
+  "name": "Spellcasting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      102
+    ],
+    "section": "Equipment/Spellcasting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "Most settlements contain individuals who are willing to cast spells in exchange for payment. If a spell has expensive components, add the cost of those components to the cost listed in the Spellcasting Services table. The higher the level of a desired spell, the harder it is to find someone to cast it.\n\n##### Spellcasting Services\n\n| **Spell Level** | **Availability** | **Cost** |\n| Cantrip | Village, town, or city | 30 GP |\n| 1 | Village, town, or city | 50 GP |\n| 2 | Village, town, or city | 200 GP |\n| 3 | Town or city only | 300 GP |\n| 4–5 | Town or city only | 2,000 GP |\n| 6–8 | City only | 20,000 GP |\n| 9 | City only | 100,000 GP |\n\n##### Spellcasting Services\n\n| **Spell Level** | **Availability** | **Cost** |",
+  "data": {
+    "rules": [
+      {
+        "id": "services",
+        "add_expensive_component_cost": true,
+        "higher_level_harder_to_find": true
+      },
+      {
+        "id": "table",
+        "rows": "dnd5e/service/spellcasting-*"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Most settlements contain individuals who are willing to cast spells in exchange for payment. If a spell has expensive components, add the cost of those components to the cost listed in the Spellcasting Services table. The higher the level of a desired spell, the harder it is to find someone to cast it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Spellcasting Services\n\n| **Spell Level** | **Availability** | **Cost** |\n| Cantrip | Village, town, or city | 30 GP |\n| 1 | Village, town, or city | 50 GP |\n| 2 | Village, town, or city | 200 GP |\n| 3 | Town or city only | 300 GP |\n| 4–5 | Town or city only | 2,000 GP |\n| 6–8 | City only | 20,000 GP |\n| 9 | City only | 100,000 GP |\n\n##### Spellcasting Services\n\n| **Spell Level** | **Availability** | **Cost** |",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

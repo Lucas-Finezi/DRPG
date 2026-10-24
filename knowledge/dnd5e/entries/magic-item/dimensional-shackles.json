@@ -1,0 +1,113 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dimensional-shackles",
+  "kind": "magic-item",
+  "name": "Dimensional Shackles",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      218
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dimensional Shackles",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare*\n\nYou can take a Utilize action to place these shackles on a creature that has the Incapacitated condition. The shackles adjust to fit a creature of Small to Large size. The shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don’t prevent the creature from passing through an interdimensional portal.\n\nYou and any creature you designate when you use the shackles can take a Utilize action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a successful check, the creature breaks free and destroys the shackles.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "removal",
+        "action": "dnd5e/action/utilize",
+        "by": [
+          "you",
+          "designated"
+        ],
+        "escape": {
+          "every_days": 30,
+          "check": "str.athletics",
+          "dc": 30,
+          "destroys_shackles": true
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "restrict",
+          "restrictions": [
+            "teleport_or_planar_travel_in_area"
+          ],
+          "target": {
+            "kind": "creature",
+            "filter": {
+              "sizes": [
+                "small",
+                "medium",
+                "large"
+              ],
+              "predicate": {
+                "pred": "has_condition",
+                "args": {
+                  "condition": "incapacitated"
+                }
+              }
+            }
+          },
+          "note": "Any extradimensional movement; interdimensional portals still work."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You can take a Utilize action to place these shackles on a creature that has the Incapacitated condition. The shackles adjust to fit a creature of Small to Large size. The shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don’t prevent the creature from passing through an interdimensional portal.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You and any creature you designate when you use the shackles can take a Utilize action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a successful check, the creature breaks free and destroys the shackles.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

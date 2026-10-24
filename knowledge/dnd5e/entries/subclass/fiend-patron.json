@@ -1,0 +1,133 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/fiend-patron",
+  "kind": "subclass",
+  "name": "Fiend Patron",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Subclass: Fiend Patron",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Warlock Subclass: Fiend Patron\n\n*Make a Deal with the Lower Planes*\n\nYour pact draws on the Lower Planes, the realms of perdition. You might forge a bargain with a demon lord, an archdevil, or another fiend that is especially mighty. That patron’s aims are evil—the corruption or destruction of all things, ultimately including you—and your path is defined by the extent to which you strive against those aims.",
+  "facets": {
+    "class": "warlock",
+    "feature_levels": [
+      3,
+      6,
+      10,
+      14
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/warlock",
+    "levels": {
+      "3": [
+        "dnd5e/feature/fiend-patron-dark-ones-blessing",
+        "dnd5e/feature/fiend-patron-fiend-spells"
+      ],
+      "6": [
+        "dnd5e/feature/fiend-patron-dark-ones-own-luck"
+      ],
+      "10": [
+        "dnd5e/feature/fiend-patron-fiendish-resilience"
+      ],
+      "14": [
+        "dnd5e/feature/fiend-patron-hurl-through-hell"
+      ]
+    },
+    "tagline": "Make a Deal with the Lower Planes"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-dark-ones-blessing",
+        "dnd5e/feature/fiend-patron-fiend-spells"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Warlock level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-dark-ones-own-luck"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 6
+        }
+      },
+      "note": "Subclass feature at Warlock level 6."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-fiendish-resilience"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Warlock level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/fiend-patron-hurl-through-hell"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "warlock",
+          "level": 14
+        }
+      },
+      "note": "Subclass feature at Warlock level 14."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Warlock Subclass: Fiend Patron\n\n*Make a Deal with the Lower Planes*",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "Your pact draws on the Lower Planes, the realms of perdition. You might forge a bargain with a demon lord, an archdevil, or another fiend that is especially mighty. That patron’s aims are evil—the corruption or destruction of all things, ultimately including you—and your path is defined by the extent to which you strive against those aims.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/fiend-patron-dark-ones-blessing",
+    "dnd5e/feature/fiend-patron-dark-ones-own-luck",
+    "dnd5e/feature/fiend-patron-fiend-spells",
+    "dnd5e/feature/fiend-patron-fiendish-resilience",
+    "dnd5e/feature/fiend-patron-hurl-through-hell"
+  ]
+}

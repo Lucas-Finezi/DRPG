@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-contact-patron",
+  "kind": "feature",
+  "name": "Contact Patron",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Warlock Class Features/Level 9: Contact Patron",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "In the past, you usually contacted your patron through intermediaries. Now you can communicate directly; you always have the *Contact Other Plane* spell prepared. With this feature, you can cast the spell without expending a spell slot to contact your patron, and you automatically succeed on the spell’s saving throw.\n\nOnce you cast the spell with this feature, you can’t do so in this way again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/warlock",
+    "level": 9
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/contact-other-plane"
+      ],
+      "note": "Always prepared."
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/contact-other-plane",
+          "slot": "none"
+        }
+      ],
+      "note": "Casting time as normal for the spell.",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      }
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "saving_throw"
+      ],
+      "result": "success",
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell",
+          "spell": "contact-other-plane"
+        }
+      },
+      "note": "Only when cast with this feature to contact your patron."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "In the past, you usually contacted your patron through intermediaries. Now you can communicate directly; you always have the *Contact Other Plane* spell prepared. With this feature, you can cast the spell without expending a spell slot to contact your patron, and you automatically succeed on the spell’s saving throw.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "Once you cast the spell with this feature, you can’t do so in this way again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/contact-other-plane"
+  ]
+}

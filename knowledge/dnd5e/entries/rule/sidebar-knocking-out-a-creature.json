@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/sidebar-knocking-out-a-creature",
+  "kind": "rule",
+  "name": "Knocking Out a Creature",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      17
+    ],
+    "section": "Playing the Game/Combat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point and give it the Unconscious condition. It then starts a Short Rest, at the end of which that condition ends on it. The condition ends early if the creature regains any Hit Points or if someone takes an action to administer first aid to it, making a successful DC 10 Wisdom (Medicine) check.",
+  "facets": {
+    "sidebar": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "short_rest_then_ends",
+        "condition_ends_at_end_of_short_rest": true,
+        "ends_early": [
+          "regains_hit_points",
+          "first_aid_dc_10_wis_medicine"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point and give it the Unconscious condition. It then starts a Short Rest, at the end of which that condition ends on it. The condition ends early if the creature regains any Hit Points or if someone takes an action to administer first aid to it, making a successful DC 10 Wisdom (Medicine) check.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/knocking-out-a-creature",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/knocking-out-a-creature"
+  ]
+}

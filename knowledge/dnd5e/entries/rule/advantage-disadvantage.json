@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/advantage-disadvantage",
+  "kind": "rule",
+  "name": "Advantage/Disadvantage",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      7,
+      8
+    ],
+    "section": "Playing the Game/D20 Tests/Advantage/Disadvantage",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "Sometimes a D20 Test is modified by Advantage or Disadvantage. Advantage reflects the positive circumstances surrounding a d20 roll, while Disadvantage reflects negative circumstances.\n\nYou usually acquire Advantage or Disadvantage through the use of special abilities and actions. The GM can also decide that circumstances grant Advantage or impose Disadvantage.\n\n#### Roll Two D20s\n\nWhen a roll has either Advantage or Disadvantage, roll a second d20 when you make the roll. Use the higher of the two rolls if you have Advantage, and use the lower roll if you have Disadvantage. For example, if you have Disadvantage and roll an 18 and a 3, use the 3. If you instead have Advantage and roll those numbers, use the 18.\n\n#### They Don’t Stack\n\nIf multiple situations affect a roll and they all grant Advantage on it, you still roll only two d20s. Similarly, if multiple situations impose Disadvantage on a roll, you roll only two d20s.\n\nIf circumstances cause a roll to have both Advantage and Disadvantage, the roll has neither of them, and you roll one d20. This is true even if multiple circumstances impose Disadvantage and only one grants Advantage or vice versa. In such a situation, you have neither Advantage nor Disadvantage.\n\n#### Interactions with Rerolls\n\nWhen you have Advantage or Disadvantage and something in the game lets you reroll or replace the d20, you can reroll or replace only one die, not both. You choose which one.\n\nFor example, if you have Heroic Inspiration (see the sidebar below) and roll a 3 and an 18 on an ability check that has Advantage or Disadvantage, you could expend your Heroic Inspiration to reroll one of those dice, not both of them.",
+  "master_decisions": [
+    {
+      "id": "circumstantial_advantage",
+      "reason": "gm_judgment",
+      "prompt": "Do the circumstances grant Advantage or impose Disadvantage?",
+      "source_text": "The GM can also decide that circumstances grant Advantage or impose Disadvantage.",
+      "pages": [
+        7,
+        8
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Sometimes a D20 Test is modified by Advantage or Disadvantage. Advantage reflects the positive circumstances surrounding a d20 roll, while Disadvantage reflects negative circumstances.",
+      "status": "descriptive"
+    },
+    {
+      "text": "You usually acquire Advantage or Disadvantage through the use of special abilities and actions. The GM can also decide that circumstances grant Advantage or impose Disadvantage.",
+      "status": "master_decision",
+      "by": [
+        "md:circumstantial_advantage"
+      ]
+    },
+    {
+      "text": "#### Roll Two D20s\n\nWhen a roll has either Advantage or Disadvantage, roll a second d20 when you make the roll. Use the higher of the two rolls if you have Advantage, and use the lower roll if you have Disadvantage. For example, if you have Disadvantage and roll an 18 and a 3, use the 3. If you instead have Advantage and roll those numbers, use the 18.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/7"
+      ]
+    },
+    {
+      "text": "#### They Don’t Stack\n\nIf multiple situations affect a roll and they all grant Advantage on it, you still roll only two d20s. Similarly, if multiple situations impose Disadvantage on a roll, you roll only two d20s.\n\nIf circumstances cause a roll to have both Advantage and Disadvantage, the roll has neither of them, and you roll one d20. This is true even if multiple circumstances impose Disadvantage and only one grants Advantage or vice versa. In such a situation, you have neither Advantage nor Disadvantage.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/8",
+        "dnd5e/system/dnd5e#/core_die/rules/9"
+      ]
+    },
+    {
+      "text": "#### Interactions with Rerolls\n\nWhen you have Advantage or Disadvantage and something in the game lets you reroll or replace the d20, you can reroll or replace only one die, not both. You choose which one.\n\nFor example, if you have Heroic Inspiration (see the sidebar below) and roll a 3 and an 18 on an ability check that has Advantage or Disadvantage, you could expend your Heroic Inspiration to reroll one of those dice, not both of them.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/core_die/rules/10"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/system/dnd5e"
+  ]
+}

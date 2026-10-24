@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/legend-lore",
+  "kind": "spell",
+  "name": "Legend Lore",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      144
+    ],
+    "section": "Spells/Spell Descriptions/Legend Lore",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Divination (Bard, Cleric, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** Self\n\n**Components:** V, S, M (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)\n\n**Duration:** Instantaneous\n\nName or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the GM.\n\nThe lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the GM.\n\nIf the famous thing you chose isn’t actually famous, you hear sad musical notes played on a trombone, and the spell fails.",
+  "facets": {
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "cleric",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes",
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each",
+      "material_cost_gp": 250,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "not_famous",
+        "spell_fails": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "lore",
+      "reason": "narrative",
+      "prompt": "What lore does the caster learn?",
+      "source_text": "The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Divination (Bard, Cleric, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** Self\n\n**Components:** V, S, M (incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Name or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the GM.",
+      "status": "master_decision",
+      "by": [
+        "md:lore"
+      ]
+    },
+    {
+      "text": "The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the GM.",
+      "status": "descriptive"
+    },
+    {
+      "text": "If the famous thing you chose isn’t actually famous, you hear sad musical notes played on a trombone, and the spell fails.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

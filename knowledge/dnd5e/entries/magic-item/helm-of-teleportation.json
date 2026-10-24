@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/helm-of-teleportation",
+  "kind": "magic-item",
+  "name": "Helm of Teleportation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Helm of Teleportation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare (Requires Attunement)*\n\nThis helm has 3 charges. While wearing it, you can expend 1 charge to cast *Teleport* from it. The helm regains 1d3 expended charges daily at dawn.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": "1d3"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/teleport",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This helm has 3 charges. While wearing it, you can expend 1 charge to cast *Teleport* from it. The helm regains 1d3 expended charges daily at dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/teleport"
+  ]
+}

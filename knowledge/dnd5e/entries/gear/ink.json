@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/ink",
+  "kind": "gear",
+  "name": "Ink",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98
+    ],
+    "section": "Equipment/Adventuring Gear/Ink",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.",
+  "facets": {
+    "cost_cp": 1000
+  },
+  "data": {
+    "cost": {
+      "amount": 10,
+      "unit": "gp",
+      "cp": 1000
+    },
+    "weight_lb": null,
+    "rules": [
+      {
+        "id": "ink",
+        "ounces": 1,
+        "pages": 500
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

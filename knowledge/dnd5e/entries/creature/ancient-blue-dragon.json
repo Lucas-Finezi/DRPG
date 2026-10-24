@@ -1,0 +1,649 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ancient-blue-dragon",
+  "kind": "creature",
+  "name": "Ancient Blue Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      267
+    ],
+    "section": "Monsters A–Z/Blue Dragons/Ancient Blue Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "*Gargantuan Dragon (Chromatic), Lawful Evil*\n\n| **AC** 22 | **Initiative** +14 (24) |\n\n**HP** 481 (26d20 + 208)\n\n**Speed** 40 ft., Burrow 40 ft., Fly 80 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 29 | +9 | +9 | **Dex** 10 | +0 | +7 | **Con** 27 | +8 | +8 |\n| **Int** | 18 | +4 | +4 | **Wis** 17 | +3 | +10 | **Cha** 25 | +7 | +7 |\n\n**Skills** Perception +17, Stealth +7\n\n**Immunities** Lightning\n\n**Senses** Blindsight 60 ft., Darkvision 120 ft.;\n\nPassive Perception 27\n\n**Languages** Common, Draconic\n\n**CR** 23 (XP 50,000, or 62,000 in lair; PB +7)\n\n##### Traits\n\n***Legendary Resistance (4/Day, or 5/Day in Lair).*** If the dragon fails a saving throw, it can choose to succeed instead.\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast *Shatter* (level 3 version).\n\n***Rend.*** *Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 11 (2d10) Lightning damage.\n\n***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 88 (16d10) Lightning damage. *Success:* Half damage.\n\n***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22):\n\n**At Will:** *Detect Magic*, *Invisibility*, *Mage Hand*, *Shatter*\n\n(level 3 version)\n\n**1/Day Each:** *Scrying*, *Sending*\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*\n\n***Cloaked Flight.*** The dragon uses Spellcasting to cast *Invisibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.\n\n***Sonic Boom.*** The dragon uses Spellcasting to cast *Shatter* (level 3 version). The dragon can’t take this action again until the start of its next turn.\n\n***Tail Swipe.*** The dragon makes one Rend attack.",
+  "facets": {
+    "group": "monster",
+    "size": "Gargantuan",
+    "type": "Dragon",
+    "alignment": "Lawful Evil",
+    "cr": "23"
+  },
+  "data": {
+    "size": "Gargantuan",
+    "type": "Dragon",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Chromatic"
+    ],
+    "type_line": "Gargantuan Dragon (Chromatic), Lawful Evil",
+    "ac": {
+      "value": 22,
+      "text": "22"
+    },
+    "initiative": {
+      "modifier": 14,
+      "score": 24,
+      "text": "+14 (24)"
+    },
+    "hp": {
+      "average": 481,
+      "formula": {
+        "op": "add",
+        "args": [
+          "26d20",
+          208
+        ]
+      },
+      "text": "481 (26d20 + 208)"
+    },
+    "speed": {
+      "text": "40 ft., Burrow 40 ft., Fly 80 ft.",
+      "walk": 40,
+      "burrow": 40,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "score": 29,
+        "mod": 9,
+        "save": 9
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 7
+      },
+      "con": {
+        "score": 27,
+        "mod": 8,
+        "save": 8
+      },
+      "int": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "wis": {
+        "score": 17,
+        "mod": 3,
+        "save": 10
+      },
+      "cha": {
+        "score": 25,
+        "mod": 7,
+        "save": 7
+      }
+    },
+    "skills": {
+      "perception": 17,
+      "stealth": 7,
+      "text": "Perception +17, Stealth +7"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning"
+      ],
+      "conditions": [],
+      "text": "Lightning"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft., Darkvision 120 ft.; Passive Perception 27",
+      "blindsight": 60,
+      "darkvision": 120,
+      "passive_perception": 27
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "23",
+      "xp": 50000,
+      "proficiency_bonus": 7,
+      "text": "23 (XP 50,000, or 62,000 in lair; PB +7)",
+      "xp_in_lair": 62000
+    },
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "per_day": 4,
+        "per_day_in_lair": 5,
+        "text": "If the dragon fails a saving throw, it can choose to succeed instead."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast *Shatter* (level 3 version)."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 11 (2d10) Lightning damage."
+      },
+      {
+        "name": "Lightning Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 88 (16d10) Lightning damage. *Success:* Half damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22):\n\n**At Will:** *Detect Magic*, *Invisibility*, *Mage Hand*, *Shatter* (level 3 version)\n\n**1/Day Each:** *Scrying*, *Sending*"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Cloaked Flight",
+        "text": "The dragon uses Spellcasting to cast *Invisibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Sonic Boom",
+        "text": "The dragon uses Spellcasting to cast *Shatter* (level 3 version). The dragon can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Tail Swipe",
+        "text": "The dragon makes one Rend attack."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast Shatter (level 3 version)."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22): At Will: Detect Magic, Invisibility, Mage Hand, Shatter (level 3 version) 1/Day Each: Scrying, Sending",
+        "ability": "cha",
+        "save_dc": 22,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/invisibility",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/mage-hand",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/shatter",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/scrying",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/sending",
+            "frequency": "1/Day Each"
+          }
+        ]
+      },
+      {
+        "id": "once_per_round",
+        "until": "start of its next turn"
+      },
+      {
+        "id": "once_per_round",
+        "until": "start of its next turn"
+      },
+      {
+        "id": "attack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 3,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 16,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  9
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d10",
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Lightning Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 23,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "line",
+              "size_feet": 120,
+              "width_feet": 10,
+              "origin": "self"
+            },
+            "text": "each creature in a 120-foot-long, 10-foot-wide Line"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "16d10",
+              "damage_type": "lightning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 22
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 22
+        }
+      ],
+      "name": "Invisibility"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 22
+        }
+      ],
+      "name": "Mage Hand"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/shatter",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "level": 3,
+          "save_dc": 22
+        }
+      ],
+      "name": "Shatter"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/scrying",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 22
+        }
+      ],
+      "name": "Scrying",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/sending",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 22
+        }
+      ],
+      "name": "Sending",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Cloaked Flight",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none"
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Sonic Boom",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/shatter",
+          "slot": "none",
+          "level": 3
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Gargantuan Dragon (Chromatic), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 22 | **Initiative** +14 (24) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 481 (26d20 + 208)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Burrow 40 ft., Fly 80 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 29 | +9 | +9 | **Dex** 10 | +0 | +7 | **Con** 27 | +8 | +8 |\n| **Int** | 18 | +4 | +4 | **Wis** 17 | +3 | +10 | **Cha** 25 | +7 | +7 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +17, Stealth +7",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft., Darkvision 120 ft.;\n\nPassive Perception 27",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 23 (XP 50,000, or 62,000 in lair; PB +7)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (4/Day, or 5/Day in Lair).*** If the dragon fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast *Shatter* (level 3 version).",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +16, reach 15 ft. *Hit:* 18 (2d8 + 9) Slashing damage plus 11 (2d10) Lightning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 23, each creature in a 120-foot-long, 10-foot-wide Line. *Failure:* 88 (16d10) Lightning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The dragon casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 22):\n\n**At Will:** *Detect Magic*, *Invisibility*, *Mage Hand*, *Shatter*\n\n(level 3 version)\n\n**1/Day Each:** *Scrying*, *Sending*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Cloaked Flight.*** The dragon uses Spellcasting to cast *Invisibility* on itself, and it can fly up to half its Fly Speed. The dragon can’t take this action again until the start of its next turn.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/0",
+        "/effects/9",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Sonic Boom.*** The dragon uses Spellcasting to cast *Shatter* (level 3 version). The dragon can’t take this action again until the start of its next turn.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/1",
+        "/effects/10",
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Tail Swipe.*** The dragon makes one Rend attack.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/2",
+        "/data/rules/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/scrying",
+    "dnd5e/spell/sending",
+    "dnd5e/spell/shatter"
+  ]
+}

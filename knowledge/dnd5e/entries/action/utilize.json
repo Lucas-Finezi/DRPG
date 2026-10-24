@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/utilize",
+  "kind": "action",
+  "name": "Utilize",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      191
+    ],
+    "section": "Rules Glossary/Rules Definitions/Utilize [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "You normally interact with an object while doing something else, such as when you draw a sword as part of the Attack action. When an object requires an action for its use, you take the Utilize action.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Utilize",
+      "cost": "action",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/the-order-of-combat",
+          "note": "Use an object that requires an action."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You normally interact with an object while doing something else, such as when you draw a sword as part of the Attack action.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/action_economy/4"
+      ]
+    },
+    {
+      "text": "When an object requires an action for its use, you take the Utilize action.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/the-order-of-combat",
+    "dnd5e/system/dnd5e"
+  ]
+}

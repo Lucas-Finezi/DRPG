@@ -1,0 +1,91 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/druidic-focus",
+  "kind": "gear",
+  "name": "Druidic Focus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      97
+    ],
+    "section": "Equipment/Adventuring Gear/Druidic Focus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.\n\n##### Druidic Focuses\n\n| **Focus** | **Weight** | **Cost** |\n| Sprig of mistletoe | — | 1 GP |\n| Wooden staff (also a Quarterstaff) | 4 lb. | 5 GP |\n| Yew wand | 1 lb. | 10 GP |",
+  "data": {
+    "cost": {
+      "text": "Varies"
+    },
+    "weight_lb": {
+      "text": "Varies"
+    },
+    "rules": [
+      {
+        "id": "spellcasting_focus",
+        "classes": [
+          "dnd5e/class/druid",
+          "dnd5e/class/ranger"
+        ],
+        "rule": "dnd5e/rule/spellcasting-focus"
+      }
+    ],
+    "tables": [
+      {
+        "id": "druidic_focuses",
+        "caption": "Druidic Focuses",
+        "columns": [
+          "Focus",
+          "Weight",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "Sprig of mistletoe",
+            "—",
+            "1 GP"
+          ],
+          [
+            "Wooden staff (also a Quarterstaff)",
+            "4 lb.",
+            "5 GP"
+          ],
+          [
+            "Yew wand",
+            "1 lb.",
+            "10 GP"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Druidic Focuses\n\n| **Focus** | **Weight** | **Cost** |\n| Sprig of mistletoe | — | 1 GP |\n| Wooden staff (also a Quarterstaff) | 4 lb. | 5 GP |\n| Yew wand | 1 lb. | 10 GP |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/druid",
+    "dnd5e/class/ranger",
+    "dnd5e/rule/spellcasting-focus"
+  ]
+}

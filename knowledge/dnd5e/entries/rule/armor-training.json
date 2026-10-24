@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/armor-training",
+  "kind": "rule",
+  "name": "Armor Training",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177
+    ],
+    "section": "Rules Glossary/Rules Definitions/Armor Training",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L08"
+  },
+  "tier": 2,
+  "text": "Armor training allows you to use armor of a certain category without the following drawbacks. If you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells. If you use a Shield and lack training with it, you don’t gain its AC bonus. *See also* “Disadvantage” and “Equipment” (“Armor”).",
+  "facets": {
+    "glossary": true
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "d20_test.str",
+        "d20_test.dex"
+      ],
+      "when": {
+        "pred": "wearing_untrained_armor"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "cast_spells"
+      ],
+      "when": {
+        "pred": "wearing_untrained_armor"
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "shield_ac_bonus"
+      ],
+      "when": {
+        "pred": "using_untrained_shield"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Armor training allows you to use armor of a certain category without the following drawbacks. If you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells. If you use a Shield and lack training with it, you don’t gain its AC bonus.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "*See also* “Disadvantage” and “Equipment” (“Armor”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/disadvantage",
+        "dnd5e/rule/armor"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/armor",
+    "dnd5e/rule/disadvantage"
+  ]
+}

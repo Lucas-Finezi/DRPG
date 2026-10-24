@@ -1,0 +1,161 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/robe-of-eyes",
+  "kind": "magic-item",
+  "name": "Robe of Eyes",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      240
+    ],
+    "section": "Magic Items/Magic Items A–Z/Robe of Eyes",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare (Requires Attunement)*\n\nThis robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n\n**All-Around Vision.** The robe gives you Advantage on Wisdom (Perception) checks that rely on sight.\n\n**Special Senses.** You have Darkvision and Truesight, both with a range of 120 feet.\n\n***Drawbacks.*** A *Light* spell cast on the robe or a *Daylight* spell cast within 5 feet of the robe gives you the Blinded condition for 1 minute. At the end of each of your turns, you make a Constitution saving throw (DC 11 for *Light* or DC 15 for *Daylight*), ending the condition on yourself on a success.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "perception"
+            }
+          },
+          {
+            "pred": "requires_sight"
+          }
+        ]
+      }
+    },
+    {
+      "op": "sense",
+      "sense": "darkvision",
+      "range_feet": 120,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "sense",
+      "sense": "truesight",
+      "range_feet": 120,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "targeted_by_spell",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/blinded",
+          "duration": {
+            "kind": "minutes",
+            "amount": 1
+          }
+        }
+      ],
+      "condition": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      },
+      "note": "Light cast on the robe (save DC 11) or Daylight within 5 feet (DC 15); Constitution save at the end of each of your turns ends it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**All-Around Vision.** The robe gives you Advantage on Wisdom (Perception) checks that rely on sight.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Special Senses.** You have Darkvision and Truesight, both with a range of 120 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Drawbacks.*** A *Light* spell cast on the robe or a *Daylight* spell cast within 5 feet of the robe gives you the Blinded condition for 1 minute. At the end of each of your turns, you make a Constitution saving throw (DC 11 for *Light* or DC 15 for *Daylight*), ending the condition on yourself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded"
+  ]
+}

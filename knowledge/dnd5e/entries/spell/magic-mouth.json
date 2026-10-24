@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/magic-mouth",
+  "kind": "spell",
+  "name": "Magic Mouth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      146
+    ],
+    "section": "Spells/Spell Descriptions/Magic Mouth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 3,
+  "text": "*Level 2 Illusion (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** 30 feet\n\n**Components:** V, S, M (jade dust worth 10+ GP, which the spell consumes)\n\n**Duration:** Until dispelled\n\nYou implant a message within an object in range—a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn’t being worn or carried by another creature. Then speak the message, which must be 25 words or fewer, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.\n\nWhen that trigger occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there, so the words appear to come from the object’s mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs.\n\nThe trigger can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it.",
+  "facets": {
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "jade dust worth 10+ GP, which the spell consumes",
+      "material_cost_gp": 10,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "until_dispelled",
+      "text": "Until dispelled"
+    },
+    "rules": [
+      {
+        "id": "message",
+        "max_words": 25,
+        "max_minutes": 10,
+        "object_not_worn_or_carried_by_another": true
+      },
+      {
+        "id": "delivery",
+        "voice": "caster",
+        "ends_after_message_or_repeats": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "trigger",
+      "reason": "gm_judgment",
+      "prompt": "Does the stated trigger occur?",
+      "source_text": "The trigger can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Illusion (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** 30 feet\n\n**Components:** V, S, M (jade dust worth 10+ GP, which the spell consumes)\n\n**Duration:** Until dispelled",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You implant a message within an object in range—a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn’t being worn or carried by another creature. Then speak the message, which must be 25 words or fewer, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When that trigger occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there, so the words appear to come from the object’s mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The trigger can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it.",
+      "status": "master_decision",
+      "by": [
+        "md:trigger"
+      ]
+    }
+  ]
+}

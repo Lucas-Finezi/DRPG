@@ -1,0 +1,177 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/animate-dead",
+  "kind": "spell",
+  "name": "Animate Dead",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      108
+    ],
+    "section": "Spells/Spell Descriptions/Animate Dead",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Necromancy (Cleric, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)\n\n**Duration:** Instantaneous\n\nChoose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a **Skeleton** if you chose bones or a **Zombie** if you chose a corpse (see “Monsters” for the stat blocks).\n\nOn each of your turns, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.\n\nThe creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature.\n\n***Using a Higher-Level Spell Slot.*** You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones.",
+  "facets": {
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 10
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a drop of blood, a piece of flesh, and a pinch of bone dust"
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "no_command",
+        "default": "dodge_and_avoid_harm",
+        "action": "dnd5e/action/dodge",
+        "orders_persist_until_done": true
+      },
+      {
+        "id": "control",
+        "hours": 24,
+        "recast_reasserts": 4
+      },
+      {
+        "id": "upcast",
+        "additional_creatures": {
+          "op": "mul",
+          "args": [
+            2,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                3
+              ]
+            }
+          ]
+        },
+        "each_from_different_remains": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "remains",
+      "choose": 1,
+      "options": [
+        {
+          "id": "bones",
+          "label": "Pile of bones",
+          "effects": [
+            {
+              "op": "summon",
+              "creature": "dnd5e/creature/skeleton",
+              "controller": "summoner",
+              "initiative": "own"
+            }
+          ]
+        },
+        {
+          "id": "corpse",
+          "label": "Corpse",
+          "effects": [
+            {
+              "op": "summon",
+              "creature": "dnd5e/creature/zombie",
+              "controller": "summoner",
+              "initiative": "own"
+            }
+          ]
+        }
+      ],
+      "note": "Remains of a Medium or Small Humanoid within range."
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/animate-dead",
+          "note": "Command any or all of your creatures within 60 feet: specific action and movement or a general order."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Necromancy (Cleric, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** 10 feet\n\n**Components:** V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a **Skeleton** if you chose bones or a **Zombie** if you chose a corpse (see “Monsters” for the stat blocks).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "On each of your turns, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/skeleton",
+    "dnd5e/creature/zombie",
+    "dnd5e/spell/animate-dead"
+  ]
+}

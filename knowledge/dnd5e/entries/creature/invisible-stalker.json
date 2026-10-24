@@ -1,0 +1,411 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/invisible-stalker",
+  "kind": "creature",
+  "name": "Invisible Stalker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      301,
+      302
+    ],
+    "section": "Monsters A–Z/Invisible Stalker/Invisible Stalker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Large Elemental, Neutral*\n\n| **AC** 14 | **Initiative** +7 (22) |\n\n**HP** 97 (13d10 + 26)\n\n**Speed** 50 ft., Fly 50 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 14 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 15 | +2 | +2 | **Cha** 11 | +0 | +0 |\n\n**Skills** Perception +8, Stealth +10\n\n**Resistances** Bludgeoning, Piercing, Slashing\n\n**Immunities** Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 18\n\n**Languages** Common, Primordial (Auran)\n\n**CR** 6 (XP 2,300; PB +3)\n\n##### Traits\n\n***Air Form.*** The stalker can enter an enemy’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Invisibility.*** The stalker has the Invisible condition.\n\n##### Actions\n\n***Multiattack.*** The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex.\n\n***Wind Swipe.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 11 (2d6 + 4) Force damage.\n\n***Vortex.*** *Constitution Saving Throw:* DC 14, one Large or smaller creature in the stalker’s space. *Failure:* 7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can’t cast spells with a Verbal component and takes 7 (2d6) Thunder damage at the start of each of the stalker’s turns.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "6"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "type_line": "Large Elemental, Neutral",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 7,
+      "score": 22,
+      "text": "+7 (22)"
+    },
+    "hp": {
+      "average": 97,
+      "formula": {
+        "op": "add",
+        "args": [
+          "13d10",
+          26
+        ]
+      },
+      "text": "97 (13d10 + 26)"
+    },
+    "speed": {
+      "text": "50 ft., Fly 50 ft. (hover)",
+      "walk": 50,
+      "fly": 50,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "wis": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "cha": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "skills": {
+      "perception": 8,
+      "stealth": 10,
+      "text": "Perception +8, Stealth +10"
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 18",
+      "darkvision": 60,
+      "passive_perception": 18
+    },
+    "languages": {
+      "text": "Common, Primordial (Auran)"
+    },
+    "cr": {
+      "value": "6",
+      "xp": 2300,
+      "proficiency_bonus": 3,
+      "text": "6 (XP 2,300; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Air Form",
+        "text": "The stalker can enter an enemy’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Invisibility",
+        "text": "The stalker has the Invisible condition."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex."
+      },
+      {
+        "name": "Wind Swipe",
+        "text": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 11 (2d6 + 4) Force damage."
+      },
+      {
+        "name": "Vortex",
+        "text": "*Constitution Saving Throw:* DC 14, one Large or smaller creature in the stalker’s space. *Failure:* 7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can’t cast spells with a Verbal component and \n\ntakes 7 (2d6) Thunder damage at the start of each of the stalker’s turns."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Wind Swipe",
+            "count": 3
+          }
+        ],
+        "text": "The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Wind Swipe",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  4
+                ]
+              },
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Vortex",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 14,
+          "target": {
+            "kind": "creature",
+            "text": "one Large or smaller creature in the stalker’s space"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  3
+                ]
+              },
+              "damage_type": "thunder"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 13
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_air_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Air Form as written.",
+      "source_text": "The stalker can enter an enemy’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+    },
+    {
+      "id": "traits_invisibility",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Invisibility as written.",
+      "source_text": "The stalker has the Invisible condition."
+    },
+    {
+      "id": "actions_vortex_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Vortex as written.",
+      "source_text": "7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can’t cast spells with a Verbal component and takes 7 (2d6) Thunder damage at the start of each of the stalker’s turns."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +7 (22) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 97 (13d10 + 26)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft., Fly 50 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 19 | +4 | +4 | **Con** 14 | +2 | +2 |\n| **Int** | 10 | +0 | +0 | **Wis** 15 | +2 | +2 | **Cha** 11 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +8, Stealth +10",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 18",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Primordial (Auran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 6 (XP 2,300; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Air Form.*** The stalker can enter an enemy’s space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_air_form"
+      ]
+    },
+    {
+      "text": "***Invisibility.*** The stalker has the Invisible condition.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_invisibility"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Wind Swipe.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 11 (2d6 + 4) Force damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Vortex.*** *Constitution Saving Throw:* DC 14, one Large or smaller creature in the stalker’s space. *Failure:* 7 (1d8 + 3) Thunder damage, and the target has the Grappled condition (escape DC 13). Until the grapple ends, the target can’t cast spells with a Verbal component and takes 7 (2d6) Thunder damage at the start of each of the stalker’s turns.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/1",
+        "md:actions_vortex_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/pouch",
+  "kind": "gear",
+  "name": "Pouch",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Pouch",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+  "facets": {
+    "cost_cp": 50
+  },
+  "data": {
+    "cost": {
+      "amount": 5,
+      "unit": "sp",
+      "cp": 50
+    },
+    "weight_lb": 1,
+    "rules": [
+      {
+        "id": "capacity",
+        "pounds": 6,
+        "cubic_feet": 0.2
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Pouch holds up to 6 pounds within one-fifth of a cubic foot.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/gray-ooze",
+  "kind": "creature",
+  "name": "Gray Ooze",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      293
+    ],
+    "section": "Monsters A–Z/Gray Ooze/Gray Ooze",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Medium Ooze, Unaligned*\n\n| **AC** 9 | **Initiative** −2 (13) |\n\n**HP** 22 (3d8 + 9)\n\n**Speed** 10 ft., Climb 10 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 | +3 | +3 |\n| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 2 | −4 | −4 |\n\n**Skills** Stealth +2\n\n**Resistances** Acid, Cold, Fire\n\n**Immunities** Blinded, Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained\n\n**Senses** Blindsight 60 ft.; Passive Perception 8\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Amorphous.*** The ooze can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Corrosive Form.*** Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nThe ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round.\n\n##### Actions\n\n***Pseudopod.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "type_line": "Medium Ooze, Unaligned",
+    "ac": {
+      "value": 9,
+      "text": "9"
+    },
+    "initiative": {
+      "modifier": -2,
+      "score": 13,
+      "text": "−2 (13)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": {
+        "op": "add",
+        "args": [
+          "3d8",
+          9
+        ]
+      },
+      "text": "22 (3d8 + 9)"
+    },
+    "speed": {
+      "text": "10 ft., Climb 10 ft.",
+      "walk": 10,
+      "climb": 10
+    },
+    "abilities": {
+      "str": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      }
+    },
+    "skills": {
+      "stealth": 2,
+      "text": "Stealth +2"
+    },
+    "resistances": {
+      "damage_types": [
+        "acid",
+        "cold",
+        "fire"
+      ],
+      "text": "Acid, Cold, Fire"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/blinded",
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained"
+      ],
+      "text": "Blinded, Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft.; Passive Perception 8",
+      "blindsight": 60,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amorphous",
+        "text": "The ooze can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Corrosive Form",
+        "text": "Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nThe ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Pseudopod",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor."
+      }
+    ],
+    "rules": [
+      {
+        "id": "amorphous",
+        "squeeze_inch": 1,
+        "no_extra_movement": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pseudopod",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  1
+                ]
+              },
+              "damage_type": "acid"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_corrosive_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Corrosive Form as written.",
+      "source_text": "Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the Mending spell on the weapon. The ooze can eat through 2-inch-thick,"
+    },
+    {
+      "id": "actions_pseudopod_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Pseudopod as written.",
+      "source_text": "10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Ooze, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 9 | **Initiative** −2 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (3d8 + 9)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Climb 10 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 12 | +1 | +1 | **Dex** 6 | −2 | −2 | **Con** 16 | +3 | +3 |\n| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 2 | −4 | −4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Cold, Fire",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Blinded, Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amorphous.*** The ooze can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Corrosive Form.*** Nonmagical ammunition is destroyed immediately after hitting the ooze and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the ooze and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nThe ooze can eat through 2-inch-thick, nonmagical metal or wood in 1 round.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_corrosive_form"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Pseudopod.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 10 (2d8 + 1) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/0",
+        "md:actions_pseudopod_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained"
+  ]
+}

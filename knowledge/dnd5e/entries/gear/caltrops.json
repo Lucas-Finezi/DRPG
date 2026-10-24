@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/caltrops",
+  "kind": "gear",
+  "name": "Caltrops",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      96
+    ],
+    "section": "Equipment/Adventuring Gear/Caltrops",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops.",
+  "facets": {
+    "cost_cp": 100
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "gp",
+      "cp": 100
+    },
+    "weight_lb": 2,
+    "rules": [
+      {
+        "id": "recover",
+        "minutes": 10
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/utilize",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "enters_or_starts_turn_in_area"
+          },
+          "frequency": {
+            "count": 1,
+            "per": "turn"
+          },
+          "then": [
+            {
+              "op": "save",
+              "ability": "dex",
+              "dc": 15,
+              "target": {
+                "kind": "inherit"
+              },
+              "on_fail": [
+                {
+                  "op": "damage",
+                  "amount": 1,
+                  "damage_type": "piercing"
+                },
+                {
+                  "op": "speed",
+                  "movement": "walk",
+                  "mode": "set",
+                  "value": 0,
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "target"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "note": "5-foot-square area within 5 feet."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/phantasmal-force",
+  "kind": "spell",
+  "name": "Phantasmal Force",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      151,
+      152
+    ],
+    "section": "Spells/Spell Descriptions/Phantasmal Force",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 3,
+  "text": "*Level 2 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a bit of fleece)\n\n**Duration:** Concentration, up to 1 minute\n\nYou attempt to craft an illusion in the mind of a creature you can see within range. The target makes an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other phenomenon that is no larger than a 10-foot Cube and that is perceivable only to the target for the duration. The phantasm includes sound, temperature, and other stimuli.\n\nThe target can take a Study action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.\n\nWhile affected by the spell, the target treats the phantasm as if it were real and rationalizes any illogical outcomes from interacting with it. For example, if the target steps through a phantasmal bridge and survives the fall, it believes the bridge exists and something else caused it to fall.\n\nAn affected target can even take damage from the illusion if the phantasm represents a dangerous creature or hazard. On each of your turns, such a phantasm can deal 2d8 Psychic damage to the target if it is in the phantasm’s area or within 5 feet of the phantasm. The target perceives the damage as a type appropriate to the illusion.",
+  "facets": {
+    "level": 2,
+    "school": "illusion",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a bit of fleece"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "int",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/phantasmal-force",
+          "note": "A phantasm no larger than a 10-foot Cube, perceivable only by the target."
+        }
+      ]
+    },
+    {
+      "op": "check",
+      "ability": "int",
+      "skill": "investigation",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "on_success": [
+        {
+          "op": "end_effect",
+          "scope": "this_entry"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self",
+        "which": "each"
+      },
+      "condition": {
+        "pred": "phantasm_is_dangerous"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d8",
+          "damage_type": "psychic",
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "If the target is in the phantasm's area or within 5 feet of it; perceived as a type appropriate to the illusion."
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "rationalize",
+      "reason": "narrative",
+      "prompt": "How does the target rationalize interactions with the phantasm?",
+      "source_text": "While affected by the spell, the target treats the phantasm as if it were real and rationalizes any illogical outcomes from interacting with it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Illusion (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S, M (a bit of fleece)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You attempt to craft an illusion in the mind of a creature you can see within range. The target makes an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other phenomenon that is no larger than a 10-foot Cube and that is perceivable only to the target for the duration. The phantasm includes sound, temperature, and other stimuli.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The target can take a Study action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "While affected by the spell, the target treats the phantasm as if it were real and rationalizes any illogical outcomes from interacting with it. For example, if the target steps through a phantasmal bridge and survives the fall, it believes the bridge exists and something else caused it to fall.",
+      "status": "master_decision",
+      "by": [
+        "md:rationalize"
+      ]
+    },
+    {
+      "text": "An affected target can even take damage from the illusion if the phantasm represents a dangerous creature or hazard. On each of your turns, such a phantasm can deal 2d8 Psychic damage to the target if it is in the phantasm’s area or within 5 feet of the phantasm. The target perceives the damage as a type appropriate to the illusion.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/phantasmal-force"
+  ]
+}

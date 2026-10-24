@@ -1,0 +1,104 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-regeneration",
+  "kind": "magic-item",
+  "name": "Ring of Regeneration",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      238
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of Regeneration",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Ring, Very Rare (Requires Attunement)*\n\nWhile wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "regrowth",
+        "days": "1d6 + 1",
+        "requires": "at least 1 Hit Point the whole time"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "minutes_elapsed",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": "1d6"
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
+            }
+          }
+        ]
+      },
+      "note": "Every 10 minutes."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

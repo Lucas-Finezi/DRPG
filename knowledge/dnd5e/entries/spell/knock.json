@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/knock",
+  "kind": "spell",
+  "name": "Knock",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      143,
+      144
+    ],
+    "section": "Spells/Spell Descriptions/Knock",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Transmutation (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nChoose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.\n\nA target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.\n\nIf the target is held shut by *Arcane Lock*, that spell is suppressed for 10 minutes, during which time the target can be opened and closed.\n\nWhen you cast the spell, a loud knock, audible up to 300 feet away, emanates from the target.",
+  "facets": {
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "target",
+        "objects": [
+          "door",
+          "box",
+          "chest",
+          "manacles",
+          "padlock",
+          "other_access_preventing_object"
+        ]
+      },
+      {
+        "id": "mundane",
+        "unlocks_one_lock": true,
+        "unsticks": true,
+        "unbars": true
+      },
+      {
+        "id": "arcane_lock",
+        "spell": "dnd5e/spell/arcane-lock",
+        "suppressed_minutes": 10
+      },
+      {
+        "id": "knock",
+        "audible_feet": 300
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Transmutation (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If the target is held shut by *Arcane Lock*, that spell is suppressed for 10 minutes, during which time the target can be opened and closed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "When you cast the spell, a loud knock, audible up to 300 feet away, emanates from the target.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/arcane-lock"
+  ]
+}

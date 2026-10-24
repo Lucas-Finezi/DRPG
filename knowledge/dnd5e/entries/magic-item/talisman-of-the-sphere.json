@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/talisman-of-the-sphere",
+  "kind": "magic-item",
+  "name": "Talisman of the Sphere",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      249
+    ],
+    "section": "Magic Items/Magic Items A–Z/Talisman of the Sphere",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Legendary (Requires Attunement)*\n\nWhile holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check you make to control a *Sphere of Annihilation*. In addition, when you start your turn in control of a *Sphere of Annihilation*, you can take a Magic action to move it 10 feet plus a number of additional feet equal to 10 times your Intelligence modifier. This movement doesn’t have to be in a straight line.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "any": [
+              {
+                "pred": "item_state",
+                "args": {
+                  "state": "worn",
+                  "item": "this"
+                }
+              },
+              {
+                "pred": "item_state",
+                "args": {
+                  "state": "held",
+                  "item": "this"
+                }
+              }
+            ]
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "arcana"
+            }
+          },
+          {
+            "pred": "check_to_control_item",
+            "args": {
+              "item": "dnd5e/magic-item/sphere-of-annihilation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": {
+            "op": "add",
+            "args": [
+              10,
+              {
+                "op": "mul",
+                "args": [
+                  10,
+                  {
+                    "var": "ability_mod.int"
+                  }
+                ]
+              }
+            ]
+          },
+          "note": "Move the Sphere of Annihilation you control; not necessarily in a straight line."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "controlled",
+          "item": "dnd5e/magic-item/sphere-of-annihilation"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check you make to control a *Sphere of Annihilation*. In addition, when you start your turn in control of a *Sphere of Annihilation*, you can take a Magic action to move it 10 feet plus a number of additional feet equal to 10 times your Intelligence modifier. This movement doesn’t have to be in a straight line.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

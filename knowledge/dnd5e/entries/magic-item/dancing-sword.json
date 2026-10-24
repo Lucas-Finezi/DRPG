@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/dancing-sword",
+  "kind": "magic-item",
+  "name": "Dancing Sword",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      217
+    ],
+    "section": "Magic Items/Magic Items A–Z/Dancing Sword",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)*\n\nYou can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.\n\nWhile the weapon hovers, you can take a Bonus Action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same Bonus Action, you can cause the weapon to attack one creature within 5 feet of the weapon.\n\nAfter the hovering weapon attacks for the fourth time, it flies back to you and tries to return to your hand. If you have no hand free, the weapon falls to the ground in your space. If the weapon has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or are more than 30 feet away from it.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Greatsword, Longsword, Rapier, Scimitar, or Shortsword",
+        "refs": [
+          "dnd5e/weapon/greatsword",
+          "dnd5e/weapon/longsword",
+          "dnd5e/weapon/rapier",
+          "dnd5e/weapon/scimitar",
+          "dnd5e/weapon/shortsword"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "return",
+        "after_attacks": 4,
+        "no_free_hand": "falls_in_your_space",
+        "obstructed": "moves_close_then_falls",
+        "stops_hovering": [
+          "you_grasp_it",
+          "more_than_30_feet_away"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee_weapon",
+          "note": "The weapon hovers, flies up to 30 feet and attacks one creature within 5 feet of itself; your attack roll and ability modifier."
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee_weapon",
+          "note": "Fly up to 30 feet to a spot within 30 feet of you, then attack one creature within 5 feet of it."
+        }
+      ],
+      "requires": {
+        "pred": "effect_active"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "While the weapon hovers, you can take a Bonus Action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same Bonus Action, you can cause the weapon to attack one creature within 5 feet of the weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "After the hovering weapon attacks for the fourth time, it flies back to you and tries to return to your hand. If you have no hand free, the weapon falls to the ground in your space. If the weapon has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or are more than 30 feet away from it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon/greatsword",
+    "dnd5e/weapon/longsword",
+    "dnd5e/weapon/rapier",
+    "dnd5e/weapon/scimitar",
+    "dnd5e/weapon/shortsword"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-spellcasting",
+  "kind": "feature",
+  "name": "Spellcasting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      57,
+      58
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 1: Spellcasting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have learned to channel the magical essence of nature to cast spells. See “Spells” for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class’s description.\n\n***Spell Slots.*** The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.\n\n***Prepared Spells of Level 1+***. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Ranger spells. *Cure Wounds* and *Ensnaring Strike* are recommended.\n\nThe number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you’re a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.\n\nIf another Ranger feature gives you spells that you always have prepared, those spells don’t count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you.\n\n***Changing Your Prepared Spells.*** Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.\n\n***Spellcasting Ability.*** Wisdom is your spellcasting ability for your Ranger spells.\n\n***Spellcasting Focus.*** You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 1
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "spellcasting",
+        "spell_list_of": "dnd5e/spell-list/ranger",
+        "note": "Spells whose class list includes this class (D-001)."
+      },
+      {
+        "id": "spell_slots",
+        "pool": "spell_slot",
+        "slots_by_spell_level": {
+          "1": {
+            "table": "dnd5e/class/ranger",
+            "table_id": "ranger_features",
+            "key": {
+              "var": "class_level.ranger"
+            },
+            "column": "1"
+          },
+          "2": {
+            "table": "dnd5e/class/ranger",
+            "table_id": "ranger_features",
+            "key": {
+              "var": "class_level.ranger"
+            },
+            "column": "2"
+          },
+          "3": {
+            "table": "dnd5e/class/ranger",
+            "table_id": "ranger_features",
+            "key": {
+              "var": "class_level.ranger"
+            },
+            "column": "3"
+          },
+          "4": {
+            "table": "dnd5e/class/ranger",
+            "table_id": "ranger_features",
+            "key": {
+              "var": "class_level.ranger"
+            },
+            "column": "4"
+          },
+          "5": {
+            "table": "dnd5e/class/ranger",
+            "table_id": "ranger_features",
+            "key": {
+              "var": "class_level.ranger"
+            },
+            "column": "5"
+          }
+        }
+      },
+      {
+        "id": "prepared_spells",
+        "count": {
+          "table": "dnd5e/class/ranger",
+          "table_id": "ranger_features",
+          "key": {
+            "var": "class_level.ranger"
+          },
+          "column": "Prepared Spells"
+        },
+        "start_level_1_spells": 2,
+        "from": "dnd5e/spell-list/ranger",
+        "recommended": [
+          "dnd5e/spell/cure-wounds",
+          "dnd5e/spell/ensnaring-strike"
+        ],
+        "must_have_slot_level": true,
+        "always_prepared_from_features_do_not_count": true
+      },
+      {
+        "id": "changing_prepared_spells",
+        "mode": "long_rest_one"
+      },
+      {
+        "id": "spellcasting_ability",
+        "ability": "wis"
+      },
+      {
+        "id": "spellcasting_focus",
+        "focus": [
+          "dnd5e/gear/druidic-focus"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "spell_slot",
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have learned to channel the magical essence of nature to cast spells.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "See “Spells” for the rules on spellcasting. The information below details how you use those rules with Ranger spells, which appear in the Ranger spell list later in the class’s description.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/spells"
+      ]
+    },
+    {
+      "text": "***Spell Slots.*** The Ranger Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Prepared Spells of Level 1+***. You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Ranger spells. *Cure Wounds* and *Ensnaring Strike* are recommended.\n\nThe number of spells on your list increases as you gain Ranger levels, as shown in the Prepared Spells column of the Ranger Features table. Whenever that number increases, choose additional Ranger spells until the number of spells on your list matches the number in the Ranger Features table. The chosen spells must be of a level for which you have spell slots. For example, if you’re a level 5 Ranger, your list of prepared spells can include six Ranger spells of level 1 or 2 in any combination.\n\nIf another Ranger feature gives you spells that you always have prepared, those spells don’t count against the number of spells you can prepare with this feature, but those spells otherwise count as Ranger spells for you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Changing Your Prepared Spells.*** Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "***Spellcasting Ability.*** Wisdom is your spellcasting ability for your Ranger spells.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Spellcasting Focus.*** You can use a Druidic Focus as a Spellcasting Focus for your Ranger spells.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/ranger",
+    "dnd5e/gear/druidic-focus",
+    "dnd5e/rule/spells",
+    "dnd5e/spell/cure-wounds",
+    "dnd5e/spell/ensnaring-strike"
+  ]
+}

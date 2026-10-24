@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/poison/wyvern-poison",
+  "kind": "poison",
+  "name": "Wyvern Poison",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      198
+    ],
+    "section": "Gameplay Toolbox/Poison/Sample Poisons/Wyvern Poison",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Injury Poison*\n\nA creature subjected to Wyvern Poison makes a DC 14 Constitution saving throw, taking 24 (7d6) Poison damage on a failed save or half as much damage on a successful one.",
+  "facets": {
+    "poison_type": "injury",
+    "cost_cp": 120000
+  },
+  "data": {
+    "cost": {
+      "amount": 1200,
+      "unit": "gp",
+      "cp": 120000
+    },
+    "poison_type": "injury",
+    "rules": [
+      {
+        "id": "type",
+        "ref": "dnd5e/rule/poison"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 14,
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "7d6",
+          "damage_type": "poison"
+        }
+      ],
+      "half_on_success": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Injury Poison*",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/poison_type",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A creature subjected to Wyvern Poison makes a DC 14 Constitution saving throw, taking 24 (7d6) Poison damage on a failed save or half as much damage on a successful one.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/poison"
+  ]
+}

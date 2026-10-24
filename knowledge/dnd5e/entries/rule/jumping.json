@@ -1,0 +1,40 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/jumping",
+  "kind": "rule",
+  "name": "Jumping",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      184
+    ],
+    "section": "Rules Glossary/Rules Definitions/Jumping",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 1,
+  "text": "When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical). *See also* “Long Jump” and “High Jump.”",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical). *See also* “Long Jump” and “High Jump.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/long-jump",
+        "dnd5e/rule/high-jump"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/high-jump",
+    "dnd5e/rule/long-jump"
+  ]
+}

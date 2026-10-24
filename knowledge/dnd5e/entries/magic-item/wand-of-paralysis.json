@@ -1,0 +1,191 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/wand-of-paralysis",
+  "kind": "magic-item",
+  "name": "Wand of Paralysis",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      251
+    ],
+    "section": "Magic Items/Magic Items A–Z/Wand of Paralysis",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wand, Rare (Requires Attunement by a Spellcaster)*\n\nThis wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of yourself. The target must succeed on a DC 15 Constitution saving throw or have the Paralyzed condition for 1 minute. At the end of each of the target’s turns, it repeats the save, ending the effect on itself on a success.\n\n***Regaining Charges.*** The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand’s last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+  "facets": {
+    "category": "wand",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wand, Rare (Requires Attunement by a Spellcaster)",
+      "attunement": {
+        "required": true,
+        "by": "a Spellcaster",
+        "spellcaster": true
+      },
+      "category": "wand",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 7
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d6",
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The wand crumbles into ashes and is destroyed."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wand, Rare (Requires Attunement by a Spellcaster)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of yourself. The target must succeed on a DC 15 Constitution saving throw or have the Paralyzed condition for 1 minute. At the end of each of the target’s turns, it repeats the save, ending the effect on itself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand’s last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/paralyzed",
+    "dnd5e/rule/magic-items"
+  ]
+}

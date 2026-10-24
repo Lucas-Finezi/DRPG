@@ -1,0 +1,406 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/succubus",
+  "kind": "creature",
+  "name": "Succubus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      331
+    ],
+    "section": "Monsters A–Z/Succubus/Succubus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Fiend, Neutral Evil*\n\n| **AC** 15 | **Initiative** +3 (13) |\n\n**HP** 71 (13d8 + 13)\n\n**Speed** 30 ft., Fly 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 8 | −1 | −1 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 20 | +5 | +5 |\n\n**Skills** Deception +9, Insight +5, Perception +5, Persuasion\n\n+9, Stealth +7\n\n**Resistances** Cold, Fire, Poison, Psychic\n\n**Senses** Darkvision 60 ft.; Passive Perception 15\n\n**Languages** Abyssal, Common, Infernal; telepathy 60 ft.\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Traits\n\n***Incubus Form.*** When the succubus finishes a Long Rest, it can shape-shift into an **Incubus**, using that stat block instead of this one.\n\n##### Actions\n\n***Multiattack.*** The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss.\n\n***Fiendish Touch.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 16 (2d10 + 5) Psychic damage.\n\n***Charm.*** The succubus casts *Dominate Person* (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).\n\n***Draining Kiss.*** *Constitution Saving Throw:* DC 15, one creature Charmed by the succubus within 5 feet. *Failure:* 13 (3d8) Psychic damage. *Success:* Half damage. *Failure or Success:* The target’s Hit Point maximum decreases by an amount equal to the damage taken.\n\n##### Bonus Actions\n\n***Shape-Shift.*** The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn’t transformed.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Neutral Evil",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Fiend",
+    "alignment": "Neutral Evil",
+    "type_line": "Medium Fiend, Neutral Evil",
+    "ac": {
+      "value": 15,
+      "text": "15"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 71,
+      "formula": {
+        "op": "add",
+        "args": [
+          "13d8",
+          13
+        ]
+      },
+      "text": "71 (13d8 + 13)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 60 ft.",
+      "walk": 30,
+      "fly": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "dex": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      }
+    },
+    "skills": {
+      "deception": 9,
+      "insight": 5,
+      "perception": 5,
+      "persuasion": 9,
+      "stealth": 7,
+      "text": "Deception +9, Insight +5, Perception +5, Persuasion +9, Stealth +7"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold",
+        "fire",
+        "poison",
+        "psychic"
+      ],
+      "text": "Cold, Fire, Poison, Psychic"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 15",
+      "darkvision": 60,
+      "passive_perception": 15
+    },
+    "languages": {
+      "text": "Abyssal, Common, Infernal; telepathy 60 ft.",
+      "telepathy_feet": 60
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Incubus Form",
+        "text": "When the succubus finishes a Long Rest, it can shape-shift into an **Incubus**, using that stat block instead of this one."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss."
+      },
+      {
+        "name": "Fiendish Touch",
+        "text": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 16 (2d10 + 5) Psychic damage."
+      },
+      {
+        "name": "Charm",
+        "text": "The succubus casts *Dominate Person* (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15)."
+      },
+      {
+        "name": "Draining Kiss",
+        "text": "*Constitution Saving Throw:* DC 15, one creature Charmed by the succubus within 5 feet. *Failure:* 13 (3d8) Psychic damage. *Success:* Half damage. *Failure or Success:* The target’s Hit Point maximum decreases by an amount equal to the damage taken."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shape-Shift",
+        "text": "The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn’t transformed."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Fiendish Touch",
+            "count": 1
+          }
+        ],
+        "text": "The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Fiendish Touch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  5
+                ]
+              },
+              "damage_type": "psychic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Charm",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dominate-person",
+          "slot": "none",
+          "level": 8,
+          "components": []
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Draining Kiss",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one creature Charmed by the succubus within 5 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "3d8",
+              "damage_type": "psychic"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_incubus_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Incubus Form as written.",
+      "source_text": "When the succubus finishes a Long Rest, it can shape-shift into an Incubus, using that stat block instead of this one."
+    },
+    {
+      "id": "actions_draining_kiss_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Draining Kiss as written.",
+      "source_text": "Failure or Success: The target’s Hit Point maximum decreases by an amount equal to the damage taken."
+    },
+    {
+      "id": "bonus_actions_shape_shift",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Shape-Shift as written.",
+      "source_text": "The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn’t transformed."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Fiend, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 15 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 71 (13d8 + 13)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 8 | −1 | −1 | **Dex** 17 | +3 | +3 | **Con** 13 | +1 | +1 |\n| **Int** | 15 | +2 | +2 | **Wis** 12 | +1 | +1 | **Cha** 20 | +5 | +5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Deception +9, Insight +5, Perception +5, Persuasion\n\n+9, Stealth +7",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold, Fire, Poison, Psychic",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 15",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Abyssal, Common, Infernal; telepathy 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Incubus Form.*** When the succubus finishes a Long Rest, it can shape-shift into an **Incubus**, using that stat block instead of this one.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_incubus_form"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The succubus makes one Fiendish Touch attack and uses Charm or Draining Kiss.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Fiendish Touch.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 16 (2d10 + 5) Psychic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Charm.*** The succubus casts *Dominate Person* (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC 15).",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Draining Kiss.*** *Constitution Saving Throw:* DC 15, one creature Charmed by the succubus within 5 feet. *Failure:* 13 (3d8) Psychic damage. *Success:* Half damage. *Failure or Success:* The target’s Hit Point maximum decreases by an amount equal to the damage taken.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/2",
+        "md:actions_draining_kiss_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Shape-Shift.*** The succubus shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn’t transformed.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_shape_shift"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/dominate-person"
+  ]
+}

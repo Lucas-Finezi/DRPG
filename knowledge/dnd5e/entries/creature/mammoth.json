@@ -1,0 +1,311 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/mammoth",
+  "kind": "creature",
+  "name": "Mammoth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      357
+    ],
+    "section": "Animals/Mammoth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Huge Beast, Unaligned*\n\n| **AC** 13 | **Initiative** +2 (12) |\n\n**HP** 126 (11d12 + 55)\n\n**Speed** 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 24 | +7 | +10 | **Dex** 9 | −1 | −1 | **Con** 21 | +5 | +8 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 6 | −2 | −2 |\n\n**Senses** Passive Perception 10\n\n**Languages** None\n\n**CR** 6 (XP 2,300; PB +3)\n\n##### Actions\n\n***Multiattack.*** The mammoth makes two Gore attacks.\n\n***Gore.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 18 (2d10 + 7) Piercing damage. If the target is a Huge or smaller creature and the mammoth moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.\n\n##### Bonus Actions\n\n***Trample.*** *Dexterity Saving Throw:* DC 18, one creature within 5 feet that has the Prone condition. *Failure:* 29 (4d10 + 7) Bludgeoning damage. *Success:* Half damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "6"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Huge Beast, Unaligned",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 126,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d12",
+          55
+        ]
+      },
+      "text": "126 (11d12 + 55)"
+    },
+    "speed": {
+      "text": "50 ft.",
+      "walk": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 24,
+        "mod": 7,
+        "save": 10
+      },
+      "dex": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 21,
+        "mod": 5,
+        "save": 8
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "6",
+      "xp": 2300,
+      "proficiency_bonus": 3,
+      "text": "6 (XP 2,300; PB +3)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The mammoth makes two Gore attacks."
+      },
+      {
+        "name": "Gore",
+        "text": "*Melee Attack Roll:* +10, reach 10 ft. *Hit:* 18 (2d10 + 7) Piercing damage. If the target is a Huge or smaller creature and the mammoth moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trample",
+        "text": "*Dexterity Saving Throw:* DC 18, one creature within 5 feet that has the Prone condition. *Failure:* 29 (4d10 + 7) Bludgeoning damage. *Success:* Half damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Gore",
+            "count": 2
+          }
+        ],
+        "text": "The mammoth makes two Gore attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Gore",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  7
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Trample",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 18,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "text": "one creature within 5 feet that has the Prone condition"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d10",
+                  7
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_gore_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Gore as written.",
+      "source_text": "18 (2d10 + 7) Piercing damage. If the target is a Huge or smaller creature and the mammoth moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 126 (11d12 + 55)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 24 | +7 | +10 | **Dex** 9 | −1 | −1 | **Con** 21 | +5 | +8 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 6 (XP 2,300; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The mammoth makes two Gore attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Gore.*** *Melee Attack Roll:* +10, reach 10 ft. *Hit:* 18 (2d10 + 7) Piercing damage. If the target is a Huge or smaller creature and the mammoth moved 20+ feet straight toward it immediately before the hit, the target has the Prone condition.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_gore_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Trample.*** *Dexterity Saving Throw:* DC 18, one creature within 5 feet that has the Prone condition. *Failure:* 29 (4d10 + 7) Bludgeoning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

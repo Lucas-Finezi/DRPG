@@ -1,0 +1,490 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ioun-stone",
+  "kind": "magic-item",
+  "name": "Ioun Stone",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      227,
+      228
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ioun Stone",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Rarity Varies (Requires Attunement)*\n\nRoughly marble sized, *Ioun Stones* are named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of *Ioun Stones* exist, each type a distinct combination of shape and color.\n\nWhen you take a Magic action to toss an *Ioun Stone* into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three *Ioun Stones* orbiting your head at the same time.\n\nEach *Ioun Stone* orbiting your head is considered to be an object you are wearing. The orbiting stone avoids contact with other creatures and objects, adjusting its orbit to avoid collisions and thwarting all attempts by other creatures to attack or snatch it.\n\nAs a Utilize action, you can seize and stow any number of *Ioun Stones* orbiting your head. If your Attunement to an *Ioun Stone* ends while it’s orbiting your head, the stone falls as though you had dropped it.\n\nThe type of stone determines its rarity and effects.\n\n***Absorption (Very Rare).*** While this pale lavender ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 4 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.\n\n***Agility (Very Rare).*** Your Dexterity increases by 2, to a maximum of 20, while this deep-red sphere orbits your head.\n\n***Awareness (Rare).*** While this dark-blue rhomboid orbits your head, you have Advantage on Initiative rolls and Wisdom (Perception) checks.\n\n***Fortitude (Very Rare).*** Your Constitution increases by 2, to a maximum of 20, while this pink rhomboid orbits your head.\n\n***Greater Absorption (Legendary).*** While this marbled lavender and green ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 8 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.\n\n***Insight (Very Rare).*** Your Wisdom increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head.\n\n***Intellect (Very Rare).*** Your Intelligence increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head.\n\n***Leadership (Very Rare).*** Your Charisma increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head.\n\n***Mastery (Legendary).*** Your Proficiency Bonus increases by 1 while this pale green prism orbits your head.\n\n***Protection (Rare).*** You gain a +1 bonus to Armor Class while this dusty-rose prism orbits your head.\n\n***Regeneration (Legendary).*** You regain 15 Hit Points at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point.\n\n***Reserve (Rare).*** This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 4 levels of spells at a time. When found, it contains 1d4 levels of stored spells chosen by the GM.\n\nAny creature can cast a spell of level 1 through 4 into the stone by touching it as the spell is cast. The spell has no effect, other than to be stored in the stone. If the stone can’t hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses.\n\nWhile this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space.\n\n***Strength (Very Rare).*** Your Strength increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head.\n\n***Sustenance (Rare).*** You don’t need to eat or drink while this clear spindle orbits your head.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "varies"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rarity Varies (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "varies"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "orbit",
+        "distance_feet": "1d3",
+        "max_orbiting": 3
+      },
+      {
+        "id": "worn",
+        "counts_as_worn": true,
+        "avoids_attacks_and_snatching": true
+      },
+      {
+        "id": "stow",
+        "action": "dnd5e/action/utilize",
+        "attunement_ends": "falls"
+      },
+      {
+        "id": "reserve_store",
+        "spell_levels": [
+          1,
+          4
+        ],
+        "by_touch": true,
+        "space": "slot level used",
+        "overflow": "expended without effect"
+      },
+      {
+        "id": "reserve_cast",
+        "uses_original": [
+          "slot_level",
+          "spell_save_dc",
+          "spell_attack_bonus",
+          "spellcasting_ability"
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "sees_creature_casting_spell",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/ioun-stone",
+          "note": "Cancel a spell of level 4 or lower; resources wasted; burns out after 20 levels."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.dex",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "initiative",
+        "ability_check"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "orbiting",
+              "item": "this"
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "roll_is",
+                "args": {
+                  "roll": "initiative"
+                }
+              },
+              {
+                "pred": "check_uses",
+                "args": {
+                  "skill": "perception"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.con",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "sees_creature_casting_spell",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/magic-item/ioun-stone",
+          "note": "Cancel a spell of level 8 or lower; burns out after 20 levels."
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.wis",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.int",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.cha",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "modifier",
+      "stat": "proficiency_bonus",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hour_elapsed",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": 15
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "orbiting",
+              "item": "this"
+            }
+          },
+          {
+            "not": {
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "reference",
+      "rule": "dnd5e/magic-item/ioun-stone",
+      "note": "Stores up to 4 levels of spells; found with 1d4 levels chosen by the GM."
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.str",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "To a maximum of 20."
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "need_food_or_drink"
+      ],
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "orbiting",
+          "item": "this"
+        }
+      },
+      "note": "You don't need to eat or drink."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "ioun_type",
+      "reason": "gm_judgment",
+      "prompt": "Which type of Ioun Stone is this?",
+      "source_text": "The type of stone determines its rarity and effects."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rarity Varies (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "Roughly marble sized, *Ioun Stones* are named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of *Ioun Stones* exist, each type a distinct combination of shape and color.",
+      "status": "descriptive"
+    },
+    {
+      "text": "When you take a Magic action to toss an *Ioun Stone* into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three *Ioun Stones* orbiting your head at the same time.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Each *Ioun Stone* orbiting your head is considered to be an object you are wearing. The orbiting stone avoids contact with other creatures and objects, adjusting its orbit to avoid collisions and thwarting all attempts by other creatures to attack or snatch it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "As a Utilize action, you can seize and stow any number of *Ioun Stones* orbiting your head. If your Attunement to an *Ioun Stone* ends while it’s orbiting your head, the stone falls as though you had dropped it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The type of stone determines its rarity and effects.",
+      "status": "master_decision",
+      "by": [
+        "md:ioun_type"
+      ]
+    },
+    {
+      "text": "***Absorption (Very Rare).*** While this pale lavender ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 4 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Agility (Very Rare).*** Your Dexterity increases by 2, to a maximum of 20, while this deep-red sphere orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Awareness (Rare).*** While this dark-blue rhomboid orbits your head, you have Advantage on Initiative rolls and Wisdom (Perception) checks.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Fortitude (Very Rare).*** Your Constitution increases by 2, to a maximum of 20, while this pink rhomboid orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Greater Absorption (Legendary).*** While this marbled lavender and green ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 8 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Insight (Very Rare).*** Your Wisdom increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Intellect (Very Rare).*** Your Intelligence increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    },
+    {
+      "text": "***Leadership (Very Rare).*** Your Charisma increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/7"
+      ]
+    },
+    {
+      "text": "***Mastery (Legendary).*** Your Proficiency Bonus increases by 1 while this pale green prism orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/8"
+      ]
+    },
+    {
+      "text": "***Protection (Rare).*** You gain a +1 bonus to Armor Class while this dusty-rose prism orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/9"
+      ]
+    },
+    {
+      "text": "***Regeneration (Legendary).*** You regain 15 Hit Points at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point.",
+      "status": "structured",
+      "by": [
+        "/effects/10"
+      ]
+    },
+    {
+      "text": "***Reserve (Rare).*** This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 4 levels of spells at a time. When found, it contains 1d4 levels of stored spells chosen by the GM.",
+      "status": "structured",
+      "by": [
+        "/effects/11"
+      ]
+    },
+    {
+      "text": "Any creature can cast a spell of level 1 through 4 into the stone by touching it as the spell is cast. The spell has no effect, other than to be stored in the stone. If the stone can’t hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "While this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "***Strength (Very Rare).*** Your Strength increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/12"
+      ]
+    },
+    {
+      "text": "***Sustenance (Rare).*** You don’t need to eat or drink while this clear spindle orbits your head.",
+      "status": "structured",
+      "by": [
+        "/effects/13"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/ioun-stone"
+  ]
+}

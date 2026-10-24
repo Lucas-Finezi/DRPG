@@ -1,0 +1,40 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/traps",
+  "kind": "rule",
+  "name": "Traps",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      199
+    ],
+    "section": "Gameplay Toolbox/Traps",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "Traps should be used sparingly, lest they lose their charm. A hidden pit can be a fun surprise, but too many traps in an adventure can lead players to become overly cautious, which slows down the game.\n\nThe best traps are fleeting distractions that skilled characters can overcome in a short amount of time or deadly puzzles that require quick thinking and teamwork to overcome. Traps that are undetectable and inescapable are rarely fun.",
+  "master_decisions": [
+    {
+      "id": "trap_use",
+      "reason": "narrative",
+      "prompt": "Place a trap here?",
+      "source_text": "Traps should be used sparingly, lest they lose their charm."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Traps should be used sparingly, lest they lose their charm. A hidden pit can be a fun surprise, but too many traps in an adventure can lead players to become overly cautious, which slows down the game.\n\nThe best traps are fleeting distractions that skilled characters can overcome in a short amount of time or deadly puzzles that require quick thinking and teamwork to overcome. Traps that are undetectable and inescapable are rarely fun.",
+      "status": "master_decision",
+      "by": [
+        "md:trap_use"
+      ]
+    }
+  ]
+}

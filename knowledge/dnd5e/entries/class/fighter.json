@@ -1,0 +1,732 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/fighter",
+  "kind": "class",
+  "name": "Fighter",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      47
+    ],
+    "section": "Classes/Fighter",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Fighter Traits\n\n| **Primary Ability** | Strength or Dexterity |\n| **Hit Point Die** | D10 per Fighter level |\n| **Saving Throw Proficiencies** | Strength and Constitution |\n| **Skill Proficiencies** | *Choose 2:* Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival |\n| **Weapon Proficiencies** | Simple and Martial weapons |\n| **Armor Training** | Light, Medium, and Heavy armor and Shields |\n| **Starting Equipment** | *Choose A*, *B*, *or C:* (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer’s Pack, and 4 GP; (B) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Dungeoneer’s Pack, and 11 GP; or (C) 155 GP |\n\n### Becoming a Fighter …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Fighter Traits table.\n\n- Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.\n\n#### As a Multiclass Character\n\n- Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.\n\n- Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.\n\n### Fighter Class Features\n\nAs a Fighter, you gain the following class features when you reach the specified Fighter levels. These features are listed on the Fighter Features table.\n\n##### Fighter Features\n\n| **Proficiency** | **Second** | **Weapon** |\n| **Level** | **Bonus** | **Class Features** | **Wind** | **Mastery** |\n| 1 | +2 | Fighting Style, Second Wind, Weapon Mastery | 2 | 3 |\n| 2 | +2 | Action Surge (one use), Tactical Mind | 2 | 3 |\n| 3 | +2 | Fighter Subclass | 2 | 3 |\n| 4 | +2 | Ability Score Improvement | 3 | 4 |\n| 5 | +3 | Extra Attack, Tactical Shift | 3 | 4 |\n| 6 | +3 | Ability Score Improvement | 3 | 4 |\n| 7 | +3 | Subclass feature | 3 | 4 |\n| 8 | +3 | Ability Score Improvement | 3 | 4 |\n| 9 | +4 | Indomitable (one use), Tactical Master | 3 | 4 |\n| 10 | +4 | Subclass feature | 4 | 5 |\n| 11 | +4 | Two Extra Attacks | 4 | 5 |\n| 12 | +4 | Ability Score Improvement | 4 | 5 |\n| 13 | +5 | Indomitable (two uses), Studied Attacks | 4 | 5 |\n| 14 | +5 | Ability Score Improvement | 4 | 5 |\n| 15 | +5 | Subclass feature | 4 | 5 |\n| 16 | +5 | Ability Score Improvement | 4 | 6 |\n| 17 | +6 | Action Surge (two uses), Indomitable (three uses) | 4 | 6 |\n| 18 | +6 | Subclass feature | 4 | 6 |\n| 19 | +6 | Epic Boon | 4 | 6 |\n| 20 | +6 | Three Extra Attacks | 4 | 6 |",
+  "facets": {
+    "hit_die": "d10",
+    "primary_ability": [
+      "str",
+      "dex"
+    ],
+    "saving_throws": [
+      "str",
+      "con"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Strength or Dexterity",
+      "Hit Point Die": "D10 per Fighter level",
+      "Saving Throw Proficiencies": "Strength and Constitution",
+      "Skill Proficiencies": "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival",
+      "Weapon Proficiencies": "Simple and Martial weapons",
+      "Armor Training": "Light, Medium, and Heavy armor and Shields",
+      "Starting Equipment": "Choose A, B, or C: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer’s Pack, and 4 GP; (B) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Dungeoneer’s Pack, and 11 GP; or (C) 155 GP"
+    },
+    "hit_die": "d10",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d10",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            6,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Chain Mail",
+            "quantity": 1,
+            "ref": "dnd5e/armor/chain-mail"
+          },
+          {
+            "name": "Greatsword",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/greatsword"
+          },
+          {
+            "name": "Flail",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/flail"
+          },
+          {
+            "name": "Javelins",
+            "quantity": 8,
+            "ref": "dnd5e/weapon/javelin"
+          },
+          {
+            "name": "Dungeoneer’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/dungeoneers-pack"
+          }
+        ],
+        "gp": 4
+      },
+      {
+        "id": "b",
+        "items": [
+          {
+            "name": "Studded Leather Armor",
+            "quantity": 1,
+            "ref": "dnd5e/armor/studded-leather-armor"
+          },
+          {
+            "name": "Scimitar",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/scimitar"
+          },
+          {
+            "name": "Shortsword",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/shortsword"
+          },
+          {
+            "name": "Longbow",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/longbow"
+          },
+          {
+            "name": "Arrows",
+            "quantity": 20,
+            "ref": "dnd5e/gear/ammunition-arrows"
+          },
+          {
+            "name": "Quiver",
+            "quantity": 1,
+            "ref": "dnd5e/gear/quiver"
+          },
+          {
+            "name": "Dungeoneer’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/dungeoneers-pack"
+          }
+        ],
+        "gp": 11
+      },
+      {
+        "id": "c",
+        "items": [],
+        "gp": 155
+      }
+    ],
+    "features_table": {
+      "id": "fighter_features",
+      "caption": "Fighter Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Second Wind",
+        "Weapon Mastery"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-fighting-style"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-second-wind"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-weapon-mastery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Second Wind": "2",
+          "Weapon Mastery": "3"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-action-surge",
+            "table_note": "one use"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-tactical-mind"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Second Wind": "2",
+          "Weapon Mastery": "3"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-fighter-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Second Wind": "2",
+          "Weapon Mastery": "3"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-extra-attack"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-tactical-shift"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/champion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-indomitable",
+            "table_note": "one use"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-tactical-master"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Second Wind": "3",
+          "Weapon Mastery": "4"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/champion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "11": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-two-extra-attacks"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "13": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-indomitable",
+            "again": true,
+            "table_note": "two uses"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-studied-attacks"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "15": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/champion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Second Wind": "4",
+          "Weapon Mastery": "5"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Second Wind": "4",
+          "Weapon Mastery": "6"
+        }
+      },
+      "17": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-action-surge",
+            "again": true,
+            "table_note": "two uses"
+          },
+          {
+            "ref": "dnd5e/feature/fighter-indomitable",
+            "again": true,
+            "table_note": "three uses"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Second Wind": "4",
+          "Weapon Mastery": "6"
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/champion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Second Wind": "4",
+          "Weapon Mastery": "6"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Second Wind": "4",
+          "Weapon Mastery": "6"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/fighter-three-extra-attacks"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Second Wind": "4",
+          "Weapon Mastery": "6"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/champion",
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "str",
+          "dex"
+        ],
+        "primary_ability_mode": "any",
+        "hit_die": "d10",
+        "saving_throws": [
+          "str",
+          "con"
+        ],
+        "skills": {
+          "choose": 2,
+          "from": [
+            "acrobatics",
+            "animal_handling",
+            "athletics",
+            "history",
+            "insight",
+            "intimidation",
+            "persuasion",
+            "perception",
+            "survival"
+          ]
+        },
+        "weapons": "Simple and Martial weapons",
+        "armor_training": "Light, Medium, and Heavy armor and Shields"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "fighter_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "str",
+        "con"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 2,
+      "from": [
+        "acrobatics",
+        "animal_handling",
+        "athletics",
+        "history",
+        "insight",
+        "intimidation",
+        "persuasion",
+        "perception",
+        "survival"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple",
+        "martial"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "starting_equipment",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Chain Mail",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/chain-mail"
+                },
+                {
+                  "name": "Greatsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/greatsword"
+                },
+                {
+                  "name": "Flail",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/flail"
+                },
+                {
+                  "name": "Javelins",
+                  "quantity": 8,
+                  "ref": "dnd5e/weapon/javelin"
+                },
+                {
+                  "name": "Dungeoneer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/dungeoneers-pack"
+                }
+              ],
+              "gp": 4
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Studded Leather Armor",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/studded-leather-armor"
+                },
+                {
+                  "name": "Scimitar",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/scimitar"
+                },
+                {
+                  "name": "Shortsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/shortsword"
+                },
+                {
+                  "name": "Longbow",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/longbow"
+                },
+                {
+                  "name": "Arrows",
+                  "quantity": 20,
+                  "ref": "dnd5e/gear/ammunition-arrows"
+                },
+                {
+                  "name": "Quiver",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/quiver"
+                },
+                {
+                  "name": "Dungeoneer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/dungeoneers-pack"
+                }
+              ],
+              "gp": 11
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "label": "Option (C)",
+          "effects": [
+            {
+              "op": "grant",
+              "gp": 155
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Fighter Traits\n\n| **Primary Ability** | Strength or Dexterity |\n| **Hit Point Die** | D10 per Fighter level |\n| **Saving Throw Proficiencies** | Strength and Constitution |\n| **Skill Proficiencies** | *Choose 2:* Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival |\n| **Weapon Proficiencies** | Simple and Martial weapons |\n| **Armor Training** | Light, Medium, and Heavy armor and Shields |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A*, *B*, *or C:* (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer’s Pack, and 4 GP; (B) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Dungeoneer’s Pack, and 11 GP; or (C) 155 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "### Becoming a Fighter …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Fighter Traits table.\n\n- Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.\n\n- Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Fighter Class Features\n\nAs a Fighter, you gain the following class features when you reach the specified Fighter levels. These features are listed on the Fighter Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Fighter Features\n\n| **Proficiency** | **Second** | **Weapon** |\n| **Level** | **Bonus** | **Class Features** | **Wind** | **Mastery** |\n| 1 | +2 | Fighting Style, Second Wind, Weapon Mastery | 2 | 3 |\n| 2 | +2 | Action Surge (one use), Tactical Mind | 2 | 3 |\n| 3 | +2 | Fighter Subclass | 2 | 3 |\n| 4 | +2 | Ability Score Improvement | 3 | 4 |\n| 5 | +3 | Extra Attack, Tactical Shift | 3 | 4 |\n| 6 | +3 | Ability Score Improvement | 3 | 4 |\n| 7 | +3 | Subclass feature | 3 | 4 |\n| 8 | +3 | Ability Score Improvement | 3 | 4 |\n| 9 | +4 | Indomitable (one use), Tactical Master | 3 | 4 |\n| 10 | +4 | Subclass feature | 4 | 5 |\n| 11 | +4 | Two Extra Attacks | 4 | 5 |\n| 12 | +4 | Ability Score Improvement | 4 | 5 |\n| 13 | +5 | Indomitable (two uses), Studied Attacks | 4 | 5 |\n| 14 | +5 | Ability Score Improvement | 4 | 5 |\n| 15 | +5 | Subclass feature | 4 | 5 |\n| 16 | +5 | Ability Score Improvement | 4 | 6 |\n| 17 | +6 | Action Surge (two uses), Indomitable (three uses) | 4 | 6 |\n| 18 | +6 | Subclass feature | 4 | 6 |\n| 19 | +6 | Epic Boon | 4 | 6 |\n| 20 | +6 | Three Extra Attacks | 4 | 6 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/chain-mail",
+    "dnd5e/armor/studded-leather-armor",
+    "dnd5e/feature/fighter-ability-score-improvement",
+    "dnd5e/feature/fighter-action-surge",
+    "dnd5e/feature/fighter-epic-boon",
+    "dnd5e/feature/fighter-extra-attack",
+    "dnd5e/feature/fighter-fighter-subclass",
+    "dnd5e/feature/fighter-fighting-style",
+    "dnd5e/feature/fighter-indomitable",
+    "dnd5e/feature/fighter-second-wind",
+    "dnd5e/feature/fighter-studied-attacks",
+    "dnd5e/feature/fighter-tactical-master",
+    "dnd5e/feature/fighter-tactical-mind",
+    "dnd5e/feature/fighter-tactical-shift",
+    "dnd5e/feature/fighter-three-extra-attacks",
+    "dnd5e/feature/fighter-two-extra-attacks",
+    "dnd5e/feature/fighter-weapon-mastery",
+    "dnd5e/gear/ammunition-arrows",
+    "dnd5e/gear/dungeoneers-pack",
+    "dnd5e/gear/quiver",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/flail",
+    "dnd5e/weapon/greatsword",
+    "dnd5e/weapon/javelin",
+    "dnd5e/weapon/longbow",
+    "dnd5e/weapon/scimitar",
+    "dnd5e/weapon/shortsword"
+  ]
+}

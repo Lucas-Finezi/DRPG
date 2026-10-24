@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/identifying-a-magic-item",
+  "kind": "rule",
+  "name": "Identifying a Magic Item",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      102
+    ],
+    "section": "Equipment/Magic Items/Identifying a Magic Item",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "Some magic items are indistinguishable from their nonmagical counterparts, while others are conspicuously magical. Handling a magic item is enough to give you a sense that it is extraordinary, but learning a magic item’s properties isn’t automatic.\n\nThe *Identify* spell is the fastest way to reveal an item’s properties. Alternatively, you can focus on one magic item during a Short Rest while being in physical contact with the item. At the end of the rest, you learn its properties and how to use them (but not any curse the item might bear).\n\nSometimes a magic item carries a clue to its properties. The command word to activate a ring might be etched inside the band, or a feathered design might hint that it’s a *Ring of Feather Falling*.\n\nWearing or experimenting with an item can also offer hints about its properties. In the specific case of Potions, a little taste is enough to tell the taster what a potion does. Other items might require more experimentation. For example, if your character puts on a *Ring of Swimming*, the GM might say, “Your movement feels strangely fluid.” Perhaps you then dive into a river to see what happens. The GM would then say you swim unexpectedly well.",
+  "data": {
+    "rules": [
+      {
+        "id": "sense",
+        "handling_reveals_extraordinary": true,
+        "properties_automatic": false
+      },
+      {
+        "id": "identify",
+        "spell": "dnd5e/spell/identify",
+        "short_rest_focus": {
+          "contact": true,
+          "reveals": "properties and use",
+          "reveals_curse": false
+        }
+      },
+      {
+        "id": "experiment",
+        "potion_taste_reveals": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "experiment_hints",
+      "reason": "gm_judgment",
+      "prompt": "What hints does experimenting with the item give?",
+      "source_text": "Other items might require more experimentation."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some magic items are indistinguishable from their nonmagical counterparts, while others are conspicuously magical. Handling a magic item is enough to give you a sense that it is extraordinary, but learning a magic item’s properties isn’t automatic.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The *Identify* spell is the fastest way to reveal an item’s properties. Alternatively, you can focus on one magic item during a Short Rest while being in physical contact with the item. At the end of the rest, you learn its properties and how to use them (but not any curse the item might bear).",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Sometimes a magic item carries a clue to its properties. The command word to activate a ring might be etched inside the band, or a feathered design might hint that it’s a *Ring of Feather Falling*.",
+      "status": "descriptive"
+    },
+    {
+      "text": "Wearing or experimenting with an item can also offer hints about its properties. In the specific case of Potions, a little taste is enough to tell the taster what a potion does. Other items might require more experimentation. For example, if your character puts on a *Ring of Swimming*, the GM might say, “Your movement feels strangely fluid.” Perhaps you then dive into a river to see what happens. The GM would then say you swim unexpectedly well.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/2",
+        "md:experiment_hints"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/identify"
+  ]
+}

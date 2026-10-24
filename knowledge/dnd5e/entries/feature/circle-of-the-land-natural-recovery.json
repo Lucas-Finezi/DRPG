@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/circle-of-the-land-natural-recovery",
+  "kind": "feature",
+  "name": "Natural Recovery",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      46
+    ],
+    "section": "Classes/Druid/Druid Subclass: Circle of the Land/Level 6: Natural Recovery",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.\n\nIn addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Druid level (round up), and none of them can be level 6+. For example, if you’re a level 6 Druid, you can recover up to three levels’ worth of spell slots. You can recover a level 3 spell slot, a level 2 and a level 1 spell slot, or three level 1 spell slots. Once you recover spell slots with this feature, you can’t do so again until you finish a Long Rest.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/circle-of-the-land",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells",
+          "slot": "none",
+          "note": "One level 1+ spell prepared from Circle Spells; normal casting time."
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "short_rest_finished"
+      },
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "spell_slot",
+          "amount": {
+            "op": "div",
+            "round": "up",
+            "args": [
+              {
+                "var": "class_level.druid"
+              },
+              2
+            ]
+          },
+          "max_level": 5,
+          "note": "Combined slot levels; none of level 6+."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "In addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Druid level (round up), and none of them can be level 6+. For example, if you’re a level 6 Druid, you can recover up to three levels’ worth of spell slots. You can recover a level 3 spell slot, a level 2 and a level 1 spell slot, or three level 1 spell slots. Once you recover spell slots with this feature, you can’t do so again until you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/circle-of-the-land-circle-of-the-land-spells"
+  ]
+}

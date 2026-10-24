@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/lifestyle/wealthy",
+  "kind": "lifestyle",
+  "name": "Wealthy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      101
+    ],
+    "section": "Equipment/Lifestyle Expenses/Wealthy (4 GP per Day)",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "You’re accustomed to the finer things in life and might have servants.",
+  "facets": {
+    "cost_cp_per_day": 400
+  },
+  "data": {
+    "cost": {
+      "amount": 4,
+      "unit": "gp",
+      "cp": 400
+    },
+    "per": "day"
+  },
+  "coverage": [
+    {
+      "text": "You’re accustomed to the finer things in life and might have servants.",
+      "status": "structured",
+      "by": [
+        "/data/cost"
+      ]
+    }
+  ]
+}

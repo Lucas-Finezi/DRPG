@@ -1,0 +1,407 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/defender",
+  "kind": "magic-item",
+  "name": "Defender",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      218
+    ],
+    "section": "Magic Items/Magic Items A–Z/Defender",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Any Melee Weapon), Legendary (Requires Attunement)*\n\nYou gain a +3 bonus to attack rolls and damage rolls made with this magic weapon.\n\nThe first time you attack with the weapon on each of your turns, you can transfer some or all of the weapon’s bonus to your Armor Class. For example, you could reduce the bonus to your attack rolls and damage rolls to +1 and gain a +2 bonus to Armor Class. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the weapon to gain a bonus to AC from it.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Any Melee Weapon), Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Any Melee Weapon"
+      },
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "attack_roll_made",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "transfer",
+          "choose": 1,
+          "options": [
+            {
+              "id": "ac_0",
+              "label": "Transfer 0 to AC",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "attack_roll",
+                  "mode": "add",
+                  "value": 0,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "damage_roll",
+                  "mode": "add",
+                  "value": 0,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "ac",
+                  "mode": "add",
+                  "value": 0,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "held",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ac_1",
+              "label": "Transfer 1 to AC",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "attack_roll",
+                  "mode": "add",
+                  "value": -1,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "damage_roll",
+                  "mode": "add",
+                  "value": -1,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "ac",
+                  "mode": "add",
+                  "value": 1,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "held",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ac_2",
+              "label": "Transfer 2 to AC",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "attack_roll",
+                  "mode": "add",
+                  "value": -2,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "damage_roll",
+                  "mode": "add",
+                  "value": -2,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "ac",
+                  "mode": "add",
+                  "value": 2,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "held",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ac_3",
+              "label": "Transfer 3 to AC",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "attack_roll",
+                  "mode": "add",
+                  "value": -3,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "damage_roll",
+                  "mode": "add",
+                  "value": -3,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "wielded",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                },
+                {
+                  "op": "modifier",
+                  "stat": "ac",
+                  "mode": "add",
+                  "value": 3,
+                  "when": {
+                    "pred": "item_state",
+                    "args": {
+                      "state": "held",
+                      "item": "this"
+                    }
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "first_attack_this_turn"
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          }
+        ]
+      },
+      "optional": true
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Any Melee Weapon), Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The first time you attack with the weapon on each of your turns, you can transfer some or all of the weapon’s bonus to your Armor Class. For example, you could reduce the bonus to your attack rolls and damage rolls to +1 and gain a +2 bonus to Armor Class. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the weapon to gain a bonus to AC from it.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

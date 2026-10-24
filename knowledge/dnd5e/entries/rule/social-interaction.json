@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/social-interaction",
+  "kind": "rule",
+  "name": "Social Interaction",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      10,
+      11
+    ],
+    "section": "Playing the Game/Social Interaction",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L05"
+  },
+  "tier": 3,
+  "text": "During their adventures, player characters meet many different people and face some monsters that would rather talk than fight. In those situations, it’s time for social interaction, which takes many forms. For example, you might try to convince a burglar to confess to wrongdoing or try to flatter a guard. The Game Master assumes the roles of any nonplayer characters who are participating.\n\nAn NPC’s attitude toward your character is Friendly, Indifferent, or Hostile, as defined in “Rules Glossary.” Friendly NPCs are predisposed to help, and Hostile ones are inclined to hinder.\n\nSocial interactions progress in two ways: through roleplaying and ability checks.\n\n### Roleplaying\n\nRoleplaying is, literally, the act of playing out a role. In this case, it’s you as a player determining how your character thinks, acts, and talks. Roleplaying is part of every aspect of the game, and it comes to the fore during social interactions.\n\nAs you roleplay, consider whether you prefer an active approach or a descriptive approach.\n\nThe GM uses an NPC’s personality and your character’s actions and attitudes to determine how an NPC reacts. A cowardly bandit might buckle under threats of imprisonment. A stubborn merchant refuses to help if the characters badger her. A vain dragon laps up flattery.\n\nWhen interacting with an NPC, pay attention to the GM’s portrayal of the NPC’s personality. You might be able to learn an NPC’s goals and then use that information to influence the NPC.\n\nIf you offer NPCs something they want or play on their sympathies, fears, or goals, you can form friendships, ward off violence, or learn a key piece of information. On the other hand, if you insult a proud warrior or speak ill of a noble’s allies, your efforts to convince or deceive will likely fail.\n\n### Ability Checks\n\nAbility checks can be key in determining the outcome of a social interaction. Your roleplaying efforts can alter an NPC’s attitude, but there might still be an element of chance if the GM wants dice to play a role in determining an NPC’s response to you. In such situations, the GM will typically ask you to take the Influence action.\n\nPay attention to your skill proficiencies when thinking of how you will interact with an NPC; use an approach that relies on your group’s skill proficiencies. For example, if the group needs to trick a guard into letting them into a castle, the Rogue who is proficient in Deception should lead the discussion.",
+  "data": {
+    "rules": [
+      {
+        "id": "gm_plays_npcs",
+        "npc_roles": "gm"
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "npc_reaction",
+      "reason": "narrative",
+      "prompt": "How does the NPC react (its personality and the characters' actions and attitudes)?",
+      "source_text": "The GM uses an NPC’s personality and your character’s actions and attitudes to determine how an NPC reacts.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": "social_dice",
+      "reason": "gm_judgment",
+      "prompt": "Should dice determine the NPC's response (Influence action)?",
+      "source_text": "there might still be an element of chance if the GM wants dice to play a role in determining an NPC’s response to you. In such situations, the GM will typically ask you to take the Influence action.",
+      "pages": [
+        10
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "During their adventures, player characters meet many different people and face some monsters that would rather talk than fight. In those situations, it’s time for social interaction, which takes many forms. For example, you might try to convince a burglar to confess to wrongdoing or try to flatter a guard. The Game Master assumes the roles of any nonplayer characters who are participating.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "An NPC’s attitude toward your character is Friendly, Indifferent, or Hostile, as defined in “Rules Glossary.” Friendly NPCs are predisposed to help, and Hostile ones are inclined to hinder.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/attitudes"
+      ]
+    },
+    {
+      "text": "Social interactions progress in two ways: through roleplaying and ability checks.\n\n### Roleplaying\n\nRoleplaying is, literally, the act of playing out a role. In this case, it’s you as a player determining how your character thinks, acts, and talks. Roleplaying is part of every aspect of the game, and it comes to the fore during social interactions.\n\nAs you roleplay, consider whether you prefer an active approach or a descriptive approach.",
+      "status": "descriptive"
+    },
+    {
+      "text": "The GM uses an NPC’s personality and your character’s actions and attitudes to determine how an NPC reacts. A cowardly bandit might buckle under threats of imprisonment. A stubborn merchant refuses to help if the characters badger her. A vain dragon laps up flattery.",
+      "status": "master_decision",
+      "by": [
+        "md:npc_reaction"
+      ]
+    },
+    {
+      "text": "When interacting with an NPC, pay attention to the GM’s portrayal of the NPC’s personality. You might be able to learn an NPC’s goals and then use that information to influence the NPC.\n\nIf you offer NPCs something they want or play on their sympathies, fears, or goals, you can form friendships, ward off violence, or learn a key piece of information. On the other hand, if you insult a proud warrior or speak ill of a noble’s allies, your efforts to convince or deceive will likely fail.",
+      "status": "descriptive"
+    },
+    {
+      "text": "### Ability Checks\n\nAbility checks can be key in determining the outcome of a social interaction. Your roleplaying efforts can alter an NPC’s attitude, but there might still be an element of chance if the GM wants dice to play a role in determining an NPC’s response to you. In such situations, the GM will typically ask you to take the Influence action.",
+      "status": "master_decision",
+      "by": [
+        "md:social_dice",
+        "dnd5e/action/influence"
+      ]
+    },
+    {
+      "text": "Pay attention to your skill proficiencies when thinking of how you will interact with an NPC; use an approach that relies on your group’s skill proficiencies. For example, if the group needs to trick a guard into letting them into a castle, the Rogue who is proficient in Deception should lead the discussion.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/action/influence",
+    "dnd5e/system/dnd5e"
+  ]
+}

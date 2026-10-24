@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/potion-of-healing",
+  "kind": "gear",
+  "name": "Potion of Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Potion of Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.",
+  "facets": {
+    "cost_cp": 5000
+  },
+  "data": {
+    "cost": {
+      "amount": 50,
+      "unit": "gp",
+      "cp": 5000
+    },
+    "weight_lb": 0.5
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "op": "add",
+            "args": [
+              "2d4",
+              2
+            ]
+          },
+          "note": "You or another creature within 5 feet that drinks it."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0",
+        "dnd5e/magic-item/potions-of-healing"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/potions-of-healing"
+  ]
+}

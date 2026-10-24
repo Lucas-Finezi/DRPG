@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/rod-of-security",
+  "kind": "magic-item",
+  "name": "Rod of Security",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      242
+    ],
+    "section": "Magic Items/Magic Items A–Z/Rod of Security",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Rod, Very Rare*\n\nWhile holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane’s environment can’t harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.\n\nFor each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don’t age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).\n\nWhen the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can’t be used again until 10 days have passed.",
+  "facets": {
+    "category": "rod",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Rod, Very Rare",
+      "category": "rod",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "demiplane",
+        "max_creatures": 200,
+        "food_and_water": true,
+        "harmless_environment": true,
+        "objects_cannot_leave": true
+      },
+      {
+        "id": "stay",
+        "no_aging": true,
+        "max_days": {
+          "op": "div",
+          "args": [
+            200,
+            {
+              "var": "creatures_present"
+            }
+          ]
+        }
+      },
+      {
+        "id": "return",
+        "to": "original location or nearest unoccupied",
+        "recharge_days": 10
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "move",
+          "mode": "teleport",
+          "note": "You and up to 199 willing creatures you can see go to a demiplane of your design."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      },
+      "note": "Can't be used again until 10 days have passed."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hour_elapsed",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "var": "hit_point_die"
+          },
+          "note": "As if it spent 1 Hit Point Die."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Rod, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane’s environment can’t harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "For each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don’t age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can’t be used again until 10 days have passed.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

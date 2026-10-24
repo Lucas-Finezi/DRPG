@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/hunter-superior-hunters-prey",
+  "kind": "feature",
+  "name": "Superior Hunter’s Prey",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      61
+    ],
+    "section": "Classes/Ranger/Ranger Subclass: Hunter/Level 11: Superior Hunter’s Prey",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Once per turn when you deal damage to a creature marked by your *Hunter’s Mark*, you can also deal that spell’s extra damage to a different creature that you can see within 30 feet of the first creature.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/hunter",
+    "level": 11
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "deals_damage"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "marked_by_spell",
+        "args": {
+          "spell": "hunters-mark"
+        }
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/hunters-mark",
+          "target": {
+            "kind": "creature",
+            "must_see": true
+          },
+          "note": "Deal the spell's extra damage to a different creature within 30 feet of the first."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Once per turn when you deal damage to a creature marked by your *Hunter’s Mark*, you can also deal that spell’s extra damage to a different creature that you can see within 30 feet of the first creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/hunters-mark"
+  ]
+}

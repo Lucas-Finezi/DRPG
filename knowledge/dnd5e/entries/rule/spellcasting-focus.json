@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/spellcasting-focus",
+  "kind": "rule",
+  "name": "Spellcasting Focus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      188
+    ],
+    "section": "Rules Glossary/Rules Definitions/Spellcasting Focus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L09"
+  },
+  "tier": 1,
+  "text": "A Spellcasting Focus is an object that certain creatures can use in place of a spell’s Material components if those materials aren’t consumed by the spell and don’t have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. *See also* “Spells” (“Casting Spells”).",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "focus",
+        "replaces_material_components_if": [
+          "not_consumed",
+          "no_cost_specified"
+        ],
+        "requires": "feature_allowing_focus"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A Spellcasting Focus is an object that certain creatures can use in place of a spell’s Material components if those materials aren’t consumed by the spell and don’t have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Spells” (“Casting Spells”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/casting-spells"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/casting-spells"
+  ]
+}

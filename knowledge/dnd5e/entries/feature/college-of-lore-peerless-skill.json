@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/college-of-lore-peerless-skill",
+  "kind": "feature",
+  "name": "Peerless Skill",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      35
+    ],
+    "section": "Classes/Bard/Bard Subclass: College of Lore/Level 14: Peerless Skill",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you make an ability check or attack roll and fail, you can expend one use of Bardic Inspiration; roll the Bardic Inspiration die, and add the number rolled to the d20, potentially turning a failure into a success. On a failure, the Bardic Inspiration isn’t expended.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/college-of-lore",
+    "level": 14
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_roll"
+      },
+      "optional": true,
+      "condition": {
+        "any": [
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "ability_check"
+            }
+          },
+          {
+            "pred": "roll_is",
+            "args": {
+              "roll": "attack_roll"
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "triggering_roll",
+          "mode": "add",
+          "value": {
+            "var": "rolled.bardic_inspiration_die"
+          }
+        },
+        {
+          "op": "spend",
+          "resource": "bardic_inspiration",
+          "amount": 1,
+          "when": {
+            "pred": "roll_succeeded",
+            "args": {
+              "roll": "triggering_roll"
+            }
+          },
+          "note": "On a failure, the Bardic Inspiration isn't expended."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you make an ability check or attack roll and fail, you can expend one use of Bardic Inspiration; roll the Bardic Inspiration die, and add the number rolled to the d20, potentially turning a failure into a success. On a failure, the Bardic Inspiration isn’t expended.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/swarm-of-insects",
+  "kind": "creature",
+  "name": "Swarm of Insects",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      361
+    ],
+    "section": "Animals/Swarm of Insects",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Swarm of Tiny Beasts, Unaligned*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 19 (3d8 + 6)\n\n**Speed** 20 ft., Climb or Fly 20 ft. (GM’s choice)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |\n| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 1 | −5 | −5 |\n\n**Resistances** Bludgeoning, Piercing, Slashing\n\n**Immunities** Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned\n\n**Senses** Blindsight 30 ft.; Passive Perception 8\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Spider Climb.*** If the swarm has a Climb Speed, the swarm can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n***Swarm.*** The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can’t regain Hit Points or gain Temporary Hit Points.\n\n##### Actions\n\n***Bites.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Poison damage, or 3 (1d4 + 1) Poison damage if the swarm is Bloodied.",
+  "facets": {
+    "group": "animal",
+    "size": "Medium",
+    "type": "Swarm of Tiny Beasts",
+    "alignment": "Unaligned",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Swarm of Tiny Beasts",
+    "alignment": "Unaligned",
+    "type_line": "Medium Swarm of Tiny Beasts, Unaligned",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 19,
+      "formula": {
+        "op": "add",
+        "args": [
+          "3d8",
+          6
+        ]
+      },
+      "text": "19 (3d8 + 6)"
+    },
+    "speed": {
+      "text": "20 ft., Climb or Fly 20 ft. (GM’s choice)",
+      "walk": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "resistances": {
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "text": "Bludgeoning, Piercing, Slashing"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/stunned"
+      ],
+      "text": "Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft.; Passive Perception 8",
+      "blindsight": 30,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "text": "If the swarm has a Climb Speed, the swarm can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Swarm",
+        "text": "The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can’t regain Hit Points or gain Temporary Hit Points."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bites",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Poison damage, or 3 (1d4 + 1) Poison damage if the swarm is Bloodied."
+      }
+    ],
+    "rules": [
+      {
+        "id": "swarm",
+        "occupies_others_space": true,
+        "squeezes_tiny_openings": true,
+        "no_hp_regain": true,
+        "no_temp_hp": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bites",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bites_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bites as written.",
+      "source_text": "6 (2d4 + 1) Poison damage, or 3 (1d4 + 1) Poison damage if the swarm is Bloodied."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Swarm of Tiny Beasts, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 19 (3d8 + 6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Climb or Fly 20 ft. (GM’s choice)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 3 | −4 | −4 | **Dex** 13 | +1 | +1 | **Con** 14 | +2 | +2 |\n| **Int** | 1 | −5 | −5 | **Wis** 7 | −2 | −2 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Bludgeoning, Piercing, Slashing",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** If the swarm has a Climb Speed, the swarm can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Swarm.*** The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can’t regain Hit Points or gain Temporary Hit Points.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bites.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Poison damage, or 3 (1d4 + 1) Poison damage if the swarm is Bloodied.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/1",
+        "md:actions_bites_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/stunned"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/true-resurrection",
+  "kind": "spell",
+  "name": "True Resurrection",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      170,
+      171
+    ],
+    "section": "Spells/Spell Descriptions/True Resurrection",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Necromancy (Cleric, Druid)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (diamonds worth 25,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous\n\nYou touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. The creature is revived with all its Hit Points.\n\nThis spell closes all wounds, neutralizes any poison, cures all magical contagions, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was Undead, it is restored to its non-Undead form.\n\nThe spell can provide a new body if the original no longer exists, in which case you must speak the creature’s name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
+  "facets": {
+    "level": 9,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 hour",
+      "cost": "time",
+      "minutes": 60
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "diamonds worth 25,000+ GP, which the spell consumes",
+      "material_cost_gp": 25000,
+      "material_consumed": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "restoration",
+        "closes_wounds": true,
+        "neutralizes_poison": true,
+        "cures_magical_contagions": true,
+        "lifts_curses": true,
+        "restores_organs_and_limbs": true,
+        "undead_restored": true
+      },
+      {
+        "id": "new_body",
+        "speak_name": true,
+        "appears_within_feet": 10
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp",
+      "mode": "set",
+      "value": {
+        "var": "hp_max"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "note": "Dead no longer than 200 years, for any reason except old age."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Necromancy (Cleric, Druid)*\n\n**Casting Time:** 1 hour\n\n**Range:** Touch\n\n**Components:** V, S, M (diamonds worth 25,000+ GP, which the spell consumes)\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. The creature is revived with all its Hit Points.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "This spell closes all wounds, neutralizes any poison, cures all magical contagions, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was Undead, it is restored to its non-Undead form.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The spell can provide a new body if the original no longer exists, in which case you must speak the creature’s name. The creature then appears in an unoccupied space you choose within 10 feet of you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

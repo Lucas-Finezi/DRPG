@@ -1,0 +1,369 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/otyugh",
+  "kind": "creature",
+  "name": "Otyugh",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      313
+    ],
+    "section": "Monsters A–Z/Otyugh/Otyugh",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Large Aberration, Neutral*\n\n| **AC** 14 | **Initiative** +0 (10) |\n\n**HP** 104 (11d10 + 44)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 11 | +0 | +0 | **Con** 19 | +4 | +7 |\n| **Int** | 6 | −2 | −2 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |\n\n**Senses** Darkvision 120 ft.; Passive Perception 11\n\n**Languages** Otyugh; telepathy 120 ft. (doesn’t allow the receiving creature to respond telepathically)\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Actions\n\n***Multiattack.*** The otyugh makes one Bite attack and two Tentacle attacks.\n\n***Bite.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. *Constitution Saving Throw:* DC 15. *Failure:* The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. *Success:* The Poisoned condition ends.\n\n***Tentacle.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles.\n\n***Tentacle Slam.*** *Constitution Saving Throw:* DC 14, each creature Grappled by the otyugh. *Failure:* 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh’s next turn. *Success:* Half damage only.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Neutral",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Neutral",
+    "type_line": "Large Aberration, Neutral",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 104,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d10",
+          44
+        ]
+      },
+      "text": "104 (11d10 + 44)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 19,
+        "mod": 4,
+        "save": 7
+      },
+      "int": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 11",
+      "darkvision": 120,
+      "passive_perception": 11
+    },
+    "languages": {
+      "text": "Otyugh; telepathy 120 ft. (doesn’t allow the receiving creature to respond telepathically)",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The otyugh makes one Bite attack and two Tentacle attacks."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. *Constitution Saving Throw:* DC 15. *Failure:* The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. *Success:* The Poisoned condition ends."
+      },
+      {
+        "name": "Tentacle",
+        "text": "*Melee Attack Roll:* +6, reach 10 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles."
+      },
+      {
+        "name": "Tentacle Slam",
+        "text": "*Constitution Saving Throw:* DC 14, each creature Grappled by the otyugh. *Failure:* 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh’s next turn. *Success:* Half damage only."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 1
+          },
+          {
+            "name": "Tentacle",
+            "count": 2
+          }
+        ],
+        "text": "The otyugh makes one Bite attack and two Tentacle attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tentacle",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  3
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 13
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tentacle Slam",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 14,
+          "target": {
+            "kind": "creature",
+            "text": "each creature Grappled by the otyugh"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d8",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/stunned",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_bite_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Bite as written.",
+      "source_text": "12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. Constitution Saving Throw: DC 15. Failure: The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. Success: The Poisoned condition ends."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Aberration, Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 104 (11d10 + 44)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 11 | +0 | +0 | **Con** 19 | +4 | +7 |\n| **Int** | 6 | −2 | −2 | **Wis** 13 | +1 | +1 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 11",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Otyugh; telepathy 120 ft. (doesn’t allow the receiving creature to respond telepathically)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The otyugh makes one Bite attack and two Tentacle attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 12 (2d8 + 3) Piercing damage, and the target has the Poisoned condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. *Constitution Saving Throw:* DC 15. *Failure:* The target’s Hit Point maximum decreases by 5 (1d10) and doesn’t return to normal until the Poisoned condition ends on the target. *Success:* The Poisoned condition ends.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/0",
+        "md:actions_bite_rider"
+      ]
+    },
+    {
+      "text": "***Tentacle.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 12 (2d8 + 3) Piercing damage. If the target is a Medium or smaller creature, it has the Grappled condition (escape DC 13) from one of two tentacles.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Tentacle Slam.*** *Constitution Saving Throw:* DC 14, each creature Grappled by the otyugh. *Failure:* 16 (3d8 + 3) Bludgeoning damage, and the target has the Stunned condition until the start of the otyugh’s next turn. *Success:* Half damage only.",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/stunned"
+  ]
+}

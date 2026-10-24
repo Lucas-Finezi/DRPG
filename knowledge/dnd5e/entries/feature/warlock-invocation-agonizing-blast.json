@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-agonizing-blast",
+  "kind": "feature",
+  "name": "Agonizing Blast",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Agonizing Blast",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage*\n\nChoose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell’s damage rolls.\n\n***Repeatable.*** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 2,
+        "other": "warlock_cantrip_that_deals_damage"
+      },
+      {
+        "id": "repeatable",
+        "repeatable": true,
+        "each_time": "different_choice"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": {
+        "var": "ability_mod.cha"
+      },
+      "when": {
+        "pred": "is_chosen_spell",
+        "args": {
+          "choice": "agonizing_blast"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 2+ Warlock, a Warlock Cantrip That Deals Damage*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Choose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell’s damage rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Repeatable.*** You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

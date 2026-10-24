@@ -1,0 +1,201 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/long-rest",
+  "kind": "rule",
+  "name": "Long Rest",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      185
+    ],
+    "section": "Rules Glossary/Rules Definitions/Long Rest",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L07"
+  },
+  "tier": 2,
+  "text": "A Long Rest is a period of extended downtime—at least 8 hours—available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.\n\nDuring sleep, you have the Unconscious condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.\n\n***Benefits of the Rest.*** To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:\n\n**Regain All HP.** You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.\n\n**Ability Scores Restored.** If any of your ability scores were reduced, they return to normal.\n\n**Exhaustion Reduced.** If you have the Exhaustion condition, its level decreases by 1.\n\n**Special Feature.** Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.\n\n***Interrupting the Rest.*** A Long Rest is stopped by the following interruptions:\n\n- Rolling Initiative\n\n- Casting a spell other than a cantrip\n\n- Taking any damage\n\n- 1 hour of walking or other physical exertion\n\nIf you rested at least 1 hour before the interruption, you gain the benefits of a Short Rest. *See also* “Short Rest.”\n\nYou can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "long_rest",
+        "minimum_hours": 8,
+        "sleep_hours_min": 6,
+        "light_activity_hours_max": 2,
+        "available_to": "any_creature"
+      },
+      {
+        "id": "cooldown",
+        "hours_between_long_rests": 16
+      },
+      {
+        "id": "start_requires",
+        "min_hit_points": 1
+      },
+      {
+        "id": "hp_max_restored",
+        "reduced_hp_max_returns_to_normal": true
+      },
+      {
+        "id": "ability_scores_restored",
+        "reduced_scores_return": true
+      },
+      {
+        "id": "features_recharge",
+        "event": "long_rest_finished"
+      },
+      {
+        "id": "interruptions",
+        "stopped_by": [
+          "rolling_initiative",
+          "casting_non_cantrip_spell",
+          "taking_damage",
+          "one_hour_of_physical_exertion"
+        ]
+      },
+      {
+        "id": "partial",
+        "if_rested_hours_at_least": 1,
+        "gain": "short_rest_benefits"
+      },
+      {
+        "id": "resume",
+        "extra_hours_per_interruption": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/unconscious",
+      "note": "While sleeping during the rest."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "var": "hp_max"
+          },
+          "note": "Regain all lost Hit Points."
+        },
+        {
+          "op": "restore",
+          "resource": "hit_point_dice",
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "long_rest_finished"
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/exhaustion"
+          ],
+          "levels": 1
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A Long Rest is a period of extended downtime—at least 8 hours—available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "During sleep, you have the Unconscious condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "After you finish a Long Rest, you must wait at least 16 hours before starting another one.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Benefits of the Rest.*** To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Regain All HP.** You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Ability Scores Restored.** If any of your ability scores were reduced, they return to normal.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "**Exhaustion Reduced.** If you have the Exhaustion condition, its level decreases by 1.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "**Special Feature.** Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "***Interrupting the Rest.*** A Long Rest is stopped by the following interruptions:\n\n- Rolling Initiative\n\n- Casting a spell other than a cantrip\n\n- Taking any damage\n\n- 1 hour of walking or other physical exertion",
+      "status": "structured",
+      "by": [
+        "/data/rules/6"
+      ]
+    },
+    {
+      "text": "If you rested at least 1 hour before the interruption, you gain the benefits of a Short Rest. *See also* “Short Rest.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/7"
+      ]
+    },
+    {
+      "text": "You can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.",
+      "status": "structured",
+      "by": [
+        "/data/rules/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/unconscious"
+  ]
+}

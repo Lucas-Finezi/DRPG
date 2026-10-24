@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/tiny-hut",
+  "kind": "spell",
+  "name": "Tiny Hut",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      169
+    ],
+    "section": "Spells/Spell Descriptions/Tiny Hut",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 1,
+  "text": "*Level 3 Evocation (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (a crystal bead)\n\n**Duration:** 8 hours\n\nA 10-foot Emanation springs into existence around you and remains stationary for the duration. The spell fails when you cast it if the Emanation isn’t big enough to fully encapsulate all creatures in its area.\n\nCreatures and objects within the Emanation when you cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can’t be cast through it, and the effects of such spells can’t extend into it.\n\nThe atmosphere inside the Emanation is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to have Dim Light or Darkness (no action required). The Emanation is opaque from the outside and of any color you choose, but it’s transparent from the inside.\n\nThe spell ends early if you leave the Emanation or if you cast it again.",
+  "facets": {
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a crystal bead"
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    },
+    "rules": [
+      {
+        "id": "hut",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 10
+        },
+        "stationary": true,
+        "fails_if_cant_contain_all": true
+      },
+      {
+        "id": "barrier",
+        "occupants_pass": true,
+        "others_barred": true,
+        "blocks_spells_of_level_at_most": 3
+      },
+      {
+        "id": "interior",
+        "comfortable_dry": true,
+        "light_choice": [
+          "dim",
+          "darkness"
+        ],
+        "opaque_outside": true,
+        "transparent_inside": true
+      },
+      {
+        "id": "ends",
+        "ends_on": [
+          "you_leave",
+          "cast_again"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 3 Evocation (Bard, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V, S, M (a crystal bead)\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A 10-foot Emanation springs into existence around you and remains stationary for the duration. The spell fails when you cast it if the Emanation isn’t big enough to fully encapsulate all creatures in its area.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Creatures and objects within the Emanation when you cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can’t be cast through it, and the effects of such spells can’t extend into it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The atmosphere inside the Emanation is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to have Dim Light or Darkness (no action required). The Emanation is opaque from the outside and of any color you choose, but it’s transparent from the inside.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "The spell ends early if you leave the Emanation or if you cast it again.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

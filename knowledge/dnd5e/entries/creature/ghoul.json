@@ -1,0 +1,323 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ghoul",
+  "kind": "creature",
+  "name": "Ghoul",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      288
+    ],
+    "section": "Monsters A–Z/Ghoul/Ghoul",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Medium Undead, Chaotic Evil*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 22 (5d8)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |\n\n**Immunities** Poison; Charmed, Exhaustion, Poisoned\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Common\n\n**CR** 1 (XP 200; PB +2)\n\n##### Actions\n\n***Multiattack.*** The ghoul makes two Bite attacks.\n\n***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Piercing damage plus 3 (1d6) Necrotic damage.\n\n***Claw.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. *Constitution Saving Throw:* DC 10. *Failure:* The target has the Paralyzed condition until the end of its next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "cr": "1"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "type_line": "Medium Undead, Chaotic Evil",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": "5d8",
+      "text": "22 (5d8)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Charmed, Exhaustion, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Common"
+    },
+    "cr": {
+      "value": "1",
+      "xp": 200,
+      "proficiency_bonus": 2,
+      "text": "1 (XP 200; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The ghoul makes two Bite attacks."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Piercing damage plus 3 (1d6) Necrotic damage."
+      },
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. *Constitution Saving Throw:* DC 10. *Failure:* The target has the Paralyzed condition until the end of its next turn."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Bite",
+            "count": 2
+          }
+        ],
+        "text": "The ghoul makes two Bite attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  2
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "target",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_claw_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Claw as written.",
+      "source_text": "4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. Constitution Saving Throw: DC 10. Failure: The target has the Paralyzed condition until the end of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Undead, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (5d8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 15 | +2 | +2 | **Con** 10 | +0 | +0 |\n| **Int** | 7 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Charmed, Exhaustion, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1 (XP 200; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The ghoul makes two Bite attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Piercing damage plus 3 (1d6) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 4 (1d4 + 2) Slashing damage. If the target is a creature that isn’t an Undead or elf, it is subjected to the following effect. *Constitution Saving Throw:* DC 10. *Failure:* The target has the Paralyzed condition until the end of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/1",
+        "md:actions_claw_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned"
+  ]
+}

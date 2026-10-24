@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-hit-points",
+  "kind": "rule",
+  "name": "Hit Points (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      255
+    ],
+    "section": "Monsters/Parts of a Stat Block/Hit Points",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 2,
+  "text": "A monster’s Hit Points are presented as a number followed by parentheses, where the monster’s Hit Point Dice are provided, along with any contribution from its Constitution. Either use the number for the monster’s Hit Points or roll the die expression in parentheses to determine the monster’s Hit Points randomly; don’t use both.\n\nA monster’s size typically determines the die used to calculate its Hit Points, as shown in the Hit Dice by Size table.\n\n##### Hit Dice by Size\n\n| **Monster Size** | **Hit Die** | **Average HP per Die** |\n| Tiny | d4 | 2½ |\n| Small | d6 | 3½ |\n| Medium | d8 | 4½ |\n| Large | d10 | 5½ |\n| Huge | d12 | 6½ |\n| Gargantuan | d20 | 10½ |\n\nA monster’s Constitution modifier is multiplied by the number of Hit Dice it possesses, and the result is added to its Hit Points. For example, if a monster has a Constitution of 12 (+1 modifier) and 2d8 Hit Dice, it has 2d8 + 2 Hit Points (average 11).\n\nFor more on Hit Points, see “Playing the Game*.”*",
+  "data": {
+    "rules": [
+      {
+        "id": "hp",
+        "use_average_or_roll": true,
+        "not_both": true
+      },
+      {
+        "id": "hit_die_by_size",
+        "table": "hit_dice_by_size"
+      }
+    ],
+    "tables": [
+      {
+        "id": "hit_dice_by_size",
+        "caption": "Hit Dice by Size",
+        "columns": [
+          "Monster Size",
+          "Hit Die",
+          "Average HP per Die"
+        ],
+        "rows": [
+          [
+            "Tiny",
+            "d4",
+            "2½"
+          ],
+          [
+            "Small",
+            "d6",
+            "3½"
+          ],
+          [
+            "Medium",
+            "d8",
+            "4½"
+          ],
+          [
+            "Large",
+            "d10",
+            "5½"
+          ],
+          [
+            "Huge",
+            "d12",
+            "6½"
+          ],
+          [
+            "Gargantuan",
+            "d20",
+            "10½"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "hp_max",
+      "mode": "add",
+      "value": {
+        "op": "mul",
+        "args": [
+          {
+            "var": "ability_mod.con"
+          },
+          {
+            "var": "hit_point_dice_count"
+          }
+        ]
+      },
+      "note": "Constitution modifier × number of Hit Dice."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A monster’s Hit Points are presented as a number followed by parentheses, where the monster’s Hit Point Dice are provided, along with any contribution from its Constitution. Either use the number for the monster’s Hit Points or roll the die expression in parentheses to determine the monster’s Hit Points randomly; don’t use both.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A monster’s size typically determines the die used to calculate its Hit Points, as shown in the Hit Dice by Size table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "##### Hit Dice by Size\n\n| **Monster Size** | **Hit Die** | **Average HP per Die** |\n| Tiny | d4 | 2½ |\n| Small | d6 | 3½ |\n| Medium | d8 | 4½ |\n| Large | d10 | 5½ |\n| Huge | d12 | 6½ |\n| Gargantuan | d20 | 10½ |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "A monster’s Constitution modifier is multiplied by the number of Hit Dice it possesses, and the result is added to its Hit Points. For example, if a monster has a Constitution of 12 (+1 modifier) and 2d8 Hit Dice, it has 2d8 + 2 Hit Points (average 11).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "For more on Hit Points, see “Playing the Game*.”*",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/hit-points"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/hit-points"
+  ]
+}

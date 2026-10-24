@@ -1,0 +1,198 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/holy-avenger",
+  "kind": "magic-item",
+  "name": "Holy Avenger",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Holy Avenger",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Any Simple or Martial), Legendary (Requires Attunement by a Paladin)*\n\nYou gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Fiend or an Undead with it, that creature takes an extra 2d10 Radiant damage.\n\nWhile you hold the drawn weapon, it creates a 10-foot Emanation originating from you. You and all creatures Friendly to you in the Emanation have Advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the Paladin class, the size of the Emanation increases to 30 feet.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Any Simple or Martial), Legendary (Requires Attunement by a Paladin)",
+      "attunement": {
+        "required": true,
+        "by": "a Paladin",
+        "classes": [
+          "dnd5e/class/paladin"
+        ]
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Any Simple or Martial"
+      },
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d10",
+          "damage_type": "radiant",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "fiend",
+                "undead"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "in_aura"
+          },
+          {
+            "pred": "save_against",
+            "args": {
+              "source": "spell_or_magic"
+            }
+          }
+        ]
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "origin": "self",
+          "moves_with_origin": true,
+          "size_feet": {
+            "scale": {
+              "by": "class_level.paladin",
+              "steps": [
+                {
+                  "from": 0,
+                  "value": 10
+                },
+                {
+                  "from": 17,
+                  "value": 30
+                }
+              ]
+            }
+          }
+        },
+        "filter": {
+          "allies_only": true,
+          "include_self": true
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Any Simple or Martial), Legendary (Requires Attunement by a Paladin)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Fiend or an Undead with it, that creature takes an extra 2d10 Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "While you hold the drawn weapon, it creates a 10-foot Emanation originating from you. You and all creatures Friendly to you in the Emanation have Advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the Paladin class, the size of the Emanation increases to 30 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/paladin"
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/reef-shark",
+  "kind": "creature",
+  "name": "Reef Shark",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      360
+    ],
+    "section": "Animals/Reef Shark",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 2,
+  "text": "*Medium Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 22 (4d8 + 4)\n\n**Speed** 5 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 15 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |\n\n**Skills** Perception +2\n\n**Senses** Blindsight 30 ft.; Passive Perception 12\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Pack Tactics.*** The shark has Advantage on an attack roll against a creature if at least one of the shark’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.\n\n***Water Breathing.*** The shark can breathe only underwater.\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Piercing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Medium Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 22,
+      "formula": {
+        "op": "add",
+        "args": [
+          "4d8",
+          4
+        ]
+      },
+      "text": "22 (4d8 + 4)"
+    },
+    "speed": {
+      "text": "5 ft., Swim 30 ft.",
+      "walk": 5,
+      "swim": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "text": "Perception +2"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft.; Passive Perception 12",
+      "blindsight": 30,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "text": "The shark has Advantage on an attack roll against a creature if at least one of the shark’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition."
+      },
+      {
+        "name": "Water Breathing",
+        "text": "The shark can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "pred": "within_feet",
+        "args": {
+          "who": "ally",
+          "of": "target",
+          "feet": 5,
+          "not_incapacitated": true
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  2
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 22 (4d8 + 4)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 14 | +2 | +2 | **Dex** 15 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 1 | −5 | −5 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Pack Tactics.*** The shark has Advantage on an attack roll against a creature if at least one of the shark’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Water Breathing.*** The shark can breathe only underwater.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/2"
+      ]
+    }
+  ]
+}

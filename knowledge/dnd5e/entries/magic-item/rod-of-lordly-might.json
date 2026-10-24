@@ -1,0 +1,446 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/rod-of-lordly-might",
+  "kind": "magic-item",
+  "name": "Rod of Lordly Might",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      241,
+      242
+    ],
+    "section": "Magic Items/Magic Items A–Z/Rod of Lordly Might",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Rod, Legendary (Requires Attunement)*\n\nThis rod has a flanged head, and it functions as a magic Mace that grants a +3 bonus to attack rolls and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.\n\n***Buttons.*** You can press one of the following buttons as a Bonus Action; a button’s effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form:\n\n**Button 1.** A fiery blade sprouts from the end opposite the rod’s flanged head. The flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet, and the blade functions as a magic Longsword or Shortsword (your choice) that deals an extra 2d6 Fire damage on a hit.\n\n**Button 2.** The rod’s flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic Battleaxe that grants a +3 bonus to attack rolls and damage rolls made with it.\n\n**Button 3.** The rod’s flanged head folds down, a spear point springs from the rod’s tip, and the rod’s handle lengthens into a 6-foot haft, transforming the rod into a magic Spear that grants a +3 bonus to attack rolls and damage rolls made with it.\n\n**Button 4.** The rod transforms into a climbing pole up to 50 feet long (you specify the length), though the rod’s buttons remain within your reach. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.\n\n**Button 5.** The rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength (Athletics) checks made to break through doors, barricades, and other barriers.\n\n**Button 6.** The rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.\n\n***Drain Life.*** When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target takes an extra 4d6 Necrotic damage, and you regain a number of Hit Points equal to half that Necrotic damage. Once used, this property can’t be used again until the next dawn.\n\n***Paralyze.*** When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target has the Paralyzed condition for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on a success. Once used, this property can’t be used again until the next dawn.\n\n***Terrify.*** While holding the rod, you can take a Magic action to force each creature you can see within 30 feet of yourself to make a DC 17 Wisdom saving throw. On a failed save, a target has the Frightened condition for 1 minute. A Frightened target repeats the save at the end of each of its turns, ending the effect on itself on a success. Once used, this property can’t be used again until the next dawn.",
+  "facets": {
+    "category": "rod",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Rod, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "rod",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "mace",
+        "functions_as": "dnd5e/weapon/mace",
+        "buttons": 6
+      },
+      {
+        "id": "buttons",
+        "cost": "bonus_action",
+        "lasts": "until another button or the same again (normal form)"
+      },
+      {
+        "id": "button_1",
+        "as": [
+          "dnd5e/weapon/longsword",
+          "dnd5e/weapon/shortsword"
+        ],
+        "bright_feet": 40,
+        "dim_feet": 40
+      },
+      {
+        "id": "button_2",
+        "as": "dnd5e/weapon/battleaxe",
+        "bonus": 3
+      },
+      {
+        "id": "button_3",
+        "as": "dnd5e/weapon/spear",
+        "bonus": 3,
+        "haft_feet": 6
+      },
+      {
+        "id": "button_4",
+        "pole_feet_max": 50,
+        "rungs_inches": 3,
+        "rung_spacing_feet": 1,
+        "max_lb": 4000
+      },
+      {
+        "id": "button_6",
+        "indicates": "magnetic_north",
+        "depth_or_height": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 3,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "2d6",
+          "damage_type": "fire",
+          "target": {
+            "kind": "inherit"
+          }
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_form_in",
+            "args": {
+              "forms": [
+                "button_1"
+              ]
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_check",
+      "mode": "add",
+      "value": 10,
+      "when": {
+        "all": [
+          {
+            "pred": "item_form_in",
+            "args": {
+              "forms": [
+                "button_5"
+              ]
+            }
+          },
+          {
+            "pred": "check_uses",
+            "args": {
+              "skill": "athletics"
+            }
+          },
+          {
+            "pred": "breaking_down_door"
+          }
+        ]
+      },
+      "note": "Doors, barricades and other barriers."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "4d6",
+              "damage_type": "necrotic"
+            },
+            {
+              "op": "heal",
+              "target": {
+                "kind": "self"
+              },
+              "amount": {
+                "op": "div",
+                "args": [
+                  {
+                    "var": "damage_amount"
+                  },
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ],
+      "optional": true,
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "range": "melee"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "dawn"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 17,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "predicate": {
+                "pred": "can_see"
+              }
+            }
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/frightened",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Rod, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This rod has a flanged head, and it functions as a magic Mace that grants a +3 bonus to attack rolls and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Buttons.*** You can press one of the following buttons as a Bonus Action; a button’s effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form:",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Button 1.** A fiery blade sprouts from the end opposite the rod’s flanged head. The flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet, and the blade functions as a magic Longsword or Shortsword (your choice) that deals an extra 2d6 Fire damage on a hit.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Button 2.** The rod’s flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic Battleaxe that grants a +3 bonus to attack rolls and damage rolls made with it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Button 3.** The rod’s flanged head folds down, a spear point springs from the rod’s tip, and the rod’s handle lengthens into a 6-foot haft, transforming the rod into a magic Spear that grants a +3 bonus to attack rolls and damage rolls made with it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "**Button 4.** The rod transforms into a climbing pole up to 50 feet long (you specify the length), though the rod’s buttons remain within your reach. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    },
+    {
+      "text": "**Button 5.** The rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength (Athletics) checks made to break through doors, barricades, and other barriers.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "**Button 6.** The rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/6"
+      ]
+    },
+    {
+      "text": "***Drain Life.*** When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target takes an extra 4d6 Necrotic damage, and you regain a number of Hit Points equal to half that Necrotic damage. Once used, this property can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Paralyze.*** When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target has the Paralyzed condition for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on a success. Once used, this property can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Terrify.*** While holding the rod, you can take a Magic action to force each creature you can see within 30 feet of yourself to make a DC 17 Wisdom saving throw. On a failed save, a target has the Frightened condition for 1 minute. A Frightened target repeats the save at the end of each of its turns, ending the effect on itself on a success. Once used, this property can’t be used again until the next dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/weapon/longsword",
+    "dnd5e/weapon/shortsword"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/handy-haversack",
+  "kind": "magic-item",
+  "name": "Handy Haversack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      224
+    ],
+    "section": "Magic Items/Magic Items A–Z/Handy Haversack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare*\n\nThis backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 200 pounds of material, not exceeding a volume of 25 cubic feet. The central pouch can hold up to 500 pounds of material, not exceeding a volume of 64 cubic feet. The haversack always weighs 5 pounds, regardless of its contents.\n\nRetrieving an item from the haversack requires a Utilize action or a Bonus Action (your choice). When you reach into the haversack for a specific item, the item is always magically on top.\n\nIf any of its pouches is overloaded, pierced, or torn, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an Artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth unharmed, and the haversack must be put right before it can be used again.\n\nEach pouch of the haversack holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.\n\nPlacing the haversack inside an extradimensional space created by a *Bag of Holding*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "pouches",
+        "side": {
+          "count": 2,
+          "max_lb": 200,
+          "max_cubic_feet": 25
+        },
+        "central": {
+          "max_lb": 500,
+          "max_cubic_feet": 64
+        },
+        "weight_lb": 5
+      },
+      {
+        "id": "retrieve",
+        "cost": [
+          "dnd5e/action/utilize",
+          "bonus_action"
+        ],
+        "item_on_top": true
+      },
+      {
+        "id": "destroyed",
+        "on": [
+          "overloaded",
+          "pierced",
+          "torn"
+        ],
+        "contents_lost": true,
+        "artifacts_turn_up": true,
+        "inside_out": "spills_unharmed"
+      },
+      {
+        "id": "air",
+        "minutes": 10,
+        "divided_by_breathers": true
+      },
+      {
+        "id": "extradimensional_conflict",
+        "with": [
+          "dnd5e/magic-item/bag-of-holding",
+          "dnd5e/magic-item/portable-hole"
+        ],
+        "both_destroyed": true,
+        "gate": "astral_plane",
+        "one_way": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "move",
+      "mode": "teleport",
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 10,
+          "origin": "point"
+        }
+      },
+      "when": {
+        "not": {
+          "pred": "behind_cover",
+          "args": {
+            "degree": "total"
+          }
+        }
+      },
+      "note": "Creatures within 10 feet of the gate and not behind Total Cover go to a random location on the Astral Plane."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 200 pounds of material, not exceeding a volume of 25 cubic feet. The central pouch can hold up to 500 pounds of material, not exceeding a volume of 64 cubic feet. The haversack always weighs 5 pounds, regardless of its contents.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Retrieving an item from the haversack requires a Utilize action or a Bonus Action (your choice). When you reach into the haversack for a specific item, the item is always magically on top.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "If any of its pouches is overloaded, pierced, or torn, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an Artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth unharmed, and the haversack must be put right before it can be used again.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "Each pouch of the haversack holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "Placing the haversack inside an extradimensional space created by a *Bag of Holding*, *Portable Hole*, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4",
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize",
+    "dnd5e/magic-item/bag-of-holding",
+    "dnd5e/magic-item/portable-hole"
+  ]
+}

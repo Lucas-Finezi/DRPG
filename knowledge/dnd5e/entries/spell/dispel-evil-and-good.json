@@ -1,0 +1,189 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/dispel-evil-and-good",
+  "kind": "spell",
+  "name": "Dispel Evil and Good",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      124
+    ],
+    "section": "Spells/Spell Descriptions/Dispel Evil and Good",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Abjuration (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (powdered silver and iron)\n\n**Duration:** Concentration, up to 1 minute\n\nFor the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.\n\n***Break Enchantment.*** As a Magic action, you touch a creature that is possessed by or has the Charmed or Frightened condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.\n\n***Dismissal.*** As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn’t there already. If they aren’t on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.",
+  "facets": {
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "powdered silver and iron"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "when": {
+        "pred": "creature_is",
+        "args": {
+          "who": "attacker",
+          "types": [
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+          ]
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/charmed",
+            "dnd5e/condition/frightened"
+          ],
+          "note": "Only those from Celestials, Elementals, Fey, Fiends or Undead; also ends possession."
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "cha",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            },
+            "must_see": true,
+            "filter": {
+              "creature_types": [
+                "celestial",
+                "elemental",
+                "fey",
+                "fiend",
+                "undead"
+              ]
+            }
+          },
+          "on_fail": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/spell/dispel-evil-and-good",
+              "note": "Sent to its home plane; Undead to the Shadowfell and Fey to the Feywild if not on their home plane."
+            }
+          ]
+        },
+        {
+          "op": "end_effect",
+          "scope": "this_entry"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Abjuration (Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (powdered silver and iron)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Break Enchantment.*** As a Magic action, you touch a creature that is possessed by or has the Charmed or Frightened condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Dismissal.*** As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn’t there already. If they aren’t on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened",
+    "dnd5e/spell/dispel-evil-and-good"
+  ]
+}

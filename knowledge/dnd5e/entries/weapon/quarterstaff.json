@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon/quarterstaff",
+  "kind": "weapon",
+  "name": "Quarterstaff",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      91
+    ],
+    "section": "Equipment/Weapons/Weapons/Simple Melee Weapons/Quarterstaff",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "| ↳ Quarterstaff | 1d6 Bludgeoning | Versatile (1d8) | Topple | 4 lb. | 2 SP |",
+  "facets": {
+    "category": "simple",
+    "melee_or_ranged": "melee",
+    "damage_type": "bludgeoning",
+    "mastery": "topple",
+    "cost_cp": 20
+  },
+  "data": {
+    "category": "simple",
+    "melee_or_ranged": "melee",
+    "damage": {
+      "amount": "1d6",
+      "type": "bludgeoning"
+    },
+    "properties": [
+      {
+        "ref": "dnd5e/weapon-property/versatile",
+        "two_handed_damage": "1d8"
+      }
+    ],
+    "mastery": "dnd5e/weapon-mastery/topple",
+    "weight_lb": 4,
+    "cost": {
+      "amount": 2,
+      "unit": "sp",
+      "cp": 20
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "melee_weapon",
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": "1d6",
+          "damage_type": "bludgeoning",
+          "note": "Plus the attack's ability modifier."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "| ↳ Quarterstaff | 1d6 Bludgeoning | Versatile (1d8) | Topple | 4 lb. | 2 SP |",
+      "status": "structured",
+      "by": [
+        "/data/category",
+        "/data/melee_or_ranged",
+        "/data/damage",
+        "/data/properties",
+        "/data/mastery",
+        "/data/weight_lb",
+        "/data/cost",
+        "/effects/0",
+        "dnd5e/weapon-property/versatile",
+        "dnd5e/weapon-mastery/topple"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-mastery/topple",
+    "dnd5e/weapon-property/versatile"
+  ]
+}

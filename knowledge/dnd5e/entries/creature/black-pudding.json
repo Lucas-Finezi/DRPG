@@ -1,0 +1,372 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/black-pudding",
+  "kind": "creature",
+  "name": "Black Pudding",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      265,
+      266
+    ],
+    "section": "Monsters A–Z/Black Pudding/Black Pudding",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Ooze, Unaligned*\n\n| **AC** 7 | **Initiative** −3 (7) |\n\n**HP** 68 (8d10 + 24)\n\n**Speed** 20 ft., Climb 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 5 | −3 | −3 | **Con** 16 | +3 | +3 |\n| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |\n\n**Immunities** Acid, Cold, Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained\n\n**Senses** Blindsight 60 ft.; Passive Perception 8\n\n**Languages** None\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Traits\n\n***Amorphous.*** The pudding can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Corrosive Form.*** A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nIn 1 minute, the pudding can eat through 2 feet of nonmagical wood or metal.\n\n***Spider Climb.*** The pudding can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n##### Actions\n\n***Dissolving Pseudopod.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor.\n\n##### Reactions\n\n***Split.*** *Trigger:* While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The pudding splits into two new **Black Puddings**. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down).",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Ooze",
+    "alignment": "Unaligned",
+    "type_line": "Large Ooze, Unaligned",
+    "ac": {
+      "value": 7,
+      "text": "7"
+    },
+    "initiative": {
+      "modifier": -3,
+      "score": 7,
+      "text": "−3 (7)"
+    },
+    "hp": {
+      "average": 68,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d10",
+          24
+        ]
+      },
+      "text": "68 (8d10 + 24)"
+    },
+    "speed": {
+      "text": "20 ft., Climb 20 ft.",
+      "walk": 20,
+      "climb": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "acid",
+        "cold",
+        "lightning",
+        "slashing"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained"
+      ],
+      "text": "Acid, Cold, Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft.; Passive Perception 8",
+      "blindsight": 60,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amorphous",
+        "text": "The pudding can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Corrosive Form",
+        "text": "A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nIn 1 minute, the pudding can eat through 2 feet of nonmagical wood or metal."
+      },
+      {
+        "name": "Spider Climb",
+        "text": "The pudding can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dissolving Pseudopod",
+        "text": "*Melee Attack Roll:* +5, reach 10 ft. *Hit:* 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Split",
+        "text": "*Trigger:* While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The pudding splits into two new **Black Puddings**. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit \n\nPoints are divided evenly between the new puddings (round down)."
+      }
+    ],
+    "rules": [
+      {
+        "id": "amorphous",
+        "squeeze_inch": 1,
+        "no_extra_movement": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Dissolving Pseudopod",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d6",
+                  3
+                ]
+              },
+              "damage_type": "acid"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_corrosive_form",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Corrosive Form as written.",
+      "source_text": "A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be"
+    },
+    {
+      "id": "actions_dissolving_pseudopod_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Dissolving Pseudopod as written.",
+      "source_text": "17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the Mending spell on the armor."
+    },
+    {
+      "id": "reactions_split_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Split as written.",
+      "source_text": ": The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down)."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Ooze, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 7 | **Initiative** −3 (7) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 68 (8d10 + 24)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 20 ft., Climb 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 5 | −3 | −3 | **Con** 16 | +3 | +3 |\n| **Int** | 1 | −5 | −5 | **Wis** 6 | −2 | −2 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Acid, Cold, Lightning, Slashing; Charmed, Deafened, Exhaustion, Frightened, Grappled, Prone, Restrained",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amorphous.*** The pudding can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Corrosive Form.*** A creature that hits the pudding with a melee attack roll takes 4 (1d8) Acid damage. Nonmagical ammunition is destroyed immediately after hitting the pudding and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the pudding and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the *Mending* spell on the weapon. \n\nIn 1 minute, the pudding can eat through 2 feet of nonmagical wood or metal.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_corrosive_form"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** The pudding can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Dissolving Pseudopod.*** *Melee Attack Roll:* +5, reach 10 ft. *Hit:* 17 (4d6 + 3) Acid damage. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the *Mending* spell on the armor.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/1",
+        "md:actions_dissolving_pseudopod_rider"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Split.*** *Trigger:* While the pudding is Large or Medium and has 10+ Hit Points, it becomes Bloodied or is subjected to Lightning or Slashing damage. *Response:* The pudding splits into two new **Black Puddings**. Each new pudding is one size smaller than the original pudding and acts on its Initiative. The original pudding’s Hit Points are divided evenly between the new puddings (round down).",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2",
+        "md:reactions_split_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/rule/reaction"
+  ]
+}

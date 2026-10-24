@@ -1,0 +1,790 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/mummy-lord",
+  "kind": "creature",
+  "name": "Mummy Lord",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      309,
+      310
+    ],
+    "section": "Monsters A–Z/Mummies/Mummy Lord",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Medium or Small Undead (Cleric), Lawful Evil*\n\n| **AC** 17 | **Initiative** +10 (20) |\n\n**HP** 187 (25d8 + 75)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |\n| **Int** | 11 | +0 | +5 | **Wis** 19 | +4 | +9 | **Cha** 16 | +3 | +3 |\n\n**Skills** History +5, Perception +9, Religion +5\n\n**Vulnerabilities** Fire\n\n**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned\n\n**Senses** Truesight 60 ft.; Passive Perception 19\n\n**Languages** Common plus three other languages\n\n**CR** 15 (XP 13,000, or 15,000 in lair; PB +5)\n\n##### Traits\n\n***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the mummy fails a saving throw, it can choose to succeed instead.\n\n***Magic Resistance.*** The mummy has Advantage on saving throws against spells and other magical effects.\n\n***Undead Restoration.*** If destroyed, the mummy gains a new body in 24 hours if its heart is intact, reviving with all its Hit Points. The new body appears in an unoccupied space within the mummy’s lair. The heart is a Tiny object that has AC 17, HP 10, and Immunity to all damage except Fire.\n\n##### Actions\n\n***Multiattack.*** The mummy makes one Rotting Fist or Channel Negative Energy attack, and it uses Dreadful Glare.\n\n***Rotting Fist.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 15 (2d10 + 4) Bludgeoning damage plus 10 (3d6) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, it gains no benefit from finishing a Long Rest, and its Hit Point maximum decreases by 10 (3d6) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.\n\n***Channel Negative Energy.*** *Ranged Attack Roll:* +9, range 60 ft. *Hit:* 25 (6d6 + 4) Necrotic damage.\n\n***Dreadful Glare.*** *Wisdom Saving Throw:* DC 17, one creature the mummy can see within 60 feet. *Failure:* 25 (6d6 + 4) Psychic damage, and the target has the Paralyzed condition until the end of the mummy’s next turn.\n\n***Spellcasting.*** The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 17, +9 to hit with spell attacks):\n\n**At Will:** *Dispel Magic*, *Thaumaturgy*\n\n**1/Day Each:** *Animate Dead*, *Harm*, *Insect Plague* (level 7 version)\n\n##### Reactions\n\n***Whirlwind of Sand.*** *Trigger:* The mummy is hit by an attack roll. *Response:* The mummy adds 2 to its AC against the attack, possibly causing the attack to miss, and the mummy teleports up to 60 feet to an unoccupied space it can see. Each creature of its choice that it can see within 5 feet of its destination space has the Blinded condition until the end of the mummy’s next turn.\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the mummy can expend a use to take one of the following actions. The mummy regains all expended uses at the start of each of its turns.*\n\n***Dread Command.*** The mummy casts *Command* (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn.\n\n***Glare.*** The mummy uses Dreadful Glare. The mummy can’t take this action again until the start of its next turn.\n\n***Necrotic Strike.*** The mummy makes one Rotting Fist or Channel Negative Energy attack.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Lawful Evil",
+    "cr": "15"
+  },
+  "data": {
+    "size": "Medium or Small",
+    "type": "Undead",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Cleric"
+    ],
+    "type_line": "Medium or Small Undead (Cleric), Lawful Evil",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 10,
+      "score": 20,
+      "text": "+10 (20)"
+    },
+    "hp": {
+      "average": 187,
+      "formula": {
+        "op": "add",
+        "args": [
+          "25d8",
+          75
+        ]
+      },
+      "text": "187 (25d8 + 75)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 11,
+        "mod": 0,
+        "save": 5
+      },
+      "wis": {
+        "score": 19,
+        "mod": 4,
+        "save": 9
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "history": 5,
+      "perception": 9,
+      "religion": 5,
+      "text": "History +5, Perception +9, Religion +5"
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "fire"
+      ],
+      "text": "Fire"
+    },
+    "immunities": {
+      "damage_types": [
+        "necrotic",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned"
+    },
+    "senses": {
+      "text": "Truesight 60 ft.; Passive Perception 19",
+      "truesight": 60,
+      "passive_perception": 19
+    },
+    "languages": {
+      "text": "Common plus three other languages"
+    },
+    "cr": {
+      "value": "15",
+      "xp": 13000,
+      "proficiency_bonus": 5,
+      "text": "15 (XP 13,000, or 15,000 in lair; PB +5)",
+      "xp_in_lair": 15000
+    },
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "per_day": 3,
+        "per_day_in_lair": 4,
+        "text": "If the mummy fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The mummy has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Undead Restoration",
+        "text": "If destroyed, the mummy gains a new body in 24 hours if its heart is intact, reviving with all its Hit Points. The new body appears in an unoccupied space within the mummy’s lair. The heart is a Tiny object that has AC 17, HP 10, and Immunity to all damage except Fire."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The mummy makes one Rotting Fist or Channel Negative Energy attack, and it uses Dreadful Glare."
+      },
+      {
+        "name": "Rotting Fist",
+        "text": "*Melee Attack Roll:* +9, reach 5 ft. *Hit:* 15 (2d10 + 4) Bludgeoning damage plus 10 (3d6) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, it gains no benefit from finishing a Long Rest, and its Hit Point maximum decreases by 10 (3d6) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack."
+      },
+      {
+        "name": "Channel Negative Energy",
+        "text": "*Ranged Attack Roll:* +9, range 60 ft. *Hit:* 25 (6d6 + 4) Necrotic damage."
+      },
+      {
+        "name": "Dreadful Glare",
+        "text": "*Wisdom Saving Throw:* DC 17, one creature the mummy can see within 60 feet. *Failure:* 25 (6d6 + 4) Psychic damage, and the target has the Paralyzed condition until the end of the mummy’s next turn."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 17, +9 to hit with spell attacks):\n\n**At Will:** *Dispel Magic*, *Thaumaturgy*\n\n**1/Day Each:** *Animate Dead*, *Harm*, *Insect Plague* (level 7 version)"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Whirlwind of Sand",
+        "text": "*Trigger:* The mummy is hit by an attack roll. *Response:* The mummy adds 2 to its AC against the attack, possibly causing the attack to miss, and the mummy teleports up to 60 feet to an unoccupied space it can see. Each creature of its choice that it can see within 5 feet of its destination space has the Blinded condition until the end of the mummy’s next turn."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Dread Command",
+        "text": "The mummy casts *Command* (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Glare",
+        "text": "The mummy uses Dreadful Glare. The mummy can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Necrotic Strike",
+        "text": "The mummy makes one Rotting Fist or Channel Negative Energy attack."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the mummy can expend a use to take one of the following actions. The mummy regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rotting Fist",
+            "count": 1
+          }
+        ],
+        "text": "The mummy makes one Rotting Fist or Channel Negative Energy attack, and it uses Dreadful Glare."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 17, +9 to hit with spell attacks): At Will: Dispel Magic, Thaumaturgy 1/Day Each: Animate Dead, Harm, Insect Plague (level 7 version)",
+        "ability": "wis",
+        "save_dc": 17,
+        "attack_bonus": 9,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/dispel-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/thaumaturgy",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/animate-dead",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/harm",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/insect-plague",
+            "frequency": "1/Day Each"
+          }
+        ]
+      },
+      {
+        "id": "once_per_round",
+        "until": "start of its next turn"
+      },
+      {
+        "id": "attack",
+        "attacks": [
+          {
+            "name": "Rotting Fist or Channel Negative Energy",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 3,
+        "per": "day"
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rotting Fist",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d10",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Channel Negative Energy",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "6d6",
+                  4
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Dreadful Glare",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 17,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 60
+            },
+            "text": "one creature the mummy can see within 60 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "6d6",
+                  4
+                ]
+              },
+              "damage_type": "psychic"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_end",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17,
+          "attack_bonus": 9
+        }
+      ],
+      "name": "Dispel Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/thaumaturgy",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17,
+          "attack_bonus": 9
+        }
+      ],
+      "name": "Thaumaturgy"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/animate-dead",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17,
+          "attack_bonus": 9
+        }
+      ],
+      "name": "Animate Dead",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/harm",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17,
+          "attack_bonus": 9
+        }
+      ],
+      "name": "Harm",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/insect-plague",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "level": 7,
+          "save_dc": 17,
+          "attack_bonus": 9
+        }
+      ],
+      "name": "Insect Plague",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: The mummy is hit by an attack roll."
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Dread Command",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/command",
+          "slot": "none",
+          "level": 2
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_undead_restoration",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Undead Restoration as written.",
+      "source_text": "If destroyed, the mummy gains a new body in 24 hours if its heart is intact, reviving with all its Hit Points. The new body appears in an unoccupied space within the mummy’s lair. The heart is a Tiny object that has AC 17, HP 10, and Immunity to all damage except Fire."
+    },
+    {
+      "id": "actions_rotting_fist_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Rotting Fist as written.",
+      "source_text": "15 (2d10 + 4) Bludgeoning damage plus 10 (3d6) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, it gains no benefit from finishing a Long Rest, and its Hit Point maximum decreases by 10 (3d6) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack."
+    },
+    {
+      "id": "reactions_whirlwind_of_sand_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Whirlwind of Sand as written.",
+      "source_text": ": The mummy adds 2 to its AC against the attack, possibly causing the attack to miss, and the mummy teleports up to 60 feet to an unoccupied space it can see. Each creature of its choice that it can see within 5 feet of its destination space has the Blinded condition until the end of the mummy’s next turn."
+    },
+    {
+      "id": "legendary_actions_glare",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Glare as written.",
+      "source_text": "The mummy uses Dreadful Glare. The mummy can’t take this action again until the start of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium or Small Undead (Cleric), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +10 (20) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 187 (25d8 + 75)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |\n| **Int** | 11 | +0 | +5 | **Wis** 19 | +4 | +9 | **Cha** 16 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** History +5, Perception +9, Religion +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 60 ft.; Passive Perception 19",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common plus three other languages",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 15 (XP 13,000, or 15,000 in lair; PB +5)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the mummy fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The mummy has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Undead Restoration.*** If destroyed, the mummy gains a new body in 24 hours if its heart is intact, reviving with all its Hit Points. The new body appears in an unoccupied space within the mummy’s lair. The heart is a Tiny object that has AC 17, HP 10, and Immunity to all damage except Fire.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/2",
+        "md:traits_undead_restoration"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The mummy makes one Rotting Fist or Channel Negative Energy attack, and it uses Dreadful Glare.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rotting Fist.*** *Melee Attack Roll:* +9, reach 5 ft. *Hit:* 15 (2d10 + 4) Bludgeoning damage plus 10 (3d6) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can’t regain Hit Points, it gains no benefit from finishing a Long Rest, and its Hit Point maximum decreases by 10 (3d6) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/2",
+        "md:actions_rotting_fist_rider"
+      ]
+    },
+    {
+      "text": "***Channel Negative Energy.*** *Ranged Attack Roll:* +9, range 60 ft. *Hit:* 25 (6d6 + 4) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Dreadful Glare.*** *Wisdom Saving Throw:* DC 17, one creature the mummy can see within 60 feet. *Failure:* 25 (6d6 + 4) Psychic damage, and the target has the Paralyzed condition until the end of the mummy’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC 17, +9 to hit with spell attacks):\n\n**At Will:** *Dispel Magic*, *Thaumaturgy*\n\n**1/Day Each:** *Animate Dead*, *Harm*, *Insect Plague* (level 7 version)",
+      "status": "structured",
+      "by": [
+        "/data/actions/4",
+        "/data/rules/1",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Whirlwind of Sand.*** *Trigger:* The mummy is hit by an attack roll. *Response:* The mummy adds 2 to its AC against the attack, possibly causing the attack to miss, and the mummy teleports up to 60 feet to an unoccupied space it can see. Each creature of its choice that it can see within 5 feet of its destination space has the Blinded condition until the end of the mummy’s next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/10",
+        "md:reactions_whirlwind_of_sand_rider"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the mummy can expend a use to take one of the following actions. The mummy regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Dread Command.*** The mummy casts *Command* (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can’t take this action again until the start of its next turn.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/0",
+        "/effects/11",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Glare.*** The mummy uses Dreadful Glare. The mummy can’t take this action again until the start of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/1",
+        "md:legendary_actions_glare"
+      ]
+    },
+    {
+      "text": "***Necrotic Strike.*** The mummy makes one Rotting Fist or Channel Negative Energy attack.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/2",
+        "/data/rules/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned",
+    "dnd5e/rule/reaction",
+    "dnd5e/spell/animate-dead",
+    "dnd5e/spell/command",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/harm",
+    "dnd5e/spell/insect-plague",
+    "dnd5e/spell/thaumaturgy"
+  ]
+}

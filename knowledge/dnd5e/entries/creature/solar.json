@@ -1,0 +1,808 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/solar",
+  "kind": "creature",
+  "name": "Solar",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      326,
+      327
+    ],
+    "section": "Monsters A–Z/Solar/Solar",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Large Celestial (Angel), Lawful Good*\n\n| **AC** 21 | **Initiative** +20 (30) |\n\n**HP** 297 (22d10 + 176)\n\n**Speed** 50 ft., Fly 150 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 26 | +8 | +8 | **Dex** 22 | +6 | +6 | **Con** 26 | +8 | +8 |\n| **Int** | 25 | +7 | +7 | **Wis** 25 | +7 | +7 | **Cha** 30 | +10 +10 |\n\n**Skills** Perception +14\n\n**Immunities** Poison, Radiant; Charmed, Exhaustion, Frightened, Poisoned\n\n**Senses** Truesight 120 ft.; Passive Perception 24\n\n**Languages** All; telepathy 120 ft.\n\n**CR** 21 (XP 33,000; PB +7)\n\n##### Traits\n\n***Divine Awareness.*** The solar knows if it hears a lie.\n\n***Exalted Restoration.*** If the solar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.\n\n***Legendary Resistance (4/Day).*** If the solar fails a saving throw, it can choose to succeed instead.\n\n***Magic Resistance.*** The solar has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow.\n\n***Flying Sword.*** *Melee or Ranged Attack Roll:* +15, reach 10 ft. or range 120 ft. *Hit:* 22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. *Hit or Miss:* The sword magically returns to the solar’s hand or hovers within 5 feet of the solar immediately after a ranged attack.\n\n***Slaying Bow.*** *Dexterity Saving Throw:* DC 21, one creature the solar can see within 600 feet. *Failure:* If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage.\n\n***Spellcasting.*** The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):\n\n**At Will:** *Detect Evil and Good*\n\n**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Resurrection*\n\n##### Bonus Actions\n\n***Divine Aid (3/Day).*** The solar casts *Cure Wounds* (level 2 version), *Lesser Restoration*, or *Remove Curse*, using the same spellcasting ability as Spellcasting.\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3. Immediately after another creature’s turn, the solar can expend a use to take one of the following actions. The solar regains all expended uses at the start of each of its turns.*\n\n***Blinding Gaze.*** *Constitution Saving Throw:* DC 25, one creature the solar can see within 120 feet. *Failure:* The target has the Blinded condition for 1 minute. *Failure or Success:* The solar can’t take this action again until the start of its next turn.\n\n***Radiant Teleport.*** The solar teleports up to 60 feet to an unoccupied space it can see. *Dexterity Saving Throw:* DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. *Failure:* 11 (2d10) Radiant damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "cr": "21"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Celestial",
+    "alignment": "Lawful Good",
+    "tags": [
+      "Angel"
+    ],
+    "type_line": "Large Celestial (Angel), Lawful Good",
+    "ac": {
+      "value": 21,
+      "text": "21"
+    },
+    "initiative": {
+      "modifier": 20,
+      "score": 30,
+      "text": "+20 (30)"
+    },
+    "hp": {
+      "average": 297,
+      "formula": {
+        "op": "add",
+        "args": [
+          "22d10",
+          176
+        ]
+      },
+      "text": "297 (22d10 + 176)"
+    },
+    "speed": {
+      "text": "50 ft., Fly 150 ft. (hover)",
+      "walk": 50,
+      "fly": 150,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 26,
+        "mod": 8,
+        "save": 8
+      },
+      "dex": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "con": {
+        "score": 26,
+        "mod": 8,
+        "save": 8
+      },
+      "int": {
+        "score": 25,
+        "mod": 7,
+        "save": 7
+      },
+      "wis": {
+        "score": 25,
+        "mod": 7,
+        "save": 7
+      }
+    },
+    "skills": {
+      "perception": 14,
+      "text": "Perception +14"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison",
+        "radiant"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison, Radiant; Charmed, Exhaustion, Frightened, Poisoned"
+    },
+    "senses": {
+      "text": "Truesight 120 ft.; Passive Perception 24",
+      "truesight": 120,
+      "passive_perception": 24
+    },
+    "languages": {
+      "text": "All; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "21",
+      "xp": 33000,
+      "proficiency_bonus": 7,
+      "text": "21 (XP 33,000; PB +7)"
+    },
+    "traits": [
+      {
+        "name": "Divine Awareness",
+        "text": "The solar knows if it hears a lie."
+      },
+      {
+        "name": "Exalted Restoration",
+        "text": "If the solar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia."
+      },
+      {
+        "name": "Legendary Resistance",
+        "per_day": 4,
+        "text": "If the solar fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The solar has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow."
+      },
+      {
+        "name": "Flying Sword",
+        "text": "*Melee or Ranged Attack Roll:* +15, reach 10 ft. or range 120 ft. *Hit:* 22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. *Hit or Miss:* The sword magically returns to the solar’s hand or hovers within 5 feet of the solar immediately after a ranged attack."
+      },
+      {
+        "name": "Slaying Bow",
+        "text": "*Dexterity Saving Throw:* DC 21, one creature the solar can see within 600 feet. *Failure:* If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):\n\n**At Will:** *Detect Evil and Good*\n\n**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Resurrection*"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Divine Aid",
+        "per_day": 3,
+        "text": "The solar casts *Cure Wounds* (level 2 version), *Lesser Restoration*, or *Remove Curse*, using the same spellcasting ability as Spellcasting."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Blinding Gaze",
+        "text": "*Constitution Saving Throw:* DC 25, one creature the solar can see within 120 feet. *Failure:* The target has the Blinded condition for 1 minute. *Failure or Success:* The solar can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Radiant Teleport",
+        "text": "The solar teleports up to 60 feet to an unoccupied space it can see. *Dexterity Saving Throw:* DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. *Failure:* 11 (2d10) Radiant damage. *Success:* Half damage."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3. Immediately after another creature’s turn, the solar can expend a use to take one of the following actions. The solar regains all expended uses at the start of each of its turns.",
+      "uses": 3
+    },
+    "rules": [
+      {
+        "id": "restoration",
+        "dies_outside": "Mount Celestia",
+        "revives_in": "Mount Celestia",
+        "hit_points": "all"
+      },
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Flying Sword",
+            "count": 2
+          }
+        ],
+        "text": "The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25): At Will: Detect Evil and Good 1/Day Each: Commune, Control Weather, Dispel Evil and Good, Resurrection",
+        "ability": "cha",
+        "save_dc": 25,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-evil-and-good",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/commune",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/control-weather",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/dispel-evil-and-good",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/resurrection",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 4,
+        "per": "day"
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Flying Sword",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 15,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 10
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d6",
+                  8
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "8d8",
+              "damage_type": "radiant"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slaying Bow",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 21,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 600
+            },
+            "text": "one creature the solar can see within 600 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d8",
+                  6
+                ]
+              },
+              "damage_type": "piercing"
+            },
+            {
+              "op": "damage",
+              "amount": "8d8",
+              "damage_type": "radiant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-evil-and-good",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 25
+        }
+      ],
+      "name": "Detect Evil and Good"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/commune",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 25
+        }
+      ],
+      "name": "Commune",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/control-weather",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 25
+        }
+      ],
+      "name": "Control Weather",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-evil-and-good",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 25
+        }
+      ],
+      "name": "Dispel Evil and Good",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/resurrection",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 25
+        }
+      ],
+      "name": "Resurrection",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Divine Aid",
+      "then": [
+        {
+          "op": "choice",
+          "id": "divine_aid",
+          "choose": 1,
+          "options": [
+            {
+              "id": "cure_wounds",
+              "label": "cure-wounds",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/cure-wounds",
+                  "slot": "none"
+                }
+              ]
+            },
+            {
+              "id": "lesser_restoration",
+              "label": "lesser-restoration",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/lesser-restoration",
+                  "slot": "none"
+                }
+              ]
+            },
+            {
+              "id": "remove_curse",
+              "label": "remove-curse",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/remove-curse",
+                  "slot": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "frequency": {
+        "count": 3,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Blinding Gaze",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 25,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            },
+            "text": "one creature the solar can see within 120 feet"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Radiant Teleport",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 25,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 10,
+              "origin": "self"
+            },
+            "text": "each creature in a 10-foot Emanation originating from the solar at its destination space"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "2d10",
+              "damage_type": "radiant"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_divine_awareness",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Divine Awareness as written.",
+      "source_text": "The solar knows if it hears a lie."
+    },
+    {
+      "id": "actions_flying_sword_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Flying Sword as written.",
+      "source_text": "22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. Hit or Miss: The sword magically returns to the solar’s hand or hovers within 5 feet of the solar immediately after a ranged attack."
+    },
+    {
+      "id": "actions_slaying_bow_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Slaying Bow as written.",
+      "source_text": "If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage."
+    },
+    {
+      "id": "legendary_actions_blinding_gaze_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Blinding Gaze as written.",
+      "source_text": "Failure or Success: The solar can’t take this action again until the start of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Celestial (Angel), Lawful Good*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 21 | **Initiative** +20 (30) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 297 (22d10 + 176)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 50 ft., Fly 150 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 26 | +8 | +8 | **Dex** 22 | +6 | +6 | **Con** 26 | +8 | +8 |\n| **Int** | 25 | +7 | +7 | **Wis** 25 | +7 | +7 | **Cha** 30 | +10 +10 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +14",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison, Radiant; Charmed, Exhaustion, Frightened, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 120 ft.; Passive Perception 24",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** All; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 21 (XP 33,000; PB +7)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Divine Awareness.*** The solar knows if it hears a lie.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_divine_awareness"
+      ]
+    },
+    {
+      "text": "***Exalted Restoration.*** If the solar dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (4/Day).*** If the solar fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The solar has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/3",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The solar makes two Flying Sword attacks. It can replace one attack with a use of Slaying Bow.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Flying Sword.*** *Melee or Ranged Attack Roll:* +15, reach 10 ft. or range 120 ft. *Hit:* 22 (4d6 + 8) Slashing damage plus 36 (8d8) Radiant damage. *Hit or Miss:* The sword magically returns to the solar’s hand or hovers within 5 feet of the solar immediately after a ranged attack.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/1",
+        "/effects/2",
+        "md:actions_flying_sword_rider"
+      ]
+    },
+    {
+      "text": "***Slaying Bow.*** *Dexterity Saving Throw:* DC 21, one creature the solar can see within 600 feet. *Failure:* If the creature has 100 Hit Points or fewer, it dies. It otherwise takes 24 (4d8 + 6) Piercing damage plus 36 (8d8) Radiant damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/3",
+        "md:actions_slaying_bow_rider"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The solar casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 25):\n\n**At Will:** *Detect Evil and Good*\n\n**1/Day Each:** *Commune*, *Control Weather*, *Dispel Evil and Good*, *Resurrection*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/2",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Divine Aid (3/Day).*** The solar casts *Cure Wounds* (level 2 version), *Lesser Restoration*, or *Remove Curse*, using the same spellcasting ability as Spellcasting.",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/9"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3. Immediately after another creature’s turn, the solar can expend a use to take one of the following actions. The solar regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Blinding Gaze.*** *Constitution Saving Throw:* DC 25, one creature the solar can see within 120 feet. *Failure:* The target has the Blinded condition for 1 minute. *Failure or Success:* The solar can’t take this action again until the start of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/0",
+        "/effects/10",
+        "md:legendary_actions_blinding_gaze_rider"
+      ]
+    },
+    {
+      "text": "***Radiant Teleport.*** The solar teleports up to 60 feet to an unoccupied space it can see. *Dexterity Saving Throw:* DC 25, each creature in a 10-foot Emanation originating from the solar at its destination space. *Failure:* 11 (2d10) Radiant damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/1",
+        "/effects/11"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/commune",
+    "dnd5e/spell/control-weather",
+    "dnd5e/spell/cure-wounds",
+    "dnd5e/spell/detect-evil-and-good",
+    "dnd5e/spell/dispel-evil-and-good",
+    "dnd5e/spell/lesser-restoration",
+    "dnd5e/spell/remove-curse",
+    "dnd5e/spell/resurrection"
+  ]
+}

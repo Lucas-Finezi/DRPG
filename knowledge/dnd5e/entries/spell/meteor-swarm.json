@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/meteor-swarm",
+  "kind": "spell",
+  "name": "Meteor Swarm",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      149
+    ],
+    "section": "Spells/Spell Descriptions/Meteor Swarm",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 1 mile\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nBlazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius Sphere centered on each of those points makes a Dexterity saving throw. A creature takes 20d6 Fire damage and 20d6 Bludgeoning damage on a failed save or half as much damage on a successful one. A creature in the area of more than one fiery Sphere is affected only once.\n\nA nonmagical object that isn’t being worn or carried also takes the damage if it’s in the spell’s area, and the object starts burning if it’s flammable.",
+  "facets": {
+    "level": 9,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "miles": 1
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "objects",
+        "nonmagical_objects_take_damage": true,
+        "flammable_ignite": "dnd5e/hazard/burning"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "sphere",
+          "size_feet": 40,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "miles": 1
+        },
+        "count": 4,
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "20d6",
+          "damage_type": "fire"
+        },
+        {
+          "op": "damage",
+          "amount": "20d6",
+          "damage_type": "bludgeoning"
+        }
+      ],
+      "half_on_success": true,
+      "note": "A creature in more than one Sphere is affected only once."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Evocation (Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 1 mile\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius Sphere centered on each of those points makes a Dexterity saving throw. A creature takes 20d6 Fire damage and 20d6 Bludgeoning damage on a failed save or half as much damage on a successful one. A creature in the area of more than one fiery Sphere is affected only once.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "A nonmagical object that isn’t being worn or carried also takes the damage if it’s in the spell’s area, and the object starts burning if it’s flammable.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

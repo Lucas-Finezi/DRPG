@@ -1,0 +1,56 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/entertainers-pack",
+  "kind": "gear",
+  "name": "Entertainer’s Pack",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      97
+    ],
+    "section": "Equipment/Adventuring Gear/Entertainer’s Pack",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "An Entertainer’s Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+  "facets": {
+    "cost_cp": 4000
+  },
+  "data": {
+    "cost": {
+      "amount": 40,
+      "unit": "gp",
+      "cp": 4000
+    },
+    "weight_lb": 58.5,
+    "contents": [
+      "Backpack",
+      "Bedroll",
+      "Bell",
+      "Bullseye Lantern",
+      "3 Costumes",
+      "Mirror",
+      "8 flasks of Oil",
+      "9 days of Rations",
+      "Tinderbox",
+      "Waterskin"
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An Entertainer’s Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/contents"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,773 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/sorcerer",
+  "kind": "class",
+  "name": "Sorcerer",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64,
+      65
+    ],
+    "section": "Classes/Sorcerer",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Sorcerer Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D6 per Sorcerer level |\n| **Saving Throw Proficiencies** | Constitution and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Arcana, Deception, Insight, Intimidation, Persuasion, or Religion |\n| **Weapon Proficiencies** | Simple weapons |\n| **Armor Training** | None |\n| **Starting Equipment** | *Choose A or B:* (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP |\n\n### Becoming a Sorcerer …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Sorcerer Traits table.\n\n- Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table.\n\n#### As a Multiclass Character\n\n- Gain the Hit Point Die from the Core Sorcerer Traits table.\n\n- Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.\n\n### Sorcerer Class Features\n\nAs a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels. These features are listed in the Sorcerer Features table.\n\n##### Sorcerer Features\n\n**——Spell Slots per Spell Level——**\n\n| **Proficiency** | **Sorcery** | **Prepared** |\n| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| **Bonus** | **Points** | **Spells** |\n| 1 | +2 | Spellcasting, Innate Sorcery | — | 4 | 2 | 2 | — | — | — | — | — | — | — | — |\n| 2 | +2 | Font of Magic, Metamagic | 2 | 4 | 4 | 3 | — | — | — | — | — | — | — | — |\n| 3 | +2 | Sorcerer Subclass | 3 | 4 | 6 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | 4 | 5 | 7 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | +3 | Sorcerous Restoration | 5 | 5 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | +3 | Subclass feature | 6 | 5 | 10 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | +3 | Sorcery Incarnate | 7 | 5 | 11 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | +3 | Ability Score Improvement | 8 | 5 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | +4 | — | 9 | 5 | 14 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | +4 | Metamagic | 10 | 6 | 15 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | +4 | — | 11 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | +4 | Ability Score Improvement | 12 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | +5 | — | 13 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | +5 | Subclass feature | 14 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | +5 | — | 15 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | +5 | Ability Score Improvement | 16 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | +6 | Metamagic | 17 | 6 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | +6 | Subclass feature | 18 | 6 | 20 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | +6 | Epic Boon | 19 | 6 | 21 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | +6 | Arcane Apotheosis | 20 | 6 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+  "facets": {
+    "hit_die": "d6",
+    "primary_ability": [
+      "cha"
+    ],
+    "saving_throws": [
+      "con",
+      "cha"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Charisma",
+      "Hit Point Die": "D6 per Sorcerer level",
+      "Saving Throw Proficiencies": "Constitution and Charisma",
+      "Skill Proficiencies": "Choose 2: Arcana, Deception, Insight, Intimidation, Persuasion, or Religion",
+      "Weapon Proficiencies": "Simple weapons",
+      "Armor Training": "None",
+      "Starting Equipment": "Choose A or B: (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP"
+    },
+    "hit_die": "d6",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          6,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d6",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            4,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Spear",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/spear"
+          },
+          {
+            "name": "Daggers",
+            "quantity": 2,
+            "ref": "dnd5e/weapon/dagger"
+          },
+          {
+            "name": "Arcane Focus (crystal)",
+            "quantity": 1,
+            "ref": "dnd5e/gear/arcane-focus-crystal"
+          },
+          {
+            "name": "Dungeoneer’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/dungeoneers-pack"
+          }
+        ],
+        "gp": 28
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 50
+      }
+    ],
+    "features_table": {
+      "id": "sorcerer_features",
+      "caption": "Sorcerer Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Sorcery Points",
+        "Cantrips",
+        "Prepared Spells",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-spellcasting"
+          },
+          {
+            "ref": "dnd5e/feature/sorcerer-innate-sorcery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sorcery Points": "—",
+          "Cantrips": "4",
+          "Prepared Spells": "2",
+          "1": "2",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-font-of-magic"
+          },
+          {
+            "ref": "dnd5e/feature/sorcerer-metamagic"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sorcery Points": "2",
+          "Cantrips": "4",
+          "Prepared Spells": "4",
+          "1": "3",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-sorcerer-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sorcery Points": "3",
+          "Cantrips": "4",
+          "Prepared Spells": "6",
+          "1": "4",
+          "2": "2",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Sorcery Points": "4",
+          "Cantrips": "5",
+          "Prepared Spells": "7",
+          "1": "4",
+          "2": "3",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-sorcerous-restoration"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sorcery Points": "5",
+          "Cantrips": "5",
+          "Prepared Spells": "9",
+          "1": "4",
+          "2": "3",
+          "3": "2",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/draconic-sorcery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sorcery Points": "6",
+          "Cantrips": "5",
+          "Prepared Spells": "10",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-sorcery-incarnate"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sorcery Points": "7",
+          "Cantrips": "5",
+          "Prepared Spells": "11",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "1",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Sorcery Points": "8",
+          "Cantrips": "5",
+          "Prepared Spells": "12",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "2",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "9": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sorcery Points": "9",
+          "Cantrips": "5",
+          "Prepared Spells": "14",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "1",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-metamagic",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sorcery Points": "10",
+          "Cantrips": "6",
+          "Prepared Spells": "15",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "—",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "11": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sorcery Points": "11",
+          "Cantrips": "6",
+          "Prepared Spells": "16",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Sorcery Points": "12",
+          "Cantrips": "6",
+          "Prepared Spells": "16",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "—",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "13": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sorcery Points": "13",
+          "Cantrips": "6",
+          "Prepared Spells": "17",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/draconic-sorcery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sorcery Points": "14",
+          "Cantrips": "6",
+          "Prepared Spells": "17",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "—",
+          "9": "—"
+        }
+      },
+      "15": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sorcery Points": "15",
+          "Cantrips": "6",
+          "Prepared Spells": "18",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "—"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Sorcery Points": "16",
+          "Cantrips": "6",
+          "Prepared Spells": "18",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "—"
+        }
+      },
+      "17": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-metamagic",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sorcery Points": "17",
+          "Cantrips": "6",
+          "Prepared Spells": "19",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/draconic-sorcery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sorcery Points": "18",
+          "Cantrips": "6",
+          "Prepared Spells": "20",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "1",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sorcery Points": "19",
+          "Cantrips": "6",
+          "Prepared Spells": "21",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "2",
+          "7": "1",
+          "8": "1",
+          "9": "1"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/sorcerer-arcane-apotheosis"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Sorcery Points": "20",
+          "Cantrips": "6",
+          "Prepared Spells": "22",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "3",
+          "6": "2",
+          "7": "2",
+          "8": "1",
+          "9": "1"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/draconic-sorcery",
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d6",
+        "saving_throws": [
+          "con",
+          "cha"
+        ],
+        "skills": {
+          "choose": 2,
+          "from": [
+            "arcana",
+            "deception",
+            "insight",
+            "intimidation",
+            "persuasion",
+            "religion"
+          ]
+        },
+        "weapons": "Simple weapons",
+        "armor_training": "None"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "sorcerer_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "con",
+        "cha"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 2,
+      "from": [
+        "arcana",
+        "deception",
+        "insight",
+        "intimidation",
+        "persuasion",
+        "religion"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple"
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "starting_equipment",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Spear",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/spear"
+                },
+                {
+                  "name": "Daggers",
+                  "quantity": 2,
+                  "ref": "dnd5e/weapon/dagger"
+                },
+                {
+                  "name": "Arcane Focus (crystal)",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/arcane-focus-crystal"
+                },
+                {
+                  "name": "Dungeoneer’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/dungeoneers-pack"
+                }
+              ],
+              "gp": 28
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "grant",
+              "gp": 50
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Sorcerer Traits\n\n| **Primary Ability** | Charisma |\n| **Hit Point Die** | D6 per Sorcerer level |\n| **Saving Throw Proficiencies** | Constitution and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Arcana, Deception, Insight, Intimidation, Persuasion, or Religion |\n| **Weapon Proficiencies** | Simple weapons |\n| **Armor Training** | None |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "### Becoming a Sorcerer …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Sorcerer Traits table.\n\n- Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the Hit Point Die from the Core Sorcerer Traits table.\n\n- Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Sorcerer Class Features\n\nAs a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels. These features are listed in the Sorcerer Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Sorcerer Features\n\n**——Spell Slots per Spell Level——**\n\n| **Proficiency** | **Sorcery** | **Prepared** |\n| **Level** | **Class Features** | **Cantrips** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** |\n| **Bonus** | **Points** | **Spells** |\n| 1 | +2 | Spellcasting, Innate Sorcery | — | 4 | 2 | 2 | — | — | — | — | — | — | — | — |\n| 2 | +2 | Font of Magic, Metamagic | 2 | 4 | 4 | 3 | — | — | — | — | — | — | — | — |\n| 3 | +2 | Sorcerer Subclass | 3 | 4 | 6 | 4 | 2 | — | — | — | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | 4 | 5 | 7 | 4 | 3 | — | — | — | — | — | — | — |\n| 5 | +3 | Sorcerous Restoration | 5 | 5 | 9 | 4 | 3 | 2 | — | — | — | — | — | — |\n| 6 | +3 | Subclass feature | 6 | 5 | 10 | 4 | 3 | 3 | — | — | — | — | — | — |\n| 7 | +3 | Sorcery Incarnate | 7 | 5 | 11 | 4 | 3 | 3 | 1 | — | — | — | — | — |\n| 8 | +3 | Ability Score Improvement | 8 | 5 | 12 | 4 | 3 | 3 | 2 | — | — | — | — | — |\n| 9 | +4 | — | 9 | 5 | 14 | 4 | 3 | 3 | 3 | 1 | — | — | — | — |\n| 10 | +4 | Metamagic | 10 | 6 | 15 | 4 | 3 | 3 | 3 | 2 | — | — | — | — |\n| 11 | +4 | — | 11 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 12 | +4 | Ability Score Improvement | 12 | 6 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |\n| 13 | +5 | — | 13 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 14 | +5 | Subclass feature | 14 | 6 | 17 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |\n| 15 | +5 | — | 15 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 16 | +5 | Ability Score Improvement | 16 | 6 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |\n| 17 | +6 | Metamagic | 17 | 6 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |\n| 18 | +6 | Subclass feature | 18 | 6 | 20 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |\n| 19 | +6 | Epic Boon | 19 | 6 | 21 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |\n| 20 | +6 | Arcane Apotheosis | 20 | 6 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/sorcerer-ability-score-improvement",
+    "dnd5e/feature/sorcerer-arcane-apotheosis",
+    "dnd5e/feature/sorcerer-epic-boon",
+    "dnd5e/feature/sorcerer-font-of-magic",
+    "dnd5e/feature/sorcerer-innate-sorcery",
+    "dnd5e/feature/sorcerer-metamagic",
+    "dnd5e/feature/sorcerer-sorcerer-subclass",
+    "dnd5e/feature/sorcerer-sorcerous-restoration",
+    "dnd5e/feature/sorcerer-sorcery-incarnate",
+    "dnd5e/feature/sorcerer-spellcasting",
+    "dnd5e/gear/arcane-focus-crystal",
+    "dnd5e/gear/dungeoneers-pack",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/dagger",
+    "dnd5e/weapon/spear"
+  ]
+}

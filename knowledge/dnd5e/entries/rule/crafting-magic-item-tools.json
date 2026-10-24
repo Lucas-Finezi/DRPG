@@ -1,0 +1,97 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/crafting-magic-item-tools",
+  "kind": "rule",
+  "name": "Tools (Magic Item Crafting)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      206,
+      207
+    ],
+    "section": "Magic Items/Crafting Magic Items/Tools",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "The Magic Item Tools table lists which tool is required to make a magic item of each category. You must use the required tool to make an item and have proficiency with that tool. Any assistants must also have proficiency with it. For more information on the tools, see “Equipment.”\n\n##### Magic Item Tools\n\n| **Item Category** | **Required Tool** |\n| Armor | Leatherworker’s Tools, Smith’s Tools, or Weaver’s Tools depending on the kind of armor as noted in the tools’ descriptions |\n| Potion | Alchemist’s Supplies or Herbalism Kit |\n| Ring | Jeweler’s Tools |\n| Rod | Woodcarver’s Tools |\n| Scroll | Calligrapher’s Supplies |\n| Staff | Woodcarver’s Tools |\n| Wand | Woodcarver’s Tools |\n| Weapon | Leatherworker’s Tools, Smith’s Tools, or Woodcarver’s Tools depending on the kind of weapon as noted in the tools’ descriptions |\n| Wondrous Item | Tinker’s Tools or the tool required to make the nonmagical item on which the magic item is based |",
+  "data": {
+    "rules": [
+      {
+        "id": "tools",
+        "required_and_proficient": true,
+        "assistants_proficient": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "magic_item_tools",
+        "caption": "Magic Item Tools",
+        "columns": [
+          "Item Category",
+          "Required Tool"
+        ],
+        "rows": [
+          [
+            "Armor",
+            "Leatherworker’s Tools, Smith’s Tools, or Weaver’s Tools depending on the kind of armor as noted in the tools’ descriptions"
+          ],
+          [
+            "Potion",
+            "Alchemist’s Supplies or Herbalism Kit"
+          ],
+          [
+            "Ring",
+            "Jeweler’s Tools"
+          ],
+          [
+            "Rod",
+            "Woodcarver’s Tools"
+          ],
+          [
+            "Scroll",
+            "Calligrapher’s Supplies"
+          ],
+          [
+            "Staff",
+            "Woodcarver’s Tools"
+          ],
+          [
+            "Wand",
+            "Woodcarver’s Tools"
+          ],
+          [
+            "Weapon",
+            "Leatherworker’s Tools, Smith’s Tools, or Woodcarver’s Tools depending on the kind of weapon as noted in the tools’ descriptions"
+          ],
+          [
+            "Wondrous Item",
+            "Tinker’s Tools or the tool required to make the nonmagical item on which the magic item is based"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Magic Item Tools table lists which tool is required to make a magic item of each category. You must use the required tool to make an item and have proficiency with that tool. Any assistants must also have proficiency with it. For more information on the tools, see “Equipment.”",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Magic Item Tools\n\n| **Item Category** | **Required Tool** |\n| Armor | Leatherworker’s Tools, Smith’s Tools, or Weaver’s Tools depending on the kind of armor as noted in the tools’ descriptions |\n| Potion | Alchemist’s Supplies or Herbalism Kit |\n| Ring | Jeweler’s Tools |\n| Rod | Woodcarver’s Tools |\n| Scroll | Calligrapher’s Supplies |\n| Staff | Woodcarver’s Tools |\n| Wand | Woodcarver’s Tools |\n| Weapon | Leatherworker’s Tools, Smith’s Tools, or Woodcarver’s Tools depending on the kind of weapon as noted in the tools’ descriptions |\n| Wondrous Item | Tinker’s Tools or the tool required to make the nonmagical item on which the magic item is based |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

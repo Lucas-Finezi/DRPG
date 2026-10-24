@@ -1,0 +1,226 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/command",
+  "kind": "spell",
+  "name": "Command",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      116
+    ],
+    "section": "Spells/Spell Descriptions/Command",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Enchantment (Bard, Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nYou speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:\n\n**Approach.** The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.\n\n**Drop.** The target drops whatever it is holding and then ends its turn.\n\n**Flee.** The target spends its turn moving away from you by the fastest available means.\n\n**Grovel.** The target has the Prone condition and then ends its turn.\n\n**Halt.** On its turn, the target doesn’t move and takes no action or Bonus Action.\n\n***Using a Higher-Level Spell Slot.*** You can affect one additional creature for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric",
+      "paladin"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                1
+              ]
+            }
+          ]
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "choice",
+          "id": "command",
+          "choose": 1,
+          "options": [
+            {
+              "id": "approach",
+              "label": "Approach",
+              "effects": [
+                {
+                  "op": "move",
+                  "mode": "move",
+                  "note": "Toward you by the shortest route; ends its turn within 5 feet of you."
+                }
+              ]
+            },
+            {
+              "id": "drop",
+              "label": "Drop",
+              "effects": [
+                {
+                  "op": "restrict",
+                  "restrictions": [
+                    "hold_items"
+                  ],
+                  "note": "Drops what it holds, then ends its turn."
+                }
+              ]
+            },
+            {
+              "id": "flee",
+              "label": "Flee",
+              "effects": [
+                {
+                  "op": "move",
+                  "mode": "move",
+                  "note": "Away from you by the fastest means for its turn."
+                }
+              ]
+            },
+            {
+              "id": "grovel",
+              "label": "Grovel",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/prone",
+                  "note": "Then it ends its turn."
+                }
+              ]
+            },
+            {
+              "id": "halt",
+              "label": "Halt",
+              "effects": [
+                {
+                  "op": "restrict",
+                  "restrictions": [
+                    "move",
+                    "take_actions",
+                    "take_bonus_actions"
+                  ],
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_end",
+                      "whose": "target",
+                      "which": "next"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Enchantment (Bard, Cleric, Paladin)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "**Approach.** The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/0"
+      ]
+    },
+    {
+      "text": "**Drop.** The target drops whatever it is holding and then ends its turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/1"
+      ]
+    },
+    {
+      "text": "**Flee.** The target spends its turn moving away from you by the fastest available means.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/2"
+      ]
+    },
+    {
+      "text": "**Grovel.** The target has the Prone condition and then ends its turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/3"
+      ]
+    },
+    {
+      "text": "**Halt.** On its turn, the target doesn’t move and takes no action or Bonus Action.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_fail/0/options/4"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can affect one additional creature for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/target/count"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

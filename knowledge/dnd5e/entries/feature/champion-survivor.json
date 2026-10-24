@@ -1,0 +1,107 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/champion-survivor",
+  "kind": "feature",
+  "name": "Survivor",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      49
+    ],
+    "section": "Classes/Fighter/Fighter Subclass: Champion/Level 18: Survivor",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You attain the pinnacle of resilience in battle, giving you these benefits.\n\n***Defy Death.*** You have Advantage on Death Saving Throws. Moreover, when you roll 18–20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n\n***Heroic Rally.*** At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/champion",
+    "level": 18
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "death_saving_throw"
+      ]
+    },
+    {
+      "op": "modifier",
+      "stat": "death_save_natural_20_min",
+      "mode": "min",
+      "value": 18,
+      "note": "A roll of 18–20 counts as rolling a 20."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self"
+      },
+      "condition": {
+        "all": [
+          {
+            "pred": "hp_is",
+            "args": {
+              "bloodied": true
+            }
+          },
+          {
+            "not": {
+              "pred": "hp_is",
+              "args": {
+                "zero": true
+              }
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "op": "add",
+            "args": [
+              5,
+              {
+                "var": "ability_mod.con"
+              }
+            ]
+          },
+          "target": {
+            "kind": "self"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You attain the pinnacle of resilience in battle, giving you these benefits.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Defy Death.*** You have Advantage on Death Saving Throws. Moreover, when you roll 18–20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Heroic Rally.*** At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ]
+}

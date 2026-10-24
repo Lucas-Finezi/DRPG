@@ -1,0 +1,314 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/octopus",
+  "kind": "creature",
+  "name": "Octopus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      357,
+      358
+    ],
+    "section": "Animals/Octopus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Small Beast, Unaligned*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 3 (1d6)\n\n**Speed** 5 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |\n\n**Skills** Perception +2, Stealth +6\n\n**Senses** Darkvision 30 ft.; Passive Perception 12\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Compression.*** The octopus can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Water Breathing.*** The octopus can breathe only underwater.\n\n##### Actions\n\n***Tentacles.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Bludgeoning damage.\n\n##### Reactions\n\n***Ink Cloud (1/Day).*** *Trigger:* A creature ends its turn within 5 feet of the octopus while underwater. *Response:* The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+  "facets": {
+    "group": "animal",
+    "size": "Small",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Small Beast, Unaligned",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 3,
+      "formula": "1d6",
+      "text": "3 (1d6)"
+    },
+    "speed": {
+      "text": "5 ft., Swim 30 ft.",
+      "walk": 5,
+      "swim": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "stealth": 6,
+      "text": "Perception +2, Stealth +6"
+    },
+    "senses": {
+      "text": "Darkvision 30 ft.; Passive Perception 12",
+      "darkvision": 30,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Compression",
+        "text": "The octopus can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Water Breathing",
+        "text": "The octopus can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacles",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Bludgeoning damage."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Ink Cloud",
+        "per_day": 1,
+        "text": "*Trigger:* A creature ends its turn within 5 feet of the octopus while underwater. *Response:* The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tentacles",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": 1,
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: A creature ends its turn within 5 feet of the octopus while underwater."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_compression",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Compression as written.",
+      "source_text": "The octopus can move through a space as narrow as 1 inch without expending extra movement to do so."
+    },
+    {
+      "id": "reactions_ink_cloud_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Ink Cloud as written.",
+      "source_text": ": The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 3 (1d6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 4 | −3 | −3 | **Dex** 15 | +2 | +2 | **Con** 11 | +0 | +0 |\n| **Int** | 3 | −4 | −4 | **Wis** 10 | +0 | +0 | **Cha** 4 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2, Stealth +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 30 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Compression.*** The octopus can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_compression"
+      ]
+    },
+    {
+      "text": "***Water Breathing.*** The octopus can breathe only underwater.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Tentacles.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 1 Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Ink Cloud (1/Day).*** *Trigger:* A creature ends its turn within 5 feet of the octopus while underwater. *Response:* The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/2",
+        "md:reactions_ink_cloud_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/reaction"
+  ]
+}

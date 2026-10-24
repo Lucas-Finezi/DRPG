@@ -1,0 +1,103 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/message",
+  "kind": "spell",
+  "name": "Message",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      148,
+      149
+    ],
+    "section": "Spells/Spell Descriptions/Message",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L17"
+  },
+  "tier": 1,
+  "text": "*Transmutation Cantrip (Bard, Druid, Sorcerer,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** S, M (a copper wire)\n\n**Duration:** 1 round\n\nYou point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.\n\nYou can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell.",
+  "facets": {
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": false,
+      "somatic": true,
+      "material": "a copper wire"
+    },
+    "duration": {
+      "text": "1 round",
+      "kind": "rounds",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "message",
+        "target": "creature_within_range",
+        "only_target_hears": true,
+        "reply_whisper_only_caster_hears": true
+      },
+      {
+        "id": "through_barriers",
+        "requires": [
+          "familiar_with_target",
+          "knows_target_beyond_barrier"
+        ],
+        "blocked_by": [
+          "magical_silence",
+          "1_foot_stone_metal_or_wood",
+          "thin_sheet_of_lead"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Transmutation Cantrip (Bard, Druid, Sorcerer,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** S, M (a copper wire)\n\n**Duration:** 1 round",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/chuul",
+  "kind": "creature",
+  "name": "Chuul",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      273,
+      274
+    ],
+    "section": "Monsters A–Z/Chuul/Chuul",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Aberration, Chaotic Evil*\n\n| **AC** 16 | **Initiative** +0 (10) |\n\n**HP** 76 (9d10 + 27)\n\n**Speed** 30 ft., Swim 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |\n| **Int** | 5 | −3 | −3 | **Wis** 11 | +0 | +0 | **Cha** 5 | −3 | −3 |\n\n**Skills** Perception +4\n\n**Immunities** Poison; Poisoned\n\n**Senses** Darkvision 60 ft.; Passive Perception 14\n\n**Languages** Understands Deep Speech but can’t speak\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Traits\n\n***Amphibious.*** The chuul can breathe air and water.\n\n***Sense Magic.*** The chuul senses magic within 120 feet of itself. This trait otherwise works like the *Detect Magic* spell but isn’t itself magical.\n\n##### Actions\n\n***Multiattack.*** The chuul makes two Pincer attacks and uses Paralyzing Tentacles.\n\n***Pincer.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two pincers.\n\n***Paralyzing Tentacles.*** *Constitution Saving Throw:* DC 13, one creature Grappled by the chuul. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While Poisoned, the target has the Paralyzed condition.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Chaotic Evil",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Chaotic Evil",
+    "type_line": "Large Aberration, Chaotic Evil",
+    "ac": {
+      "value": 16,
+      "text": "16"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 76,
+      "formula": {
+        "op": "add",
+        "args": [
+          "9d10",
+          27
+        ]
+      },
+      "text": "76 (9d10 + 27)"
+    },
+    "speed": {
+      "text": "30 ft., Swim 30 ft.",
+      "walk": 30,
+      "swim": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 4,
+      "text": "Perception +4"
+    },
+    "immunities": {
+      "damage_types": [
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison; Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 14",
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Understands Deep Speech but can’t speak"
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The chuul can breathe air and water."
+      },
+      {
+        "name": "Sense Magic",
+        "text": "The chuul senses magic within 120 feet of itself. This trait otherwise works like the *Detect Magic* spell but isn’t itself magical."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The chuul makes two Pincer attacks and uses Paralyzing Tentacles."
+      },
+      {
+        "name": "Pincer",
+        "text": "*Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two pincers."
+      },
+      {
+        "name": "Paralyzing Tentacles",
+        "text": "*Constitution Saving Throw:* DC 13, one creature Grappled by the chuul. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While Poisoned, the target has the Paralyzed condition."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Pincer",
+            "count": 2
+          }
+        ],
+        "text": "The chuul makes two Pincer attacks and uses Paralyzing Tentacles."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Pincer",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d10",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 14
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Paralyzing Tentacles",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 13,
+          "target": {
+            "kind": "creature",
+            "text": "one creature Grappled by the chuul"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed"
+            }
+          ],
+          "repeat": {
+            "on": {
+              "event": "turn_end",
+              "whose": "target",
+              "which": "each"
+            },
+            "ends": "effect_on_self"
+          }
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_sense_magic",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Sense Magic as written.",
+      "source_text": "The chuul senses magic within 120 feet of itself. This trait otherwise works like the Detect Magic spell but isn’t itself magical."
+    },
+    {
+      "id": "actions_paralyzing_tentacles_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Paralyzing Tentacles as written.",
+      "source_text": "The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While Poisoned, the target has the Paralyzed condition."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Aberration, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 16 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 76 (9d10 + 27)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Swim 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 10 | +0 | +0 | **Con** 16 | +3 | +3 |\n| **Int** | 5 | −3 | −3 | **Wis** 11 | +0 | +0 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison; Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Understands Deep Speech but can’t speak",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The chuul can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Sense Magic.*** The chuul senses magic within 120 feet of itself. This trait otherwise works like the *Detect Magic* spell but isn’t itself magical.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_sense_magic"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The chuul makes two Pincer attacks and uses Paralyzing Tentacles.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Pincer.*** *Melee Attack Roll:* +6, reach 10 ft. *Hit:* 9 (1d10 + 4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of two pincers.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Paralyzing Tentacles.*** *Constitution Saving Throw:* DC 13, one creature Grappled by the chuul. *Failure:* The target has the Poisoned condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While Poisoned, the target has the Paralyzed condition.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/2",
+        "md:actions_paralyzing_tentacles_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned"
+  ]
+}

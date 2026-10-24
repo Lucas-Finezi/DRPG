@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/dragonborn-draconic-ancestry",
+  "kind": "feature",
+  "name": "Draconic Ancestry",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      84
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Dragonborn",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Draconic Ancestry.*** Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/dragonborn"
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "draconic_ancestry",
+      "choose": 1,
+      "options": [
+        {
+          "id": "black",
+          "label": "Black",
+          "value": "acid",
+          "effects": []
+        },
+        {
+          "id": "blue",
+          "label": "Blue",
+          "value": "lightning",
+          "effects": []
+        },
+        {
+          "id": "brass",
+          "label": "Brass",
+          "value": "fire",
+          "effects": []
+        },
+        {
+          "id": "bronze",
+          "label": "Bronze",
+          "value": "lightning",
+          "effects": []
+        },
+        {
+          "id": "copper",
+          "label": "Copper",
+          "value": "acid",
+          "effects": []
+        },
+        {
+          "id": "gold",
+          "label": "Gold",
+          "value": "fire",
+          "effects": []
+        },
+        {
+          "id": "green",
+          "label": "Green",
+          "value": "poison",
+          "effects": []
+        },
+        {
+          "id": "red",
+          "label": "Red",
+          "value": "fire",
+          "effects": []
+        },
+        {
+          "id": "silver",
+          "label": "Silver",
+          "value": "cold",
+          "effects": []
+        },
+        {
+          "id": "white",
+          "label": "White",
+          "value": "cold",
+          "effects": []
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Draconic Ancestry.*** Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

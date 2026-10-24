@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:duration",
+  "title": "Duration",
+  "description": "How long an effect, condition or spell lasts, and what ends it early.",
+  "type": "object",
+  "required": ["kind"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "enum": [
+        "instantaneous",
+        "rounds",
+        "minutes",
+        "hours",
+        "days",
+        "until_event",
+        "until_dispelled",
+        "until_dispelled_or_triggered",
+        "permanent",
+        "while",
+        "special"
+      ],
+      "description": "'until_event' ends at the event in 'until' (e.g. start of your next turn); 'while' lasts as long as 'while' holds; 'special' is described in the source text and needs a master decision or a rule elsewhere."
+    },
+    "amount": {
+      "description": "Number of rounds/minutes/hours/days.",
+      "$ref": "urn:drpg:schema:expression"
+    },
+    "up_to": {
+      "description": "True when the source says 'up to' (the effect may end sooner, e.g. concentration).",
+      "type": "boolean"
+    },
+    "concentration": { "type": "boolean" },
+    "until": { "$ref": "#/$defs/event_ref" },
+    "while": {
+      "description": "Predicate that must keep holding.",
+      "$ref": "urn:drpg:schema:effect#/$defs/predicate"
+    },
+    "ends_on": {
+      "description": "Additional events that end the duration early (e.g. the target takes damage).",
+      "type": "array",
+      "items": { "$ref": "#/$defs/event_ref" }
+    },
+    "text": {
+      "description": "The source's duration wording, verbatim (e.g. 'Concentration, up to 1 minute').",
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["rounds", "minutes", "hours", "days"] } } },
+      "then": { "required": ["amount"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "until_event" } } },
+      "then": { "required": ["until"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "while" } } },
+      "then": { "required": ["while"] }
+    }
+  ],
+  "$defs": {
+    "event_ref": {
+      "description": "A registered event, optionally scoped to whose turn/rest it is.",
+      "type": "object",
+      "required": ["event"],
+      "additionalProperties": false,
+      "properties": {
+        "event": { "$ref": "urn:drpg:schema:common#/$defs/registry_name" },
+        "whose": { "enum": ["self", "source", "target", "any"], "default": "self" },
+        "which": {
+          "description": "'next' = the next occurrence after the effect starts; 'each' = every occurrence.",
+          "enum": ["next", "each"],
+          "default": "next"
+        }
+      }
+    }
+  }
+}

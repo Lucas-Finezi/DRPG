@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/hazard/dehydration",
+  "kind": "hazard",
+  "name": "Dehydration",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Dehydration [Hazard]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 2,
+  "text": "A creature requires an amount of water per day based on its size, as shown in the Water Needs per Day table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day’s end. Exhaustion caused by dehydration can’t be removed until the creature drinks the full amount of water required for a day. *See also* “Exhaustion.”\n\n##### Water Needs per Day\n\n| **Size** | **Water** |\n| Tiny | 1/4 gallon |\n| Small | 1 gallon |\n| Medium | 1 gallon |\n| **Size** | **Water** |\n| Large | 4 gallons |\n| Huge | 16 gallons |\n| Gargantuan | 64 gallons |",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Hazard"
+  },
+  "data": {
+    "tables": [
+      {
+        "id": "water_needs_per_day",
+        "caption": "Water Needs per Day",
+        "columns": [
+          "Size",
+          "Water"
+        ],
+        "rows": [
+          [
+            "Tiny",
+            "1/4 gallon"
+          ],
+          [
+            "Small",
+            "1 gallon"
+          ],
+          [
+            "Medium",
+            "1 gallon"
+          ],
+          [
+            "Large",
+            "4 gallons"
+          ],
+          [
+            "Huge",
+            "16 gallons"
+          ],
+          [
+            "Gargantuan",
+            "64 gallons"
+          ]
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "removal_blocked_until",
+        "drinks_full_daily_water": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "day_ends"
+      },
+      "note": "When the creature drank less than half the required water that day.",
+      "then": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/exhaustion",
+          "params": {
+            "levels": 1
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A creature requires an amount of water per day based on its size, as shown in the Water Needs per Day table.",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day’s end.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Exhaustion caused by dehydration can’t be removed until the creature drinks the full amount of water required for a day.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Exhaustion.”\n\n##### Water Needs per Day\n\n| **Size** | **Water** |\n| Tiny | 1/4 gallon |\n| Small | 1 gallon |\n| Medium | 1 gallon |\n| **Size** | **Water** |\n| Large | 4 gallons |\n| Huge | 16 gallons |\n| Gargantuan | 64 gallons |",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/condition/exhaustion"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion"
+  ]
+}

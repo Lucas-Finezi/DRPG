@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/champion-heroic-warrior",
+  "kind": "feature",
+  "name": "Heroic Warrior",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      49
+    ],
+    "section": "Classes/Fighter/Fighter Subclass: Champion/Level 10: Heroic Warrior",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/champion",
+    "level": 10
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "self"
+      },
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "in_combat"
+          },
+          {
+            "not": {
+              "pred": "has_heroic_inspiration"
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "grant",
+          "refs": [
+            "dnd5e/rule/heroic-inspiration"
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/heroic-inspiration"
+  ]
+}

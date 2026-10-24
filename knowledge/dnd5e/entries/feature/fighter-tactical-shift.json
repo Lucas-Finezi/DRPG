@@ -1,0 +1,65 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-tactical-shift",
+  "kind": "feature",
+  "name": "Tactical Shift",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 5: Tactical Shift",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 5
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "uses_feature.fighter-second-wind"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "used_bonus_action"
+      },
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": {
+            "op": "div",
+            "args": [
+              {
+                "var": "speed.walk"
+              },
+              2
+            ]
+          },
+          "provokes_opportunity_attacks": false
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

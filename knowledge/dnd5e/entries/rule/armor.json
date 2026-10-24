@@ -1,0 +1,114 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/armor",
+  "kind": "rule",
+  "name": "Armor",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      92
+    ],
+    "section": "Equipment/Armor",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L29"
+  },
+  "tier": 1,
+  "text": "The Armor table lists the game’s main armor. The table includes the cost and weight of armor, as well as the following details:\n\n**Category.** Every type of armor falls into a category:\n\nLight, Medium, or Heavy. The category determines how long it takes to don or doff the armor (as shown in the table).\n\n**Armor Class (AC).** The table’s Armor Class column tells you what your base AC is when you wear a type of armor. For example, if you wear Leather Armor, your base AC is 11 plus your Dexterity modifier, whereas your AC is 16 in Chain Mail.\n\n**Strength.** If the table shows a Strength score in the Strength column for an armor type, that armor reduces the wearer’s speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.\n\n**Stealth.** If the table shows “Disadvantage” in the Stealth column for an armor type, the wearer has Disadvantage on Dexterity (Stealth) checks.\n\n##### Armor\n\n| **Armor** | **Armor Class (AC)** | **Strength** | **Stealth** | **Weight** | **Cost** |\n\n*Light Armor (1 Minute to Don or Doff)*\n\n*Medium Armor (5 Minutes to Don and 1 Minute to Doff)*\n\n*Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*\n\n*Shield (Utilize Action to Don or Doff)*",
+  "data": {
+    "rules": [
+      {
+        "id": "table_columns",
+        "columns": [
+          "armor",
+          "armor_class",
+          "strength",
+          "stealth",
+          "weight",
+          "cost"
+        ]
+      },
+      {
+        "id": "category",
+        "values": [
+          "light",
+          "medium",
+          "heavy"
+        ],
+        "determines": "don_and_doff_time"
+      },
+      {
+        "id": "armor_class",
+        "column_gives": "base_ac"
+      },
+      {
+        "id": "strength",
+        "speed_reduction_feet": 10,
+        "unless_strength_at_least": "listed_score"
+      },
+      {
+        "id": "stealth",
+        "disadvantage_on": "dexterity_stealth_checks"
+      },
+      {
+        "id": "armor_table",
+        "groups": [
+          "Light Armor (1 Minute to Don or Doff)",
+          "Medium Armor (5 Minutes to Don and 1 Minute to Doff)",
+          "Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)",
+          "Shield (Utilize Action to Don or Doff)"
+        ],
+        "rows": "dnd5e/armor/*"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Armor table lists the game’s main armor. The table includes the cost and weight of armor, as well as the following details:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Category.** Every type of armor falls into a category:\n\nLight, Medium, or Heavy. The category determines how long it takes to don or doff the armor (as shown in the table).",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Armor Class (AC).** The table’s Armor Class column tells you what your base AC is when you wear a type of armor. For example, if you wear Leather Armor, your base AC is 11 plus your Dexterity modifier, whereas your AC is 16 in Chain Mail.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Strength.** If the table shows a Strength score in the Strength column for an armor type, that armor reduces the wearer’s speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Stealth.** If the table shows “Disadvantage” in the Stealth column for an armor type, the wearer has Disadvantage on Dexterity (Stealth) checks.",
+      "status": "structured",
+      "by": [
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "##### Armor\n\n| **Armor** | **Armor Class (AC)** | **Strength** | **Stealth** | **Weight** | **Cost** |\n\n*Light Armor (1 Minute to Don or Doff)*\n\n*Medium Armor (5 Minutes to Don and 1 Minute to Doff)*\n\n*Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)*\n\n*Shield (Utilize Action to Don or Doff)*",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:effect",
+  "title": "Effect",
+  "description": "One typed instruction of the closed effect vocabulary ('op'). Content (official and homebrew) only composes these ops; only the engine executes them. Extending automation means adding an op here (with tests), never code inside content. Identifiers (abilities, damage types, stats, rolls, events, predicates) must be declared in the system's registries.",
+  "type": "object",
+  "required": [
+    "op"
+  ],
+  "properties": {
+    "op": {
+      "enum": [
+        "damage",
+        "heal",
+        "temp_hp",
+        "apply_condition",
+        "remove_condition",
+        "restrict",
+        "auto_result",
+        "modifier",
+        "roll_mode",
+        "defense",
+        "proficiency",
+        "sense",
+        "speed",
+        "resource",
+        "spend",
+        "restore",
+        "save",
+        "attack",
+        "check",
+        "reroll",
+        "move",
+        "grant",
+        "cast_spell",
+        "summon",
+        "transform",
+        "trigger",
+        "activation",
+        "choice",
+        "repeat",
+        "end_effect",
+        "reference",
+        "master_decision"
+      ]
+    },
+    "id": {
+      "description": "Optional local id, unique within the entry, so other parts (coverage, triggers) can point to this effect.",
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "target": {
+      "$ref": "urn:drpg:schema:target"
+    },
+    "duration": {
+      "$ref": "urn:drpg:schema:duration"
+    },
+    "when": {
+      "description": "The effect only applies while this predicate holds.",
+      "$ref": "#/$defs/predicate"
+    },
+    "note": {
+      "description": "Short clarification for humans; never interpreted by the engine.",
+      "type": "string"
+    }
+  },
+  "unevaluatedProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "damage"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "amount",
+          "damage_type"
+        ],
+        "properties": {
+          "amount": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "damage_type": {
+            "$ref": "#/$defs/identifier_or_choice"
+          },
+          "critical": {
+            "description": "Dice of this damage are doubled on a Critical Hit (default true for attack damage).",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "enum": [
+              "heal",
+              "temp_hp"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "amount"
+        ],
+        "properties": {
+          "amount": {
+            "$ref": "urn:drpg:schema:expression"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "apply_condition"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "condition"
+        ],
+        "properties": {
+          "condition": {
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
+          },
+          "params": {
+            "description": "Condition parameters the source specifies (e.g. escape DC of Grappled, Exhaustion levels).",
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "urn:drpg:schema:expression"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "remove_condition"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "conditions"
+        ],
+        "properties": {
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/ref"
+            },
+            "minItems": 1
+          },
+          "count": {
+            "description": "How many of the listed conditions are removed (default all).",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "levels": {
+            "description": "For leveled conditions (Exhaustion): how many levels are removed.",
+            "$ref": "urn:drpg:schema:expression"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "modifier"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "stat",
+          "mode",
+          "value"
+        ],
+        "properties": {
+          "stat": {
+            "description": "Registered stat, e.g. 'ac', 'attack_roll', 'damage_roll', 'saving_throw.dex', 'hp_max'.",
+            "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+          },
+          "mode": {
+            "enum": [
+              "add",
+              "set",
+              "min",
+              "max",
+              "multiply"
+            ]
+          },
+          "value": {
+            "$ref": "urn:drpg:schema:expression"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "roll_mode"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "mode",
+          "rolls"
+        ],
+        "properties": {
+          "mode": {
+            "enum": [
+              "advantage",
+              "disadvantage"
+            ]
+          },
+          "rolls": {
+            "description": "Registered roll kinds, e.g. 'attack_roll', 'ability_check', 'saving_throw.dex'.",
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "minItems": 1
+          },
+          "direction": {
+            "description": "'own' = rolls made by the affected creature; 'against' = rolls made against it.",
+            "enum": [
+              "own",
+              "against"
+            ],
+            "default": "own"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "defense"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "resistance",
+              "immunity",
+              "vulnerability"
+            ]
+          },
+          "damage_types": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/identifier_or_choice"
+            }
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/ref"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "proficiency"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "category"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "skill",
+              "tool",
+              "weapon",
+              "armor",
+              "saving_throw",
+              "language"
+            ]
+          },
+          "items": {
+            "description": "Fixed grants (identifiers or refs).",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "choose": {
+            "description": "Number to choose from 'from'.",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "from": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expertise": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "sense"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "sense",
+          "range_feet"
+        ],
+        "properties": {
+          "sense": {
+            "$ref": "urn:drpg:schema:common#/$defs/identifier"
+          },
+          "range_feet": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "mode": {
+            "enum": [
+              "set",
+              "add",
+              "max"
+            ],
+            "default": "max"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "speed"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "movement",
+          "mode",
+          "value"
+        ],
+        "properties": {
+          "movement": {
+            "$ref": "urn:drpg:schema:common#/$defs/identifier"
+          },
+          "mode": {
+            "enum": [
+              "set",
+              "add",
+              "multiply",
+              "min",
+              "max",
+              "equal_to_walk"
+            ]
+          },
+          "value": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "hover": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "resource"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "resource",
+          "max"
+        ],
+        "properties": {
+          "resource": {
+            "description": "Resource id, unique for the owner (e.g. 'rage').",
+            "$ref": "urn:drpg:schema:common#/$defs/identifier"
+          },
+          "name": {
+            "type": "string"
+          },
+          "max": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "recovery": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "on",
+                "amount"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "on": {
+                  "$ref": "urn:drpg:schema:duration#/$defs/event_ref"
+                },
+                "amount": {
+                  "oneOf": [
+                    {
+                      "const": "all"
+                    },
+                    {
+                      "$ref": "urn:drpg:schema:expression"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "enum": [
+              "spend",
+              "restore"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "resource",
+          "amount"
+        ],
+        "properties": {
+          "resource": {
+            "description": "Resource id or registered pool (e.g. 'spell_slot', 'hit_point_dice').",
+            "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+          },
+          "amount": {
+            "oneOf": [
+              {
+                "const": "all"
+              },
+              {
+                "$ref": "urn:drpg:schema:expression"
+              }
+            ]
+          },
+          "level": {
+            "description": "Slot level for spell slots.",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "max_level": {
+            "description": "For spell slots restored by combined level: highest slot level that may be restored.",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "save"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "ability",
+          "dc"
+        ],
+        "properties": {
+          "ability": {
+            "$ref": "#/$defs/identifier_or_choice"
+          },
+          "dc": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "on_fail": {
+            "$ref": "#/$defs/effects"
+          },
+          "on_success": {
+            "$ref": "#/$defs/effects"
+          },
+          "half_on_success": {
+            "description": "Damage effects in on_fail deal half (rounded down) on a success.",
+            "type": "boolean"
+          },
+          "repeat": {
+            "description": "The target repeats the save at this event; on success 'ends' applies.",
+            "type": "object",
+            "required": [
+              "on"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "on": {
+                "$ref": "urn:drpg:schema:duration#/$defs/event_ref"
+              },
+              "ends": {
+                "enum": [
+                  "effect",
+                  "effect_on_self"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "attack"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "attack_type"
+        ],
+        "properties": {
+          "attack_type": {
+            "enum": [
+              "melee_weapon",
+              "ranged_weapon",
+              "melee_spell",
+              "ranged_spell",
+              "melee",
+              "ranged"
+            ]
+          },
+          "bonus": {
+            "description": "Fixed attack bonus (stat blocks) or expression; omitted = derived by the engine.",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "on_hit": {
+            "$ref": "#/$defs/effects"
+          },
+          "on_miss": {
+            "$ref": "#/$defs/effects"
+          },
+          "on_critical": {
+            "$ref": "#/$defs/effects"
+          },
+          "ability_modifier_to_damage": {
+            "description": "Whether the attack's ability modifier is added to its damage: 'add' (default for weapon attacks), 'none', or 'negative_only' (extra attacks such as Cleave or the Light property).",
+            "enum": [
+              "add",
+              "none",
+              "negative_only"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "check"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "ability"
+        ],
+        "properties": {
+          "ability": {
+            "$ref": "#/$defs/identifier_or_choice"
+          },
+          "skill": {
+            "$ref": "#/$defs/identifier_or_choice"
+          },
+          "dc": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "contest": {
+            "description": "Opposed check: the other party's ability/skill.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "ability": {
+                "$ref": "#/$defs/identifier_or_choice"
+              },
+              "skill": {
+                "$ref": "#/$defs/identifier_or_choice"
+              }
+            }
+          },
+          "on_success": {
+            "$ref": "#/$defs/effects"
+          },
+          "on_fail": {
+            "$ref": "#/$defs/effects"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "move"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "mode"
+        ],
+        "properties": {
+          "mode": {
+            "enum": [
+              "push",
+              "pull",
+              "teleport",
+              "move",
+              "jump",
+              "fall",
+              "drag"
+            ]
+          },
+          "distance_feet": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "provokes_opportunity_attacks": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "grant"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "refs": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/ref"
+            },
+            "minItems": 1
+          },
+          "choose": {
+            "description": "Grant only this many of 'refs' (or of the spells in the listed spell lists, see 'filter'), chosen by the player; with an 'id', the choice is readable as {'var': 'chosen.<id>'}.",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "items": {
+            "description": "Equipment granted (starting equipment, packages): items with quantities; 'ref' when the item has an entry.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "quantity"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "ref": {
+                  "$ref": "urn:drpg:schema:common#/$defs/ref"
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "anyOf": [
+                {
+                  "required": [
+                    "ref"
+                  ]
+                },
+                {
+                  "required": [
+                    "name"
+                  ]
+                }
+              ]
+            }
+          },
+          "gp": {
+            "description": "Gold Pieces granted.",
+            "type": "number",
+            "minimum": 0
+          },
+          "filter": {
+            "description": "For refs that are spell lists: which spells may be chosen.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "spell_level": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9
+              },
+              "school": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "refs"
+            ]
+          },
+          {
+            "required": [
+              "items"
+            ]
+          },
+          {
+            "required": [
+              "gp"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "cast_spell"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "spell"
+        ],
+        "properties": {
+          "spell": {
+            "description": "The spell, or the spell chosen earlier ({'var': 'chosen.<grant id>'}).",
+            "anyOf": [
+              {
+                "$ref": "urn:drpg:schema:common#/$defs/ref"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "var"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "var": {
+                    "type": "string",
+                    "pattern": "^chosen\\."
+                  }
+                }
+              }
+            ]
+          },
+          "level": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "slot": {
+            "description": "'none' = cast without expending a spell slot.",
+            "enum": [
+              "required",
+              "none"
+            ]
+          },
+          "components": {
+            "description": "Components still required (empty = none).",
+            "type": "array",
+            "items": {
+              "enum": [
+                "V",
+                "S",
+                "M"
+              ]
+            }
+          },
+          "ability": {
+            "description": "Spellcasting ability for this casting.",
+            "$ref": "#/$defs/identifier_or_choice"
+          },
+          "save_dc": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "attack_bonus": {
+            "$ref": "urn:drpg:schema:expression"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "summon"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "creature"
+        ],
+        "properties": {
+          "creature": {
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
+          },
+          "count": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "controller": {
+            "enum": [
+              "summoner",
+              "none",
+              "gm"
+            ]
+          },
+          "initiative": {
+            "enum": [
+              "shared",
+              "own",
+              "after_summoner"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "transform"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "into"
+        ],
+        "properties": {
+          "into": {
+            "description": "A creature ref, or a filter the player chooses from.",
+            "oneOf": [
+              {
+                "$ref": "urn:drpg:schema:common#/$defs/ref"
+              },
+              {
+                "$ref": "urn:drpg:schema:target#/properties/filter"
+              }
+            ]
+          },
+          "keeps": {
+            "description": "Statistics the transformed creature keeps (registered stat names).",
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "trigger"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "event",
+          "then"
+        ],
+        "properties": {
+          "event": {
+            "$ref": "urn:drpg:schema:duration#/$defs/event_ref"
+          },
+          "condition": {
+            "$ref": "#/$defs/predicate"
+          },
+          "cost": {
+            "$ref": "urn:drpg:schema:common#/$defs/action_cost"
+          },
+          "optional": {
+            "description": "The owner may choose not to use it.",
+            "type": "boolean"
+          },
+          "frequency": {
+            "$ref": "#/$defs/frequency"
+          },
+          "then": {
+            "$ref": "#/$defs/effects"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "activation"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "cost",
+          "then"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "cost": {
+            "$ref": "urn:drpg:schema:common#/$defs/action_cost"
+          },
+          "requires": {
+            "description": "Predicate that must hold to activate (e.g. not wearing Heavy armor).",
+            "$ref": "#/$defs/predicate"
+          },
+          "uses": {
+            "description": "Resource spent per activation.",
+            "type": "object",
+            "required": [
+              "resource"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "resource": {
+                "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+              },
+              "amount": {
+                "$ref": "urn:drpg:schema:expression"
+              }
+            }
+          },
+          "frequency": {
+            "$ref": "#/$defs/frequency"
+          },
+          "then": {
+            "$ref": "#/$defs/effects"
+          },
+          "movement_cost": {
+            "description": "Movement (in feet) the activation spends.",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "action": {
+            "description": "The specific action taken when cost is 'action' (ref to an action entry, e.g. dnd5e/action/magic for 'As a Magic action').",
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "choice"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "choose",
+          "options"
+        ],
+        "properties": {
+          "choose": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "chooser": {
+            "enum": [
+              "owner",
+              "target",
+              "gm",
+              "random"
+            ],
+            "default": "owner"
+          },
+          "distinct": {
+            "type": "boolean",
+            "default": true
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "effects"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_-]+$"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "roll": {
+                  "description": "Die result range for random choices, e.g. '01-10'.",
+                  "type": "string"
+                },
+                "effects": {
+                  "$ref": "#/$defs/effects"
+                },
+                "value": {
+                  "description": "Value this option fixes, readable later as {'var': 'chosen.<choice id>'}.",
+                  "type": [
+                    "string",
+                    "number"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "repeat"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "times",
+          "then"
+        ],
+        "properties": {
+          "times": {
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "then": {
+            "$ref": "#/$defs/effects"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "end_effect"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "scope"
+        ],
+        "properties": {
+          "scope": {
+            "enum": [
+              "this_entry",
+              "this_entry_on_target",
+              "ref",
+              "concentration"
+            ]
+          },
+          "ref": {
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "reference"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "rule"
+        ],
+        "properties": {
+          "rule": {
+            "description": "Shared rule this text defers to (e.g. Grappling, Opportunity Attacks).",
+            "$ref": "urn:drpg:schema:common#/$defs/ref"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "master_decision"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "decision"
+        ],
+        "properties": {
+          "decision": {
+            "description": "Id of an entry in this entry's master_decisions.",
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "restrict"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "restrictions"
+        ],
+        "properties": {
+          "restrictions": {
+            "description": "Things the affected creature can't do (registered in 'restrictions').",
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "auto_result"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "rolls",
+          "result"
+        ],
+        "properties": {
+          "rolls": {
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "minItems": 1
+          },
+          "result": {
+            "enum": [
+              "fail",
+              "success",
+              "hit",
+              "miss",
+              "critical_hit"
+            ]
+          },
+          "direction": {
+            "description": "'own' = rolls made by the affected creature; 'against' = rolls made against it.",
+            "enum": [
+              "own",
+              "against"
+            ],
+            "default": "own"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "op": {
+            "const": "reroll"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "rolls",
+          "keep"
+        ],
+        "properties": {
+          "rolls": {
+            "description": "Registered roll kinds (or 'any_die') that may be rerolled.",
+            "type": "array",
+            "items": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "minItems": 1
+          },
+          "dice": {
+            "description": "How many dice are rerolled (default 1).",
+            "$ref": "urn:drpg:schema:expression"
+          },
+          "keep": {
+            "enum": [
+              "new",
+              "higher",
+              "lower",
+              "choice"
+            ],
+            "description": "Which result is used after the reroll."
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "identifier_or_choice": {
+      "description": "A registered identifier, or a choice among several.",
+      "oneOf": [
+        {
+          "$ref": "urn:drpg:schema:common#/$defs/identifier"
+        },
+        {
+          "type": "object",
+          "required": [
+            "choose_from"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "choose_from": {
+              "type": "array",
+              "items": {
+                "$ref": "urn:drpg:schema:common#/$defs/identifier"
+              },
+              "minItems": 2
+            },
+            "chooser": {
+              "enum": [
+                "owner",
+                "target",
+                "gm"
+              ],
+              "default": "owner"
+            },
+            "when_chosen": {
+              "enum": [
+                "on_use",
+                "on_gain",
+                "on_cast"
+              ],
+              "default": "on_use"
+            }
+          }
+        },
+        {
+          "description": "Value fixed by an earlier choice (e.g. {'var': 'chosen.draconic_ancestry'}).",
+          "$ref": "urn:drpg:schema:expression#/$defs/var"
+        }
+      ]
+    },
+    "frequency": {
+      "type": "object",
+      "required": [
+        "count",
+        "per"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "$ref": "urn:drpg:schema:expression"
+        },
+        "per": {
+          "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+        }
+      }
+    },
+    "predicate": {
+      "description": "Boolean condition built from registered predicates.",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "pred"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "pred": {
+              "$ref": "urn:drpg:schema:common#/$defs/registry_name"
+            },
+            "args": {
+              "type": "object"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "all": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/predicate"
+              },
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "any": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/predicate"
+              },
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/predicate"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

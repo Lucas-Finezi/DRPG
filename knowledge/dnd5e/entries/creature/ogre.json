@@ -1,0 +1,272 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ogre",
+  "kind": "creature",
+  "name": "Ogre",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      312
+    ],
+    "section": "Monsters A–Z/Ogre/Ogre",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 2,
+  "text": "*Large Giant, Chaotic Evil*\n\n| **AC** 11 | **Initiative** −1 (9) |\n\n**HP** 68 (8d10 + 24)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 | +3 | +3 |\n| **Int** | 5 | −3 | −3 | **Wis** 7 | −2 | −2 | **Cha** 7 | −2 | −2 |\n\n**Gear** Greatclub, Javelins (3)\n\n**Senses** Darkvision 60 ft.; Passive Perception 8\n\n**Languages** Common, Giant\n\n**CR** 2 (XP 450; PB +2)\n\n##### Actions\n\n***Greatclub.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (2d8 + 4) Bludgeoning damage.\n\n***Javelin.*** *Melee or Ranged Attack Roll:* +6, reach 5 ft. or range 30/120 ft. *Hit:* 11 (2d6 + 4) Piercing damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "cr": "2"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "type_line": "Large Giant, Chaotic Evil",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": -1,
+      "score": 9,
+      "text": "−1 (9)"
+    },
+    "hp": {
+      "average": 68,
+      "formula": {
+        "op": "add",
+        "args": [
+          "8d10",
+          24
+        ]
+      },
+      "text": "68 (8d10 + 24)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      },
+      "wis": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "gear": {
+      "text": "Greatclub, Javelins (3)"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 8",
+      "darkvision": 60,
+      "passive_perception": 8
+    },
+    "languages": {
+      "text": "Common, Giant"
+    },
+    "cr": {
+      "value": "2",
+      "xp": 450,
+      "proficiency_bonus": 2,
+      "text": "2 (XP 450; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Greatclub",
+        "text": "*Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (2d8 + 4) Bludgeoning damage."
+      },
+      {
+        "name": "Javelin",
+        "text": "*Melee or Ranged Attack Roll:* +6, reach 5 ft. or range 30/120 ft. *Hit:* 11 (2d6 + 4) Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Greatclub",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  4
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Javelin",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 6,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Giant, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** −1 (9) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 68 (8d10 + 24)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 16 | +3 | +3 |\n| **Int** | 5 | −3 | −3 | **Wis** 7 | −2 | −2 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Gear** Greatclub, Javelins (3)",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 8",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Giant",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 2 (XP 450; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Greatclub.*** *Melee Attack Roll:* +6, reach 5 ft. *Hit:* 13 (2d8 + 4) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Javelin.*** *Melee or Ranged Attack Roll:* +6, reach 5 ft. or range 30/120 ft. *Hit:* 11 (2d6 + 4) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    }
+  ]
+}

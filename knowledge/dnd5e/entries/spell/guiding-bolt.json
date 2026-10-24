@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/guiding-bolt",
+  "kind": "spell",
+  "name": "Guiding Bolt",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      138
+    ],
+    "section": "Spells/Spell Descriptions/Guiding Bolt",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Evocation (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** 1 round\n\nYou hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 1.",
+  "facets": {
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 round",
+      "kind": "rounds",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_spell",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  4,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      1
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "radiant"
+        },
+        {
+          "op": "roll_mode",
+          "mode": "advantage",
+          "rolls": [
+            "attack_roll"
+          ],
+          "direction": "against",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "source",
+              "which": "next"
+            },
+            "ends_on": [
+              {
+                "event": "targeted_by_attack_roll",
+                "whose": "target"
+              }
+            ]
+          },
+          "note": "Only the next attack roll against it."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Evocation (Cleric)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** 1 round",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 1.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount"
+      ]
+    }
+  ]
+}

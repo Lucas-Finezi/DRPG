@@ -1,0 +1,108 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/protection-from-energy",
+  "kind": "spell",
+  "name": "Protection from Energy",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      157
+    ],
+    "section": "Spells/Spell Descriptions/Protection from Energy",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Abjuration (Cleric, Druid, Ranger, Sorcerer,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour\n\nFor the duration, the willing creature you touch has Resistance to one damage type of your choice: Acid, Cold, Fire, Lightning, or Thunder.",
+  "facets": {
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "choose_from": [
+            "acid",
+            "cold",
+            "fire",
+            "lightning",
+            "thunder"
+          ]
+        }
+      ],
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Abjuration (Cleric, Druid, Ranger, Sorcerer,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "For the duration, the willing creature you touch has Resistance to one damage type of your choice: Acid, Cold, Fire, Lightning, or Thunder.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

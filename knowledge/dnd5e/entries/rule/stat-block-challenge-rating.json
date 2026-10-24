@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-challenge-rating",
+  "kind": "rule",
+  "name": "Challenge Rating (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      256
+    ],
+    "section": "Monsters/Parts of a Stat Block/Challenge Rating",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 0,
+  "text": "Challenge Rating is defined in “Rules Glossary,” while guidance on using CR to plan potential combat encounters is in “Gameplay Toolbox.”\n\n#### Experience Points\n\nThe number of Experience Points (XP) a monster is worth is based on its CR, as detailed in the Experience Points by Challenge Rating table. XP is awarded for defeating the monster in combat or otherwise neutralizing it.\n\nUnless a rule says otherwise, a monster summoned by a spell or another magical ability is worth the XP noted in its stat block.\n\n##### Experience Points by Challenge Rating\n\n| **CR** | **XP** | **CR** | **XP** |\n| 0 | 0 or 10 | 14 | 11,500 |\n| 1/8 | 25 | 15 | 13,000 |\n| 1/4 | 50 | 16 | 15,000 |\n| 1/2 | 100 | 17 | 18,000 |\n| 1 | 200 | 18 | 20,000 |\n| 2 | 450 | 19 | 22,000 |\n| 3 | 700 | 20 | 25,000 |\n| 4 | 1,100 | 21 | 33,000 |\n| 5 | 1,800 | 22 | 41,000 |\n| 6 | 2,300 | 23 | 50,000 |\n| 7 | 2,900 | 24 | 62,000 |\n| 8 | 3,900 | 25 | 75,000 |\n| 9 | 5,000 | 26 | 90,000 |\n| 10 | 5,900 | 27 | 105,000 |\n| **CR** | **XP** | **CR** | **XP** |\n| 11 | 7,200 | 28 | 120,000 |\n| 12 | 8,400 | 29 | 135,000 |\n| 13 | 10,000 | 30 | 155,000 |\n\n#### Proficiency Bonus\n\nA monster’s Proficiency Bonus (PB) is determined by its CR, as shown in the Proficiency Bonus by Challenge Rating table, and is reflected in saving throws, skills, and other statistics where the monster’s exceptional aptitude is a factor.\n\n##### Proficiency Bonus by Challenge Rating\n\n| **CR** | **PB** | **CR** | **PB** |\n| 0–4 | +2 | 17–20 | +6 |\n| 5–8 | +3 | 21–24 | +7 |\n| 9–12 | +4 | 25–28 | +8 |\n| 13–16 | +5 | 29–30 | +9 |",
+  "coverage": [
+    {
+      "text": "Challenge Rating is defined in “Rules Glossary,” while guidance on using CR to plan potential combat encounters is in “Gameplay Toolbox.”\n\n#### Experience Points\n\nThe number of Experience Points (XP) a monster is worth is based on its CR, as detailed in the Experience Points by Challenge Rating table. XP is awarded for defeating the monster in combat or otherwise neutralizing it.\n\nUnless a rule says otherwise, a monster summoned by a spell or another magical ability is worth the XP noted in its stat block.\n\n##### Experience Points by Challenge Rating\n\n| **CR** | **XP** | **CR** | **XP** |\n| 0 | 0 or 10 | 14 | 11,500 |\n| 1/8 | 25 | 15 | 13,000 |\n| 1/4 | 50 | 16 | 15,000 |\n| 1/2 | 100 | 17 | 18,000 |\n| 1 | 200 | 18 | 20,000 |\n| 2 | 450 | 19 | 22,000 |\n| 3 | 700 | 20 | 25,000 |\n| 4 | 1,100 | 21 | 33,000 |\n| 5 | 1,800 | 22 | 41,000 |\n| 6 | 2,300 | 23 | 50,000 |\n| 7 | 2,900 | 24 | 62,000 |\n| 8 | 3,900 | 25 | 75,000 |\n| 9 | 5,000 | 26 | 90,000 |\n| 10 | 5,900 | 27 | 105,000 |\n| **CR** | **XP** | **CR** | **XP** |\n| 11 | 7,200 | 28 | 120,000 |\n| 12 | 8,400 | 29 | 135,000 |\n| 13 | 10,000 | 30 | 155,000 |\n\n#### Proficiency Bonus\n\nA monster’s Proficiency Bonus (PB) is determined by its CR, as shown in the Proficiency Bonus by Challenge Rating table, and is reflected in saving throws, skills, and other statistics where the monster’s exceptional aptitude is a factor.\n\n##### Proficiency Bonus by Challenge Rating\n\n| **CR** | **PB** | **CR** | **PB** |\n| 0–4 | +2 | 17–20 | +6 |\n| 5–8 | +3 | 21–24 | +7 |\n| 9–12 | +4 | 25–28 | +8 |\n| 13–16 | +5 | 29–30 | +9 |",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/challenge-rating",
+        "dnd5e/rule/combat-encounters"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/challenge-rating",
+    "dnd5e/rule/combat-encounters"
+  ]
+}

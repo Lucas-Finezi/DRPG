@@ -1,0 +1,426 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/helm-of-brilliance",
+  "kind": "magic-item",
+  "name": "Helm of Brilliance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      225,
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Helm of Brilliance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Very Rare (Requires Attunement)*\n\nThis helm is set with 1d10 diamonds, 2d10 rubies, 3d10 fire opals, and 4d10 opals. Any gem pried from the helm crumbles to dust. When all the gems are removed or destroyed, the helm loses its magic.\n\nYou gain the following benefits while wearing the helm.\n\n***Diamond Light.*** As long as it has at least one diamond, the helm emits a 30-foot Emanation. When at least one Undead is within that area, the Emanation is filled with Dim Light. Any Undead that starts its turn in that area takes 1d6 Radiant damage.\n\n***Fire Opal Flames.*** As long as the helm has at least one fire opal, you can take a Magic action to cause one weapon you are holding to burst into flames. The flames emit Bright Light in a 10-foot radius and Dim Light for an additional 10 feet. The flames are harmless to you and the weapon. When you hit with an attack using the blazing weapon, the target takes an extra 1d6 Fire damage. The flames last until you take a Bonus Action to extinguish them or until you drop or stow the weapon.\n\n***Ruby Resistance.*** As long as the helm has at least one ruby, you have Resistance to Fire damage.\n\n***Spells.*** You can cast one of the following spells (save DC 18), using one of the helm’s gems of the specified type as a component: *Daylight* (opal), *Fireball* (fire opal), *Prismatic Spray* (diamond), or *Wall of Fire* (ruby). The gem is destroyed when the spell is cast and disappears from the helm.\n\n***Taking Fire Damage.*** Roll 1d20 if you are wearing the helm and take Fire damage as a result of failing a saving throw against a spell. On a roll of 1, the helm emits beams of light from its remaining gems and is then destroyed. Each creature within a 60-foot Emanation originating from you must succeed on a DC 17 Dexterity saving throw or be struck by a beam, taking Radiant damage equal to the number of gems in the helm.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "gems",
+        "diamond": "1d10",
+        "ruby": "2d10",
+        "fire_opal": "3d10",
+        "opal": "4d10",
+        "pried_gem_crumbles": true,
+        "no_gems": "loses its magic"
+      },
+      {
+        "id": "diamond_light",
+        "emanation_feet": 30,
+        "dim_light_when_undead_present": true
+      },
+      {
+        "id": "flame_light",
+        "bright_feet": 10,
+        "dim_feet": 10,
+        "harmless_to_you_and_weapon": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_start",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d6",
+          "damage_type": "radiant"
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_has_gem",
+            "args": {
+              "gem": "diamond"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "undead"
+              ]
+            }
+          },
+          {
+            "pred": "within_feet",
+            "args": {
+              "feet": 30
+            }
+          }
+        ]
+      },
+      "note": "Any Undead that starts its turn in the 30-foot Emanation."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "trigger",
+          "event": {
+            "event": "hits_with_attack_roll"
+          },
+          "then": [
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "fire",
+              "target": {
+                "kind": "inherit"
+              }
+            }
+          ],
+          "condition": {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "blazing_weapon"
+            }
+          }
+        }
+      ],
+      "requires": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_has_gem",
+            "args": {
+              "gem": "fire_opal"
+            }
+          }
+        ]
+      },
+      "note": "One held weapon bursts into flames until extinguished (Bonus Action), dropped or stowed."
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "fire"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_has_gem",
+            "args": {
+              "gem": "ruby"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/daylight",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18,
+          "note": "Destroys one opal from the helm."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18,
+          "note": "Destroys one fire opal from the helm."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/prismatic-spray",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18,
+          "note": "Destroys one diamond from the helm."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wall-of-fire",
+          "slot": "none",
+          "components": [],
+          "save_dc": 18,
+          "note": "Destroys one ruby from the helm."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "damage_taken",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "d20",
+          "choose": 1,
+          "note": "Roll 1d20.",
+          "options": [
+            {
+              "id": "one",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "dex",
+                  "dc": 17,
+                  "target": {
+                    "kind": "area",
+                    "area": {
+                      "shape": "emanation",
+                      "size_feet": 60,
+                      "origin": "self"
+                    }
+                  },
+                  "on_fail": [
+                    {
+                      "op": "damage",
+                      "amount": {
+                        "var": "item_gems"
+                      },
+                      "damage_type": "radiant"
+                    }
+                  ],
+                  "note": "Beams from the remaining gems; then the helm is destroyed."
+                },
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The helm is destroyed."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2–20",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/magic-item/helm-of-brilliance",
+                  "note": "No effect."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "fire"
+            }
+          },
+          {
+            "pred": "failed_save_against_spell"
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This helm is set with 1d10 diamonds, 2d10 rubies, 3d10 fire opals, and 4d10 opals. Any gem pried from the helm crumbles to dust. When all the gems are removed or destroyed, the helm loses its magic.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "You gain the following benefits while wearing the helm.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Diamond Light.*** As long as it has at least one diamond, the helm emits a 30-foot Emanation. When at least one Undead is within that area, the Emanation is filled with Dim Light. Any Undead that starts its turn in that area takes 1d6 Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Fire Opal Flames.*** As long as the helm has at least one fire opal, you can take a Magic action to cause one weapon you are holding to burst into flames. The flames emit Bright Light in a 10-foot radius and Dim Light for an additional 10 feet. The flames are harmless to you and the weapon. When you hit with an attack using the blazing weapon, the target takes an extra 1d6 Fire damage. The flames last until you take a Bonus Action to extinguish them or until you drop or stow the weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Ruby Resistance.*** As long as the helm has at least one ruby, you have Resistance to Fire damage.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spells.*** You can cast one of the following spells (save DC 18), using one of the helm’s gems of the specified type as a component: *Daylight* (opal), *Fireball* (fire opal), *Prismatic Spray* (diamond), or *Wall of Fire* (ruby). The gem is destroyed when the spell is cast and disappears from the helm.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6"
+      ]
+    },
+    {
+      "text": "***Taking Fire Damage.*** Roll 1d20 if you are wearing the helm and take Fire damage as a result of failing a saving throw against a spell. On a roll of 1, the helm emits beams of light from its remaining gems and is then destroyed. Each creature within a 60-foot Emanation originating from you must succeed on a DC 17 Dexterity saving throw or be struck by a beam, taking Radiant damage equal to the number of gems in the helm.",
+      "status": "structured",
+      "by": [
+        "/effects/7"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/magic-item/helm-of-brilliance",
+    "dnd5e/spell/daylight",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/prismatic-spray",
+    "dnd5e/spell/wall-of-fire"
+  ]
+}

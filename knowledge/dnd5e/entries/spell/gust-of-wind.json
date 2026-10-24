@@ -1,0 +1,193 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/gust-of-wind",
+  "kind": "spell",
+  "name": "Gust of Wind",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      138
+    ],
+    "section": "Spells/Spell Descriptions/Gust of Wind",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Evocation (Druid, Ranger, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a legume seed)\n\n**Duration:** Concentration, up to 1 minute\n\nA Line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the Line. A creature that ends its turn in the Line must make the same save.\n\nAny creature in the Line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.\n\nThe gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.\n\nAs a Bonus Action on your later turns, you can change the direction in which the Line blasts from you.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid",
+      "ranger",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a legume seed"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "line",
+        "length_feet": 60,
+        "width_feet": 10
+      },
+      {
+        "id": "headwind",
+        "movement_cost_multiplier": 2,
+        "when": "moving_closer_to_you"
+      },
+      {
+        "id": "flames",
+        "disperses": [
+          "gas",
+          "vapor"
+        ],
+        "extinguishes": "unprotected_flames",
+        "protected_flames_extinguish_chance_percent": 50
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "str",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "line",
+          "size_feet": 60,
+          "origin": "self"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "move",
+          "mode": "push",
+          "distance_feet": 15
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "turn_end",
+        "whose": "any"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "condition": {
+        "pred": "in_spell_area"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "str",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "push",
+              "distance_feet": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/gust-of-wind",
+          "note": "Change the Line's direction."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Druid, Ranger, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a legume seed)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A Line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the Line. A creature that ends its turn in the Line must make the same save.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Any creature in the Line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "As a Bonus Action on your later turns, you can change the direction in which the Line blasts from you.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/gust-of-wind"
+  ]
+}

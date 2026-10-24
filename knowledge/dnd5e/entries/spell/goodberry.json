@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/goodberry",
+  "kind": "spell",
+  "name": "Goodberry",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      137
+    ],
+    "section": "Spells/Spell Descriptions/Goodberry",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Conjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a sprig of mistletoe)\n\n**Duration:** 24 hours\n\nTen berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day.\n\nUneaten berries disappear when the spell ends.",
+  "facets": {
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a sprig of mistletoe"
+    },
+    "duration": {
+      "text": "24 hours",
+      "kind": "hours",
+      "amount": 24
+    },
+    "rules": [
+      {
+        "id": "berries",
+        "count": 10
+      },
+      {
+        "id": "disappear",
+        "on": "spell_ends"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "note": "Any creature eats one berry.",
+      "then": [
+        {
+          "op": "heal",
+          "amount": 1
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/hazard/malnutrition",
+          "note": "Nourishment for one day."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Conjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (a sprig of mistletoe)\n\n**Duration:** 24 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Ten berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Uneaten berries disappear when the spell ends.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/malnutrition"
+  ]
+}

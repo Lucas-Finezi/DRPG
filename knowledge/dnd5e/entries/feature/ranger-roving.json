@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/ranger-roving",
+  "kind": "feature",
+  "name": "Roving",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      59
+    ],
+    "section": "Classes/Ranger/Ranger Class Features/Level 6: Roving",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Your Speed increases by 10 feet while you aren’t wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/ranger",
+    "level": 6
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "add",
+      "value": 10,
+      "when": {
+        "not": {
+          "pred": "wearing_armor",
+          "args": {
+            "category": "heavy"
+          }
+        }
+      }
+    },
+    {
+      "op": "speed",
+      "movement": "climb",
+      "mode": "equal_to_walk",
+      "value": 0
+    },
+    {
+      "op": "speed",
+      "movement": "swim",
+      "mode": "equal_to_walk",
+      "value": 0
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Your Speed increases by 10 feet while you aren’t wearing Heavy armor. You also have a Climb Speed and a Swim Speed equal to your Speed.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ]
+}

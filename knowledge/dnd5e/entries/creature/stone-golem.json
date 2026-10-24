@@ -1,0 +1,396 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/stone-golem",
+  "kind": "creature",
+  "name": "Stone Golem",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      330
+    ],
+    "section": "Monsters A–Z/Stone Golem/Stone Golem",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 2,
+  "text": "*Large Construct, Unaligned*\n\n| **AC** 18 | **Initiative** +3 (13) |\n\n**HP** 220 (21d10 + 105)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |\n\n**Immunities** Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned\n\n**Senses** Darkvision 120 ft.; Passive Perception 10\n\n**Languages** Understands Common plus two other languages but can’t speak\n\n**CR** 10 (XP 5,900; PB +4)\n\n##### Traits\n\n***Immutable Form.*** The golem can’t shape-shift.\n\n***Magic Resistance.*** The golem has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The golem makes two attacks, using Slam or Force Bolt in any combination.\n\n***Slam.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage plus 9 (2d8) Force damage.\n\n***Force Bolt.*** *Ranged Attack Roll:* +9, range 120 ft. *Hit:* 22 (4d10) Force damage.\n\n##### Bonus Actions\n\n***Slow (Recharge 5–6).*** The golem casts the *Slow* spell, requiring no spell components and using Constitution as the spellcasting ability (spell save DC 17).",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "cr": "10"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "type_line": "Large Construct, Unaligned",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 3,
+      "score": 13,
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "average": 220,
+      "formula": {
+        "op": "add",
+        "args": [
+          "21d10",
+          105
+        ]
+      },
+      "text": "220 (21d10 + 105)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "poison",
+        "psychic"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 10",
+      "darkvision": 120,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Understands Common plus two other languages but can’t speak"
+    },
+    "cr": {
+      "value": "10",
+      "xp": 5900,
+      "proficiency_bonus": 4,
+      "text": "10 (XP 5,900; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Immutable Form",
+        "text": "The golem can’t shape-shift."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The golem has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The golem makes two attacks, using Slam or Force Bolt in any combination."
+      },
+      {
+        "name": "Slam",
+        "text": "*Melee Attack Roll:* +10, reach 5 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage plus 9 (2d8) Force damage."
+      },
+      {
+        "name": "Force Bolt",
+        "text": "*Ranged Attack Roll:* +9, range 120 ft. *Hit:* 22 (4d10) Force damage."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Slow",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "The golem casts the *Slow* spell, requiring no spell components and using Constitution as the spellcasting ability (spell save DC 17)."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The golem makes two attacks, using Slam or Force Bolt in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "shape_changed"
+      ],
+      "note": "Can't shape-shift."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Slam",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  6
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "damage",
+              "amount": "2d8",
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Force Bolt",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "4d10",
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Slow",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/slow",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "note": "Recharge 5–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Construct, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 220 (21d10 + 105)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Understands Common plus two other languages but can’t speak",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 10 (XP 5,900; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Immutable Form.*** The golem can’t shape-shift.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The golem has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The golem makes two attacks, using Slam or Force Bolt in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Slam.*** *Melee Attack Roll:* +10, reach 5 ft. *Hit:* 15 (2d8 + 6) Bludgeoning damage plus 9 (2d8) Force damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Force Bolt.*** *Ranged Attack Roll:* +9, range 120 ft. *Hit:* 22 (4d10) Force damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Slow (Recharge 5–6).*** The golem casts the *Slow* spell, requiring no spell components and using Constitution as the spellcasting ability (spell save DC 17).",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions/0",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/slow"
+  ]
+}

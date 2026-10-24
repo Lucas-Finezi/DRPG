@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/evoker-empowered-evocation",
+  "kind": "feature",
+  "name": "Empowered Evocation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      82
+    ],
+    "section": "Classes/Wizard/Wizard Subclass: Evoker/Level 10: Empowered Evocation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "Whenever you cast a Wizard spell from the Evocation school, you can add your Intelligence modifier to one damage roll of that spell.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/evoker",
+    "level": 10
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": {
+        "var": "ability_mod.int"
+      },
+      "when": {
+        "all": [
+          {
+            "pred": "spell_school",
+            "args": {
+              "school": "evocation"
+            }
+          },
+          {
+            "pred": "spell_of_class",
+            "args": {
+              "class": "wizard"
+            }
+          }
+        ]
+      },
+      "note": "One damage roll of that spell."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Whenever you cast a Wizard spell from the Evocation school, you can add your Intelligence modifier to one damage roll of that spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

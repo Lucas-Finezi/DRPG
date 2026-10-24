@@ -1,0 +1,357 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/roper",
+  "kind": "creature",
+  "name": "Roper",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      320
+    ],
+    "section": "Monsters A–Z/Roper/Roper",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 3,
+  "text": "*Large Aberration, Neutral Evil*\n\n| **AC** 20 | **Initiative** +5 (15) |\n\n**HP** 93 (11d10 + 33)\n\n**Speed** 10 ft., Climb 20 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 7 | −2 | −2 | **Wis** 16 | +3 | +3 | **Cha** 6 | −2 | −2 |\n\n**Skills** Perception +6, Stealth +5\n\n**Senses** Darkvision 60 ft.; Passive Perception 16\n\n**Languages** None\n\n**CR** 5 (XP 1,800; PB +3)\n\n##### Traits\n\n***Spider Climb.*** The roper can climb difficult surfaces, including along ceilings, without needing to make an ability check.\n\n##### Actions\n\n***Multiattack.*** The roper makes two Tentacle attacks, uses Reel, and makes two Bite attacks.\n\n***Bite.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 17 (3d8 + 4) Piercing damage.\n\n***Tentacle.*** *Melee Attack Roll:* +7, reach 60 ft. *Hit:* The target has the Grappled condition (escape DC 14) from one of six tentacles, and the target has the Poisoned condition until the grapple ends. \n\nThe tentacle can be damaged, freeing a creature it has Grappled when destroyed (AC 20, HP 10, Immunity to Poison and Psychic damage). Damaging the tentacle deals no damage to the roper, and a destroyed tentacle regrows at the start of the roper’s next turn.\n\n***Reel.*** The roper pulls each creature Grappled by it up to 30 feet straight toward it.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Neutral Evil",
+    "cr": "5"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Neutral Evil",
+    "type_line": "Large Aberration, Neutral Evil",
+    "ac": {
+      "value": 20,
+      "text": "20"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 93,
+      "formula": {
+        "op": "add",
+        "args": [
+          "11d10",
+          33
+        ]
+      },
+      "text": "93 (11d10 + 33)"
+    },
+    "speed": {
+      "text": "10 ft., Climb 20 ft.",
+      "walk": 10,
+      "climb": 20
+    },
+    "abilities": {
+      "str": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "cha": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "stealth": 5,
+      "text": "Perception +6, Stealth +5"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 16",
+      "darkvision": 60,
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "5",
+      "xp": 1800,
+      "proficiency_bonus": 3,
+      "text": "5 (XP 1,800; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "text": "The roper can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The roper makes two Tentacle attacks, uses Reel, and makes two Bite attacks."
+      },
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 17 (3d8 + 4) Piercing damage."
+      },
+      {
+        "name": "Tentacle",
+        "text": "*Melee Attack Roll:* +7, reach 60 ft. *Hit:* The target has the Grappled condition (escape DC 14) from one of six tentacles, and the target has the Poisoned condition until the grapple ends. \n\nThe tentacle can be damaged, freeing a creature it has Grappled when destroyed (AC 20, HP 10, Immunity to Poison and Psychic damage). Damaging the tentacle deals no damage to the roper, and a destroyed tentacle regrows at the start of the roper’s next turn."
+      },
+      {
+        "name": "Reel",
+        "text": "The roper pulls each creature Grappled by it up to 30 feet straight toward it."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Tentacle",
+            "count": 2
+          },
+          {
+            "name": "Bite",
+            "count": 2
+          }
+        ],
+        "text": "The roper makes two Tentacle attacks, uses Reel, and makes two Bite attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "spider_climb",
+      "mode": "set",
+      "value": 1,
+      "note": "Climbs difficult surfaces, including ceilings, without an ability check."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d8",
+                  4
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tentacle",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 14
+              }
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/poisoned",
+              "duration": {
+                "kind": "while",
+                "while": {
+                  "pred": "has_condition",
+                  "args": {
+                    "condition": "grappled"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_reel",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Reel as written.",
+      "source_text": "The roper pulls each creature Grappled by it up to 30 feet straight toward it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Aberration, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 20 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 93 (11d10 + 33)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Climb 20 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 18 | +4 | +4 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 7 | −2 | −2 | **Wis** 16 | +3 | +3 | **Cha** 6 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 5 (XP 1,800; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Spider Climb.*** The roper can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The roper makes two Tentacle attacks, uses Reel, and makes two Bite attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 17 (3d8 + 4) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Tentacle.*** *Melee Attack Roll:* +7, reach 60 ft. *Hit:* The target has the Grappled condition (escape DC 14) from one of six tentacles, and the target has the Poisoned condition until the grapple ends. \n\nThe tentacle can be damaged, freeing a creature it has Grappled when destroyed (AC 20, HP 10, Immunity to Poison and Psychic damage). Damaging the tentacle deals no damage to the roper, and a destroyed tentacle regrows at the start of the roper’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Reel.*** The roper pulls each creature Grappled by it up to 30 feet straight toward it.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "md:actions_reel"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/poisoned"
+  ]
+}

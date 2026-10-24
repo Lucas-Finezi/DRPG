@@ -1,0 +1,102 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/poison/oil-of-taggit",
+  "kind": "poison",
+  "name": "Oil of Taggit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      198
+    ],
+    "section": "Gameplay Toolbox/Poison/Sample Poisons/Oil of Taggit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Contact Poison*\n\nA creature subjected to Oil of Taggit must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 24 hours. The creature also has the Unconscious condition while Poisoned in this way. It wakes up if it takes damage.",
+  "facets": {
+    "poison_type": "contact",
+    "cost_cp": 40000
+  },
+  "data": {
+    "cost": {
+      "amount": 400,
+      "unit": "gp",
+      "cp": 40000
+    },
+    "poison_type": "contact",
+    "rules": [
+      {
+        "id": "type",
+        "ref": "dnd5e/rule/poison"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 13,
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/poisoned",
+          "duration": {
+            "kind": "hours",
+            "amount": 24
+          }
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/unconscious",
+          "duration": {
+            "kind": "while",
+            "while": {
+              "pred": "has_condition",
+              "args": {
+                "condition": "poisoned"
+              }
+            },
+            "ends_on": [
+              {
+                "event": "damage_taken"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Contact Poison*",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/poison_type",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A creature subjected to Oil of Taggit must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 24 hours. The creature also has the Unconscious condition while Poisoned in this way. It wakes up if it takes damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/poison"
+  ]
+}

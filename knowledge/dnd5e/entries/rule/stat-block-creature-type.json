@@ -1,0 +1,123 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-creature-type",
+  "kind": "rule",
+  "name": "Creature Type (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      254
+    ],
+    "section": "Monsters/Parts of a Stat Block/Creature Type",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "Each monster has a tag that identifies the type of creature it is. Certain spells, magic items, class features, and other effects in the game interact in special ways with creatures of a particular type.\n\nThe game includes the following creature types, which have no rules of their own:\n\n**Aberrations** are utterly alien beings, such as aboleths and cloakers.\n\n**Beasts** are non-Humanoid natural creatures, like horses and wolves, as well as most giant animals.\n\n**Celestials** are magical creatures, such as angels and pegasi, with ties to the Upper Planes.\n\n**Constructs** are magically created creatures such as homunculi and shield guardians.\n\n**Dragons** are scaly beings of ancient origin, such as red dragons and wyverns.\n\n**Elementals** are beings from the Elemental Planes, such as efreet and water elementals.\n\n**Fey** are creatures tied to the Feywild or the forces of nature, such as dryads and goblins.\n\n**Fiends** are creatures tied to terrifying Lower Planes, such as balors and hell hounds.\n\n**Giants** are towering beings with humanlike shapes, like fire giants and trolls.\n\n**Humanoids** are people defined by their roles and professions, such as mages, pirates, and warriors. They include members of varied species.\n\n**Monstrosities** are unnatural creatures with strange origins, such as mimics and owlbears.\n\n**Oozes** are gelatinous creatures, including black puddings and gelatinous cubes.\n\n**Plants** are sentient vegetation and fungal monsters, such as shambling mounds and treants.\n\n**Undead** are spirits and the reanimated dead, such as ghosts, vampires, and zombies.\n\n#### Descriptive Tags\n\nA monster might have one or more tags in parentheses following its type. Such tags provide additional categorization and have no rules of their own, but certain game effects might refer to them.",
+  "data": {
+    "rules": [
+      {
+        "id": "type_tag",
+        "interacts_with_effects": true
+      },
+      {
+        "id": "types",
+        "values": [
+          "aberration",
+          "beast",
+          "celestial",
+          "construct",
+          "dragon",
+          "elemental",
+          "fey",
+          "fiend",
+          "giant",
+          "humanoid",
+          "monstrosity",
+          "ooze",
+          "plant",
+          "undead"
+        ],
+        "no_rules_of_their_own": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Each monster has a tag that identifies the type of creature it is. Certain spells, magic items, class features, and other effects in the game interact in special ways with creatures of a particular type.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The game includes the following creature types, which have no rules of their own:",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Aberrations** are utterly alien beings, such as aboleths and cloakers.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Beasts** are non-Humanoid natural creatures, like horses and wolves, as well as most giant animals.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Celestials** are magical creatures, such as angels and pegasi, with ties to the Upper Planes.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Constructs** are magically created creatures such as homunculi and shield guardians.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Dragons** are scaly beings of ancient origin, such as red dragons and wyverns.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Elementals** are beings from the Elemental Planes, such as efreet and water elementals.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Fey** are creatures tied to the Feywild or the forces of nature, such as dryads and goblins.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Fiends** are creatures tied to terrifying Lower Planes, such as balors and hell hounds.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Giants** are towering beings with humanlike shapes, like fire giants and trolls.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Humanoids** are people defined by their roles and professions, such as mages, pirates, and warriors. They include members of varied species.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Monstrosities** are unnatural creatures with strange origins, such as mimics and owlbears.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Oozes** are gelatinous creatures, including black puddings and gelatinous cubes.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Plants** are sentient vegetation and fungal monsters, such as shambling mounds and treants.",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Undead** are spirits and the reanimated dead, such as ghosts, vampires, and zombies.\n\n#### Descriptive Tags\n\nA monster might have one or more tags in parentheses following its type. Such tags provide additional categorization and have no rules of their own, but certain game effects might refer to them.",
+      "status": "descriptive"
+    }
+  ]
+}

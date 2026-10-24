@@ -1,0 +1,116 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/plant-growth",
+  "kind": "spell",
+  "name": "Plant Growth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      153
+    ],
+    "section": "Spells/Spell Descriptions/Plant Growth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 1,
+  "text": "*Level 3 Transmutation (Bard, Druid, Ranger)*\n\n**Casting Time:** Action (Overgrowth) or 8 hours (Enrichment)\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nThis spell channels vitality into plants. The casting time you use determines whether the spell has the Overgrowth or the Enrichment effect below.\n\n***Overgrowth.*** Choose a point within range. All normal plants in a 100-foot-radius Sphere centered on that point become thick and overgrown. A creature moving through that area must spend 4 feet of movement for every 1 foot it moves. You can exclude one or more areas of any size within the spell’s area from being affected.\n\n***Enrichment.*** All plants in a half-mile radius centered on a point within range become enriched for 365 days. The plants yield twice the normal amount of food when harvested. They can benefit from only one *Plant Growth* per year.",
+  "facets": {
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "cost": "action",
+      "alternatives": [
+        {
+          "cost": "time",
+          "minutes": 480,
+          "text": "8 hours (Enrichment)"
+        }
+      ],
+      "text": "Action (Overgrowth) or 8 hours (Enrichment)"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 150
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "mode_by_casting_time",
+        "action": "overgrowth",
+        "8_hours": "enrichment"
+      },
+      {
+        "id": "overgrowth",
+        "area": {
+          "shape": "sphere",
+          "radius_feet": 100
+        },
+        "movement_cost_multiplier": 4,
+        "exclusions": "any_areas"
+      },
+      {
+        "id": "enrichment",
+        "radius_miles": 0.5,
+        "days": 365,
+        "harvest_multiplier": 2,
+        "once_per_year": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 3 Transmutation (Bard, Druid, Ranger)*\n\n**Casting Time:** Action (Overgrowth) or 8 hours (Enrichment)\n\n**Range:** 150 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell channels vitality into plants. The casting time you use determines whether the spell has the Overgrowth or the Enrichment effect below.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Overgrowth.*** Choose a point within range. All normal plants in a 100-foot-radius Sphere centered on that point become thick and overgrown. A creature moving through that area must spend 4 feet of movement for every 1 foot it moves. You can exclude one or more areas of any size within the spell’s area from being affected.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Enrichment.*** All plants in a half-mile radius centered on a point within range become enriched for 365 days. The plants yield twice the normal amount of food when harvested. They can benefit from only one *Plant Growth* per year.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

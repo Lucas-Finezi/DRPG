@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/poison/truth-serum",
+  "kind": "poison",
+  "name": "Truth Serum",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      198
+    ],
+    "section": "Gameplay Toolbox/Poison/Sample Poisons/Truth Serum",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Ingested Poison*\n\nA creature subjected to Truth Serum must succeed on a DC 11 Constitution saving throw or have the Poisoned condition for 1 hour. The Poisoned creature can’t knowingly communicate a lie.",
+  "facets": {
+    "poison_type": "ingested",
+    "cost_cp": 15000
+  },
+  "data": {
+    "cost": {
+      "amount": 150,
+      "unit": "gp",
+      "cp": 15000
+    },
+    "poison_type": "ingested",
+    "rules": [
+      {
+        "id": "type",
+        "ref": "dnd5e/rule/poison"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 11,
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/poisoned",
+          "duration": {
+            "kind": "hours",
+            "amount": 1
+          }
+        },
+        {
+          "op": "restrict",
+          "restrictions": [
+            "speak_deliberate_lie"
+          ],
+          "when": {
+            "pred": "has_condition",
+            "args": {
+              "condition": "poisoned"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ingested Poison*",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/poison_type",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A creature subjected to Truth Serum must succeed on a DC 11 Constitution saving throw or have the Poisoned condition for 1 hour. The Poisoned creature can’t knowingly communicate a lie.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/rule/poison"
+  ]
+}

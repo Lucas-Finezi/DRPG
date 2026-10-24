@@ -1,0 +1,55 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/size",
+  "kind": "rule",
+  "name": "Size",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      188
+    ],
+    "section": "Rules Glossary/Rules Definitions/Size",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L02"
+  },
+  "tier": 1,
+  "text": "A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan. A creature’s size determines how much space the creature occupies in combat. An object’s size affects its Hit Points. *See also* “Breaking Objects” and “Playing the Game” (“Combat”).",
+  "facets": {
+    "glossary": true
+  },
+  "coverage": [
+    {
+      "text": "A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan. A creature’s size determines how much space the creature occupies in combat.",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/sizes"
+      ]
+    },
+    {
+      "text": "An object’s size affects its Hit Points.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/breaking-objects"
+      ]
+    },
+    {
+      "text": "*See also* “Breaking Objects” and “Playing the Game” (“Combat”).",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/breaking-objects",
+        "dnd5e/rule/combat"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/breaking-objects",
+    "dnd5e/rule/combat",
+    "dnd5e/system/dnd5e"
+  ]
+}

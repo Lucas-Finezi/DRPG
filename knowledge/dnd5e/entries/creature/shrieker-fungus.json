@@ -1,0 +1,234 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/shrieker-fungus",
+  "kind": "creature",
+  "name": "Shrieker Fungus",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      286
+    ],
+    "section": "Monsters A–Z/Fungi/Shrieker Fungus",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Plant, Unaligned*\n\n| **AC** 5 | **Initiative** −5 (5) |\n\n**HP** 13 (3d8)\n\n**Speed** 5 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 1 | −5 | −5 | **Dex** 1 | −5 | −5 | **Con** 10 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |\n\n**Immunities** Blinded, Charmed, Deafened, Frightened\n\n**Senses** Blindsight 30 ft.; Passive Perception 6\n\n**Languages** None\n\n**CR** 0 (XP 0; PB +2)\n\n##### Reactions\n\n***Shriek.*** *Trigger:* A creature or a source of Bright Light moves within 30 feet of the shrieker. *Response:* The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Plant",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Plant",
+    "alignment": "Unaligned",
+    "type_line": "Medium Plant, Unaligned",
+    "ac": {
+      "value": 5,
+      "text": "5"
+    },
+    "initiative": {
+      "modifier": -5,
+      "score": 5,
+      "text": "−5 (5)"
+    },
+    "hp": {
+      "average": 13,
+      "formula": "3d8",
+      "text": "13 (3d8)"
+    },
+    "speed": {
+      "text": "5 ft.",
+      "walk": 5
+    },
+    "abilities": {
+      "str": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "dex": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      },
+      "wis": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/blinded",
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/frightened"
+      ],
+      "text": "Blinded, Charmed, Deafened, Frightened"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft.; Passive Perception 6",
+      "blindsight": 30,
+      "passive_perception": 6
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 0,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 0; PB +2)"
+    },
+    "reactions": [
+      {
+        "name": "Shriek",
+        "text": "*Trigger:* A creature or a source of Bright Light moves within 30 feet of the shrieker. *Response:* The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reaction_trigger"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/reaction",
+          "note": "Response in the text."
+        }
+      ],
+      "note": "Trigger: A creature or a source of Bright Light moves within 30 feet of the shrieker."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "reactions_shriek_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Shriek as written.",
+      "source_text": ": The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Plant, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 5 | **Initiative** −5 (5) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 13 (3d8)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 5 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 1 | −5 | −5 | **Dex** 1 | −5 | −5 | **Con** 10 | +0 | +0 |\n| **Int** | 1 | −5 | −5 | **Wis** 3 | −4 | −4 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Blinded, Charmed, Deafened, Frightened",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft.; Passive Perception 6",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 0; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Shriek.*** *Trigger:* A creature or a source of Bright Light moves within 30 feet of the shrieker. *Response:* The shrieker emits a shriek audible within 300 feet of itself for 1 minute or until the shrieker dies.",
+      "status": "master_decision",
+      "by": [
+        "/data/reactions/0",
+        "/effects/0",
+        "md:reactions_shriek_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/frightened",
+    "dnd5e/rule/reaction"
+  ]
+}

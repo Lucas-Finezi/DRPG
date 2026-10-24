@@ -1,0 +1,122 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/spellguard-shield",
+  "kind": "magic-item",
+  "name": "Spellguard Shield",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      244
+    ],
+    "section": "Magic Items/Magic Items A–Z/Spellguard Shield",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Armor (Shield), Very Rare (Requires Attunement)*\n\nWhile holding this Shield, you have Advantage on saving throws against spells and other magical effects, and spell attack rolls have Disadvantage against you.",
+  "facets": {
+    "category": "armor",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Armor (Shield), Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "armor",
+      "applies_to": {
+        "text": "Shield",
+        "refs": [
+          "dnd5e/armor/shield"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against",
+            "args": {
+              "source": "spell_or_magic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "spell"
+            }
+          }
+        ]
+      },
+      "direction": "against"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Armor (Shield), Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While holding this Shield, you have Advantage on saving throws against spells and other magical effects, and spell attack rolls have Disadvantage against you.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/shield"
+  ]
+}

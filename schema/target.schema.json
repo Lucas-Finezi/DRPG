@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:drpg:schema:target",
+  "title": "Target",
+  "description": "Who or what an activation or effect affects: range, count, area of effect and filters. Filter values must exist in the system registries (creature types, sizes...).",
+  "type": "object",
+  "required": ["kind"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "enum": ["self", "creature", "object", "creature_or_object", "point", "area", "space", "inherit", "special"],
+      "description": "'inherit' = same target as the parent effect (e.g. the creature that failed the save). 'area' targets everything matching 'filter' inside 'area'."
+    },
+    "count": {
+      "description": "How many targets (default 1). May scale, e.g. one additional target per slot level above 2.",
+      "$ref": "urn:drpg:schema:expression"
+    },
+    "range": { "$ref": "#/$defs/range" },
+    "area": { "$ref": "#/$defs/area" },
+    "must_see": { "description": "Target must be one the user can see.", "type": "boolean" },
+    "distinct": { "description": "Each target must be different.", "type": "boolean" },
+    "filter": {
+      "description": "Restrictions on eligible targets.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "creature_types": { "type": "array", "items": { "$ref": "urn:drpg:schema:common#/$defs/identifier" } },
+        "exclude_creature_types": { "type": "array", "items": { "$ref": "urn:drpg:schema:common#/$defs/identifier" } },
+        "sizes": { "type": "array", "items": { "$ref": "urn:drpg:schema:common#/$defs/identifier" } },
+        "willing": { "type": "boolean" },
+        "allies_only": { "type": "boolean" },
+        "enemies_only": { "type": "boolean" },
+        "include_self": { "type": "boolean" },
+        "objects": { "enum": ["any", "not_worn_or_carried", "worn_or_carried"] },
+        "predicate": { "$ref": "urn:drpg:schema:effect#/$defs/predicate" }
+      }
+    },
+    "text": { "description": "Source wording, verbatim.", "type": "string" }
+  },
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["kind"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["self", "touch", "distance", "sight", "unlimited", "special"] },
+        "feet": { "$ref": "urn:drpg:schema:expression" },
+        "long_feet": { "description": "Long range of a ranged weapon or attack.", "$ref": "urn:drpg:schema:expression" },
+        "miles": { "$ref": "urn:drpg:schema:expression" },
+        "text": { "type": "string" }
+      }
+    },
+    "area": {
+      "type": "object",
+      "required": ["shape"],
+      "additionalProperties": false,
+      "properties": {
+        "shape": {
+          "description": "Area of Effect shapes defined in the system (SRD: cone, cube, cylinder, emanation, line, sphere).",
+          "$ref": "urn:drpg:schema:common#/$defs/identifier"
+        },
+        "size_feet": { "description": "Radius (sphere, cylinder, emanation), length (cone, line) or side (cube).", "$ref": "urn:drpg:schema:expression" },
+        "width_feet": { "$ref": "urn:drpg:schema:expression" },
+        "height_feet": { "$ref": "urn:drpg:schema:expression" },
+        "origin": { "enum": ["self", "point", "target", "object"] },
+        "moves_with_origin": { "type": "boolean" }
+      }
+    }
+  }
+}

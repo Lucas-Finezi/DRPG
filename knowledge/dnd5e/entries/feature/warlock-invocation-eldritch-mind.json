@@ -1,0 +1,51 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-eldritch-mind",
+  "kind": "feature",
+  "name": "Eldritch Mind",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      72
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Eldritch Mind",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw.con"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "kind": "concentration"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

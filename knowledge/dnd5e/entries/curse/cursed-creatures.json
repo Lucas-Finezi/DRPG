@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/curse/cursed-creatures",
+  "kind": "curse",
+  "name": "Cursed Creatures",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      193
+    ],
+    "section": "Gameplay Toolbox/Curses and Magical Contagions/Curses/Cursed Creatures",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 3,
+  "text": "Some monsters are associated with curses, whether as part of their origins or due to their ability to spread curses—werewolves being a prime example.\n\nYou decide how a spell like *Remove Curse* affects a creature with accursed origins. For example, you might decide that a mummy was created through a curse and it can be destroyed permanently only by casting *Remove Curse* on its corpse.",
+  "master_decisions": [
+    {
+      "id": "cursed_origin",
+      "reason": "gm_judgment",
+      "prompt": "How does Remove Curse affect this creature with accursed origins?",
+      "source_text": "You decide how a spell like *Remove Curse* affects a creature with accursed origins."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Some monsters are associated with curses, whether as part of their origins or due to their ability to spread curses—werewolves being a prime example.",
+      "status": "descriptive"
+    },
+    {
+      "text": "You decide how a spell like *Remove Curse* affects a creature with accursed origins. For example, you might decide that a mummy was created through a curse and it can be destroyed permanently only by casting *Remove Curse* on its corpse.",
+      "status": "master_decision",
+      "by": [
+        "md:cursed_origin"
+      ]
+    }
+  ]
+}

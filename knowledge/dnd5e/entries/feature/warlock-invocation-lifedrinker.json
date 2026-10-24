@@ -1,0 +1,121 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/warlock-invocation-lifedrinker",
+  "kind": "feature",
+  "name": "Lifedrinker",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      73
+    ],
+    "section": "Classes/Warlock/Eldritch Invocation Options/Lifedrinker",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Prerequisite: Level 9+ Warlock, Pact of the Blade Invocation*\n\nOnce per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+  "facets": {
+    "feature_type": "eldritch_invocation",
+    "owner": "dnd5e/class/warlock"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "prerequisite",
+        "warlock_level": 9,
+        "invocation": "dnd5e/feature/warlock-invocation-pact-of-the-blade"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "hits_with_attack_roll"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "attack_is",
+        "args": {
+          "via": "weapon",
+          "weapon_kind": "pact"
+        }
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "1d6",
+          "target": {
+            "kind": "inherit"
+          },
+          "damage_type": {
+            "choose_from": [
+              "necrotic",
+              "psychic",
+              "radiant"
+            ]
+          }
+        },
+        {
+          "op": "activation",
+          "cost": "none",
+          "uses": {
+            "resource": "hit_point_dice",
+            "amount": 1
+          },
+          "then": [
+            {
+              "op": "heal",
+              "target": {
+                "kind": "self"
+              },
+              "amount": {
+                "op": "max",
+                "args": [
+                  1,
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "var": "hit_point_die"
+                      },
+                      {
+                        "var": "ability_mod.con"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Prerequisite: Level 9+ Warlock, Pact of the Blade Invocation*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Once per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

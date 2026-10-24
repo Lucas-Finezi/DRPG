@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/reverse-gravity",
+  "kind": "spell",
+  "name": "Reverse Gravity",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      159
+    ],
+    "section": "Spells/Spell Descriptions/Reverse Gravity",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Transmutation (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 100 feet\n\n**Components:** V, S, M (a lodestone and iron filings)\n\n**Duration:** Concentration, up to 1 minute\n\nThis spell reverses gravity in a 50-foot-radius, 100-foot high Cylinder centered on a point within range. All creatures and objects in that area that aren’t anchored to the ground fall upward and reach the top of the Cylinder. A creature can make a Dexterity saving throw to grab a fixed object it can reach, thus avoiding the fall upward.\n\nIf a ceiling or an anchored object is encountered in this upward fall, creatures and objects strike it just as they would during a downward fall. If an affected creature or object reaches the Cylinder’s top without striking anything, it hovers there for the duration. When the spell ends, affected objects and creatures fall downward.",
+  "facets": {
+    "level": 7,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 100
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a lodestone and iron filings"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "cylinder",
+        "radius_feet": 50,
+        "height_feet": 100
+      },
+      {
+        "id": "top",
+        "hover_at_top": true,
+        "fall_when_spell_ends": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "dex",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 50,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 100
+        }
+      },
+      "on_fail": [
+        {
+          "op": "move",
+          "mode": "fall",
+          "note": "Falls upward to the top of the Cylinder."
+        }
+      ],
+      "note": "On a success the creature grabs a fixed object it can reach."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Transmutation (Druid, Sorcerer, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 100 feet\n\n**Components:** V, S, M (a lodestone and iron filings)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "This spell reverses gravity in a 50-foot-radius, 100-foot high Cylinder centered on a point within range. All creatures and objects in that area that aren’t anchored to the ground fall upward and reach the top of the Cylinder. A creature can make a Dexterity saving throw to grab a fixed object it can reach, thus avoiding the fall upward.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a ceiling or an anchored object is encountered in this upward fall, creatures and objects strike it just as they would during a downward fall. If an affected creature or object reaches the Cylinder’s top without striking anything, it hovers there for the duration. When the spell ends, affected objects and creatures fall downward.",
+      "status": "structured",
+      "by": [
+        "dnd5e/hazard/falling",
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/hazard/falling"
+  ]
+}

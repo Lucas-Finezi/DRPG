@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/path-of-the-berserker-retaliation",
+  "kind": "feature",
+  "name": "Retaliation",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      30
+    ],
+    "section": "Classes/Barbarian/Barbarian Subclass: Path of the Berserker/Level 10: Retaliation",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you take damage from a creature that is within 5 feet of you, you can take a Reaction to make one melee attack against that creature, using a weapon or an Unarmed Strike.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/path-of-the-berserker",
+    "level": 10
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "damaged_by_creature_within_feet.5"
+      },
+      "cost": "reaction",
+      "optional": true,
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "One melee attack with a weapon or an Unarmed Strike."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take damage from a creature that is within 5 feet of you, you can take a Reaction to make one melee attack against that creature, using a weapon or an Unarmed Strike.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

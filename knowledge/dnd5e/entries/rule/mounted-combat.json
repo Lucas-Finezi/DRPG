@@ -1,0 +1,172 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/mounted-combat",
+  "kind": "rule",
+  "name": "Mounted Combat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      15,
+      16
+    ],
+    "section": "Playing the Game/Combat/Mounted Combat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "A willing creature that is at least one size larger than a rider and that has an appropriate anatomy can serve as a mount, using the following rules.\n\n#### Mounting and Dismounting\n\nDuring your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your Speed (round down). For example, if your Speed is 30 feet, you spend 15 feet of movement to mount a horse.\n\n#### Controlling a Mount\n\nYou can control a mount only if it has been trained to accept a rider. Domesticated horses, mules, and similar creatures have such training.\n\nThe Initiative of a controlled mount changes to match yours when you mount it. It moves on your turn as you direct it, and it has only three action options during that turn: Dash, Disengage, and Dodge. A controlled mount can move and act even on the turn that you mount it.\n\nIn contrast, an independent mount—one that lets you ride but ignores your control—retains its place in the Initiative order and moves and acts as it likes.\n\n#### Falling Off\n\nIf an effect is about to move your mount against its will while you’re on it, you must succeed on a DC 10 Dexterity saving throw or fall off, landing with the Prone condition (see “Rules Glossary”) in an unoccupied space within 5 feet of the mount.\n\nWhile mounted, you must make the same save if you’re knocked Prone or the mount is.",
+  "data": {
+    "rules": [
+      {
+        "id": "mount_requirements",
+        "willing": true,
+        "min_size_steps_larger": 1,
+        "appropriate_anatomy": true
+      },
+      {
+        "id": "controlled_mount",
+        "requires_training": true,
+        "initiative": "matches_rider",
+        "actions": [
+          "dnd5e/action/dash",
+          "dnd5e/action/disengage",
+          "dnd5e/action/dodge"
+        ],
+        "acts_on_mount_turn": true
+      },
+      {
+        "id": "independent_mount",
+        "keeps_initiative": true,
+        "acts_freely": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Mount or dismount",
+      "cost": "movement",
+      "movement_cost": {
+        "op": "div",
+        "args": [
+          {
+            "var": "speed.walk"
+          },
+          2
+        ],
+        "round": "down"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/mounted-combat"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "mount_moved_against_will"
+      },
+      "condition": {
+        "pred": "mounted"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "fall",
+              "note": "Fall off into an unoccupied space within 5 feet of the mount."
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "knocked_prone_while_mounted"
+      },
+      "condition": {
+        "pred": "mounted"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 10,
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "fall",
+              "note": "Fall off into an unoccupied space within 5 feet of the mount."
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A willing creature that is at least one size larger than a rider and that has an appropriate anatomy can serve as a mount, using the following rules.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "#### Mounting and Dismounting\n\nDuring your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your Speed (round down). For example, if your Speed is 30 feet, you spend 15 feet of movement to mount a horse.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "#### Controlling a Mount\n\nYou can control a mount only if it has been trained to accept a rider. Domesticated horses, mules, and similar creatures have such training.\n\nThe Initiative of a controlled mount changes to match yours when you mount it. It moves on your turn as you direct it, and it has only three action options during that turn: Dash, Disengage, and Dodge. A controlled mount can move and act even on the turn that you mount it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "In contrast, an independent mount—one that lets you ride but ignores your control—retains its place in the Initiative order and moves and acts as it likes.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "#### Falling Off\n\nIf an effect is about to move your mount against its will while you’re on it, you must succeed on a DC 10 Dexterity saving throw or fall off, landing with the Prone condition (see “Rules Glossary”) in an unoccupied space within 5 feet of the mount.\n\nWhile mounted, you must make the same save if you’re knocked Prone or the mount is.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/dash",
+    "dnd5e/action/disengage",
+    "dnd5e/action/dodge",
+    "dnd5e/condition/prone",
+    "dnd5e/rule/mounted-combat"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/feather-fall",
+  "kind": "spell",
+  "name": "Feather Fall",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      130
+    ],
+    "section": "Spells/Spell Descriptions/Feather Fall",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Transmutation (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Reaction, which you take when you or a creature you can see within 60 feet of you falls\n\n**Range:** 60 feet\n\n**Components:** V, M (a small feather or piece of down)\n\n**Duration:** 1 minute\n\nChoose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.",
+  "facets": {
+    "level": 1,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Reaction, which you take when you or a creature you can see within 60 feet of you falls",
+      "cost": "reaction",
+      "trigger": "when you or a creature you can see within 60 feet of you falls",
+      "triggers": [
+        {
+          "event": "falls",
+          "whose": "any"
+        }
+      ]
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false,
+      "material": "a small feather or piece of down"
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "fall_rate_feet_per_round",
+      "mode": "min",
+      "value": 60,
+      "duration": {
+        "kind": "minutes",
+        "amount": 1
+      },
+      "target": {
+        "kind": "creature",
+        "count": 5,
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        }
+      },
+      "note": "Falling creatures; a creature that lands takes no falling damage and the spell ends for it."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Transmutation (Bard, Sorcerer, Wizard)*\n\n**Casting Time:** Reaction, which you take when you or a creature you can see within 60 feet of you falls\n\n**Range:** 60 feet\n\n**Components:** V, M (a small feather or piece of down)\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

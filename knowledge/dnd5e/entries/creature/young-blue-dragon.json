@@ -1,0 +1,326 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/young-blue-dragon",
+  "kind": "creature",
+  "name": "Young Blue Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      266
+    ],
+    "section": "Monsters A–Z/Blue Dragons/Young Blue Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 2,
+  "text": "*Large Dragon (Chromatic), Lawful Evil*\n\n| **AC** 18 | **Initiative** +4 (14) |\n\n**HP** 152 (16d10 + 64)\n\n**Speed** 40 ft., Burrow 20 ft., Fly 80 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +4 | **Con** 19 | +4 | +4 |\n| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +5 | **Cha** 17 | +3 | +3 |\n\n**Skills** Perception +9, Stealth +4\n\n**Immunities** Lightning\n\n**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 19\n\n**Languages** Common, Draconic\n\n**CR** 9 (XP 5,000; PB +4)\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks.\n\n***Rend.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 5 (1d10) Lightning damage.\n\n***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 16, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Evil",
+    "cr": "9"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Lawful Evil",
+    "tags": [
+      "Chromatic"
+    ],
+    "type_line": "Large Dragon (Chromatic), Lawful Evil",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 4,
+      "score": 14,
+      "text": "+4 (14)"
+    },
+    "hp": {
+      "average": 152,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d10",
+          64
+        ]
+      },
+      "text": "152 (16d10 + 64)"
+    },
+    "speed": {
+      "text": "40 ft., Burrow 20 ft., Fly 80 ft.",
+      "walk": 40,
+      "burrow": 20,
+      "fly": 80
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 4
+      },
+      "con": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "int": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 13,
+        "mod": 1,
+        "save": 5
+      },
+      "cha": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "perception": 9,
+      "stealth": 4,
+      "text": "Perception +9, Stealth +4"
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning"
+      ],
+      "conditions": [],
+      "text": "Lightning"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 19",
+      "blindsight": 30,
+      "darkvision": 120,
+      "passive_perception": 19
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "9",
+      "xp": 5000,
+      "proficiency_bonus": 4,
+      "text": "9 (XP 5,000; PB +4)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +9, reach 10 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 5 (1d10) Lightning damage."
+      },
+      {
+        "name": "Lightning Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 16, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d10",
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Lightning Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 16,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "line",
+              "size_feet": 60,
+              "width_feet": 5,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot-long, 5-foot-wide Line"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d10",
+              "damage_type": "lightning"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon (Chromatic), Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +4 (14) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 152 (16d10 + 64)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Burrow 20 ft., Fly 80 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 10 | +0 | +4 | **Con** 19 | +4 | +4 |\n| **Int** | 14 | +2 | +2 | **Wis** 13 | +1 | +5 | **Cha** 17 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +9, Stealth +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 19",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 9 (XP 5,000; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +9, reach 10 ft. *Hit:* 12 (2d6 + 5) Slashing damage plus 5 (1d10) Lightning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 16, each creature in a 60-foot-long, 5-foot-wide Line. *Failure:* 55 (10d10) Lightning damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/1"
+      ]
+    }
+  ]
+}

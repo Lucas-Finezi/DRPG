@@ -1,0 +1,233 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/divine-word",
+  "kind": "spell",
+  "name": "Divine Word",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      125
+    ],
+    "section": "Spells/Spell Descriptions/Divine Word",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L24"
+  },
+  "tier": 2,
+  "text": "*Level 7 Evocation (Cleric)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Instantaneous\n\nYou utter a word imbued with power from the Upper Planes. Each creature of your choice in range makes a Charisma saving throw. On a failed save, a target that has 50 Hit Points or fewer suffers an effect based on its current Hit Points, as shown in the Divine Word Effects table. Regardless of its Hit Points, a Celestial, an Elemental, a Fey, or a Fiend target that fails its save is forced back to its plane of origin (if it isn’t there already) and can’t return to the current plane for 24 hours by any means short of a *Wish* spell.\n\n##### Divine Word Effects\n\n| **Hit Points** | **Effect** |\n| 0–20 | The target dies. |\n| 21–30 | The target has the Blinded, Deafened, and Stunned conditions for 1 hour. |\n| 31–40 | The target has the Blinded and Deafened conditions for 10 minutes. |\n| 41–50 | The target has the Deafened condition for 1 minute. |",
+  "facets": {
+    "level": 7,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Bonus Action",
+      "cost": "bonus_action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "tables": [
+      {
+        "id": "divine_word_effects",
+        "caption": "Divine Word Effects",
+        "columns": [
+          "Hit Points",
+          "Effect"
+        ],
+        "rows": [
+          [
+            "0–20",
+            "The target dies."
+          ],
+          [
+            "21–30",
+            "The target has the Blinded, Deafened, and Stunned conditions for 1 hour."
+          ],
+          [
+            "31–40",
+            "The target has the Blinded and Deafened conditions for 10 minutes."
+          ],
+          [
+            "41–50",
+            "The target has the Deafened condition for 1 minute."
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "cha",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        }
+      },
+      "on_fail": [
+        {
+          "op": "choice",
+          "id": "by_hit_points",
+          "choose": 1,
+          "chooser": "gm",
+          "note": "By the target's current Hit Points (50 or fewer).",
+          "options": [
+            {
+              "id": "dies",
+              "label": "0–20",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "hp",
+                  "mode": "set",
+                  "value": 0,
+                  "note": "The target dies."
+                }
+              ]
+            },
+            {
+              "id": "21_30",
+              "label": "21–30",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/blinded",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/deafened",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/stunned",
+                  "duration": {
+                    "kind": "hours",
+                    "amount": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "31_40",
+              "label": "31–40",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/blinded",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 10
+                  }
+                },
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/deafened",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 10
+                  }
+                }
+              ]
+            },
+            {
+              "id": "41_50",
+              "label": "41–50",
+              "effects": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/deafened",
+                  "duration": {
+                    "kind": "minutes",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/divine-word",
+          "when": {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "celestial",
+                "elemental",
+                "fey",
+                "fiend"
+              ]
+            }
+          },
+          "note": "Forced back to its plane of origin; can't return for 24 hours short of a Wish spell."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 7 Evocation (Cleric)*\n\n**Casting Time:** Bonus Action\n\n**Range:** 30 feet\n\n**Components:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You utter a word imbued with power from the Upper Planes. Each creature of your choice in range makes a Charisma saving throw. On a failed save, a target that has 50 Hit Points or fewer suffers an effect based on its current Hit Points, as shown in the Divine Word Effects table. Regardless of its Hit Points, a Celestial, an Elemental, a Fey, or a Fiend target that fails its save is forced back to its plane of origin (if it isn’t there already) and can’t return to the current plane for 24 hours by any means short of a *Wish* spell.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Divine Word Effects\n\n| **Hit Points** | **Effect** |\n| 0–20 | The target dies. |\n| 21–30 | The target has the Blinded, Deafened, and Stunned conditions for 1 hour. |\n| 31–40 | The target has the Blinded and Deafened conditions for 10 minutes. |\n| 41–50 | The target has the Deafened condition for 1 minute. |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/stunned",
+    "dnd5e/spell/divine-word"
+  ]
+}

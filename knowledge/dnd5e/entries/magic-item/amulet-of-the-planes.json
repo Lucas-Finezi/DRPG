@@ -1,0 +1,149 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/amulet-of-the-planes",
+  "kind": "magic-item",
+  "name": "Amulet of the Planes",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      209
+    ],
+    "section": "Magic Items/Magic Items A–Z/Amulet of the Planes",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Very Rare (Requires Attunement)*\n\nWhile wearing this amulet, you can take a Magic action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence (Arcana) check. On a successful check, you cast *Plane Shift*. On a failed check, you and each creature and object within 15 feet of you travel to a random destination determined by rolling 1d100 and consulting the following table.\n\n| **1d100** | **Destination** |\n| 01–60 | Random location on the plane you named |\n| 61–70 | Random location on an Inner Plane determined by rolling 1d6: on a **1,** the Plane of Air; on a **2,** the Plane of Earth; on a **3,** the Plane of Fire; on a **4,** the Plane of Water; on a **5,** the Feywild; on a **6,** the Shadowfell |\n| 71–80 | Random location on an Outer Plane determined by rolling 1d8: on a **1,** Arborea; on a **2,** Arcadia; on a **3,** the Beastlands; on a **4,** Bytopia; on a **5,** Elysium; on a **6,** Mechanus; on a **7,** Mount Celestia; on an **8,** Ysgard |\n| 81–90 | Random location on an Outer Plane determined by rolling 1d8: on a **1,** the Abyss; on a **2,** Acheron; on a **3,** Carceri; on a **4,** Gehenna; on a **5,** Hades; on a **6,** Limbo; on a **7,** the Nine Hells; on an **8,** Pandemonium |\n| 91–00 | Random location on the Astral Plane |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "amulet_of_the_planes",
+        "caption": "Amulet of the Planes",
+        "columns": [
+          "1d100",
+          "Destination"
+        ],
+        "rows": [
+          [
+            "01–60",
+            "Random location on the plane you named"
+          ],
+          [
+            "61–70",
+            "Random location on an Inner Plane determined by rolling 1d6: on a 1, the Plane of Air; on a 2, the Plane of Earth; on a 3, the Plane of Fire; on a 4, the Plane of Water; on a 5, the Feywild; on a 6, the Shadowfell"
+          ],
+          [
+            "71–80",
+            "Random location on an Outer Plane determined by rolling 1d8: on a 1, Arborea; on a 2, Arcadia; on a 3, the Beastlands; on a 4, Bytopia; on a 5, Elysium; on a 6, Mechanus; on a 7, Mount Celestia; on an 8, Ysgard"
+          ],
+          [
+            "81–90",
+            "Random location on an Outer Plane determined by rolling 1d8: on a 1, the Abyss; on a 2, Acheron; on a 3, Carceri; on a 4, Gehenna; on a 5, Hades; on a 6, Limbo; on a 7, the Nine Hells; on an 8, Pandemonium"
+          ],
+          [
+            "91–00",
+            "Random location on the Astral Plane"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "check",
+          "ability": "int",
+          "dc": 15,
+          "skill": "arcana",
+          "on_success": [
+            {
+              "op": "cast_spell",
+              "spell": "dnd5e/spell/plane-shift",
+              "slot": "none",
+              "components": []
+            }
+          ],
+          "on_fail": [
+            {
+              "op": "move",
+              "mode": "teleport",
+              "target": {
+                "kind": "area",
+                "area": {
+                  "shape": "emanation",
+                  "size_feet": 15,
+                  "origin": "self"
+                }
+              },
+              "note": "You and each creature and object within 15 feet travel to a random destination (table)."
+            }
+          ]
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      },
+      "note": "Name a familiar location on another plane."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this amulet, you can take a Magic action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence (Arcana) check. On a successful check, you cast *Plane Shift*. On a failed check, you and each creature and object within 15 feet of you travel to a random destination determined by rolling 1d100 and consulting the following table.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "| **1d100** | **Destination** |\n| 01–60 | Random location on the plane you named |\n| 61–70 | Random location on an Inner Plane determined by rolling 1d6: on a **1,** the Plane of Air; on a **2,** the Plane of Earth; on a **3,** the Plane of Fire; on a **4,** the Plane of Water; on a **5,** the Feywild; on a **6,** the Shadowfell |\n| 71–80 | Random location on an Outer Plane determined by rolling 1d8: on a **1,** Arborea; on a **2,** Arcadia; on a **3,** the Beastlands; on a **4,** Bytopia; on a **5,** Elysium; on a **6,** Mechanus; on a **7,** Mount Celestia; on an **8,** Ysgard |\n| 81–90 | Random location on an Outer Plane determined by rolling 1d8: on a **1,** the Abyss; on a **2,** Acheron; on a **3,** Carceri; on a **4,** Gehenna; on a **5,** Hades; on a **6,** Limbo; on a **7,** the Nine Hells; on an **8,** Pandemonium |\n| 91–00 | Random location on the Astral Plane |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/plane-shift"
+  ]
+}

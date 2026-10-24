@@ -1,0 +1,75 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/difficult-terrain",
+  "kind": "rule",
+  "name": "Difficult Terrain",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      181
+    ],
+    "section": "Rules Glossary/Rules Definitions/Difficult Terrain",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 3,
+  "text": "If a space is Difficult Terrain, every foot of movement in that space costs 1 extra foot. For example, moving 5 feet through Difficult Terrain costs 10 feet of movement. Difficult Terrain isn’t cumulative; either a space is Difficult Terrain or it isn’t.\n\nA space is Difficult Terrain if the space contains any of the following or something similar:\n\n- A creature that isn’t Tiny or your ally\n\n- Furniture that is sized for creatures of your size or larger\n\n- Heavy snow, ice, rubble, or undergrowth\n\n- Liquid that’s between shin- and waist-deep\n\n- A narrow opening sized for a creature one size smaller than you\n\n- A slope of 20 degrees or more",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "difficult_terrain",
+        "extra_feet_per_foot": 1,
+        "cumulative": false
+      },
+      {
+        "id": "difficult_terrain_examples",
+        "includes": [
+          "creature_not_tiny_or_ally",
+          "furniture_sized_for_your_size_or_larger",
+          "heavy_snow_ice_rubble_undergrowth",
+          "liquid_shin_to_waist_deep",
+          "narrow_opening_one_size_smaller",
+          "slope_20_degrees_or_more"
+        ],
+        "or_similar": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "similar_terrain",
+      "reason": "gm_judgment",
+      "prompt": "Is this space Difficult Terrain (something similar to the listed examples)?",
+      "source_text": "A space is Difficult Terrain if the space contains any of the following or something similar:",
+      "pages": [
+        181
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If a space is Difficult Terrain, every foot of movement in that space costs 1 extra foot. For example, moving 5 feet through Difficult Terrain costs 10 feet of movement. Difficult Terrain isn’t cumulative; either a space is Difficult Terrain or it isn’t.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A space is Difficult Terrain if the space contains any of the following or something similar:\n\n- A creature that isn’t Tiny or your ally\n\n- Furniture that is sized for creatures of your size or larger\n\n- Heavy snow, ice, rubble, or undergrowth\n\n- Liquid that’s between shin- and waist-deep\n\n- A narrow opening sized for a creature one size smaller than you\n\n- A slope of 20 degrees or more",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/1",
+        "md:similar_terrain"
+      ]
+    }
+  ]
+}

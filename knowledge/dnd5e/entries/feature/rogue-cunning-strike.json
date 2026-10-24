@@ -1,0 +1,247 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-cunning-strike",
+  "kind": "feature",
+  "name": "Cunning Strike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      63
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 5: Cunning Strike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You’ve developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack’s damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack’s damage before rolling.\n\nIf a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.\n\n***Poison (Cost: 1d6).*** You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.\n\nTo use this effect, you must have a Poisoner’s Kit on your person.\n\n***Trip (Cost: 1d6).*** If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.\n\n***Withdraw (Cost: 1d6).*** Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 5
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "timing",
+        "dice_removed_before_rolling": true,
+        "effect_after_damage": true
+      },
+      {
+        "id": "save_dc",
+        "dc": {
+          "op": "add",
+          "args": [
+            8,
+            {
+              "var": "ability_mod.dex"
+            },
+            {
+              "var": "proficiency_bonus"
+            }
+          ]
+        }
+      },
+      {
+        "id": "poison_requires",
+        "option": "poison",
+        "requires_on_person": "dnd5e/tool/poisoners-kit"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "deals_sneak_attack_damage"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "choice",
+          "id": "cunning_strike",
+          "choose": 1,
+          "options": [
+            {
+              "id": "poison",
+              "label": "Poison (Cost: 1d6)",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "sneak_attack_dice",
+                  "mode": "add",
+                  "value": -1,
+                  "note": "Forgo these Sneak Attack dice before rolling."
+                },
+                {
+                  "op": "save",
+                  "ability": "con",
+                  "dc": {
+                    "op": "add",
+                    "args": [
+                      8,
+                      {
+                        "var": "ability_mod.dex"
+                      },
+                      {
+                        "var": "proficiency_bonus"
+                      }
+                    ]
+                  },
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/poisoned",
+                      "duration": {
+                        "kind": "minutes",
+                        "amount": 1
+                      }
+                    }
+                  ],
+                  "repeat": {
+                    "on": {
+                      "event": "turn_end",
+                      "whose": "target",
+                      "which": "each"
+                    },
+                    "ends": "effect_on_self"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "trip",
+              "label": "Trip (Cost: 1d6)",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "sneak_attack_dice",
+                  "mode": "add",
+                  "value": -1,
+                  "note": "Forgo these Sneak Attack dice before rolling."
+                },
+                {
+                  "op": "save",
+                  "ability": "dex",
+                  "dc": {
+                    "op": "add",
+                    "args": [
+                      8,
+                      {
+                        "var": "ability_mod.dex"
+                      },
+                      {
+                        "var": "proficiency_bonus"
+                      }
+                    ]
+                  },
+                  "target": {
+                    "kind": "inherit",
+                    "filter": {
+                      "sizes": [
+                        "tiny",
+                        "small",
+                        "medium",
+                        "large"
+                      ]
+                    }
+                  },
+                  "on_fail": [
+                    {
+                      "op": "apply_condition",
+                      "condition": "dnd5e/condition/prone"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "withdraw",
+              "label": "Withdraw (Cost: 1d6)",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "sneak_attack_dice",
+                  "mode": "add",
+                  "value": -1,
+                  "note": "Forgo these Sneak Attack dice before rolling."
+                },
+                {
+                  "op": "move",
+                  "mode": "move",
+                  "provokes_opportunity_attacks": false,
+                  "distance_feet": {
+                    "op": "div",
+                    "args": [
+                      {
+                        "var": "speed.walk"
+                      },
+                      2
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You’ve developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack’s damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack’s damage before rolling.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "If a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Poison (Cost: 1d6).*** You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/0"
+      ]
+    },
+    {
+      "text": "To use this effect, you must have a Poisoner’s Kit on your person.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Trip (Cost: 1d6).*** If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/1"
+      ]
+    },
+    {
+      "text": "***Withdraw (Cost: 1d6).*** Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.",
+      "status": "structured",
+      "by": [
+        "/effects/0/then/0/options/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone"
+  ]
+}

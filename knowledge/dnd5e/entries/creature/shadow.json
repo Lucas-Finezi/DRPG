@@ -1,0 +1,377 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/shadow",
+  "kind": "creature",
+  "name": "Shadow",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      322,
+      323
+    ],
+    "section": "Monsters A–Z/Shadow/Shadow",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L39"
+  },
+  "tier": 3,
+  "text": "*Medium Undead, Chaotic Evil*\n\n| **AC** 12 | **Initiative** +2 (12) |\n\n**HP** 27 (5d8 + 5)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |\n\n**Skills** Stealth +6\n\n**Vulnerabilities** Radiant\n\n**Resistances** Acid, Cold, Fire, Lightning, Thunder\n\n**Immunities** Necrotic, Poison; Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** None\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Amorphous.*** The shadow can move through a space as narrow as 1 inch without expending extra movement to do so.\n\n***Sunlight Weakness.*** While in sunlight, the shadow has Disadvantage on D20 Tests.\n\n##### Actions\n\n***Draining Swipe.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Necrotic damage, and the target’s Strength score decreases by 1d4. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a \n\n**Shadow** rises from the corpse 1d4 hours later.\n\n##### Bonus Actions\n\n***Shadow Stealth.*** While in Dim Light or Darkness, the shadow takes the Hide action.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Chaotic Evil",
+    "type_line": "Medium Undead, Chaotic Evil",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 27,
+      "formula": {
+        "op": "add",
+        "args": [
+          "5d8",
+          5
+        ]
+      },
+      "text": "27 (5d8 + 5)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "stealth": 6,
+      "text": "Stealth +6"
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "radiant"
+      ],
+      "text": "Radiant"
+    },
+    "resistances": {
+      "damage_types": [
+        "acid",
+        "cold",
+        "fire",
+        "lightning",
+        "thunder"
+      ],
+      "text": "Acid, Cold, Fire, Lightning, Thunder"
+    },
+    "immunities": {
+      "damage_types": [
+        "necrotic",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/grappled",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned",
+        "dnd5e/condition/prone",
+        "dnd5e/condition/restrained",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Necrotic, Poison; Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Amorphous",
+        "text": "The shadow can move through a space as narrow as 1 inch without expending extra movement to do so."
+      },
+      {
+        "name": "Sunlight Weakness",
+        "text": "While in sunlight, the shadow has Disadvantage on D20 Tests."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Draining Swipe",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Necrotic damage, and the target’s Strength score decreases by 1d4. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a \n\n**Shadow** rises from the corpse 1d4 hours later."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shadow Stealth",
+        "text": "While in Dim Light or Darkness, the shadow takes the Hide action."
+      }
+    ],
+    "rules": [
+      {
+        "id": "amorphous",
+        "squeeze_inch": 1,
+        "no_extra_movement": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Draining Swipe",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d6",
+                  2
+                ]
+              },
+              "damage_type": "necrotic"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_sunlight_weakness",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Sunlight Weakness as written.",
+      "source_text": "While in sunlight, the shadow has Disadvantage on D20 Tests."
+    },
+    {
+      "id": "actions_draining_swipe_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Draining Swipe as written.",
+      "source_text": "5 (1d6 + 2) Necrotic damage, and the target’s Strength score decreases by 1d4. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a"
+    },
+    {
+      "id": "bonus_actions_shadow_stealth",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Shadow Stealth as written.",
+      "source_text": "While in Dim Light or Darkness, the shadow takes the Hide action."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Undead, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 27 (5d8 + 5)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 6 | −2 | −2 | **Dex** 14 | +2 | +2 | **Con** 13 | +1 | +1 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Stealth +6",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Radiant",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Resistances** Acid, Cold, Fire, Lightning, Thunder",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amorphous.*** The shadow can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Sunlight Weakness.*** While in sunlight, the shadow has Disadvantage on D20 Tests.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_sunlight_weakness"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Draining Swipe.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 5 (1d6 + 2) Necrotic damage, and the target’s Strength score decreases by 1d4. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a \n\n**Shadow** rises from the corpse 1d4 hours later.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/0",
+        "md:actions_draining_swipe_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Shadow Stealth.*** While in Dim Light or Darkness, the shadow takes the Hide action.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_shadow_stealth"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/grappled",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/restrained",
+    "dnd5e/condition/unconscious"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-three-wishes",
+  "kind": "magic-item",
+  "name": "Ring of Three Wishes",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      239
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of Three Wishes",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Ring, Legendary*\n\nWhile wearing this ring, you can expend 1 of its 3 charges to cast *Wish* from it. The ring becomes nonmagical when you use the last charge.",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Legendary",
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "last_charge",
+        "becomes_nonmagical": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 3
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wish",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Legendary*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "While wearing this ring, you can expend 1 of its 3 charges to cast *Wish* from it. The ring becomes nonmagical when you use the last charge.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/wish"
+  ]
+}

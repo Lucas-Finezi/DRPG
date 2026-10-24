@@ -1,0 +1,131 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/contact-other-plane",
+  "kind": "spell",
+  "name": "Contact Other Plane",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      119
+    ],
+    "section": "Spells/Spell Descriptions/Contact Other Plane",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 3,
+  "text": "*Level 5 Divination (Warlock, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V\n\n**Duration:** 1 minute\n\nYou mentally contact a demigod, the spirit of a long-dead sage, or some other knowledgeable entity from another plane. Contacting this otherworldly intelligence can break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The GM answers each question with one word, such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or “unclear” (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the GM might instead offer a short phrase as an answer.\n\nOn a failed save, you take 6d6 Psychic damage and have the Incapacitated condition until you finish a Long Rest. A *Greater Restoration* spell cast on you ends this effect.",
+  "facets": {
+    "level": 5,
+    "school": "divination",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": true
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute or Ritual",
+      "ritual": true,
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "text": "1 minute",
+      "kind": "minutes",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "questions",
+        "max": 5,
+        "on": "successful_save"
+      },
+      {
+        "id": "cure",
+        "ended_by": "dnd5e/spell/greater-restoration"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "int",
+      "dc": 15,
+      "target": {
+        "kind": "self"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "6d6",
+          "damage_type": "psychic"
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/incapacitated",
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "long_rest_finished"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "entity_answers",
+      "reason": "gm_judgment",
+      "prompt": "What one-word answers does the entity give?",
+      "source_text": "The GM answers each question with one word, such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or “unclear” (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the GM might instead offer a short phrase as an answer."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Divination (Warlock, Wizard)*\n\n**Casting Time:** 1 minute or Ritual\n\n**Range:** Self\n\n**Components:** V\n\n**Duration:** 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You mentally contact a demigod, the spirit of a long-dead sage, or some other knowledgeable entity from another plane. Contacting this otherworldly intelligence can break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The GM answers each question with one word, such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or “unclear” (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the GM might instead offer a short phrase as an answer.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:entity_answers",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "On a failed save, you take 6d6 Psychic damage and have the Incapacitated condition until you finish a Long Rest. A *Greater Restoration* spell cast on you ends this effect.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated"
+  ]
+}

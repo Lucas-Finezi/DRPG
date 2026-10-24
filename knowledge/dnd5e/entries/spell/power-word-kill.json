@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/power-word-kill",
+  "kind": "spell",
+  "name": "Power Word Kill",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      154
+    ],
+    "section": "Spells/Spell Descriptions/Power Word Kill",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Enchantment (Bard, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Component:** V\n\n**Duration:** Instantaneous\n\nYou compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage.",
+  "facets": {
+    "level": 9,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": false
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    }
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "by_hp",
+      "choose": 1,
+      "chooser": "gm",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "distance",
+          "feet": 60
+        },
+        "must_see": true
+      },
+      "options": [
+        {
+          "id": "dies",
+          "label": "100 Hit Points or fewer",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "hp",
+              "mode": "set",
+              "value": 0,
+              "note": "It dies."
+            }
+          ]
+        },
+        {
+          "id": "damage",
+          "label": "More than 100 Hit Points",
+          "effects": [
+            {
+              "op": "damage",
+              "amount": "12d12",
+              "damage_type": "psychic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Enchantment (Bard, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Component:** V\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

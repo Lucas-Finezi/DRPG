@@ -1,0 +1,66 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/paladin-paladins-smite",
+  "kind": "feature",
+  "name": "Paladin’s Smite",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      54
+    ],
+    "section": "Classes/Paladin/Paladin Class Features/Level 2: Paladin’s Smite",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You always have the *Divine Smite* spell prepared. In addition, you can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/paladin",
+    "level": 2
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/spell/divine-smite"
+      ],
+      "note": "Always prepared."
+    },
+    {
+      "op": "activation",
+      "cost": "none",
+      "frequency": {
+        "count": 1,
+        "per": "long_rest"
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/divine-smite",
+          "slot": "none"
+        }
+      ],
+      "note": "Casting time as normal for the spell."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You always have the *Divine Smite* spell prepared. In addition, you can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/divine-smite"
+  ]
+}

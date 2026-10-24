@@ -1,0 +1,242 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/giant-badger",
+  "kind": "creature",
+  "name": "Giant Badger",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      349
+    ],
+    "section": "Animals/Giant Badger",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Medium Beast, Unaligned*\n\n| **AC** 13 | **Initiative** +0 (10) |\n\n**HP** 15 (2d8 + 6)\n\n**Speed** 30 ft., Burrow 10 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |\n\n**Skills** Perception +3\n\n**Resistances** Poison\n\n**Senses** Darkvision 60 ft.; Passive Perception 13\n\n**Languages** None\n\n**CR** 1/4 (XP 50; PB +2)\n\n##### Actions\n\n***Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Piercing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1/4"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Medium Beast, Unaligned",
+    "ac": {
+      "value": 13,
+      "text": "13"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 15,
+      "formula": {
+        "op": "add",
+        "args": [
+          "2d8",
+          6
+        ]
+      },
+      "text": "15 (2d8 + 6)"
+    },
+    "speed": {
+      "text": "30 ft., Burrow 10 ft.",
+      "walk": 30,
+      "burrow": 10
+    },
+    "abilities": {
+      "str": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 5,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "text": "Perception +3"
+    },
+    "resistances": {
+      "damage_types": [
+        "poison"
+      ],
+      "text": "Poison"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 13",
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/4",
+      "xp": 50,
+      "proficiency_bonus": 2,
+      "text": "1/4 (XP 50; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Bite",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bite",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  1
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 13 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 15 (2d8 + 6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Burrow 10 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 13 | +1 | +1 | **Dex** 10 | +0 | +0 | **Con** 17 | +3 | +3 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 5 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Poison",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/4 (XP 50; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Bite.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 6 (2d4 + 1) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

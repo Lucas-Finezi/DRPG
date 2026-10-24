@@ -1,0 +1,155 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/ring-of-resistance",
+  "kind": "magic-item",
+  "name": "Ring of Resistance",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      238
+    ],
+    "section": "Magic Items/Magic Items A–Z/Ring of Resistance",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Ring, Rare*\n\nYou have Resistance to one damage type while wearing this ring. The gemstone in the ring indicates the type, which the GM chooses or determines randomly by rolling on the following table.\n\n| **1d10** | **Damage Type** | **Gemstone** |\n| 1 | Acid | Pearl |\n| 2 | Cold | Tourmaline |\n| 3 | Fire | Garnet |\n| 4 | Force | Sapphire |\n| 5 | Lightning | Citrine |\n| 6 | Necrotic | Jet |\n| 7 | Poison | Amethyst |\n| 8 | Psychic | Jade |\n| 9 | Radiant | Topaz |\n| 10 | Thunder | Spinel |",
+  "facets": {
+    "category": "ring",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Ring, Rare",
+      "category": "ring",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "ring_of_resistance",
+        "caption": "Ring of Resistance",
+        "columns": [
+          "1d10",
+          "Damage Type",
+          "Gemstone"
+        ],
+        "rows": [
+          [
+            "1",
+            "Acid",
+            "Pearl"
+          ],
+          [
+            "2",
+            "Cold",
+            "Tourmaline"
+          ],
+          [
+            "3",
+            "Fire",
+            "Garnet"
+          ],
+          [
+            "4",
+            "Force",
+            "Sapphire"
+          ],
+          [
+            "5",
+            "Lightning",
+            "Citrine"
+          ],
+          [
+            "6",
+            "Necrotic",
+            "Jet"
+          ],
+          [
+            "7",
+            "Poison",
+            "Amethyst"
+          ],
+          [
+            "8",
+            "Psychic",
+            "Jade"
+          ],
+          [
+            "9",
+            "Radiant",
+            "Topaz"
+          ],
+          [
+            "10",
+            "Thunder",
+            "Spinel"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        {
+          "var": "chosen.resistance_type"
+        }
+      ],
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "this"
+        }
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "resistance_type",
+      "reason": "gm_judgment",
+      "prompt": "Which damage type (and gemstone) does the ring have? (choose or roll 1d10)",
+      "source_text": "which the GM chooses or determines randomly by rolling on the following table"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Ring, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You have Resistance to one damage type while wearing this ring. The gemstone in the ring indicates the type, which the GM chooses or determines randomly by rolling on the following table.",
+      "status": "master_decision",
+      "by": [
+        "/effects/0",
+        "md:resistance_type"
+      ]
+    },
+    {
+      "text": "| **1d10** | **Damage Type** | **Gemstone** |\n| 1 | Acid | Pearl |\n| 2 | Cold | Tourmaline |\n| 3 | Fire | Garnet |\n| 4 | Force | Sapphire |\n| 5 | Lightning | Citrine |\n| 6 | Necrotic | Jet |\n| 7 | Poison | Amethyst |\n| 8 | Psychic | Jade |\n| 9 | Radiant | Topaz |\n| 10 | Thunder | Spinel |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

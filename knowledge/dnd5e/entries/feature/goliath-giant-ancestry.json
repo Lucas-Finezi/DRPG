@@ -1,0 +1,303 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/goliath-giant-ancestry",
+  "kind": "feature",
+  "name": "Giant Ancestry",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      85,
+      86
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Goliath",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Giant Ancestry.*** You are descended from Giants. Choose one of the following benefits—a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:\n\n**Cloud’s Jaunt (Cloud Giant).** As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.\n\n**Fire’s Burn (Fire Giant).** When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.\n\n**Frost’s Chill (Frost Giant).** When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.\n\n**Hill’s Tumble (Hill Giant).** When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.\n\n**Stone’s Endurance (Stone Giant).** When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.\n\n**Storm’s Thunder (Storm Giant).** When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/goliath"
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "giant_ancestry",
+      "max": {
+        "var": "proficiency_bonus"
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "choice",
+      "choose": 1,
+      "options": [
+        {
+          "id": "clouds_jaunt",
+          "label": "Cloud’s Jaunt (Cloud Giant)",
+          "effects": [
+            {
+              "op": "activation",
+              "cost": "bonus_action",
+              "uses": {
+                "resource": "giant_ancestry"
+              },
+              "then": [
+                {
+                  "op": "move",
+                  "mode": "teleport",
+                  "distance_feet": 30,
+                  "note": "To an unoccupied space you can see."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fires_burn",
+          "label": "Fire’s Burn (Fire Giant)",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "optional": true,
+              "then": [
+                {
+                  "op": "spend",
+                  "resource": "giant_ancestry",
+                  "amount": 1
+                },
+                {
+                  "op": "damage",
+                  "amount": "1d10",
+                  "damage_type": "fire",
+                  "target": {
+                    "kind": "inherit"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "frosts_chill",
+          "label": "Frost’s Chill (Frost Giant)",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "optional": true,
+              "then": [
+                {
+                  "op": "spend",
+                  "resource": "giant_ancestry",
+                  "amount": 1
+                },
+                {
+                  "op": "damage",
+                  "amount": "1d6",
+                  "damage_type": "cold",
+                  "target": {
+                    "kind": "inherit"
+                  }
+                },
+                {
+                  "op": "speed",
+                  "movement": "walk",
+                  "mode": "add",
+                  "value": -10,
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_start",
+                      "whose": "source"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hills_tumble",
+          "label": "Hill’s Tumble (Hill Giant)",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "optional": true,
+              "then": [
+                {
+                  "op": "spend",
+                  "resource": "giant_ancestry",
+                  "amount": 1
+                },
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/prone",
+                  "target": {
+                    "kind": "inherit",
+                    "filter": {
+                      "sizes": [
+                        "tiny",
+                        "small",
+                        "medium",
+                        "large"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stones_endurance",
+          "label": "Stone’s Endurance (Stone Giant)",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "damage_taken"
+              },
+              "cost": "reaction",
+              "optional": true,
+              "then": [
+                {
+                  "op": "spend",
+                  "resource": "giant_ancestry",
+                  "amount": 1
+                },
+                {
+                  "op": "modifier",
+                  "stat": "damage_taken",
+                  "mode": "add",
+                  "value": {
+                    "op": "neg",
+                    "args": [
+                      {
+                        "op": "add",
+                        "args": [
+                          "1d12",
+                          {
+                            "var": "ability_mod.con"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "storms_thunder",
+          "label": "Storm’s Thunder (Storm Giant)",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "damaged_by_creature_within_feet.60"
+              },
+              "cost": "reaction",
+              "optional": true,
+              "then": [
+                {
+                  "op": "spend",
+                  "resource": "giant_ancestry",
+                  "amount": 1
+                },
+                {
+                  "op": "damage",
+                  "amount": "1d8",
+                  "damage_type": "thunder",
+                  "target": {
+                    "kind": "inherit"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Giant Ancestry.*** You are descended from Giants. Choose one of the following benefits—a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "**Cloud’s Jaunt (Cloud Giant).** As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/0"
+      ]
+    },
+    {
+      "text": "**Fire’s Burn (Fire Giant).** When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/1"
+      ]
+    },
+    {
+      "text": "**Frost’s Chill (Frost Giant).** When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/2"
+      ]
+    },
+    {
+      "text": "**Hill’s Tumble (Hill Giant).** When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/3"
+      ]
+    },
+    {
+      "text": "**Stone’s Endurance (Stone Giant).** When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/4"
+      ]
+    },
+    {
+      "text": "**Storm’s Thunder (Storm Giant).** When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+      "status": "structured",
+      "by": [
+        "/effects/1/options/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

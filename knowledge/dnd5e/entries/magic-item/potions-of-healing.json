@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/potions-of-healing",
+  "kind": "magic-item",
+  "name": "Potions of Healing",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      236
+    ],
+    "section": "Magic Items/Magic Items A–Z/Potions of Healing",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Rarity Varies*\n\nYou regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below.\n\nWhatever its potency, the potion’s red liquid glimmers when agitated.\n\n| **Potion** | **HP Regained** | **Rarity** |\n| *Potion of Healing* | 2d4 + 2 | Common |\n| *Potion of Healing* (greater) | 4d4 + 4 | Uncommon |\n| *Potion of Healing* (superior) | 8d4 + 8 | Rare |\n| *Potion of Healing* (supreme) | 10d4 + 20 | Very Rare |",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "varies"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Rarity Varies",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "varies"
+        }
+      ],
+      "variants": [
+        {
+          "variant": "Potion of Healing",
+          "hp_regained": "2d4 + 2",
+          "rarity": "common"
+        },
+        {
+          "variant": "Potion of Healing (greater)",
+          "hp_regained": "4d4 + 4",
+          "rarity": "uncommon"
+        },
+        {
+          "variant": "Potion of Healing (superior)",
+          "hp_regained": "8d4 + 8",
+          "rarity": "rare"
+        },
+        {
+          "variant": "Potion of Healing (supreme)",
+          "hp_regained": "10d4 + 20",
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "potions_of_healing",
+        "caption": "Potions of Healing",
+        "columns": [
+          "Potion",
+          "HP Regained",
+          "Rarity"
+        ],
+        "rows": [
+          [
+            "Potion of Healing",
+            "2d4 + 2",
+            "Common"
+          ],
+          [
+            "Potion of Healing (greater)",
+            "4d4 + 4",
+            "Uncommon"
+          ],
+          [
+            "Potion of Healing (superior)",
+            "8d4 + 8",
+            "Rare"
+          ],
+          [
+            "Potion of Healing (supreme)",
+            "10d4 + 20",
+            "Very Rare"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Drink",
+      "then": [
+        {
+          "op": "heal",
+          "amount": {
+            "var": "item_variant_healing"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Rarity Varies*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Whatever its potency, the potion’s red liquid glimmers when agitated.",
+      "status": "descriptive"
+    },
+    {
+      "text": "| **Potion** | **HP Regained** | **Rarity** |\n| *Potion of Healing* | 2d4 + 2 | Common |\n| *Potion of Healing* (greater) | 4d4 + 4 | Uncommon |\n| *Potion of Healing* (superior) | 8d4 + 8 | Rare |\n| *Potion of Healing* (supreme) | 10d4 + 20 | Very Rare |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ]
+}

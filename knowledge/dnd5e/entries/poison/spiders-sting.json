@@ -1,0 +1,91 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/poison/spiders-sting",
+  "kind": "poison",
+  "name": "Spider’s Sting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      198
+    ],
+    "section": "Gameplay Toolbox/Poison/Sample Poisons/Spider’s Sting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Injury Poison*\n\nA creature subjected to Spider’s Sting must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 1 hour. If the creature fails the save by 5 or more, the creature also has the Unconscious condition while Poisoned in this way. The creature wakes up if it takes damage or if another creature takes an action to shake it awake.",
+  "facets": {
+    "poison_type": "injury",
+    "cost_cp": 20000
+  },
+  "data": {
+    "cost": {
+      "amount": 200,
+      "unit": "gp",
+      "cp": 20000
+    },
+    "poison_type": "injury",
+    "rules": [
+      {
+        "id": "type",
+        "ref": "dnd5e/rule/poison"
+      },
+      {
+        "id": "deep_sleep",
+        "fail_by": 5,
+        "condition": "dnd5e/condition/unconscious"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 13,
+      "target": {
+        "kind": "creature"
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/poisoned",
+          "duration": {
+            "kind": "hours",
+            "amount": 1
+          }
+        }
+      ],
+      "note": "Failing by 5 or more: also Unconscious while Poisoned; wakes on damage or when shaken awake (action)."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Injury Poison*",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/data/poison_type",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "A creature subjected to Spider’s Sting must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 1 hour. If the creature fails the save by 5 or more, the creature also has the Unconscious condition while Poisoned in this way. The creature wakes up if it takes damage or if another creature takes an action to shake it awake.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned",
+    "dnd5e/condition/unconscious",
+    "dnd5e/rule/poison"
+  ]
+}

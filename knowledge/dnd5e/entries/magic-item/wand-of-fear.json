@@ -1,0 +1,227 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/wand-of-fear",
+  "kind": "magic-item",
+  "name": "Wand of Fear",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      250
+    ],
+    "section": "Magic Items/Magic Items A–Z/Wand of Fear",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wand, Rare (Requires Attunement)*\n\nThis wand has 7 charges.\n\n***Spells.*** While holding the wand, you can cast one of the spells (save DC 15) on the following table from it. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**\n\n| **Spell** | **Cost** |\n| *Command* (“flee” or “grovel” only) | 1 |\n| *Fear* (60-foot Cone) | 3 |\n\n***Regaining Charges.*** The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand’s last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+  "facets": {
+    "category": "wand",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wand, Rare (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wand",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    },
+    "tables": [
+      {
+        "id": "wand_of_fear",
+        "caption": "Wand of Fear",
+        "columns": [
+          "Spell",
+          "Charge Cost"
+        ],
+        "rows": [
+          [
+            "Command (“flee” or “grovel” only)",
+            "1"
+          ],
+          [
+            "Fear (60-foot Cone)",
+            "3"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 7
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/command",
+          "slot": "none",
+          "components": [],
+          "save_dc": 15,
+          "note": "“Flee” or “grovel” only."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 3
+      },
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fear",
+          "slot": "none",
+          "components": [],
+          "save_dc": 15,
+          "note": "60-foot Cone."
+        }
+      ],
+      "requires": {
+        "pred": "item_state",
+        "args": {
+          "state": "held",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "dawn",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "restore",
+          "resource": "charges",
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d6",
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "expends_last_charge"
+      },
+      "then": [
+        {
+          "op": "choice",
+          "id": "last_charge_roll",
+          "choose": 1,
+          "note": "Roll 1d20; on a 1:",
+          "options": [
+            {
+              "id": "on_1",
+              "label": "1",
+              "effects": [
+                {
+                  "op": "end_effect",
+                  "scope": "this_entry",
+                  "note": "The wand crumbles into ashes and is destroyed."
+                }
+              ]
+            },
+            {
+              "id": "other",
+              "label": "2+",
+              "effects": [
+                {
+                  "op": "reference",
+                  "rule": "dnd5e/rule/magic-items",
+                  "note": "No further effect."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wand, Rare (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This wand has 7 charges.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Spells.*** While holding the wand, you can cast one of the spells (save DC 15) on the following table from it. The table indicates how many charges you must expend to cast the spell.\n\n**Charge**",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "| **Spell** | **Cost** |\n| *Command* (“flee” or “grovel” only) | 1 |\n| *Fear* (60-foot Cone) | 3 |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "***Regaining Charges.*** The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand’s last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/magic-items",
+    "dnd5e/spell/command",
+    "dnd5e/spell/fear"
+  ]
+}

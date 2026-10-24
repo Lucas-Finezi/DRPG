@@ -1,0 +1,115 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/pass-without-trace",
+  "kind": "spell",
+  "name": "Pass without Trace",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      151
+    ],
+    "section": "Spells/Spell Descriptions/Pass without Trace",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Abjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (ashes from burned mistletoe)\n\n**Duration:** Concentration, up to 1 hour\n\nYou radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks.",
+  "facets": {
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "ashes from burned mistletoe"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ability_check.dex",
+      "mode": "add",
+      "value": 10,
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 30,
+          "origin": "self"
+        }
+      },
+      "when": {
+        "pred": "check_uses",
+        "args": {
+          "skill": "stealth"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "leaves_tracks",
+      "mode": "set",
+      "value": 0,
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Abjuration (Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S, M (ashes from burned mistletoe)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

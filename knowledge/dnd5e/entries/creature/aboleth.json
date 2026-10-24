@@ -1,0 +1,564 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/aboleth",
+  "kind": "creature",
+  "name": "Aboleth",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      258
+    ],
+    "section": "Monsters A–Z/Aboleth/Aboleth",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Large Aberration, Lawful Evil*\n\n| **AC** 17 | **Initiative** +7 (17) |\n\n**HP** 150 (20d10 + 40)\n\n**Speed** 10 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | +3 | **Con** 15 | +2 | +6 |\n| **Int** | 18 | +4 | +8 | **Wis** 15 | +2 | +6 | **Cha** 18 | +4 | +4 |\n\n**Skills** History +12, Perception +10\n\n**Senses** Darkvision 120 ft.; Passive Perception 20\n\n**Languages** Deep Speech; telepathy 120 ft.\n\n**CR** 10 (XP 5,900, or 7,200 in lair; PB +4)\n\n##### Traits\n\n***Amphibious.*** The aboleth can breathe air and water.\n\n***Eldritch Restoration.*** If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM.\n\n***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the aboleth fails a saving throw, it can choose to succeed instead.\n\n***Mucus Cloud.*** While underwater, the aboleth is surrounded by mucus. *Constitution Saving Throw:* DC 14, each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth’s turn. *Failure:* The target is cursed. Until the curse ends, the target’s skin becomes slimy, the target can breathe air and water, and it can’t regain Hit Points unless it is underwater. \n\nWhile the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.\n\n***Probing Telepathy.*** If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires.\n\n##### Actions\n\n***Multiattack.*** The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available.\n\n***Tentacle.*** *Melee Attack Roll:* +9, reach 15 ft. *Hit:* 12 (2d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of four tentacles.\n\n***Consume Memories.*** *Intelligence Saving Throw:* DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. *Failure:* 10 (3d6) Psychic damage. \n\n*Success:* Half damage. *Failure or Success:* The aboleth gains the target’s memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.\n\n***Dominate Mind (2/Day).*** *Wisdom Saving Throw:* DC 16, one creature the aboleth can see within 30 feet. *Failure:* The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance. \n\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the aboleth, ending the effect on itself on a success.\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the aboleth can expend a use to take one of the following actions. The aboleth regains all expended uses at the start of each of its turns.*\n\n***Lash.*** The aboleth makes one Tentacle attack.\n\n***Psychic Drain.*** If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Lawful Evil",
+    "cr": "10"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Aberration",
+    "alignment": "Lawful Evil",
+    "type_line": "Large Aberration, Lawful Evil",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 7,
+      "score": 17,
+      "text": "+7 (17)"
+    },
+    "hp": {
+      "average": 150,
+      "formula": {
+        "op": "add",
+        "args": [
+          "20d10",
+          40
+        ]
+      },
+      "text": "150 (20d10 + 40)"
+    },
+    "speed": {
+      "text": "10 ft., Swim 40 ft.",
+      "walk": 10,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 9,
+        "mod": -1,
+        "save": 3
+      },
+      "con": {
+        "score": 15,
+        "mod": 2,
+        "save": 6
+      },
+      "int": {
+        "score": 18,
+        "mod": 4,
+        "save": 8
+      },
+      "wis": {
+        "score": 15,
+        "mod": 2,
+        "save": 6
+      },
+      "cha": {
+        "score": 18,
+        "mod": 4,
+        "save": 4
+      }
+    },
+    "skills": {
+      "history": 12,
+      "perception": 10,
+      "text": "History +12, Perception +10"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 20",
+      "darkvision": 120,
+      "passive_perception": 20
+    },
+    "languages": {
+      "text": "Deep Speech; telepathy 120 ft.",
+      "telepathy_feet": 120
+    },
+    "cr": {
+      "value": "10",
+      "xp": 5900,
+      "proficiency_bonus": 4,
+      "text": "10 (XP 5,900, or 7,200 in lair; PB +4)",
+      "xp_in_lair": 7200
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The aboleth can breathe air and water."
+      },
+      {
+        "name": "Eldritch Restoration",
+        "text": "If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM."
+      },
+      {
+        "name": "Legendary Resistance",
+        "per_day": 3,
+        "per_day_in_lair": 4,
+        "text": "If the aboleth fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Mucus Cloud",
+        "text": "While underwater, the aboleth is surrounded by mucus. *Constitution Saving Throw:* DC 14, each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth’s turn. *Failure:* The target is cursed. Until the curse ends, the target’s skin becomes slimy, the target can breathe air and water, and it can’t regain Hit Points unless it is underwater. \n\nWhile the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed."
+      },
+      {
+        "name": "Probing Telepathy",
+        "text": "If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available."
+      },
+      {
+        "name": "Tentacle",
+        "text": "*Melee Attack Roll:* +9, reach 15 ft. *Hit:* 12 (2d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of four tentacles."
+      },
+      {
+        "name": "Consume Memories",
+        "text": "*Intelligence Saving Throw:* DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. *Failure:* 10 (3d6) Psychic damage. \n\n*Success:* Half damage. *Failure or Success:* The aboleth gains the target’s memories if the target is a Humanoid and is reduced to 0 Hit Points by this action."
+      },
+      {
+        "name": "Dominate Mind",
+        "per_day": 2,
+        "text": "*Wisdom Saving Throw:* DC 16, one creature the aboleth can see within 30 feet. *Failure:* The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance. \n\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the aboleth, ending the effect on itself on a success."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Lash",
+        "text": "The aboleth makes one Tentacle attack."
+      },
+      {
+        "name": "Psychic Drain",
+        "text": "If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the aboleth can expend a use to take one of the following actions. The aboleth regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Tentacle",
+            "count": 2
+          }
+        ],
+        "text": "The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available."
+      },
+      {
+        "id": "attack",
+        "attacks": [
+          {
+            "name": "Tentacle",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 3,
+        "per": "day"
+      }
+    },
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 14,
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 5,
+          "origin": "self"
+        },
+        "text": "each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth’s turn"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "1d12",
+          "damage_type": "acid"
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Tentacle",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  5
+                ]
+              },
+              "damage_type": "bludgeoning"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/grappled",
+              "params": {
+                "escape_dc": 14
+              },
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Consume Memories",
+      "then": [
+        {
+          "op": "save",
+          "ability": "int",
+          "dc": 16,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 30
+            },
+            "text": "one creature within 30 feet that is Charmed or Grappled by the aboleth"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "psychic"
+            }
+          ],
+          "half_on_success": true
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Dominate Mind",
+      "then": [
+        {
+          "op": "save",
+          "ability": "wis",
+          "dc": 16,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 30
+            },
+            "text": "one creature the aboleth can see within 30 feet"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/charmed"
+            }
+          ]
+        }
+      ],
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_eldritch_restoration",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Eldritch Restoration as written.",
+      "source_text": "If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM."
+    },
+    {
+      "id": "traits_mucus_cloud_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Mucus Cloud as written.",
+      "source_text": "The target is cursed. Until the curse ends, the target’s skin becomes slimy, the target can breathe air and water, and it can’t regain Hit Points unless it is underwater. While the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed."
+    },
+    {
+      "id": "traits_probing_telepathy",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Probing Telepathy as written.",
+      "source_text": "If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires."
+    },
+    {
+      "id": "actions_consume_memories_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Consume Memories as written.",
+      "source_text": "Failure or Success: The aboleth gains the target’s memories if the target is a Humanoid and is reduced to 0 Hit Points by this action."
+    },
+    {
+      "id": "actions_dominate_mind_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Dominate Mind as written.",
+      "source_text": "The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance. The target repeats the save whenever it takes damage as well as aft"
+    },
+    {
+      "id": "legendary_actions_psychic_drain",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Psychic Drain as written.",
+      "source_text": "If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Aberration, Lawful Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +7 (17) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 150 (20d10 + 40)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 9 | −1 | +3 | **Con** 15 | +2 | +6 |\n| **Int** | 18 | +4 | +8 | **Wis** 15 | +2 | +6 | **Cha** 18 | +4 | +4 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** History +12, Perception +10",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 20",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Deep Speech; telepathy 120 ft.",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 10 (XP 5,900, or 7,200 in lair; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The aboleth can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Eldritch Restoration.*** If destroyed, the aboleth gains a new body in 5d10 days, reviving with all its Hit Points in the Far Realm or another location chosen by the GM.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_eldritch_restoration"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the aboleth fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Mucus Cloud.*** While underwater, the aboleth is surrounded by mucus. *Constitution Saving Throw:* DC 14, each creature in a 5-foot Emanation originating from the aboleth at the end of the aboleth’s turn. *Failure:* The target is cursed. Until the curse ends, the target’s skin becomes slimy, the target can breathe air and water, and it can’t regain Hit Points unless it is underwater. \n\nWhile the cursed creature is outside a body of water, the creature takes 6 (1d12) Acid damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/3",
+        "/effects/2",
+        "md:traits_mucus_cloud_rider"
+      ]
+    },
+    {
+      "text": "***Probing Telepathy.*** If a creature the aboleth can see communicates telepathically with the aboleth, the aboleth learns the creature’s greatest desires.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/4",
+        "md:traits_probing_telepathy"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The aboleth makes two Tentacle attacks and uses either Consume Memories or Dominate Mind if available.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Tentacle.*** *Melee Attack Roll:* +9, reach 15 ft. *Hit:* 12 (2d6 + 5) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14) from one of four tentacles.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Consume Memories.*** *Intelligence Saving Throw:* DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. *Failure:* 10 (3d6) Psychic damage. \n\n*Success:* Half damage. *Failure or Success:* The aboleth gains the target’s memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/4",
+        "md:actions_consume_memories_rider"
+      ]
+    },
+    {
+      "text": "***Dominate Mind (2/Day).*** *Wisdom Saving Throw:* DC 16, one creature the aboleth can see within 30 feet. *Failure:* The target has the Charmed condition until the aboleth dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the aboleth and is under its control while within 60 feet of it. In addition, the aboleth and the target can communicate telepathically with each other over any distance. \n\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the aboleth, ending the effect on itself on a success.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "/effects/5",
+        "md:actions_dominate_mind_rider"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the aboleth can expend a use to take one of the following actions. The aboleth regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Lash.*** The aboleth makes one Tentacle attack.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Psychic Drain.*** If the aboleth has at least one creature Charmed or Grappled, it uses Consume Memories and regains 5 (1d10) Hit Points.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/1",
+        "md:legendary_actions_psychic_drain"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/grappled"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/contagion",
+  "kind": "spell",
+  "name": "Contagion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      119
+    ],
+    "section": "Spells/Spell Descriptions/Contagion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L22"
+  },
+  "tier": 2,
+  "text": "*Level 5 Necromancy (Cleric, Druid)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Component:** V, S\n\n**Duration:** 7 days\n\nYour touch inflicts a magical contagion. The target must succeed on a Constitution saving throw or take 11d8 Necrotic damage and have the Poisoned condition. Also, choose one ability when you cast the spell. While Poisoned, the target has Disadvantage on saving throws made with the chosen ability.\n\nThe target must repeat the saving throw at the end of each of its turns until it gets three successes or failures. If the target succeeds on three of these saves, the spell ends on the target. If the target fails three of the saves, the spell lasts for 7 days on it.\n\nWhenever the Poisoned target receives an effect that would end the Poisoned condition, the target must succeed on a Constitution saving throw, or the Poisoned condition doesn’t end on it.",
+  "facets": {
+    "level": 5,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "druid"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "7 days",
+      "kind": "days",
+      "amount": 7
+    },
+    "rules": [
+      {
+        "id": "progression",
+        "repeat_on": "end_of_each_turn",
+        "three_successes": "spell_ends",
+        "three_failures": "lasts_7_days"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "11d8",
+          "damage_type": "necrotic"
+        },
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/poisoned",
+          "duration": {
+            "kind": "days",
+            "amount": 7
+          }
+        },
+        {
+          "op": "roll_mode",
+          "mode": "disadvantage",
+          "rolls": [
+            "saving_throw"
+          ],
+          "duration": {
+            "kind": "days",
+            "amount": 7
+          },
+          "when": {
+            "pred": "roll_uses_ability",
+            "args": {
+              "ability": "chosen.ability"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "condition_would_end.poisoned"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "note": "On a failure the Poisoned condition doesn't end."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 5 Necromancy (Cleric, Druid)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Component:** V, S\n\n**Duration:** 7 days",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Your touch inflicts a magical contagion. The target must succeed on a Constitution saving throw or take 11d8 Necrotic damage and have the Poisoned condition. Also, choose one ability when you cast the spell. While Poisoned, the target has Disadvantage on saving throws made with the chosen ability.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "The target must repeat the saving throw at the end of each of its turns until it gets three successes or failures. If the target succeeds on three of these saves, the spell ends on the target. If the target fails three of the saves, the spell lasts for 7 days on it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Whenever the Poisoned target receives an effect that would end the Poisoned condition, the target must succeed on a Constitution saving throw, or the Poisoned condition doesn’t end on it.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/poisoned"
+  ]
+}

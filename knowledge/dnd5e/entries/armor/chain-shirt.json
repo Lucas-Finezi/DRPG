@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/armor/chain-shirt",
+  "kind": "armor",
+  "name": "Chain Shirt",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      92
+    ],
+    "section": "Equipment/Armor/Armor/Medium Armor (5 Minutes to Don and 1 Minute to Doff)/Chain Shirt",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L29"
+  },
+  "tier": 2,
+  "text": "| ↳ Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |",
+  "facets": {
+    "category": "medium",
+    "cost_cp": 5000,
+    "stealth_disadvantage": false
+  },
+  "data": {
+    "category": "medium",
+    "don": 5,
+    "doff": 1,
+    "weight_lb": 20,
+    "cost": {
+      "amount": 50,
+      "unit": "gp",
+      "cp": 5000
+    },
+    "armor_class": {
+      "base": 13,
+      "dex_modifier": true,
+      "dex_max": 2
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "base_ac",
+      "mode": "set",
+      "value": {
+        "op": "add",
+        "args": [
+          13,
+          {
+            "op": "min",
+            "args": [
+              {
+                "var": "ability_mod.dex"
+              },
+              2
+            ]
+          }
+        ]
+      },
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "worn",
+          "item": "chain-shirt"
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "| ↳ Chain Shirt | 13 + Dex modifier (max 2) | — | — | 20 lb. | 50 GP |",
+      "status": "structured",
+      "by": [
+        "/data/category",
+        "/data/don",
+        "/data/doff",
+        "/data/weight_lb",
+        "/data/cost",
+        "/data/armor_class",
+        "/effects/0",
+        "dnd5e/rule/armor-training",
+        "dnd5e/rule/equipment-armor-training"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/armor-training",
+    "dnd5e/rule/equipment-armor-training"
+  ]
+}

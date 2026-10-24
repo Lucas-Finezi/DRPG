@@ -1,0 +1,238 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/control-weather",
+  "kind": "spell",
+  "name": "Control Weather",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      120
+    ],
+    "section": "Spells/Spell Descriptions/Control Weather",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L25"
+  },
+  "tier": 3,
+  "text": "*Level 8 Transmutation (Cleric, Druid, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** Self\n\n**Components:** V, S, M (burning incense)\n\n**Duration:** Concentration, up to 8 hours\n\nYou take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell, and it ends early if you go indoors.\n\nWhen you cast the spell, you change the current weather conditions, which are determined by the GM. You can change precipitation, temperature, and wind. It takes 1d4 × 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.\n\nWhen you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.\n\n##### Precipitation\n\n| **Stage** | **Condition** |\n| 1 | Clear |\n| 2 | Light clouds |\n| 3 | Overcast or ground fog |\n| 4 | Rain, hail, or snow |\n| 5 | Torrential rain, driving hail, or blizzard |\n\n##### Temperature\n\n| **Stage** | **Condition** |\n| 1 | Heat wave |\n| 2 | Hot |\n| 3 | Warm |\n| 4 | Cool |\n| 5 | Cold |\n| 6 | Freezing |\n\n##### Wind\n\n| **Stage** | **Condition** |\n| 1 | Calm |\n| 2 | Moderate wind |\n| 3 | Strong wind |\n| 4 | Gale |\n| 5 | Storm |",
+  "facets": {
+    "level": 8,
+    "school": "transmutation",
+    "classes": [
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "10 minutes",
+      "cost": "time",
+      "minutes": 10
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "burning incense"
+    },
+    "duration": {
+      "text": "Concentration, up to 8 hours",
+      "kind": "hours",
+      "amount": 8,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "control",
+        "radius_miles": 5,
+        "outdoors_only": true
+      },
+      {
+        "id": "change",
+        "dimensions": [
+          "precipitation",
+          "temperature",
+          "wind"
+        ],
+        "delay_minutes": "1d4 x 10",
+        "returns_to_normal_on_end": true
+      },
+      {
+        "id": "stages",
+        "step": 1,
+        "wind_direction_change": true
+      }
+    ],
+    "tables": [
+      {
+        "id": "precipitation",
+        "caption": "Precipitation",
+        "columns": [
+          "Stage",
+          "Condition"
+        ],
+        "rows": [
+          [
+            "1",
+            "Clear"
+          ],
+          [
+            "2",
+            "Light clouds"
+          ],
+          [
+            "3",
+            "Overcast or ground fog"
+          ],
+          [
+            "4",
+            "Rain, hail, or snow"
+          ],
+          [
+            "5",
+            "Torrential rain, driving hail, or blizzard"
+          ]
+        ]
+      },
+      {
+        "id": "temperature",
+        "caption": "Temperature",
+        "columns": [
+          "Stage",
+          "Condition"
+        ],
+        "rows": [
+          [
+            "1",
+            "Heat wave"
+          ],
+          [
+            "2",
+            "Hot"
+          ],
+          [
+            "3",
+            "Warm"
+          ],
+          [
+            "4",
+            "Cool"
+          ],
+          [
+            "5",
+            "Cold"
+          ],
+          [
+            "6",
+            "Freezing"
+          ]
+        ]
+      },
+      {
+        "id": "wind",
+        "caption": "Wind",
+        "columns": [
+          "Stage",
+          "Condition"
+        ],
+        "rows": [
+          [
+            "1",
+            "Calm"
+          ],
+          [
+            "2",
+            "Moderate wind"
+          ],
+          [
+            "3",
+            "Strong wind"
+          ],
+          [
+            "4",
+            "Gale"
+          ],
+          [
+            "5",
+            "Storm"
+          ]
+        ]
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "current_weather",
+      "reason": "gm_judgment",
+      "prompt": "What are the current weather conditions?",
+      "source_text": "When you cast the spell, you change the current weather conditions, which are determined by the GM."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 8 Transmutation (Cleric, Druid, Wizard)*\n\n**Casting Time:** 10 minutes\n\n**Range:** Self\n\n**Components:** V, S, M (burning incense)\n\n**Duration:** Concentration, up to 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell, and it ends early if you go indoors.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast the spell, you change the current weather conditions, which are determined by the GM. You can change precipitation, temperature, and wind. It takes 1d4 × 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.",
+      "status": "master_decision",
+      "by": [
+        "md:current_weather",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "##### Precipitation\n\n| **Stage** | **Condition** |\n| 1 | Clear |\n| 2 | Light clouds |\n| 3 | Overcast or ground fog |\n| 4 | Rain, hail, or snow |\n| 5 | Torrential rain, driving hail, or blizzard |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Temperature\n\n| **Stage** | **Condition** |\n| 1 | Heat wave |\n| 2 | Hot |\n| 3 | Warm |\n| 4 | Cool |\n| 5 | Cold |\n| 6 | Freezing |",
+      "status": "structured",
+      "by": [
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Wind\n\n| **Stage** | **Condition** |\n| 1 | Calm |\n| 2 | Moderate wind |\n| 3 | Strong wind |\n| 4 | Gale |\n| 5 | Storm |",
+      "status": "structured",
+      "by": [
+        "/data/tables/2"
+      ]
+    }
+  ]
+}

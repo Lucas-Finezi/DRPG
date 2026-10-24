@@ -1,0 +1,216 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/dragonborn-breath-weapon",
+  "kind": "feature",
+  "name": "Breath Weapon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      84
+    ],
+    "section": "Character Origins/Character Species/Species Descriptions/Dragonborn",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "***Breath Weapon.*** When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10). \n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+  "facets": {
+    "feature_type": "species_trait",
+    "owner": "dnd5e/species/dragonborn"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "uses",
+        "max": "proficiency_bonus",
+        "recovery": "long_rest"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "resource",
+      "resource": "breath_weapon",
+      "max": {
+        "var": "proficiency_bonus"
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "attack_action_attack"
+      },
+      "optional": true,
+      "note": "Replaces one attack of the Attack action on your turn.",
+      "then": [
+        {
+          "op": "spend",
+          "resource": "breath_weapon",
+          "amount": 1
+        },
+        {
+          "op": "choice",
+          "choose": 1,
+          "options": [
+            {
+              "id": "cone",
+              "label": "15-foot Cone",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "dex",
+                  "dc": {
+                    "op": "add",
+                    "args": [
+                      8,
+                      {
+                        "var": "ability_mod.con"
+                      },
+                      {
+                        "var": "proficiency_bonus"
+                      }
+                    ]
+                  },
+                  "target": {
+                    "kind": "area",
+                    "area": {
+                      "shape": "cone",
+                      "size_feet": 15,
+                      "origin": "self"
+                    }
+                  },
+                  "on_fail": [
+                    {
+                      "op": "damage",
+                      "amount": {
+                        "scale": {
+                          "by": "level",
+                          "steps": [
+                            {
+                              "from": 1,
+                              "value": "1d10"
+                            },
+                            {
+                              "from": 5,
+                              "value": "2d10"
+                            },
+                            {
+                              "from": 11,
+                              "value": "3d10"
+                            },
+                            {
+                              "from": 17,
+                              "value": "4d10"
+                            }
+                          ]
+                        }
+                      },
+                      "damage_type": {
+                        "var": "chosen.draconic_ancestry"
+                      }
+                    }
+                  ],
+                  "half_on_success": true
+                }
+              ]
+            },
+            {
+              "id": "line",
+              "label": "30-foot Line, 5 feet wide",
+              "effects": [
+                {
+                  "op": "save",
+                  "ability": "dex",
+                  "dc": {
+                    "op": "add",
+                    "args": [
+                      8,
+                      {
+                        "var": "ability_mod.con"
+                      },
+                      {
+                        "var": "proficiency_bonus"
+                      }
+                    ]
+                  },
+                  "target": {
+                    "kind": "area",
+                    "area": {
+                      "shape": "line",
+                      "size_feet": 30,
+                      "origin": "self",
+                      "width_feet": 5
+                    }
+                  },
+                  "on_fail": [
+                    {
+                      "op": "damage",
+                      "amount": {
+                        "scale": {
+                          "by": "level",
+                          "steps": [
+                            {
+                              "from": 1,
+                              "value": "1d10"
+                            },
+                            {
+                              "from": 5,
+                              "value": "2d10"
+                            },
+                            {
+                              "from": 11,
+                              "value": "3d10"
+                            },
+                            {
+                              "from": 17,
+                              "value": "4d10"
+                            }
+                          ]
+                        }
+                      },
+                      "damage_type": {
+                        "var": "chosen.draconic_ancestry"
+                      }
+                    }
+                  ],
+                  "half_on_success": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "***Breath Weapon.*** When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

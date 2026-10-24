@@ -1,0 +1,354 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/young-black-dragon",
+  "kind": "creature",
+  "name": "Young Black Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      264
+    ],
+    "section": "Monsters A–Z/Black Dragons/Young Black Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 2,
+  "text": "*Large Dragon (Chromatic), Chaotic Evil*\n\n| **AC** 18 | **Initiative** +5 (15) |\n\n**HP** 127 (15d10 + 45)\n\n**Speed** 40 ft., Fly 80 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +5 | **Con** 17 | +3 | +3 |\n| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +3 | **Cha** 15 | +2 | +2 |\n\n**Skills** Perception +6, Stealth +5\n\n**Immunities** Acid\n\n**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 16\n\n**Languages** Common, Draconic\n\n**CR** 7 (XP 2,900; PB +3)\n\n##### Traits\n\n***Amphibious.*** The dragon can breathe air and water.\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks.\n\n***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 9 (2d4 + 4) Slashing damage plus 3 (1d6) Acid damage.\n\n***Acid Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 14, each creature in a 30-foot-long, 5-foot-wide Line. *Failure:* 49 (14d6) Acid damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Chaotic Evil",
+    "cr": "7"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Dragon",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Chromatic"
+    ],
+    "type_line": "Large Dragon (Chromatic), Chaotic Evil",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 5,
+      "score": 15,
+      "text": "+5 (15)"
+    },
+    "hp": {
+      "average": 127,
+      "formula": {
+        "op": "add",
+        "args": [
+          "15d10",
+          45
+        ]
+      },
+      "text": "127 (15d10 + 45)"
+    },
+    "speed": {
+      "text": "40 ft., Fly 80 ft., Swim 40 ft.",
+      "walk": 40,
+      "fly": 80,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 19,
+        "mod": 4,
+        "save": 4
+      },
+      "dex": {
+        "score": 14,
+        "mod": 2,
+        "save": 5
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 3
+      },
+      "cha": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      }
+    },
+    "skills": {
+      "perception": 6,
+      "stealth": 5,
+      "text": "Perception +6, Stealth +5"
+    },
+    "immunities": {
+      "damage_types": [
+        "acid"
+      ],
+      "conditions": [],
+      "text": "Acid"
+    },
+    "senses": {
+      "text": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 16",
+      "blindsight": 30,
+      "darkvision": 120,
+      "passive_perception": 16
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "7",
+      "xp": 2900,
+      "proficiency_bonus": 3,
+      "text": "7 (XP 2,900; PB +3)"
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "text": "The dragon can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +7, reach 10 ft. *Hit:* 9 (2d4 + 4) Slashing damage plus 3 (1d6) Acid damage."
+      },
+      {
+        "name": "Acid Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Dexterity Saving Throw:* DC 14, each creature in a 30-foot-long, 5-foot-wide Line. *Failure:* 49 (14d6) Acid damage. *Success:* Half damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "breathe_underwater",
+      "mode": "set",
+      "value": 1,
+      "note": "Breathes air and water."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  4
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d6",
+              "damage_type": "acid"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Acid Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 14,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "line",
+              "size_feet": 30,
+              "width_feet": 5,
+              "origin": "self"
+            },
+            "text": "each creature in a 30-foot-long, 5-foot-wide Line"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "14d6",
+              "damage_type": "acid"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Dragon (Chromatic), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +5 (15) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 127 (15d10 + 45)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Fly 80 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 19 | +4 | +4 | **Dex** 14 | +2 | +5 | **Con** 17 | +3 | +3 |\n| **Int** | 12 | +1 | +1 | **Wis** 11 | +0 | +3 | **Cha** 15 | +2 | +2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +6, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Acid",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 30 ft., Darkvision 120 ft.;\n\nPassive Perception 16",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 7 (XP 2,900; PB +3)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Amphibious.*** The dragon can breathe air and water.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +7, reach 10 ft. *Hit:* 9 (2d4 + 4) Slashing damage plus 3 (1d6) Acid damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Acid Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 14, each creature in a 30-foot-long, 5-foot-wide Line. *Failure:* 49 (14d6) Acid damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/action/dash",
+  "kind": "action",
+  "name": "Dash",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      180
+    ],
+    "section": "Rules Glossary/Rules Definitions/Dash [Action]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L04"
+  },
+  "tier": 2,
+  "text": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your Speed after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.\n\nIf you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it. *See also* “Speed.”",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Action"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "dash_special_speed",
+        "may_use_special_speed": true,
+        "choose_each_time": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Dash",
+      "cost": "action",
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "movement",
+          "mode": "add",
+          "value": {
+            "var": "speed.walk"
+          },
+          "duration": {
+            "kind": "until_event",
+            "until": {
+              "event": "turn_end",
+              "whose": "self"
+            }
+          },
+          "note": "Equals your Speed after modifiers."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your Speed after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "If you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "*See also* “Speed.”",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/speed"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/speed"
+  ]
+}

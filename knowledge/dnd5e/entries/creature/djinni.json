@@ -1,0 +1,691 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/djinni",
+  "kind": "creature",
+  "name": "Djinni",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      280
+    ],
+    "section": "Monsters A–Z/Djinni/Djinni",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Large Elemental (Genie), Neutral*\n\n| **AC** 17 | **Initiative** +2 (12) |\n\n**HP** 218 (19d10 + 114)\n\n**Speed** 30 ft., Fly 90 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 15 | +2 | +6 | **Con** 22 | +6 | +6 |\n| **Int** | 15 | +2 | +2 | **Wis** 16 | +3 | +7 | **Cha** 20 | +5 | +5 |\n\n**Immunities** Lightning, Thunder\n\n**Senses** Darkvision 120 ft.; Passive Perception 13\n\n**Languages** Primordial (Auran)\n\n**CR** 11 (XP 7,200; PB +4)\n\n##### Traits\n\n***Elemental Restoration.*** If the djinni dies outside the Elemental Plane of Air, its body dissolves into mist, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Air.\n\n***Magic Resistance.*** The djinni has Advantage on saving throws against spells and other magical effects.\n\n***Wishes.*** The djinni has a 30 percent chance of knowing the *Wish* spell. If the djinni knows it, the djinni can cast it only on behalf of a non-genie creature who communicates a wish in a way the djinni can understand. If the djinni casts the spell for the creature, the djinni suffers none of the spell’s stress. Once the djinni has cast it three times, the djinni can’t do so again for 365 days.\n\n##### Actions\n\n***Multiattack.*** The djinni makes three attacks, using Storm Blade or Storm Bolt in any combination.\n\n***Storm Blade.*** *Melee Attack Roll:* +9, reach 5 feet. *Hit:* 12 (2d6 + 5) Slashing damage plus 7 (2d6) Lightning damage.\n\n***Storm Bolt.*** *Ranged Attack Roll:* +9, range 120 feet. *Hit:* 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition.\n\n***Create Whirlwind.*** The djinni conjures a whirlwind at a point it can see within 120 feet. The whirlwind fills a 20-foot-radius, 60-foot-high Cylinder centered on that point. The whirlwind lasts until the djinni’s Concentration on it ends. The djinni can move the whirlwind up to 20 feet at the start of each of its turns. \n\nWhenever the whirlwind enters a creature’s space or a creature enters the whirlwind, that creature is subjected to the following effect. *Strength Saving Throw:* DC 17 (a creature makes this save only once per turn, and the djinni is unaffected). *Failure:* While in the whirlwind, the target has the Restrained condition and moves with the whirlwind. At the start of each of its turns, the Restrained target takes 21 (6d6) Thunder damage. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.\n\n***Spellcasting.*** The djinni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):\n\n**At Will:** *Detect Evil and Good*, *Detect Magic*\n\n**2/Day Each:** *Create Food and Water* (can create wine instead of water), *Tongues*, *Wind Walk*\n\n**1/Day Each:** *Creation*, *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "cr": "11"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Elemental",
+    "alignment": "Neutral",
+    "tags": [
+      "Genie"
+    ],
+    "type_line": "Large Elemental (Genie), Neutral",
+    "ac": {
+      "value": 17,
+      "text": "17"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 218,
+      "formula": {
+        "op": "add",
+        "args": [
+          "19d10",
+          114
+        ]
+      },
+      "text": "218 (19d10 + 114)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 90 ft. (hover)",
+      "walk": 30,
+      "fly": 90,
+      "hover": true
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 6
+      },
+      "con": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "int": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 7
+      },
+      "cha": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "lightning",
+        "thunder"
+      ],
+      "conditions": [],
+      "text": "Lightning, Thunder"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 13",
+      "darkvision": 120,
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "Primordial (Auran)"
+    },
+    "cr": {
+      "value": "11",
+      "xp": 7200,
+      "proficiency_bonus": 4,
+      "text": "11 (XP 7,200; PB +4)"
+    },
+    "traits": [
+      {
+        "name": "Elemental Restoration",
+        "text": "If the djinni dies outside the Elemental Plane of Air, its body dissolves into mist, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Air."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The djinni has Advantage on saving throws against spells and other magical effects."
+      },
+      {
+        "name": "Wishes",
+        "text": "The djinni has a 30 percent chance of knowing the *Wish* spell. If the djinni knows it, the djinni can cast it only on behalf of a non-genie creature who communicates a wish in a way the djinni can understand. If the djinni casts the spell for the creature, the djinni suffers none of the spell’s stress. Once the djinni has cast it three times, the djinni can’t do so again for 365 days."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The djinni makes three attacks, using Storm Blade or Storm Bolt in any combination."
+      },
+      {
+        "name": "Storm Blade",
+        "text": "*Melee Attack Roll:* +9, reach 5 feet. *Hit:* 12 (2d6 + 5) Slashing damage plus 7 (2d6) Lightning damage."
+      },
+      {
+        "name": "Storm Bolt",
+        "text": "*Ranged Attack Roll:* +9, range 120 feet. *Hit:* 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition."
+      },
+      {
+        "name": "Create Whirlwind",
+        "text": "The djinni conjures a whirlwind at a point it can see within 120 feet. The whirlwind fills a 20-foot-radius, 60-foot-high Cylinder centered on that point. The whirlwind lasts until the djinni’s Concentration on it ends. The djinni can move the whirlwind up to 20 feet at the start of each of its turns. \n\nWhenever the whirlwind enters a creature’s space or a creature enters the whirlwind, that creature is subjected to the following effect. *Strength Saving Throw:* DC 17 (a creature makes this save only once per turn, and the djinni is unaffected). *Failure:* While in the whirlwind, the target has the Restrained condition and moves with the whirlwind. At the start of each of its turns, the Restrained target takes 21 (6d6) Thunder damage. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The djinni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):\n\n**At Will:** *Detect Evil and Good*, *Detect Magic*\n\n**2/Day Each:** *Create Food and Water* (can create wine instead of water), *Tongues*, *Wind Walk*\n\n**1/Day Each:** *Creation*, *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*"
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The djinni makes three attacks, using Storm Blade or Storm Bolt in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The djinni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17): At Will: Detect Evil and Good, Detect Magic 2/Day Each: Create Food and Water (can create wine instead of water), Tongues, Wind Walk 1/Day Each: Creation, Gaseous Form, Invisibility, Major Image, Plane Shift",
+        "ability": "cha",
+        "save_dc": 17,
+        "no_material_components": true,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-evil-and-good",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/create-food-and-water",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/tongues",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/wind-walk",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/creation",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/gaseous-form",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/invisibility",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/major-image",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/plane-shift",
+            "frequency": "1/Day Each"
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "cast_spell",
+      "spell": "dnd5e/spell/wish",
+      "slot": "none"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Storm Blade",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "lightning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Storm Bolt",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 9,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "3d8",
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-evil-and-good",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Detect Evil and Good"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/create-food-and-water",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17,
+          "note": "(can create wine instead of water)"
+        }
+      ],
+      "name": "Create Food and Water",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/tongues",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Tongues",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/wind-walk",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Wind Walk",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/creation",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Creation",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/gaseous-form",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Gaseous Form",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Invisibility",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/major-image",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Major Image",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "components": [
+            "V",
+            "S"
+          ],
+          "save_dc": 17
+        }
+      ],
+      "name": "Plane Shift",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_elemental_restoration",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Elemental Restoration as written.",
+      "source_text": "If the djinni dies outside the Elemental Plane of Air, its body dissolves into mist, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Air."
+    },
+    {
+      "id": "actions_create_whirlwind",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Create Whirlwind as written.",
+      "source_text": "The djinni conjures a whirlwind at a point it can see within 120 feet. The whirlwind fills a 20-foot-radius, 60-foot-high Cylinder centered on that point. The whirlwind lasts until the djinni’s Concentration on it ends. The djinni can move the whirlwind up to 20 feet at the start of each of its turns. Whenever the whirlwind enters a creature’s space or a creature enters the whirlwind, that creatur"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Elemental (Genie), Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 17 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 218 (19d10 + 114)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 90 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 15 | +2 | +6 | **Con** 22 | +6 | +6 |\n| **Int** | 15 | +2 | +2 | **Wis** 16 | +3 | +7 | **Cha** 20 | +5 | +5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Lightning, Thunder",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Auran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 11 (XP 7,200; PB +4)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Elemental Restoration.*** If the djinni dies outside the Elemental Plane of Air, its body dissolves into mist, and it gains a new body in 1d4 days, reviving with all its Hit Points somewhere on the Plane of Air.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_elemental_restoration"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The djinni has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Wishes.*** The djinni has a 30 percent chance of knowing the *Wish* spell. If the djinni knows it, the djinni can cast it only on behalf of a non-genie creature who communicates a wish in a way the djinni can understand. If the djinni casts the spell for the creature, the djinni suffers none of the spell’s stress. Once the djinni has cast it three times, the djinni can’t do so again for 365 days.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The djinni makes three attacks, using Storm Blade or Storm Bolt in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Storm Blade.*** *Melee Attack Roll:* +9, reach 5 feet. *Hit:* 12 (2d6 + 5) Slashing damage plus 7 (2d6) Lightning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Storm Bolt.*** *Ranged Attack Roll:* +9, range 120 feet. *Hit:* 13 (3d8) Thunder damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Create Whirlwind.*** The djinni conjures a whirlwind at a point it can see within 120 feet. The whirlwind fills a 20-foot-radius, 60-foot-high Cylinder centered on that point. The whirlwind lasts until the djinni’s Concentration on it ends. The djinni can move the whirlwind up to 20 feet at the start of each of its turns. \n\nWhenever the whirlwind enters a creature’s space or a creature enters the whirlwind, that creature is subjected to the following effect. *Strength Saving Throw:* DC 17 (a creature makes this save only once per turn, and the djinni is unaffected). *Failure:* While in the whirlwind, the target has the Restrained condition and moves with the whirlwind. At the start of each of its turns, the Restrained target takes 21 (6d6) Thunder damage. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/3",
+        "md:actions_create_whirlwind"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The djinni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 17):\n\n**At Will:** *Detect Evil and Good*, *Detect Magic*\n\n**2/Day Each:** *Create Food and Water* (can create wine instead of water), *Tongues*, *Wind Walk*\n\n**1/Day Each:** *Creation*, *Gaseous Form*, *Invisibility*, *Major Image*, *Plane Shift*",
+      "status": "structured",
+      "by": [
+        "/data/actions/4",
+        "/data/rules/1",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11",
+        "/effects/12",
+        "/effects/13"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone",
+    "dnd5e/spell/create-food-and-water",
+    "dnd5e/spell/creation",
+    "dnd5e/spell/detect-evil-and-good",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/gaseous-form",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/major-image",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/tongues",
+    "dnd5e/spell/wind-walk",
+    "dnd5e/spell/wish"
+  ]
+}

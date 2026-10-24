@@ -1,0 +1,133 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/thief",
+  "kind": "subclass",
+  "name": "Thief",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      64
+    ],
+    "section": "Classes/Rogue/Rogue Subclass: Thief",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Rogue Subclass: Thief\n\n*Hunt for Treasure as a Classic Adventurer*\n\nA mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+  "facets": {
+    "class": "rogue",
+    "feature_levels": [
+      3,
+      9,
+      13,
+      17
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/rogue",
+    "levels": {
+      "3": [
+        "dnd5e/feature/thief-fast-hands",
+        "dnd5e/feature/thief-second-story-work"
+      ],
+      "9": [
+        "dnd5e/feature/thief-supreme-sneak"
+      ],
+      "13": [
+        "dnd5e/feature/thief-use-magic-device"
+      ],
+      "17": [
+        "dnd5e/feature/thief-thiefs-reflexes"
+      ]
+    },
+    "tagline": "Hunt for Treasure as a Classic Adventurer"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-fast-hands",
+        "dnd5e/feature/thief-second-story-work"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Rogue level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-supreme-sneak"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 9
+        }
+      },
+      "note": "Subclass feature at Rogue level 9."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-use-magic-device"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 13
+        }
+      },
+      "note": "Subclass feature at Rogue level 13."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/thief-thiefs-reflexes"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "rogue",
+          "level": 17
+        }
+      },
+      "note": "Subclass feature at Rogue level 17."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Rogue Subclass: Thief\n\n*Hunt for Treasure as a Classic Adventurer*",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "A mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/thief-fast-hands",
+    "dnd5e/feature/thief-second-story-work",
+    "dnd5e/feature/thief-supreme-sneak",
+    "dnd5e/feature/thief-thiefs-reflexes",
+    "dnd5e/feature/thief-use-magic-device"
+  ]
+}

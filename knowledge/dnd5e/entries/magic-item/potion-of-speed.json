@@ -1,0 +1,81 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/potion-of-speed",
+  "kind": "magic-item",
+  "name": "Potion of Speed",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      236
+    ],
+    "section": "Magic Items/Magic Items A–Z/Potion of Speed",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L32"
+  },
+  "tier": 2,
+  "text": "*Potion, Very Rare*\n\nWhen you drink this potion, you gain the effect of the *Haste* spell for 1 minute (no Concentration required) without suffering the wave of lethargy that typically occurs when the effect ends.\n\nThis potion’s yellow fluid is streaked with black and swirls on its own.",
+  "facets": {
+    "category": "potion",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Potion, Very Rare",
+      "category": "potion",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "bonus_action",
+      "name": "Drink",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/haste",
+          "slot": "none",
+          "components": [],
+          "note": "No Concentration required. Lasts 1 minute; no lethargy when it ends."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Potion, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "When you drink this potion, you gain the effect of the *Haste* spell for 1 minute (no Concentration required) without suffering the wave of lethargy that typically occurs when the effect ends.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "This potion’s yellow fluid is streaked with black and swirls on its own.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/haste"
+  ]
+}

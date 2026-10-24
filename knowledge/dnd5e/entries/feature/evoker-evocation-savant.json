@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/evoker-evocation-savant",
+  "kind": "feature",
+  "name": "Evocation Savant",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      82
+    ],
+    "section": "Classes/Wizard/Wizard Subclass: Evoker/Level 3: Evocation Savant",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "Choose two Wizard spells from the Evocation school, each of which must be no higher than level 2, and add them to your spellbook for free.\n\nIn addition, whenever you gain access to a new level of spell slots in this class, you can add one Wizard spell from the Evocation school to your spellbook for free. The chosen spell must be of a level for which you have spell slots.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/evoker",
+    "level": 3
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "free_spells",
+        "count": 2,
+        "school": "evocation",
+        "max_level": 2,
+        "from": "dnd5e/spell-list/wizard",
+        "to": "spellbook",
+        "cost": 0
+      },
+      {
+        "id": "new_slot_level",
+        "on": "new_spell_slot_level",
+        "count": 1,
+        "school": "evocation",
+        "cost": 0
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Choose two Wizard spells from the Evocation school, each of which must be no higher than level 2, and add them to your spellbook for free.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "In addition, whenever you gain access to a new level of spell slots in this class, you can add one Wizard spell from the Evocation school to your spellbook for free. The chosen spell must be of a level for which you have spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

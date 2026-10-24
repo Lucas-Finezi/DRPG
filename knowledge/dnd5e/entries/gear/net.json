@@ -1,0 +1,117 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/net",
+  "kind": "gear",
+  "name": "Net",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98
+    ],
+    "section": "Equipment/Adventuring Gear/Net",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.\n\nTo escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect.",
+  "facets": {
+    "cost_cp": 100
+  },
+  "data": {
+    "cost": {
+      "amount": 1,
+      "unit": "gp",
+      "cp": 100
+    },
+    "weight_lb": 3,
+    "rules": [
+      {
+        "id": "escape",
+        "check": {
+          "ability": "str",
+          "skill": "athletics",
+          "dc": 10,
+          "cost": "action"
+        },
+        "net_object": {
+          "ac": 10,
+          "hp": 5,
+          "immunities": [
+            "bludgeoning",
+            "poison",
+            "psychic"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "takes_attack_action"
+      },
+      "optional": true,
+      "note": "Replace one attack with throwing the Net; target within 15 feet you can see.",
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": {
+            "op": "add",
+            "args": [
+              8,
+              {
+                "var": "ability_mod.dex"
+              },
+              {
+                "var": "proficiency_bonus"
+              }
+            ]
+          },
+          "target": {
+            "kind": "creature_or_object",
+            "range": {
+              "kind": "distance",
+              "feet": 15
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/restrained",
+              "note": "Until it escapes; Huge or larger automatically succeed."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "To escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/restrained"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/perfume",
+  "kind": "gear",
+  "name": "Perfume",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      99
+    ],
+    "section": "Equipment/Adventuring Gear/Perfume",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself.",
+  "facets": {
+    "cost_cp": 500
+  },
+  "data": {
+    "cost": {
+      "amount": 5,
+      "unit": "gp",
+      "cp": 500
+    },
+    "weight_lb": null
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check.cha"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1
+      },
+      "when": {
+        "pred": "influencing_indifferent_humanoid_within_feet",
+        "args": {
+          "feet": 5
+        }
+      },
+      "note": "Charisma (Persuasion) checks."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,538 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell-list/ranger",
+  "kind": "spell-list",
+  "name": "Ranger Spell List",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      60
+    ],
+    "section": "Classes/Ranger/Ranger Spell List",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L27"
+  },
+  "tier": 1,
+  "text": "This section presents the Ranger spell list. The spells are organized by spell level and then alphabetized, and each spell’s school of magic is listed. In the Special column, *C* means the spell requires Concentration, *R* means it’s a Ritual, and *M* means it requires a specific Material component.\n\n##### Level 1 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Alarm* | Abjuration | R |\n| *Animal Friendship* | Enchantment | — |\n| *Cure Wounds* | Abjuration | — |\n| *Detect Magic* | Divination | C, R |\n| *Detect Poison and Disease* | Divination | C, R |\n| *Ensnaring Strike* | Conjuration | C |\n| *Entangle* | Conjuration | C |\n| *Fog Cloud* | Conjuration | C |\n| *Goodberry* | Conjuration | — |\n| *Hunter’s Mark* | Divination | C |\n| *Jump* | Transmutation | — |\n| *Longstrider* | Transmutation | — |\n| *Speak with Animals* | Divination | R |\n\n##### Level 2 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Aid* | Abjuration | — |\n| *Animal Messenger* | Enchantment | R |\n| *Barkskin* | Transmutation | — |\n| *Darkvision* | Transmutation | — |\n| *Enhance Ability* | Transmutation | C |\n| *Find Traps* | Divination | — |\n| *Gust of Wind* | Evocation | C |\n| *Lesser Restoration* | Abjuration | — |\n| *Locate Animals or Plants* | Divination | R |\n| *Locate Object* | Divination | C |\n| *Magic Weapon* | Transmutation | — |\n| *Pass without Trace* | Abjuration | C |\n| *Protection from Poison* | Abjuration | — |\n| *Silence* | Illusion | C, R |\n| *Spike Growth* | Transmutation | C |\n\n##### Level 3 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Conjure Animals* | Conjuration | C |\n| *Daylight* | Evocation | — |\n| *Dispel Magic* | Abjuration | — |\n| *Meld into Stone* | Transmutation | R |\n| *Nondetection* | Abjuration | M |\n| *Plant Growth* | Transmutation | — |\n| *Protection from Energy* | Abjuration | C |\n| *Revivify* | Necromancy | M |\n| *Speak with Plants* | Transmutation | — |\n| *Water Breathing* | Transmutation | R |\n| *Water Walk* | Transmutation | R |\n| *Wind Wall* | Evocation | C |\n\n##### Level 4 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Conjure Woodland Beings* | Conjuration | C |\n| *Dominate Beast* | Enchantment | C |\n| *Freedom of Movement* | Abjuration | — |\n| *Locate Creature* | Divination | C |\n| *Stoneskin* | Transmutation | C, M |\n\n##### Level 5 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Commune with Nature* | Divination | R |\n| *Greater Restoration* | Abjuration | M |\n| *Tree Stride* | Conjuration | C |",
+  "facets": {
+    "class": "dnd5e/class/ranger",
+    "spell_count": 48
+  },
+  "data": {
+    "class": "dnd5e/class/ranger",
+    "printed_spells": [
+      "dnd5e/spell/alarm",
+      "dnd5e/spell/animal-friendship",
+      "dnd5e/spell/cure-wounds",
+      "dnd5e/spell/detect-magic",
+      "dnd5e/spell/detect-poison-and-disease",
+      "dnd5e/spell/ensnaring-strike",
+      "dnd5e/spell/entangle",
+      "dnd5e/spell/fog-cloud",
+      "dnd5e/spell/goodberry",
+      "dnd5e/spell/hunters-mark",
+      "dnd5e/spell/jump",
+      "dnd5e/spell/longstrider",
+      "dnd5e/spell/speak-with-animals",
+      "dnd5e/spell/aid",
+      "dnd5e/spell/animal-messenger",
+      "dnd5e/spell/barkskin",
+      "dnd5e/spell/darkvision",
+      "dnd5e/spell/enhance-ability",
+      "dnd5e/spell/find-traps",
+      "dnd5e/spell/gust-of-wind",
+      "dnd5e/spell/lesser-restoration",
+      "dnd5e/spell/locate-animals-or-plants",
+      "dnd5e/spell/locate-object",
+      "dnd5e/spell/magic-weapon",
+      "dnd5e/spell/pass-without-trace",
+      "dnd5e/spell/protection-from-poison",
+      "dnd5e/spell/silence",
+      "dnd5e/spell/spike-growth",
+      "dnd5e/spell/conjure-animals",
+      "dnd5e/spell/daylight",
+      "dnd5e/spell/dispel-magic",
+      "dnd5e/spell/meld-into-stone",
+      "dnd5e/spell/nondetection",
+      "dnd5e/spell/plant-growth",
+      "dnd5e/spell/protection-from-energy",
+      "dnd5e/spell/revivify",
+      "dnd5e/spell/speak-with-plants",
+      "dnd5e/spell/water-breathing",
+      "dnd5e/spell/water-walk",
+      "dnd5e/spell/wind-wall",
+      "dnd5e/spell/conjure-woodland-beings",
+      "dnd5e/spell/dominate-beast",
+      "dnd5e/spell/freedom-of-movement",
+      "dnd5e/spell/locate-creature",
+      "dnd5e/spell/stoneskin",
+      "dnd5e/spell/commune-with-nature",
+      "dnd5e/spell/greater-restoration",
+      "dnd5e/spell/tree-stride"
+    ],
+    "spells": [
+      "dnd5e/spell/aid",
+      "dnd5e/spell/alarm",
+      "dnd5e/spell/animal-friendship",
+      "dnd5e/spell/animal-messenger",
+      "dnd5e/spell/barkskin",
+      "dnd5e/spell/commune-with-nature",
+      "dnd5e/spell/conjure-animals",
+      "dnd5e/spell/conjure-woodland-beings",
+      "dnd5e/spell/cure-wounds",
+      "dnd5e/spell/darkvision",
+      "dnd5e/spell/daylight",
+      "dnd5e/spell/detect-magic",
+      "dnd5e/spell/detect-poison-and-disease",
+      "dnd5e/spell/dispel-magic",
+      "dnd5e/spell/dominate-beast",
+      "dnd5e/spell/enhance-ability",
+      "dnd5e/spell/ensnaring-strike",
+      "dnd5e/spell/entangle",
+      "dnd5e/spell/find-traps",
+      "dnd5e/spell/fog-cloud",
+      "dnd5e/spell/freedom-of-movement",
+      "dnd5e/spell/goodberry",
+      "dnd5e/spell/greater-restoration",
+      "dnd5e/spell/gust-of-wind",
+      "dnd5e/spell/hunters-mark",
+      "dnd5e/spell/jump",
+      "dnd5e/spell/lesser-restoration",
+      "dnd5e/spell/locate-animals-or-plants",
+      "dnd5e/spell/locate-creature",
+      "dnd5e/spell/locate-object",
+      "dnd5e/spell/longstrider",
+      "dnd5e/spell/magic-weapon",
+      "dnd5e/spell/meld-into-stone",
+      "dnd5e/spell/nondetection",
+      "dnd5e/spell/pass-without-trace",
+      "dnd5e/spell/plant-growth",
+      "dnd5e/spell/protection-from-energy",
+      "dnd5e/spell/protection-from-poison",
+      "dnd5e/spell/revivify",
+      "dnd5e/spell/silence",
+      "dnd5e/spell/speak-with-animals",
+      "dnd5e/spell/speak-with-plants",
+      "dnd5e/spell/spike-growth",
+      "dnd5e/spell/stoneskin",
+      "dnd5e/spell/tree-stride",
+      "dnd5e/spell/water-breathing",
+      "dnd5e/spell/water-walk",
+      "dnd5e/spell/wind-wall"
+    ],
+    "added_by_decision_d001": [],
+    "decision": "D-001",
+    "rules": [
+      {
+        "id": "columns",
+        "special": {
+          "C": "concentration",
+          "R": "ritual",
+          "M": "specific_material_component"
+        },
+        "order": "level_then_alphabetical"
+      }
+    ],
+    "tables": [
+      {
+        "id": "level_1",
+        "caption": "Level 1 Ranger Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Alarm",
+            "Abjuration",
+            "R"
+          ],
+          [
+            "Animal Friendship",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "Cure Wounds",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Detect Magic",
+            "Divination",
+            "C, R"
+          ],
+          [
+            "Detect Poison and Disease",
+            "Divination",
+            "C, R"
+          ],
+          [
+            "Ensnaring Strike",
+            "Conjuration",
+            "C"
+          ],
+          [
+            "Entangle",
+            "Conjuration",
+            "C"
+          ],
+          [
+            "Fog Cloud",
+            "Conjuration",
+            "C"
+          ],
+          [
+            "Goodberry",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Hunter’s Mark",
+            "Divination",
+            "C"
+          ],
+          [
+            "Jump",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Longstrider",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Speak with Animals",
+            "Divination",
+            "R"
+          ]
+        ]
+      },
+      {
+        "id": "level_2",
+        "caption": "Level 2 Ranger Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Aid",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Animal Messenger",
+            "Enchantment",
+            "R"
+          ],
+          [
+            "Barkskin",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Darkvision",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Enhance Ability",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Find Traps",
+            "Divination",
+            "—"
+          ],
+          [
+            "Gust of Wind",
+            "Evocation",
+            "C"
+          ],
+          [
+            "Lesser Restoration",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Locate Animals or Plants",
+            "Divination",
+            "R"
+          ],
+          [
+            "Locate Object",
+            "Divination",
+            "C"
+          ],
+          [
+            "Magic Weapon",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Pass without Trace",
+            "Abjuration",
+            "C"
+          ],
+          [
+            "Protection from Poison",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Silence",
+            "Illusion",
+            "C, R"
+          ],
+          [
+            "Spike Growth",
+            "Transmutation",
+            "C"
+          ]
+        ]
+      },
+      {
+        "id": "level_3",
+        "caption": "Level 3 Ranger Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Conjure Animals",
+            "Conjuration",
+            "C"
+          ],
+          [
+            "Daylight",
+            "Evocation",
+            "—"
+          ],
+          [
+            "Dispel Magic",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Meld into Stone",
+            "Transmutation",
+            "R"
+          ],
+          [
+            "Nondetection",
+            "Abjuration",
+            "M"
+          ],
+          [
+            "Plant Growth",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Protection from Energy",
+            "Abjuration",
+            "C"
+          ],
+          [
+            "Revivify",
+            "Necromancy",
+            "M"
+          ],
+          [
+            "Speak with Plants",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "Water Breathing",
+            "Transmutation",
+            "R"
+          ],
+          [
+            "Water Walk",
+            "Transmutation",
+            "R"
+          ],
+          [
+            "Wind Wall",
+            "Evocation",
+            "C"
+          ]
+        ]
+      },
+      {
+        "id": "level_4",
+        "caption": "Level 4 Ranger Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Conjure Woodland Beings",
+            "Conjuration",
+            "C"
+          ],
+          [
+            "Dominate Beast",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Freedom of Movement",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Locate Creature",
+            "Divination",
+            "C"
+          ],
+          [
+            "Stoneskin",
+            "Transmutation",
+            "C, M"
+          ]
+        ]
+      },
+      {
+        "id": "level_5",
+        "caption": "Level 5 Ranger Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Commune with Nature",
+            "Divination",
+            "R"
+          ],
+          [
+            "Greater Restoration",
+            "Abjuration",
+            "M"
+          ],
+          [
+            "Tree Stride",
+            "Conjuration",
+            "C"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "This section presents the Ranger spell list. The spells are organized by spell level and then alphabetized, and each spell’s school of magic is listed. In the Special column, *C* means the spell requires Concentration, *R* means it’s a Ritual, and *M* means it requires a specific Material component.",
+      "status": "structured",
+      "by": [
+        "/data/class",
+        "/data/spells",
+        "/data/printed_spells",
+        "/data/added_by_decision_d001",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Level 1 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Alarm* | Abjuration | R |\n| *Animal Friendship* | Enchantment | — |\n| *Cure Wounds* | Abjuration | — |\n| *Detect Magic* | Divination | C, R |\n| *Detect Poison and Disease* | Divination | C, R |\n| *Ensnaring Strike* | Conjuration | C |\n| *Entangle* | Conjuration | C |\n| *Fog Cloud* | Conjuration | C |\n| *Goodberry* | Conjuration | — |\n| *Hunter’s Mark* | Divination | C |\n| *Jump* | Transmutation | — |\n| *Longstrider* | Transmutation | — |\n| *Speak with Animals* | Divination | R |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Level 2 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Aid* | Abjuration | — |\n| *Animal Messenger* | Enchantment | R |\n| *Barkskin* | Transmutation | — |\n| *Darkvision* | Transmutation | — |\n| *Enhance Ability* | Transmutation | C |\n| *Find Traps* | Divination | — |\n| *Gust of Wind* | Evocation | C |\n| *Lesser Restoration* | Abjuration | — |\n| *Locate Animals or Plants* | Divination | R |\n| *Locate Object* | Divination | C |\n| *Magic Weapon* | Transmutation | — |\n| *Pass without Trace* | Abjuration | C |\n| *Protection from Poison* | Abjuration | — |\n| *Silence* | Illusion | C, R |\n| *Spike Growth* | Transmutation | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Level 3 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Conjure Animals* | Conjuration | C |\n| *Daylight* | Evocation | — |\n| *Dispel Magic* | Abjuration | — |\n| *Meld into Stone* | Transmutation | R |\n| *Nondetection* | Abjuration | M |\n| *Plant Growth* | Transmutation | — |\n| *Protection from Energy* | Abjuration | C |\n| *Revivify* | Necromancy | M |\n| *Speak with Plants* | Transmutation | — |\n| *Water Breathing* | Transmutation | R |\n| *Water Walk* | Transmutation | R |\n| *Wind Wall* | Evocation | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/2"
+      ]
+    },
+    {
+      "text": "##### Level 4 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Conjure Woodland Beings* | Conjuration | C |\n| *Dominate Beast* | Enchantment | C |\n| *Freedom of Movement* | Abjuration | — |\n| *Locate Creature* | Divination | C |\n| *Stoneskin* | Transmutation | C, M |",
+      "status": "structured",
+      "by": [
+        "/data/tables/3"
+      ]
+    },
+    {
+      "text": "##### Level 5 Ranger Spells\n\n| **Spell** | **School** | **Special** |\n| *Commune with Nature* | Divination | R |\n| *Greater Restoration* | Abjuration | M |\n| *Tree Stride* | Conjuration | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/aid",
+    "dnd5e/spell/alarm",
+    "dnd5e/spell/animal-friendship",
+    "dnd5e/spell/animal-messenger",
+    "dnd5e/spell/barkskin",
+    "dnd5e/spell/commune-with-nature",
+    "dnd5e/spell/conjure-animals",
+    "dnd5e/spell/conjure-woodland-beings",
+    "dnd5e/spell/cure-wounds",
+    "dnd5e/spell/darkvision",
+    "dnd5e/spell/daylight",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/detect-poison-and-disease",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/dominate-beast",
+    "dnd5e/spell/enhance-ability",
+    "dnd5e/spell/ensnaring-strike",
+    "dnd5e/spell/entangle",
+    "dnd5e/spell/find-traps",
+    "dnd5e/spell/fog-cloud",
+    "dnd5e/spell/freedom-of-movement",
+    "dnd5e/spell/goodberry",
+    "dnd5e/spell/greater-restoration",
+    "dnd5e/spell/gust-of-wind",
+    "dnd5e/spell/hunters-mark",
+    "dnd5e/spell/jump",
+    "dnd5e/spell/lesser-restoration",
+    "dnd5e/spell/locate-animals-or-plants",
+    "dnd5e/spell/locate-creature",
+    "dnd5e/spell/locate-object",
+    "dnd5e/spell/longstrider",
+    "dnd5e/spell/magic-weapon",
+    "dnd5e/spell/meld-into-stone",
+    "dnd5e/spell/nondetection",
+    "dnd5e/spell/pass-without-trace",
+    "dnd5e/spell/plant-growth",
+    "dnd5e/spell/protection-from-energy",
+    "dnd5e/spell/protection-from-poison",
+    "dnd5e/spell/revivify",
+    "dnd5e/spell/silence",
+    "dnd5e/spell/speak-with-animals",
+    "dnd5e/spell/speak-with-plants",
+    "dnd5e/spell/spike-growth",
+    "dnd5e/spell/stoneskin",
+    "dnd5e/spell/tree-stride",
+    "dnd5e/spell/water-breathing",
+    "dnd5e/spell/water-walk",
+    "dnd5e/spell/wind-wall"
+  ]
+}

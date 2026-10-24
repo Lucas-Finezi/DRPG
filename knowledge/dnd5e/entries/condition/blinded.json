@@ -1,0 +1,86 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/blinded",
+  "kind": "condition",
+  "name": "Blinded",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      177
+    ],
+    "section": "Rules Glossary/Rules Definitions/Blinded [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Blinded condition, you experience the following effects.\n\n***Can’t See.*** You can’t see and automatically fail any ability check that requires sight.\n\n***Attacks Affected.*** Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "see"
+      ]
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "ability_check"
+      ],
+      "result": "fail",
+      "when": {
+        "pred": "requires_sight"
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against"
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "own"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Blinded condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Can’t See.*** You can’t see and automatically fail any ability check that requires sight.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Attacks Affected.*** Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3"
+      ]
+    }
+  ]
+}

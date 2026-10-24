@@ -1,0 +1,121 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/oath-of-devotion-sacred-weapon",
+  "kind": "feature",
+  "name": "Sacred Weapon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      56
+    ],
+    "section": "Classes/Paladin/Paladin Subclass: Oath of Devotion/Level 3: Sacred Weapon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.\n\nThe weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.\n\nYou can end this effect early (no action required). This effect also ends if you aren’t carrying the weapon.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/oath-of-devotion",
+    "level": 3
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "damage_type",
+        "choose_from": [
+          "normal_damage_type",
+          "radiant"
+        ],
+        "on": "each_hit"
+      },
+      {
+        "id": "light",
+        "bright_feet": 20,
+        "dim_feet": 20
+      },
+      {
+        "id": "ends",
+        "ends_on": [
+          "used_again",
+          "not_carrying_weapon"
+        ],
+        "end_early_cost": "none"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "takes_attack_action"
+      },
+      "optional": true,
+      "condition": {
+        "pred": "holds_melee_weapon"
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "channel_divinity",
+          "amount": 1
+        },
+        {
+          "op": "modifier",
+          "stat": "attack_roll",
+          "mode": "add",
+          "value": {
+            "op": "max",
+            "args": [
+              1,
+              {
+                "var": "ability_mod.cha"
+              }
+            ]
+          },
+          "when": {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "weapon_kind": "chosen"
+            }
+          },
+          "duration": {
+            "kind": "minutes",
+            "amount": 10
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "You can end this effect early (no action required). This effect also ends if you aren’t carrying the weapon.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ]
+}

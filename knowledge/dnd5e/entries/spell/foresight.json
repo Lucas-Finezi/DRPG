@@ -1,0 +1,117 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/foresight",
+  "kind": "spell",
+  "name": "Foresight",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      134
+    ],
+    "section": "Spells/Spell Descriptions/Foresight",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Divination (Bard, Druid, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (a hummingbird feather)\n\n**Duration:** 8 hours\n\nYou touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target has Advantage on D20 Tests, and other creatures have Disadvantage on attack rolls against it. The spell ends early if you cast it again.",
+  "facets": {
+    "level": 9,
+    "school": "divination",
+    "classes": [
+      "bard",
+      "druid",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "1 minute",
+      "cost": "time",
+      "minutes": 1
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a hummingbird feather"
+    },
+    "duration": {
+      "text": "8 hours",
+      "kind": "hours",
+      "amount": 8
+    },
+    "rules": [
+      {
+        "id": "ends",
+        "ends_if_cast_again": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "d20_test"
+      ],
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "duration": {
+        "kind": "hours",
+        "amount": 8
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Divination (Bard, Druid, Warlock, Wizard)*\n\n**Casting Time:** 1 minute\n\n**Range:** Touch\n\n**Components:** V, S, M (a hummingbird feather)\n\n**Duration:** 8 hours",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target has Advantage on D20 Tests, and other creatures have Disadvantage on attack rolls against it. The spell ends early if you cast it again.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

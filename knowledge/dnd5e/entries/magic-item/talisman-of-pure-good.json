@@ -1,0 +1,227 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/talisman-of-pure-good",
+  "kind": "magic-item",
+  "name": "Talisman of Pure Good",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      248,
+      249
+    ],
+    "section": "Magic Items/Magic Items A–Z/Talisman of Pure Good",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Legendary (Requires Attunement by a Cleric or Paladin)*\n\nThis talisman is a mighty symbol of goodness. A Fiend or an Undead that touches the talisman takes 8d6 Radiant damage and takes the damage again each time it ends its turn holding or carrying the talisman.\n\n***Holy Symbol.*** You can use the talisman as a Holy Symbol. You gain a +2 bonus to spell attack rolls while you wear or hold it.\n\n***Pure Rebuke.*** The talisman has 7 charges. While wearing or holding the talisman, you can take a Magic action to expend 1 charge and target one creature you can see on the ground within 120 feet of yourself. A flaming fissure opens under the target, and the target makes a DC 20 Dexterity saving throw. If the target is a Fiend or an Undead, it has Disadvantage on the save. On a failed save, the target falls into the fissure and is destroyed, leaving no remains. On a successful save, the target isn’t cast into the fissure but takes 4d6 Psychic damage from the ordeal. In either case, the fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary (Requires Attunement by a Cleric or Paladin)",
+      "attunement": {
+        "required": true,
+        "by": "a Cleric or Paladin",
+        "classes": [
+          "dnd5e/class/cleric",
+          "dnd5e/class/paladin"
+        ]
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "touches_effect",
+        "whose": "any",
+        "which": "each"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "8d6",
+          "damage_type": "radiant"
+        }
+      ],
+      "condition": {
+        "pred": "creature_is",
+        "args": {
+          "types": [
+            "fiend",
+            "undead"
+          ]
+        }
+      },
+      "note": "Again each time it ends its turn holding or carrying the talisman."
+    },
+    {
+      "op": "modifier",
+      "stat": "spellcasting_focus",
+      "mode": "set",
+      "value": 1,
+      "when": {
+        "any": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          }
+        ]
+      },
+      "note": "Usable as a Holy Symbol."
+    },
+    {
+      "op": "modifier",
+      "stat": "spell_attack_bonus",
+      "mode": "add",
+      "value": 2,
+      "when": {
+        "any": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 7,
+      "note": "When the last charge is expended, the talisman is destroyed."
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "dex",
+          "dc": 20,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            },
+            "must_see": true
+          },
+          "on_fail": [
+            {
+              "op": "end_effect",
+              "scope": "this_entry_on_target",
+              "note": "Falls into the fissure and is destroyed, leaving no remains."
+            }
+          ],
+          "on_success": [
+            {
+              "op": "damage",
+              "amount": "4d6",
+              "damage_type": "psychic"
+            }
+          ],
+          "note": "A creature on the ground; Disadvantage if it is a Fiend or an Undead."
+        }
+      ],
+      "requires": {
+        "any": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "worn",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "held",
+              "item": "this"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary (Requires Attunement by a Cleric or Paladin)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This talisman is a mighty symbol of goodness. A Fiend or an Undead that touches the talisman takes 8d6 Radiant damage and takes the damage again each time it ends its turn holding or carrying the talisman.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Holy Symbol.*** You can use the talisman as a Holy Symbol. You gain a +2 bonus to spell attack rolls while you wear or hold it.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Pure Rebuke.*** The talisman has 7 charges. While wearing or holding the talisman, you can take a Magic action to expend 1 charge and target one creature you can see on the ground within 120 feet of yourself. A flaming fissure opens under the target, and the target makes a DC 20 Dexterity saving throw. If the target is a Fiend or an Undead, it has Disadvantage on the save. On a failed save, the target falls into the fissure and is destroyed, leaving no remains. On a successful save, the target isn’t cast into the fissure but takes 4d6 Psychic damage from the ordeal. In either case, the fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/class/cleric",
+    "dnd5e/class/paladin"
+  ]
+}

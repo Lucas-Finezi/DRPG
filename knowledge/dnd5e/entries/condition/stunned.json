@@ -1,0 +1,92 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/stunned",
+  "kind": "condition",
+  "name": "Stunned",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      189
+    ],
+    "section": "Rules Glossary/Rules Definitions/Stunned [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Stunned condition, you experience the following effects.\n\n***Incapacitated.*** You have the Incapacitated condition.\n\n***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.\n\n***Attacks Affected.*** Attack rolls against you have Advantage.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/incapacitated",
+      "duration": {
+        "kind": "while",
+        "while": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "stunned"
+          }
+        }
+      },
+      "note": "Lasts while the parent condition lasts."
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "saving_throw.str",
+        "saving_throw.dex"
+      ],
+      "result": "fail"
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Stunned condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Incapacitated.*** You have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Attacks Affected.*** Attack rolls against you have Advantage.",
+      "status": "structured",
+      "by": [
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon/longbow",
+  "kind": "weapon",
+  "name": "Longbow",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      91
+    ],
+    "section": "Equipment/Weapons/Weapons/Martial Ranged Weapons/Longbow",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "| ↳ Longbow | 1d8 Piercing | Ammunition (Range 150/600; Arrow), Heavy, Two-Handed | Slow | 2 lb. | 50 GP |",
+  "facets": {
+    "category": "martial",
+    "melee_or_ranged": "ranged",
+    "damage_type": "piercing",
+    "mastery": "slow",
+    "cost_cp": 5000
+  },
+  "data": {
+    "category": "martial",
+    "melee_or_ranged": "ranged",
+    "damage": {
+      "amount": "1d8",
+      "type": "piercing"
+    },
+    "properties": [
+      {
+        "ref": "dnd5e/weapon-property/ammunition",
+        "range": {
+          "normal_feet": 150,
+          "long_feet": 600
+        },
+        "ammunition": "arrow"
+      },
+      {
+        "ref": "dnd5e/weapon-property/heavy"
+      },
+      {
+        "ref": "dnd5e/weapon-property/two-handed"
+      }
+    ],
+    "mastery": "dnd5e/weapon-mastery/slow",
+    "weight_lb": 2,
+    "cost": {
+      "amount": 50,
+      "unit": "gp",
+      "cp": 5000
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "ranged_weapon",
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": "1d8",
+          "damage_type": "piercing",
+          "note": "Plus the attack's ability modifier."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "| ↳ Longbow | 1d8 Piercing | Ammunition (Range 150/600; Arrow), Heavy, Two-Handed | Slow | 2 lb. | 50 GP |",
+      "status": "structured",
+      "by": [
+        "/data/category",
+        "/data/melee_or_ranged",
+        "/data/damage",
+        "/data/properties",
+        "/data/mastery",
+        "/data/weight_lb",
+        "/data/cost",
+        "/effects/0",
+        "dnd5e/weapon-property/ammunition",
+        "dnd5e/weapon-property/heavy",
+        "dnd5e/weapon-property/two-handed",
+        "dnd5e/weapon-mastery/slow"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/weapon-mastery/slow",
+    "dnd5e/weapon-property/ammunition",
+    "dnd5e/weapon-property/heavy",
+    "dnd5e/weapon-property/two-handed"
+  ]
+}

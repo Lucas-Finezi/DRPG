@@ -1,0 +1,80 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/parts-of-a-feat",
+  "kind": "rule",
+  "name": "Parts of a Feat",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      87
+    ],
+    "section": "Feats/Feat Descriptions/Parts of a Feat",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L15"
+  },
+  "tier": 1,
+  "text": "The description of a feat contains the following parts, which are presented after the feat’s name.\n\n***Category.*** A feat is a member of a category, which is noted in the feat. If you’re instructed to choose a feat from a specific category, such as the Origin category, that category must appear under the feat’s name. If you’re instructed to choose a feat and no category is specified, you can choose from any category.\n\n***Prerequisite.*** To take a feat, you must meet any prerequisite in its description unless a feature allows you to take the feat without the prerequisite. If a prerequisite includes a class, you must have at least 1 level in that class to take the feat.\n\n***Benefit.*** The benefits of a feat are detailed after any prerequisites are listed. If you have a feat, you gain its benefits.\n\n***Repeatable.*** A feat can be taken only once unless its description states otherwise in a “Repeatable” subsection.",
+  "data": {
+    "rules": [
+      {
+        "id": "category",
+        "choose_from_category_when_specified": true,
+        "unspecified_any_category": true
+      },
+      {
+        "id": "prerequisite",
+        "must_meet_unless_feature_waives": true,
+        "class_prerequisite_min_level": 1
+      },
+      {
+        "id": "benefit",
+        "gain_benefits_when_had": true
+      },
+      {
+        "id": "repeatable",
+        "default": false,
+        "only_with_repeatable_subsection": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The description of a feat contains the following parts, which are presented after the feat’s name.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Category.*** A feat is a member of a category, which is noted in the feat. If you’re instructed to choose a feat from a specific category, such as the Origin category, that category must appear under the feat’s name. If you’re instructed to choose a feat and no category is specified, you can choose from any category.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Prerequisite.*** To take a feat, you must meet any prerequisite in its description unless a feature allows you to take the feat without the prerequisite. If a prerequisite includes a class, you must have at least 1 level in that class to take the feat.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Benefit.*** The benefits of a feat are detailed after any prerequisites are listed. If you have a feat, you gain its benefits.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "***Repeatable.*** A feat can be taken only once unless its description states otherwise in a “Repeatable” subsection.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

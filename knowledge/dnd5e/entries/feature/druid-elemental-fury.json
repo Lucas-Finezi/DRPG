@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/druid-elemental-fury",
+  "kind": "feature",
+  "name": "Elemental Fury",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      43
+    ],
+    "section": "Classes/Druid/Druid Class Features/Level 7: Elemental Fury",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "The might of the elements flows through you. You gain one of the following options of your choice.\n\n***Potent Spellcasting.*** Add your Wisdom modifier to the damage you deal with any Druid cantrip.\n\n***Primal Strike.*** Once on each of your turns when you hit a creature with an attack roll using a weapon or a Beast form’s attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/druid",
+    "level": 7
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "elemental_fury",
+      "choose": 1,
+      "options": [
+        {
+          "id": "potent_spellcasting",
+          "label": "Potent Spellcasting",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "damage_roll",
+              "mode": "add",
+              "value": {
+                "var": "ability_mod.wis"
+              },
+              "when": {
+                "pred": "spell_of_class",
+                "args": {
+                  "cantrip": true,
+                  "class": "druid"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "primal_strike",
+          "label": "Primal Strike",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hits_with_attack_roll"
+              },
+              "optional": true,
+              "condition": {
+                "all": [
+                  {
+                    "pred": "own_turn"
+                  },
+                  {
+                    "any": [
+                      {
+                        "pred": "attack_is",
+                        "args": {
+                          "via": "weapon"
+                        }
+                      },
+                      {
+                        "pred": "attack_is",
+                        "args": {
+                          "attack_kind": "wild_shape_form"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frequency": {
+                "count": 1,
+                "per": "turn"
+              },
+              "then": [
+                {
+                  "op": "damage",
+                  "amount": "1d8",
+                  "target": {
+                    "kind": "inherit"
+                  },
+                  "damage_type": {
+                    "choose_from": [
+                      "cold",
+                      "fire",
+                      "lightning",
+                      "thunder"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "The might of the elements flows through you. You gain one of the following options of your choice.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Potent Spellcasting.*** Add your Wisdom modifier to the damage you deal with any Druid cantrip.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "***Primal Strike.*** Once on each of your turns when you hit a creature with an attack roll using a weapon or a Beast form’s attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/1"
+      ]
+    }
+  ]
+}

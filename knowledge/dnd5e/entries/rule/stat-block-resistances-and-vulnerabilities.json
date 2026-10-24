@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-resistances-and-vulnerabilities",
+  "kind": "rule",
+  "name": "Resistances and Vulnerabilities (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      255
+    ],
+    "section": "Monsters/Parts of a Stat Block/Resistances and Vulnerabilities",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 0,
+  "text": "These entries list a monster’s Resistances and Vulnerabilities, if any. See “Playing the Game” for more information.",
+  "coverage": [
+    {
+      "text": "These entries list a monster’s Resistances and Vulnerabilities, if any. See “Playing the Game” for more information.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/resistance",
+        "dnd5e/rule/vulnerability"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/resistance",
+    "dnd5e/rule/vulnerability"
+  ]
+}

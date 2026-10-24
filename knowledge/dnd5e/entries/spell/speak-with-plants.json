@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/speak-with-plants",
+  "kind": "spell",
+  "name": "Speak with Plants",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      164
+    ],
+    "section": "Spells/Spell Descriptions/Speak with Plants",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 3,
+  "text": "*Level 3 Transmutation (Bard, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 10 minutes\n\nYou imbue plants in an immobile 30-foot Emanation with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell’s area within the past day, gaining information about creatures that have passed, weather, and other circumstances.\n\nYou can also turn Difficult Terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration.\n\nThe spell doesn’t enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for you.\n\nIf a Plant creature is in the area, you can communicate with it as if you shared a common language.",
+  "facets": {
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "bard",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "10 minutes",
+      "kind": "minutes",
+      "amount": 10
+    },
+    "rules": [
+      {
+        "id": "plants",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 30,
+          "immobile": true
+        }
+      },
+      {
+        "id": "terrain",
+        "plant_difficult_terrain": "ordinary_or_reverse"
+      },
+      {
+        "id": "movement",
+        "uproot": false,
+        "move_branches": true
+      },
+      {
+        "id": "plant_creatures",
+        "communicate": true
+      }
+    ]
+  },
+  "master_decisions": [
+    {
+      "id": "plant_answers",
+      "reason": "narrative",
+      "prompt": "What do the plants know about the past day?",
+      "source_text": "You can question plants about events in the spell’s area within the past day, gaining information about creatures that have passed, weather, and other circumstances."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Transmutation (Bard, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You imbue plants in an immobile 30-foot Emanation with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell’s area within the past day, gaining information about creatures that have passed, weather, and other circumstances.",
+      "status": "master_decision",
+      "by": [
+        "/data/rules/0",
+        "md:plant_answers"
+      ]
+    },
+    {
+      "text": "You can also turn Difficult Terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The spell doesn’t enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for you.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "If a Plant creature is in the area, you can communicate with it as if you shared a common language.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    }
+  ]
+}

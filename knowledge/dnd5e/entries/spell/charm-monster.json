@@ -1,0 +1,138 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/charm-monster",
+  "kind": "spell",
+  "name": "Charm Monster",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      114,
+      115
+    ],
+    "section": "Spells/Spell Descriptions/Charm Monster",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L21"
+  },
+  "tier": 2,
+  "text": "*Level 4 Enchantment (Bard, Druid, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** 1 hour\n\nOne creature you can see within range makes a Wisdom saving throw. It does so with Advantage if you or your allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.\n\n***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 4.",
+  "facets": {
+    "level": 4,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 30
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "1 hour",
+      "kind": "hours",
+      "amount": 1
+    },
+    "rules": [
+      {
+        "id": "details",
+        "save_advantage_if_fighting": true,
+        "ends_on": "you_or_allies_damage_it",
+        "attitude": "dnd5e/attitude/friendly",
+        "knows_afterwards": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "wis",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "creature",
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                4
+              ]
+            }
+          ]
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 30
+        },
+        "must_see": true
+      },
+      "on_fail": [
+        {
+          "op": "apply_condition",
+          "condition": "dnd5e/condition/charmed",
+          "duration": {
+            "kind": "hours",
+            "amount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 4 Enchantment (Bard, Druid, Sorcerer, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 30 feet\n\n**Components:** V, S\n\n**Duration:** 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "One creature you can see within range makes a Wisdom saving throw. It does so with Advantage if you or your allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 4.",
+      "status": "structured",
+      "by": [
+        "/effects/0/target/count"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed"
+  ]
+}

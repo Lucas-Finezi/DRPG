@@ -1,0 +1,216 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/riding-horse",
+  "kind": "creature",
+  "name": "Riding Horse",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      360
+    ],
+    "section": "Animals/Riding Horse",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L38"
+  },
+  "tier": 2,
+  "text": "*Large Beast, Unaligned*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 13 (2d10 + 2)\n\n**Speed** 60 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |\n\n**Senses** Passive Perception 10\n\n**Languages** None\n\n**CR** 1/4 (XP 50; PB +2)\n\n##### Actions\n\n***Hooves.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "1/4"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Large Beast, Unaligned",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 13,
+      "formula": {
+        "op": "add",
+        "args": [
+          "2d10",
+          2
+        ]
+      },
+      "text": "13 (2d10 + 2)"
+    },
+    "speed": {
+      "text": "60 ft.",
+      "walk": 60
+    },
+    "abilities": {
+      "str": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      }
+    },
+    "senses": {
+      "text": "Passive Perception 10",
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "1/4",
+      "xp": 50,
+      "proficiency_bonus": 2,
+      "text": "1/4 (XP 50; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Hooves",
+        "text": "*Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Hooves",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 5,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d8",
+                  3
+                ]
+              },
+              "damage_type": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 13 (2d10 + 2)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 60 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 | +3 | +3 | **Dex** 13 | +1 | +1 | **Con** 12 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 7 | −2 | −2 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/4 (XP 50; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Hooves.*** *Melee Attack Roll:* +5, reach 5 ft. *Hit:* 7 (1d8 + 3) Bludgeoning damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/0"
+      ]
+    }
+  ]
+}

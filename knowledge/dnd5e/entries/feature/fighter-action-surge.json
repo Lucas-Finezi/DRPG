@@ -1,0 +1,105 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/fighter-action-surge",
+  "kind": "feature",
+  "name": "Action Surge",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      48
+    ],
+    "section": "Classes/Fighter/Fighter Class Features/Level 2: Action Surge",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action, except the Magic action.\n\nOnce you use this feature, you can’t do so again until you finish a Short or Long Rest. Starting at level 17, you can use it twice before a rest but only once on a turn.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/fighter",
+    "level": 2
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Action Surge",
+      "cost": "none",
+      "requires": {
+        "pred": "own_turn"
+      },
+      "uses": {
+        "resource": "action_surge",
+        "amount": 1
+      },
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "modifier",
+          "stat": "actions_this_turn",
+          "mode": "add",
+          "value": 1,
+          "note": "One additional action, except the Magic action."
+        }
+      ]
+    },
+    {
+      "op": "resource",
+      "resource": "action_surge",
+      "name": "Action Surge",
+      "max": {
+        "scale": {
+          "by": "class_level.fighter",
+          "steps": [
+            {
+              "from": 2,
+              "value": 1
+            },
+            {
+              "from": 17,
+              "value": 2
+            }
+          ]
+        }
+      },
+      "recovery": [
+        {
+          "on": {
+            "event": "short_rest_finished"
+          },
+          "amount": "all"
+        },
+        {
+          "on": {
+            "event": "long_rest_finished"
+          },
+          "amount": "all"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action, except the Magic action.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Once you use this feature, you can’t do so again until you finish a Short or Long Rest. Starting at level 17, you can use it twice before a rest but only once on a turn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ]
+}

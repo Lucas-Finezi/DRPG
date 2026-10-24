@@ -1,0 +1,85 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/paladin-restoring-touch",
+  "kind": "feature",
+  "name": "Restoring Touch",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      55
+    ],
+    "section": "Classes/Paladin/Paladin Class Features/Level 14: Restoring Touch",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "When you use Lay On Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool of Lay On Hands for each of these conditions you remove; those points don’t also restore Hit Points to the creature.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/paladin",
+    "level": 14
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "uses_feature.paladin-lay-on-hands"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "repeat",
+          "times": {
+            "var": "chosen.conditions_removed"
+          },
+          "then": [
+            {
+              "op": "spend",
+              "resource": "lay_on_hands",
+              "amount": 5
+            },
+            {
+              "op": "remove_condition",
+              "count": 1,
+              "target": {
+                "kind": "inherit"
+              },
+              "conditions": [
+                "dnd5e/condition/blinded",
+                "dnd5e/condition/charmed",
+                "dnd5e/condition/deafened",
+                "dnd5e/condition/frightened",
+                "dnd5e/condition/paralyzed",
+                "dnd5e/condition/stunned"
+              ]
+            }
+          ]
+        }
+      ],
+      "note": "Those points don't also restore Hit Points."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When you use Lay On Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool of Lay On Hands for each of these conditions you remove; those points don’t also restore Hit Points to the creature.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/stunned"
+  ]
+}

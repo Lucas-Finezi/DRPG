@@ -1,0 +1,48 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/wizard-memorize-spell",
+  "kind": "feature",
+  "name": "Memorize Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      79
+    ],
+    "section": "Classes/Wizard/Wizard Class Features/Level 5: Memorize Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared for your Spellcasting feature with another level 1+ spell from the book.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/wizard",
+    "level": 5
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "memorize",
+        "on": "short_rest_finished",
+        "replace_prepared": 1,
+        "levels": "1+",
+        "from": "spellbook"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared for your Spellcasting feature with another level 1+ spell from the book.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

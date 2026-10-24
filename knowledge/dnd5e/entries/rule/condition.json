@@ -1,0 +1,57 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/condition",
+  "kind": "rule",
+  "name": "Condition",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      179
+    ],
+    "section": "Rules Glossary/Rules Definitions/Condition",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 1,
+  "text": "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:\n\nBlinded Charmed Deafened Exhaustion Frightened\n\nGrappled Incapacitated Invisible Paralyzed Petrified\n\nPoisoned Prone Restrained Stunned Unconscious\n\nA condition doesn’t stack with itself; a recipient either has a condition or doesn’t. The Exhaustion condition is an exception to that rule.",
+  "facets": {
+    "glossary": true
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "no_self_stacking",
+        "stacking": "binary",
+        "exceptions": [
+          "dnd5e/condition/exhaustion"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:\n\nBlinded Charmed Deafened Exhaustion Frightened\n\nGrappled Incapacitated Invisible Paralyzed Petrified\n\nPoisoned Prone Restrained Stunned Unconscious",
+      "status": "structured",
+      "by": [
+        "dnd5e/system/dnd5e#/registries/conditions"
+      ]
+    },
+    {
+      "text": "A condition doesn’t stack with itself; a recipient either has a condition or doesn’t. The Exhaustion condition is an exception to that rule.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/system/dnd5e"
+  ]
+}

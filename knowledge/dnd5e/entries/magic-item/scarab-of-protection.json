@@ -1,0 +1,173 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/scarab-of-protection",
+  "kind": "magic-item",
+  "name": "Scarab of Protection",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      243
+    ],
+    "section": "Magic Items/Magic Items A–Z/Scarab of Protection",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Legendary (Requires Attunement)*\n\nThis beetle-shaped medallion provides three benefits while it is on your person.\n\n***Defense.*** You gain a +1 bonus to Armor Class.\n\n***Preservation.*** The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a Reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.\n\n***Spell Resistance.*** You have Advantage on saving throws against spells.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "ac",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "possessed",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 12
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "cost": "reaction",
+      "optional": true,
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "possessed",
+              "item": "this"
+            }
+          },
+          {
+            "any": [
+              {
+                "pred": "spell_school",
+                "args": {
+                  "school": "necromancy"
+                }
+              },
+              {
+                "pred": "creature_is",
+                "args": {
+                  "who": "source",
+                  "types": [
+                    "undead"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Expend 1 charge; the scarab is destroyed when the last is expended."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "possessed",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "save_against",
+            "args": {
+              "source": "spell"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This beetle-shaped medallion provides three benefits while it is on your person.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Defense.*** You gain a +1 bonus to Armor Class.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Preservation.*** The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a Reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.",
+      "status": "structured",
+      "by": [
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spell Resistance.*** You have Advantage on saving throws against spells.",
+      "status": "structured",
+      "by": [
+        "/effects/3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic-distant-spell",
+  "kind": "feature",
+  "name": "Distant Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      67
+    ],
+    "section": "Classes/Sorcerer/Metamagic Options/Distant Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Cost: 1 Sorcery Point*\n\nWhen you cast a spell that has a range of at least 5 feet, you can spend 1 Sorcery Point to double the spell’s range. Or when you cast a spell that has a range of Touch, you can spend 1 Sorcery Point to make the spell’s range 30 feet.",
+  "facets": {
+    "feature_type": "metamagic_option",
+    "owner": "dnd5e/class/sorcerer"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cost",
+        "resource": "sorcery_points",
+        "amount": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "casts_spell"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "spend",
+          "resource": "sorcery_points",
+          "amount": 1
+        },
+        {
+          "op": "choice",
+          "id": "distant",
+          "choose": 1,
+          "options": [
+            {
+              "id": "double",
+              "label": "Range 5 feet or more: double",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "spell_range",
+                  "mode": "multiply",
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "id": "touch",
+              "label": "Range Touch: 30 feet",
+              "effects": [
+                {
+                  "op": "modifier",
+                  "stat": "spell_range",
+                  "mode": "set",
+                  "value": 30
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Cost: 1 Sorcery Point*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast a spell that has a range of at least 5 feet, you can spend 1 Sorcery Point to double the spell’s range. Or when you cast a spell that has a range of Touch, you can spend 1 Sorcery Point to make the spell’s range 30 feet.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

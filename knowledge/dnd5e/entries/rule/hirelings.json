@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/hirelings",
+  "kind": "rule",
+  "name": "Hirelings",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      102
+    ],
+    "section": "Equipment/Hirelings",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "Skilled hirelings include anyone hired to perform a service that involves a proficiency (including weapon, tool, or skill): a mercenary, an artisan, a scribe, or the like. The pay shown on the Hirelings table is a minimum; some expert hirelings require more pay. Untrained hirelings are hired for work that requires no particular proficiencies; they include laborers and porters.\n\n##### Hirelings\n\n| **Service** | **Cost** |\n| Skilled hireling | 2 GP per day |\n| Untrained hireling | 2 SP per day |\n| Messenger | 2 CP per mile |\n\n##### Hirelings\n\n| **Service** | **Cost** |",
+  "data": {
+    "rules": [
+      {
+        "id": "hirelings",
+        "skilled": "involves_a_proficiency",
+        "untrained": "no_proficiency",
+        "pay_is_minimum": true
+      },
+      {
+        "id": "table",
+        "rows": [
+          "dnd5e/service/skilled-hireling",
+          "dnd5e/service/untrained-hireling",
+          "dnd5e/service/messenger"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Skilled hirelings include anyone hired to perform a service that involves a proficiency (including weapon, tool, or skill): a mercenary, an artisan, a scribe, or the like. The pay shown on the Hirelings table is a minimum; some expert hirelings require more pay. Untrained hirelings are hired for work that requires no particular proficiencies; they include laborers and porters.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Hirelings\n\n| **Service** | **Cost** |\n| Skilled hireling | 2 GP per day |\n| Untrained hireling | 2 SP per day |\n| Messenger | 2 CP per mile |\n\n##### Hirelings\n\n| **Service** | **Cost** |",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/service/messenger",
+    "dnd5e/service/skilled-hireling",
+    "dnd5e/service/untrained-hireling"
+  ]
+}

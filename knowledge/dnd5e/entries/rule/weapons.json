@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/weapons",
+  "kind": "rule",
+  "name": "Weapons",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      89,
+      91
+    ],
+    "section": "Equipment/Weapons",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 1,
+  "text": "The Weapons table in this section shows the game’s main weapons. The table lists the cost and weight of each weapon, as well as the following details:\n\n**Category.** Every weapon falls into a category: Simple or Martial. Weapon proficiencies are usually tied to one of these categories. For example, you might have proficiency with Simple weapons.\n\n**Melee or Ranged.** A weapon is classified as either Melee or Ranged. A Melee weapon is used to attack a target within 5 feet, whereas a Ranged weapon is used to attack at a greater distance.\n\n**Damage.** The table lists the amount of damage a weapon deals when an attacker hits with it as well as the type of that damage.\n\n**Properties.** Any properties a weapon has are listed in the Properties column. Each property is defined in the “Properties” section.\n\n**Mastery.** Each weapon has a mastery property, which is defined in the “Mastery Properties” section. To use that property, you must have a feature that lets you use it.\n\n##### Weapons\n\n| **Name** | **Damage** | **Properties** | **Mastery** | **Weight** | **Cost** |\n\n*Simple Melee Weapons*\n\n*Simple Ranged Weapons*\n\n*Martial Melee Weapons*\n\n*Martial Ranged Weapons*",
+  "data": {
+    "rules": [
+      {
+        "id": "table_columns",
+        "columns": [
+          "name",
+          "damage",
+          "properties",
+          "mastery",
+          "weight",
+          "cost"
+        ]
+      },
+      {
+        "id": "category",
+        "values": [
+          "simple",
+          "martial"
+        ]
+      },
+      {
+        "id": "melee_or_ranged",
+        "melee_reach_feet": 5,
+        "ranged": "greater_distance"
+      },
+      {
+        "id": "damage",
+        "listed_with_type": true
+      },
+      {
+        "id": "mastery",
+        "requires_feature": true
+      },
+      {
+        "id": "weapons_table",
+        "groups": [
+          "simple_melee",
+          "simple_ranged",
+          "martial_melee",
+          "martial_ranged"
+        ],
+        "rows": "dnd5e/weapon/*"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The Weapons table in this section shows the game’s main weapons. The table lists the cost and weight of each weapon, as well as the following details:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Category.** Every weapon falls into a category: Simple or Martial. Weapon proficiencies are usually tied to one of these categories. For example, you might have proficiency with Simple weapons.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Melee or Ranged.** A weapon is classified as either Melee or Ranged. A Melee weapon is used to attack a target within 5 feet, whereas a Ranged weapon is used to attack at a greater distance.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Damage.** The table lists the amount of damage a weapon deals when an attacker hits with it as well as the type of that damage.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "**Properties.** Any properties a weapon has are listed in the Properties column. Each property is defined in the “Properties” section.",
+      "status": "shared_rule",
+      "by": [
+        "dnd5e/rule/properties"
+      ]
+    },
+    {
+      "text": "**Mastery.** Each weapon has a mastery property, which is defined in the “Mastery Properties” section. To use that property, you must have a feature that lets you use it.",
+      "status": "structured",
+      "by": [
+        "dnd5e/rule/mastery-properties",
+        "/data/rules/4"
+      ]
+    },
+    {
+      "text": "##### Weapons\n\n| **Name** | **Damage** | **Properties** | **Mastery** | **Weight** | **Cost** |\n\n*Simple Melee Weapons*\n\n*Simple Ranged Weapons*\n\n*Martial Melee Weapons*\n\n*Martial Ranged Weapons*",
+      "status": "structured",
+      "by": [
+        "/data/rules/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/mastery-properties",
+    "dnd5e/rule/properties"
+  ]
+}

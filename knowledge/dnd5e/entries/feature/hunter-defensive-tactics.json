@@ -1,0 +1,126 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/hunter-defensive-tactics",
+  "kind": "feature",
+  "name": "Defensive Tactics",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      61
+    ],
+    "section": "Classes/Ranger/Ranger Subclass: Hunter/Level 7: Defensive Tactics",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.\n\n***Escape the Horde.*** Opportunity Attacks have Disadvantage against you.\n\n***Multiattack Defense.*** When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+  "facets": {
+    "feature_type": "subclass_feature",
+    "owner": "dnd5e/subclass/hunter",
+    "level": 7
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "swap",
+        "on": [
+          "short_rest_finished",
+          "long_rest_finished"
+        ],
+        "replace_with": "other_option"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "choice",
+      "id": "defensive_tactics",
+      "choose": 1,
+      "options": [
+        {
+          "id": "escape_the_horde",
+          "label": "Escape the Horde",
+          "effects": [
+            {
+              "op": "roll_mode",
+              "mode": "disadvantage",
+              "rolls": [
+                "attack_roll"
+              ],
+              "direction": "against",
+              "when": {
+                "pred": "attack_is",
+                "args": {
+                  "attack_kind": "opportunity"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "multiattack_defense",
+          "label": "Multiattack Defense",
+          "effects": [
+            {
+              "op": "trigger",
+              "event": {
+                "event": "hit_by_attack_roll"
+              },
+              "then": [
+                {
+                  "op": "roll_mode",
+                  "mode": "disadvantage",
+                  "rolls": [
+                    "attack_roll"
+                  ],
+                  "direction": "against",
+                  "when": {
+                    "pred": "attacker_is_trigger_creature"
+                  },
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_end",
+                      "whose": "any"
+                    }
+                  },
+                  "note": "All other attack rolls by that creature against you this turn."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You gain one of the following feature options of your choice. Whenever you finish a Short or Long Rest, you can replace the chosen option with the other one.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Escape the Horde.*** Opportunity Attacks have Disadvantage against you.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/0"
+      ]
+    },
+    {
+      "text": "***Multiattack Defense.*** When a creature hits you with an attack roll, that creature has Disadvantage on all other attack rolls against you this turn.",
+      "status": "structured",
+      "by": [
+        "/effects/0/options/1"
+      ]
+    }
+  ]
+}

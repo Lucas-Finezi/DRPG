@@ -1,0 +1,214 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/gaseous-form",
+  "kind": "spell",
+  "name": "Gaseous Form",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      134,
+      135
+    ],
+    "section": "Spells/Spell Descriptions/Gaseous Form",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Transmutation (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a bit of gauze)\n\n**Duration:** Concentration, up to 1 hour\n\nA willing creature you touch shape-shifts, along with everything it’s wearing and carrying, into a misty cloud for the duration. The spell ends on the target if it drops to 0 Hit Points or if it takes a Magic action to end the spell on itself.\n\nWhile in this form, the target’s only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the Prone condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces.\n\nThe target can’t talk or manipulate objects, and any objects it was carrying or holding can’t be dropped, used, or otherwise interacted with. Finally, the target can’t attack or cast spells.\n\n***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 3.",
+  "facets": {
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a bit of gauze"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 hour",
+      "kind": "hours",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "form",
+        "misty_cloud": true,
+        "includes_gear": true,
+        "ends_on": [
+          "0_hp",
+          "magic_action_to_end"
+        ]
+      },
+      {
+        "id": "movement",
+        "enter_other_creature_space": true,
+        "narrow_openings": true,
+        "liquids_as_solid": true
+      },
+      {
+        "id": "targets",
+        "count": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "var": "spell_slot_level"
+                },
+                3
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "speed",
+      "movement": "fly",
+      "mode": "set",
+      "value": 10,
+      "hover": true,
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Its only method of movement."
+    },
+    {
+      "op": "defense",
+      "kind": "resistance",
+      "damage_types": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/prone"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw.str",
+        "saving_throw.dex",
+        "saving_throw.con"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "speak",
+        "hold_items",
+        "attack",
+        "cast_spells"
+      ],
+      "duration": {
+        "kind": "hours",
+        "amount": 1,
+        "concentration": true,
+        "up_to": true
+      },
+      "note": "Carried objects can't be dropped or used."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Transmutation (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a bit of gauze)\n\n**Duration:** Concentration, up to 1 hour",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A willing creature you touch shape-shifts, along with everything it’s wearing and carrying, into a misty cloud for the duration. The spell ends on the target if it drops to 0 Hit Points or if it takes a Magic action to end the spell on itself.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "While in this form, the target’s only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the Prone condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The target can’t talk or manipulate objects, and any objects it was carrying or holding can’t be dropped, used, or otherwise interacted with. Finally, the target can’t attack or cast spells.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** You can target one additional creature for each spell slot level above 3.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/subclass/champion",
+  "kind": "subclass",
+  "name": "Champion",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      49
+    ],
+    "section": "Classes/Fighter/Fighter Subclass: Champion",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L13"
+  },
+  "tier": 2,
+  "text": "### Fighter Subclass: Champion\n\n*Pursue Physical Excellence in Combat*\n\nA Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+  "facets": {
+    "class": "fighter",
+    "feature_levels": [
+      3,
+      7,
+      10,
+      15,
+      18
+    ]
+  },
+  "data": {
+    "class": "dnd5e/class/fighter",
+    "levels": {
+      "3": [
+        "dnd5e/feature/champion-improved-critical",
+        "dnd5e/feature/champion-remarkable-athlete"
+      ],
+      "7": [
+        "dnd5e/feature/champion-additional-fighting-style"
+      ],
+      "10": [
+        "dnd5e/feature/champion-heroic-warrior"
+      ],
+      "15": [
+        "dnd5e/feature/champion-superior-critical"
+      ],
+      "18": [
+        "dnd5e/feature/champion-survivor"
+      ]
+    },
+    "tagline": "Pursue Physical Excellence in Combat"
+  },
+  "effects": [
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-improved-critical",
+        "dnd5e/feature/champion-remarkable-athlete"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 3
+        }
+      },
+      "note": "Subclass feature at Fighter level 3."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-additional-fighting-style"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 7
+        }
+      },
+      "note": "Subclass feature at Fighter level 7."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-heroic-warrior"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 10
+        }
+      },
+      "note": "Subclass feature at Fighter level 10."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-superior-critical"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 15
+        }
+      },
+      "note": "Subclass feature at Fighter level 15."
+    },
+    {
+      "op": "grant",
+      "refs": [
+        "dnd5e/feature/champion-survivor"
+      ],
+      "when": {
+        "pred": "level_at_least",
+        "args": {
+          "class": "fighter",
+          "level": 18
+        }
+      },
+      "note": "Subclass feature at Fighter level 18."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "### Fighter Subclass: Champion\n\n*Pursue Physical Excellence in Combat*",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "A Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+      "status": "descriptive"
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/champion-additional-fighting-style",
+    "dnd5e/feature/champion-heroic-warrior",
+    "dnd5e/feature/champion-improved-critical",
+    "dnd5e/feature/champion-remarkable-athlete",
+    "dnd5e/feature/champion-superior-critical",
+    "dnd5e/feature/champion-survivor"
+  ]
+}

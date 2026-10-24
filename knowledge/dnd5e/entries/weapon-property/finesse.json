@@ -1,0 +1,70 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/weapon-property/finesse",
+  "kind": "weapon-property",
+  "name": "Finesse",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      89
+    ],
+    "section": "Equipment/Weapons/Properties/Finesse",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L28"
+  },
+  "tier": 2,
+  "text": "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+  "effects": [
+    {
+      "op": "choice",
+      "id": "finesse_ability",
+      "choose": 1,
+      "options": [
+        {
+          "id": "str",
+          "label": "Strength",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "attack_ability",
+              "mode": "set",
+              "value": {
+                "var": "ability_mod.str"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dex",
+          "label": "Dexterity",
+          "effects": [
+            {
+              "op": "modifier",
+              "stat": "attack_ability",
+              "mode": "set",
+              "value": {
+                "var": "ability_mod.dex"
+              }
+            }
+          ]
+        }
+      ],
+      "note": "Same modifier for the attack and damage rolls."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

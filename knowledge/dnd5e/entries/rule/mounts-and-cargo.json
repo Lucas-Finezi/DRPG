@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/mounts-and-cargo",
+  "kind": "rule",
+  "name": "Mounts and Cargo",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      100
+    ],
+    "section": "Equipment/Mounts and Vehicles/Mounts and Cargo",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "An animal pulling a carriage, cart, chariot, sled, or wagon can move weight up to five times its base carrying capacity, including the weight of the vehicle. If multiple animals pull the same vehicle, add their carrying capacities together.\n\n##### Mounts and Other Animals\n\n| **Item** | **Carrying Capacity** | **Cost** |",
+  "data": {
+    "rules": [
+      {
+        "id": "pulling",
+        "capacity_multiplier": 5,
+        "includes_vehicle_weight": true,
+        "multiple_animals_add": true
+      },
+      {
+        "id": "table",
+        "rows": "dnd5e/mount/*"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "An animal pulling a carriage, cart, chariot, sled, or wagon can move weight up to five times its base carrying capacity, including the weight of the vehicle. If multiple animals pull the same vehicle, add their carrying capacities together.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Mounts and Other Animals\n\n| **Item** | **Carrying Capacity** | **Cost** |",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

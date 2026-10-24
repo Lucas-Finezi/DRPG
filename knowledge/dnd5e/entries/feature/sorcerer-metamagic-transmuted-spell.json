@@ -1,0 +1,152 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic-transmuted-spell",
+  "kind": "feature",
+  "name": "Transmuted Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      67
+    ],
+    "section": "Classes/Sorcerer/Metamagic Options/Transmuted Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Cost: 1 Sorcery Point*\n\nWhen you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder.",
+  "facets": {
+    "feature_type": "metamagic_option",
+    "owner": "dnd5e/class/sorcerer"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cost",
+        "resource": "sorcery_points",
+        "amount": 1
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "casts_spell"
+      },
+      "optional": true,
+      "condition": {
+        "any": [
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "acid"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "cold"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "fire"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "lightning"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "poison"
+            }
+          },
+          {
+            "pred": "deals_damage_type",
+            "args": {
+              "damage_type": "thunder"
+            }
+          }
+        ]
+      },
+      "then": [
+        {
+          "op": "spend",
+          "resource": "sorcery_points",
+          "amount": 1
+        },
+        {
+          "op": "choice",
+          "id": "new_type",
+          "choose": 1,
+          "options": [
+            {
+              "id": "acid",
+              "label": "Acid",
+              "value": "acid",
+              "effects": []
+            },
+            {
+              "id": "cold",
+              "label": "Cold",
+              "value": "cold",
+              "effects": []
+            },
+            {
+              "id": "fire",
+              "label": "Fire",
+              "value": "fire",
+              "effects": []
+            },
+            {
+              "id": "lightning",
+              "label": "Lightning",
+              "value": "lightning",
+              "effects": []
+            },
+            {
+              "id": "poison",
+              "label": "Poison",
+              "value": "poison",
+              "effects": []
+            },
+            {
+              "id": "thunder",
+              "label": "Thunder",
+              "value": "thunder",
+              "effects": []
+            }
+          ],
+          "note": "Change to one of the other listed types."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Cost: 1 Sorcery Point*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    }
+  ]
+}

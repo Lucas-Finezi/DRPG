@@ -1,0 +1,162 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/unconscious",
+  "kind": "condition",
+  "name": "Unconscious",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      191
+    ],
+    "section": "Rules Glossary/Rules Definitions/Unconscious [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Unconscious condition, you experience the following effects.\n\n***Inert.*** You have the Incapacitated and Prone conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.\n\n***Speed 0.*** Your Speed is 0 and can’t increase.\n\n***Attacks Affected.*** Attack rolls against you have Advantage.\n\n***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.\n\n***Automatic Critical Hits.*** Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.\n\n***Unaware.*** You’re unaware of your surroundings.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/incapacitated",
+      "duration": {
+        "kind": "while",
+        "while": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "unconscious"
+          }
+        }
+      },
+      "note": "Lasts while the parent condition lasts."
+    },
+    {
+      "op": "apply_condition",
+      "condition": "dnd5e/condition/prone",
+      "note": "Prone does not end with this condition: you remain Prone."
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "hold_items"
+      ]
+    },
+    {
+      "op": "speed",
+      "movement": "walk",
+      "mode": "set",
+      "value": 0
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "increase_speed"
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against"
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "saving_throw.str",
+        "saving_throw.dex"
+      ],
+      "result": "fail"
+    },
+    {
+      "op": "auto_result",
+      "rolls": [
+        "attack_roll"
+      ],
+      "result": "critical_hit",
+      "direction": "against",
+      "when": {
+        "pred": "within_feet",
+        "args": {
+          "who": "attacker",
+          "feet": 5
+        }
+      },
+      "note": "Only an attack roll that hits becomes a Critical Hit."
+    },
+    {
+      "op": "restrict",
+      "restrictions": [
+        "aware_of_surroundings"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Unconscious condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Inert.*** You have the Incapacitated and Prone conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Speed 0.*** Your Speed is 0 and can’t increase.",
+      "status": "structured",
+      "by": [
+        "/effects/3",
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "***Attacks Affected.*** Attack rolls against you have Advantage.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    },
+    {
+      "text": "***Saving Throws Affected.*** You automatically fail Strength and Dexterity saving throws.",
+      "status": "structured",
+      "by": [
+        "/effects/6"
+      ]
+    },
+    {
+      "text": "***Automatic Critical Hits.*** Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.",
+      "status": "structured",
+      "by": [
+        "/effects/7"
+      ]
+    },
+    {
+      "text": "***Unaware.*** You’re unaware of your surroundings.",
+      "status": "structured",
+      "by": [
+        "/effects/8"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/incapacitated",
+    "dnd5e/condition/prone"
+  ]
+}

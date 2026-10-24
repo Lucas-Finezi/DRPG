@@ -1,0 +1,42 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/critical-hits",
+  "kind": "rule",
+  "name": "Critical Hits",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      16
+    ],
+    "section": "Playing the Game/Damage and Healing/Critical Hits",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L06"
+  },
+  "tier": 1,
+  "text": "When you score a Critical Hit, you deal extra damage. Roll the attack’s damage dice twice, add them together, and add any relevant modifiers as normal. For example, if you score a Critical Hit with a Dagger, roll 2d4 for the damage rather than 1d4, and add your relevant ability modifier. If the attack involves other damage dice, such as from the Rogue’s Sneak Attack feature, you also roll those dice twice.",
+  "data": {
+    "rules": [
+      {
+        "id": "critical_damage",
+        "damage_dice": "roll_twice",
+        "modifiers": "add_once",
+        "includes_extra_dice": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "When you score a Critical Hit, you deal extra damage. Roll the attack’s damage dice twice, add them together, and add any relevant modifiers as normal. For example, if you score a Critical Hit with a Dagger, roll 2d4 for the damage rather than 1d4, and add your relevant ability modifier. If the attack involves other damage dice, such as from the Rogue’s Sneak Attack feature, you also roll those dice twice.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/adult-white-dragon",
+  "kind": "creature",
+  "name": "Adult White Dragon",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      340
+    ],
+    "section": "Monsters A–Z/White Dragons/Adult White Dragon",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 3,
+  "text": "*Huge Dragon (Chromatic), Chaotic Evil*\n\n| **AC** 18 | **Initiative** +10 (20) |\n\n**HP** 200 (16d12 + 96)\n\n**Speed** 40 ft., Burrow 30 ft., Fly 80 ft., Swim 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 10 | +0 | +5 | **Con** 22 | +6 | +6 |\n| **Int** | 8 | −1 | −1 | **Wis** 12 | +1 | +6 | **Cha** 12 | +1 | +1 |\n\n**Skills** Perception +11, Stealth +5\n\n**Immunities** Cold\n\n**Senses** Blindsight 60 ft., Darkvision 120 ft.;\n\nPassive Perception 21\n\n**Languages** Common, Draconic\n\n**CR** 13 (XP 10,000, or 11,500 in lair; PB +5)\n\n##### Traits\n\n***Ice Walk.*** The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn’t cost it extra movement.\n\n***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the dragon fails a saving throw, it can choose to succeed instead.\n\n##### Actions\n\n***Multiattack.*** The dragon makes three Rend attacks.\n\n***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 4 (1d8) Cold damage.\n\n***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage.\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*\n\n***Freezing Burst.*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. *Failure:* 7 (2d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.\n\n***Frightful Presence.*** The dragon casts *Fear*, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 14). The dragon can’t take this action again until the start of its next turn.\n\n***Pounce.*** The dragon moves up to half its Speed, and it makes one Rend attack.",
+  "facets": {
+    "group": "monster",
+    "size": "Huge",
+    "type": "Dragon",
+    "alignment": "Chaotic Evil",
+    "cr": "13"
+  },
+  "data": {
+    "size": "Huge",
+    "type": "Dragon",
+    "alignment": "Chaotic Evil",
+    "tags": [
+      "Chromatic"
+    ],
+    "type_line": "Huge Dragon (Chromatic), Chaotic Evil",
+    "ac": {
+      "value": 18,
+      "text": "18"
+    },
+    "initiative": {
+      "modifier": 10,
+      "score": 20,
+      "text": "+10 (20)"
+    },
+    "hp": {
+      "average": 200,
+      "formula": {
+        "op": "add",
+        "args": [
+          "16d12",
+          96
+        ]
+      },
+      "text": "200 (16d12 + 96)"
+    },
+    "speed": {
+      "text": "40 ft., Burrow 30 ft., Fly 80 ft., Swim 40 ft.",
+      "walk": 40,
+      "burrow": 30,
+      "fly": 80,
+      "swim": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 5
+      },
+      "con": {
+        "score": 22,
+        "mod": 6,
+        "save": 6
+      },
+      "int": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 6
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "skills": {
+      "perception": 11,
+      "stealth": 5,
+      "text": "Perception +11, Stealth +5"
+    },
+    "immunities": {
+      "damage_types": [
+        "cold"
+      ],
+      "conditions": [],
+      "text": "Cold"
+    },
+    "senses": {
+      "text": "Blindsight 60 ft., Darkvision 120 ft.; Passive Perception 21",
+      "blindsight": 60,
+      "darkvision": 120,
+      "passive_perception": 21
+    },
+    "languages": {
+      "text": "Common, Draconic"
+    },
+    "cr": {
+      "value": "13",
+      "xp": 10000,
+      "proficiency_bonus": 5,
+      "text": "13 (XP 10,000, or 11,500 in lair; PB +5)",
+      "xp_in_lair": 11500
+    },
+    "traits": [
+      {
+        "name": "Ice Walk",
+        "text": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn’t cost it extra movement."
+      },
+      {
+        "name": "Legendary Resistance",
+        "per_day": 3,
+        "per_day_in_lair": 4,
+        "text": "If the dragon fails a saving throw, it can choose to succeed instead."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The dragon makes three Rend attacks."
+      },
+      {
+        "name": "Rend",
+        "text": "*Melee Attack Roll:* +11, reach 10 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 4 (1d8) Cold damage."
+      },
+      {
+        "name": "Cold Breath",
+        "recharge": {
+          "min": 5,
+          "die": "1d6"
+        },
+        "text": "*Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Freezing Burst",
+        "text": "*Constitution Saving Throw:* DC 14, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. *Failure:* 7 (2d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Frightful Presence",
+        "text": "The dragon casts *Fear*, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 14). The dragon can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Pounce",
+        "text": "The dragon moves up to half its Speed, and it makes one Rend attack."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 3
+          }
+        ],
+        "text": "The dragon makes three Rend attacks."
+      },
+      {
+        "id": "once_per_round",
+        "until": "start of its next turn"
+      },
+      {
+        "id": "attack",
+        "attacks": [
+          {
+            "name": "Rend",
+            "count": 1
+          }
+        ],
+        "move": "half_speed"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 3,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Rend",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 11,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d6",
+                  6
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d8",
+              "damage_type": "cold"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Cold Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 19,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 60,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "12d8",
+              "damage_type": "cold"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 5–6."
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Freezing Burst",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 14,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 120
+            },
+            "text": "each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "2d6",
+              "damage_type": "cold"
+            }
+          ]
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Frightful Presence",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fear",
+          "slot": "none"
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_ice_walk",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Ice Walk as written.",
+      "source_text": "The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn’t cost it extra movement."
+    },
+    {
+      "id": "legendary_actions_freezing_burst_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Freezing Burst as written.",
+      "source_text": "7 (2d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. Failure or Success: The dragon can’t take this action again until the start of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Huge Dragon (Chromatic), Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 18 | **Initiative** +10 (20) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 200 (16d12 + 96)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft., Burrow 30 ft., Fly 80 ft., Swim 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 22 | +6 | +6 | **Dex** 10 | +0 | +5 | **Con** 22 | +6 | +6 |\n| **Int** | 8 | −1 | −1 | **Wis** 12 | +1 | +6 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +11, Stealth +5",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Cold",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Blindsight 60 ft., Darkvision 120 ft.;\n\nPassive Perception 21",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Common, Draconic",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 13 (XP 10,000, or 11,500 in lair; PB +5)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Ice Walk.*** The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, Difficult Terrain composed of ice or snow doesn’t cost it extra movement.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_ice_walk"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (3/Day, or 4/Day in Lair).*** If the dragon fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The dragon makes three Rend attacks.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 13 (2d6 + 6) Slashing damage plus 4 (1d8) Cold damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Cold Breath (Recharge 5–6).*** *Constitution Saving Throw:* DC 19, each creature in a 60-foot Cone. *Failure:* 54 (12d8) Cold damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the dragon can expend a use to take one of the following actions. The dragon regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Freezing Burst.*** *Constitution Saving Throw:* DC 14, each creature in a 30-foot-radius Sphere centered on a point the dragon can see within 120 feet. *Failure:* 7 (2d6) Cold damage, and the target’s Speed is 0 until the end of the target’s next turn. *Failure or Success:* The dragon can’t take this action again until the start of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/0",
+        "/effects/3",
+        "md:legendary_actions_freezing_burst_rider"
+      ]
+    },
+    {
+      "text": "***Frightful Presence.*** The dragon casts *Fear*, requiring no Material components and using Charisma as the spellcasting ability (spell save DC 14). The dragon can’t take this action again until the start of its next turn.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/1",
+        "/effects/4",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "***Pounce.*** The dragon moves up to half its Speed, and it makes one Rend attack.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/2",
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/fear"
+  ]
+}

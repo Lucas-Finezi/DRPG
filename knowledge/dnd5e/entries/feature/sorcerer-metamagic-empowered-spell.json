@@ -1,0 +1,95 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-metamagic-empowered-spell",
+  "kind": "feature",
+  "name": "Empowered Spell",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      67
+    ],
+    "section": "Classes/Sorcerer/Metamagic Options/Empowered Spell",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "*Cost: 1 Sorcery Point*\n\nWhen you roll damage for a spell, you can spend 1 Sorcery Point to reroll a number of the damage dice up to your Charisma modifier (minimum of one), and you must use the new rolls.\n\nYou can use Empowered Spell even if you’ve already used a different Metamagic option during the casting of the spell.",
+  "facets": {
+    "feature_type": "metamagic_option",
+    "owner": "dnd5e/class/sorcerer"
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "cost",
+        "resource": "sorcery_points",
+        "amount": 1
+      },
+      {
+        "id": "stacks",
+        "combinable_with_other_metamagic": true
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "rolls_spell_damage"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "spend",
+          "resource": "sorcery_points",
+          "amount": 1
+        },
+        {
+          "op": "reroll",
+          "rolls": [
+            "damage_roll"
+          ],
+          "dice": {
+            "op": "max",
+            "args": [
+              1,
+              {
+                "var": "ability_mod.cha"
+              }
+            ]
+          },
+          "keep": "new"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Cost: 1 Sorcery Point*",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "When you roll damage for a spell, you can spend 1 Sorcery Point to reroll a number of the damage dice up to your Charisma modifier (minimum of one), and you must use the new rolls.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You can use Empowered Spell even if you’ve already used a different Metamagic option during the casting of the spell.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ]
+}

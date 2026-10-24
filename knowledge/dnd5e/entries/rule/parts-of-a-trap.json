@@ -1,0 +1,89 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/parts-of-a-trap",
+  "kind": "rule",
+  "name": "Parts of a Trap",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      199
+    ],
+    "section": "Gameplay Toolbox/Traps/Parts of a Trap",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L41"
+  },
+  "tier": 1,
+  "text": "The description of a trap includes the following parts after the trap’s name:\n\n**Severity and Levels.** A trap is designated as a nuisance or as deadly for characters of certain levels. A nuisance trap is unlikely to seriously harm characters of the indicated levels, whereas a deadly trap can grievously damage characters of the indicated levels.\n\n**Trigger.** Traps are often set to go off when a creature enters an area or touches an object. Examples of triggers include stepping on a pressure plate, crossing a trip wire, turning a doorknob, or using the wrong key in a lock.\n\n**Duration.** Some traps have durations expressed in rounds, minutes, or hours. Others specify that their effects last until the trap is destroyed or dispelled. If a trap’s duration is instantaneous, its effect is resolved instantly. If a trap resets after activating, that fact is noted in this entry. A trap is otherwise inert after activation.\n\nUse caution when introducing a trap to characters of a level lower than the trap’s level range. A trap that is a nuisance at one level range could be deadly to characters of a lower level range.",
+  "data": {
+    "rules": [
+      {
+        "id": "parts",
+        "fields": [
+          "severity_and_levels",
+          "trigger",
+          "duration"
+        ]
+      },
+      {
+        "id": "severity",
+        "values": [
+          "nuisance",
+          "deadly"
+        ]
+      },
+      {
+        "id": "trigger",
+        "examples": [
+          "pressure_plate",
+          "trip_wire",
+          "doorknob",
+          "wrong_key"
+        ]
+      },
+      {
+        "id": "duration",
+        "inert_after_unless_resets": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "The description of a trap includes the following parts after the trap’s name:",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "**Severity and Levels.** A trap is designated as a nuisance or as deadly for characters of certain levels. A nuisance trap is unlikely to seriously harm characters of the indicated levels, whereas a deadly trap can grievously damage characters of the indicated levels.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "**Trigger.** Traps are often set to go off when a creature enters an area or touches an object. Examples of triggers include stepping on a pressure plate, crossing a trip wire, turning a doorknob, or using the wrong key in a lock.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "**Duration.** Some traps have durations expressed in rounds, minutes, or hours. Others specify that their effects last until the trap is destroyed or dispelled. If a trap’s duration is instantaneous, its effect is resolved instantly. If a trap resets after activating, that fact is noted in this entry. A trap is otherwise inert after activation.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "Use caution when introducing a trap to characters of a level lower than the trap’s level range. A trap that is a nuisance at one level range could be deadly to characters of a lower level range.",
+      "status": "descriptive"
+    }
+  ]
+}

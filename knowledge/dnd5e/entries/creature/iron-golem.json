@@ -1,0 +1,423 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/iron-golem",
+  "kind": "creature",
+  "name": "Iron Golem",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      302
+    ],
+    "section": "Monsters A–Z/Iron Golem/Iron Golem",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 3,
+  "text": "*Large Construct, Unaligned*\n\n| **AC** 20 | **Initiative** +9 (19) |\n\n**HP** 252 (24d10 + 120)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 24 | +7 | +7 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |\n\n**Immunities** Fire, Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned\n\n**Senses** Darkvision 120 ft.; Passive Perception 10\n\n**Languages** Understands Common plus two other languages but can’t speak\n\n**CR** 16 (XP 15,000; PB +5)\n\n##### Traits\n\n***Fire Absorption.*** Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.\n\n***Immutable Form.*** The golem can’t shape-shift.\n\n***Magic Resistance.*** The golem has Advantage on saving throws against spells and other magical effects.\n\n##### Actions\n\n***Multiattack.*** The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination.\n\n***Bladed Arm.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 20 (3d8 + 7) Slashing damage plus 10 (3d6) Fire damage.\n\n***Fiery Bolt.*** *Ranged Attack Roll:* +10, range 120 ft. *Hit:* 36 (8d8) Fire damage.\n\n***Poison Breath (Recharge 6).*** *Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *Failure:* 55 (10d10) Poison damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "cr": "16"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Construct",
+    "alignment": "Unaligned",
+    "type_line": "Large Construct, Unaligned",
+    "ac": {
+      "value": 20,
+      "text": "20"
+    },
+    "initiative": {
+      "modifier": 9,
+      "score": 19,
+      "text": "+9 (19)"
+    },
+    "hp": {
+      "average": 252,
+      "formula": {
+        "op": "add",
+        "args": [
+          "24d10",
+          120
+        ]
+      },
+      "text": "252 (24d10 + 120)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 24,
+        "mod": 7,
+        "save": 7
+      },
+      "dex": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 20,
+        "mod": 5,
+        "save": 5
+      },
+      "int": {
+        "score": 3,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 1,
+        "mod": -5,
+        "save": -5
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "fire",
+        "poison",
+        "psychic"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/petrified",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Fire, Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 120 ft.; Passive Perception 10",
+      "darkvision": 120,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Understands Common plus two other languages but can’t speak"
+    },
+    "cr": {
+      "value": "16",
+      "xp": 15000,
+      "proficiency_bonus": 5,
+      "text": "16 (XP 15,000; PB +5)"
+    },
+    "traits": [
+      {
+        "name": "Fire Absorption",
+        "text": "Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt."
+      },
+      {
+        "name": "Immutable Form",
+        "text": "The golem can’t shape-shift."
+      },
+      {
+        "name": "Magic Resistance",
+        "text": "The golem has Advantage on saving throws against spells and other magical effects."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination."
+      },
+      {
+        "name": "Bladed Arm",
+        "text": "*Melee Attack Roll:* +12, reach 10 ft. *Hit:* 20 (3d8 + 7) Slashing damage plus 10 (3d6) Fire damage."
+      },
+      {
+        "name": "Fiery Bolt",
+        "text": "*Ranged Attack Roll:* +10, range 120 ft. *Hit:* 36 (8d8) Fire damage."
+      },
+      {
+        "name": "Poison Breath",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "*Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *Failure:* 55 (10d10) Poison damage. *Success:* Half damage."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "shape_changed"
+      ],
+      "note": "Can't shape-shift."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "source": "spell_or_magic"
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Bladed Arm",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 12,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d8",
+                  7
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "3d6",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Fiery Bolt",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged",
+          "bonus": 10,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "8d8",
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Poison Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 18,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 60,
+              "origin": "self"
+            },
+            "text": "each creature in a 60-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "10d10",
+              "damage_type": "poison"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 6–6."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_fire_absorption",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Fire Absorption as written.",
+      "source_text": "Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Construct, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 20 | **Initiative** +9 (19) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 252 (24d10 + 120)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 24 | +7 | +7 | **Dex** 9 | −1 | −1 | **Con** 20 | +5 | +5 |\n| **Int** | 3 | −4 | −4 | **Wis** 11 | +0 | +0 | **Cha** 1 | −5 | −5 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire, Poison, Psychic; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 120 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Understands Common plus two other languages but can’t speak",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 16 (XP 15,000; PB +5)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Fire Absorption.*** Whenever the golem is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_fire_absorption"
+      ]
+    },
+    {
+      "text": "***Immutable Form.*** The golem can’t shape-shift.",
+      "status": "structured",
+      "by": [
+        "/data/traits/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Magic Resistance.*** The golem has Advantage on saving throws against spells and other magical effects.",
+      "status": "structured",
+      "by": [
+        "/data/traits/2",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The golem makes two attacks, using Bladed Arm or Fiery Bolt in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Bladed Arm.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 20 (3d8 + 7) Slashing damage plus 10 (3d6) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Fiery Bolt.*** *Ranged Attack Roll:* +10, range 120 ft. *Hit:* 36 (8d8) Fire damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Poison Breath (Recharge 6).*** *Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *Failure:* 55 (10d10) Poison damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/petrified",
+    "dnd5e/condition/poisoned"
+  ]
+}

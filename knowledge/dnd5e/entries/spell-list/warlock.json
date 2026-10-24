@@ -1,0 +1,822 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell-list/warlock",
+  "kind": "spell-list",
+  "name": "Warlock Spell List",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      74,
+      75,
+      76
+    ],
+    "section": "Classes/Warlock/Warlock Spell List",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L27"
+  },
+  "tier": 1,
+  "text": "This section presents the Warlock spell list. The spells are organized by spell level and then alphabetized, and each spell’s school of magic is listed. In the Special column, *C* means the spell requires Concentration, *R* means it’s a Ritual, and *M* means it requires a specific Material component.\n\n##### Cantrips (Level 0 Warlock Spells)\n\n| **Spell** | **School** | **Special** |\n| *Chill Touch* | Necromancy | — |\n| *Eldritch Blast* | Evocation | — |\n| *Mage Hand* | Conjuration | — |\n| *Minor Illusion* | Illusion | — |\n| *Poison Spray* | Necromancy | — |\n| *Prestidigitation* | Transmutation | — |\n| *True Strike* | Divination | — |\n\n##### Level 1 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Bane* | Enchantment | C |\n| *Charm Person* | Enchantment | — |\n| *Comprehend Languages* | Divination | R |\n| *Detect Magic* | Divination | C, R |\n| *Expeditious Retreat* | Transmutation | C |\n| *Hellish Rebuke* | Evocation | — |\n| *Hex* | Enchantment | C |\n| *Hideous Laughter* | Enchantment | C |\n| *Illusory Script* | Illusion | R, M |\n| *Protection from Evil and Good* | Abjuration | C, M |\n| *Speak with Animals* | Divination | R |\n| *Unseen Servant* | Conjuration | R |\n\n##### Level 2 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Darkness* | Evocation | C |\n| *Enthrall* | Enchantment | C |\n| *Hold Person* | Enchantment | C |\n| *Invisibility* | Illusion | C |\n| *Mind Spike* | Divination | C |\n| *Mirror Image* | Illusion | — |\n| *Misty Step* | Conjuration | — |\n| *Ray of Enfeeblement* | Necromancy | C |\n| *Spider Climb* | Transmutation | C |\n| *Suggestion* | Enchantment | C |\n\n##### Level 3 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Counterspell* | Abjuration | — |\n| *Dispel Magic* | Abjuration | — |\n| *Fear* | Illusion | C |\n| *Fly* | Transmutation | C |\n| **Spell** | **School** | **Special** |\n| *Gaseous Form* | Transmutation | C |\n| *Hypnotic Pattern* | Illusion | C |\n| *Magic Circle* | Abjuration | M |\n| *Major Image* | Illusion | C |\n| *Remove Curse* | Abjuration | — |\n| *Tongues* | Divination | — |\n| *Vampiric Touch* | Necromancy | C |\n\n##### Level 4 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Banishment* | Abjuration | C |\n| *Blight* | Necromancy | — |\n| *Charm Monster* | Enchantment | — |\n| *Dimension Door* | Conjuration | — |\n| *Hallucinatory Terrain* | Illusion | — |\n\n##### Level 5 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Contact Other Plane* | Divination | R |\n| *Dream* | Illusion | — |\n| *Hold Monster* | Enchantment | C |\n| *Mislead* | Illusion | C |\n| *Planar Binding* | Abjuration | M |\n| *Scrying* | Divination | C, M |\n| *Teleportation Circle* | Conjuration | M |\n\n##### Level 6 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Circle of Death* | Necromancy | M |\n| *Create Undead* | Necromancy | M |\n| *Eyebite* | Necromancy | C |\n| *True Seeing* | Divination | M |\n\n##### Level 7 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Etherealness* | Conjuration | — |\n| *Finger of Death* | Necromancy | — |\n| *Forcecage* | Evocation | C, M |\n| *Plane Shift* | Conjuration | M |\n\n##### Level 8 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Befuddlement* | Enchantment | — |\n| *Demiplane* | Conjuration | — |\n| *Dominate Monster* | Enchantment | C |\n| *Glibness* | Enchantment | — |\n| *Power Word Stun* | Enchantment | — |\n\n##### Level 9 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Astral Projection* | Necromancy | M |\n| *Foresight* | Divination | — |\n| *Gate* | Conjuration | C, M |\n| *Imprisonment* | Abjuration | M |\n| *Power Word Kill* | Enchantment | — |\n| *True Polymorph* | Transmutation | C |\n| *Weird* | Illusion | C |",
+  "facets": {
+    "class": "dnd5e/class/warlock",
+    "spell_count": 72
+  },
+  "data": {
+    "class": "dnd5e/class/warlock",
+    "printed_spells": [
+      "dnd5e/spell/chill-touch",
+      "dnd5e/spell/eldritch-blast",
+      "dnd5e/spell/mage-hand",
+      "dnd5e/spell/minor-illusion",
+      "dnd5e/spell/poison-spray",
+      "dnd5e/spell/prestidigitation",
+      "dnd5e/spell/true-strike",
+      "dnd5e/spell/bane",
+      "dnd5e/spell/charm-person",
+      "dnd5e/spell/comprehend-languages",
+      "dnd5e/spell/detect-magic",
+      "dnd5e/spell/expeditious-retreat",
+      "dnd5e/spell/hellish-rebuke",
+      "dnd5e/spell/hex",
+      "dnd5e/spell/hideous-laughter",
+      "dnd5e/spell/illusory-script",
+      "dnd5e/spell/protection-from-evil-and-good",
+      "dnd5e/spell/speak-with-animals",
+      "dnd5e/spell/unseen-servant",
+      "dnd5e/spell/darkness",
+      "dnd5e/spell/enthrall",
+      "dnd5e/spell/hold-person",
+      "dnd5e/spell/invisibility",
+      "dnd5e/spell/mind-spike",
+      "dnd5e/spell/mirror-image",
+      "dnd5e/spell/misty-step",
+      "dnd5e/spell/ray-of-enfeeblement",
+      "dnd5e/spell/spider-climb",
+      "dnd5e/spell/suggestion",
+      "dnd5e/spell/counterspell",
+      "dnd5e/spell/dispel-magic",
+      "dnd5e/spell/fear",
+      "dnd5e/spell/fly",
+      "dnd5e/spell/gaseous-form",
+      "dnd5e/spell/hypnotic-pattern",
+      "dnd5e/spell/magic-circle",
+      "dnd5e/spell/major-image",
+      "dnd5e/spell/remove-curse",
+      "dnd5e/spell/tongues",
+      "dnd5e/spell/vampiric-touch",
+      "dnd5e/spell/banishment",
+      "dnd5e/spell/blight",
+      "dnd5e/spell/charm-monster",
+      "dnd5e/spell/dimension-door",
+      "dnd5e/spell/hallucinatory-terrain",
+      "dnd5e/spell/contact-other-plane",
+      "dnd5e/spell/dream",
+      "dnd5e/spell/hold-monster",
+      "dnd5e/spell/mislead",
+      "dnd5e/spell/planar-binding",
+      "dnd5e/spell/scrying",
+      "dnd5e/spell/teleportation-circle",
+      "dnd5e/spell/circle-of-death",
+      "dnd5e/spell/create-undead",
+      "dnd5e/spell/eyebite",
+      "dnd5e/spell/true-seeing",
+      "dnd5e/spell/etherealness",
+      "dnd5e/spell/finger-of-death",
+      "dnd5e/spell/forcecage",
+      "dnd5e/spell/plane-shift",
+      "dnd5e/spell/befuddlement",
+      "dnd5e/spell/demiplane",
+      "dnd5e/spell/dominate-monster",
+      "dnd5e/spell/glibness",
+      "dnd5e/spell/power-word-stun",
+      "dnd5e/spell/astral-projection",
+      "dnd5e/spell/foresight",
+      "dnd5e/spell/gate",
+      "dnd5e/spell/imprisonment",
+      "dnd5e/spell/power-word-kill",
+      "dnd5e/spell/true-polymorph",
+      "dnd5e/spell/weird"
+    ],
+    "spells": [
+      "dnd5e/spell/astral-projection",
+      "dnd5e/spell/bane",
+      "dnd5e/spell/banishment",
+      "dnd5e/spell/befuddlement",
+      "dnd5e/spell/blight",
+      "dnd5e/spell/charm-monster",
+      "dnd5e/spell/charm-person",
+      "dnd5e/spell/chill-touch",
+      "dnd5e/spell/circle-of-death",
+      "dnd5e/spell/comprehend-languages",
+      "dnd5e/spell/contact-other-plane",
+      "dnd5e/spell/counterspell",
+      "dnd5e/spell/create-undead",
+      "dnd5e/spell/darkness",
+      "dnd5e/spell/demiplane",
+      "dnd5e/spell/detect-magic",
+      "dnd5e/spell/dimension-door",
+      "dnd5e/spell/dispel-magic",
+      "dnd5e/spell/dominate-monster",
+      "dnd5e/spell/dream",
+      "dnd5e/spell/eldritch-blast",
+      "dnd5e/spell/enthrall",
+      "dnd5e/spell/etherealness",
+      "dnd5e/spell/expeditious-retreat",
+      "dnd5e/spell/eyebite",
+      "dnd5e/spell/fear",
+      "dnd5e/spell/finger-of-death",
+      "dnd5e/spell/fly",
+      "dnd5e/spell/forcecage",
+      "dnd5e/spell/foresight",
+      "dnd5e/spell/gaseous-form",
+      "dnd5e/spell/gate",
+      "dnd5e/spell/glibness",
+      "dnd5e/spell/hallucinatory-terrain",
+      "dnd5e/spell/hellish-rebuke",
+      "dnd5e/spell/hex",
+      "dnd5e/spell/hideous-laughter",
+      "dnd5e/spell/hold-monster",
+      "dnd5e/spell/hold-person",
+      "dnd5e/spell/hypnotic-pattern",
+      "dnd5e/spell/illusory-script",
+      "dnd5e/spell/imprisonment",
+      "dnd5e/spell/invisibility",
+      "dnd5e/spell/mage-hand",
+      "dnd5e/spell/magic-circle",
+      "dnd5e/spell/major-image",
+      "dnd5e/spell/mind-spike",
+      "dnd5e/spell/minor-illusion",
+      "dnd5e/spell/mirror-image",
+      "dnd5e/spell/mislead",
+      "dnd5e/spell/misty-step",
+      "dnd5e/spell/planar-binding",
+      "dnd5e/spell/plane-shift",
+      "dnd5e/spell/poison-spray",
+      "dnd5e/spell/power-word-kill",
+      "dnd5e/spell/power-word-stun",
+      "dnd5e/spell/prestidigitation",
+      "dnd5e/spell/protection-from-evil-and-good",
+      "dnd5e/spell/ray-of-enfeeblement",
+      "dnd5e/spell/remove-curse",
+      "dnd5e/spell/scrying",
+      "dnd5e/spell/speak-with-animals",
+      "dnd5e/spell/spider-climb",
+      "dnd5e/spell/suggestion",
+      "dnd5e/spell/teleportation-circle",
+      "dnd5e/spell/tongues",
+      "dnd5e/spell/true-polymorph",
+      "dnd5e/spell/true-seeing",
+      "dnd5e/spell/true-strike",
+      "dnd5e/spell/unseen-servant",
+      "dnd5e/spell/vampiric-touch",
+      "dnd5e/spell/weird"
+    ],
+    "added_by_decision_d001": [],
+    "decision": "D-001",
+    "rules": [
+      {
+        "id": "columns",
+        "special": {
+          "C": "concentration",
+          "R": "ritual",
+          "M": "specific_material_component"
+        },
+        "order": "level_then_alphabetical"
+      }
+    ],
+    "tables": [
+      {
+        "id": "level_0",
+        "caption": "Cantrips (Level 0 Warlock Spells)",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Chill Touch",
+            "Necromancy",
+            "—"
+          ],
+          [
+            "Eldritch Blast",
+            "Evocation",
+            "—"
+          ],
+          [
+            "Mage Hand",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Minor Illusion",
+            "Illusion",
+            "—"
+          ],
+          [
+            "Poison Spray",
+            "Necromancy",
+            "—"
+          ],
+          [
+            "Prestidigitation",
+            "Transmutation",
+            "—"
+          ],
+          [
+            "True Strike",
+            "Divination",
+            "—"
+          ]
+        ]
+      },
+      {
+        "id": "level_1",
+        "caption": "Level 1 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Bane",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Charm Person",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "Comprehend Languages",
+            "Divination",
+            "R"
+          ],
+          [
+            "Detect Magic",
+            "Divination",
+            "C, R"
+          ],
+          [
+            "Expeditious Retreat",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Hellish Rebuke",
+            "Evocation",
+            "—"
+          ],
+          [
+            "Hex",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Hideous Laughter",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Illusory Script",
+            "Illusion",
+            "R, M"
+          ],
+          [
+            "Protection from Evil and Good",
+            "Abjuration",
+            "C, M"
+          ],
+          [
+            "Speak with Animals",
+            "Divination",
+            "R"
+          ],
+          [
+            "Unseen Servant",
+            "Conjuration",
+            "R"
+          ]
+        ]
+      },
+      {
+        "id": "level_2",
+        "caption": "Level 2 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Darkness",
+            "Evocation",
+            "C"
+          ],
+          [
+            "Enthrall",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Hold Person",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Invisibility",
+            "Illusion",
+            "C"
+          ],
+          [
+            "Mind Spike",
+            "Divination",
+            "C"
+          ],
+          [
+            "Mirror Image",
+            "Illusion",
+            "—"
+          ],
+          [
+            "Misty Step",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Ray of Enfeeblement",
+            "Necromancy",
+            "C"
+          ],
+          [
+            "Spider Climb",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Suggestion",
+            "Enchantment",
+            "C"
+          ]
+        ]
+      },
+      {
+        "id": "level_3",
+        "caption": "Level 3 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Counterspell",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Dispel Magic",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Fear",
+            "Illusion",
+            "C"
+          ],
+          [
+            "Fly",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Gaseous Form",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Hypnotic Pattern",
+            "Illusion",
+            "C"
+          ],
+          [
+            "Magic Circle",
+            "Abjuration",
+            "M"
+          ],
+          [
+            "Major Image",
+            "Illusion",
+            "C"
+          ],
+          [
+            "Remove Curse",
+            "Abjuration",
+            "—"
+          ],
+          [
+            "Tongues",
+            "Divination",
+            "—"
+          ],
+          [
+            "Vampiric Touch",
+            "Necromancy",
+            "C"
+          ]
+        ]
+      },
+      {
+        "id": "level_4",
+        "caption": "Level 4 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Banishment",
+            "Abjuration",
+            "C"
+          ],
+          [
+            "Blight",
+            "Necromancy",
+            "—"
+          ],
+          [
+            "Charm Monster",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "Dimension Door",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Hallucinatory Terrain",
+            "Illusion",
+            "—"
+          ]
+        ]
+      },
+      {
+        "id": "level_5",
+        "caption": "Level 5 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Contact Other Plane",
+            "Divination",
+            "R"
+          ],
+          [
+            "Dream",
+            "Illusion",
+            "—"
+          ],
+          [
+            "Hold Monster",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Mislead",
+            "Illusion",
+            "C"
+          ],
+          [
+            "Planar Binding",
+            "Abjuration",
+            "M"
+          ],
+          [
+            "Scrying",
+            "Divination",
+            "C, M"
+          ],
+          [
+            "Teleportation Circle",
+            "Conjuration",
+            "M"
+          ]
+        ]
+      },
+      {
+        "id": "level_6",
+        "caption": "Level 6 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Circle of Death",
+            "Necromancy",
+            "M"
+          ],
+          [
+            "Create Undead",
+            "Necromancy",
+            "M"
+          ],
+          [
+            "Eyebite",
+            "Necromancy",
+            "C"
+          ],
+          [
+            "True Seeing",
+            "Divination",
+            "M"
+          ]
+        ]
+      },
+      {
+        "id": "level_7",
+        "caption": "Level 7 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Etherealness",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Finger of Death",
+            "Necromancy",
+            "—"
+          ],
+          [
+            "Forcecage",
+            "Evocation",
+            "C, M"
+          ],
+          [
+            "Plane Shift",
+            "Conjuration",
+            "M"
+          ]
+        ]
+      },
+      {
+        "id": "level_8",
+        "caption": "Level 8 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Befuddlement",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "Demiplane",
+            "Conjuration",
+            "—"
+          ],
+          [
+            "Dominate Monster",
+            "Enchantment",
+            "C"
+          ],
+          [
+            "Glibness",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "Power Word Stun",
+            "Enchantment",
+            "—"
+          ]
+        ]
+      },
+      {
+        "id": "level_9",
+        "caption": "Level 9 Warlock Spells",
+        "columns": [
+          "Spell",
+          "School",
+          "Special"
+        ],
+        "rows": [
+          [
+            "Astral Projection",
+            "Necromancy",
+            "M"
+          ],
+          [
+            "Foresight",
+            "Divination",
+            "—"
+          ],
+          [
+            "Gate",
+            "Conjuration",
+            "C, M"
+          ],
+          [
+            "Imprisonment",
+            "Abjuration",
+            "M"
+          ],
+          [
+            "Power Word Kill",
+            "Enchantment",
+            "—"
+          ],
+          [
+            "True Polymorph",
+            "Transmutation",
+            "C"
+          ],
+          [
+            "Weird",
+            "Illusion",
+            "C"
+          ]
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "This section presents the Warlock spell list. The spells are organized by spell level and then alphabetized, and each spell’s school of magic is listed. In the Special column, *C* means the spell requires Concentration, *R* means it’s a Ritual, and *M* means it requires a specific Material component.",
+      "status": "structured",
+      "by": [
+        "/data/class",
+        "/data/spells",
+        "/data/printed_spells",
+        "/data/added_by_decision_d001",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "##### Cantrips (Level 0 Warlock Spells)\n\n| **Spell** | **School** | **Special** |\n| *Chill Touch* | Necromancy | — |\n| *Eldritch Blast* | Evocation | — |\n| *Mage Hand* | Conjuration | — |\n| *Minor Illusion* | Illusion | — |\n| *Poison Spray* | Necromancy | — |\n| *Prestidigitation* | Transmutation | — |\n| *True Strike* | Divination | — |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    },
+    {
+      "text": "##### Level 1 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Bane* | Enchantment | C |\n| *Charm Person* | Enchantment | — |\n| *Comprehend Languages* | Divination | R |\n| *Detect Magic* | Divination | C, R |\n| *Expeditious Retreat* | Transmutation | C |\n| *Hellish Rebuke* | Evocation | — |\n| *Hex* | Enchantment | C |\n| *Hideous Laughter* | Enchantment | C |\n| *Illusory Script* | Illusion | R, M |\n| *Protection from Evil and Good* | Abjuration | C, M |\n| *Speak with Animals* | Divination | R |\n| *Unseen Servant* | Conjuration | R |",
+      "status": "structured",
+      "by": [
+        "/data/tables/1"
+      ]
+    },
+    {
+      "text": "##### Level 2 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Darkness* | Evocation | C |\n| *Enthrall* | Enchantment | C |\n| *Hold Person* | Enchantment | C |\n| *Invisibility* | Illusion | C |\n| *Mind Spike* | Divination | C |\n| *Mirror Image* | Illusion | — |\n| *Misty Step* | Conjuration | — |\n| *Ray of Enfeeblement* | Necromancy | C |\n| *Spider Climb* | Transmutation | C |\n| *Suggestion* | Enchantment | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/2"
+      ]
+    },
+    {
+      "text": "##### Level 3 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Counterspell* | Abjuration | — |\n| *Dispel Magic* | Abjuration | — |\n| *Fear* | Illusion | C |\n| *Fly* | Transmutation | C |\n| **Spell** | **School** | **Special** |\n| *Gaseous Form* | Transmutation | C |\n| *Hypnotic Pattern* | Illusion | C |\n| *Magic Circle* | Abjuration | M |\n| *Major Image* | Illusion | C |\n| *Remove Curse* | Abjuration | — |\n| *Tongues* | Divination | — |\n| *Vampiric Touch* | Necromancy | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/3"
+      ]
+    },
+    {
+      "text": "##### Level 4 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Banishment* | Abjuration | C |\n| *Blight* | Necromancy | — |\n| *Charm Monster* | Enchantment | — |\n| *Dimension Door* | Conjuration | — |\n| *Hallucinatory Terrain* | Illusion | — |",
+      "status": "structured",
+      "by": [
+        "/data/tables/4"
+      ]
+    },
+    {
+      "text": "##### Level 5 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Contact Other Plane* | Divination | R |\n| *Dream* | Illusion | — |\n| *Hold Monster* | Enchantment | C |\n| *Mislead* | Illusion | C |\n| *Planar Binding* | Abjuration | M |\n| *Scrying* | Divination | C, M |\n| *Teleportation Circle* | Conjuration | M |",
+      "status": "structured",
+      "by": [
+        "/data/tables/5"
+      ]
+    },
+    {
+      "text": "##### Level 6 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Circle of Death* | Necromancy | M |\n| *Create Undead* | Necromancy | M |\n| *Eyebite* | Necromancy | C |\n| *True Seeing* | Divination | M |",
+      "status": "structured",
+      "by": [
+        "/data/tables/6"
+      ]
+    },
+    {
+      "text": "##### Level 7 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Etherealness* | Conjuration | — |\n| *Finger of Death* | Necromancy | — |\n| *Forcecage* | Evocation | C, M |\n| *Plane Shift* | Conjuration | M |",
+      "status": "structured",
+      "by": [
+        "/data/tables/7"
+      ]
+    },
+    {
+      "text": "##### Level 8 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Befuddlement* | Enchantment | — |\n| *Demiplane* | Conjuration | — |\n| *Dominate Monster* | Enchantment | C |\n| *Glibness* | Enchantment | — |\n| *Power Word Stun* | Enchantment | — |",
+      "status": "structured",
+      "by": [
+        "/data/tables/8"
+      ]
+    },
+    {
+      "text": "##### Level 9 Warlock Spells\n\n| **Spell** | **School** | **Special** |\n| *Astral Projection* | Necromancy | M |\n| *Foresight* | Divination | — |\n| *Gate* | Conjuration | C, M |\n| *Imprisonment* | Abjuration | M |\n| *Power Word Kill* | Enchantment | — |\n| *True Polymorph* | Transmutation | C |\n| *Weird* | Illusion | C |",
+      "status": "structured",
+      "by": [
+        "/data/tables/9"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/astral-projection",
+    "dnd5e/spell/bane",
+    "dnd5e/spell/banishment",
+    "dnd5e/spell/befuddlement",
+    "dnd5e/spell/blight",
+    "dnd5e/spell/charm-monster",
+    "dnd5e/spell/charm-person",
+    "dnd5e/spell/chill-touch",
+    "dnd5e/spell/circle-of-death",
+    "dnd5e/spell/comprehend-languages",
+    "dnd5e/spell/contact-other-plane",
+    "dnd5e/spell/counterspell",
+    "dnd5e/spell/create-undead",
+    "dnd5e/spell/darkness",
+    "dnd5e/spell/demiplane",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/dimension-door",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/dominate-monster",
+    "dnd5e/spell/dream",
+    "dnd5e/spell/eldritch-blast",
+    "dnd5e/spell/enthrall",
+    "dnd5e/spell/etherealness",
+    "dnd5e/spell/expeditious-retreat",
+    "dnd5e/spell/eyebite",
+    "dnd5e/spell/fear",
+    "dnd5e/spell/finger-of-death",
+    "dnd5e/spell/fly",
+    "dnd5e/spell/forcecage",
+    "dnd5e/spell/foresight",
+    "dnd5e/spell/gaseous-form",
+    "dnd5e/spell/gate",
+    "dnd5e/spell/glibness",
+    "dnd5e/spell/hallucinatory-terrain",
+    "dnd5e/spell/hellish-rebuke",
+    "dnd5e/spell/hex",
+    "dnd5e/spell/hideous-laughter",
+    "dnd5e/spell/hold-monster",
+    "dnd5e/spell/hold-person",
+    "dnd5e/spell/hypnotic-pattern",
+    "dnd5e/spell/illusory-script",
+    "dnd5e/spell/imprisonment",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/magic-circle",
+    "dnd5e/spell/major-image",
+    "dnd5e/spell/mind-spike",
+    "dnd5e/spell/minor-illusion",
+    "dnd5e/spell/mirror-image",
+    "dnd5e/spell/mislead",
+    "dnd5e/spell/misty-step",
+    "dnd5e/spell/planar-binding",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/poison-spray",
+    "dnd5e/spell/power-word-kill",
+    "dnd5e/spell/power-word-stun",
+    "dnd5e/spell/prestidigitation",
+    "dnd5e/spell/protection-from-evil-and-good",
+    "dnd5e/spell/ray-of-enfeeblement",
+    "dnd5e/spell/remove-curse",
+    "dnd5e/spell/scrying",
+    "dnd5e/spell/speak-with-animals",
+    "dnd5e/spell/spider-climb",
+    "dnd5e/spell/suggestion",
+    "dnd5e/spell/teleportation-circle",
+    "dnd5e/spell/tongues",
+    "dnd5e/spell/true-polymorph",
+    "dnd5e/spell/true-seeing",
+    "dnd5e/spell/true-strike",
+    "dnd5e/spell/unseen-servant",
+    "dnd5e/spell/vampiric-touch",
+    "dnd5e/spell/weird"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/stat-block-traits",
+  "kind": "rule",
+  "name": "Traits (Stat Block)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      256
+    ],
+    "section": "Monsters/Parts of a Stat Block/Traits",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L33"
+  },
+  "tier": 1,
+  "text": "A monster’s traits, if any, are features that are active at all times or in certain situations.",
+  "data": {
+    "rules": [
+      {
+        "id": "traits",
+        "active": "always or in certain situations"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "A monster’s traits, if any, are features that are active at all times or in certain situations.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

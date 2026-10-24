@@ -1,0 +1,84 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/tool/carpenters-tools",
+  "kind": "tool",
+  "name": "Carpenter’s Tools",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      93
+    ],
+    "section": "Equipment/Tools/Artisan’s Tools/Carpenter’s Tools",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 1,
+  "text": "| **Ability:** Strength | **Weight:** 6 lb. |\n\n**Utilize:** Seal or pry open a door or container (DC 20)\n\n**Craft:** Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch",
+  "facets": {
+    "category": "artisans-tools",
+    "ability": "str",
+    "cost_cp": 800
+  },
+  "data": {
+    "ability": "str",
+    "weight_lb": 6,
+    "utilize": [
+      {
+        "task": "Seal or pry open a door or container",
+        "dc": 20
+      }
+    ],
+    "craft": [
+      "Club",
+      "Greatclub",
+      "Quarterstaff",
+      "Barrel",
+      "Chest",
+      "Ladder",
+      "Pole",
+      "Portable Ram",
+      "Torch"
+    ],
+    "cost": {
+      "amount": 8,
+      "unit": "gp",
+      "cp": 800
+    },
+    "category": "Artisan’s Tools"
+  },
+  "coverage": [
+    {
+      "text": "| **Ability:** Strength | **Weight:** 6 lb. |",
+      "status": "structured",
+      "by": [
+        "/data/ability",
+        "/data/weight_lb",
+        "/data/cost"
+      ]
+    },
+    {
+      "text": "**Utilize:** Seal or pry open a door or container (DC 20)",
+      "status": "structured",
+      "by": [
+        "/data/utilize",
+        "dnd5e/action/utilize"
+      ]
+    },
+    {
+      "text": "**Craft:** Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch",
+      "status": "structured",
+      "by": [
+        "/data/craft"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/action/utilize"
+  ]
+}

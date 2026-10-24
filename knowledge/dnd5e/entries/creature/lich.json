@@ -1,0 +1,956 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/lich",
+  "kind": "creature",
+  "name": "Lich",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      304
+    ],
+    "section": "Monsters A–Z/Lich/Lich",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L36"
+  },
+  "tier": 3,
+  "text": "*Medium Undead (Wizard), Neutral Evil*\n\n| **AC** 20 | **Initiative** +17 (27) |\n\n**HP** 315 (42d8 + 126)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 11 | +0 | +0 | **Dex** 16 | +3 | +10 | **Con** 16 | +3 | +10 |\n| **Int** | 21 | +5 | +12 | **Wis** 14 | +2 | +9 | **Cha** 16 | +3 | +3 |\n\n**Skills** Arcana +19, History +12, Insight +9, Perception +9\n\n**Resistances** Cold, Lightning\n\n**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned\n\n**Gear** Component Pouch\n\n**Senses** Truesight 120 ft.; Passive Perception 19\n\n**Languages** All\n\n**CR** 21 (XP 33,000, or 41,000 in lair; PB +7)\n\n##### Traits\n\n***Legendary Resistance (4/Day, or 5/Day in Lair).*** If the lich fails a saving throw, it can choose to succeed instead.\n\n***Spirit Jar.*** If destroyed, the lich reforms in 1d10 days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the lich’s lair.\n\n##### Actions\n\n***Multiattack.*** The lich makes three attacks, using Eldritch Burst or Paralyzing Touch in any combination.\n\n***Eldritch Burst.*** *Melee or Ranged Attack Roll:* +12, reach 5 ft. or range 120 ft. *Hit:* 31 (4d12 + 5) Force damage.\n\n***Paralyzing Touch.*** *Melee Attack Roll:* +12, reach 5 ft. *Hit:* 15 (3d6 + 5) Cold damage, and the target has the Paralyzed condition until the start of the lich’s next turn.\n\n***Spellcasting.*** The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 20):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Dispel Magic*,\n\n*Fireball* (level 5 version), *Invisibility*, *Lightning Bolt* (level 5 version), *Mage Hand*, *Prestidigitation*\n\n**2/Day Each:** *Animate Dead*, *Dimension Door*, *Plane Shift*\n\n**1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power Word Kill*, *Scrying*\n\n##### Reactions\n\n***Protective Magic.*** The lich casts *Counterspell* or *Shield* in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.\n\n##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the lich can expend a use to take one of the following actions. The lich regains all expended uses at the start of each of its turns.*\n\n***Deathly Teleport.*** The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 (2d10) Necrotic damage.\n\n***Disrupt Life.*** *Constitution Saving Throw:* DC 20, each creature that isn’t an Undead in a 20-foot Emanation originating from the lich. *Failure:* 31 (9d6) Necrotic damage. *Success:* Half damage. *Failure or Success:* The lich can’t take this action again until the start of its next turn.\n\n***Frightening Gaze.*** The lich casts *Fear*, using the same spellcasting ability as Spellcasting. The lich can’t take this action again until the start of its next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "cr": "21"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral Evil",
+    "tags": [
+      "Wizard"
+    ],
+    "type_line": "Medium Undead (Wizard), Neutral Evil",
+    "ac": {
+      "value": 20,
+      "text": "20"
+    },
+    "initiative": {
+      "modifier": 17,
+      "score": 27,
+      "text": "+17 (27)"
+    },
+    "hp": {
+      "average": 315,
+      "formula": {
+        "op": "add",
+        "args": [
+          "42d8",
+          126
+        ]
+      },
+      "text": "315 (42d8 + 126)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 10
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 10
+      },
+      "int": {
+        "score": 21,
+        "mod": 5,
+        "save": 12
+      },
+      "wis": {
+        "score": 14,
+        "mod": 2,
+        "save": 9
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      }
+    },
+    "skills": {
+      "arcana": 19,
+      "history": 12,
+      "insight": 9,
+      "perception": 9,
+      "text": "Arcana +19, History +12, Insight +9, Perception +9"
+    },
+    "resistances": {
+      "damage_types": [
+        "cold",
+        "lightning"
+      ],
+      "text": "Cold, Lightning"
+    },
+    "immunities": {
+      "damage_types": [
+        "necrotic",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/paralyzed",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned"
+    },
+    "gear": {
+      "text": "Component Pouch"
+    },
+    "senses": {
+      "text": "Truesight 120 ft.; Passive Perception 19",
+      "truesight": 120,
+      "passive_perception": 19
+    },
+    "languages": {
+      "text": "All"
+    },
+    "cr": {
+      "value": "21",
+      "xp": 33000,
+      "proficiency_bonus": 7,
+      "text": "21 (XP 33,000, or 41,000 in lair; PB +7)",
+      "xp_in_lair": 41000
+    },
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "per_day": 4,
+        "per_day_in_lair": 5,
+        "text": "If the lich fails a saving throw, it can choose to succeed instead."
+      },
+      {
+        "name": "Spirit Jar",
+        "text": "If destroyed, the lich reforms in 1d10 days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the lich’s lair."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The lich makes three attacks, using Eldritch Burst or Paralyzing Touch in any combination."
+      },
+      {
+        "name": "Eldritch Burst",
+        "text": "*Melee or Ranged Attack Roll:* +12, reach 5 ft. or range 120 ft. *Hit:* 31 (4d12 + 5) Force damage."
+      },
+      {
+        "name": "Paralyzing Touch",
+        "text": "*Melee Attack Roll:* +12, reach 5 ft. *Hit:* 15 (3d6 + 5) Cold damage, and the target has the Paralyzed condition until the start of the lich’s next turn."
+      },
+      {
+        "name": "Spellcasting",
+        "text": "The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 20):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Dispel Magic*,\n\n*Fireball* (level 5 version), *Invisibility*, *Lightning Bolt* (level 5 version), *Mage Hand*, *Prestidigitation*\n\n**2/Day Each:** *Animate Dead*, *Dimension Door*, *Plane Shift*\n\n**1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power Word Kill*, *Scrying*"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Protective Magic",
+        "text": "The lich casts *Counterspell* or *Shield* in response to the spell’s trigger, using the same spellcasting ability as Spellcasting."
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Deathly Teleport",
+        "text": "The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 (2d10) Necrotic damage."
+      },
+      {
+        "name": "Disrupt Life",
+        "text": "*Constitution Saving Throw:* DC 20, each creature that isn’t an Undead in a 20-foot Emanation originating from the lich. *Failure:* 31 (9d6) Necrotic damage. *Success:* Half damage. *Failure or Success:* The lich can’t take this action again until the start of its next turn."
+      },
+      {
+        "name": "Frightening Gaze",
+        "text": "The lich casts *Fear*, using the same spellcasting ability as Spellcasting. The lich can’t take this action again until the start of its next turn."
+      }
+    ],
+    "legendary_actions_intro": {
+      "text": "Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the lich can expend a use to take one of the following actions. The lich regains all expended uses at the start of each of its turns.",
+      "uses": 3,
+      "uses_in_lair": 4
+    },
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [],
+        "text": "The lich makes three attacks, using Eldritch Burst or Paralyzing Touch in any combination."
+      },
+      {
+        "id": "spellcasting",
+        "text": "The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 20): At Will: Detect Magic, Detect Thoughts, Dispel Magic, Fireball (level 5 version), Invisibility, Lightning Bolt (level 5 version), Mage Hand, Prestidigitation 2/Day Each: Animate Dead, Dimension Door, Plane Shift 1/Day Each: Chain Lightning, Finger of Death, Power Word Kill, Scrying",
+        "ability": "int",
+        "save_dc": 20,
+        "no_material_components": false,
+        "spells": [
+          {
+            "spell": "dnd5e/spell/detect-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/detect-thoughts",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/dispel-magic",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/fireball",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/invisibility",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/lightning-bolt",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/mage-hand",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/prestidigitation",
+            "frequency": "At Will"
+          },
+          {
+            "spell": "dnd5e/spell/animate-dead",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/dimension-door",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/plane-shift",
+            "frequency": "2/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/chain-lightning",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/finger-of-death",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/power-word-kill",
+            "frequency": "1/Day Each"
+          },
+          {
+            "spell": "dnd5e/spell/scrying",
+            "frequency": "1/Day Each"
+          }
+        ]
+      },
+      {
+        "id": "once_per_round",
+        "until": "start of its next turn"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "fails_saving_throw"
+      },
+      "optional": true,
+      "then": [
+        {
+          "op": "auto_result",
+          "rolls": [
+            "saving_throw"
+          ],
+          "result": "success"
+        }
+      ],
+      "frequency": {
+        "count": 4,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Eldritch Burst",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 12,
+          "target": {
+            "kind": "creature",
+            "range": {
+              "kind": "distance",
+              "feet": 5
+            }
+          },
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "4d12",
+                  5
+                ]
+              },
+              "damage_type": "force"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Paralyzing Touch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 12,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "3d6",
+                  5
+                ]
+              },
+              "damage_type": "cold"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/paralyzed",
+              "duration": {
+                "kind": "until_event",
+                "until": {
+                  "event": "turn_start",
+                  "whose": "source",
+                  "which": "next"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-magic",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Detect Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/detect-thoughts",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Detect Thoughts"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dispel-magic",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Dispel Magic"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fireball",
+          "slot": "none",
+          "level": 5,
+          "save_dc": 20
+        }
+      ],
+      "name": "Fireball"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/invisibility",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Invisibility"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/lightning-bolt",
+          "slot": "none",
+          "level": 5,
+          "save_dc": 20
+        }
+      ],
+      "name": "Lightning Bolt"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/mage-hand",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Mage Hand"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/prestidigitation",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Prestidigitation"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/animate-dead",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Animate Dead",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/dimension-door",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Dimension Door",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/plane-shift",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Plane Shift",
+      "frequency": {
+        "count": 2,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/chain-lightning",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Chain Lightning",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/finger-of-death",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Finger of Death",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/power-word-kill",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Power Word Kill",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/scrying",
+          "slot": "none",
+          "save_dc": 20
+        }
+      ],
+      "name": "Scrying",
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "reaction",
+      "name": "Protective Magic",
+      "then": [
+        {
+          "op": "choice",
+          "id": "protective_magic",
+          "choose": 1,
+          "options": [
+            {
+              "id": "counterspell",
+              "label": "counterspell",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/counterspell",
+                  "slot": "none"
+                }
+              ]
+            },
+            {
+              "id": "shield",
+              "label": "shield",
+              "effects": [
+                {
+                  "op": "cast_spell",
+                  "spell": "dnd5e/spell/shield",
+                  "slot": "none"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Disrupt Life",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 20,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "emanation",
+              "size_feet": 20,
+              "origin": "self"
+            },
+            "text": "each creature that isn’t an Undead in a 20-foot Emanation originating from the lich"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "9d6",
+              "damage_type": "necrotic"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "legendary_action",
+      "name": "Frightening Gaze",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fear",
+          "slot": "none"
+        }
+      ],
+      "uses": {
+        "resource": "legendary_actions",
+        "amount": 1
+      }
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_spirit_jar",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Spirit Jar as written.",
+      "source_text": "If destroyed, the lich reforms in 1d10 days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the lich’s lair."
+    },
+    {
+      "id": "legendary_actions_deathly_teleport",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Deathly Teleport as written.",
+      "source_text": "The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 (2d10) Necrotic damage."
+    },
+    {
+      "id": "legendary_actions_disrupt_life_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Disrupt Life as written.",
+      "source_text": "Failure or Success: The lich can’t take this action again until the start of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Undead (Wizard), Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment",
+        "/data/tags"
+      ]
+    },
+    {
+      "text": "| **AC** 20 | **Initiative** +17 (27) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 315 (42d8 + 126)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 11 | +0 | +0 | **Dex** 16 | +3 | +10 | **Con** 16 | +3 | +10 |\n| **Int** | 21 | +5 | +12 | **Wis** 14 | +2 | +9 | **Cha** 16 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Arcana +19, History +12, Insight +9, Perception +9",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Resistances** Cold, Lightning",
+      "status": "structured",
+      "by": [
+        "/data/resistances"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Gear** Component Pouch",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 120 ft.; Passive Perception 19",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** All",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 21 (XP 33,000, or 41,000 in lair; PB +7)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Legendary Resistance (4/Day, or 5/Day in Lair).*** If the lich fails a saving throw, it can choose to succeed instead.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Spirit Jar.*** If destroyed, the lich reforms in 1d10 days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the lich’s lair.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/1",
+        "md:traits_spirit_jar"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The lich makes three attacks, using Eldritch Burst or Paralyzing Touch in any combination.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Eldritch Burst.*** *Melee or Ranged Attack Roll:* +12, reach 5 ft. or range 120 ft. *Hit:* 31 (4d12 + 5) Force damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Paralyzing Touch.*** *Melee Attack Roll:* +12, reach 5 ft. *Hit:* 15 (3d6 + 5) Cold damage, and the target has the Paralyzed condition until the start of the lich’s next turn.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Spellcasting.*** The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC 20):\n\n**At Will:** *Detect Magic*, *Detect Thoughts*, *Dispel Magic*,\n\n*Fireball* (level 5 version), *Invisibility*, *Lightning Bolt* (level 5 version), *Mage Hand*, *Prestidigitation*\n\n**2/Day Each:** *Animate Dead*, *Dimension Door*, *Plane Shift*\n\n**1/Day Each:** *Chain Lightning*, *Finger of Death*, *Power Word Kill*, *Scrying*",
+      "status": "structured",
+      "by": [
+        "/data/actions/3",
+        "/data/rules/1",
+        "/effects/3",
+        "/effects/4",
+        "/effects/5",
+        "/effects/6",
+        "/effects/7",
+        "/effects/8",
+        "/effects/9",
+        "/effects/10",
+        "/effects/11",
+        "/effects/12",
+        "/effects/13",
+        "/effects/14",
+        "/effects/15",
+        "/effects/16",
+        "/effects/17"
+      ]
+    },
+    {
+      "text": "##### Reactions",
+      "status": "structured",
+      "by": [
+        "/data/reactions"
+      ]
+    },
+    {
+      "text": "***Protective Magic.*** The lich casts *Counterspell* or *Shield* in response to the spell’s trigger, using the same spellcasting ability as Spellcasting.",
+      "status": "structured",
+      "by": [
+        "/data/reactions/0",
+        "/effects/18"
+      ]
+    },
+    {
+      "text": "##### Legendary Actions\n\n*Legendary Action Uses: 3 (4 in Lair). Immediately after another creature’s turn, the lich can expend a use to take one of the following actions. The lich regains all expended uses at the start of each of its turns.*",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions",
+        "/data/legendary_actions_intro"
+      ]
+    },
+    {
+      "text": "***Deathly Teleport.*** The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 (2d10) Necrotic damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/0",
+        "md:legendary_actions_deathly_teleport"
+      ]
+    },
+    {
+      "text": "***Disrupt Life.*** *Constitution Saving Throw:* DC 20, each creature that isn’t an Undead in a 20-foot Emanation originating from the lich. *Failure:* 31 (9d6) Necrotic damage. *Success:* Half damage. *Failure or Success:* The lich can’t take this action again until the start of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/legendary_actions/1",
+        "/effects/19",
+        "md:legendary_actions_disrupt_life_rider"
+      ]
+    },
+    {
+      "text": "***Frightening Gaze.*** The lich casts *Fear*, using the same spellcasting ability as Spellcasting. The lich can’t take this action again until the start of its next turn.",
+      "status": "structured",
+      "by": [
+        "/data/legendary_actions/2",
+        "/effects/20",
+        "/data/rules/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/paralyzed",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/animate-dead",
+    "dnd5e/spell/chain-lightning",
+    "dnd5e/spell/counterspell",
+    "dnd5e/spell/detect-magic",
+    "dnd5e/spell/detect-thoughts",
+    "dnd5e/spell/dimension-door",
+    "dnd5e/spell/dispel-magic",
+    "dnd5e/spell/fear",
+    "dnd5e/spell/finger-of-death",
+    "dnd5e/spell/fireball",
+    "dnd5e/spell/invisibility",
+    "dnd5e/spell/lightning-bolt",
+    "dnd5e/spell/mage-hand",
+    "dnd5e/spell/plane-shift",
+    "dnd5e/spell/power-word-kill",
+    "dnd5e/spell/prestidigitation",
+    "dnd5e/spell/scrying",
+    "dnd5e/spell/shield"
+  ]
+}

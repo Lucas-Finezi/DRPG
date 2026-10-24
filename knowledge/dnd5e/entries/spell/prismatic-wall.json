@@ -1,0 +1,423 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/prismatic-wall",
+  "kind": "spell",
+  "name": "Prismatic Wall",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      155
+    ],
+    "section": "Spells/Spell Descriptions/Prismatic Wall",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L26"
+  },
+  "tier": 2,
+  "text": "*Level 9 Abjuration (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** 10 minutes\n\nA shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point within range. Alternatively, you shape the wall into a globe up to 30 feet in diameter centered on a point within range. The wall lasts for the duration. If you position the wall in a space occupied by a creature, the spell ends instantly without effect.\n\nThe wall sheds Bright Light within 100 feet and Dim Light for an additional 100 feet. You and creatures you designate when you cast the spell can pass through and be near the wall without harm. If another creature that can see the wall moves within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or have the Blinded condition for 1 minute.\n\nThe wall consists of seven layers, each with a different color. When a creature reaches into or passes through the wall, it does so one layer at a time through all the layers. Each layer forces the creature to make a Dexterity saving throw or be affected by that layer’s properties as described in the Prismatic Layers table.\n\nThe wall, which has AC 10, can be destroyed one layer at a time, in order from red to violet, by means specific to each layer. If a layer is destroyed, it is gone for the duration. *Antimagic Field* has no effect on the wall, and *Dispel Magic* can affect only the violet layer.\n\n##### Prismatic Layers\n\n| **Order** | **Effects** |\n| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful Save:* Half as much damage. *Additional Effects*: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage. |\n| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Successful Save:* Half as much damage. *Additional Effects:* Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by *Gust of Wind*). |\n| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 60 Force damage. |\n| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Successful Save:* Half as much damage. *Additional Effects:* A *Passwall* spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer. |\n| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 25 Fire damage. |\n| 6 | **Indigo.** *Failed Save:* The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the *Greater Restoration* spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. *Additional Effects:* Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the *Daylight* spell. |\n| 7 | **Violet.** *Failed Save:* The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (GM’s choice). *Additional Effects:* This layer is destroyed by *Dispel Magic*. |",
+  "facets": {
+    "level": 9,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 60
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "10 minutes",
+      "kind": "minutes",
+      "amount": 10
+    },
+    "rules": [
+      {
+        "id": "wall",
+        "shapes": [
+          {
+            "length_feet": 90,
+            "height_feet": 30,
+            "thickness_inches": 1
+          },
+          {
+            "globe_diameter_feet": 30
+          }
+        ],
+        "opaque": true,
+        "fails_if_in_occupied_space": true
+      },
+      {
+        "id": "light",
+        "light": {
+          "bright_feet": 100,
+          "dim_feet": 100,
+          "rules": [
+            "dnd5e/rule/bright-light",
+            "dnd5e/rule/dim-light"
+          ]
+        }
+      },
+      {
+        "id": "destruction",
+        "ac": 10,
+        "order": "red_to_violet",
+        "antimagic_field": false,
+        "dispel_magic": "violet_only"
+      }
+    ],
+    "tables": [
+      {
+        "id": "prismatic_layers",
+        "caption": "Prismatic Layers",
+        "columns": [
+          "Order",
+          "Effects"
+        ],
+        "rows": [
+          [
+            "1",
+            "Red. Failed Save: 12d6 Fire damage. Successful Save: Half as much damage. Additional Effects: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage."
+          ],
+          [
+            "2",
+            "Orange. Failed Save: 12d6 Acid damage. Successful Save: Half as much damage. Additional Effects: Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by Gust of Wind)."
+          ],
+          [
+            "3",
+            "Yellow. Failed Save: 12d6 Lightning damage. Successful Save: Half as much damage. Additional Effects: The layer is destroyed if it takes at least 60 Force damage."
+          ],
+          [
+            "4",
+            "Green. Failed Save: 12d6 Poison damage. Successful Save: Half as much damage. Additional Effects: A Passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
+          ],
+          [
+            "5",
+            "Blue. Failed Save: 12d6 Cold damage. Successful Save: Half as much damage. Additional Effects: The layer is destroyed if it takes at least 25 Fire damage."
+          ],
+          [
+            "6",
+            "Indigo. Failed Save: The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the Greater Restoration spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. Additional Effects: Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the Daylight spell."
+          ],
+          [
+            "7",
+            "Violet. Failed Save: The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (GM’s choice). Additional Effects: This layer is destroyed by Dispel Magic."
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "enters_or_starts_turn_in_area"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10
+      },
+      "condition": {
+        "pred": "can_see",
+        "args": {
+          "target": "effect"
+        }
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": {
+            "var": "spell_save_dc"
+          },
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/blinded",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      ],
+      "note": "Within 20 feet; you and designated creatures are unaffected."
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "passes_through_effect"
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10
+      },
+      "then": [
+        {
+          "op": "repeat",
+          "times": 7,
+          "then": [
+            {
+              "op": "choice",
+              "id": "layer",
+              "choose": 1,
+              "chooser": "gm",
+              "options": [
+                {
+                  "id": "red",
+                  "label": "Red",
+                  "roll": "1",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "damage",
+                          "amount": "12d6",
+                          "damage_type": "fire"
+                        }
+                      ],
+                      "half_on_success": true
+                    }
+                  ]
+                },
+                {
+                  "id": "orange",
+                  "label": "Orange",
+                  "roll": "2",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "damage",
+                          "amount": "12d6",
+                          "damage_type": "acid"
+                        }
+                      ],
+                      "half_on_success": true
+                    }
+                  ]
+                },
+                {
+                  "id": "yellow",
+                  "label": "Yellow",
+                  "roll": "3",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "damage",
+                          "amount": "12d6",
+                          "damage_type": "lightning"
+                        }
+                      ],
+                      "half_on_success": true
+                    }
+                  ]
+                },
+                {
+                  "id": "green",
+                  "label": "Green",
+                  "roll": "4",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "damage",
+                          "amount": "12d6",
+                          "damage_type": "poison"
+                        }
+                      ],
+                      "half_on_success": true
+                    }
+                  ]
+                },
+                {
+                  "id": "blue",
+                  "label": "Blue",
+                  "roll": "5",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "damage",
+                          "amount": "12d6",
+                          "damage_type": "cold"
+                        }
+                      ],
+                      "half_on_success": true
+                    }
+                  ]
+                },
+                {
+                  "id": "indigo",
+                  "label": "Indigo",
+                  "roll": "6",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "apply_condition",
+                          "condition": "dnd5e/condition/restrained",
+                          "note": "Constitution save at the end of each of its turns: three successes end it, three failures: Petrified until freed by an effect like Greater Restoration."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "violet",
+                  "label": "Violet",
+                  "roll": "7",
+                  "effects": [
+                    {
+                      "op": "save",
+                      "ability": "dex",
+                      "dc": {
+                        "var": "spell_save_dc"
+                      },
+                      "target": {
+                        "kind": "inherit"
+                      },
+                      "on_fail": [
+                        {
+                          "op": "apply_condition",
+                          "condition": "dnd5e/condition/blinded",
+                          "note": "Wisdom save at the start of your next turn: success ends it; failure ends it and teleports the creature to another plane (GM's choice)."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "note": "One layer at a time, in order."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 9 Abjuration (Bard, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** 60 feet\n\n**Components:** V, S\n\n**Duration:** 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point within range. Alternatively, you shape the wall into a globe up to 30 feet in diameter centered on a point within range. The wall lasts for the duration. If you position the wall in a space occupied by a creature, the spell ends instantly without effect.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "The wall sheds Bright Light within 100 feet and Dim Light for an additional 100 feet. You and creatures you designate when you cast the spell can pass through and be near the wall without harm. If another creature that can see the wall moves within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or have the Blinded condition for 1 minute.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "The wall consists of seven layers, each with a different color. When a creature reaches into or passes through the wall, it does so one layer at a time through all the layers. Each layer forces the creature to make a Dexterity saving throw or be affected by that layer’s properties as described in the Prismatic Layers table.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The wall, which has AC 10, can be destroyed one layer at a time, in order from red to violet, by means specific to each layer. If a layer is destroyed, it is gone for the duration. *Antimagic Field* has no effect on the wall, and *Dispel Magic* can affect only the violet layer.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2"
+      ]
+    },
+    {
+      "text": "##### Prismatic Layers\n\n| **Order** | **Effects** |\n| 1 | **Red.** *Failed Save:* 12d6 Fire damage. *Successful Save:* Half as much damage. *Additional Effects*: Nonmagical ranged attacks can’t pass through this layer, which is destroyed if it takes at least 25 Cold damage. |\n| 2 | **Orange.** *Failed Save:* 12d6 Acid damage. *Successful Save:* Half as much damage. *Additional Effects:* Magical ranged attacks can’t pass through this layer, which is destroyed by a strong wind (such as the one created by *Gust of Wind*). |\n| 3 | **Yellow.** *Failed Save:* 12d6 Lightning damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 60 Force damage. |\n| 4 | **Green.** *Failed Save:* 12d6 Poison damage. *Successful Save:* Half as much damage. *Additional Effects:* A *Passwall* spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer. |\n| 5 | **Blue.** *Failed Save:* 12d6 Cold damage. *Successful Save:* Half as much damage. *Additional Effects:* The layer is destroyed if it takes at least 25 Fire damage. |\n| 6 | **Indigo.** *Failed Save:* The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the *Greater Restoration* spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind. *Additional Effects:* Spells can’t be cast through this layer, which is destroyed by Bright Light shed by the *Daylight* spell. |\n| 7 | **Violet.** *Failed Save:* The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (GM’s choice). *Additional Effects:* This layer is destroyed by *Dispel Magic*. |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/restrained",
+    "dnd5e/rule/bright-light",
+    "dnd5e/rule/dim-light"
+  ]
+}

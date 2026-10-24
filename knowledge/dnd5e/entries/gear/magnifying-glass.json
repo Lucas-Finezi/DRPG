@@ -1,0 +1,67 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/gear/magnifying-glass",
+  "kind": "gear",
+  "name": "Magnifying Glass",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      98
+    ],
+    "section": "Equipment/Adventuring Gear/Magnifying Glass",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L30"
+  },
+  "tier": 2,
+  "text": "A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.",
+  "facets": {
+    "cost_cp": 10000
+  },
+  "data": {
+    "cost": {
+      "amount": 100,
+      "unit": "gp",
+      "cp": 10000
+    },
+    "weight_lb": null,
+    "rules": [
+      {
+        "id": "fire",
+        "requires": [
+          "sunlight_bright_light",
+          "tinder"
+        ],
+        "minutes": 5
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "ability_check"
+      ],
+      "when": {
+        "pred": "appraising_detailed_item"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.",
+      "status": "structured",
+      "by": [
+        "/data/cost",
+        "/effects/0",
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

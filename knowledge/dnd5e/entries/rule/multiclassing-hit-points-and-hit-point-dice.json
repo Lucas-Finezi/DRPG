@@ -1,0 +1,58 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/multiclassing-hit-points-and-hit-point-dice",
+  "kind": "rule",
+  "name": "Hit Points and Hit Point Dice",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      25
+    ],
+    "section": "Character Creation/Multiclassing/Hit Points and Hit Point Dice",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L16"
+  },
+  "tier": 1,
+  "text": "You gain the Hit Points from your new class as described for levels after 1. You gain the level 1 Hit Points for a class only when your total character level is 1.\n\nAdd together the Hit Dice granted by all your classes to form your pool of Hit Dice. If these dice are the same die type, you can pool them together. For example, both the Fighter and the Paladin have a d10 Hit Die, so if you are a level 5 Fighter / level 5 Paladin, you have ten d10 Hit Dice. If your classes give you Hit Dice of different types, track them separately. If you are a level 5 Cleric / level 5 Paladin, for example, you have five d8 Hit Dice and five d10 Hit Dice.",
+  "data": {
+    "rules": [
+      {
+        "id": "hit_points",
+        "new_class_hp": "levels_after_1",
+        "level_1_hp_only_when_total_level_is": 1
+      },
+      {
+        "id": "hit_dice",
+        "pool": "sum_of_all_classes",
+        "same_die_type": "pooled",
+        "different_die_types": "tracked_separately"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "You gain the Hit Points from your new class as described for levels after 1. You gain the level 1 Hit Points for a class only when your total character level is 1.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Add together the Hit Dice granted by all your classes to form your pool of Hit Dice. If these dice are the same die type, you can pool them together. For example, both the Fighter and the Paladin have a d10 Hit Die, so if you are a level 5 Fighter / level 5 Paladin, you have ten d10 Hit Dice. If your classes give you Hit Dice of different types, track them separately. If you are a level 5 Cleric / level 5 Paladin, for example, you have five d8 Hit Dice and five d10 Hit Dice.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1",
+        "dnd5e/rule/hit-point-dice"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/hit-point-dice"
+  ]
+}

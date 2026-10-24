@@ -1,0 +1,180 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/protection-from-evil-and-good",
+  "kind": "spell",
+  "name": "Protection from Evil and Good",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      157
+    ],
+    "section": "Spells/Spell Descriptions/Protection from Evil and Good",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L18"
+  },
+  "tier": 2,
+  "text": "*Level 1 Abjuration (Cleric, Druid, Paladin, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a flask of Holy Water worth 25+ GP, which the spell consumes)\n\n**Duration:** Concentration up to 10 minutes\n\nUntil the spell ends, one willing creature you touch is protected against creatures that are Aberrations, Celestials, Elementals, Fey, Fiends, or Undead. The protection grants several benefits. Creatures of those types have Disadvantage on attack rolls against the target. The target also can’t be possessed by or gain the Charmed or Frightened conditions from them. If the target is already possessed, Charmed, or Frightened by such a creature, the target has Advantage on any new saving throw against the relevant effect.",
+  "facets": {
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "touch"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a flask of Holy Water worth 25+ GP, which the spell consumes",
+      "material_cost_gp": 25,
+      "material_consumed": true
+    },
+    "duration": {
+      "text": "Concentration up to 10 minutes",
+      "kind": "minutes",
+      "amount": 10,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        },
+        "filter": {
+          "willing": true
+        }
+      },
+      "when": {
+        "pred": "creature_is",
+        "args": {
+          "who": "attacker",
+          "types": [
+            "aberration",
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+          ]
+        }
+      },
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      }
+    },
+    {
+      "op": "defense",
+      "kind": "immunity",
+      "conditions": [
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/frightened"
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "when": {
+        "pred": "creature_is",
+        "args": {
+          "who": "source",
+          "types": [
+            "aberration",
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+          ]
+        }
+      },
+      "note": "Also can't be possessed by them."
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "saving_throw"
+      ],
+      "duration": {
+        "kind": "minutes",
+        "amount": 10,
+        "concentration": true,
+        "up_to": true
+      },
+      "when": {
+        "pred": "save_against",
+        "args": {
+          "types": [
+            "aberration",
+            "celestial",
+            "elemental",
+            "fey",
+            "fiend",
+            "undead"
+          ]
+        }
+      },
+      "note": "New saves against possession, Charmed or Frightened already caused by such a creature."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 1 Abjuration (Cleric, Druid, Paladin, Warlock,* *Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Touch\n\n**Components:** V, S, M (a flask of Holy Water worth 25+ GP, which the spell consumes)\n\n**Duration:** Concentration up to 10 minutes",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "Until the spell ends, one willing creature you touch is protected against creatures that are Aberrations, Celestials, Elementals, Fey, Fiends, or Undead. The protection grants several benefits. Creatures of those types have Disadvantage on attack rolls against the target. The target also can’t be possessed by or gain the Charmed or Frightened conditions from them. If the target is already possessed, Charmed, or Frightened by such a creature, the target has Advantage on any new saving throw against the relevant effect.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1",
+        "/effects/2"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/frightened"
+  ]
+}

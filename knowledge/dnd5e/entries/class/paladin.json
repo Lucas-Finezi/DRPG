@@ -1,0 +1,725 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/class/paladin",
+  "kind": "class",
+  "name": "Paladin",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      53
+    ],
+    "section": "Classes/Paladin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L12"
+  },
+  "tier": 2,
+  "text": "##### Core Paladin Traits\n\n| **Primary Ability** | Strength and Charisma |\n| **Hit Point Die** | D10 per Paladin level |\n| **Saving Throw Proficiencies** | Wisdom and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion |\n| **Weapon Proficiencies** | Simple and Martial weapons |\n| **Armor Training** | Light, Medium, and Heavy armor and Shields |\n| **Starting Equipment** | *Choose A or B:* (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP |\n\n### Becoming a Paladin …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Paladin Traits table.\n\n- Gain the Paladin’s level 1 features, which are listed in the Paladin Features table.\n\n#### As a Multiclass Character\n\n- Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.\n\n- Gain the Paladin’s level 1 features, which are listed in the Paladin Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.\n\n### Paladin Class Features\n\nAs a Paladin, you gain the following class features when you reach the specified Paladin levels. These features are listed in the Paladin Features table.\n\n##### Paladin Features\n\n**—Spell Slots per Spell Level—**\n\n| **Proficiency** | **Channel** | **Prepared** |\n| **Level** | **Class Features** | **1** | **2** | **3** | **4** | **5** |\n| **Bonus** | **Divinity** | **Spells** |\n| 1 | +2 | Lay On Hands, Spellcasting, Weapon Mastery | — | 2 | 2 | — | — | — | — |\n| 2 | +2 | Fighting Style, Paladin’s Smite | — | 3 | 2 | — | — | — | — |\n| 3 | +2 | Channel Divinity, Paladin Subclass | 2 | 4 | 3 | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | 2 | 5 | 3 | — | — | — | — |\n| 5 | +3 | Extra Attack, Faithful Steed | 2 | 6 | 4 | 2 | — | — | — |\n| 6 | +3 | Aura of Protection | 2 | 6 | 4 | 2 | — | — | — |\n| 7 | +3 | Subclass feature | 2 | 7 | 4 | 3 | — | — | — |\n| 8 | +3 | Ability Score Improvement | 2 | 7 | 4 | 3 | — | — | — |\n| 9 | +4 | Abjure Foes | 2 | 9 | 4 | 3 | 2 | — | — |\n| 10 | +4 | Aura of Courage | 2 | 9 | 4 | 3 | 2 | — | — |\n| 11 | +4 | Radiant Strikes | 3 | 10 | 4 | 3 | 3 | — | — |\n| 12 | +4 | Ability Score Improvement | 3 | 10 | 4 | 3 | 3 | — | — |\n| 13 | +5 | — | 3 | 11 | 4 | 3 | 3 | 1 | — |\n| 14 | +5 | Restoring Touch | 3 | 11 | 4 | 3 | 3 | 1 | — |\n| 15 | +5 | Subclass feature | 3 | 12 | 4 | 3 | 3 | 2 | — |\n| 16 | +5 | Ability Score Improvement | 3 | 12 | 4 | 3 | 3 | 2 | — |\n| 17 | +6 | — | 3 | 14 | 4 | 3 | 3 | 3 | 1 |\n| 18 | +6 | Aura Expansion | 3 | 14 | 4 | 3 | 3 | 3 | 1 |\n| 19 | +6 | Epic Boon | 3 | 15 | 4 | 3 | 3 | 3 | 2 |\n| 20 | +6 | Subclass feature | 3 | 15 | 4 | 3 | 3 | 3 | 2 |",
+  "facets": {
+    "hit_die": "d10",
+    "primary_ability": [
+      "str",
+      "cha"
+    ],
+    "saving_throws": [
+      "wis",
+      "cha"
+    ]
+  },
+  "data": {
+    "core_traits": {
+      "Primary Ability": "Strength and Charisma",
+      "Hit Point Die": "D10 per Paladin level",
+      "Saving Throw Proficiencies": "Wisdom and Charisma",
+      "Skill Proficiencies": "Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion",
+      "Weapon Proficiencies": "Simple and Martial weapons",
+      "Armor Training": "Light, Medium, and Heavy armor and Shields",
+      "Starting Equipment": "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP"
+    },
+    "hit_die": "d10",
+    "hit_points": {
+      "level_1": {
+        "op": "add",
+        "args": [
+          10,
+          {
+            "var": "ability_mod.con"
+          }
+        ]
+      },
+      "per_level": {
+        "roll": {
+          "op": "max",
+          "args": [
+            1,
+            {
+              "op": "add",
+              "args": [
+                "1d10",
+                {
+                  "var": "ability_mod.con"
+                }
+              ]
+            }
+          ]
+        },
+        "fixed": {
+          "op": "add",
+          "args": [
+            6,
+            {
+              "var": "ability_mod.con"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "dnd5e/rule/character-creation-step-5-character-creation-details#/data/tables/0",
+        "dnd5e/rule/level-advancement#/data/tables/0",
+        "system.json#/levels/rules/1"
+      ]
+    },
+    "starting_equipment": [
+      {
+        "id": "a",
+        "items": [
+          {
+            "name": "Chain Mail",
+            "quantity": 1,
+            "ref": "dnd5e/armor/chain-mail"
+          },
+          {
+            "name": "Shield",
+            "quantity": 1,
+            "ref": "dnd5e/armor/shield"
+          },
+          {
+            "name": "Longsword",
+            "quantity": 1,
+            "ref": "dnd5e/weapon/longsword"
+          },
+          {
+            "name": "Javelins",
+            "quantity": 6,
+            "ref": "dnd5e/weapon/javelin"
+          },
+          {
+            "name": "Holy Symbol",
+            "quantity": 1,
+            "ref": "dnd5e/gear/holy-symbol"
+          },
+          {
+            "name": "Priest’s Pack",
+            "quantity": 1,
+            "ref": "dnd5e/gear/priests-pack"
+          }
+        ],
+        "gp": 9
+      },
+      {
+        "id": "b",
+        "items": [],
+        "gp": 150
+      }
+    ],
+    "features_table": {
+      "id": "paladin_features",
+      "caption": "Paladin Features",
+      "columns": [
+        "Level",
+        "Proficiency Bonus",
+        "Class Features",
+        "Channel Divinity",
+        "Prepared Spells",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "levels": {
+      "1": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-lay-on-hands"
+          },
+          {
+            "ref": "dnd5e/feature/paladin-spellcasting"
+          },
+          {
+            "ref": "dnd5e/feature/paladin-weapon-mastery"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Channel Divinity": "—",
+          "Prepared Spells": "2",
+          "1": "2",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "2": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-fighting-style"
+          },
+          {
+            "ref": "dnd5e/feature/paladin-paladins-smite"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Channel Divinity": "—",
+          "Prepared Spells": "3",
+          "1": "2",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "3": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-channel-divinity"
+          },
+          {
+            "ref": "dnd5e/feature/paladin-paladin-subclass"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Channel Divinity": "2",
+          "Prepared Spells": "4",
+          "1": "3",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "4": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-ability-score-improvement"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+2",
+          "Channel Divinity": "2",
+          "Prepared Spells": "5",
+          "1": "3",
+          "2": "—",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "5": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-extra-attack"
+          },
+          {
+            "ref": "dnd5e/feature/paladin-faithful-steed"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Channel Divinity": "2",
+          "Prepared Spells": "6",
+          "1": "4",
+          "2": "2",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "6": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-aura-of-protection"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Channel Divinity": "2",
+          "Prepared Spells": "6",
+          "1": "4",
+          "2": "2",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "7": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/oath-of-devotion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Channel Divinity": "2",
+          "Prepared Spells": "7",
+          "1": "4",
+          "2": "3",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "8": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+3",
+          "Channel Divinity": "2",
+          "Prepared Spells": "7",
+          "1": "4",
+          "2": "3",
+          "3": "—",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "9": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-abjure-foes"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Channel Divinity": "2",
+          "Prepared Spells": "9",
+          "1": "4",
+          "2": "3",
+          "3": "2",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "10": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-aura-of-courage"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Channel Divinity": "2",
+          "Prepared Spells": "9",
+          "1": "4",
+          "2": "3",
+          "3": "2",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "11": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-radiant-strikes"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Channel Divinity": "3",
+          "Prepared Spells": "10",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "12": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+4",
+          "Channel Divinity": "3",
+          "Prepared Spells": "10",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "—",
+          "5": "—"
+        }
+      },
+      "13": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Channel Divinity": "3",
+          "Prepared Spells": "11",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "1",
+          "5": "—"
+        }
+      },
+      "14": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-restoring-touch"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Channel Divinity": "3",
+          "Prepared Spells": "11",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "1",
+          "5": "—"
+        }
+      },
+      "15": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/oath-of-devotion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Channel Divinity": "3",
+          "Prepared Spells": "12",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "2",
+          "5": "—"
+        }
+      },
+      "16": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-ability-score-improvement",
+            "again": true
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+5",
+          "Channel Divinity": "3",
+          "Prepared Spells": "12",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "2",
+          "5": "—"
+        }
+      },
+      "17": {
+        "features": [],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Channel Divinity": "3",
+          "Prepared Spells": "14",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "1"
+        }
+      },
+      "18": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-aura-expansion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Channel Divinity": "3",
+          "Prepared Spells": "14",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "1"
+        }
+      },
+      "19": {
+        "features": [
+          {
+            "ref": "dnd5e/feature/paladin-epic-boon"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Channel Divinity": "3",
+          "Prepared Spells": "15",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2"
+        }
+      },
+      "20": {
+        "features": [
+          {
+            "subclass_feature": true,
+            "subclass_of": "dnd5e/subclass/oath-of-devotion"
+          }
+        ],
+        "columns": {
+          "Proficiency Bonus": "+6",
+          "Channel Divinity": "3",
+          "Prepared Spells": "15",
+          "1": "4",
+          "2": "3",
+          "3": "3",
+          "4": "3",
+          "5": "2"
+        }
+      }
+    },
+    "subclass": "dnd5e/subclass/oath-of-devotion",
+    "rules": [
+      {
+        "id": "core_traits",
+        "primary_ability": [
+          "str",
+          "cha"
+        ],
+        "primary_ability_mode": "all",
+        "hit_die": "d10",
+        "saving_throws": [
+          "wis",
+          "cha"
+        ],
+        "skills": {
+          "choose": 2,
+          "from": [
+            "athletics",
+            "insight",
+            "intimidation",
+            "medicine",
+            "persuasion",
+            "religion"
+          ]
+        },
+        "weapons": "Simple and Martial weapons",
+        "armor_training": "Light, Medium, and Heavy armor and Shields"
+      },
+      {
+        "id": "level_1",
+        "gain": [
+          "core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "multiclass",
+        "gain_text": "Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+        "gain": [
+          "listed_core_traits",
+          "level_1_features"
+        ]
+      },
+      {
+        "id": "features_by_level",
+        "table": "paladin_features"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "proficiency",
+      "category": "saving_throw",
+      "items": [
+        "wis",
+        "cha"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "skill",
+      "choose": 2,
+      "from": [
+        "athletics",
+        "insight",
+        "intimidation",
+        "medicine",
+        "persuasion",
+        "religion"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "weapon",
+      "items": [
+        "simple",
+        "martial"
+      ]
+    },
+    {
+      "op": "proficiency",
+      "category": "armor",
+      "items": [
+        "light",
+        "medium",
+        "heavy",
+        "shield"
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "starting_equipment",
+      "choose": 1,
+      "options": [
+        {
+          "id": "a",
+          "label": "Option (A)",
+          "effects": [
+            {
+              "op": "grant",
+              "items": [
+                {
+                  "name": "Chain Mail",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/chain-mail"
+                },
+                {
+                  "name": "Shield",
+                  "quantity": 1,
+                  "ref": "dnd5e/armor/shield"
+                },
+                {
+                  "name": "Longsword",
+                  "quantity": 1,
+                  "ref": "dnd5e/weapon/longsword"
+                },
+                {
+                  "name": "Javelins",
+                  "quantity": 6,
+                  "ref": "dnd5e/weapon/javelin"
+                },
+                {
+                  "name": "Holy Symbol",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/holy-symbol"
+                },
+                {
+                  "name": "Priest’s Pack",
+                  "quantity": 1,
+                  "ref": "dnd5e/gear/priests-pack"
+                }
+              ],
+              "gp": 9
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Option (B)",
+          "effects": [
+            {
+              "op": "grant",
+              "gp": 150
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "##### Core Paladin Traits\n\n| **Primary Ability** | Strength and Charisma |\n| **Hit Point Die** | D10 per Paladin level |\n| **Saving Throw Proficiencies** | Wisdom and Charisma |\n| **Skill Proficiencies** | *Choose 2:* Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion |\n| **Weapon Proficiencies** | Simple and Martial weapons |\n| **Armor Training** | Light, Medium, and Heavy armor and Shields |",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0",
+        "/effects/1",
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "| **Starting Equipment** | *Choose A or B:* (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP |",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "### Becoming a Paladin …\n\n#### As a Level 1 Character\n\n- Gain all the traits in the Core Paladin Traits table.\n\n- Gain the Paladin’s level 1 features, which are listed in the Paladin Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "#### As a Multiclass Character\n\n- Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.\n\n- Gain the Paladin’s level 1 features, which are listed in the Paladin Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots.",
+      "status": "structured",
+      "by": [
+        "/data/rules/2",
+        "dnd5e/rule/multiclassing"
+      ]
+    },
+    {
+      "text": "### Paladin Class Features\n\nAs a Paladin, you gain the following class features when you reach the specified Paladin levels. These features are listed in the Paladin Features table.",
+      "status": "structured",
+      "by": [
+        "/data/rules/3"
+      ]
+    },
+    {
+      "text": "##### Paladin Features\n\n**—Spell Slots per Spell Level—**\n\n| **Proficiency** | **Channel** | **Prepared** |\n| **Level** | **Class Features** | **1** | **2** | **3** | **4** | **5** |\n| **Bonus** | **Divinity** | **Spells** |\n| 1 | +2 | Lay On Hands, Spellcasting, Weapon Mastery | — | 2 | 2 | — | — | — | — |\n| 2 | +2 | Fighting Style, Paladin’s Smite | — | 3 | 2 | — | — | — | — |\n| 3 | +2 | Channel Divinity, Paladin Subclass | 2 | 4 | 3 | — | — | — | — |\n| 4 | +2 | Ability Score Improvement | 2 | 5 | 3 | — | — | — | — |\n| 5 | +3 | Extra Attack, Faithful Steed | 2 | 6 | 4 | 2 | — | — | — |\n| 6 | +3 | Aura of Protection | 2 | 6 | 4 | 2 | — | — | — |\n| 7 | +3 | Subclass feature | 2 | 7 | 4 | 3 | — | — | — |\n| 8 | +3 | Ability Score Improvement | 2 | 7 | 4 | 3 | — | — | — |\n| 9 | +4 | Abjure Foes | 2 | 9 | 4 | 3 | 2 | — | — |\n| 10 | +4 | Aura of Courage | 2 | 9 | 4 | 3 | 2 | — | — |\n| 11 | +4 | Radiant Strikes | 3 | 10 | 4 | 3 | 3 | — | — |\n| 12 | +4 | Ability Score Improvement | 3 | 10 | 4 | 3 | 3 | — | — |\n| 13 | +5 | — | 3 | 11 | 4 | 3 | 3 | 1 | — |\n| 14 | +5 | Restoring Touch | 3 | 11 | 4 | 3 | 3 | 1 | — |\n| 15 | +5 | Subclass feature | 3 | 12 | 4 | 3 | 3 | 2 | — |\n| 16 | +5 | Ability Score Improvement | 3 | 12 | 4 | 3 | 3 | 2 | — |\n| 17 | +6 | — | 3 | 14 | 4 | 3 | 3 | 3 | 1 |\n| 18 | +6 | Aura Expansion | 3 | 14 | 4 | 3 | 3 | 3 | 1 |\n| 19 | +6 | Epic Boon | 3 | 15 | 4 | 3 | 3 | 3 | 2 |\n| 20 | +6 | Subclass feature | 3 | 15 | 4 | 3 | 3 | 3 | 2 |",
+      "status": "structured",
+      "by": [
+        "/data/levels"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/armor/chain-mail",
+    "dnd5e/armor/shield",
+    "dnd5e/feature/paladin-ability-score-improvement",
+    "dnd5e/feature/paladin-abjure-foes",
+    "dnd5e/feature/paladin-aura-expansion",
+    "dnd5e/feature/paladin-aura-of-courage",
+    "dnd5e/feature/paladin-aura-of-protection",
+    "dnd5e/feature/paladin-channel-divinity",
+    "dnd5e/feature/paladin-epic-boon",
+    "dnd5e/feature/paladin-extra-attack",
+    "dnd5e/feature/paladin-faithful-steed",
+    "dnd5e/feature/paladin-fighting-style",
+    "dnd5e/feature/paladin-lay-on-hands",
+    "dnd5e/feature/paladin-paladin-subclass",
+    "dnd5e/feature/paladin-paladins-smite",
+    "dnd5e/feature/paladin-radiant-strikes",
+    "dnd5e/feature/paladin-restoring-touch",
+    "dnd5e/feature/paladin-spellcasting",
+    "dnd5e/feature/paladin-weapon-mastery",
+    "dnd5e/gear/holy-symbol",
+    "dnd5e/gear/priests-pack",
+    "dnd5e/rule/multiclassing",
+    "dnd5e/weapon/javelin",
+    "dnd5e/weapon/longsword"
+  ]
+}

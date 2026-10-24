@@ -1,0 +1,272 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/hammer-of-thunderbolts",
+  "kind": "magic-item",
+  "name": "Hammer of Thunderbolts",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      224
+    ],
+    "section": "Magic Items/Magic Items A–Z/Hammer of Thunderbolts",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Weapon (Maul or Warhammer), Legendary (Requires Attunement)*\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nThe weapon has 5 charges. You can expend 1 charge and make a ranged attack with the weapon, hurling it as if it had the Thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the weapon unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it other than you must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn. Immediately after hitting or missing, the weapon flies back to your hand. The weapon regains 1d4 + 1 expended charges daily at dawn.\n\n***Giant’s Bane.*** While you are attuned to the weapon and wearing either a *Belt of Giant Strength* or *Gauntlets of Ogre Power* to which you are also attuned, you gain the following benefits:\n\n**Giants’ Bane.** When you roll a 20 on the d20 for an attack roll made with this weapon against a Giant, the creature must succeed on a DC 17 Constitution saving throw or die.\n\n**Might of Giants.** The Strength score bestowed by your *Belt of Giant Strength* or *Gauntlets of Ogre Power* increases by 4, to a maximum of 30.",
+  "facets": {
+    "category": "weapon",
+    "rarity": [
+      "legendary"
+    ],
+    "attunement": true
+  },
+  "data": {
+    "item": {
+      "type_line": "Weapon (Maul or Warhammer), Legendary (Requires Attunement)",
+      "attunement": {
+        "required": true
+      },
+      "category": "weapon",
+      "applies_to": {
+        "text": "Maul or Warhammer",
+        "refs": [
+          "dnd5e/weapon/maul",
+          "dnd5e/weapon/warhammer"
+        ]
+      },
+      "rarity": [
+        {
+          "rarity": "legendary"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "attack_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "damage_roll",
+      "mode": "add",
+      "value": 1,
+      "when": {
+        "pred": "item_state",
+        "args": {
+          "state": "wielded",
+          "item": "this"
+        }
+      }
+    },
+    {
+      "op": "resource",
+      "resource": "charges",
+      "name": "Charges",
+      "max": 5,
+      "recovery": [
+        {
+          "on": {
+            "event": "dawn"
+          },
+          "amount": {
+            "op": "add",
+            "args": [
+              "1d4",
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/attack",
+      "uses": {
+        "resource": "charges",
+        "amount": 1
+      },
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "ranged_weapon",
+          "note": "Hurled as if Thrown (20/60 feet); returns to your hand immediately after hitting or missing.",
+          "on_hit": [
+            {
+              "op": "save",
+              "ability": "con",
+              "dc": 17,
+              "target": {
+                "kind": "creature",
+                "area": {
+                  "shape": "emanation",
+                  "size_feet": 30,
+                  "origin": "target"
+                },
+                "filter": {
+                  "include_self": false
+                }
+              },
+              "on_fail": [
+                {
+                  "op": "apply_condition",
+                  "condition": "dnd5e/condition/stunned",
+                  "duration": {
+                    "kind": "until_event",
+                    "until": {
+                      "event": "turn_end",
+                      "whose": "self",
+                      "which": "next"
+                    }
+                  }
+                }
+              ],
+              "note": "The target and every creature within 30 feet of it other than you; thunderclap audible to 300 feet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "op": "trigger",
+      "event": {
+        "event": "rolls_natural_20_attack"
+      },
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 17,
+          "target": {
+            "kind": "inherit"
+          },
+          "on_fail": [
+            {
+              "op": "modifier",
+              "stat": "hp",
+              "mode": "set",
+              "value": 0,
+              "note": "The creature dies."
+            }
+          ]
+        }
+      ],
+      "condition": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "attuned",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attuned_giant_item"
+          },
+          {
+            "pred": "attack_is",
+            "args": {
+              "via": "weapon",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "creature_is",
+            "args": {
+              "types": [
+                "giant"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "ability_score.str",
+      "mode": "add",
+      "value": 4,
+      "when": {
+        "all": [
+          {
+            "pred": "item_state",
+            "args": {
+              "state": "attuned",
+              "item": "this"
+            }
+          },
+          {
+            "pred": "attuned_giant_item"
+          }
+        ]
+      },
+      "note": "Increases the score bestowed by the belt or gauntlets, to a maximum of 30."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Weapon (Maul or Warhammer), Legendary (Requires Attunement)*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "The weapon has 5 charges. You can expend 1 charge and make a ranged attack with the weapon, hurling it as if it had the Thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the weapon unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it other than you must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn. Immediately after hitting or missing, the weapon flies back to your hand. The weapon regains 1d4 + 1 expended charges daily at dawn.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3"
+      ]
+    },
+    {
+      "text": "***Giant’s Bane.*** While you are attuned to the weapon and wearing either a *Belt of Giant Strength* or *Gauntlets of Ogre Power* to which you are also attuned, you gain the following benefits:",
+      "status": "descriptive"
+    },
+    {
+      "text": "**Giants’ Bane.** When you roll a 20 on the d20 for an attack roll made with this weapon against a Giant, the creature must succeed on a DC 17 Constitution saving throw or die.",
+      "status": "structured",
+      "by": [
+        "/effects/4"
+      ]
+    },
+    {
+      "text": "**Might of Giants.** The Strength score bestowed by your *Belt of Giant Strength* or *Gauntlets of Ogre Power* increases by 4, to a maximum of 30.",
+      "status": "structured",
+      "by": [
+        "/effects/5"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/stunned",
+    "dnd5e/weapon/maul",
+    "dnd5e/weapon/warhammer"
+  ]
+}

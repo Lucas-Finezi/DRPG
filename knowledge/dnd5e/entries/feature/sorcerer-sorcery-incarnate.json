@@ -1,0 +1,79 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/sorcerer-sorcery-incarnate",
+  "kind": "feature",
+  "name": "Sorcery Incarnate",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      66
+    ],
+    "section": "Classes/Sorcerer/Sorcerer Class Features/Level 7: Sorcery Incarnate",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "If you have no uses of Innate Sorcery left, you can use it if you spend 2 Sorcery Points when you take the Bonus Action to activate it.\n\nIn addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/sorcerer",
+    "level": 7
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "two_metamagic",
+        "when": "innate_sorcery_active",
+        "max_options_per_spell": 2
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "name": "Innate Sorcery (Sorcery Points)",
+      "cost": "bonus_action",
+      "requires": {
+        "pred": "resource_empty",
+        "args": {
+          "resource": "innate_sorcery"
+        }
+      },
+      "uses": {
+        "resource": "sorcery_points",
+        "amount": 2
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/feature/sorcerer-innate-sorcery"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "If you have no uses of Innate Sorcery left, you can use it if you spend 2 Sorcery Points when you take the Bonus Action to activate it.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "In addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/feature/sorcerer-innate-sorcery"
+  ]
+}

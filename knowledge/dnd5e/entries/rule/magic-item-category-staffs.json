@@ -1,0 +1,61 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/rule/magic-item-category-staffs",
+  "kind": "rule",
+  "name": "Staffs (Magic Item Category)",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      205
+    ],
+    "section": "Magic Items/Magic Item Categories/Staffs",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "Items in the Staff category vary widely in appearance: some are of nearly equal diameter throughout and smooth, others are gnarled and twisted, some are made of wood, and others are composed of polished metal or crystal. A staff weighs between 2 and 7 pounds and serves well as a walking stick or cane.\n\nUnless its description notes otherwise, a staff can be used as a nonmagical Quarterstaff and an Arcane Focus.",
+  "data": {
+    "rules": [
+      {
+        "id": "staff",
+        "weight_lb": [
+          2,
+          7
+        ]
+      },
+      {
+        "id": "uses",
+        "as": [
+          "dnd5e/weapon/quarterstaff",
+          "dnd5e/gear/arcane-focus"
+        ]
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "Items in the Staff category vary widely in appearance: some are of nearly equal diameter throughout and smooth, others are gnarled and twisted, some are made of wood, and others are composed of polished metal or crystal. A staff weighs between 2 and 7 pounds and serves well as a walking stick or cane.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "Unless its description notes otherwise, a staff can be used as a nonmagical Quarterstaff and an Arcane Focus.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/gear/arcane-focus",
+    "dnd5e/weapon/quarterstaff"
+  ]
+}

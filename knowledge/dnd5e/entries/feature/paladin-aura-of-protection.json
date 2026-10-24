@@ -1,0 +1,111 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/paladin-aura-of-protection",
+  "kind": "feature",
+  "name": "Aura of Protection",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      55
+    ],
+    "section": "Classes/Paladin/Paladin Class Features/Level 6: Aura of Protection",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 2,
+  "text": "You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition.\n\nYou and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).\n\nIf another Paladin is present, a creature can benefit from only one Aura of Protection at a time; the creature chooses which aura while in them.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/paladin",
+    "level": 6
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "one_aura",
+        "max_auras_of_protection": 1,
+        "chooser": "affected_creature"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "modifier",
+      "stat": "aura_size.paladin-aura-of-protection",
+      "mode": "max",
+      "value": 10,
+      "when": {
+        "not": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "incapacitated"
+          }
+        }
+      }
+    },
+    {
+      "op": "modifier",
+      "stat": "saving_throw",
+      "mode": "add",
+      "value": {
+        "op": "max",
+        "args": [
+          1,
+          {
+            "var": "ability_mod.cha"
+          }
+        ]
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": {
+            "var": "aura_size.paladin-aura-of-protection"
+          },
+          "origin": "self"
+        },
+        "filter": {
+          "allies_only": true
+        }
+      },
+      "when": {
+        "not": {
+          "pred": "has_condition",
+          "args": {
+            "condition": "incapacitated"
+          }
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "You and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "If another Paladin is present, a creature can benefit from only one Aura of Protection at a time; the creature chooses which aura while in them.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

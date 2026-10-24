@@ -1,0 +1,100 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/find-traps",
+  "kind": "spell",
+  "name": "Find Traps",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      131
+    ],
+    "section": "Spells/Spell Descriptions/Find Traps",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 1,
+  "text": "*Level 2 Divination (Cleric, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous\n\nYou sense any trap within range that is within line of sight. A trap, for the purpose of this spell, includes any object or mechanism that was created to cause damage or other danger. Thus, the spell would sense the *Alarm* or *Glyph of Warding* spell or a mechanical pit trap, but it wouldn’t reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.\n\nThis spell reveals that a trap is present but not its location. You do learn the general nature of the danger posed by a trap you sense.",
+  "facets": {
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "cleric",
+      "druid",
+      "ranger"
+    ],
+    "concentration": false,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "kind": "instantaneous",
+      "text": "Instantaneous"
+    },
+    "rules": [
+      {
+        "id": "sense_traps",
+        "line_of_sight": true,
+        "trap_definition": "object_or_mechanism_created_to_cause_damage_or_danger",
+        "examples": [
+          "dnd5e/spell/alarm",
+          "dnd5e/spell/glyph-of-warding"
+        ],
+        "excludes_natural_hazards": true
+      },
+      {
+        "id": "reveals",
+        "location": false,
+        "general_nature": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "*Level 2 Divination (Cleric, Druid, Ranger)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S\n\n**Duration:** Instantaneous",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "You sense any trap within range that is within line of sight. A trap, for the purpose of this spell, includes any object or mechanism that was created to cause damage or other danger. Thus, the spell would sense the *Alarm* or *Glyph of Warding* spell or a mechanical pit trap, but it wouldn’t reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "This spell reveals that a trap is present but not its location. You do learn the general nature of the danger posed by a trap you sense.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/alarm",
+    "dnd5e/spell/glyph-of-warding"
+  ]
+}

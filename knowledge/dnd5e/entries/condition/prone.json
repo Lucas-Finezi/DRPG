@@ -1,0 +1,132 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/condition/prone",
+  "kind": "condition",
+  "name": "Prone",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      186
+    ],
+    "section": "Rules Glossary/Rules Definitions/Prone [Condition]",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L03"
+  },
+  "tier": 2,
+  "text": "While you have the Prone condition, you experience the following effects.\n\n***Restricted Movement.*** Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.\n\n***Attacks Affected.*** You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+  "facets": {
+    "glossary": true,
+    "glossary_tag": "Condition"
+  },
+  "data": {
+    "stacking": "binary"
+  },
+  "effects": [
+    {
+      "op": "restrict",
+      "restrictions": [
+        "move_except_crawl"
+      ]
+    },
+    {
+      "op": "activation",
+      "name": "Right yourself",
+      "cost": "movement",
+      "movement_cost": {
+        "op": "div",
+        "args": [
+          {
+            "var": "speed.walk"
+          },
+          2
+        ],
+        "round": "down"
+      },
+      "requires": {
+        "not": {
+          "pred": "speed_is_zero"
+        }
+      },
+      "then": [
+        {
+          "op": "remove_condition",
+          "conditions": [
+            "dnd5e/condition/prone"
+          ]
+        }
+      ]
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "own"
+    },
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "when": {
+        "pred": "within_feet",
+        "args": {
+          "who": "attacker",
+          "feet": 5
+        }
+      }
+    },
+    {
+      "op": "roll_mode",
+      "mode": "disadvantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "direction": "against",
+      "when": {
+        "not": {
+          "pred": "within_feet",
+          "args": {
+            "who": "attacker",
+            "feet": 5
+          }
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "text": "While you have the Prone condition, you experience the following effects.",
+      "status": "descriptive"
+    },
+    {
+      "text": "***Restricted Movement.*** Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.",
+      "status": "structured",
+      "by": [
+        "/effects/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Attacks Affected.*** You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+      "status": "structured",
+      "by": [
+        "/effects/2",
+        "/effects/3",
+        "/effects/4"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/prone"
+  ]
+}

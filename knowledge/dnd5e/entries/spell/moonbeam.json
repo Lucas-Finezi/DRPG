@@ -1,0 +1,178 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/moonbeam",
+  "kind": "spell",
+  "name": "Moonbeam",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      150,
+      151
+    ],
+    "section": "Spells/Spell Descriptions/Moonbeam",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L19"
+  },
+  "tier": 2,
+  "text": "*Level 2 Evocation (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a moonseed leaf)\n\n**Duration:** Concentration, up to 1 minute\n\nA silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and you can take a Magic action on later turns to move the Cylinder up to 60 feet.\n\nWhen the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the *Polymorph* spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d10 for each spell slot level above 2.",
+  "facets": {
+    "level": 2,
+    "school": "evocation",
+    "classes": [
+      "druid"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "distance",
+      "feet": 120
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true,
+      "material": "a moonseed leaf"
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    },
+    "rules": [
+      {
+        "id": "beam",
+        "area": {
+          "shape": "cylinder",
+          "radius_feet": 5,
+          "height_feet": 40
+        },
+        "light": {
+          "bright_feet": 0,
+          "dim_feet": 5,
+          "rules": [
+            "dnd5e/rule/dim-light"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "move",
+          "mode": "move",
+          "distance_feet": 60,
+          "note": "The Cylinder."
+        }
+      ]
+    },
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": {
+        "var": "spell_save_dc"
+      },
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "cylinder",
+          "size_feet": 5,
+          "origin": "point"
+        },
+        "range": {
+          "kind": "distance",
+          "feet": 120
+        }
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  2,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      2
+                    ]
+                  }
+                ]
+              },
+              "faces": 10
+            }
+          },
+          "damage_type": "radiant"
+        },
+        {
+          "op": "reference",
+          "rule": "dnd5e/rule/shape-shifting",
+          "note": "A shape-shifted creature reverts and can't shape-shift until it leaves the Cylinder."
+        }
+      ],
+      "half_on_success": true,
+      "note": "Also when the area moves into its space, when it enters or ends its turn there; once per turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 2 Evocation (Druid)*\n\n**Casting Time:** Action\n\n**Range:** 120 feet\n\n**Components:** V, S, M (a moonseed leaf)\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and you can take a Magic action on later turns to move the Cylinder up to 60 feet.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the *Polymorph* spell, for example), it reverts to its true form and can’t shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell’s area moves into its space and when it enters the spell’s area or ends its turn there. A creature makes this save only once per turn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d10 for each spell slot level above 2.",
+      "status": "structured",
+      "by": [
+        "/effects/1/on_fail/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/rule/dim-light",
+    "dnd5e/rule/shape-shifting"
+  ]
+}

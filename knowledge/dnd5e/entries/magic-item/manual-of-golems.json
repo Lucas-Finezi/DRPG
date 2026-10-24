@@ -1,0 +1,181 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/manual-of-golems",
+  "kind": "magic-item",
+  "name": "Manual of Golems",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      229,
+      230
+    ],
+    "section": "Magic Items/Magic Items A–Z/Manual of Golems",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 3,
+  "text": "*Wondrous Item, Very Rare*\n\nThis tome contains information and incantations necessary to make a particular type of golem. The GM chooses the type or determines it randomly by rolling on the accompanying table. To decipher and use the manual, you must be a spellcaster with at least two level 5 spell slots. A creature that can’t use a *Manual of Golems* and attempts to read it takes 6d6 Psychic damage.\n\nTo create a golem, you must spend the time shown on the table, working without interruption with the manual at hand and resting no more than 8 hours per day. You must also pay the specified cost to purchase supplies.\n\nOnce you finish creating the golem, the book is consumed in eldritch flames. The golem becomes animate when the ashes of the manual are sprinkled on it. See “Monsters” for the golem’s stat block. The golem is under your control, and it understands and obeys your commands.\n\n| **1d20** | **Golem** | **Time** | **Cost** |\n| 1–5 | Clay Golem | 30 days | 65,000 GP |\n| 6–17 | Flesh Golem | 60 days | 50,000 GP |\n| 18 | Iron Golem | 120 days | 100,000 GP |\n| 19–20 | Stone Golem | 90 days | 80,000 GP |",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "very_rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Very Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "prerequisite",
+        "spellcaster": true,
+        "min_level_5_slots": 2
+      },
+      {
+        "id": "creation",
+        "time": "table",
+        "max_rest_hours_per_day": 8,
+        "uninterrupted": true,
+        "cost": "table"
+      }
+    ],
+    "tables": [
+      {
+        "id": "manual_of_golems",
+        "caption": "Manual of Golems",
+        "columns": [
+          "1d20",
+          "Golem",
+          "Time",
+          "Cost"
+        ],
+        "rows": [
+          [
+            "1–5",
+            "Clay Golem",
+            "30 days",
+            "65,000 GP"
+          ],
+          [
+            "6–17",
+            "Flesh Golem",
+            "60 days",
+            "50,000 GP"
+          ],
+          [
+            "18",
+            "Iron Golem",
+            "120 days",
+            "100,000 GP"
+          ],
+          [
+            "19–20",
+            "Stone Golem",
+            "90 days",
+            "80,000 GP"
+          ]
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "trigger",
+      "event": {
+        "event": "reads_item"
+      },
+      "then": [
+        {
+          "op": "damage",
+          "amount": "6d6",
+          "damage_type": "psychic"
+        }
+      ],
+      "condition": {
+        "not": {
+          "pred": "can_use_item",
+          "args": {
+            "item": "this"
+          }
+        }
+      }
+    },
+    {
+      "op": "reference",
+      "rule": "dnd5e/rule/stat-block-overview",
+      "note": "The golem of the manual's type (table) animates under your control; the book is consumed."
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "golem_type",
+      "reason": "gm_judgment",
+      "prompt": "Which golem does this manual make? (choose or roll 1d20)",
+      "source_text": "The GM chooses the type or determines it randomly by rolling on the accompanying table."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Very Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "This tome contains information and incantations necessary to make a particular type of golem. The GM chooses the type or determines it randomly by rolling on the accompanying table. To decipher and use the manual, you must be a spellcaster with at least two level 5 spell slots. A creature that can’t use a *Manual of Golems* and attempts to read it takes 6d6 Psychic damage.",
+      "status": "master_decision",
+      "by": [
+        "md:golem_type",
+        "/data/rules/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "To create a golem, you must spend the time shown on the table, working without interruption with the manual at hand and resting no more than 8 hours per day. You must also pay the specified cost to purchase supplies.",
+      "status": "structured",
+      "by": [
+        "/data/rules/1"
+      ]
+    },
+    {
+      "text": "Once you finish creating the golem, the book is consumed in eldritch flames. The golem becomes animate when the ashes of the manual are sprinkled on it. See “Monsters” for the golem’s stat block. The golem is under your control, and it understands and obeys your commands.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "| **1d20** | **Golem** | **Time** | **Cost** |\n| 1–5 | Clay Golem | 30 days | 65,000 GP |\n| 6–17 | Flesh Golem | 60 days | 50,000 GP |\n| 18 | Iron Golem | 120 days | 100,000 GP |\n| 19–20 | Stone Golem | 90 days | 80,000 GP |",
+      "status": "structured",
+      "by": [
+        "/data/tables/0",
+        "dnd5e/creature/clay-golem",
+        "dnd5e/creature/flesh-golem",
+        "dnd5e/creature/iron-golem",
+        "dnd5e/creature/stone-golem"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/creature/clay-golem",
+    "dnd5e/creature/flesh-golem",
+    "dnd5e/creature/iron-golem",
+    "dnd5e/creature/stone-golem",
+    "dnd5e/rule/stat-block-overview"
+  ]
+}

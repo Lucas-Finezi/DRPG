@@ -1,0 +1,351 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ettin",
+  "kind": "creature",
+  "name": "Ettin",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      284
+    ],
+    "section": "Monsters A–Z/Ettin/Ettin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L34"
+  },
+  "tier": 3,
+  "text": "*Large Giant, Chaotic Evil*\n\n| **AC** 12 | **Initiative** −1 (9) |\n\n**HP** 85 (10d10 + 30)\n\n**Speed** 40 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |\n\n**Skills** Perception +4\n\n**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious\n\n**Gear** Battleaxe, Morningstar\n\n**Senses** Darkvision 60 ft.; Passive Perception 14\n\n**Languages** Giant\n\n**CR** 4 (XP 1,100; PB +2)\n\n##### Actions\n\n***Multiattack.*** The ettin makes one Battleaxe attack and one Morningstar attack.\n\n***Battleaxe.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition.\n\n***Morningstar.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn.",
+  "facets": {
+    "group": "monster",
+    "size": "Large",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "cr": "4"
+  },
+  "data": {
+    "size": "Large",
+    "type": "Giant",
+    "alignment": "Chaotic Evil",
+    "type_line": "Large Giant, Chaotic Evil",
+    "ac": {
+      "value": 12,
+      "text": "12"
+    },
+    "initiative": {
+      "modifier": -1,
+      "score": 9,
+      "text": "−1 (9)"
+    },
+    "hp": {
+      "average": 85,
+      "formula": {
+        "op": "add",
+        "args": [
+          "10d10",
+          30
+        ]
+      },
+      "text": "85 (10d10 + 30)"
+    },
+    "speed": {
+      "text": "40 ft.",
+      "walk": 40
+    },
+    "abilities": {
+      "str": {
+        "score": 21,
+        "mod": 5,
+        "save": 5
+      },
+      "dex": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "con": {
+        "score": 17,
+        "mod": 3,
+        "save": 3
+      },
+      "int": {
+        "score": 6,
+        "mod": -2,
+        "save": -2
+      },
+      "wis": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      }
+    },
+    "skills": {
+      "perception": 4,
+      "text": "Perception +4"
+    },
+    "immunities": {
+      "damage_types": [],
+      "conditions": [
+        "dnd5e/condition/blinded",
+        "dnd5e/condition/charmed",
+        "dnd5e/condition/deafened",
+        "dnd5e/condition/frightened",
+        "dnd5e/condition/stunned",
+        "dnd5e/condition/unconscious"
+      ],
+      "text": "Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious"
+    },
+    "gear": {
+      "text": "Battleaxe, Morningstar"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 14",
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "languages": {
+      "text": "Giant"
+    },
+    "cr": {
+      "value": "4",
+      "xp": 1100,
+      "proficiency_bonus": 2,
+      "text": "4 (XP 1,100; PB +2)"
+    },
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The ettin makes one Battleaxe attack and one Morningstar attack."
+      },
+      {
+        "name": "Battleaxe",
+        "text": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition."
+      },
+      {
+        "name": "Morningstar",
+        "text": "*Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn."
+      }
+    ],
+    "rules": [
+      {
+        "id": "multiattack",
+        "attacks": [
+          {
+            "name": "Battleaxe",
+            "count": 1
+          },
+          {
+            "name": "Morningstar",
+            "count": 1
+          }
+        ],
+        "text": "The ettin makes one Battleaxe attack and one Morningstar attack."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Battleaxe",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  5
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/prone",
+              "when": {
+                "pred": "target_size_at_most",
+                "args": {
+                  "size": "large"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Morningstar",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 7,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d8",
+                  5
+                ]
+              },
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "actions_morningstar_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Morningstar as written.",
+      "source_text": "14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Large Giant, Chaotic Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 12 | **Initiative** −1 (9) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 85 (10d10 + 30)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 40 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 21 | +5 | +5 | **Dex** 8 | −1 | −1 | **Con** 17 | +3 | +3 |\n| **Int** | 6 | −2 | −2 | **Wis** 10 | +0 | +0 | **Cha** 8 | −1 | −1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +4",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Immunities** Blinded, Charmed, Deafened, Frightened, Stunned, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Gear** Battleaxe, Morningstar",
+      "status": "structured",
+      "by": [
+        "/data/gear"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 14",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Giant",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 4 (XP 1,100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The ettin makes one Battleaxe attack and one Morningstar attack.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/data/rules/0"
+      ]
+    },
+    {
+      "text": "***Battleaxe.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Slashing damage. If the target is a Large or smaller creature, it has the Prone condition.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "***Morningstar.*** *Melee Attack Roll:* +7, reach 5 ft. *Hit:* 14 (2d8 + 5) Piercing damage, and the target has Disadvantage on the next attack roll it makes before the end of its next turn.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/2",
+        "/effects/1",
+        "md:actions_morningstar_rider"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/blinded",
+    "dnd5e/condition/charmed",
+    "dnd5e/condition/deafened",
+    "dnd5e/condition/frightened",
+    "dnd5e/condition/prone",
+    "dnd5e/condition/stunned",
+    "dnd5e/condition/unconscious"
+  ]
+}

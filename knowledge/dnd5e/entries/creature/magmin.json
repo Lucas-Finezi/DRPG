@@ -1,0 +1,295 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/magmin",
+  "kind": "creature",
+  "name": "Magmin",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      305,
+      306
+    ],
+    "section": "Monsters A–Z/Magmin/Magmin",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L37"
+  },
+  "tier": 3,
+  "text": "*Small Elemental, Chaotic Neutral*\n\n| **AC** 14 | **Initiative** +2 (12) |\n\n**HP** 13 (3d6 + 3)\n\n**Speed** 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |\n\n**Immunities** Fire\n\n**Senses** Darkvision 60 ft.; Passive Perception 10\n\n**Languages** Primordial (Ignan)\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Death Burst.*** The magmin explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 10-foot Emanation originating from the magmin. *Failure*: 7 (2d6) Fire damage. *Success:* Half damage.\n\n##### Actions\n\n***Touch.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn’t being worn or carried, it starts burning.\n\n##### Bonus Actions\n\n***Ignited Illumination.*** The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Chaotic Neutral",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Chaotic Neutral",
+    "type_line": "Small Elemental, Chaotic Neutral",
+    "ac": {
+      "value": 14,
+      "text": "14"
+    },
+    "initiative": {
+      "modifier": 2,
+      "score": 12,
+      "text": "+2 (12)"
+    },
+    "hp": {
+      "average": 13,
+      "formula": {
+        "op": "add",
+        "args": [
+          "3d6",
+          3
+        ]
+      },
+      "text": "13 (3d6 + 3)"
+    },
+    "speed": {
+      "text": "30 ft.",
+      "walk": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 15,
+        "mod": 2,
+        "save": 2
+      },
+      "con": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 8,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      }
+    },
+    "immunities": {
+      "damage_types": [
+        "fire"
+      ],
+      "conditions": [],
+      "text": "Fire"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 10",
+      "darkvision": 60,
+      "passive_perception": 10
+    },
+    "languages": {
+      "text": "Primordial (Ignan)"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Death Burst",
+        "text": "The magmin explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 10-foot Emanation originating from the magmin. *Failure*: 7 (2d6) Fire damage. *Success:* Half damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Touch",
+        "text": "*Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn’t being worn or carried, it starts burning."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Ignited Illumination",
+        "text": "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Touch",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 4,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "2d4",
+                  2
+                ]
+              },
+              "damage_type": "fire"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "master_decisions": [
+    {
+      "id": "traits_death_burst",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Death Burst as written.",
+      "source_text": "The magmin explodes when it dies. Dexterity Saving Throw: DC 11, each creature in a 10-foot Emanation originating from the magmin. Failure: 7 (2d6) Fire damage. Success: Half damage."
+    },
+    {
+      "id": "actions_touch_rider",
+      "reason": "not_automatable",
+      "prompt": "Apply the rest of Touch as written.",
+      "source_text": "7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn’t being worn or carried, it starts burning."
+    },
+    {
+      "id": "bonus_actions_ignited_illumination",
+      "reason": "not_automatable",
+      "prompt": "Adjudicate Ignited Illumination as written.",
+      "source_text": "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Elemental, Chaotic Neutral*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 14 | **Initiative** +2 (12) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 13 (3d6 + 3)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 15 | +2 | +2 | **Con** 12 | +1 | +1 |\n| **Int** | 8 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 10 | +0 | +0 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 10",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Ignan)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Death Burst.*** The magmin explodes when it dies. *Dexterity Saving Throw:* DC 11, each creature in a 10-foot Emanation originating from the magmin. *Failure*: 7 (2d6) Fire damage. *Success:* Half damage.",
+      "status": "master_decision",
+      "by": [
+        "/data/traits/0",
+        "md:traits_death_burst"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Touch.*** *Melee Attack Roll:* +4, reach 5 ft. *Hit:* 7 (2d4 + 2) Fire damage. If the target is a creature or a flammable object that isn’t being worn or carried, it starts burning.",
+      "status": "master_decision",
+      "by": [
+        "/data/actions/0",
+        "/effects/0",
+        "md:actions_touch_rider"
+      ]
+    },
+    {
+      "text": "##### Bonus Actions",
+      "status": "structured",
+      "by": [
+        "/data/bonus_actions"
+      ]
+    },
+    {
+      "text": "***Ignited Illumination.*** The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+      "status": "master_decision",
+      "by": [
+        "/data/bonus_actions/0",
+        "md:bonus_actions_ignited_illumination"
+      ]
+    }
+  ]
+}

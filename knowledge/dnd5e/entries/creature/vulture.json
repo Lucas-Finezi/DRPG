@@ -1,0 +1,260 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/vulture",
+  "kind": "creature",
+  "name": "Vulture",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      363,
+      364
+    ],
+    "section": "Animals/Vulture",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L40"
+  },
+  "tier": 2,
+  "text": "*Medium Beast, Unaligned*\n\n| **AC** 10 | **Initiative** +0 (10) |\n\n**HP** 5 (1d8 + 1)\n\n**Speed** 10 ft., Fly 50 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |\n\n**Skills** Perception +3\n\n**Senses** Passive Perception 13\n\n**Languages** None\n\n**CR** 0 (XP 10; PB +2)\n\n##### Traits\n\n***Pack Tactics.*** The vulture has Advantage on an attack roll against a creature if at least one of the vulture’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.\n\n##### Actions\n\n***Beak.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 2 (1d4) Piercing damage.",
+  "facets": {
+    "group": "animal",
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "cr": "0"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "type_line": "Medium Beast, Unaligned",
+    "ac": {
+      "value": 10,
+      "text": "10"
+    },
+    "initiative": {
+      "modifier": 0,
+      "score": 10,
+      "text": "+0 (10)"
+    },
+    "hp": {
+      "average": 5,
+      "formula": {
+        "op": "add",
+        "args": [
+          "1d8",
+          1
+        ]
+      },
+      "text": "5 (1d8 + 1)"
+    },
+    "speed": {
+      "text": "10 ft., Fly 50 ft.",
+      "walk": 10,
+      "fly": 50
+    },
+    "abilities": {
+      "str": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "con": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "int": {
+        "score": 2,
+        "mod": -4,
+        "save": -4
+      },
+      "wis": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      },
+      "cha": {
+        "score": 4,
+        "mod": -3,
+        "save": -3
+      }
+    },
+    "skills": {
+      "perception": 3,
+      "text": "Perception +3"
+    },
+    "senses": {
+      "text": "Passive Perception 13",
+      "passive_perception": 13
+    },
+    "languages": {
+      "text": "None"
+    },
+    "cr": {
+      "value": "0",
+      "xp": 10,
+      "proficiency_bonus": 2,
+      "text": "0 (XP 10; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "text": "The vulture has Advantage on an attack roll against a creature if at least one of the vulture’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beak",
+        "text": "*Melee Attack Roll:* +2, reach 5 ft. *Hit:* 2 (1d4) Piercing damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "roll_mode",
+      "mode": "advantage",
+      "rolls": [
+        "attack_roll"
+      ],
+      "when": {
+        "pred": "within_feet",
+        "args": {
+          "who": "ally",
+          "of": "target",
+          "feet": 5,
+          "not_incapacitated": true
+        }
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Beak",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 2,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": "1d4",
+              "damage_type": "piercing"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Medium Beast, Unaligned*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 10 | **Initiative** +0 (10) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 5 (1d8 + 1)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 10 ft., Fly 50 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 10 | +0 | +0 | **Con** 13 | +1 | +1 |\n| **Int** | 2 | −4 | −4 | **Wis** 12 | +1 | +1 | **Cha** 4 | −3 | −3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Senses** Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** None",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 0 (XP 10; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Pack Tactics.*** The vulture has Advantage on an attack roll against a creature if at least one of the vulture’s allies is within 5 feet of the creature and the ally doesn’t have the Incapacitated condition.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Beak.*** *Melee Attack Roll:* +2, reach 5 ft. *Hit:* 2 (1d4) Piercing damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    }
+  ]
+}

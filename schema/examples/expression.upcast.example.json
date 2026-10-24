@@ -1,0 +1,20 @@
+{
+  "dice": {
+    "count": {
+      "op": "add",
+      "args": [
+        8,
+        {
+          "op": "sub",
+          "args": [
+            {
+              "var": "spell_slot_level"
+            },
+            3
+          ]
+        }
+      ]
+    },
+    "faces": 6
+  }
+}

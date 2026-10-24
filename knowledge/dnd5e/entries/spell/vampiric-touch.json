@@ -1,0 +1,160 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/spell/vampiric-touch",
+  "kind": "spell",
+  "name": "Vampiric Touch",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      171
+    ],
+    "section": "Spells/Spell Descriptions/Vampiric Touch",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L20"
+  },
+  "tier": 2,
+  "text": "*Level 3 Necromancy (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute\n\nThe touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes 3d6 Necrotic damage, and you regain Hit Points equal to half the amount of Necrotic damage dealt.\n\nUntil the spell ends, you can make the attack again on each of your turns as a Magic action, targeting the same creature or a different one.\n\n***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 3.",
+  "facets": {
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "concentration": true,
+    "ritual": false
+  },
+  "data": {
+    "casting_time": {
+      "text": "Action",
+      "cost": "action"
+    },
+    "range": {
+      "kind": "self"
+    },
+    "components": {
+      "verbal": true,
+      "somatic": true
+    },
+    "duration": {
+      "text": "Concentration, up to 1 minute",
+      "kind": "minutes",
+      "amount": 1,
+      "concentration": true,
+      "up_to": true
+    }
+  },
+  "effects": [
+    {
+      "op": "attack",
+      "attack_type": "melee_spell",
+      "target": {
+        "kind": "creature",
+        "range": {
+          "kind": "touch"
+        }
+      },
+      "on_hit": [
+        {
+          "op": "damage",
+          "amount": {
+            "dice": {
+              "count": {
+                "op": "add",
+                "args": [
+                  3,
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "var": "spell_slot_level"
+                      },
+                      3
+                    ]
+                  }
+                ]
+              },
+              "faces": 6
+            }
+          },
+          "damage_type": "necrotic"
+        },
+        {
+          "op": "heal",
+          "amount": {
+            "op": "div",
+            "args": [
+              {
+                "var": "damage_amount"
+              },
+              2
+            ]
+          },
+          "target": {
+            "kind": "self"
+          }
+        }
+      ]
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "frequency": {
+        "count": 1,
+        "per": "turn"
+      },
+      "then": [
+        {
+          "op": "reference",
+          "rule": "dnd5e/spell/vampiric-touch",
+          "note": "Repeat the attack."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Level 3 Necromancy (Sorcerer, Warlock, Wizard)*\n\n**Casting Time:** Action\n\n**Range:** Self\n\n**Components:** V, S\n\n**Duration:** Concentration, up to 1 minute",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/casting_time",
+        "/data/range",
+        "/data/components",
+        "/data/duration"
+      ]
+    },
+    {
+      "text": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes 3d6 Necrotic damage, and you regain Hit Points equal to half the amount of Necrotic damage dealt.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Until the spell ends, you can make the attack again on each of your turns as a Magic action, targeting the same creature or a different one.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Using a Higher-Level Spell Slot.*** The damage increases by 1d6 for each spell slot level above 3.",
+      "status": "structured",
+      "by": [
+        "/effects/0/on_hit/0/amount"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/spell/vampiric-touch"
+  ]
+}

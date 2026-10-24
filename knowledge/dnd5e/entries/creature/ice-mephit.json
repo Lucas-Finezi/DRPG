@@ -1,0 +1,384 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/ice-mephit",
+  "kind": "creature",
+  "name": "Ice Mephit",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      307
+    ],
+    "section": "Monsters A–Z/Mephits/Ice Mephit",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L35"
+  },
+  "tier": 2,
+  "text": "*Small Elemental, Neutral Evil*\n\n| **AC** 11 | **Initiative** +1 (11) |\n\n**HP** 21 (6d6)\n\n**Speed** 30 ft., Fly 30 ft.\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 12 | +1 | +1 |\n\n**Skills** Perception +2, Stealth +3\n\n**Vulnerabilities** Fire\n\n**Immunities** Cold, Poison; Exhaustion, Poisoned\n\n**Senses** Darkvision 60 ft.; Passive Perception 12\n\n**Languages** Primordial (Aquan, Auran)\n\n**CR** 1/2 (XP 100; PB +2)\n\n##### Traits\n\n***Death Burst.*** The mephit explodes when it dies. *Constitution Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Cold damage. *Success:* Half damage.\n\n##### Actions\n\n***Claw.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 2 (1d4) Cold damage.\n\n***Fog Cloud (1/Day).*** The mephit casts *Fog Cloud*, requiring no spell components and using Charisma as the spellcasting ability.\n\n***Frost Breath (Recharge 6).*** *Constitution Saving Throw:* DC 10, each creature in a 15-foot Cone. *Failure:* 7 (3d4) Cold damage. *Success:* Half damage.",
+  "facets": {
+    "group": "monster",
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "cr": "1/2"
+  },
+  "data": {
+    "size": "Small",
+    "type": "Elemental",
+    "alignment": "Neutral Evil",
+    "type_line": "Small Elemental, Neutral Evil",
+    "ac": {
+      "value": 11,
+      "text": "11"
+    },
+    "initiative": {
+      "modifier": 1,
+      "score": 11,
+      "text": "+1 (11)"
+    },
+    "hp": {
+      "average": 21,
+      "formula": "6d6",
+      "text": "21 (6d6)"
+    },
+    "speed": {
+      "text": "30 ft., Fly 30 ft.",
+      "walk": 30,
+      "fly": 30
+    },
+    "abilities": {
+      "str": {
+        "score": 7,
+        "mod": -2,
+        "save": -2
+      },
+      "dex": {
+        "score": 13,
+        "mod": 1,
+        "save": 1
+      },
+      "con": {
+        "score": 10,
+        "mod": 0,
+        "save": 0
+      },
+      "int": {
+        "score": 9,
+        "mod": -1,
+        "save": -1
+      },
+      "wis": {
+        "score": 11,
+        "mod": 0,
+        "save": 0
+      },
+      "cha": {
+        "score": 12,
+        "mod": 1,
+        "save": 1
+      }
+    },
+    "skills": {
+      "perception": 2,
+      "stealth": 3,
+      "text": "Perception +2, Stealth +3"
+    },
+    "vulnerabilities": {
+      "damage_types": [
+        "fire"
+      ],
+      "text": "Fire"
+    },
+    "immunities": {
+      "damage_types": [
+        "cold",
+        "poison"
+      ],
+      "conditions": [
+        "dnd5e/condition/exhaustion",
+        "dnd5e/condition/poisoned"
+      ],
+      "text": "Cold, Poison; Exhaustion, Poisoned"
+    },
+    "senses": {
+      "text": "Darkvision 60 ft.; Passive Perception 12",
+      "darkvision": 60,
+      "passive_perception": 12
+    },
+    "languages": {
+      "text": "Primordial (Aquan, Auran)"
+    },
+    "cr": {
+      "value": "1/2",
+      "xp": 100,
+      "proficiency_bonus": 2,
+      "text": "1/2 (XP 100; PB +2)"
+    },
+    "traits": [
+      {
+        "name": "Death Burst",
+        "text": "The mephit explodes when it dies. *Constitution Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Cold damage. *Success:* Half damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "text": "*Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 2 (1d4) Cold damage."
+      },
+      {
+        "name": "Fog Cloud",
+        "per_day": 1,
+        "text": "The mephit casts *Fog Cloud*, requiring no spell components and using Charisma as the spellcasting ability."
+      },
+      {
+        "name": "Frost Breath",
+        "recharge": {
+          "min": 6,
+          "die": "1d6"
+        },
+        "text": "*Constitution Saving Throw:* DC 10, each creature in a 15-foot Cone. *Failure:* 7 (3d4) Cold damage. *Success:* Half damage."
+      }
+    ]
+  },
+  "effects": [
+    {
+      "op": "save",
+      "ability": "con",
+      "dc": 10,
+      "target": {
+        "kind": "area",
+        "area": {
+          "shape": "emanation",
+          "size_feet": 5,
+          "origin": "self"
+        },
+        "text": "each creature in a 5-foot Emanation originating from the mephit"
+      },
+      "on_fail": [
+        {
+          "op": "damage",
+          "amount": "2d4",
+          "damage_type": "cold"
+        }
+      ],
+      "half_on_success": true
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Claw",
+      "then": [
+        {
+          "op": "attack",
+          "attack_type": "melee",
+          "bonus": 3,
+          "on_hit": [
+            {
+              "op": "damage",
+              "amount": {
+                "op": "add",
+                "args": [
+                  "1d4",
+                  1
+                ]
+              },
+              "damage_type": "slashing"
+            },
+            {
+              "op": "damage",
+              "amount": "1d4",
+              "damage_type": "cold"
+            }
+          ]
+        }
+      ],
+      "action": "dnd5e/action/attack"
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Fog Cloud",
+      "then": [
+        {
+          "op": "cast_spell",
+          "spell": "dnd5e/spell/fog-cloud",
+          "slot": "none",
+          "components": []
+        }
+      ],
+      "frequency": {
+        "count": 1,
+        "per": "day"
+      }
+    },
+    {
+      "op": "activation",
+      "cost": "action",
+      "name": "Frost Breath",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 10,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 15,
+              "origin": "self"
+            },
+            "text": "each creature in a 15-foot Cone"
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "3d4",
+              "damage_type": "cold"
+            }
+          ],
+          "half_on_success": true
+        }
+      ],
+      "note": "Recharge 6–6."
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Small Elemental, Neutral Evil*",
+      "status": "structured",
+      "by": [
+        "/data/type_line",
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "| **AC** 11 | **Initiative** +1 (11) |",
+      "status": "structured",
+      "by": [
+        "/data/ac",
+        "/data/initiative"
+      ]
+    },
+    {
+      "text": "**HP** 21 (6d6)",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 30 ft., Fly 30 ft.",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** | 7 | −2 | −2 | **Dex** 13 | +1 | +1 | **Con** 10 | +0 | +0 |\n| **Int** | 9 | −1 | −1 | **Wis** 11 | +0 | +0 | **Cha** 12 | +1 | +1 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Skills** Perception +2, Stealth +3",
+      "status": "structured",
+      "by": [
+        "/data/skills"
+      ]
+    },
+    {
+      "text": "**Vulnerabilities** Fire",
+      "status": "structured",
+      "by": [
+        "/data/vulnerabilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Cold, Poison; Exhaustion, Poisoned",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Darkvision 60 ft.; Passive Perception 12",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** Primordial (Aquan, Auran)",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** 1/2 (XP 100; PB +2)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Death Burst.*** The mephit explodes when it dies. *Constitution Saving Throw:* DC 10, each creature in a 5-foot Emanation originating from the mephit. *Failure:* 5 (2d4) Cold damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0",
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Claw.*** *Melee Attack Roll:* +3, reach 5 ft. *Hit:* 3 (1d4 + 1) Slashing damage plus 2 (1d4) Cold damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/0",
+        "/effects/1"
+      ]
+    },
+    {
+      "text": "***Fog Cloud (1/Day).*** The mephit casts *Fog Cloud*, requiring no spell components and using Charisma as the spellcasting ability.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1",
+        "/effects/2"
+      ]
+    },
+    {
+      "text": "***Frost Breath (Recharge 6).*** *Constitution Saving Throw:* DC 10, each creature in a 15-foot Cone. *Failure:* 7 (3d4) Cold damage. *Success:* Half damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/2",
+        "/effects/3"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/exhaustion",
+    "dnd5e/condition/poisoned",
+    "dnd5e/spell/fog-cloud"
+  ]
+}

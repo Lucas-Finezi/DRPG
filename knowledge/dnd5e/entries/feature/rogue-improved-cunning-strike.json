@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/feature/rogue-improved-cunning-strike",
+  "kind": "feature",
+  "name": "Improved Cunning Strike",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      63
+    ],
+    "section": "Classes/Rogue/Rogue Class Features/Level 11: Improved Cunning Strike",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L14"
+  },
+  "tier": 1,
+  "text": "You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.",
+  "facets": {
+    "feature_type": "class_feature",
+    "owner": "dnd5e/class/rogue",
+    "level": 11
+  },
+  "data": {
+    "rules": [
+      {
+        "id": "two_effects",
+        "feature": "dnd5e/feature/rogue-cunning-strike",
+        "max_effects": 2,
+        "pay_each_cost": true
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "text": "You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.",
+      "status": "structured",
+      "by": [
+        "/data/rules/0"
+      ]
+    }
+  ]
+}

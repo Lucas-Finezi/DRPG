@@ -1,0 +1,202 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/creature/avatar-of-death",
+  "kind": "creature",
+  "name": "Avatar of Death",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      232
+    ],
+    "section": "Magic Items/Magic Items A–Z/Mysterious Deck/Avatar of Death",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 1,
+  "text": "*Medium Undead, Neutral evil*\n\n| **AC** 20 | **Initiative** +3 (13) |\n\n**HP** Half the HP maximum of its summoner\n\n**Speed** 60 ft., Fly 60 ft. (hover)\n\n| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 +3 | +3 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 16 +3 | +3 | **Wis** 16 | +3 | +3 | **Cha** 16 | +3 | +3 |\n\n**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned, Unconscious\n\n**Senses** Truesight 60 ft., Passive Perception 13\n\n**Languages** All languages known to its summoner\n\n**CR** None (XP 0; PB equals its summoner’s)\n\n##### Traits\n\n***Incorporeal Movement.*** The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.\n\n##### Actions\n\n***Multiattack.*** The avatar makes a number of Reaping Scythe attacks equal to half the summoner’s Proficiency Bonus (rounded up).\n\n***Reaping Scythe.*** *Melee Attack Roll:* Automatic hit, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+  "facets": {
+    "group": "embedded",
+    "size": "Medium",
+    "type": "Undead"
+  },
+  "data": {
+    "size": "Medium",
+    "type": "Undead",
+    "alignment": "Neutral evil",
+    "ac": {
+      "text": "20"
+    },
+    "initiative": {
+      "text": "+3 (13)"
+    },
+    "hp": {
+      "text": "Half the HP maximum of its summoner"
+    },
+    "speed": {
+      "text": "60 ft., Fly 60 ft. (hover)"
+    },
+    "immunities": {
+      "text": "Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned, Unconscious"
+    },
+    "senses": {
+      "text": "Truesight 60 ft., Passive Perception 13"
+    },
+    "languages": {
+      "text": "All languages known to its summoner"
+    },
+    "cr": {
+      "text": "None (XP 0; PB equals its summoner’s)"
+    },
+    "traits": [
+      {
+        "name": "Incorporeal Movement",
+        "text": "The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "text": "The avatar makes a number of Reaping Scythe attacks equal to half the summoner’s Proficiency Bonus (rounded up)."
+      },
+      {
+        "name": "Reaping Scythe",
+        "text": "*Melee Attack Roll:* Automatic hit, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+        "attack": {
+          "kind": "melee",
+          "terms": "Automatic hit, reach 5 ft",
+          "hit": "7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage."
+        }
+      }
+    ],
+    "abilities": {
+      "dex": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "con": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "wis": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      },
+      "cha": {
+        "score": 16,
+        "mod": 3,
+        "save": 3
+      }
+    }
+  },
+  "coverage": [
+    {
+      "text": "*Medium Undead, Neutral evil*\n\n|",
+      "status": "structured",
+      "by": [
+        "/data/size",
+        "/data/type",
+        "/data/alignment"
+      ]
+    },
+    {
+      "text": "**AC** 20 | **Initiative** +3 (13) |",
+      "status": "structured",
+      "by": [
+        "/data/ac"
+      ]
+    },
+    {
+      "text": "**HP** Half the HP maximum of its summoner",
+      "status": "structured",
+      "by": [
+        "/data/hp"
+      ]
+    },
+    {
+      "text": "**Speed** 60 ft., Fly 60 ft. (hover)",
+      "status": "structured",
+      "by": [
+        "/data/speed"
+      ]
+    },
+    {
+      "text": "| MOD SAVE | MOD SAVE | MOD SAVE |\n| **Str** 16 +3 | +3 | **Dex** 16 | +3 | +3 | **Con** 16 | +3 | +3 |\n| **Int** | 16 +3 | +3 | **Wis** 16 | +3 | +3 | **Cha** 16 | +3 | +3 |",
+      "status": "structured",
+      "by": [
+        "/data/abilities"
+      ]
+    },
+    {
+      "text": "**Immunities** Necrotic, Poison; Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned, Unconscious",
+      "status": "structured",
+      "by": [
+        "/data/immunities"
+      ]
+    },
+    {
+      "text": "**Senses** Truesight 60 ft., Passive Perception 13",
+      "status": "structured",
+      "by": [
+        "/data/senses"
+      ]
+    },
+    {
+      "text": "**Languages** All languages known to its summoner",
+      "status": "structured",
+      "by": [
+        "/data/languages"
+      ]
+    },
+    {
+      "text": "**CR** None (XP 0; PB equals its summoner’s)",
+      "status": "structured",
+      "by": [
+        "/data/cr"
+      ]
+    },
+    {
+      "text": "##### Traits",
+      "status": "structured",
+      "by": [
+        "/data/traits"
+      ]
+    },
+    {
+      "text": "***Incorporeal Movement.*** The avatar can move through other creatures and objects as if they were Difficult Terrain. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+      "status": "structured",
+      "by": [
+        "/data/traits/0"
+      ]
+    },
+    {
+      "text": "##### Actions",
+      "status": "structured",
+      "by": [
+        "/data/actions"
+      ]
+    },
+    {
+      "text": "***Multiattack.*** The avatar makes a number of Reaping Scythe attacks equal to half the summoner’s Proficiency Bonus (rounded up).",
+      "status": "structured",
+      "by": [
+        "/data/actions/0"
+      ]
+    },
+    {
+      "text": "***Reaping Scythe.*** *Melee Attack Roll:* Automatic hit, reach 5 ft. *Hit:* 7 (1d8 + 3) Slashing damage plus 4 (1d8) Necrotic damage.",
+      "status": "structured",
+      "by": [
+        "/data/actions/1"
+      ]
+    }
+  ]
+}

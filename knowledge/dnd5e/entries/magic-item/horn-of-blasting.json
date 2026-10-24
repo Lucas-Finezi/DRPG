@@ -1,0 +1,163 @@
+{
+  "$schema": "../../../../schema/catalog_entry.schema.json",
+  "ref": "dnd5e/magic-item/horn-of-blasting",
+  "kind": "magic-item",
+  "name": "Horn of Blasting",
+  "schema_version": "1.0",
+  "source": {
+    "system": "dnd5e",
+    "document": "srd-5.2.1",
+    "origin": "official",
+    "pages": [
+      226
+    ],
+    "section": "Magic Items/Magic Items A–Z/Horn of Blasting",
+    "license": {
+      "id": "CC-BY-4.0",
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+    },
+    "extracted_by": "L31"
+  },
+  "tier": 2,
+  "text": "*Wondrous Item, Rare*\n\nYou can take a Magic action to blow the horn, which emits a thunderous blast in a 30-foot Cone that is audible out to 600 feet. Each creature in the Cone makes a DC 15 Constitution saving throw. On a failed save, a creature takes 5d8 Thunder damage and has the Deafened condition for 1 minute. On a successful save, a creature takes half as much damage only. Glass or crystal objects in the Cone that aren’t being worn or carried take 10d8 Thunder damage.\n\nEach use of the horn’s magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 Force damage to the user and destroys the horn.",
+  "facets": {
+    "category": "wondrous_item",
+    "rarity": [
+      "rare"
+    ],
+    "attunement": false
+  },
+  "data": {
+    "item": {
+      "type_line": "Wondrous Item, Rare",
+      "category": "wondrous_item",
+      "rarity": [
+        {
+          "rarity": "rare"
+        }
+      ]
+    }
+  },
+  "effects": [
+    {
+      "op": "activation",
+      "cost": "action",
+      "action": "dnd5e/action/magic",
+      "then": [
+        {
+          "op": "save",
+          "ability": "con",
+          "dc": 15,
+          "target": {
+            "kind": "area",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            }
+          },
+          "on_fail": [
+            {
+              "op": "damage",
+              "amount": "5d8",
+              "damage_type": "thunder"
+            },
+            {
+              "op": "apply_condition",
+              "condition": "dnd5e/condition/deafened",
+              "duration": {
+                "kind": "minutes",
+                "amount": 1
+              }
+            }
+          ],
+          "half_on_success": true,
+          "note": "Audible to 600 feet; on a success, half damage only."
+        },
+        {
+          "op": "damage",
+          "amount": "10d8",
+          "damage_type": "thunder",
+          "target": {
+            "kind": "object",
+            "area": {
+              "shape": "cone",
+              "size_feet": 30,
+              "origin": "self"
+            },
+            "filter": {
+              "objects": "not_worn_or_carried"
+            }
+          },
+          "note": "Glass or crystal objects in the Cone."
+        }
+      ]
+    },
+    {
+      "op": "choice",
+      "id": "explode",
+      "choose": 1,
+      "note": "20 percent chance per use.",
+      "options": [
+        {
+          "id": "explodes",
+          "label": "Explodes (20%)",
+          "effects": [
+            {
+              "op": "damage",
+              "amount": "10d6",
+              "damage_type": "force",
+              "target": {
+                "kind": "self"
+              }
+            },
+            {
+              "op": "end_effect",
+              "scope": "this_entry",
+              "note": "The horn is destroyed."
+            }
+          ]
+        },
+        {
+          "id": "safe",
+          "label": "No explosion (80%)",
+          "effects": [
+            {
+              "op": "reference",
+              "rule": "dnd5e/magic-item/horn-of-blasting",
+              "note": "No effect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "text": "*Wondrous Item, Rare*",
+      "status": "structured",
+      "by": [
+        "/facets",
+        "/data/item"
+      ]
+    },
+    {
+      "text": "You can take a Magic action to blow the horn, which emits a thunderous blast in a 30-foot Cone that is audible out to 600 feet. Each creature in the Cone makes a DC 15 Constitution saving throw. On a failed save, a creature takes 5d8 Thunder damage and has the Deafened condition for 1 minute. On a successful save, a creature takes half as much damage only. Glass or crystal objects in the Cone that aren’t being worn or carried take 10d8 Thunder damage.",
+      "status": "structured",
+      "by": [
+        "/effects/0"
+      ]
+    },
+    {
+      "text": "Each use of the horn’s magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 Force damage to the user and destroys the horn.",
+      "status": "structured",
+      "by": [
+        "/effects/1"
+      ]
+    }
+  ],
+  "refs": [
+    "dnd5e/condition/deafened",
+    "dnd5e/magic-item/horn-of-blasting"
+  ]
+}
