@@ -1,0 +1,500 @@
+{
+ "decisions": {
+  "by_reason": {
+   "gm_judgment": 125,
+   "player_choice_open": 4,
+   "not_automatable": 349,
+   "narrative": 27,
+   "ambiguous_source": 2
+  },
+  "by_kind": {
+   "action/gm_judgment": 3,
+   "action/player_choice_open": 1,
+   "creature/not_automatable": 345,
+   "curse/gm_judgment": 2,
+   "curse/narrative": 1,
+   "feature/gm_judgment": 2,
+   "gear/ambiguous_source": 1,
+   "gear/narrative": 2,
+   "magic-item/gm_judgment": 28,
+   "magic-item/not_automatable": 3,
+   "rule/gm_judgment": 66,
+   "rule/narrative": 11,
+   "rule/not_automatable": 1,
+   "spell/ambiguous_source": 1,
+   "spell/gm_judgment": 24,
+   "spell/narrative": 13,
+   "spell/player_choice_open": 3
+  },
+  "not_automatable_by_lot": {
+   "L02": 1,
+   "L31": 3,
+   "L33": 79,
+   "L34": 28,
+   "L35": 58,
+   "L36": 10,
+   "L37": 35,
+   "L38": 26,
+   "L39": 62,
+   "L40": 47
+  }
+ },
+ "placeholders": {
+  "count_by_kind": {
+   "class": 25,
+   "contagion": 3,
+   "curse": 1,
+   "feature": 8,
+   "magic-item": 77,
+   "rule": 8,
+   "spell": 48
+  },
+  "examples": {
+   "class": [
+    "dnd5e/class/barbarian/effects/4/options/0/effects/0: Gain data.starting_equipment[0].",
+    "dnd5e/class/barbarian/effects/4/options/1/effects/0: Gain data.starting_equipment[1].",
+    "dnd5e/class/bard/effects/5/options/0/effects/0: Gain data.starting_equipment[0].",
+    "dnd5e/class/bard/effects/5/options/1/effects/0: Gain data.starting_equipment[1].",
+    "dnd5e/class/cleric/effects/4/options/0/effects/0: Gain data.starting_equipment[0].",
+    "dnd5e/class/cleric/effects/4/options/1/effects/0: Gain data.starting_equipment[1]."
+   ],
+   "contagion": [
+    "dnd5e/contagion/cackle-fever/effects/3/then/0/on_fail/0: Infected.",
+    "dnd5e/contagion/sewer-plague/effects/0/on_fail/0: Infected; effects 1d4 days later.",
+    "dnd5e/contagion/sight-rot/effects/1/on_fail/0: Infected."
+   ],
+   "curse": [
+    "dnd5e/curse/environmental-curses/effects/0/on_fail/0: Possessed: on a 1 on a D20 Test the entity takes control; DC 15 Charisma save at the end o"
+   ],
+   "feature": [
+    "dnd5e/feature/barbarian-rage/effects/0/then/0: Rage becomes active (see the effects below while active).",
+    "dnd5e/feature/draconic-sorcery-dragon-wings/effects/1/then/0: Restore your use of it.",
+    "dnd5e/feature/oath-of-devotion-holy-nimbus/effects/0/then/0: Benefits below; end at will (no action).",
+    "dnd5e/feature/oath-of-devotion-holy-nimbus/effects/1/then/0: Regain the use; requires a level 5 spell slot.",
+    "dnd5e/feature/warlock-invocation-pact-of-the-blade/effects/0/then/0/options/0/effects/0: Weapon of your choice, in your hand.",
+    "dnd5e/feature/warlock-invocation-pact-of-the-blade/effects/0/then/0/options/1/effects/0: Not if someone else is attuned to it or another Warlock is bonded with it."
+   ],
+   "magic-item": [
+    "dnd5e/magic-item/apparatus-of-the-crab/effects/0/on_success/0: Finds the hidden catch.",
+    "dnd5e/magic-item/arrow-catching-shield/effects/1/then/0: You become the target of the attack instead.",
+    "dnd5e/magic-item/bead-of-force/effects/0/then/1: A sphere of force encloses the area: creatures that failed and are wholly inside are trapp",
+    "dnd5e/magic-item/berserker-axe/effects/4/then/0/on_fail/0: You go berserk.",
+    "dnd5e/magic-item/decanter-of-endless-water/effects/0/then/0/options/0/effects/0: 1 gallon.",
+    "dnd5e/magic-item/decanter-of-endless-water/effects/0/then/0/options/1/effects/0: 5 gallons."
+   ],
+   "rule": [
+    "dnd5e/rule/combat-encounter-difficulty/effects/0: XP budget = XP Budget per Character (party level, difficulty) × number of characters.",
+    "dnd5e/rule/mounted-combat/effects/0/then/0: ",
+    "dnd5e/rule/sentient-magic-item-traits/effects/0/on_fail/0/options/0/effects/0: ",
+    "dnd5e/rule/sentient-magic-item-traits/effects/0/on_fail/0/options/1/effects/0: ",
+    "dnd5e/rule/sentient-magic-item-traits/effects/0/on_fail/0/options/2/effects/0: ",
+    "dnd5e/rule/sentient-magic-item-traits/effects/0/on_fail/0/options/3/effects/0: "
+   ],
+   "spell": [
+    "dnd5e/spell/alter-self/effects/1/then/0: Replace the chosen option.",
+    "dnd5e/spell/animal-messenger/effects/0/on_fail/0: The Beast attempts to deliver the message.",
+    "dnd5e/spell/animal-shapes/effects/1/then/0: Transform the targets again.",
+    "dnd5e/spell/animate-dead/effects/1/then/0: Command any or all of your creatures within 60 feet: specific action and movement or a gen",
+    "dnd5e/spell/animate-objects/effects/1/then/0: Command any or all of your creatures within 500 feet.",
+    "dnd5e/spell/astral-projection/effects/0: You and up to eight willing creatures project into the Astral Plane; ends instantly if alr"
+   ]
+  }
+ },
+ "hidden_rules": {
+  "count_by_kind": {
+   "contagion": 2,
+   "creature": 14,
+   "environment": 2,
+   "feature": 6,
+   "gear": 12,
+   "magic-item": 95,
+   "poison": 2,
+   "rule": 4,
+   "spell": 29,
+   "trap": 5,
+   "weapon-mastery": 2
+  },
+  "examples": {
+   "contagion": [
+    "dnd5e/contagion/cackle-fever/effects/3/then/0 [save]: Non-gnome Humanoids; on a success immune to this carrier for 24 hours.",
+    "dnd5e/contagion/sight-rot/effects/1 [save]: Skin contact with an infected creature; on a success immune to that carrier for 24 hours."
+   ],
+   "creature": [
+    "dnd5e/creature/animated-object/effects/0/on_hit/0 [damage]: Medium or smaller; Large: 2d6 + 3 + your spellcasting ability modifier; Huge: 2d12 + 3 + your spellc",
+    "dnd5e/creature/balor/effects/6/then/0 [move]: Teleports itself or a willing demon within 10 feet of itself.",
+    "dnd5e/creature/bulette/effects/2/then/0 [move]: Spends 10 feet of movement.",
+    "dnd5e/creature/chain-devil/effects/3 [trigger]: Trigger: A creature the devil can see starts its turn within 30 feet of the devil and can see the de",
+    "dnd5e/creature/dryad/effects/4/then/0 [cast_spell]: (lasts 24 hours; ends early if the dryad casts the spell again)"
+   ],
+   "environment": [
+    "dnd5e/environment/deep-water/effects/0 [trigger]: Swimming in water more than 100 feet deep.",
+    "dnd5e/environment/extreme-heat/effects/0/then/0 [save]: DC 5 the first hour, +1 each additional hour; Disadvantage in Medium or Heavy armor; Resistance or I"
+   ],
+   "feature": [
+    "dnd5e/feature/circle-of-the-land-natures-sanctuary/effects/1/then/0 [move]: The Cube, to ground within 120 feet of you.",
+    "dnd5e/feature/evoker-overchannel/effects/1 [damage]: 2d12 per slot level on the second use, +1d12 per level on each later use; ignores Resistance and Imm",
+    "dnd5e/feature/hunter-hunters-prey/effects/0/options/1/effects/0/then/0 [attack]: Same weapon; a different creature within 5 feet of the original target, within the weapon's range, n",
+    "dnd5e/feature/monk-deflect-attacks/effects/1/then/0 [save]: A creature within 5 feet (melee attack) or 60 feet not behind Total Cover (ranged attack).",
+    "dnd5e/feature/sorcerer-metamagic-extended-spell/effects/0/then/1 [modifier]: Maximum duration 24 hours."
+   ],
+   "gear": [
+    "dnd5e/gear/acid/effects/0 [trigger]: Replace one attack with throwing the Acid; target within 20 feet you can see.",
+    "dnd5e/gear/alchemists-fire/effects/0 [trigger]: Replace one attack with throwing the Alchemist’s Fire; target within 20 feet you can see.",
+    "dnd5e/gear/ball-bearings/effects/0/then/0 [trigger]: 10-foot-square area within 10 feet; a creature entering it for the first time on a turn.",
+    "dnd5e/gear/caltrops/effects/0/then/0 [trigger]: 5-foot-square area within 5 feet.",
+    "dnd5e/gear/chain/effects/0 [activation]: An unwilling creature within 5 feet that is Grappled, Incapacitated or Restrained."
+   ],
+   "magic-item": [
+    "dnd5e/magic-item/amulet-of-the-planes/effects/0/then/0/on_fail/0 [move]: You and each creature and object within 15 feet travel to a random destination (table).",
+    "dnd5e/magic-item/bag-of-tricks/effects/0/then/0 [choice]: Thrown up to 20 feet; roll 1d8 on the table of the bag's color.",
+    "dnd5e/magic-item/bead-of-force/effects/0/then/0 [save]: Thrown up to 60 feet; the bead is destroyed.",
+    "dnd5e/magic-item/carpet-of-flying/effects/0 [activation]: Command word; moves at your direction while you are within 30 feet.",
+    "dnd5e/magic-item/crystal-ball-of-mind-reading/effects/1/then/0 [cast_spell]: No Concentration needed. Targets creatures you can see within 30 feet of the Scrying sensor; ends if"
+   ],
+   "poison": [
+    "dnd5e/poison/burnt-othur-fumes/effects/0 [save]: Repeat the save at the start of each turn: 1d6 Poison damage on each failure; ends after three succe",
+    "dnd5e/poison/pale-tincture/effects/0 [save]: Repeat every 24 hours (1d6 Poison damage on failure); the damage can't be healed while Poisoned; end"
+   ],
+   "rule": [
+    "dnd5e/rule/harvesting-poison/effects/0 [check]: Takes 1d6 minutes with a Poisoner's Kit; the creature is dead or Incapacitated.",
+    "dnd5e/rule/magical-contagions/effects/0 [save]: After 3 days of recuperation (no activity that would interrupt a Long Rest).",
+    "dnd5e/rule/mounted-combat/effects/1/then/0/on_fail/0 [move]: Fall off into an unoccupied space within 5 feet of the mount.",
+    "dnd5e/rule/mounted-combat/effects/2/then/0/on_fail/0 [move]: Fall off into an unoccupied space within 5 feet of the mount."
+   ],
+   "spell": [
+    "dnd5e/spell/antipathy-sympathy/effects/0/then/0/on_fail/0/options/1/effects/0 [apply_condition]: Moves as close as possible; can't willingly move away within 5 feet.",
+    "dnd5e/spell/antipathy-sympathy/effects/2/then/0 [save]: A creature that succeeds is immune for 1 minute.",
+    "dnd5e/spell/chain-lightning/effects/0 [save]: The first target plus up to three others within 30 feet of it; each targeted by one bolt only.",
+    "dnd5e/spell/command/effects/0/on_fail/0/options/0/effects/0 [move]: Toward you by the shortest route; ends its turn within 5 feet of you.",
+    "dnd5e/spell/confusion/effects/0/on_fail/1/then/0/options/0/effects/0 [move]: All its movement; 1d4 for direction: north, east, south, west."
+   ],
+   "trap": [
+    "dnd5e/trap/falling-net/effects/0 [save]: Huge or larger succeed automatically; an action and a DC 10 Strength (Athletics) check frees a creat",
+    "dnd5e/trap/falling-net/effects/2 [check]: Needs Thieves' Tools and the components; 10 minutes per attempt.",
+    "dnd5e/trap/poisoned-darts/effects/0/on_fail/0 [repeat]: Struck by 1d3 darts, 1d6 Poison damage each.",
+    "dnd5e/trap/rolling-stone/effects/0 [save]: Moves 60 feet a turn; its space is Difficult Terrain.",
+    "dnd5e/trap/rolling-stone/effects/2 [check]: Action; success reduces its movement by 15 feet."
+   ],
+   "weapon-mastery": [
+    "dnd5e/weapon-mastery/cleave/effects/0/then/0 [attack]: A second creature within 5 feet of the first and within your reach; no ability modifier to damage un",
+    "dnd5e/weapon-mastery/slow/effects/0/then/0 [speed]: Only if damage was dealt; reductions from this property don't exceed 10 feet."
+   ]
+  }
+ },
+ "descriptive_mechanical": {
+  "count": 3,
+  "by_kind": {
+   "rule": 3
+  },
+  "examples": [
+   "dnd5e/rule/advantage-disadvantage: Sometimes a D20 Test is modified by Advantage or Disadvantage. Advantage reflects the positive circumstances s",
+   "dnd5e/rule/character-creation-step-5-character-creation-details: The character sheet includes room to note your current Hit Points when you take damage, as well as any Tempora",
+   "dnd5e/rule/glossary-conventions: **“You.”** The game’s rules—in this glossary and elsewhere—often talk about something happening to you in the "
+  ]
+ },
+ "text_breaks": {
+  "count": 329,
+  "examples": [
+   "dnd5e/background/criminal: …'t:** *Choose A or B:* (A) 2 Daggers, Thieves’' | 'Tools, Crowbar, 2 Pouches, Traveler’s Cl'",
+   "dnd5e/rule/action: …'Attack Dash Disengage' | 'Dodge Help Hide'",
+   "dnd5e/rule/action: …'Dodge Help Hide' | 'Influence Magic Ready'",
+   "dnd5e/rule/action: …'Influence Magic Ready' | 'Search Study Utilize'",
+   "dnd5e/rule/area-of-effect: …'Cone Cube' | 'Cylinder Emanation'",
+   "dnd5e/rule/area-of-effect: …'Cylinder Emanation' | 'Line Sphere'",
+   "dnd5e/rule/area-of-effect: …'Line Sphere' | 'An area of effect has a point of origin,'",
+   "dnd5e/rule/character-creation-step-5-character-creation-details: …'check modifier' | 'Include all modifiers that apply to your'",
+   "dnd5e/rule/character-creation-step-5-character-creation-details: …'+ Proficiency Bonus' | 'Look up the damage and properties of you'",
+   "dnd5e/rule/character-creation-step-5-character-creation-details: …'+ Proficiency Bonus' | 'Your spellcasting ability modifier for a'",
+   "dnd5e/rule/combat-cover: …'+5 bonus to AC and Dexterity saving throws' | 'An object that covers at least three-qua'",
+   "dnd5e/rule/combat-encounter-difficulty: …'.** A low-difficulty encounter for four level' | '1 characters has an XP budget of 50 × 4,'",
+   "dnd5e/rule/combat-encounter-difficulty: …'.** A high-difficulty encounter for six level' | '15 characters has an XP budget of 7,800 '",
+   "dnd5e/rule/condition: …'linded Charmed Deafened Exhaustion Frightened' | 'Grappled Incapacitated Invisible Paralyz'",
+   "dnd5e/rule/condition: …'d Incapacitated Invisible Paralyzed Petrified' | 'Poisoned Prone Restrained Stunned Uncons'",
+   "dnd5e/rule/creature-type: …'Aberration Beast Celestial Construct Dragon' | 'Elemental Fey Fiend Giant Humanoid'",
+   "dnd5e/rule/creature-type: …'Elemental Fey Fiend Giant Humanoid' | 'Monstrosity Ooze Plant Undead'",
+   "dnd5e/rule/creature-type: …'Monstrosity Ooze Plant Undead' | 'The types don’t have rules themselves, b'",
+   "dnd5e/rule/stat-block-overview: …' Actions.** This section provides a monster’s' | 'Bonus Actions, if any.'",
+   "dnd5e/rule/truesight: …'Darkness.** You can see in normal and magical' | 'Darkness.'",
+   "dnd5e/species/dragonborn: …'**Speed:** 30 feet' | 'As a Dragonborn, you have these special '",
+   "dnd5e/species/dwarf: …'**Speed:** 30 feet' | 'As a Dwarf, you have these special trait'",
+   "dnd5e/species/elf: …'**Speed:** 30 feet' | 'As an Elf, you have these special traits'",
+   "dnd5e/species/gnome: …'**Speed:** 30 feet' | 'As a Gnome, you have these special trait'",
+   "dnd5e/species/goliath: …'**Speed:** 35 feet' | 'As a Goliath, you have these special tra'",
+   "dnd5e/species/halfling: …'**Speed:** 30 feet' | 'As a Halfling, you have these special tr'",
+   "dnd5e/species/human: …'**Speed:** 30 feet' | 'As a Human, you have these special trait'",
+   "dnd5e/species/orc: …'**Speed:** 30 feet' | 'As an Orc, you have these special traits'",
+   "dnd5e/species/tiefling: …'**Speed:** 30 feet' | 'As a Tiefling, you have the following sp'",
+   "dnd5e/spell/acid-splash: …'**Duration:** Instantaneous' | 'You create an acidic bubble at a point w'",
+   "dnd5e/spell/aid: …'**Duration:** 8 hours' | 'Choose up to three creatures within rang'",
+   "dnd5e/spell/alarm: …'**Duration:** 8 hours' | 'You set an alarm against intrusion. Choo'",
+   "dnd5e/spell/alter-self: …'**Duration:** Concentration, up to 1 hour' | 'You alter your physical form. Choose one'",
+   "dnd5e/spell/animal-friendship: …'**Duration:** 24 hours' | 'Target a Beast that you can see within r'",
+   "dnd5e/spell/animal-shapes: …'**Duration:** 24 hours' | 'Choose any number of willing creatures t'",
+   "dnd5e/spell/animate-dead: …'**Duration:** Instantaneous' | 'Choose a pile of bones or a corpse of a '",
+   "dnd5e/spell/animate-objects: …'**Duration:** Concentration, up to 1 minute' | 'Objects animate at your command. Choose '",
+   "dnd5e/spell/antilife-shell: …'**Duration:** Concentration, up to 1 hour' | 'An aura extends from you in a 10-foot Em'",
+   "dnd5e/spell/antimagic-field: …'**Duration:** Concentration, up to 1 hour' | 'An aura of antimagic surrounds you in 10'",
+   "dnd5e/spell/antipathy-sympathy: …'**Duration:** 10 days' | 'As you cast the spell, choose whether it'"
+  ]
+ },
+ "broken_emphasis": {
+  "count": 803,
+  "examples": [
+   "dnd5e/background/acolyte: '**Equipment:** *Choose A or B:* (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, '",
+   "dnd5e/background/criminal: '**Equipment:** *Choose A or B:* (A) 2 Daggers, Thieves’'",
+   "dnd5e/background/sage: '**Equipment:** *Choose A or B:* (A) Quarterstaff, Calligrapher’s Supplies, Book (history),'",
+   "dnd5e/background/soldier: '**Tool Proficiency:** *Choose one kind of Gaming Set* (see “Equipment”)'",
+   "dnd5e/background/soldier: '**Equipment:** *Choose A or B:* (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above)'",
+   "dnd5e/creature/aboleth: '***Tentacle.*** *Melee Attack Roll:* +9, reach 15 ft. *Hit:* 12 (2d6 +\\xa05) Bludgeoning dama'",
+   "dnd5e/creature/aboleth: '***Consume Memories.*** *Intelligence Saving Throw:* DC 16, one creature within 30 feet th'",
+   "dnd5e/creature/aboleth: '***Dominate Mind (2/Day).*** *Wisdom Saving Throw:* DC 16, one creature the aboleth can se'",
+   "dnd5e/creature/adult-black-dragon: '***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 13 (2d6 +\\xa06) Slashing damage plu'",
+   "dnd5e/creature/adult-black-dragon: '***Acid Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 18, each creature in a 60-f'",
+   "dnd5e/creature/adult-black-dragon: '**At Will:** *Acid Arrow* (level 3 version), *Detect Magic*, *Fear*'",
+   "dnd5e/creature/adult-black-dragon: '**1/Day Each:** *Speak with Dead*, *Vitriolic Sphere*'",
+   "dnd5e/creature/adult-black-dragon: '***Cloud of Insects.*** *Dexterity Saving Throw:* DC 17, one creature the dragon can see w'",
+   "dnd5e/creature/adult-blue-dragon: '***Rend.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 16 (2d8 +\\xa07) Slashing damage plu'",
+   "dnd5e/creature/adult-blue-dragon: '***Lightning Breath (Recharge 5–6).*** *Dexterity Saving Throw:* DC 19, each creature in a'",
+   "dnd5e/creature/adult-blue-dragon: '**At Will:** *Detect Magic*, *Invisibility*, *Mage Hand*, *Shatter*'",
+   "dnd5e/creature/adult-blue-dragon: '**1/Day Each:** *Scrying*, *Sending*'",
+   "dnd5e/creature/adult-brass-dragon: '***Rend.*** *Melee Attack Roll:* +11, reach 10 ft. *Hit:* 17 (2d10 +\\xa06) Slashing damage pl'",
+   "dnd5e/creature/adult-brass-dragon: '***Fire Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 18, each creature in a '",
+   "dnd5e/creature/adult-brass-dragon: '***Sleep Breath.*** *Constitution Saving Throw:* DC 18, each creature in a 60-foot Cone. *'",
+   "dnd5e/creature/adult-brass-dragon: '**At Will:** *Detect Magic*, *Minor Illusion*, *Scorching Ray*,'",
+   "dnd5e/creature/adult-brass-dragon: '**1/Day Each:** *Detect Thoughts*, *Control Weather*'",
+   "dnd5e/creature/adult-brass-dragon: '***Scorching Sands.*** *Dexterity Saving Throw:* DC 16, one creature the dragon can see wi'",
+   "dnd5e/creature/adult-bronze-dragon: '***Rend.*** *Melee Attack Roll:* +12, reach 10 ft. *Hit:* 16 (2d8 +\\xa07) Slashing damage plu'",
+   "dnd5e/creature/adult-bronze-dragon: '***Lightning Breath (Recharge 5–6)*****.** *Dexterity Saving Throw:* DC 19, each creature '"
+  ]
+ },
+ "registry": {
+  "sizes": {
+   "variables": 55,
+   "stats": 72,
+   "rolls": 9,
+   "events": 108,
+   "predicates": 221,
+   "frequencies": 9,
+   "damage_types": 13,
+   "sizes": 6,
+   "creature_types": 14,
+   "area_shapes": 6,
+   "senses": 17,
+   "movement_modes": 5,
+   "alignments": 10,
+   "restrictions": 60,
+   "conditions": 15,
+   "attitudes": 3,
+   "pools": 2,
+   "schools": 8
+  },
+  "unused": {
+   "predicates": [
+    "effect_requires_seen_target",
+    "has_expertise",
+    "moved_on_foot_before",
+    "stable"
+   ],
+   "variables": [
+    "cr",
+    "days_without_food",
+    "hp",
+    "temp_hp",
+    "xp"
+   ],
+   "events": [
+    "condition_ended",
+    "level_gained",
+    "regains_hit_points",
+    "rest_interrupted",
+    "round_end"
+   ],
+   "stats": [
+    "class_features",
+    "creature_type",
+    "feats",
+    "hit_point_dice",
+    "hp_max_per_level",
+    "languages",
+    "saving_throw_proficiencies",
+    "skill_proficiencies",
+    "speed"
+   ]
+  },
+  "unused_count": {
+   "predicates": 4,
+   "variables": 5,
+   "events": 5,
+   "stats": 9,
+   "restrictions": 0
+  },
+  "bad_args": [
+   "dnd5e/action/dodge/effects/0/then/0/when/all/0: can_see args ['target'] vs params []",
+   "dnd5e/contagion/cackle-fever/effects/1/condition/all/1/not: deals_damage_type args ['type'] vs params ['damage_type']",
+   "dnd5e/creature/baboon/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/blood-hawk/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/dire-wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/giant-rat/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/giant-vulture/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/hell-hound/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/hobgoblin-warrior/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/hyena/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/kobold-warrior/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/lion/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/reef-shark/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/tough-boss/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/tough/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/vulture/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/warrior-infantry/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/werewolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/winter-wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/creature/wolf/effects/0/when: ally_within_feet_of_target args ['feet', 'not_incapacitated'] vs params ['feet']",
+   "dnd5e/environment/deep-water/effects/0/condition/not: has_speed args ['mode'] vs params ['movement_mode']",
+   "dnd5e/feature/bard-bardic-inspiration/effects/0/target/filter/predicate/all/1/any/0: can_see args ['who'] vs params []",
+   "dnd5e/feature/college-of-lore-cutting-words/effects/0/condition/all/0: can_see args ['who'] vs params []",
+   "dnd5e/feature/draconic-sorcery-elemental-affinity/effects/2/when: deals_damage_type args ['type'] vs params ['damage_type']",
+   "dnd5e/feature/fiend-patron-hurl-through-hell/effects/0/then/1/on_fail/0/when/not: creature_type args ['type'] vs params ['creature_type']",
+   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/0: deals_damage_type args ['type'] vs params ['damage_type']",
+   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/1: deals_damage_type args ['type'] vs params ['damage_type']",
+   "dnd5e/feature/monk-deflect-attacks/effects/0/condition/any/2: deals_damage_type args ['type'] vs params ['damage_type']",
+   "dnd5e/feature/rogue-uncanny-dodge/effects/0/condition: can_see args ['who'] vs params []",
+   "dnd5e/feature/sorcerer-metamagic-transmuted-spell/effects/0/condition/any/0: deals_damage_type args ['type'] vs params ['damage_type']"
+  ],
+  "bad_args_count": 52
+ },
+ "spells": {
+  "count": 2,
+  "items": [
+   "dnd5e/spell/dominate-monster: higher-level text without slot-level structure",
+   "dnd5e/spell/major-image: higher-level text without slot-level structure"
+  ]
+ },
+ "creatures": {
+  "count": 27,
+  "items": [
+   "dnd5e/creature/adult-copper-dragon/effects/2/then/0: save without outcome",
+   "dnd5e/creature/adult-gold-dragon/effects/8/then/0: save without outcome",
+   "dnd5e/creature/ancient-copper-dragon/effects/2/then/0: save without outcome",
+   "dnd5e/creature/ancient-gold-dragon/effects/8/then/0: save without outcome",
+   "dnd5e/creature/blood-hawk/effects/1/then/0: attack without on_hit",
+   "dnd5e/creature/chimera/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/copper-dragon-wyrmling/effects/1/then/0: save without outcome",
+   "dnd5e/creature/draconic-spirit/effects/1/then/0: attack without on_hit",
+   "dnd5e/creature/giant-insect/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/giant-seahorse/effects/1/then/0: attack without on_hit",
+   "dnd5e/creature/gibbering-mouther/effects/0: save without outcome",
+   "dnd5e/creature/gold-dragon-wyrmling/effects/2/then/0: save without outcome",
+   "dnd5e/creature/half-dragon/effects/1/then/0: save without outcome",
+   "dnd5e/creature/jackal/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/kraken/effects/7/then/0: save without outcome",
+   "dnd5e/creature/rust-monster/effects/1/then/0: save without outcome",
+   "dnd5e/creature/sphinx-of-lore/effects/14/then/0: save without outcome",
+   "dnd5e/creature/sphinx-of-valor/effects/10/then/0: save without outcome",
+   "dnd5e/creature/sprite/effects/2/then/0: save without outcome",
+   "dnd5e/creature/swarm-of-bats/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/swarm-of-insects/effects/1/then/0: attack without on_hit",
+   "dnd5e/creature/swarm-of-piranhas/effects/1/then/0: attack without on_hit",
+   "dnd5e/creature/swarm-of-rats/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/swarm-of-ravens/effects/0/then/0: attack without on_hit",
+   "dnd5e/creature/will-o-wisp/effects/1/then/0: save without outcome",
+   "dnd5e/creature/young-copper-dragon/effects/2/then/0: save without outcome",
+   "dnd5e/creature/young-gold-dragon/effects/2/then/0: save without outcome"
+  ]
+ },
+ "kind_schemas": {
+  "with_schema": [
+   "spell"
+  ],
+  "without_schema": {
+   "action": 12,
+   "area": 6,
+   "armor": 13,
+   "attitude": 3,
+   "background": 4,
+   "class": 12,
+   "condition": 15,
+   "contagion": 3,
+   "creature": 336,
+   "curse": 5,
+   "environment": 9,
+   "feat": 17,
+   "feature": 303,
+   "gear": 98,
+   "hazard": 5,
+   "lifestyle": 7,
+   "magic-item": 258,
+   "mount": 8,
+   "poison": 14,
+   "rule": 318,
+   "service": 28,
+   "species": 9,
+   "spell-list": 16,
+   "subclass": 12,
+   "tool": 25,
+   "trap": 8,
+   "vehicle": 12,
+   "weapon": 38,
+   "weapon-mastery": 8,
+   "weapon-property": 10
+  }
+ },
+ "rules_text_only": {
+  "count": 16,
+  "examples": [
+   "dnd5e/trap/collapsing-roof/data/rules/0 (trigger)",
+   "dnd5e/trap/collapsing-roof/data/rules/1 (duration)",
+   "dnd5e/trap/falling-net/data/rules/0 (trigger)",
+   "dnd5e/trap/falling-net/data/rules/1 (duration)",
+   "dnd5e/trap/fire-casting-statue/data/rules/0 (trigger)",
+   "dnd5e/trap/fire-casting-statue/data/rules/1 (duration)",
+   "dnd5e/trap/hidden-pit/data/rules/0 (trigger)",
+   "dnd5e/trap/hidden-pit/data/rules/1 (duration)",
+   "dnd5e/trap/poisoned-darts/data/rules/0 (trigger)",
+   "dnd5e/trap/poisoned-darts/data/rules/1 (duration)",
+   "dnd5e/trap/poisoned-needle/data/rules/0 (trigger)",
+   "dnd5e/trap/poisoned-needle/data/rules/1 (duration)",
+   "dnd5e/trap/rolling-stone/data/rules/0 (trigger)",
+   "dnd5e/trap/rolling-stone/data/rules/1 (duration)",
+   "dnd5e/trap/spiked-pit/data/rules/0 (trigger)",
+   "dnd5e/trap/spiked-pit/data/rules/1 (duration)"
+  ]
+ },
+ "tier0": [
+  "dnd5e/curse/cursed-magic-items",
+  "dnd5e/rule/adventuring-equipment",
+  "dnd5e/rule/casting-spells",
+  "dnd5e/rule/choose-a-character-sheet",
+  "dnd5e/rule/coins",
+  "dnd5e/rule/crafting-magic-items",
+  "dnd5e/rule/curses-toolbox",
+  "dnd5e/rule/exploration",
+  "dnd5e/rule/hazards",
+  "dnd5e/rule/magic-item-category-wondrous-items",
+  "dnd5e/rule/magic-items",
+  "dnd5e/rule/parts-of-a-stat-block",
+  "dnd5e/rule/playing-the-game-damage-types",
+  "dnd5e/rule/playing-the-game-immunity",
+  "dnd5e/rule/rules-definitions",
+  "dnd5e/rule/school-of-magic",
+  "dnd5e/rule/sidebar-improvised-weapons",
+  "dnd5e/rule/stat-block-actions",
+  "dnd5e/rule/stat-block-bonus-action",
+  "dnd5e/rule/stat-block-challenge-rating",
+  "dnd5e/rule/stat-block-reactions",
+  "dnd5e/rule/stat-block-resistances-and-vulnerabilities",
+  "dnd5e/rule/stat-block-senses",
+  "dnd5e/rule/stat-block-speed",
+  "dnd5e/rule/the-bonus-doesnt-stack",
+  "dnd5e/rule/the-six-abilities",
+  "dnd5e/rule/using-magic-items"
+ ],
+ "inconsistencies": [
+  "dnd5e/spell-list/bard:  Phantasmal Force: its description header names Bard but the printed Bard spell l",
+  "dnd5e/spell-list/druid:  Flaming Sphere: school 'Evocation' in the Druid spell list but 'Conjuration' in ",
+  "dnd5e/spell-list/sorcerer:  Flaming Sphere: school 'Evocation' in the Sorcerer spell list but 'Conjuration' ",
+  "dnd5e/spell-list/sorcerer:  Mind Spike: its description header names Sorcerer but the printed Sorcerer spell",
+  "dnd5e/spell-list/sorcerer:  Phantasmal Force: its description header names Sorcerer but the printed Sorcerer",
+  "dnd5e/spell-list/wizard:  Flaming Sphere: school 'Evocation' in the Wizard spell list but 'Conjuration' in",
+  "dnd5e/spell-list/wizard:  Phantasmal Force: its description header names Wizard but the printed Wizard spe"
+ ]
+}
