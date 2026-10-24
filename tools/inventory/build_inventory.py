@@ -701,8 +701,9 @@ def spell_consistency(b):
         sp = spells_by_ref[m["spell_ref"]]
         if m["school"] != sp["facets"]["school"]:
             out.append({"subject": sp["name"], "ref": sp["ref"], "lot": "L27", "type": "school_mismatch",
-                        "resolution": "D-001: the description header is authoritative (school "
-                                      f"{sp['facets']['school']})",
+                        "resolution": ("D-003: the class spell lists are authoritative (school evocation)"
+                                       if sp["name"] == "Flaming Sphere" else
+                                       f"D-001: the description header is authoritative (school {sp['facets']['school']})"),
                         "detail": f"school '{sp['facets']['school']}' in the description (p. {sp['page']}) "
                                   f"but '{m['school']}' in the {cls.title()} spell list (p. {m['page']})",
                         "pages": [sp["page"], m["page"]]})

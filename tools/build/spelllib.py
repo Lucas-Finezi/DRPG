@@ -8,7 +8,8 @@ entrylib.build. Two placeholders may be used inside effects and are replaced by 
 own header values: "@duration" (the spell's duration) and "@range" (the spell's range).
 The anchor "^" stands for the start of the first paragraph after the header.
 
-Classes come from the description header (decision D-001), the school too.
+Classes come from the description header (decision D-001), the school too, except where
+decision D-003 fixes it (Flaming Sphere: Evocation, as in the class spell lists).
 """
 import json
 import re
@@ -23,6 +24,12 @@ INV = {e["name"]: e for e in json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/entri
     encoding="utf-8"))["entries"] if e["kind"] == "spell"}
 RELOCATED = json.loads((ROOT / "inventory/dnd5e/srd-5.2.1/outline.json").read_text(encoding="utf-8")).get(
     "relocated_fragments", [])
+# D-003: schools decided by the project owner where the description header disagrees with
+# every class spell list: name -> (school, inconsistency detail, pages)
+SCHOOL_DECISIONS = {
+    "Flaming Sphere": ("evocation", "school 'Conjuration' in the description header (p. 132) but 'Evocation' in the Druid, "
+                                    "Sorcerer and Wizard spell lists (pp. 44, 68, 80); D-003: Evocation", [44, 68, 80, 132]),
+}
 SCHOOLS = ["abjuration", "conjuration", "divination", "enchantment", "evocation", "illusion", "necromancy",
            "transmutation"]
 NUM = {"one": 1, "two": 2, "three": 3}
@@ -155,6 +162,8 @@ def header(name):
             break
     data = {"casting_time": parse_casting_time(fields["Casting Time"]), "range": parse_range(fields["Range"]),
             "components": parse_components(fields["Components"]), "duration": parse_duration(fields["Duration"])}
+    if name in SCHOOL_DECISIONS:
+        school = SCHOOL_DECISIONS[name][0]
     facets = {"level": level, "school": school, "classes": classes,
               "concentration": bool(data["duration"].get("concentration")),
               "ritual": bool(data["casting_time"].get("ritual"))}
@@ -356,6 +365,9 @@ def SPELL(name, items, lot, extra_data=None, skip=(), **kw):
     plan = [(None, "sys", ["/facets", "/data/casting_time", "/data/range", "/data/components", "/data/duration"])]
     plan += [(first if anchor == "^" else anchor, tag, _fill(payload, facets, data)) for anchor, tag, payload in items]
     plan = resolve_rule_refs(plan)
+    if name in SCHOOL_DECISIONS:
+        kw.setdefault("inconsistencies", []).append({"detail": SCHOOL_DECISIONS[name][1], "pages": SCHOOL_DECISIONS[name][2],
+                                                     "decision": "D-003"})
     e = build("spell", slugify(name), name, nodes, lot, f"Spells/Spell Descriptions/{name}", plan,
               facets=facets, data=data, **kw)
     return e

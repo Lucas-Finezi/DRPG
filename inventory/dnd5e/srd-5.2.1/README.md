@@ -121,9 +121,9 @@ Gerado por `tools/inventory/build_inventory.py` a partir de `extraction/SRD_CC_v
 
 Divergências internas do SRD, confirmadas no texto bruto das duas ferramentas. Não são corrigidas aqui: o lote dono registra a divergência e, se preciso, uma decisão do mestre (`master_decision`).
 
-- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Druid spell list (p. 44) → D-001: the description header is authoritative (school Conjuration)
-- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Sorcerer spell list (p. 68) → D-001: the description header is authoritative (school Conjuration)
-- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Wizard spell list (p. 80) → D-001: the description header is authoritative (school Conjuration)
+- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Druid spell list (p. 44) → D-003: the class spell lists are authoritative (school evocation)
+- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Sorcerer spell list (p. 68) → D-003: the class spell lists are authoritative (school evocation)
+- **Flaming Sphere** (L27): school 'Conjuration' in the description (p. 132) but 'Evocation' in the Wizard spell list (p. 80) → D-003: the class spell lists are authoritative (school evocation)
 - **Mind Spike** (L27): description header names Sorcerer (p. 149) but the spell is absent from the Sorcerer spell list → D-001: enabled for Sorcerer (the description header is authoritative)
 - **Phantasmal Force** (L27): description header names Bard (p. 151) but the spell is absent from the Bard spell list → D-001: enabled for Bard (the description header is authoritative)
 - **Phantasmal Force** (L27): description header names Sorcerer (p. 151) but the spell is absent from the Sorcerer spell list → D-001: enabled for Sorcerer (the description header is authoritative)
