@@ -75,20 +75,34 @@ def main():
     out["descriptive_mechanical"] = {"count": sum(len(v) for v in desc.values()), "by_kind": {k: len(v) for k, v in desc.items()},
                                      "examples": [x for v in desc.values() for x in v][:25]}
 
-    # text breaks
-    breaks, emph = [], []
+    # text breaks (labelled header lines and column word lists are layout, counted apart)
+    def strip_emph(t):
+        t, prev = t.replace("\\*", ""), None
+        while prev != t:
+            prev = t
+            t = re.sub(r"\*\*\*([^*]+?)\*\*\*", r"\1", t)
+            t = re.sub(r"\*\*([^*]+?)\*\*", r"\1", t)
+            t = re.sub(r"(?<!\*)\*([^*]+?)\*(?!\*)", r"\1", t)
+        return t
+    breaks, emph, wordlists = [], [], []
     for e in entries:
         paras = e["text"].split("\n\n")
         for a, b in zip(paras, paras[1:]):
             a1, b1 = a.rstrip(), b.lstrip()
             if not a1 or not b1 or a1.startswith(("|", "#", "- ")) or b1.startswith(("|", "#", "- ", "*", "**")):
                 continue
-            if re.search(r"[A-Za-z,’]$", a1) and re.match(r"^([a-z]|\d+ [a-z(]|[A-Z][a-z]+[ .,])", b1) and not re.search(r":$", a1):
+            if re.match(r"^\*\*[^*]+:\*\*", a1):
+                continue
+            if re.fullmatch(r"(?:[A-Z][a-z]+(?: |$)){2,6}", a1 + " "):
+                wordlists.append(e["ref"])
+                continue
+            if re.search(r"[A-Za-z,’]$", a1) and re.match(r"^([a-z]|\d+ [a-z(]|[A-Z][a-z]+[ .,])", b1):
                 breaks.append(f"{e['ref']}: …{a1[-45:]!r} | {b1[:40]!r}")
         for ln in e["text"].split("\n"):
-            core = ln.replace("\\*", "")
-            if core.count("*") % 2 or "* *" in core or re.search(r"[A-Za-z]\*\*[A-Za-z]", core):
+            if "*" in strip_emph(ln):
                 emph.append(f"{e['ref']}: {ln[:90]!r}")
+    out["column_word_lists"] = sorted(set(wordlists))
+    out["nbsp_in_text"] = sum(e["text"].count("\xa0") for e in entries)
     out["text_breaks"] = {"count": len(breaks), "examples": breaks[:40]}
     out["broken_emphasis"] = {"count": len(emph), "examples": emph[:25]}
 
