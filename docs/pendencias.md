@@ -84,7 +84,7 @@ elas ainda não pegam.
 Relatório completo em `reports/engine_contract.json`. Não bloqueia os dados; é a lista do
 que o motor definitivo precisa executar além do que o protótipo já faz.
 
-17. **Entradas com efeitos executáveis pelo protótipo:** 869 de 1.391. Faltam as ops:
+17. **Entradas com efeitos executáveis pelo protótipo:** 952 de 1.391 (869 antes da simulação de campanha). Faltam as ops:
     - `cast_spell` (154 entradas);
     - `summon` (23);
     - `transform` (5);
@@ -103,3 +103,21 @@ que o motor definitivo precisa executar além do que o protótipo já faz.
     caminhos da simulação, 5 de 18 notas escondiam mecânica: Sleep, Guiding Bolt, Vex,
     Cleave e Arcane Recovery, todas já corrigidas. Revisar as 351 com o mesmo critério
     (D-005).
+
+## F. Encontradas na simulação de campanha (`docs/simulacao-phandelver.md`)
+
+O motor seguiu em todos os casos, com valor de reserva registrado como `DATA_GAP`.
+
+21. **Recarga só na nota.** "Recharge X–Y" de giant-spider, young-green-dragon,
+    doppelganger e gibbering-mouther (e de outras criaturas do bestiário). Falta um campo
+    `activation.recharge`.
+22. **ASI sem escolha declarada.** `ability_score.chosen` é usado, mas não é uma escolha
+    declarada na feat Ability Score Improvement.
+23. **Perícias do Bard:** `choose` sem `from`; as opções estão só na nota.
+24. **Spell Scroll:** a ação Read referencia a própria entrada.
+25. **Armas +1/+2/+3:** o bônus depende de `item_state.wielded`, e não de "ataque com esta
+    arma".
+26. **Eldritch Invocations:** as opções estão só na nota (faceta `feature_type`).
+27. **Gatilhos sem emissor no motor.** Cutting Words (`creature_roll_made`,
+    `roll_succeeded`) e Tactical Mind (`fails_ability_check`). Metamagic não tem efeitos
+    estruturados (só `data.rules`).

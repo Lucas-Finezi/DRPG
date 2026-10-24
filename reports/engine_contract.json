@@ -1,52 +1,20 @@
 {
  "op": {
   "used": 32,
-  "implemented": 28,
+  "implemented": 31,
   "missing": [
-   {
-    "name": "cast_spell",
-    "entries": 154
-   },
-   {
-    "name": "sense",
-    "entries": 35
-   },
    {
     "name": "summon",
     "entries": 23
-   },
-   {
-    "name": "transform",
-    "entries": 5
    }
   ]
  },
  "pred": {
   "used": 145,
-  "implemented": 34,
+  "implemented": 57,
   "missing": [
    {
-    "name": "target_size_at_most",
-    "entries": 42
-   },
-   {
-    "name": "creature_is",
-    "entries": 25
-   },
-   {
-    "name": "in_light",
-    "entries": 8
-   },
-   {
-    "name": "spell_of_class",
-    "entries": 7
-   },
-   {
     "name": "target_is_object",
-    "entries": 6
-   },
-   {
-    "name": "own_turn",
     "entries": 6
    },
    {
@@ -56,10 +24,6 @@
    {
     "name": "roll_uses_ability",
     "entries": 5
-   },
-   {
-    "name": "ability_score_below",
-    "entries": 4
    },
    {
     "name": "spell_school",
@@ -78,19 +42,7 @@
     "entries": 3
    },
    {
-    "name": "resource_available",
-    "entries": 3
-   },
-   {
-    "name": "is_chosen_spell",
-    "entries": 3
-   },
-   {
     "name": "check_for_movement",
-    "entries": 3
-   },
-   {
-    "name": "target_is_marked",
     "entries": 3
    },
    {
@@ -170,10 +122,6 @@
     "entries": 2
    },
    {
-    "name": "marked_target_at_0_hp",
-    "entries": 2
-   },
-   {
     "name": "hidden",
     "entries": 1
    },
@@ -186,10 +134,6 @@
     "entries": 1
    },
    {
-    "name": "source_in_line_of_sight",
-    "entries": 1
-   },
-   {
     "name": "minutes_exceed_con_score",
     "entries": 1
    },
@@ -198,31 +142,11 @@
     "entries": 1
    },
    {
-    "name": "wielded_two_handed",
-    "entries": 1
-   },
-   {
-    "name": "adds_ability_mod_to_damage",
-    "entries": 1
-   },
-   {
-    "name": "holds_bardic_inspiration_die",
-    "entries": 1
-   },
-   {
     "name": "has_heroic_inspiration",
     "entries": 1
    },
    {
-    "name": "known_wild_shape_form",
-    "entries": 1
-   },
-   {
     "name": "on_stone_surface",
-    "entries": 1
-   },
-   {
-    "name": "reduced_by_source",
     "entries": 1
    },
    {
@@ -231,10 +155,6 @@
    },
    {
     "name": "big_enough_space",
-    "entries": 1
-   },
-   {
-    "name": "check_to_end_condition",
     "entries": 1
    },
    {
@@ -251,22 +171,6 @@
    },
    {
     "name": "used_feature_this_trigger",
-    "entries": 1
-   },
-   {
-    "name": "holds_melee_weapon",
-    "entries": 1
-   },
-   {
-    "name": "has_advantage_on_roll",
-    "entries": 1
-   },
-   {
-    "name": "has_disadvantage_on_roll",
-    "entries": 1
-   },
-   {
-    "name": "moved_this_turn",
     "entries": 1
    },
    {
@@ -379,14 +283,6 @@
    },
    {
     "name": "on_slippery_surface",
-    "entries": 1
-   },
-   {
-    "name": "spell_on_your_list",
-    "entries": 1
-   },
-   {
-    "name": "spell_level_above_castable",
     "entries": 1
    },
    {
@@ -704,7 +600,7 @@
  },
  "entries": {
   "with_effects": 1391,
-  "fully_executable_by_prototype": 869
+  "fully_executable_by_prototype": 952
  },
  "notes_to_review": {
   "count": 351,

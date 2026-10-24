@@ -99,13 +99,20 @@ class Builder:
         if op == "proficiency":
             cat = fx["category"]
             if fx.get("items"):
-                items = fx["items"]
+                items = list(fx["items"])
+                if fx.get("from") and not fx.get("choose"):
+                    log.call("op", "proficiency", "DATA_GAP", ref, "'from' without 'choose' (" + fx.get("note", "")[:50]
+                             + "): engine grants the listed kinds too")
+                    items += fx["from"]
             elif fx.get("choose"):
                 pool = fx.get("from")
                 if not pool:
                     log.call("op", "proficiency", "DATA_GAP", ref, "choose without 'from' (options only in a note)")
                     pool = []
-                want = picks.get("skills" if cat == "skill" else cat, {}).get(ref) or [x for x in pool if x not in c.prof[cat]]
+                want = picks.get("skills" if cat == "skill" else cat, {}).get(ref)
+                if not want and picks.get("chooser"):
+                    want = picks["chooser"].proficiencies(c, ref, cat, pool, fx)
+                want = want or [x for x in pool if x not in c.prof.setdefault(cat, set())]
                 if fx.get("expertise"):   # expertise in a skill you are already proficient in
                     want = [x for x in want if x in c.prof[cat] and x not in c.prof["expertise"]]
                 else:
@@ -117,15 +124,18 @@ class Builder:
                 log.call("op", "proficiency", "DATA_GAP", ref, "neither items nor choose: only a note")
                 items = []
             for it in items:
-                c.prof["expertise" if fx.get("expertise") else cat].add(it)
+                c.prof.setdefault("expertise" if fx.get("expertise") else cat, set()).add(it)
             log.call("op", "proficiency", "OK", ref, cat)
         elif op == "grant" and "refs" not in fx:
             for it in fx.get("items", []):
                 if it.get("ref"):
-                    c.items.append({"ref": it["ref"], "state": "carried", "quantity": it["quantity"]})
+                    c.items.append({"ref": it["ref"], "state": "carried", "quantity": it["quantity"],
+                                    "name": it.get("name") or self.cat.get(it["ref"])["name"]})
                 else:
+                    c.inventory.append({"name": it["name"], "quantity": it["quantity"]})
                     log.call("item", it["name"], "OK", ref, "no catalog entry (kept by name)")
             c.gp = getattr(c, "gp", 0) + fx.get("gp", 0)
+            c.coins["gp"] += fx.get("gp", 0)
             log.call("op", "grant", "OK", ref, "equipment")
             c.equipment_granted = True
         elif op == "grant":
@@ -133,8 +143,20 @@ class Builder:
             if all("/spell-list/" in r for r in refs):
                 return self.grant_spells(c, ref, fx)
             if fx.get("choose"):
+                n = int(self.eng.ev(fx["choose"], c, Ctx(c, ref=ref)))
                 want = picks.get("grant", {}).get(ref)
-                refs = [want] if want else refs[:int(fx["choose"])]
+                if ref.endswith("warlock-eldritch-invocations"):
+                    log.call("op", "grant", "DATA_GAP", ref, "options only in a note (feature_type eldritch_invocation); "
+                                                           "engine FALLBACK lists features with that facet")
+                    pool = [e["ref"] for e in self.cat.kind("feature")
+                            if (e.get("facets") or {}).get("feature_type") == "eldritch_invocation"]
+                    want = picks["chooser"].invocations(c, pool, n) if picks.get("chooser") else refs[:n]
+                    refs = [r for r in want if r not in c.features]
+                elif not want and picks.get("chooser"):
+                    want = picks["chooser"].grant(c, ref, refs, n)
+                    refs = want if isinstance(want, list) else [want]
+                else:
+                    refs = [want] if want else refs[:n]
             log.call("op", "grant", "OK", ref)
             for r in refs:
                 if "/spell/" in r:
@@ -148,6 +170,8 @@ class Builder:
         elif op == "choice":
             k = fx.get("id") or key
             want = picks.get("choice", {}).get((ref, k))
+            if want is None and picks.get("chooser"):
+                want = picks["chooser"].choice(c, ref, fx, k)
             ids = [o["id"] for o in fx["options"]]
             n = fx.get("choose", 1) if isinstance(fx.get("choose", 1), int) else 1
             chosen = (want if isinstance(want, list) else [want if want in ids else ids[0]] * n)[:n]
@@ -171,6 +195,11 @@ class Builder:
             log.call("op", "modifier", "OK", ref, "cantrips_known")
         elif op == "modifier" and fx["stat"].startswith("ability_score."):
             ab = fx["stat"].split(".")[1]
+            if ab in ("chosen", "chosen_second"):
+                log.call("op", "modifier", "DATA_GAP", ref, "which ability is not a declared choice "
+                                                            "('ability_score.chosen'); the player's pick is used")
+                abs_ = picks["chooser"].asi(c) if picks.get("chooser") else ["str", "con"]
+                ab = abs_[0] if ab == "chosen" else abs_[1]
             c.scores[ab] = min(getattr(c, "score_cap", 20), c.scores[ab] + int(fx["value"]))
             log.call("op", "modifier", "OK", ref, fx["stat"])
 
@@ -215,13 +244,18 @@ class Builder:
     # =========================================================================================
     # hit points (rule/level-advancement, rule/character-creation-step-5)
     # =========================================================================================
-    def hp_gain(self, c, cls, first=False):
+    def hp_gain(self, c, cls, first=False, roll=False):
         cref = f"dnd5e/class/{cls}"
         hp = (self.cat.get(cref)["data"] or {}).get("hit_points")
         ctx = Ctx(c, ref=cref)
         if hp:
-            self.log.call("data", "class.hit_points", "OK", cref, "level 1" if first else "fixed per level")
-            return int(self.eng.ev(hp["level_1"] if first else hp["per_level"]["fixed"], c, ctx))
+            how = "level 1" if first else ("rolled Hit Die" if roll else "fixed per level")
+            self.log.call("data", "class.hit_points", "OK", cref, how)
+            expr = hp["level_1"] if first else hp["per_level"]["roll" if roll else "fixed"]
+            v = int(self.eng.ev(expr, c, ctx))
+            if roll and not first:
+                self.log.say(f"{c} rolls the Hit Die for level {c.level}: +{v} HP")
+            return v
         if first:
             tref, tid = "dnd5e/rule/character-creation-step-5-character-creation-details", "level_1_hit_points_by_class"
         else:
@@ -240,46 +274,70 @@ class Builder:
         for ref in c.features:
             e = self.cat.get(ref)
             rules = {r["id"]: r for r in (e.get("data") or {}).get("rules", []) if "id" in r}
-            if "spell_slots" not in rules:
+            if "spell_slots" not in rules and "slot_level" not in rules:
                 continue
             ctx = Ctx(c, ref=ref)
-            for lv, x in rules["spell_slots"]["slots_by_spell_level"].items():
-                n = int(self.eng.ev(x, c, ctx))
-                if n:
-                    cur = c.slots.get(lv, [0, 0])
-                    c.slots[lv] = [cur[0] + n - cur[1], n]
-            self.log.call("rule", "spellcasting#spell_slots", "OK", ref)
+            klass = slug(rules["spellcasting"]["spell_list_of"]) if "spellcasting" in rules else None
+            if "spell_slots" in rules:
+                for lv, x in rules["spell_slots"]["slots_by_spell_level"].items():
+                    n = int(self.eng.ev(x, c, ctx))
+                    if n:
+                        cur = c.slots.get(lv, [0, 0])
+                        c.slots[lv] = [cur[0] + n - cur[1], n]
+                self.log.call("rule", "spellcasting#spell_slots", "OK", ref)
+            else:
+                c.pact_level = int(self.eng.ev(rules["slot_level"]["level"], c, ctx))
+                self.log.call("rule", "pact_magic#slot_level", "OK", ref, f"level {c.pact_level}")
             c.spell_ability = rules["spellcasting_ability"]["ability"]
+            if not hasattr(c, "spell_abilities"):
+                c.spell_abilities = {}
+            c.spell_abilities[klass] = c.spell_ability
             self.log.call("rule", "spellcasting#spellcasting_ability", "OK", ref)
             picks = c.picks
-            n_cantrips = int(self.eng.ev(rules["cantrips"]["known"], c, ctx))
+            n_cantrips = int(self.eng.ev(rules["cantrips"]["known"], c, ctx)) if "cantrips" in rules else 0
             n_cantrips += sum(1 for _, fx, _ in c.passives("modifier") if fx["stat"] == "cantrips_known")
             n_prep = int(self.eng.ev(rules["prepared_spells"]["count"], c, ctx))
             self.log.call("rule", "spellcasting#cantrips", "OK", ref, f"{n_cantrips} known")
             self.log.call("rule", "spellcasting#prepared_spells", "OK", ref, f"{n_prep} prepared")
+            max_lvl = max([int(k) for k in c.slots] + [c.pact_level or 0])
+            listing = self.spell_list(rules)
+            chooser = picks.get("chooser")
             if "spellbook" in rules:
                 sb = rules["spellbook"]
-                lvl = c.class_levels[[k for k in c.class_levels][0]]
+                lvl = c.class_levels[klass] if klass in c.class_levels else c.level
                 size = sb["start_level_1_spells"] + sb["per_level_gained_after_1"] * (lvl - 1)
-                free = [s for s in c.spellbook if s in sum(picks.get("free_spells", {}).values(), [])]
+                free = [s for s in c.spellbook if s in sum(picks.get("free_spells", {}).values(), [])] + \
+                    [s for s in c.spellbook if s in getattr(c, "free_book", [])]
                 learned = [s for s in c.spellbook if s not in free]
-                for s in picks.get("spellbook", []):
+                wanted = picks.get("spellbook") or (chooser.spellbook(c, listing, max_lvl, size) if chooser else [])
+                for s in wanted:
                     lv = str(self.cat.get(s)["facets"]["level"])
                     if len(learned) < size and s not in learned and (lv in c.slots or not sb.get("must_have_slot_level")):
                         learned.append(s)
-                c.spellbook = learned + free
+                c.spellbook = learned + [s for s in free if s not in learned]
                 self.log.call("rule", "spellcasting#spellbook", "OK", ref, f"{size} spells")
-            origin = [s for s in c.cantrips if s not in picks.get("cantrips", [])]
-            c.cantrips = origin + [s for s in picks.get("cantrips", []) if s not in origin][:n_cantrips]
+            want_c = picks.get("cantrips") or (chooser.cantrips(c, listing, n_cantrips) if chooser else [])
+            origin = [s for s in c.cantrips if s not in want_c]
+            c.cantrips = origin + [s for s in want_c if s not in origin][:n_cantrips]
             pool = c.spellbook if "spellbook" in rules else None
-            prep = [s for s in picks.get("prepared", []) if pool is None or s in pool]
-            prep = [s for s in prep if str(self.cat.get(s)["facets"]["level"]) in c.slots]
+            want_p = picks.get("prepared") or (chooser.prepared(c, pool or listing, max_lvl, n_prep) if chooser else [])
+            prep = [s for s in want_p if pool is None or s in pool]
+            prep = [s for s in prep if 0 < self.cat.get(s)["facets"]["level"] <= max_lvl]
             c.prepared = [s for s in prep if s not in c.always][:n_prep]
+
+    def spell_list(self, rules):
+        """Spells of the class list (effective list, D-001)."""
+        lref = rules.get("spellcasting", {}).get("spell_list_of")
+        if not lref:
+            return []
+        d = self.cat.get(lref)["data"]
+        self.log.call("data", "spell_list", "OK", lref)
+        return d.get("spells") or d.get("printed_spells") or []
 
     # =========================================================================================
     # level advancement (rule/level-advancement data.procedure)
     # =========================================================================================
-    def level_up(self, c, cls):
+    def level_up(self, c, cls, roll=False):
         proc = self.cat.get("dnd5e/rule/level-advancement")["data"].get("procedure")
         if not proc:
             self.log.call("rule", "level-advancement#procedure", "DATA_GAP", "dnd5e/rule/level-advancement")
@@ -291,7 +349,7 @@ class Builder:
         c.level += 1
         new = c.class_levels[cls]
         # 2. hit points and hit point dice
-        gain = self.hp_gain(c, cls)
+        gain = self.hp_gain(c, cls, roll=roll)
         c.hp_base += gain
         c.hit_dice[cls][1] += 1
         c.hit_dice[cls][0] += 1
@@ -350,6 +408,10 @@ class Builder:
             for r in (self.cat.get(ref).get("data") or {}).get("rules", []):
                 if r.get("id") == "free_spells" and r.get("to") == "spellbook":
                     want = c.picks.get("free_spells", {}).get(ref, [])[:r["count"]]
+                    if not want and c.picks.get("chooser") and ref not in getattr(c, "free_done", set()):
+                        want = c.picks["chooser"].free_spells(c, r)
+                        c.free_done = getattr(c, "free_done", set()) | {ref}
+                        c.free_book = getattr(c, "free_book", []) + want
                     added = [s for s in want if s not in c.spellbook]
                     c.spellbook += added
                     self.log.call("rule", "evocation-savant#free_spells", "OK", ref, ", ".join(slug(s) for s in added))

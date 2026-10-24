@@ -7,6 +7,8 @@ DICE = re.compile(r"^\s*(\d*)d(\d+)\s*(?:([+-])\s*(\d+))?\s*$")
 def parse_cell(text):
     """A features-table cell as a value: '+2' -> 2, '1d6' -> '1d6', '+10 ft.' -> 10, '—' -> 0."""
     t = str(text).strip()
+    if re.fullmatch(r"D\d+", t):
+        t = "1" + t.lower()
     if t in ("—", "-", ""):
         return 0
     if DICE.match(t):
@@ -23,11 +25,13 @@ class Evaluator:
     def __init__(self, rng, log, catalog):
         self.rng, self.log, self.cat = rng, log, catalog
 
+    die_min = 0       # Great Weapon Fighting: a 1 or 2 on a damage die counts as 3
+
     def roll(self, n, faces, crit=False, best_of=1):
         n = n * 2 if crit else n
         best = None
         for _ in range(best_of):
-            tot = sum(self.rng.randint(1, faces) for _ in range(n))
+            tot = sum(max(self.die_min, self.rng.randint(1, faces)) for _ in range(n))
             best = tot if best is None else max(best, tot)
         return best
 
@@ -86,7 +90,7 @@ class Evaluator:
             for st in x["scale"]["steps"]:
                 if v >= st["from"]:
                     out = st["value"]
-            return out
+            return self.ev(out, resolve, crit, best_of, ref) if isinstance(out, (str, dict)) else out
         if "choose_from" in x:
             self.log.call("expr", "choose_from", "OK", ref)
             return x["choose_from"][0]
@@ -96,7 +100,12 @@ class Evaluator:
     def table_cell(self, x, resolve, ref=None):
         e = self.cat.get(x["table"])
         key = str(int(self.ev(x["key"], resolve, ref=ref)))
-        cell = e["data"]["levels"][key]["columns"][x["column"]]
+        if "levels" in (e.get("data") or {}):
+            cell = e["data"]["levels"][key]["columns"][x["column"]]
+        else:   # a data.tables table: the row whose first cell is the key
+            t = next(t for t in e["data"].get("tables", []) if t["id"] == x.get("table_id"))
+            row = next(r for r in t["rows"] if str(r[0]) == key)
+            cell = row[t["columns"].index(x["column"])]
         self.log.call("table", f'{x.get("table_id")}[{x["column"]}]', "OK", x["table"])
         return cell
 

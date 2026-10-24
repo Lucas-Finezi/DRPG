@@ -188,10 +188,10 @@ def weapon_effect(text):
     elif text == "Simple weapons":
         fx["items"] = ["simple"]
     else:
-        fx["items"] = ["simple"]
         fx["note"] = text
         m = re.search(r"Martial weapons that have the (.+) propert", text)
-        fx["from"] = [f"martial_with:{p.strip().lower()}" for p in re.split(r" or ", m.group(1))]
+        # D-005: every listed kind is granted (no choice): "martial_with:<property>" kinds.
+        fx["items"] = ["simple"] + [f"martial_with:{p.strip().lower()}" for p in re.split(r" or ", m.group(1))]
     return fx
 
 
